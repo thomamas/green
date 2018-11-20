@@ -1,0 +1,11 @@
+.*.swp
+Green.materials/Icon*
+Green.materials/Release
+Green.materials/*.eps
+Green.inform/Index
+Green.inform/Build
+Green.inform/manifest.plist
+Green.inform/notes.rtf
+Green.inform/Metadata.iFiction
+Green.inform/Release.blurb
+.DS_Store
