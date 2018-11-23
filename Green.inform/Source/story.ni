@@ -13,9 +13,13 @@
 
 	- "jump" adjusted for centripetal force and low gravity.	
 	- consistent approach to scenery ... just junk, etc.
-	- are there so few objects that the pocket isn't necessary (then remove carrying capacity too)
 	- I am not satisfied with the name Green
 	- scenery responses
+	
+	Machine bits:
+	- at least one more machine w/ components
+	- put the functional pressure regulator module somewhere
+	- spare parts...
 ]
 
 Book 1 - Setup
@@ -49,15 +53,16 @@ Use scoring. The maximum score is 50. A thing can be scored. A thing is usually 
 [
 	5 - getting the boots out of the vault
 	5 - red breaker
-	
-	10 - green breaker
-	
-	10 - atmosphere pump
-	
+
+	10 - green breaker (in the pond)
+
+	5 - opening the learning machine
+	5 - fixing and closing the atmosphere pump
+
 	10 - visiting pod bay for the first time (todo)
-	
+
 	10 - calling for help (todo)
-	
+
 	consider decreasing each section to 8 points, and then have 10 points to reward misc. positive action.
 ]
 
@@ -75,7 +80,14 @@ To computerize (x - some text):
 To note (x - some text):
 	say "[start note][x][stop note][paragraph break]";
 
-Chapter 4 - Extensions
+Chapter 4 - Misc Phrases
+
+To find and take (s - an object):	
+	now s is in the holder of the player;
+	try silently taking s;
+	set pronouns from s;
+
+Chapter 5 - Extensions
 
 Include Exit Lister by Eric Eve.
 
@@ -87,7 +99,7 @@ Report ExitListing when listing explained is false:
 
 Include Unicode Character Names by Graham Nelson.
 
-Chapter 5 - Directions
+Chapter 6 - Directions
 
 The starboard is a direction. The starboard has opposite port. Understand "s" as starboard when the location is stellar.
 
@@ -116,7 +128,7 @@ Before going an planetbound direction when the location is stellar:
 	
 Index map with spinward mapped as north. Index map with antispinward mapped as south. Index map with port mapped as west. Index map with starboard mapped as east.
 
-Chapter 6 - Regions
+Chapter 7 - Regions
 
 Underneath is a region. [todo -- can we avoid underneath?]
 
@@ -130,25 +142,32 @@ Before going antispinward in the Main Level:
 	
 The hub is a backdrop in Main Level and in Center Platform. It has description "The station rotates around the hub, which extends out to hold solar panels on the port and mirrors on the starboard side.[if the player is not in the center platform] On the inside, there is a mesh maintenance platform."
 
-The solar panels are a backdrop in Main Level and in Center Platform. They have description "The primary source of station power." Understand "panel" as solar panels.
+The solar panels are a backdrop in Main Level and in Center Platform. They have description "The primary source of station power." Understand "panel" as solar panels..
 
 The mirrors are a backdrop in Main Level and in Center Platform. They have description "The mirrors reflect sun light into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
 
 The maintenance platform is a backdrop in Main Level. It has description "Since the main power and sensor feeds pass through the hub, there is a platform where you can perform various maintenance tasks."
 
-Instead of doing anything other than examining to the hub when the player is not in the center platform:
+Instead of doing anything other than examining or scanning to the hub when the player is not in the center platform:
 	say "You are too far away to do that."
 	
-Instead of doing anything other than examining to the solar panels:
+Instead of doing anything other than examining or scanning to the solar panels:
 	say "You are too far away to do that."
 
-Instead of doing anything other than examining or entering to the maintenance platform:
+Instead of scanning the solar panels:
+	computerize "Machine is functional. Operating at [one of]73[or]72[or]71[then purely at random]% efficiency."
+
+Instead of the scanner opening the solar panels:
+	computerize "Machine is unitary.";
+	rule succeeds.
+	
+Instead of doing anything other than examining or entering or scanning to the maintenance platform:
 	say "You are too far away to do that."
 
 Instead of entering the maintenance platform:
 	say "You will need to climb a pylon to get there."
 
-Chapter 7 - Kinds of doors
+Chapter 8 - Kinds of doors
 
 To say floor-hatch-desc (d - a floor hatch):
 	say "There is [if d is open]an open[otherwise]a secured[end if] hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if][no line break]";
@@ -181,7 +200,7 @@ A building is a kind of door. It is usually open. It is usually not openable. It
 
 [ To represent the outside of buildings you go out/in from in the ring. ]
 
-Chapter 8 - Kinds of Other Things
+Chapter 9 - Kinds of Other Things
 
 A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "the pylon". Understand "pylon" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station about 25 meters above."
 
@@ -206,7 +225,7 @@ Instead of climbing a forest:
 	otherwise:
 		say "You can't get a good grip."
 
-Chapter 9 - About
+Chapter 10 - About
 
 Requesting the credits is an action out of world and applying to nothing.
 
@@ -227,7 +246,7 @@ Exit Lister version 11 by Eric Eve
 Unicode Character Names by Graham Nelson
 ]
 
-Chapter 10 - Machines, Components, Scanning, etc
+Chapter 11 - Machines, Components, Scanning, etc
 
 
 Section 1 - Components
@@ -270,6 +289,8 @@ Section 2 - Machines
 	TODO - make status display, breakers, etc. machines or at least scannable
 ]
 
+Something can be machinelike. Things are usually not machinelike.
+
 A machine is a kind of container. A machine is usually closed and unopenable and fixed in place.
 
 Before inserting something (called s) into a machine (called m):
@@ -307,7 +328,10 @@ Before scanning:
 	unless the scanner is at hand, stop the action.
 
 Carry out scanning:
-	computerize "No modular technology detected.";
+	if the noun is machinelike:
+		computerize "Machine is functional.";
+	otherwise:
+		computerize "No modular technology detected.";
 
 Bare scanning is an action applying to nothing.
 
@@ -325,6 +349,8 @@ Carry out bare scanning:
 The scanner is an addressable thing. The scanner can be explained. It is not explained.
 The scanner fail count is a number that varies. Scanner fail count is 0.
 The scanner has description "The handheld voice-activated scanner that you use to scan electronic modules on the station."
+
+Instead of scanning the scanner, computerize "Self test completed. Scanner is functional."
 
 To decide if the scanner is at hand:
 	if the player encloses the scanner and the scanner is visible, decide yes;
@@ -346,7 +372,7 @@ To explain the scanner:
 		if the scanner fail count is 3:
 			now the scanner is not explained;
 
-To scanner syntax error:	
+To scanner syntax error:
 	computerize "Syntax error: command not in vocabulary.";
 	explain the scanner;
 
@@ -362,6 +388,8 @@ Instead of the scanner scanning or examining something:
 Instead of the scanner opening something (called m):
 	if m is a component:
 		computerize "Component is unitary.";
+	otherwise if m is machinelike:
+		computerize "Machine is unitary.";
 	otherwise if m is a machine:
 		if m is not openable:
 			computerize "Machine is unitary.";
@@ -449,9 +477,9 @@ Section 4 - Kinds of Components
 
 A power module is a kind of component.
 An instruction module is a kind of component.
-A pump regulator module is a kind of component.
+A pressure regulator module is a kind of component.
 
-Chapter 11 - The Player
+Chapter 12 - The Player
 
 The player is female. The carrying capacity of the player is 3.
 
@@ -494,7 +522,7 @@ Instead of taking inventory:
 		say "[line break][Our] jumpsuit pocket contains:[line break]";
 		list the contents of the pocket, with newlines, indented, including contents, giving inventory information, with extra indentation.
 
-Chapter 12 - Actions
+Chapter 13 - Actions
 
 Section 1 - Remove Some Actions
 
@@ -518,20 +546,20 @@ Understand the command "erase" as "rub".
 Rubbing it with is an action applying to one thing and one carried thing.
 
 Carry out an actor rubbing something with:
-	Try rubbing the noun instead;	
+	Try rubbing the noun instead;
 
 Understand "xyzzy" or "say xyzzy" or "cast xyzzy" as xyzzying.
 
 xyzzying is an action applying to nothing.
 
 Instead of xyzzying for the first time:
-	say "Your mother never would have approved of such blasphemy, but you say that word out loud. You feel free, but it still feels a little wrong."
+	say "Your mother never would have approved, but you say that word out loud. Even with no one to listen, it still feels a little wrong."
 
 Carry out xyzzying:
 	say "Once was enough."
 
 
-Chapter 13 - Testing - Not for release
+Chapter 14 - Testing - Not for release
 
 Include Object Response Tests by Juhana Leinonen.
 
@@ -580,11 +608,25 @@ Book 3 - The Ring
 
 Chapter 1 - Sector 1
 
-Sector 1 is a room in Main Level. "This sector is fallow for a cycle. A pylon stretches up from the ground to the hub of the station." It has printed name "Sector 1: Crops". It has destination name "sector 1".
+Sector 1 is a room in Main Level. "You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station." It has printed name "Sector 1: Crops". It has destination name "sector 1".
 
 There is a pylon in Sector 1.
 
-Section 1 - Pod Control
+Some crops are scenery in Sector 1. They have description "You are proud of the grain and legumes." Understand "grain" and "legumes" as some crops.
+
+The graveyard is scenery in Sector 1. It has description "Fenced off but unmarked graves. You buried your parents here." Understand "graves" and "grave" and "fence" as the graveyard.
+
+Instead of eating some crops, say "You're not hungry."
+
+Section 1 - Barn
+
+S1B1 is a building. It is inside of Sector 1. Through it is the Barn. S1B1 is scenery. It has description "It's a barn." [todo] Understand "barn" as S1B1.
+
+Barn is a room. "Not fancy: livestock on one side and feed on the other, but nothing remains of either." [todo] [but no animals]
+
+Sector 1 is outside of barn.
+
+Section 2 - Pod Control
 
 There is a room called Pod Control. "This room serves as an airlock for the pod bay."
 
@@ -592,10 +634,13 @@ Pod Control is in Underneath.
 
 S1H1 is a floor hatch. S1H1 is down from Sector 1 and up from Pod Control.
 
-A space suit is scenery in Pod Control. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: the seals are leaking and there are no spares left."
+A space suit is scenery in Pod Control. It is machinelike. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: the seals are leaking and there are no spares left."
 
-Before doing anything other than examining to the space suit:
-	say "All of the seals are shot, so the suit won't be useful."
+Before doing anything other than examining or scanning to the space suit:
+	say "All of the seals are shot, so the suit won't be useful.";
+	stop the action.
+	
+Instead of scanning the space suit, computerize "Machine is failed."
 
 A status display is a machine in Pod Control. It is scenery. It is not openable.
 Understand "message" and "error" as the status display when the pod bay is not ready.
@@ -626,13 +671,11 @@ Instead of examining the status display:
 The atmosphere pump is a machine in the Pod Control. It is openable. It has carrying capacity 2. It has description "[If the atmosphere pump is functional and the atmosphere pump is not open]This featureless machine is softly humming.[otherwise]It is a smooth featureless machine."
 
 There is a faulty power module in the atmosphere pump.
-There is a faulty pump regulator module in the atmosphere pump.
-
-There is a functional pump regulator module in pod control. [todo - put this somewhere]
+There is a faulty pressure regulator module in the atmosphere pump.
 
 To decide if (m - the atmosphere pump) is functional:
 	unless there is a functional power module in the atmosphere pump, decide no;
-	unless there is a functional pump regulator module in the atmosphere pump, decide no;
+	unless there is a functional pressure regulator module in the atmosphere pump, decide no;
 	decide yes.	
 
 Every turn when the atmosphere pump is functional and the atmosphere pump is closed and the atmosphere pump is not scored:
@@ -647,13 +690,7 @@ To decide if the pod bay is not ready:
 	if the pod bay is ready, decide no;
 	decide yes.
 
-[todo -- >put functional power module in pump
-(the faulty pump regulator module)
- does the palyer mean... 
-
-close pump...]
-
-Section 2 - Pod Bay
+Section 3 - Pod Bay
 
 There is a room called Pod Bay. Pod Bay is in Underneath.
 
@@ -683,7 +720,7 @@ The pond is scenery in sector 2. It has description "Something to do with water 
 
 Some fish are scenery in sector 2. They have description "There are still a few fish swimming in the pond, but they taste horrible."
 
-Instead of doing anything other than examining to the fish:
+Instead of doing anything other than examining or scanning to the fish:
 	say "The fish aren't easy to catch."
 
 Instead of drinking the pond, say "It's a bit fishy for that."
@@ -765,7 +802,10 @@ Before going down from Center Platform:
 	otherwise:
 		say "You slide down the pylon."
 
-A red circuit breaker is a circuit breaker in center platform. "You can just reach a red circuit breaker on the hub."
+A red circuit breaker is a circuit breaker in center platform. "You can just reach a red circuit breaker on the hub." The red circuit breaker is machinelike.
+
+Instead of scanning the red circuit breaker:
+	computerize "Machine is functional. Breaker is [if the red circuit breaker is switched on]closed[otherwise]open[end if]."
 
 After switching on the red circuit breaker:
 	increase the score by 5;
@@ -800,11 +840,7 @@ S4H1 is a floor hatch. It is down from Home and up from Cellar.
 
 Cellar is in Underneath. "This space is used for storage and as a decompression shelter."
 
-An emergency mask is in cellar. "There is an emergency mask hanging on the wall." It has description "You wore a mask like this when there were decompression drills every ten days." It is wearable.
-
-Instead of scanning the emergency mask, computerize "Machine is functional."
-
-Instead of the scanner opening the emergency mask, computerize "Machine is unitary."
+An emergency mask is in cellar. "There is an emergency mask hanging on the wall." It has description "You wore a mask like this when there were decompression drills every ten days." It is wearable. It is machinelike.
 
 Chapter 5 - Sector 5
 
@@ -878,13 +914,18 @@ Instead of attacking the eraser:
 
 Chapter 6 - Sector 6
 
-Sector 6 is spinward from Sector 5. It is in Main Level. "Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked." It has printed name "Sector 6: Hydroponics". It has destination name "sector 6".
+Sector 6 is spinward from Sector 5 and antispinward from Sector 1. It is in Main Level. "Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked." It has printed name "Sector 6: Hydroponics". It has destination name "sector 6".
 
-Hydroponics machines are scenery in Sector 6. It has description "You were thoroughly trained in hydroponics maintenance, but fixing these machines is beyond you." Understand "machine" and "machinery" as hydroponics machines.
+Hydroponics machines are scenery in Sector 6. It is machinelike. It has description "You were thoroughly trained in hydroponics maintenance, but fixing these machines is beyond you." Understand "machine" and "machinery" as hydroponics machines.
 
-Instead of doing anything other than examining to the hydroponics machines:
+Instead of doing anything other than examining or scanning to the hydroponics machines:
 	say "The hydroponics machines are just so much junk."
 
+Instead of scanning the hydroponics machines, computerize "Machine failed."
+
+Instead of the scanner opening the hydroponics machines:
+	computerize "Opening failed.";
+	rule succeeds.
 
 Section 1 - Below Sector 6
 
@@ -903,14 +944,30 @@ Section 2 - The Supply Vault
 
 The Supply Vault is spinward from the room called Below Sector 6. "This room is dim, quiet, and stuffy. There is still a crate of machine parts left. The only exit is antispinward.[if laser is visible][paragraph break]You see a laser beam scan across the exit.[end if]"
 
+[ boots ]
+
 A pair of gravity boots is in the supply vault. The gravity boots are wearable. They are plural-named. They have description "Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity or on the outside of a rotating station." [ todo -- another way to practice ]
+
+[ crate ]
 
 A crate of machine parts is scenery in the supply vault. It has description "These remaining parts never seem to fit where they might be useful."
 
+One faulty instruction module is in the junk repository.
+One functional pressure regulator module is in the junk repository.
+
+To grab some junk:
+	let q be a random thing in the junk repository;
+	say "You find [a q].";
+	find and take q.
+
+Instead of searching the crate of machine parts for the first time, grab some junk.
+Instead of searching the crate of machine parts for the second time, grab some junk.
 Instead of searching the crate of machine parts, say "Many miscellaneous parts, none useful."
 
-Before doing something other than searching or examining to the crate of machine parts:
+Before doing something other than searching or examining or scanning to the crate of machine parts:
 	say "That's just junk." instead.
+
+[ laser ]
 
 The laser visibility counter is a number that varies. Laser visibility counter is 0.
 
@@ -939,31 +996,3 @@ Before touching the laser beam:
 	otherwise:
 		say "The laser beam is intangible.";
 	stop the action.
-
-Chapter 7 - Sector 7
-
-Sector 7 is spinward from Sector 6. It is in Main Level. "The barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station." It has printed name "Sector 7: Livestock". It has destination name "sector 7".
-
-There is a pylon in Sector 7.
-
-S7B1 is a building. It is inside of Sector 7. Through it is the Barn. S7B1 is scenery. It has description "It's a barn." [todo] Understand "barn" as S7B1.
-
-
-Section 1 - Barn
-
-Barn is a room. "Not fancy: livestock on one side and feed on the other, but nothing remains of either." [todo] [but no animals]
-
-Sector 7 is outside of barn.
-
-Chapter 8 - Sector 8 
-
-Sector 8 is spinward from Sector 7 and antispinward from Sector 1. It is in Main Level. "You still maintain the crops here, and there is a small graveyard." It has printed name "Sector 8: Crops". It has destination name "sector 8".
-
-Some crops are scenery in Sector 8. They have description "You are proud of the grain and legumes." Understand "grain" and "legumes" as some crops.
-
-The graveyard is scenery in Sector 8. It has description "Fenced off but unmarked graves. You buried your parents here." Understand "graves" and "grave" and "fence" as the graveyard.
-
-[todo ... various insteads? ]
-
-Instead of eating some crops, say "You're not hungry."
-
