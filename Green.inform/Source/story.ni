@@ -15,6 +15,7 @@
 	- consistent approach to scenery ... just junk, etc.
 	- I am not satisfied with the name Green
 	- scenery responses
+	- sing/pray
 	
 	Machine bits:
 	- at least one more machine w/ components
@@ -34,9 +35,9 @@ The story headline is "A Space Story".
 
 The release number is 1.
 
-The story description is "You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer than your mother. No, you are the last. Alone. Adrift.
+The story description is "You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
 
-But maybe it isn’t hopeless. There must still be some people in other worlds, and you think you know how to get there.
+But maybe it isn’t hopeless. There must still be other people in other worlds, and you think you know how to get there.
 
 Today is the day."
 
@@ -44,7 +45,7 @@ When play begins:
 	say "[the story description][paragraph break]";
 	now exit listing is enabled.
 
-Release along with cover art, an interpreter, the introductory booklet, the library card, and a "Local" website.
+Release along with cover art ("A space station."), an interpreter, the introductory booklet, the library card, and a "Local" website.
 
 Chapter 2 - Scoring
 
@@ -202,7 +203,7 @@ A building is a kind of door. It is usually open. It is usually not openable. It
 
 Chapter 9 - Kinds of Other Things
 
-A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "the pylon". Understand "pylon" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station about 25 meters above."
+A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "the pylon". Understand "pylon" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station many meters above."
 
 Instead of climbing a pylon (called p):
 	say "The pylon is slick metal with no obvious handholds."
@@ -558,6 +559,18 @@ Instead of xyzzying for the first time:
 Carry out xyzzying:
 	say "Once was enough."
 
+Understand "sing" as singing.
+Understand "pray" as singing.
+
+Singing is an action applying to nothing.
+
+Check singing:
+	if the actor is wearing the emergency mask:
+		say "You can't sing with the mask on.";
+		stop the action.
+
+Carry out singing:
+	say "You sing a hymn [one of]about hard work[or]about virtue[or]about penitence[or]praising the founder[or]about Old Earth[at random].";
 
 Chapter 14 - Testing - Not for release
 
@@ -704,7 +717,7 @@ To say pod-bay-hatch-pb:
 
 Every turn when the player is in Pod Bay: [todo]
 	say "SInce the game isn't finished, here's some text: You notice that there are no pods left. You despair. But then you find the communications system and call for help. Someone comes."; [todo]
-	end the story saying "...you have won".
+	end the story finally saying "...you have won".
 		
 Every turn when the player is in Pod Control:
 	if the pod bay is ready:
@@ -747,7 +760,7 @@ Chapter 3 - Sector 3
 
 Sector 3 is spinward from Sector 2. It is in Main Level. "Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station." It has printed name "Sector 3: Forest". It has destination name "sector 3".
 
-A pylon called S3P1 is here. It has description "Made of smooth metal, anodized red, it connects the ground to the hub of the station about 25 meters above." Understand "red" as S3P1.
+A pylon called S3P1 is here. It has description "Made of smooth metal, anodized red, it connects the ground to the hub of the station many meters above." Understand "red" as S3P1.
 
 Before going up in Sector 3, try climbing S3P1 instead.
 
@@ -793,7 +806,7 @@ Sector 3 is outside of house.
 
 Section 3 - Center Platform
 
-Sector 3 is down from Center Platform. Nothing is up from Sector 3. Center Platform has description "It's a mesh platform a little below the hub. From here, you are very aware of how the station rotates, but everything is okay as long as you don't look down."
+Sector 3 is down from Center Platform. Nothing is up from Sector 3. Center Platform has description "It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down."
 
 Before going down from Center Platform:
 	change the up exit of Sector 3 to Center Platform;

@@ -7,9 +7,9 @@
         <result xml:space="preserve">
 
 
-You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer than your mother. No, you are the last. Alone. Adrift.
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
 
-But maybe it isn't hopeless. There must still be some people in other worlds, and you think you know how to get there.
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
 
 Today is the day.
 
@@ -26,7 +26,248 @@ There is a secured hatch in the floor.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-20877"></child>
+            <child nodeId="node-21262"></child>
+            <child nodeId="node-21239"></child>
         </children>
+    </item>
+    <item nodeId="node-21239">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about virtue.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21240"></child>
+            <child nodeId="node-21245"></child>
+            <child nodeId="node-21249"></child>
+        </children>
+    </item>
+    <item nodeId="node-21249">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about Old Earth.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21250"></child>
+        </children>
+    </item>
+    <item nodeId="node-21250">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about virtue.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21251"></child>
+        </children>
+    </item>
+    <item nodeId="node-21251">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about Old Earth.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21252"></child>
+        </children>
+    </item>
+    <item nodeId="node-21252">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about virtue.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21253"></child>
+        </children>
+    </item>
+    <item nodeId="node-21253">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about penitence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21254"></child>
+        </children>
+    </item>
+    <item nodeId="node-21254">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about Old Earth.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21255"></child>
+        </children>
+    </item>
+    <item nodeId="node-21255">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21256"></child>
+        </children>
+    </item>
+    <item nodeId="node-21256">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about virtue.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21257"></child>
+        </children>
+    </item>
+    <item nodeId="node-21257">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn praising the founder.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21258"></child>
+        </children>
+    </item>
+    <item nodeId="node-21258">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about virtue.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21259"></child>
+        </children>
+    </item>
+    <item nodeId="node-21259">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn praising the founder.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21260"></child>
+        </children>
+    </item>
+    <item nodeId="node-21260">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about penitence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21261"></child>
+        </children>
+    </item>
+    <item nodeId="node-21261">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-21245">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">You sing a hymn to yourself.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21246"></child>
+        </children>
+    </item>
+    <item nodeId="node-21246">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">You sing a psalm to yourself.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21247"></child>
+        </children>
+    </item>
+    <item nodeId="node-21247">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">You sing a hymn to yourself.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-21240">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Cellar
+This space is used for storage and as a decompression shelter.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21241"></child>
+        </children>
+    </item>
+    <item nodeId="node-21241">
+        <command xml:space="preserve">get mask</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21242"></child>
+        </children>
+    </item>
+    <item nodeId="node-21242">
+        <command xml:space="preserve">wear mask</command>
+        <result xml:space="preserve">You put on the emergency mask.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21243"></child>
+        </children>
+    </item>
+    <item nodeId="node-21243">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">Not with the mask on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-21262">
+        <command xml:space="preserve">pray</command>
+        <result xml:space="preserve">You sing a hymn about penitence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21263"></child>
+        </children>
+    </item>
+    <item nodeId="node-21263">
+        <command xml:space="preserve">ook</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21264"></child>
+        </children>
+    </item>
+    <item nodeId="node-21264">
+        <command xml:space="preserve">xyzzy</command>
+        <result xml:space="preserve">Your mother never would have approved, but you say that word out loud. Even with no one to listen, it still feels a little wrong.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21265"></child>
+        </children>
+    </item>
+    <item nodeId="node-21265">
+        <command xml:space="preserve">damn</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-21266"></child>
+        </children>
+    </item>
+    <item nodeId="node-21266">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-20877">
         <command xml:space="preserve">* walkthrough</command>
@@ -351,7 +592,7 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
         <result xml:space="preserve">It isn't easy, but with the boots, you are able to climb towards the hub.
 
 Center Platform
-It's a mesh platform a little below the hub. From here, you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
 
 You can just reach a red circuit breaker on the hub.
 
