@@ -14,3 +14,12 @@ https://images.nasa.gov/details-9132079.html
 
 * http://space.nss.org/settlement/nasa/75SummerStudy/figure1.1.gif
   http://space.nss.org/settlement/nasa/75SummerStudy/Chapt.1.html
+
+
+----
+
+Book
+  <li>&#x1F4D6;&nbsp;<a href="play.html">Play In-Browser</a> <span class="filetype">(link)</span></li>
+
+Joystick
+  U+1F579
