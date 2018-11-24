@@ -8,6 +8,13 @@
 	https://creativecommons.org/licenses/by/4.0/	
 ]
 
+[
+	TODO:
+		is plugs and sockets too complicated?
+		more story bits
+		ending text
+]
+
 Book 1 - Setup
 
 Chapter 1 - The story
@@ -90,7 +97,7 @@ Report ExitListing when listing explained is false:
 
 Section 2 - Plugs and Sockets
 
-[ TODO: Consider:
+[ Consider:
 
 	Special language for picking up a cable that is connected to something not carried.
 	Blocking putting the cable in the pocket if it is connected to something not carried.
@@ -279,7 +286,61 @@ Instead of climbing a forest:
 	otherwise:
 		say "You can't get a good grip."
 
-Chapter 10 - About
+Chapter 10 - Help
+
+Getting help is an action applying to nothing.
+
+Understand "help" or "hint" as getting help.
+
+[ todo -- hints off command? ]
+[ todo -- look at wording & level of detail ]
+[ todo -- make progressive? ]
+
+Carry out getting help:
+	if Beginning is happening:
+		say
+			"Your goal is simply to leave the station and find other people. You can start by looking around and leaving your initial location.[paragraph break]"
+			,
+			"By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.[paragraph break]"
+			,
+			"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
+			,
+			"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
+	otherwise if Ready to Repair is happening:
+		if Pod Control is not visited:
+			say "It's time to leave the station, but you need to explore a little more.";
+		otherwise if the status display is not examined:
+			say "You need to fix something. Check out the status display in Pod Control.";
+		otherwise:
+			if the red circuit breaker is switched off:
+				say "According to the status display, you need to check out a circuit breaker on the hub platform.";
+				[ todo - progressive hints ? climb, boots (not seen, seen, tried to take, eraser, etc. if not scored), etc.]
+			else if the green circuit breaker is switched off:
+				say "According to the status display, you need to check out a circuit breaker somewhere in Sector 2.";
+			else unless the atmosphere pump is functional:
+				say "According to the status display, you need to fix the atmosphere pump. Now might be a good time to check out the scanner.";
+				[ todo - if learning machine was scored, then maybe tyr something else]
+			else if the atmosphere pump is open:
+				say "You're almost there. The status display is fairly clear about what you need to do now.";
+			else if S1H1 is open:
+				say "Pod Control acts as an airlock.";
+			else:
+				say "You just need to enter the pod bay now.";
+	otherwise if Anxious to Leave is happening:
+		say "There's no point in waiting. You just need to enter the pod bay now.";
+	otherwise if Pod Problems is happening:
+		unless communications unit is handled:
+			say "Take a look at the communications unit.";
+		else unless audio and communications are connected:
+			say "You will need to attach the communications unit to an audio unit.";
+		else unless audio unit is functional:
+			say "Repair the audio unit.";
+		else if audio unit is open:
+			say "Close the audio unit.";
+		else:
+			say "You really should have won by now."; [ HELP ]
+
+Chapter 11 - About
 
 Requesting the credits is an action out of world and applying to nothing.
 
@@ -289,13 +350,17 @@ After printing the banner text rule:
 	say "Type 'about' for credits and more information.";
 	
 Carry out requesting the credits:
-	say	"[bold type]About Founder's Mercy[roman type][line break]",
-		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018. It should be impossible to put this game into an unwinnable state.[paragraph break]",
-		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who worked on the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]",
-		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this game at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]",
+	say	"[bold type]About Founder's Mercy[roman type][line break]"
+		,
+		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018.[paragraph break]"
+		,
+		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]"
+		,
+		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this game at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]"
+		,
 		"This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type]).".
 
-Chapter 11 - Machines, Components, Scanning, etc
+Chapter 12 - Machines, Components, Scanning, etc
 
 Section 1 - Components
 
@@ -324,6 +389,9 @@ To say the qualifier of (c - a component):
 Before printing the plural name of a component (called c), say the qualifier of c.
 
 Before printing the name of a component (called c) while not examining, say the qualifier of c.
+
+Before printing the name of a component (called c) while examining, unless the noun is a component, say the qualifier of c.
+
 
 Understand the status property as describing a component when the item described is scanned.
 Understand "unscanned" as a component when the item described is not scanned.
@@ -451,14 +519,20 @@ To scanner syntax error:
 
 [ scanner, scan <something that is visible> ]
 
-Persuasion rule for asking the scanner to try scanning or examining or opening something:
+Persuasion rule for asking the scanner to try scanning or examining or opening or closing something:
 	persuasion succeeds.
 
-Persuasion rule for asking the scanner to try closing something:
+Persuasion rule for asking the scanner to try getting help:
 	persuasion succeeds.
 
 Instead of the scanner closing something:
 	computerize "Command error: closing is a manual process.";
+	rule succeeds.
+
+Instead of the scanner getting help:
+	computerize "Recognized commands are 'help', 'open', and 'scan'.";
+	now the scanner is not explained;
+	explain the scanner;
 	rule succeeds.
 
 Instead of the scanner scanning or examining something:
@@ -510,11 +584,12 @@ Persuasion rule for asking the scanner to try doing something:
 
 Instead of answering the scanner that something:
 	unless the scanner is at hand, stop the action;
-	if the topic understood matches the regular expression "^help$":
-		computerize "Recognized commands are 'help', 'open', and 'scan'.";
+	if the topic understood matches the regular expression "^help\s":
+		try the scanner getting help instead;
+[		computerize "Recognized commands are 'help', 'open', and 'scan'.";
 		now the scanner is not explained;
-		explain the scanner;
-	else if the topic understood matches the regular expression "^(scan|open|close)\s+(.*)":
+		explain the scanner;]
+	else 	if the topic understood matches the regular expression "^(scan|open|close)\s+(.*)":
 		computerize "Search error: cannot find [text matching subexpression 2].";
 		explain the scanner;
 	otherwise:
@@ -557,7 +632,7 @@ A power module is a kind of component.
 An instruction module is a kind of component.
 A pressure regulator module is a kind of component.
 
-Chapter 12 - The Player
+Chapter 13 - The Player
 
 The player is female. The carrying capacity of the player is 3.
 
@@ -602,7 +677,7 @@ Instead of taking inventory:
 		say "[line break][Our] jumpsuit pocket contains:[line break]";
 		list the contents of the pocket, with newlines, indented, including contents, giving inventory information, with extra indentation.
 
-Chapter 13 - Actions
+Chapter 14 - Actions
 
 Section 1 - Remove Some Actions
 
@@ -685,7 +760,7 @@ Carry out playing:
 	set pronouns from the noun;
 	say "[regarding the noun]You don't know how to play [those]."
 
-Chapter 14 - Testing - Not for release
+Chapter 15 - Testing - Not for release
 
 Include Object Response Tests by Juhana Leinonen.
 
@@ -721,25 +796,31 @@ To decide if all sectors are visited:
 		if r is not visited, decide no;
 	decide yes.
 
+Beginning is a scene. Beginning begins when play begins. Beginning ends when Ready to Repair begins. Beginning ends when Anxious to Leave begins.
+
 Ready to Repair is a scene. "You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave. The pods are below Sector 1." Ready to Repair begins when all sectors are visited for the first time and Anxious to Leave has not happened. Ready to Repair ends when Anxious to Leave begins.
 
-Anxious to Leave is a scene. "It is time to say goodbye to the station. You are ready to leave in a pod." Anxious to Leave begins when the pod bay is ready and the player is in pod control for the first time.
+Anxious to Leave is a scene. "It is time to say goodbye to the station. You are ready to leave in a pod." Anxious to Leave begins when the pod bay is ready for the first time.
 
 Every turn during Anxious to Leave:
 	let t be the minutes part of time since Anxious to Leave began;
 	if t is greater than 0 and the remainder after dividing t by 10 is 0:	
 		say "There is nothing left for you here. It's time to take a pod and leave."
 
+[ todo -- periodically remind player to check the status display if they have seen it. ]
+
 Anxious to Leave ends when Pod Problems begins.
 
-Pod Problems is a scene. "This is troubling. You counted. You were sure there would be one pod left for you, but there are none." Pod Problems begins when the player is in Pod Bay for the first time.
+Pod Problems is a scene. "This is troubling. You counted. You were sure there would be one pod left. There are none." Pod Problems begins when the player is in Pod Bay for the first time.
 
 Every turn during Pod Problems:
-	let t be the minutes part of time since Pod Problems began;
+	let t be the minutes part of time since Pod Problems began plus 60 times the hours part of time since Pod Problems began;
 	if t is 3:
 		say "No pods left ... you consider despair.";
 	if t is 5:
 		say "So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working."
+
+[ todo -- some sort of periodic reminder ]
 
 Book 3 - The Ring
 
@@ -778,14 +859,19 @@ Before doing anything other than examining or scanning to the space suit:
 	
 Instead of scanning the space suit, computerize "Machine is failed."
 
-A status display is a machine in Pod Control. It is scenery. It is not openable.
+A status display is a machine in Pod Control. It is scenery. It is not openable. The status display can be examined.
 Understand "message" and "error" as the status display when the pod bay is not ready.
 
 Instead of examining the status display:
+	now the status display is examined;
 	if the red circuit breaker is switched off:
 		say "[fixed letter spacing]Pod bay locked down[line break]",
 			"Diagnosis: telemetry sensor array offline[line break]",
 			"Remediation: reset breaker FM36-87/A @ hub platform[roman type][paragraph break]";
+	else if the green circuit breaker is switched off:
+		say "[fixed letter spacing]Pod bay locked down[line break]",
+			"Diagnosis: launch system cooling loop offline[line break]",
+			"Remediation: reset circuit breaker FM29-63/A @ Sector 2[roman type][paragraph break]";
 	else unless the atmosphere pump is functional:
 		say "[fixed letter spacing]Pod bay locked down[line break]",
 			"Diagnosis: pod control atmosphere pump offline[line break]",
@@ -794,10 +880,6 @@ Instead of examining the status display:
 		say "[fixed letter spacing]Pod bay locked down[line break]",
 			"Diagnosis: pod control atmosphere pump offline[line break]",
 			"Remediation: close pump[roman type][paragraph break]";
-	else if the green circuit breaker is switched off:
-		say "[fixed letter spacing]Pod bay locked down[line break]",
-			"Diagnosis: launch system cooling loop offline[line break]",
-			"Remediation: reset circuit breaker FM29-63/A @ Sector 2[roman type][paragraph break]";
 	else if S1H1 is not closed:
 		say "[fixed letter spacing]Pod bay locked down[line break]",
 			"Secure ceiling hatch[roman type][paragraph break]";
@@ -893,6 +975,12 @@ Every turn when the communications unit is usable:
 	say "The audio unit beeps and a synthesized voice says 'Comms ready.'[paragraph break]",
 		"You call for help. I need to write this bit.[no line break]";
 	end the story finally saying "You win."; [todo]
+
+Instead of going nowhere from Pod Bay:
+	if the noun is outside:
+		try going starboard;
+	otherwise:
+		continue the action.
 
 Chapter 2 - Sector 2
 
@@ -1024,6 +1112,8 @@ Instead of the scanner opening the cable:
 	rule succeeds.
 
 Understand "pull [the gray cable]" as unplugging.
+
+[ Instead of tying the cable to something, say "Tying the cable would damage it." ]
 
 When play begins: [* this can't be the right way to do this ]
 	let first plug be nothing;
