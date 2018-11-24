@@ -8,52 +8,6 @@
 	https://creativecommons.org/licenses/by/4.0/	
 ]
 
-[
-	Radio is in pod control, but old tech -- can't open with scanner.
-	Tool kit is in pod bay.
-	Use tools from pod bay to fix radio -- maybe as simple as connecting a cable or replacing a fuse/relay/???
-	
-]
-
-[
-	The station is named RWSS Founder's Mercy, as well as the game.
-
-	Usage:
-		never use an article
-		italicize name but not prefix
-		RWSS=rotating wheel space station
-		RWSS _Founder's Mery_ is a _Founder's Glory_-class rotating wheel space station laid down in ...
-]
-
-[
-	TODO:
-
-	- add a couple of references to the station name/initials.
-
-	- consistent approach to scenery responses ... just junk, etc.
-	
-	Machine bits:
-		- at least one more machine w/ components
-		- put the functional pressure regulator module somewhere
-		- spare parts...
-
-	- another way to practice boots?	
-	
-	THESE ROOMS ARE STILL UNUSED:
-		
-		Barn
-		Church
-		House
-		
-		& some sectors are only connected to places
-
-	TODO: radio/win
-
-	Every turn when the player is in Pod Bay: [todo]
-		say "SInce the game isn't finished, here's some text: You notice that there are no pods left. You despair. But then you find the communications system and call for help. Someone comes.";
-		end the story finally saying "...you have won".
-]
-
 Book 1 - Setup
 
 Chapter 1 - The story
@@ -82,16 +36,14 @@ Use scoring. The maximum score is 50. An object can be scored. An object is usua
 	5 - getting the boots out of the vault
 	5 - red breaker
 
-	10 - green breaker (in the pond)
+	10 - green breaker in the pond
 
 	5 - opening the learning machine
 	5 - fixing and closing the atmosphere pump
 
 	10 - visiting pod bay for the first time
 
-	10 - calling for help (todo)
-
-	consider decreasing each section to 8 points, and then have 10 points to reward misc. positive action.
+	10 - getting the communications unit working (and calling for help)
 ]
 
 Chapter 3 - Notes
@@ -104,7 +56,7 @@ To say stop computer: say "[roman type]".
 
 To computerize (x - some text):
 	say "[start computer][x][stop computer][paragraph break]";
-	
+
 To note (x - some text):
 	say "[start note][x][stop note][paragraph break]";
 
@@ -158,22 +110,15 @@ The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are]
 
 To say it-them of (s - something): say "it".
 
+[ some action synonyms ]
+
+Understand the command "disconnect" as "unplug".
+Understand "connect [something] to [something]" as plugging it into.
+
 [ and establish a few kinds for future use ]
 
 A usb plug is a kind of PS-plug.
 A usb socket is a kind of PS-socket.
-
-[ todo:
-
->disconnect gray cable
-That's not a verb I recognize.
-
->*connect cable to audio unit*
-That’s not a verb I recognize.
-
->*plug cable into audio unit*
-You plug the USB cable into the audio unit.
-]
 
 Chapter 6 - Directions
 
@@ -296,7 +241,7 @@ Instead of switching off a circuit breaker (called b) when b is switched on:
 
 The green circuit breaker is a circuit breaker. It is switched off.
 
-A forest is a kind of thing. It is usually scenery and privately-named and plural-named. It usually has printed name "some trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, or maybe they help with air processing."
+A forest is a kind of thing. It is usually scenery and privately-named and plural-named. It usually has printed name "some trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, and they help with air processing."
 
 Instead of climbing a forest:
 	if the player is wearing the gravity boots:
@@ -316,27 +261,9 @@ After printing the banner text rule:
 Carry out requesting the credits:
 	say	"[bold type]About Founder's Mercy[roman type][line break]",
 		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018. It should be impossible to put this game into an unwinnable state.[paragraph break]",
-		"The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]",
+		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who worked on the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]",
 		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this game at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]",
 		"This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type]).".
-
-[ todo
-
-Credited:
-I've also read Standard Rules by Graham Nelson, which is 42655 words long.
-I've also read Unicode Character Names by Graham Nelson, which is 28382 words long.
-I've also read Exit Lister by Eric Eve, which is 3331 words long.
-I've also read Plugs and Sockets by Sean Turner, which is 5622 words long.
-
-Tested with:
-I've also read Object Response Tests by Juhana Leinonen, which is 3329 words long.
-
-Also:
-I've also read English Language by Graham Nelson, which is 2297 words long.
-I've also read Glulx Text Effects by Emily Short, which is 2182 words long.
-I've also read Inanimate Listeners by Emily Short, which is 412 words long.
-I've also read Basic Screen Effects by Emily Short, which is 2218 words long.
-]
 
 Chapter 11 - Machines, Components, Scanning, etc
 
@@ -771,7 +698,9 @@ Pod Problems is a scene. "This is troubling. You counted. You were sure there wo
 Every turn during Pod Problems:
 	let t be the minutes part of time since Pod Problems began;
 	if t is 3:
-		say "So you can't escape in a pod, but maybe you can bring a pod here."
+		say "No pods left ... you consider despair.";
+	if t is 5:
+		say "So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working."
 
 Book 3 - The Ring
 
@@ -796,7 +725,7 @@ Sector 1 is outside of barn.
 
 Section 2 - Pod Control
 
-There is a room called Pod Control. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump."
+There is a room called Pod Control. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall."
 
 Pod Control is in Underneath.
 
@@ -874,6 +803,8 @@ After going through the wall hatch:
 	try silently closing the wall hatch;
 	continue the action.
 
+A brass plaque is fixed in place scenery in pod control. It has description "The plaque reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2533, Launched 2537.[line break]    'May His mercy shine upon us.'".
+
 Section 3 - Pod Bay
 
 There is a room called Pod Bay. "There are four berths for transit pods. [one of]Unexpectedly,[or]Sadly,[purely at random] all are empty." Pod Bay is in Underneath.
@@ -908,7 +839,7 @@ Every turn when the player is in Pod Bay for the first time:
 
 [ communications unit ]
 
-A communications unit is here. "Someone left a communications unit on the floor." It is a not fixed in place machine. It has description "A portable communications unit with a single socket to connect it to an audio unit." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket. [todo - description]
+A communications unit is here. "Someone left a communications unit on the floor." It is a not fixed in place machine. It has description "A portable communications unit with a single socket to connect it to an audio unit." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket.
 
 Instead of scanning the communications unit:
 	if audio and communications are connected:
@@ -997,7 +928,7 @@ Instead of going nowhere in church when the noun is starboard, try going outside
 
 [ organ ]
 
-The organ is scenery in Church. It is a machine. It has description "It's really just a keyboard. It has a single socket you would use to connect it to an audio unit." It has indefinite article "the". Understand "keyboard" as the organ. The organ can be played. Incorporated by the organ is a usb socket. [todo -description]
+The organ is scenery in Church. It is a machine. It has description "It's really just a keyboard. It has a single socket to connect it to an audio unit." It has indefinite article "the". Understand "keyboard" as the organ. The organ can be played. Incorporated by the organ is a usb socket.
 
 Instead of scanning the organ: [ organ is always functional ]
 	if audio and organ are connected and the audio unit is functional:
@@ -1019,7 +950,7 @@ Instead of playing the organ:
 
 [ audio unit ]
 
-An audio unit is in Church. It is a openable machine. The description is "The audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device." It has carrying capacity 1. It has indefinite article "the". Understand "portable" as the audio unit. [todo -description]
+An audio unit is in Church. It is a openable machine. The description is "The audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device." It has carrying capacity 1. Understand "portable" as the audio unit.
 
 Incorporated by the audio unit is a usb socket.
 There is a faulty power module in the audio unit.

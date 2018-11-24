@@ -46,6 +46,7 @@ There is a secured hatch in the floor.
 &gt;</commentary>
         <children><child nodeId="node-21856"></child>
             <child nodeId="node-23816"></child>
+            <child nodeId="node-26258"></child>
             <child nodeId="node-24021"></child>
             <child nodeId="node-24068"></child>
             <child nodeId="node-24020"></child>
@@ -56,6 +57,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-24610"></child>
             <child nodeId="node-24112"></child>
             <child nodeId="node-24751"></child>
+            <child nodeId="node-26481"></child>
             <child nodeId="node-24116"></child>
             <child nodeId="node-24129"></child>
             <child nodeId="node-24121"></child>
@@ -3739,18 +3741,127 @@ initial appearance: none
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-24751">
-        <command xml:space="preserve">gonear organ</command>
-        <result xml:space="preserve">Supply Vault
-This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+    <item nodeId="node-26481">
+        <command xml:space="preserve">gonear plaque</command>
+        <result xml:space="preserve">Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall.
 
 There is a secured hatch in the ceiling.
 
-You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+Beside the secured port hatch, a status display shows an error message.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-25045"></child>
+        <children><child nodeId="node-26482"></child>
+            <child nodeId="node-26486"></child>
+        </children>
+    </item>
+    <item nodeId="node-26486">
+        <command xml:space="preserve">x plaque</command>
+        <result xml:space="preserve">It reads:
+
+    RWSS Founder's Mercy
+    Laid down 2533, Launched 2537.
+    "May His mercy shine upon us."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26493"></child>
+        </children>
+    </item>
+    <item nodeId="node-26493">
+        <command xml:space="preserve">get plaque</command>
+        <result xml:space="preserve">That's hardly portable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26494"></child>
+        </children>
+    </item>
+    <item nodeId="node-26494">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall.
+
+There is a secured hatch in the ceiling.
+
+Beside the secured port hatch, a status display shows an error message.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26495"></child>
+        </children>
+    </item>
+    <item nodeId="node-26495">
+        <command xml:space="preserve">x plaque</command>
+        <result xml:space="preserve">It reads:
+
+    RWSS Founder's Mercy
+    Laid down 2533, Launched 2537.
+    "May His mercy shine upon us."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26496"></child>
+        </children>
+    </item>
+    <item nodeId="node-26496">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall.
+
+There is a secured hatch in the ceiling.
+
+Beside the secured port hatch, a status display shows an error message.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26482">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a plaque on the wall.
+
+There is a secured hatch in the ceiling.
+
+Beside the secured port hatch, a status display shows an error message.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26483"></child>
+        </children>
+    </item>
+    <item nodeId="node-26483">
+        <command xml:space="preserve">x plaque</command>
+        <result xml:space="preserve">It reads "RWSS Founder's Mercy, laid down 2533, launched 2537, May His mercy shine upon us.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26484"></child>
+        </children>
+    </item>
+    <item nodeId="node-26484">
+        <command xml:space="preserve">read plaque</command>
+        <result xml:space="preserve">It reads "RWSS Founder's Mercy, laid down 2533, launched 2537, May His mercy shine upon us.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24751">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see the audio unit and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26502"></child>
+            <child nodeId="node-26498"></child>
+            <child nodeId="node-25045"></child>
+            <child nodeId="node-26508"></child>
             <child nodeId="node-25053"></child>
             <child nodeId="node-25196"></child>
             <child nodeId="node-25208"></child>
@@ -4443,6 +4554,118 @@ The communications unit has nothing plugged into it.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-26508">
+        <command xml:space="preserve">remove gray from organ</command>
+        <result xml:space="preserve">You unplug the gray cable from the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26509"></child>
+        </children>
+    </item>
+    <item nodeId="node-26509">
+        <command xml:space="preserve">connect gray to comms</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26510"></child>
+        </children>
+    </item>
+    <item nodeId="node-26510">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26511"></child>
+        </children>
+    </item>
+    <item nodeId="node-26511">
+        <command xml:space="preserve">connect gray to comms</command>
+        <result xml:space="preserve">You plug the gray cable into the communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26512"></child>
+        </children>
+    </item>
+    <item nodeId="node-26512">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see the audio unit and a gray cable (plugged into the communications unit and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26513"></child>
+        </children>
+    </item>
+    <item nodeId="node-26513">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">It is impractical to leave with the communications unit attached to the gray cable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26514"></child>
+        </children>
+    </item>
+    <item nodeId="node-26514">
+        <command xml:space="preserve">drop comms</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26515"></child>
+        </children>
+    </item>
+    <item nodeId="node-26515">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26516"></child>
+        </children>
+    </item>
+    <item nodeId="node-26516">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">You can enter the church or the house.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26517"></child>
+        </children>
+    </item>
+    <item nodeId="node-26517">
+        <command xml:space="preserve">go church</command>
+        <result xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see the communications unit, the audio unit, and a gray cable (plugged into the communications unit and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26518"></child>
+        </children>
+    </item>
+    <item nodeId="node-26518">
+        <command xml:space="preserve">x gray cable</command>
+        <result xml:space="preserve">It's a USB 7.2 Type-F cable.
+
+It is plugged into the communications unit and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-25045">
         <command xml:space="preserve">play organ</command>
         <result xml:space="preserve">Nothing happens.
@@ -4468,6 +4691,62 @@ This room is dim, quiet, and stuffy. There is still a crate of machine parts lef
 There is a secured hatch in the ceiling.
 
 You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26498">
+        <command xml:space="preserve">disconnect gray cable</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26499"></child>
+        </children>
+    </item>
+    <item nodeId="node-26499">
+        <command xml:space="preserve">remove gray cable</command>
+        <result xml:space="preserve">The gray cable is plugged into more than one thing.
+
+[Try "unplug gray cable from SOMETHING".]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26500"></child>
+        </children>
+    </item>
+    <item nodeId="node-26500">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Church
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26502">
+        <command xml:space="preserve">disconnect gray</command>
+        <result xml:space="preserve">The gray cable is plugged into more than one thing.
+
+[Try "unplug gray cable from SOMETHING".]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26506"></child>
+            <child nodeId="node-26503"></child>
+        </children>
+    </item>
+    <item nodeId="node-26503">
+        <command xml:space="preserve">remove gray</command>
+        <result xml:space="preserve">The gray cable is plugged into more than one thing.
+
+[Try "unplug gray cable from SOMETHING".]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26506">
+        <command xml:space="preserve">connect</command>
+        <result xml:space="preserve">That's not a verb I recognize.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -5605,6 +5884,129 @@ You smell nothing unexpected.
         <result xml:space="preserve">Imperfect vessel that you are, that is not the answer.
 
 Cutting you up would achieve little.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26258">
+        <command xml:space="preserve">about</command>
+        <result xml:space="preserve">About Founder's Mercy
+Founder's Mercy is my second released Inform project, conceived and implemented in November of 2018. It should be impossible to put this game into an unwinnable state.
+
+Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who worked on the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, Space Settlements: A Design Study, edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at https://archive.org/details/SpaceSettlementsADesignStudy1977 .
+
+Please send your feedback, bug reports, and requests for help to tinsel@tinsel.org. You can always find the current version of this game at http://tinsel.org/IF/ .
+
+This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license (https://creativecommons.org/licenses/by/4.0/).
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26478"></child>
+            <child nodeId="node-26471"></child>
+        </children>
+    </item>
+    <item nodeId="node-26471">
+        <command xml:space="preserve">version</command>
+        <result xml:space="preserve">Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181123 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits and more information.
+Identification number: //BCC61E7F-CE8E-4C25-9E9D-5550D1138D8C//
+Interpreter version 0.5.2 / VM 3.1.2 / Library serial number 080126
+Standard Rules version 3/120430 by Graham Nelson
+Unicode Character Names by Graham Nelson
+Exit Lister version 11 by Eric Eve
+Plugs and Sockets version 4 by Sean Turner
+Object Response Tests version 7 by Juhana Leinonen
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26472"></child>
+        </children>
+    </item>
+    <item nodeId="node-26472">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see the audio unit and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26473"></child>
+        </children>
+    </item>
+    <item nodeId="node-26473">
+        <command xml:space="preserve">x cable</command>
+        <result xml:space="preserve">It's a USB 7.2 Type-F cable.
+
+It is plugged into the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26474"></child>
+        </children>
+    </item>
+    <item nodeId="node-26474">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">It's really just a keyboard. It has a single socket you would use to connect it to an audio unit.
+
+The organ has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26475"></child>
+        </children>
+    </item>
+    <item nodeId="node-26475">
+        <command xml:space="preserve">score</command>
+        <result xml:space="preserve">You have so far scored 0 out of a possible 50, in 4 turns.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26476"></child>
+        </children>
+    </item>
+    <item nodeId="node-26476">
+        <command xml:space="preserve">about</command>
+        <result xml:space="preserve">About Founder's Mercy
+Founder's Mercy is my second released Inform project, conceived and implemented in November of 2018. It should be impossible to put this game into an unwinnable state.
+
+Thanks also to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who worked on the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, Space Settlements: A Design Study, edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at https://archive.org/details/SpaceSettlementsADesignStudy1977 .
+
+Please send your feedback, bug reports, and requests for help to tinsel@tinsel.org. You can always find the current version of this game at http://tinsel.org/IF/ .
+
+This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license (https://creativecommons.org/licenses/by/4.0/).
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26478">
+        <command xml:space="preserve">hint</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26479"></child>
+        </children>
+    </item>
+    <item nodeId="node-26479">
+        <command xml:space="preserve">help</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26480"></child>
+        </children>
+    </item>
+    <item nodeId="node-26480">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -7083,7 +7485,7 @@ You have walked the entire ring. Everything is as expected, much is not working.
 You scramble down through the hatch and close it behind yourself.
 
 Pod Control
-This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump.
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall.
 
 There is a secured hatch in the ceiling.
 
@@ -7094,7 +7496,7 @@ Beside the secured port hatch, a status display shows an error message.
 You scramble down through the hatch and close it behind yourself.
 
 Pod Control
-This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump.
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall.
 
 There is a secured hatch in the ceiling.
 
@@ -7250,7 +7652,7 @@ There are four berths for transit pods. Sadly, all are empty.
 
 A secured hatch leads starboard.
 
-You can also see the communications unit here.
+Someone left a communications unit on the floor.
 
 This is troubling. You counted. You were sure there would be one pod left for you, but there are none.
 
@@ -7265,7 +7667,9 @@ This is troubling. You counted. You were sure there would be one pod left for yo
         <result xml:space="preserve">Taken.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">Taken.
+
+&gt;</commentary>
         <children><child nodeId="node-25375"></child>
         </children>
     </item>
@@ -7275,14 +7679,24 @@ This is troubling. You counted. You were sure there would be one pod left for yo
 You close the hatch behind yourself.
 
 Pod Control
-This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump.
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall.
 
 Beside the secured port hatch, a status display glows green.
 
 There is a secured hatch in the ceiling.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">(first opening the wall hatch)
+You close the hatch behind yourself.
+
+Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall.
+
+Beside the secured port hatch, a status display glows green.
+
+There is a secured hatch in the ceiling.
+
+&gt;</commentary>
         <children><child nodeId="node-25376"></child>
         </children>
     </item>
@@ -7292,10 +7706,16 @@ There is a secured hatch in the ceiling.
 
 The atmosphere pump swings open.
 
-So you can't escape in a pod, but maybe you can bring a pod here.
+No pods left ... you consider despair.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">Opening.
+
+The atmosphere pump swings open.
+
+No pods left ... you consider despair.
+
+&gt;</commentary>
         <children><child nodeId="node-25377"></child>
         </children>
     </item>
@@ -7305,7 +7725,10 @@ So you can't escape in a pod, but maybe you can bring a pod here.
 Taken.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">(putting the faulty power module into your pocket to make room)
+Taken.
+
+&gt;</commentary>
         <children><child nodeId="node-25378"></child>
         </children>
     </item>
@@ -7319,8 +7742,20 @@ You still maintain the crops here. There is a small graveyard and the barn remai
 
 There is a secured hatch in the ground.
 
+So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working.
+
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">(first opening the ceiling hatch)
+You pull yourself up through the hatch and close it behind yourself.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working.
+
+&gt;</commentary>
         <children><child nodeId="node-25379"></child>
         </children>
     </item>
@@ -7332,7 +7767,12 @@ Sector 2: Aquaculture
 A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</commentary>
         <children><child nodeId="node-25380"></child>
         </children>
     </item>
@@ -7344,7 +7784,12 @@ Sector 3: Forest
 Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</commentary>
         <children><child nodeId="node-25381"></child>
         </children>
     </item>
@@ -7356,10 +7801,18 @@ Before everyone left or died, you celebrated every sabbath here. The altar stand
 
 On the altar is The Founder's Testament.
 
-You can also see the audio unit and a gray cable (plugged into the organ and the audio unit) here.
+You can also see an audio unit and a gray cable (plugged into the organ and an audio unit) here.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see an audio unit and a gray cable (plugged into the organ and an audio unit) here.
+
+&gt;</commentary>
         <children><child nodeId="node-25382"></child>
         </children>
     </item>
@@ -7368,7 +7821,9 @@ You can also see the audio unit and a gray cable (plugged into the organ and the
         <result xml:space="preserve">You unplug the gray cable from the organ.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">You unplug the gray cable from the organ.
+
+&gt;</commentary>
         <children><child nodeId="node-25383"></child>
         </children>
     </item>
@@ -7377,7 +7832,9 @@ You can also see the audio unit and a gray cable (plugged into the organ and the
         <result xml:space="preserve">You plug the gray cable into the communications unit.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">You plug the gray cable into the communications unit.
+
+&gt;</commentary>
         <children><child nodeId="node-25384"></child>
         </children>
     </item>
@@ -7388,7 +7845,11 @@ You can also see the audio unit and a gray cable (plugged into the organ and the
 The audio unit swings open.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+&gt;</commentary>
         <children><child nodeId="node-25390"></child>
         </children>
     </item>
@@ -7398,7 +7859,10 @@ The audio unit swings open.
 Taken.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">(putting the faulty pressure regulator module into your pocket to make room)
+Taken.
+
+&gt;</commentary>
         <children><child nodeId="node-25391"></child>
         </children>
     </item>
@@ -7407,7 +7871,9 @@ Taken.
         <result xml:space="preserve">You put the functional power module into the audio unit.
 
 &gt;</result>
-        <commentary xml:space="preserve"></commentary>
+        <commentary xml:space="preserve">You put the functional power module into the audio unit.
+
+&gt;</commentary>
         <children><child nodeId="node-25392"></child>
         </children>
     </item>
@@ -7424,6 +7890,29 @@ With the communications unit and attached to a functional audio unit, you call f
 
 In that game you scored 50 out of a possible 50, in 54 turns.
 
+
+Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+
+With the communications unit and attached to a functional audio unit, you call for help. I need to write this bit.
+
+
+
+    *** You win. ***
+
+
+In that game you scored 50 out of a possible 50, in 54 turns.
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
+&gt; </commentary>
+        <children><child nodeId="node-26574"></child>
+        </children>
+    </item>
+    <item nodeId="node-26574">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">Please give one of the answers above.
 
 Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
 &gt; </result>
