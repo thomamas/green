@@ -2,6 +2,7 @@
 Green.materials/Icon*
 Green.materials/Release
 Green.materials/*.eps
+Green.materials/*.pdf
 Green.inform/Index
 Green.inform/Build
 Green.inform/manifest.plist
