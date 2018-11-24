@@ -74,6 +74,8 @@ To find and take (s - an object):
 
 Chapter 5 - Extensions
 
+Section 1 - 
+
 Include Glulx Text Effects by Emily Short
 
 Include Unicode Character Names by Graham Nelson.
@@ -86,43 +88,66 @@ Report ExitListing when listing explained is false:
 	now listing explained is true;
 	say "[start note]Type 'exits off' to disable the status line exit list and 'exits on' to turn it back on.[no line break][stop note][line break]"
 
-Include Plugs and Sockets by Sean Turner
+Section 2 - Plugs and Sockets
 
-[
-	Because this is too ugly:
-		
-		You can see an organ (into which is plugged an USB cable), an audio unit (into which is plugged an USB cable), and an USB cable (plugged into an organ and an audio unit) here.
+[ TODO: Consider:
 
-	but this is better:		
-	
-		You can see an organ, an audio unit, and an USB cable (plugged into an organ and an audio unit) here.
-
-	Still not without issues, because if you are holding the cable then it doesn't show up in the room at all. Oh well.
+	Special language for picking up a cable that is connected to something not carried.
+	Blocking putting the cable in the pocket if it is connected to something not carried.
+	If there were a portable closable container which could hold a cable, there would be issues.
 ]
 
+Include Plugs and Sockets by Sean Turner
 
-The list attached things when listing receiver or inserter rule response (A) is "".
-
-[ make language fit ]
-
-The leaving room whilst attached to fixed things rule response (A) is "It is impractical to leave with [the item] attached to [the holder of the connectee]."
-
-[ make style fit ]
-
-The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are] plugged into more than one thing.[paragraph break][start note]Try 'unplug [noun] from SOMETHING'.[stop note][line break]";
-
-[ adapt to missing Plurality by Emily Short ]
+[ A. adapt to missing Plurality by Emily Short ]
 
 To say it-them of (s - something): say "it".
 
-[ some action synonyms ]
+[ B.  Suppress the list of attachments for sockets because this is too ugly:
+		
+	You can see an organ (into which is plugged an USB cable), an audio unit (into which is plugged an USB cable), and an USB cable (plugged into an organ and an audio unit) here.
+
+but this is better:		
+
+	You can see an organ, an audio unit, and an USB cable (plugged into an organ and an audio unit) here.
+
+Still not without issues: if you are holding the cable then it doesn't show up in the room at all, complicated connections wouldn't be clear, etc.
+]
+
+The list attached things when listing receiver or inserter rule response (A) is "".
+
+[ C. Make style fit for command explanation ]
+
+The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are] plugged into more than one thing.[paragraph break][start note]Try 'unplug [noun] from SOMETHING'.[stop note][line break]";
+
+[ D. Fix leaving whilst attached bug: the existing rule doesn't apply if the cable is in a container. Also substitute our preferred language. ]
+
+When play begins:
+	now PS-leaving is PS-allowed.
+
+This is the new leaving room whilst attached to fixed things rule:
+	repeat with item running through the attached things enclosed by the player:
+		repeat with loop-item running through the PS-connectors which are part of the item:
+			let the connectee be the attachment of the loop-item;
+			if the connectee is not nothing:
+				if the holder of the connectee is not enclosed by the player:
+					if PS-leaving is PS-denied:
+						say "It is impractical to leave with [the item] attached to [the holder of the connectee]." (A);
+						stop the action;
+					now the attachment of the loop-item is nothing;
+					now the attachment of the connectee is nothing;
+					say "[The item] [pull] out from [the holder of connectee]." (B).
+
+The new leaving room whilst attached to fixed things rule substitutes for the the leaving room whilst attached to fixed things rule.
+
+[ E. Some action synonyms ]
 
 Understand the command "disconnect" as "unplug".
 Understand "connect [something] to [something]" as plugging it into.
 
-[ and establish a few kinds for future use ]
+[ F. Establish a few kinds for future use ]
 
-A usb plug is a kind of PS-plug.
+A usb plug is a kind of PS-plug. 
 A usb socket is a kind of PS-socket.
 
 Chapter 6 - Directions
@@ -429,6 +454,13 @@ To scanner syntax error:
 Persuasion rule for asking the scanner to try scanning or examining or opening something:
 	persuasion succeeds.
 
+Persuasion rule for asking the scanner to try closing something:
+	persuasion succeeds.
+
+Instead of the scanner closing something:
+	computerize "Command error: closing is a manual process.";
+	rule succeeds.
+
 Instead of the scanner scanning or examining something:
 	try the player scanning the noun;
 	rule succeeds.
@@ -482,7 +514,7 @@ Instead of answering the scanner that something:
 		computerize "Recognized commands are 'help', 'open', and 'scan'.";
 		now the scanner is not explained;
 		explain the scanner;
-	else if the topic understood matches the regular expression "^(scan|open)\s+(.*)":
+	else if the topic understood matches the regular expression "^(scan|open|close)\s+(.*)":
 		computerize "Search error: cannot find [text matching subexpression 2].";
 		explain the scanner;
 	otherwise:
@@ -846,7 +878,7 @@ Every turn when the player is in Pod Bay for the first time:
 
 [ communications unit ]
 
-A communications unit is here. "Someone left a communications unit on the floor." It is a not fixed in place machine. It has description "A portable communications unit with a single socket to connect it to an audio unit." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket.
+A communications unit is here. "Someone left a communications unit on the floor." It is a not fixed in place machine. It has description "A portable communications unit with a single socket to connect it to an audio unit." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket called the cream socket.
 
 Instead of scanning the communications unit:
 	if audio and communications are connected:
@@ -856,9 +888,10 @@ Instead of scanning the communications unit:
 	else:
 		computerize "Machine functional. No output available.";
 
-Every turn when the communications unit is functional and audio unit is functional and audio unit is closed and audio and communications are connected:
+Every turn when the communications unit is usable:
 	increase the score by 10;
-	say "With the communications unit and attached to a functional audio unit, you call for help. I need to write this bit.";
+	say "The audio unit beeps and a synthesized voice says 'Comms ready.'[paragraph break]",
+		"You call for help. I need to write this bit.[no line break]";
 	end the story finally saying "You win."; [todo]
 
 Chapter 2 - Sector 2
@@ -923,7 +956,7 @@ Instead of looking under a forest in Sector 3, say "Only the house and church."
 	
 Section 1 - Church
 
-Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other."
+Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other."
 
 An altar is a fixed in place scenery supporter in church. It has description "Really just a table."
 
@@ -935,7 +968,7 @@ Instead of going nowhere in church when the noun is starboard, try going outside
 
 [ organ ]
 
-The organ is scenery in Church. It is a machine. It has description "It's really just a keyboard. It has a single socket to connect it to an audio unit." It has indefinite article "the". Understand "keyboard" as the organ. The organ can be played. Incorporated by the organ is a usb socket.
+The organ is scenery in Church. It is a machine. It has description "It's really just a keyboard in a fancy box with a socket to connect it to an audio unit." It has indefinite article "the". Understand "keyboard" as the organ. The organ can be played. Incorporated by the organ is a usb socket called the tan socket.
 
 Instead of scanning the organ: [ organ is always functional ]
 	if audio and organ are connected and the audio unit is functional:
@@ -946,7 +979,7 @@ Instead of scanning the organ: [ organ is always functional ]
 		computerize "Machine functional. No output available.";
 
 Instead of playing the organ:
-	if audio and organ are connected and the audio unit is functional:
+	if the organ is usable:
 		if the organ is not played:
 			say "You never really learned how to play, but you pick out a few notes on the keyboard and the sound reverberates from the audio unit.";
 			now the organ is played;
@@ -955,11 +988,13 @@ Instead of playing the organ:
 	otherwise:
 		say "Nothing happens."
 
+Instead of taking the organ, say "It is too heavy to move."
+
 [ audio unit ]
 
-An audio unit is in Church. It is a openable machine. The description is "The audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device." It has carrying capacity 1. Understand "portable" as the audio unit.
+An audio unit is scenery in Church. It is a openable machine. The description is "The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device." It has carrying capacity 1. Understand "portable" as the audio unit.
 
-Incorporated by the audio unit is a usb socket.
+Incorporated by the audio unit is a usb socket called the ivory socket.
 There is a faulty power module in the audio unit.
 
 Instead of scanning the audio unit:
@@ -976,11 +1011,19 @@ To decide if (m - the audio unit) is functional:
 	unless there is a functional power module in m, decide no;
 	decide yes.
 
-Instead of taking the audio unit, say "It is too heavy to move."
+Instead of taking the audio unit, say "That is attached to the wall."
 
 [ cable and connectivity ]
 
-A gray cable is in Church. Incorporated by it are two usb plugs. It has description "It's a USB 7.2 Type-F cable." Understand "grey" as the gray cable.
+A gray cable is in Church. "A gray cable connects the organ and the audio unit." Incorporated by it are two usb plugs. It has description "A one meter USB 7.2 cable with a Type-F plug at each end." Understand "grey" and "usb" and "plug" and "plugs" and "connector" and "connector" as the gray cable. It is machinelike.
+
+Instead of scanning the cable, computerize "Cable is functional."
+
+Instead of the scanner opening the cable:
+	computerize "Cable is unitary.";
+	rule succeeds.
+
+Understand "pull [the gray cable]" as unplugging.
 
 When play begins: [* this can't be the right way to do this ]
 	let first plug be nothing;
@@ -1005,6 +1048,8 @@ When play begins: [* this can't be the right way to do this ]
 	now the attachment of second plug is the second socket;
 	now the attachment of second socket is the second plug;
 
+[ connection checking ]
+
 To decide if audio and organ are connected:
 	if the gray cable is inserted into the audio unit and the gray cable is inserted into the organ, decide yes;
 	decide no.
@@ -1017,8 +1062,23 @@ To decide if audio and communications are connected:
 	if the gray cable is inserted into the audio unit and the gray cable is inserted into the communications unit, decide yes;
 	decide no.
 
-[ todo -- output when you make valid connections ]
+To decide if the communications unit is usable: [* usable means ready for its special purpose, functional just means that components are all correct and functional ]
+	if communications unit is functional and audio unit is functional and audio unit is closed and audio and communications are connected, decide yes;
+	decide no.
 
+To decide if the organ is usable:
+	if audio and organ are connected and the audio unit is functional and audio unit is closed, decide yes;
+	decide no.
+
+The organ-status is a truth state that varies. The organ-status is false.
+
+Every turn when the gray cable is visible:
+	if the organ-status is false and the organ is usable:
+		say "The audio unit beeps and a synthesized voice says 'Organ ready.'";
+		now organ-status is true;
+	unless the organ is usable:
+		if the organ-status is true, say "The audio unit beeps and a synthesized voice says 'No input.'";
+		now organ-status is false;
 
 Section 2 - House
 

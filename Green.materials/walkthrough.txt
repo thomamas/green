@@ -1,0 +1,54 @@
+d
+get mask
+u
+out
+sw
+in
+get eraser
+erase board
+scanner, open machine
+get all from machine
+out
+sw
+d
+search crate
+g
+get boots
+hit eraser
+u
+wear boots
+wear mask
+asw
+asw
+asw
+up
+turn breaker on
+d
+asw
+enter pond
+asw
+d
+scanner, open pump
+get all from pump
+scan regulator
+scan unscanned regulator
+put functional regulator in pump
+scan power module
+scan unscanned power module
+put functional power module in pump
+close pump
+port
+get communications unit
+starboard
+scanner, open pump
+get functional power module
+u
+sw
+sw
+go church
+unplug cable from organ
+plug cable into comms unit
+scanner, open audio
+get power module from audio
+put functional power into audio
+close audio

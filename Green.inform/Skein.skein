@@ -15,7 +15,7 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 181123 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 181124 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type "about" for credits and more information.
 
 Home
@@ -45,47 +45,2142 @@ There is a secured hatch in the floor.
 
 &gt;</commentary>
         <children><child nodeId="node-26581"></child>
-            <child nodeId="node-26638"></child>
-            <child nodeId="node-26640"></child>
+            <child nodeId="node-27213"></child>
+            <child nodeId="node-27173"></child>
+            <child nodeId="node-27180"></child>
+            <child nodeId="node-27223"></child>
+            <child nodeId="node-27174"></child>
+            <child nodeId="node-26698"></child>
+            <child nodeId="node-27244"></child>
+            <child nodeId="node-27142"></child>
+            <child nodeId="node-27634"></child>
+            <child nodeId="node-27651"></child>
+            <child nodeId="node-27654"></child>
+            <child nodeId="node-27647"></child>
+            <child nodeId="node-27184"></child>
         </children>
     </item>
-    <item nodeId="node-26640">
-        <command xml:space="preserve">unlock hatch</command>
-        <result xml:space="preserve">That's not a verb I recognize.
+    <item nodeId="node-27184">
+        <command xml:space="preserve">show me</command>
+        <result xml:space="preserve">What do you want to show yourself?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-26641"></child>
+        <children><child nodeId="node-27185"></child>
         </children>
     </item>
-    <item nodeId="node-26641">
+    <item nodeId="node-27185">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27186"></child>
+        </children>
+    </item>
+    <item nodeId="node-27186">
+        <command xml:space="preserve">x cable</command>
+        <result xml:space="preserve">A one meter USB 7.2 cable with a Type-F plug at each end.
+
+It is plugged into the organ and an audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27187"></child>
+        </children>
+    </item>
+    <item nodeId="node-27187">
+        <command xml:space="preserve">take cable</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27188"></child>
+        </children>
+    </item>
+    <item nodeId="node-27188">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">It is impractical to leave with the gray cable attached to the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27189"></child>
+        </children>
+    </item>
+    <item nodeId="node-27189">
+        <command xml:space="preserve">put cable in pocket</command>
+        <result xml:space="preserve">You put the gray cable into the pocket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27190"></child>
+        </children>
+    </item>
+    <item nodeId="node-27190">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+Your jumpsuit pocket contains:
+  a gray cable (plugged into the organ and an audio unit)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27647">
+        <command xml:space="preserve">scanner, scan hatch</command>
+        <result xml:space="preserve">No modular technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27648"></child>
+        </children>
+    </item>
+    <item nodeId="node-27648">
+        <command xml:space="preserve">scanner, close hatch</command>
+        <result xml:space="preserve">Command error: closing is a manual process.
+
+The scanner is unable to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27654">
+        <command xml:space="preserve">scanner, close me</command>
+        <result xml:space="preserve">Command error: closing is a manual process.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27655"></child>
+        </children>
+    </item>
+    <item nodeId="node-27655">
+        <command xml:space="preserve">scanner, close jkjkk</command>
+        <result xml:space="preserve">Search error: cannot find jkjkk.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27651">
+        <command xml:space="preserve">scanner, close hatch</command>
+        <result xml:space="preserve">Command error: closing is a manual process.
+
+The scanner is unable to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27634">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27635"></child>
+        </children>
+    </item>
+    <item nodeId="node-27635">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27636"></child>
+        </children>
+    </item>
+    <item nodeId="node-27636">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27637"></child>
+        </children>
+    </item>
+    <item nodeId="node-27637">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27638"></child>
+        </children>
+    </item>
+    <item nodeId="node-27638">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27639"></child>
+        </children>
+    </item>
+    <item nodeId="node-27639">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave. The pods are below Sector 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27640"></child>
+        </children>
+    </item>
+    <item nodeId="node-27640">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27641"></child>
+        </children>
+    </item>
+    <item nodeId="node-27641">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27642"></child>
+        </children>
+    </item>
+    <item nodeId="node-27642">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27643"></child>
+        </children>
+    </item>
+    <item nodeId="node-27643">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27644"></child>
+        </children>
+    </item>
+    <item nodeId="node-27644">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall.
+
+There is a secured hatch in the ceiling.
+
+Beside the secured port hatch, a status display shows an error message.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27645"></child>
+        </children>
+    </item>
+    <item nodeId="node-27645">
         <command xml:space="preserve">open hatch</command>
-        <result xml:space="preserve">You open the floor hatch.
+        <result xml:space="preserve">Which do you mean, the ceiling hatch or the wall hatch?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-26642"></child>
+        <children><child nodeId="node-27646"></child>
         </children>
     </item>
-    <item nodeId="node-26642">
-        <command xml:space="preserve">lock hatch</command>
+    <item nodeId="node-27646">
+        <command xml:space="preserve">read message</command>
+        <result xml:space="preserve">Pod bay locked down
+Diagnosis: telemetry sensor array offline
+Remediation: reset breaker FM36-87/A @ hub platform
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27142">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27143"></child>
+        </children>
+    </item>
+    <item nodeId="node-27143">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other, beside an audio unit.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27144"></child>
+        </children>
+    </item>
+    <item nodeId="node-27144">
+        <command xml:space="preserve">x grey</command>
+        <result xml:space="preserve">It's a USB 7.2 Type-F cable.
+
+It is plugged into the organ and an audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27244">
+        <command xml:space="preserve">goner sack</command>
         <result xml:space="preserve">That's not a verb I recognize.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27245"></child>
+        </children>
     </item>
-    <item nodeId="node-26638">
+    <item nodeId="node-27245">
+        <command xml:space="preserve">gonear sack</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27246"></child>
+        </children>
+    </item>
+    <item nodeId="node-27246">
+        <command xml:space="preserve">gonear bag</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27247"></child>
+        </children>
+    </item>
+    <item nodeId="node-27247">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27248"></child>
+        </children>
+    </item>
+    <item nodeId="node-27248">
+        <command xml:space="preserve">put cable in pocket</command>
+        <result xml:space="preserve">(first taking the gray cable)
+You put the gray cable into the pocket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27249"></child>
+        </children>
+    </item>
+    <item nodeId="node-27249">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">The gray cable disconnects from the organ.
+The gray cable disconnects from the audio unit.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26698">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27136"></child>
+            <child nodeId="node-27139"></child>
+            <child nodeId="node-27146"></child>
+            <child nodeId="node-27210"></child>
+            <child nodeId="node-27251"></child>
+            <child nodeId="node-26699"></child>
+            <child nodeId="node-27167"></child>
+        </children>
+    </item>
+    <item nodeId="node-27167">
+        <command xml:space="preserve">x socket</command>
+        <result xml:space="preserve">Which do you mean, the tan socket or the ivory socket?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27168"></child>
+        </children>
+    </item>
+    <item nodeId="node-27168">
+        <command xml:space="preserve">tan</command>
+        <result xml:space="preserve">It is a female standard connector of the organ. It has the gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27169"></child>
+        </children>
+    </item>
+    <item nodeId="node-27169">
+        <command xml:space="preserve">x ivory socket</command>
+        <result xml:space="preserve">It is a female standard connector of the audio unit. It has the gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27170"></child>
+        </children>
+    </item>
+    <item nodeId="node-27170">
+        <command xml:space="preserve">x usb socket</command>
+        <result xml:space="preserve">You can't use multiple objects with that verb.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27171"></child>
+        </children>
+    </item>
+    <item nodeId="node-27171">
+        <command xml:space="preserve">x socket</command>
+        <result xml:space="preserve">Which do you mean, the tan socket or the ivory socket?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27172"></child>
+        </children>
+    </item>
+    <item nodeId="node-27172">
+        <command xml:space="preserve">x usb</command>
+        <result xml:space="preserve">You can't use multiple objects with that verb.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26699">
+        <command xml:space="preserve">scanner, open audio</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26700"></child>
+        </children>
+    </item>
+    <item nodeId="node-26700">
+        <command xml:space="preserve">purloin all power units</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26701"></child>
+        </children>
+    </item>
+    <item nodeId="node-26701">
+        <command xml:space="preserve">purloin all power modules</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26702"></child>
+        </children>
+    </item>
+    <item nodeId="node-26702">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a power module
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26703"></child>
+        </children>
+    </item>
+    <item nodeId="node-26703">
+        <command xml:space="preserve">purloin power modules</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26704"></child>
+        </children>
+    </item>
+    <item nodeId="node-26704">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a power module
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26705"></child>
+        </children>
+    </item>
+    <item nodeId="node-26705">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see an audio unit (empty) and a gray cable (plugged into the organ and an audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26706"></child>
+        </children>
+    </item>
+    <item nodeId="node-26706">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26707"></child>
+        </children>
+    </item>
+    <item nodeId="node-26707">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181124 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits and more information.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26708"></child>
+        </children>
+    </item>
+    <item nodeId="node-26708">
+        <command xml:space="preserve">purloin power modules</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26709"></child>
+        </children>
+    </item>
+    <item nodeId="node-26709">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  three power modules
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26710"></child>
+        </children>
+    </item>
+    <item nodeId="node-26710">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see an audio unit and a gray cable (plugged into the organ and an audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26711"></child>
+        </children>
+    </item>
+    <item nodeId="node-26711">
+        <command xml:space="preserve">scan power module</command>
+        <result xml:space="preserve">Component is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26712"></child>
+        </children>
+    </item>
+    <item nodeId="node-26712">
+        <command xml:space="preserve">scanner, open organ</command>
+        <result xml:space="preserve">Machine is unitary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26713"></child>
+        </children>
+    </item>
+    <item nodeId="node-26713">
+        <command xml:space="preserve">scanner, open audio</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26714"></child>
+        </children>
+    </item>
+    <item nodeId="node-26714">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device.
+
+There is space for one more module.
+
+The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26732"></child>
+        </children>
+    </item>
+    <item nodeId="node-26732">
+        <command xml:space="preserve">play organ</command>
+        <result xml:space="preserve">Nothing happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26733"></child>
+        </children>
+    </item>
+    <item nodeId="node-26733">
+        <command xml:space="preserve">put functional power in audio</command>
+        <result xml:space="preserve">You put the functional power module into the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26734"></child>
+        </children>
+    </item>
+    <item nodeId="node-26734">
+        <command xml:space="preserve">play organ</command>
+        <result xml:space="preserve">Nothing happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26735"></child>
+        </children>
+    </item>
+    <item nodeId="node-26735">
+        <command xml:space="preserve">close organ</command>
+        <result xml:space="preserve">It isn't something you can close.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26736"></child>
+        </children>
+    </item>
+    <item nodeId="node-26736">
+        <command xml:space="preserve">close audio</command>
+        <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+
+The audio unit beeps and a synthesized voice says "Organ ready."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26737"></child>
+        </children>
+    </item>
+    <item nodeId="node-26737">
+        <command xml:space="preserve">play organ</command>
+        <result xml:space="preserve">You never really learned how to play, but you pick out a few notes on the keyboard and the sound reverberates from the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26738"></child>
+        </children>
+    </item>
+    <item nodeId="node-26738">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">You play a few notes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26739"></child>
+        </children>
+    </item>
+    <item nodeId="node-26739">
+        <command xml:space="preserve">open audio</command>
+        <result xml:space="preserve">You will need to use the scanner to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26740"></child>
+        </children>
+    </item>
+    <item nodeId="node-26740">
+        <command xml:space="preserve">scanner, openaudio</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26741"></child>
+        </children>
+    </item>
+    <item nodeId="node-26741">
+        <command xml:space="preserve">scanner open audio</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26742"></child>
+        </children>
+    </item>
+    <item nodeId="node-26742">
+        <command xml:space="preserve">scanner, open audio</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+The audio unit beeps and a synthesized voice says "No input."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26743"></child>
+        </children>
+    </item>
+    <item nodeId="node-26743">
+        <command xml:space="preserve">close audio</command>
+        <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+
+The audio unit beeps and a synthesized voice says "Organ ready."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27251">
+        <command xml:space="preserve">put cable in pocket</command>
+        <result xml:space="preserve">(first taking the gray cable)
+You put the gray cable into the pocket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27252"></child>
+        </children>
+    </item>
+    <item nodeId="node-27252">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27210">
+        <command xml:space="preserve">pull cable</command>
+        <result xml:space="preserve">The gray cable is plugged into more than one thing.
+
+[Try "unplug gray cable from SOMETHING".]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27211"></child>
+        </children>
+    </item>
+    <item nodeId="node-27211">
+        <command xml:space="preserve">take cable</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27212"></child>
+        </children>
+    </item>
+    <item nodeId="node-27212">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a gray cable (plugged into the organ and an audio unit)
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27146">
+        <command xml:space="preserve">get usb</command>
+        <result xml:space="preserve">(the gray cable)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27147"></child>
+        </children>
+    </item>
+    <item nodeId="node-27147">
+        <command xml:space="preserve">x usb</command>
+        <result xml:space="preserve">(the gray cable)
+A one meter USB 7.2 Type-F cable.
+
+It is plugged into the organ and an audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27148"></child>
+        </children>
+    </item>
+    <item nodeId="node-27148">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">It is impractical to leave with the gray cable attached to the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27149"></child>
+        </children>
+    </item>
+    <item nodeId="node-27149">
+        <command xml:space="preserve">drop cable</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27150"></child>
+        </children>
+    </item>
+    <item nodeId="node-27150">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other, beside an audio unit.
+
+On the altar is The Founder's Testament.
+
+You can also see a gray cable (plugged into the organ and an audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27151"></child>
+        </children>
+    </item>
+    <item nodeId="node-27151">
+        <command xml:space="preserve">unplug cable</command>
+        <result xml:space="preserve">The gray cable is plugged into more than one thing.
+
+[Try "unplug gray cable from SOMETHING".]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27152"></child>
+        </children>
+    </item>
+    <item nodeId="node-27152">
+        <command xml:space="preserve">unplug cable from organ</command>
+        <result xml:space="preserve">You unplug the gray cable from the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27153"></child>
+        </children>
+    </item>
+    <item nodeId="node-27153">
+        <command xml:space="preserve">unplug cable from audio</command>
+        <result xml:space="preserve">You unplug the gray cable from the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27154"></child>
+        </children>
+    </item>
+    <item nodeId="node-27154">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27155"></child>
+        </children>
+    </item>
+    <item nodeId="node-27155">
+        <command xml:space="preserve">get cable</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27156"></child>
+        </children>
+    </item>
+    <item nodeId="node-27156">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27157"></child>
+        </children>
+    </item>
+    <item nodeId="node-27157">
+        <command xml:space="preserve">drop cable</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27158"></child>
+        </children>
+    </item>
+    <item nodeId="node-27158">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">You can enter the church or the house.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27159"></child>
+        </children>
+    </item>
+    <item nodeId="node-27159">
+        <command xml:space="preserve">go church</command>
+        <result xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other, beside an audio unit.
+
+On the altar is The Founder's Testament.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27160"></child>
+        </children>
+    </item>
+    <item nodeId="node-27160">
+        <command xml:space="preserve">x altar</command>
+        <result xml:space="preserve">Really just a table.
+
+On the altar is The Founder's Testament.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27161"></child>
+        </children>
+    </item>
+    <item nodeId="node-27161">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">It's really just a keyboard. It has a single socket to connect it to an audio unit.
+
+The organ has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27162"></child>
+        </children>
+    </item>
+    <item nodeId="node-27162">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other, beside an audio unit.
+
+On the altar is The Founder's Testament.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27163"></child>
+        </children>
+    </item>
+    <item nodeId="node-27163">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other, beside an audio unit.
+
+On the altar is The Founder's Testament.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27164"></child>
+        </children>
+    </item>
+    <item nodeId="node-27164">
+        <command xml:space="preserve">x usb</command>
+        <result xml:space="preserve">It is a female standard connector of the organ. It has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27165"></child>
+        </children>
+    </item>
+    <item nodeId="node-27165">
+        <command xml:space="preserve">x usb</command>
+        <result xml:space="preserve">It is a female standard connector of the organ. It has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27139">
+        <command xml:space="preserve">get cable</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27140"></child>
+            <child nodeId="node-27193"></child>
+        </children>
+    </item>
+    <item nodeId="node-27193">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">The gray cable disconnects from the organ.
+The gray cable disconnects from the audio unit.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27194"></child>
+        </children>
+    </item>
+    <item nodeId="node-27194">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Church
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27195"></child>
+            <child nodeId="node-27207"></child>
+            <child nodeId="node-27257"></child>
+        </children>
+    </item>
+    <item nodeId="node-27257">
+        <command xml:space="preserve">put cable in pocket</command>
+        <result xml:space="preserve">You put the gray cable into the pocket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27258"></child>
+        </children>
+    </item>
+    <item nodeId="node-27258">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">The gray cable disconnects from the organ.
+The gray cable disconnects from the audio unit.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27207">
+        <command xml:space="preserve">pull cable</command>
+        <result xml:space="preserve">Nothing obvious happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27208"></child>
+        </children>
+    </item>
+    <item nodeId="node-27208">
+        <command xml:space="preserve">unplug cable</command>
+        <result xml:space="preserve">The gray cable is plugged into more than one thing.
+
+[Try "unplug gray cable from SOMETHING".]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27195">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a gray cable (plugged into the organ and an audio unit)
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27196"></child>
+        </children>
+    </item>
+    <item nodeId="node-27196">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27197"></child>
+        </children>
+    </item>
+    <item nodeId="node-27197">
+        <command xml:space="preserve">disconnect cable from organ</command>
+        <result xml:space="preserve">You unplug the gray cable from the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27198"></child>
+        </children>
+    </item>
+    <item nodeId="node-27198">
+        <command xml:space="preserve">connect cable to comms</command>
+        <result xml:space="preserve">You plug the gray cable into the communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27199"></child>
+        </children>
+    </item>
+    <item nodeId="node-27199">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">The gray cable disconnects from the audio unit.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27200"></child>
+        </children>
+    </item>
+    <item nodeId="node-27200">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  the communications unit
+  a gray cable (plugged into the communications unit)
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27201"></child>
+        </children>
+    </item>
+    <item nodeId="node-27201">
+        <command xml:space="preserve">go church</command>
+        <result xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27202"></child>
+        </children>
+    </item>
+    <item nodeId="node-27202">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27140">
+        <command xml:space="preserve">drop cable</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27141"></child>
+        </children>
+    </item>
+    <item nodeId="node-27141">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other, beside an audio unit.
+
+On the altar is The Founder's Testament.
+
+You can also see a gray cable (plugged into the organ and an audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27136">
+        <command xml:space="preserve">get audio</command>
+        <result xml:space="preserve">It is too heavy to move.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27174">
+        <command xml:space="preserve">gonear grey cable</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27175"></child>
+        </children>
+    </item>
+    <item nodeId="node-27175">
+        <command xml:space="preserve">x gray cable</command>
+        <result xml:space="preserve">A one meter USB 7.2 Type-F cable.
+
+It is plugged into the organ and an audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27176"></child>
+        </children>
+    </item>
+    <item nodeId="node-27176">
+        <command xml:space="preserve">x plug</command>
+        <result xml:space="preserve">(the gray cable)
+A one meter USB 7.2 Type-F cable.
+
+It is plugged into the organ and an audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27177"></child>
+        </children>
+    </item>
+    <item nodeId="node-27177">
+        <command xml:space="preserve">get plugs</command>
+        <result xml:space="preserve">usb plug: That seems to be a part of the gray cable.
+usb plug: That seems to be a part of the gray cable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27178"></child>
+        </children>
+    </item>
+    <item nodeId="node-27178">
+        <command xml:space="preserve">plug cable</command>
+        <result xml:space="preserve">What do you want to plug the gray cable into?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27179"></child>
+        </children>
+    </item>
+    <item nodeId="node-27179">
+        <command xml:space="preserve">gray</command>
+        <result xml:space="preserve">The gray cable has no socket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27223">
+        <command xml:space="preserve">gonear altar</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+You can also see a bag (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27224"></child>
+        </children>
+    </item>
+    <item nodeId="node-27224">
+        <command xml:space="preserve">put cable in bag</command>
+        <result xml:space="preserve">(first taking the gray cable)
+You put the gray cable into the bag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27225"></child>
+        </children>
+    </item>
+    <item nodeId="node-27225">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27226"></child>
+        </children>
+    </item>
+    <item nodeId="node-27226">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see a bag (in which is a gray cable (plugged into the organ and an audio unit)) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27227"></child>
+        </children>
+    </item>
+    <item nodeId="node-27227">
+        <command xml:space="preserve">close bag</command>
+        <result xml:space="preserve">You close the bag.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27228"></child>
+        </children>
+    </item>
+    <item nodeId="node-27228">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see a bag (closed) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27229"></child>
+        </children>
+    </item>
+    <item nodeId="node-27229">
+        <command xml:space="preserve">get bag</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27230"></child>
+        </children>
+    </item>
+    <item nodeId="node-27230">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You have heard of compass directions like west, but they don't make any sense here. Instead, you can go spinward, antispinward, port, and starboard. When you look spinward, port is left and starboard is right.
+
+[You can use the abbreviations "sw", "asw", "p", and "s". You can also go "up", "down", "in", and "out" where appropriate. Type "exits" if you get confused about geography.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27231"></child>
+        </children>
+    </item>
+    <item nodeId="node-27231">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27232"></child>
+        </children>
+    </item>
+    <item nodeId="node-27232">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a bag (closed)
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27233"></child>
+        </children>
+    </item>
+    <item nodeId="node-27233">
+        <command xml:space="preserve">open bag</command>
+        <result xml:space="preserve">You open the bag, revealing a gray cable (plugged into the organ and an audio unit).
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27234"></child>
+        </children>
+    </item>
+    <item nodeId="node-27234">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">You can enter the church or the house.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27235"></child>
+        </children>
+    </item>
+    <item nodeId="node-27235">
+        <command xml:space="preserve">get cable</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27236"></child>
+        </children>
+    </item>
+    <item nodeId="node-27236">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">You can enter the church or the house.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27237"></child>
+        </children>
+    </item>
+    <item nodeId="node-27237">
+        <command xml:space="preserve">go church</command>
+        <result xml:space="preserve">The gray cable pulls out from the organ.
+The gray cable pulls out from the audio unit.
+
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27238"></child>
+        </children>
+    </item>
+    <item nodeId="node-27238">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27239"></child>
+        </children>
+    </item>
+    <item nodeId="node-27239">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181124 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits and more information.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27240"></child>
+        </children>
+    </item>
+    <item nodeId="node-27240">
+        <command xml:space="preserve">gonear altar</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+You can also see a bag (empty) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27241"></child>
+        </children>
+    </item>
+    <item nodeId="node-27241">
+        <command xml:space="preserve">get cable</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27242"></child>
+        </children>
+    </item>
+    <item nodeId="node-27242">
+        <command xml:space="preserve">put cable in pocket</command>
+        <result xml:space="preserve">You put the gray cable into the pocket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27243"></child>
+        </children>
+    </item>
+    <item nodeId="node-27243">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27180">
+        <command xml:space="preserve">get plugs</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27181"></child>
+        </children>
+    </item>
+    <item nodeId="node-27181">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27182"></child>
+        </children>
+    </item>
+    <item nodeId="node-27182">
+        <command xml:space="preserve">get plugs</command>
+        <result xml:space="preserve">(the gray cable)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27183"></child>
+        </children>
+    </item>
+    <item nodeId="node-27183">
+        <command xml:space="preserve">x cable</command>
+        <result xml:space="preserve">A one meter USB 7.2 Type-F cable.
+
+It is plugged into the organ and an audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27173">
+        <command xml:space="preserve">about</command>
+        <result xml:space="preserve">About Founder's Mercy
+Founder's Mercy is my second released Inform project, conceived and implemented in November of 2018. It should be impossible to put this game into an unwinnable state.
+
+Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who worked on the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, Space Settlements: A Design Study, edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at https://archive.org/details/SpaceSettlementsADesignStudy1977 .
+
+Please send your feedback, bug reports, and requests for help to tinsel@tinsel.org. You can always find the current version of this game at http://tinsel.org/IF/ .
+
+This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license (https://creativecommons.org/licenses/by/4.0/).
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27213">
         <command xml:space="preserve">* scratch</command>
         <result xml:space="preserve">(Noted.)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-26639"></child>
+        <children><child nodeId="node-27564"></child>
+            <child nodeId="node-27214"></child>
         </children>
     </item>
-    <item nodeId="node-26639">
-        <command xml:space="preserve">unlock hatch</command>
-        <result xml:space="preserve">What do you want to unlock the floor hatch with?
+    <item nodeId="node-27214">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27215"></child>
+        </children>
+    </item>
+    <item nodeId="node-27215">
+        <command xml:space="preserve">put comms in pocket</command>
+        <result xml:space="preserve">That is too big for your pocket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27216"></child>
+        </children>
+    </item>
+    <item nodeId="node-27216">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  the communications unit
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27217"></child>
+        </children>
+    </item>
+    <item nodeId="node-27217">
+        <command xml:space="preserve">purloin all modules</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27218"></child>
+        </children>
+    </item>
+    <item nodeId="node-27218">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">pressure regulator module: Dropped.
+instruction module: Dropped.
+instruction module: Dropped.
+power module: Dropped.
+power module: Dropped.
+pressure regulator module: Dropped.
+power module: Dropped.
+communications unit: Dropped.
+scanner: Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27219"></child>
+        </children>
+    </item>
+    <item nodeId="node-27219">
+        <command xml:space="preserve">get comms</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27220"></child>
+        </children>
+    </item>
+    <item nodeId="node-27220">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  the communications unit
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27221"></child>
+        </children>
+    </item>
+    <item nodeId="node-27221">
+        <command xml:space="preserve">get all</command>
+        <result xml:space="preserve">scanner: Taken.
+power module: Taken.
+pressure regulator module: (putting the communications unit into your pocket to make room)
+That is too big for your pocket.
+
+power module: (putting the communications unit into your pocket to make room)
+That is too big for your pocket.
+
+power module: (putting the communications unit into your pocket to make room)
+That is too big for your pocket.
+
+instruction module: (putting the communications unit into your pocket to make room)
+That is too big for your pocket.
+
+instruction module: (putting the communications unit into your pocket to make room)
+That is too big for your pocket.
+
+pressure regulator module: (putting the communications unit into your pocket to make room)
+That is too big for your pocket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27222"></child>
+        </children>
+    </item>
+    <item nodeId="node-27222">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+You can also see two pressure regulator modules, two power modules, and two instruction modules here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-27564">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27565"></child>
+        </children>
+    </item>
+    <item nodeId="node-27565">
+        <command xml:space="preserve">get cable</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27566"></child>
+        </children>
+    </item>
+    <item nodeId="node-27566">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">The gray cable pulls out from the organ.
+The gray cable pulls out from the audio unit.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27567"></child>
+        </children>
+    </item>
+    <item nodeId="node-27567">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27568"></child>
+        </children>
+    </item>
+    <item nodeId="node-27568">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a gray cable
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27569"></child>
+        </children>
+    </item>
+    <item nodeId="node-27569">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27570"></child>
+        </children>
+    </item>
+    <item nodeId="node-27570">
+        <command xml:space="preserve">scan cable</command>
+        <result xml:space="preserve">Cable is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27571"></child>
+        </children>
+    </item>
+    <item nodeId="node-27571">
+        <command xml:space="preserve">scanner, open cable.</command>
+        <result xml:space="preserve">Cable is unitary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27581"></child>
+        </children>
+    </item>
+    <item nodeId="node-27581">
+        <command xml:space="preserve">scan cable</command>
+        <result xml:space="preserve">Cable is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27582"></child>
+        </children>
+    </item>
+    <item nodeId="node-27582">
+        <command xml:space="preserve">scanner, open cable</command>
+        <result xml:space="preserve">Cable is unitary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27605"></child>
+        </children>
+    </item>
+    <item nodeId="node-27605">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">You can enter the church or the house.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27606"></child>
+        </children>
+    </item>
+    <item nodeId="node-27606">
+        <command xml:space="preserve">go church</command>
+        <result xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27607"></child>
+        </children>
+    </item>
+    <item nodeId="node-27607">
+        <command xml:space="preserve">connect cable to audio unit</command>
+        <result xml:space="preserve">You plug the gray cable into the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27608"></child>
+        </children>
+    </item>
+    <item nodeId="node-27608">
+        <command xml:space="preserve">connect cable to organ</command>
+        <result xml:space="preserve">You plug the gray cable into the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27609"></child>
+        </children>
+    </item>
+    <item nodeId="node-27609">
+        <command xml:space="preserve">scan cable</command>
+        <result xml:space="preserve">Cable is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27610"></child>
+        </children>
+    </item>
+    <item nodeId="node-27610">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. No output available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27611"></child>
+        </children>
+    </item>
+    <item nodeId="node-27611">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27612"></child>
+        </children>
+    </item>
+    <item nodeId="node-27612">
+        <command xml:space="preserve">purloin all modules</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27613"></child>
+        </children>
+    </item>
+    <item nodeId="node-27613">
+        <command xml:space="preserve">scan power</command>
+        <result xml:space="preserve">Component is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27614"></child>
+        </children>
+    </item>
+    <item nodeId="node-27614">
+        <command xml:space="preserve">open comms</command>
+        <result xml:space="preserve">You will need to use the scanner to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27615"></child>
+        </children>
+    </item>
+    <item nodeId="node-27615">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">A portable communications unit with a single socket to connect it to an audio unit.
+
+The communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27616"></child>
+        </children>
+    </item>
+    <item nodeId="node-27616">
+        <command xml:space="preserve">scanner, open comms</command>
+        <result xml:space="preserve">Machine is unitary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27617"></child>
+        </children>
+    </item>
+    <item nodeId="node-27617">
+        <command xml:space="preserve">scanner, open audio</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27618"></child>
+        </children>
+    </item>
+    <item nodeId="node-27618">
+        <command xml:space="preserve">get all</command>
+        <result xml:space="preserve">Founder's Testament: (putting the scanner into your pocket to make room)
+You're carrying too many things already.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27619"></child>
+        </children>
+    </item>
+    <item nodeId="node-27619">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  two unscanned pressure regulator modules
+  two unscanned instruction modules
+  a functional power module
+  two unscanned power modules
+  the communications unit
+  a gray cable (plugged into the organ and an audio unit)
+  a green jumpsuit (being worn)
+
+Your jumpsuit pocket contains:
+  a scanner
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27620"></child>
+        </children>
+    </item>
+    <item nodeId="node-27620">
+        <command xml:space="preserve">get all</command>
+        <result xml:space="preserve">Founder's Testament: (putting the gray cable into your pocket to make room)
+You're carrying too many things already.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27621"></child>
+        </children>
+    </item>
+    <item nodeId="node-27621">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">unscanned pressure regulator module: Dropped.
+unscanned instruction module: Dropped.
+unscanned instruction module: Dropped.
+functional power module: Dropped.
+unscanned power module: Dropped.
+unscanned pressure regulator module: Dropped.
+unscanned power module: Dropped.
+communications unit: Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27622"></child>
+        </children>
+    </item>
+    <item nodeId="node-27622">
+        <command xml:space="preserve">get all</command>
+        <result xml:space="preserve">communications unit: Taken.
+unscanned power module: Taken.
+unscanned pressure regulator module: Taken.
+unscanned power module: (putting the communications unit into your pocket to make room)
+Taken.
+functional power module: (putting the unscanned power module into your pocket to make room)
+Taken.
+unscanned instruction module: (putting the unscanned pressure regulator module into your pocket to make room)
+Taken.
+unscanned instruction module: (putting the unscanned power module into your pocket to make room)
+Taken.
+unscanned pressure regulator module: (putting the functional power module into your pocket to make room)
+Taken.
+Founder's Testament: (putting the unscanned instruction module into your pocket to make room)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27623"></child>
+        </children>
+    </item>
+    <item nodeId="node-27623">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27624"></child>
+        </children>
+    </item>
+    <item nodeId="node-27624">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  The Founder's Testament
+  an unscanned pressure regulator module
+  an unscanned instruction module
+  a green jumpsuit (being worn)
+
+Your jumpsuit pocket contains:
+  an unscanned instruction module
+  a functional power module
+  two unscanned power modules
+  an unscanned pressure regulator module
+  the communications unit
+  a gray cable (plugged into the organ and an audio unit)
+  a scanner
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27625"></child>
+        </children>
+    </item>
+    <item nodeId="node-27625">
+        <command xml:space="preserve">put functional power in audio</command>
+        <result xml:space="preserve">(first taking the functional power module)
+(putting the unscanned instruction module into your pocket to make room)
+You put the functional power module into the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27626"></child>
+        </children>
+    </item>
+    <item nodeId="node-27626">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27627"></child>
+        </children>
+    </item>
+    <item nodeId="node-27627">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device.
+
+In the audio unit is a power module.
+
+The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27628"></child>
+        </children>
+    </item>
+    <item nodeId="node-27628">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine functional. Input connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27629"></child>
+        </children>
+    </item>
+    <item nodeId="node-27629">
+        <command xml:space="preserve">x cable</command>
+        <result xml:space="preserve">A one meter USB 7.2 cable with a Type-F plug at each end.
+
+It is plugged into the organ and an audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27630"></child>
+        </children>
+    </item>
+    <item nodeId="node-27630">
+        <command xml:space="preserve">close audio</command>
+        <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+
+The audio unit beeps and a synthesized voice says "Organ ready."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27631"></child>
+        </children>
+    </item>
+    <item nodeId="node-27631">
+        <command xml:space="preserve">scan cable</command>
+        <result xml:space="preserve">Cable is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27632"></child>
+        </children>
+    </item>
+    <item nodeId="node-27632">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine functional. Input connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-27633"></child>
+        </children>
+    </item>
+    <item nodeId="node-27633">
+        <command xml:space="preserve">play organ</command>
+        <result xml:space="preserve">You never really learned how to play, but you pick out a few notes on the keyboard and the sound reverberates from the audio unit.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1008,8 +3103,9 @@ Taken.
         <command xml:space="preserve">close audio</command>
         <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
 
-With the communications unit and attached to a functional audio unit, you call for help. I need to write this bit.
+The audio unit beeps and a synthesized voice says "Comms ready."
 
+You call for help. I need to write this bit.
 
 
     *** You win. ***
