@@ -13,7 +13,7 @@ But maybe it isn't hopeless. There must still be other people in other worlds, a
 
 Today is the day.
 
-Green
+Founder's Mercy
 A Space Story by Thomas Insel
 Release 1 / Serial number 181123 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type "about" for credits and more information.
@@ -45,7 +45,4351 @@ There is a secured hatch in the floor.
 
 &gt;</commentary>
         <children><child nodeId="node-21856"></child>
+            <child nodeId="node-23816"></child>
+            <child nodeId="node-24021"></child>
+            <child nodeId="node-24068"></child>
+            <child nodeId="node-24020"></child>
+            <child nodeId="node-24019"></child>
+            <child nodeId="node-24112"></child>
+            <child nodeId="node-24116"></child>
+            <child nodeId="node-24129"></child>
+            <child nodeId="node-24121"></child>
+            <child nodeId="node-24183"></child>
+            <child nodeId="node-23905"></child>
+            <child nodeId="node-23825"></child>
+            <child nodeId="node-24158"></child>
+            <child nodeId="node-24167"></child>
+            <child nodeId="node-23927"></child>
+            <child nodeId="node-24145"></child>
+            <child nodeId="node-23845"></child>
+            <child nodeId="node-24174"></child>
+            <child nodeId="node-24032"></child>
+            <child nodeId="node-24123"></child>
         </children>
+    </item>
+    <item nodeId="node-24123">
+        <command xml:space="preserve">x church</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24124"></child>
+        </children>
+    </item>
+    <item nodeId="node-24124">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Center Platform
+It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+You can just reach a red circuit breaker on the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24125"></child>
+        </children>
+    </item>
+    <item nodeId="node-24125">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24126"></child>
+        </children>
+    </item>
+    <item nodeId="node-24126">
+        <command xml:space="preserve">x church</command>
+        <result xml:space="preserve">A small white building with a steeple.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24127"></child>
+        </children>
+    </item>
+    <item nodeId="node-24127">
+        <command xml:space="preserve">drop church</command>
+        <result xml:space="preserve">church is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24128"></child>
+        </children>
+    </item>
+    <item nodeId="node-24128">
+        <command xml:space="preserve">showme church</command>
+        <result xml:space="preserve">(church)
+church - building
+location: in Sector 3: Forest
+singular-named, proper-named; unlit, inedible, fixed in place, scenery; open, unopenable, unlocked, apparent
+list grouping key: none
+printed name: "church"
+printed plural name: "buildings"
+indefinite article: none
+description: "A small white building with a steeple."
+initial appearance: none
+other side: Church
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24032">
+        <command xml:space="preserve">turn scanner on</command>
+        <result xml:space="preserve">The scanner is always on and listening.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24033"></child>
+        </children>
+    </item>
+    <item nodeId="node-24033">
+        <command xml:space="preserve">turn scanner on</command>
+        <result xml:space="preserve">The scanner is always on and listening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24034"></child>
+        </children>
+    </item>
+    <item nodeId="node-24034">
+        <command xml:space="preserve">turn scanner on</command>
+        <result xml:space="preserve">The scanner is always on and listening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24044"></child>
+        </children>
+    </item>
+    <item nodeId="node-24044">
+        <command xml:space="preserve">turn scanner off</command>
+        <result xml:space="preserve">The scanner is always on and listening.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24045"></child>
+        </children>
+    </item>
+    <item nodeId="node-24045">
+        <command xml:space="preserve">anayze scanner</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24046"></child>
+        </children>
+    </item>
+    <item nodeId="node-24046">
+        <command xml:space="preserve">analyze scanner</command>
+        <result xml:space="preserve">examining the scanner:
+The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+looking under the scanner:
+You find nothing of interest.
+
+searching the scanner:
+You find nothing of interest.
+
+listening to the scanner:
+You hear nothing unexpected.
+
+smelling the scanner:
+You smell nothing unexpected.
+
+attacking the scanner:
+The Founder said that violence is never the answer.
+
+buying the scanner:
+Nothing is on sale.
+
+climbing the scanner:
+Little is to be achieved by that.
+
+pulling the scanner:
+Nothing obvious happens.
+
+pushing the scanner:
+Nothing obvious happens.
+
+turning the scanner:
+Nothing obvious happens.
+
+pushing the scanner to down:
+The scanner cannot be pushed from place to place.
+
+opening the scanner:
+It isn't something you can open.
+
+entering the scanner:
+That's not something you can enter.
+
+getting off the scanner:
+But you aren't on the scanner at the moment.
+
+closing the scanner:
+It isn't something you can close.
+
+taking the scanner:
+You already have that.
+
+switching on the scanner:
+The scanner is always on and listening.
+
+switching off the scanner:
+The scanner is always on and listening.
+
+wearing the scanner:
+You can't wear that!
+
+taking off the scanner:
+You aren't wearing the scanner.
+
+(no other people in the location; can't test throwing at.)
+
+
+(no other people in the location; can't test showing to.)
+
+
+(no other people in the location; can't test giving to.)
+
+
+touching the scanner:
+You feel nothing unexpected.
+
+rubbing the scanner:
+You rub the scanner.
+
+waving the scanner:
+You wave the scanner.
+
+squeezing the scanner:
+You achieve nothing by this.
+
+burning the scanner:
+There is no open flame on the station.
+
+cutting the scanner:
+Cutting it up would achieve little.
+
+tying the scanner to yourself:
+You would achieve nothing by this.
+
+swinging the scanner:
+There's nothing sensible to swing here.
+
+tasting the scanner:
+You taste nothing unexpected.
+
+drinking the scanner:
+There's nothing suitable to drink here.
+
+eating the scanner:
+That's plainly inedible.
+
+dropping the scanner:
+Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24047"></child>
+        </children>
+    </item>
+    <item nodeId="node-24047">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24048"></child>
+        </children>
+    </item>
+    <item nodeId="node-24048">
+        <command xml:space="preserve">sell scanner</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24049"></child>
+        </children>
+    </item>
+    <item nodeId="node-24049">
+        <command xml:space="preserve">buy scanner</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24050"></child>
+        </children>
+    </item>
+    <item nodeId="node-24050">
+        <command xml:space="preserve"> try smelling</command>
+        <result xml:space="preserve">[test-verb-trying "smelling"]
+smelling the pocket:
+[(1) smelling the pocket]
+You smell nothing unexpected.
+[(1) smelling the pocket - succeeded]
+
+smelling yourself:
+[(1) smelling yourself]
+You smell nothing unexpected.
+[(1) smelling yourself - succeeded]
+
+smelling the scanner:
+[(1) smelling the scanner]
+You smell nothing unexpected.
+[(1) smelling the scanner - succeeded]
+
+smelling the green jumpsuit:
+[(1) smelling the green jumpsuit]
+You smell nothing unexpected.
+[(1) smelling the green jumpsuit - succeeded]
+
+smelling the floor hatch:
+[(1) smelling the floor hatch]
+You smell nothing unexpected.
+[(1) smelling the floor hatch - succeeded]
+
+[test-verb-trying "smelling" - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24051"></child>
+        </children>
+    </item>
+    <item nodeId="node-24051">
+        <command xml:space="preserve">try buying</command>
+        <result xml:space="preserve">[test-verb-trying "buying"]
+buying the pocket:
+[(1) buying the pocket]
+Nothing is on sale.
+[(1) buying the pocket - failed the block buying rule]
+
+buying yourself:
+[(1) buying yourself]
+Nothing is on sale.
+[(1) buying yourself - failed the block buying rule]
+
+buying the scanner:
+[(1) buying the scanner]
+Nothing is on sale.
+[(1) buying the scanner - failed the block buying rule]
+
+buying the green jumpsuit:
+[(1) buying the green jumpsuit]
+Nothing is on sale.
+[(1) buying the green jumpsuit - failed the block buying rule]
+
+buying the floor hatch:
+[(1) buying the floor hatch]
+Nothing is on sale.
+[(1) buying the floor hatch - failed the block buying rule]
+
+[test-verb-trying "buying" - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24052"></child>
+        </children>
+    </item>
+    <item nodeId="node-24052">
+        <command xml:space="preserve">try jkjk</command>
+        <result xml:space="preserve">[test-verb-trying "jkjk"]
+Unknown verb test.
+[test-verb-trying "jkjk" - failed the unknown verb test label rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24053"></child>
+        </children>
+    </item>
+    <item nodeId="node-24053">
+        <command xml:space="preserve">try buy</command>
+        <result xml:space="preserve">[test-verb-trying "buy"]
+Unknown verb test.
+[test-verb-trying "buy" - failed the unknown verb test label rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24054"></child>
+        </children>
+    </item>
+    <item nodeId="node-24054">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">[exiting]
+[(1) going outside]
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+[(1) going outside - succeeded]
+
+[exiting - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24055"></child>
+        </children>
+    </item>
+    <item nodeId="node-24055">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">[looking]
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+[looking - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24056"></child>
+        </children>
+    </item>
+    <item nodeId="node-24056">
+        <command xml:space="preserve">actions off</command>
+        <result xml:space="preserve">Actions listing off.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24057"></child>
+        </children>
+    </item>
+    <item nodeId="node-24057">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24058"></child>
+        </children>
+    </item>
+    <item nodeId="node-24058">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24059"></child>
+        </children>
+    </item>
+    <item nodeId="node-24059">
+        <command xml:space="preserve">look under trees</command>
+        <result xml:space="preserve">You find nothing of interest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24174">
+        <command xml:space="preserve">testme</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24175"></child>
+        </children>
+    </item>
+    <item nodeId="node-24175">
+        <command xml:space="preserve">analyze home</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24176"></child>
+        </children>
+    </item>
+    <item nodeId="node-24176">
+        <command xml:space="preserve">x room</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24177"></child>
+        </children>
+    </item>
+    <item nodeId="node-24177">
+        <command xml:space="preserve">x home</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24178"></child>
+        </children>
+    </item>
+    <item nodeId="node-24178">
+        <command xml:space="preserve">analzye</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24179"></child>
+        </children>
+    </item>
+    <item nodeId="node-24179">
+        <command xml:space="preserve">analyze</command>
+        <result xml:space="preserve">What do you want to analyze?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24180"></child>
+        </children>
+    </item>
+    <item nodeId="node-24180">
+        <command xml:space="preserve">nothing</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24181"></child>
+        </children>
+    </item>
+    <item nodeId="node-24181">
+        <command xml:space="preserve">analyze nothing</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24182"></child>
+        </children>
+    </item>
+    <item nodeId="node-24182">
+        <command xml:space="preserve">about</command>
+        <result xml:space="preserve">About Founder's Mercy
+Founder's Mercy is my second released Inform project, conceived and implemented in November of 2018. It should be impossible to put this game into an unwinnable state.
+
+The cover art is adapted from Figure 1.1 from NASA SP-413, Space Settlements: A Design Study, edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at https://archive.org/details/SpaceSettlementsADesignStudy1977 .
+
+Please send your feedback, bug reports, and requests for help to tinsel@tinsel.org. You can always find the current version of this game at http://tinsel.org/IF/ .
+
+This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license (https://creativecommons.org/licenses/by/4.0/).
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23845">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24074"></child>
+            <child nodeId="node-24143"></child>
+            <child nodeId="node-24061"></child>
+            <child nodeId="node-23846"></child>
+        </children>
+    </item>
+    <item nodeId="node-23846">
+        <command xml:space="preserve">x crops</command>
+        <result xml:space="preserve">Greens, carrots, and potatoes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23847"></child>
+        </children>
+    </item>
+    <item nodeId="node-23847">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23848"></child>
+        </children>
+    </item>
+    <item nodeId="node-23848">
+        <command xml:space="preserve">x trees</command>
+        <result xml:space="preserve">The community grew trees for tradition, or maybe they help with air processing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23849"></child>
+        </children>
+    </item>
+    <item nodeId="node-23849">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23850"></child>
+        </children>
+    </item>
+    <item nodeId="node-23850">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23851"></child>
+        </children>
+    </item>
+    <item nodeId="node-23851">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23852"></child>
+        </children>
+    </item>
+    <item nodeId="node-23852">
+        <command xml:space="preserve">x boots</command>
+        <result xml:space="preserve">Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity or on the outside of a rotating station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23853"></child>
+        </children>
+    </item>
+    <item nodeId="node-23853">
+        <command xml:space="preserve">get boots</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23854"></child>
+        </children>
+    </item>
+    <item nodeId="node-23854">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">An alarm sounds, and a synthesized voice says "Laser scan detects unauthorized materiel removal." The hatch seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23855"></child>
+        </children>
+    </item>
+    <item nodeId="node-23855">
+        <command xml:space="preserve">drop boots</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23856"></child>
+        </children>
+    </item>
+    <item nodeId="node-23856">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">(first opening the ceiling hatch)
+You pull yourself up through the hatch and close it behind yourself.
+
+Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23857"></child>
+        </children>
+    </item>
+    <item nodeId="node-23857">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23858"></child>
+        </children>
+    </item>
+    <item nodeId="node-23858">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23859"></child>
+        </children>
+    </item>
+    <item nodeId="node-23859">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23860"></child>
+        </children>
+    </item>
+    <item nodeId="node-23860">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23861"></child>
+        </children>
+    </item>
+    <item nodeId="node-23861">
+        <command xml:space="preserve">s hatch</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23862"></child>
+        </children>
+    </item>
+    <item nodeId="node-23862">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23863"></child>
+        </children>
+    </item>
+    <item nodeId="node-23863">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23864"></child>
+        </children>
+    </item>
+    <item nodeId="node-23864">
+        <command xml:space="preserve">open hatch</command>
+        <result xml:space="preserve">You open the floor hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23865"></child>
+        </children>
+    </item>
+    <item nodeId="node-23865">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You scramble down through the hatch and close it behind yourself.
+
+Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23866"></child>
+        </children>
+    </item>
+    <item nodeId="node-23866">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">(first opening the ceiling hatch)
+You pull yourself up through the hatch and close it behind yourself.
+
+Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23867"></child>
+        </children>
+    </item>
+    <item nodeId="node-23867">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23868"></child>
+        </children>
+    </item>
+    <item nodeId="node-23868">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23869"></child>
+        </children>
+    </item>
+    <item nodeId="node-23869">
+        <command xml:space="preserve">x crops</command>
+        <result xml:space="preserve">You are proud of the grain and legumes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23870"></child>
+        </children>
+    </item>
+    <item nodeId="node-23870">
+        <command xml:space="preserve">x grain</command>
+        <result xml:space="preserve">You are proud of the grain and legumes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23871"></child>
+        </children>
+    </item>
+    <item nodeId="node-23871">
+        <command xml:space="preserve">eat grain</command>
+        <result xml:space="preserve">You're not hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23872"></child>
+        </children>
+    </item>
+    <item nodeId="node-23872">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond serves as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23873"></child>
+        </children>
+    </item>
+    <item nodeId="node-23873">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave. The pods are below Sector 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23874"></child>
+        </children>
+    </item>
+    <item nodeId="node-23874">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23875"></child>
+        </children>
+    </item>
+    <item nodeId="node-23875">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23876"></child>
+        </children>
+    </item>
+    <item nodeId="node-23876">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">
+School
+One broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23877"></child>
+        </children>
+    </item>
+    <item nodeId="node-23877">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23878"></child>
+        </children>
+    </item>
+    <item nodeId="node-23878">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23879"></child>
+        </children>
+    </item>
+    <item nodeId="node-23879">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23880"></child>
+        </children>
+    </item>
+    <item nodeId="node-23880">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23881"></child>
+        </children>
+    </item>
+    <item nodeId="node-23881">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23882"></child>
+        </children>
+    </item>
+    <item nodeId="node-23882">
+        <command xml:space="preserve">x scanner</command>
+        <result xml:space="preserve">The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23883"></child>
+        </children>
+    </item>
+    <item nodeId="node-23883">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23884"></child>
+        </children>
+    </item>
+    <item nodeId="node-23884">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23885"></child>
+        </children>
+    </item>
+    <item nodeId="node-23885">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23886"></child>
+        </children>
+    </item>
+    <item nodeId="node-23886">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond serves as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23887"></child>
+        </children>
+    </item>
+    <item nodeId="node-23887">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23888"></child>
+        </children>
+    </item>
+    <item nodeId="node-23888">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump.
+
+There is a secured hatch in the ceiling.
+
+Beside the secured port hatch, a status display shows an error message.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23889"></child>
+        </children>
+    </item>
+    <item nodeId="node-23889">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">(first opening the ceiling hatch)
+You pull yourself up through the hatch and close it behind yourself.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23890"></child>
+        </children>
+    </item>
+    <item nodeId="node-23890">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23891"></child>
+        </children>
+    </item>
+    <item nodeId="node-23891">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23892"></child>
+        </children>
+    </item>
+    <item nodeId="node-23892">
+        <command xml:space="preserve">get boots</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23893"></child>
+        </children>
+    </item>
+    <item nodeId="node-23893">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">An alarm sounds, and a synthesized voice says "Laser scan detects unauthorized materiel removal." The hatch seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23894"></child>
+        </children>
+    </item>
+    <item nodeId="node-23894">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23895"></child>
+        </children>
+    </item>
+    <item nodeId="node-23895">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">An alarm sounds, and a synthesized voice says "Laser scan detects unauthorized materiel removal." The hatch seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23896"></child>
+        </children>
+    </item>
+    <item nodeId="node-23896">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23897"></child>
+        </children>
+    </item>
+    <item nodeId="node-23897">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23898"></child>
+        </children>
+    </item>
+    <item nodeId="node-23898">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23899"></child>
+        </children>
+    </item>
+    <item nodeId="node-23899">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Green
+A Space Story by Thomas Insel
+Release 1 / Serial number 181123 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits and more information.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23900"></child>
+        </children>
+    </item>
+    <item nodeId="node-23900">
+        <command xml:space="preserve">analyze me</command>
+        <result xml:space="preserve">examining yourself:
+As virtuous as ever.
+
+looking under yourself:
+You find nothing of interest.
+
+searching yourself:
+You find nothing of interest.
+
+listening to yourself:
+You hear nothing unexpected.
+
+smelling yourself:
+You smell nothing unexpected.
+
+attacking yourself:
+Violence isn't the answer to this one.
+
+buying yourself:
+Nothing is on sale.
+
+climbing yourself:
+Little is to be achieved by that.
+
+pulling yourself:
+You might not like that.
+
+pushing yourself:
+You might not like that.
+
+turning yourself:
+You might not like that.
+
+pushing yourself to down:
+You cannot be pushed from place to place.
+
+opening yourself:
+You aren't something you can open.
+
+entering yourself:
+You're not something you can enter.
+
+getting off yourself:
+But you aren't on yourself at the moment.
+
+closing yourself:
+You aren't something you can close.
+
+taking yourself:
+You are always self-possessed.
+
+switching on yourself:
+You aren't something you can switch.
+
+switching off yourself:
+You aren't something you can switch.
+
+wearing yourself:
+(first taking yourself)
+You are always self-possessed.
+
+taking off yourself:
+You aren't wearing yourself.
+
+throwing the scanner at yourself:
+You lack the nerve when it comes to the crucial moment.
+
+showing the scanner to yourself:
+The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+giving the scanner to yourself:
+You can't give the scanner to yourself.
+
+waking yourself:
+That seems unnecessary.
+
+kissing yourself:
+You don't get much from that.
+
+touching yourself:
+You achieve nothing by this.
+
+rubbing yourself:
+You rub yourself.
+
+waving yourself:
+But you aren't holding you.
+
+squeezing yourself:
+You might not like that.
+
+burning yourself:
+This dangerous act would achieve little.
+
+cutting yourself:
+Cutting you up would achieve little.
+
+tying yourself to the floor hatch:
+You would achieve nothing by this.
+
+swinging yourself:
+There's nothing sensible to swing here.
+
+tasting yourself:
+You taste nothing unexpected.
+
+drinking yourself:
+There's nothing suitable to drink here.
+
+eating yourself:
+You're plainly inedible.
+
+dropping yourself:
+You lack the dexterity.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23901"></child>
+        </children>
+    </item>
+    <item nodeId="node-23901">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23902"></child>
+        </children>
+    </item>
+    <item nodeId="node-23902">
+        <command xml:space="preserve">analyze scanner</command>
+        <result xml:space="preserve">examining the scanner:
+The handheld voice-activated scanner you use when working on the station's machines.
+
+looking under the scanner:
+You find nothing of interest.
+
+searching the scanner:
+You find nothing of interest.
+
+listening to the scanner:
+You hear nothing unexpected.
+
+smelling the scanner:
+You smell nothing unexpected.
+
+attacking the scanner:
+Violence isn't the answer to this one.
+
+buying the scanner:
+Nothing is on sale.
+
+climbing the scanner:
+Little is to be achieved by that.
+
+pulling the scanner:
+Nothing obvious happens.
+
+pushing the scanner:
+Nothing obvious happens.
+
+turning the scanner:
+Nothing obvious happens.
+
+pushing the scanner to down:
+The scanner cannot be pushed from place to place.
+
+opening the scanner:
+It isn't something you can open.
+
+entering the scanner:
+That's not something you can enter.
+
+getting off the scanner:
+But you aren't on the scanner at the moment.
+
+closing the scanner:
+It isn't something you can close.
+
+taking the scanner:
+You already have that.
+
+switching on the scanner:
+It isn't something you can switch.
+
+switching off the scanner:
+It isn't something you can switch.
+
+wearing the scanner:
+You can't wear that!
+
+taking off the scanner:
+You aren't wearing the scanner.
+
+(no other people in the location; can't test throwing at.)
+
+
+(no other people in the location; can't test showing to.)
+
+
+(no other people in the location; can't test giving to.)
+
+
+touching the scanner:
+You feel nothing unexpected.
+
+rubbing the scanner:
+You rub the scanner.
+
+waving the scanner:
+You wave the scanner.
+
+squeezing the scanner:
+You achieve nothing by this.
+
+burning the scanner:
+This dangerous act would achieve little.
+
+cutting the scanner:
+Cutting it up would achieve little.
+
+tying the scanner to yourself:
+You would achieve nothing by this.
+
+swinging the scanner:
+There's nothing sensible to swing here.
+
+tasting the scanner:
+You taste nothing unexpected.
+
+drinking the scanner:
+There's nothing suitable to drink here.
+
+eating the scanner:
+That's plainly inedible.
+
+dropping the scanner:
+Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23903"></child>
+        </children>
+    </item>
+    <item nodeId="node-23903">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23904"></child>
+        </children>
+    </item>
+    <item nodeId="node-23904">
+        <command xml:space="preserve">analyze home</command>
+        <result xml:space="preserve">examining your home:
+You were told it was built to look like a log cabin on Old Earth.
+
+looking under your home:
+You find nothing of interest.
+
+searching your home:
+You find nothing of interest.
+
+listening to your home:
+You hear nothing unexpected.
+
+smelling your home:
+You smell nothing unexpected.
+
+attacking your home:
+Violence isn't the answer to this one.
+
+buying your home:
+Nothing is on sale.
+
+climbing your home:
+Little is to be achieved by that.
+
+pulling your home:
+It is fixed in place.
+
+pushing your home:
+It is fixed in place.
+
+turning your home:
+It is fixed in place.
+
+pushing your home to inside:
+your home cannot be pushed from place to place.
+
+opening your home:
+It isn't something you can open.
+
+entering your home:
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+You can also see a scanner here.
+
+getting off your home:
+You can't reach into Sector 4: Crops.
+
+closing your home:
+You can't reach into Sector 4: Crops.
+
+taking your home:
+You can't reach into Sector 4: Crops.
+
+switching on your home:
+You can't reach into Sector 4: Crops.
+
+switching off your home:
+You can't reach into Sector 4: Crops.
+
+wearing your home:
+You can't reach into Sector 4: Crops.
+
+taking off your home:
+You can't reach into Sector 4: Crops.
+
+touching your home:
+You can't reach into Sector 4: Crops.
+
+rubbing your home:
+You can't reach into Sector 4: Crops.
+
+waving your home:
+You can't reach into Sector 4: Crops.
+
+squeezing your home:
+You can't reach into Sector 4: Crops.
+
+burning your home:
+You can't reach into Sector 4: Crops.
+
+cutting your home:
+You can't reach into Sector 4: Crops.
+
+tying your home to yourself:
+You can't reach into Sector 4: Crops.
+
+swinging your home:
+You can't reach into Sector 4: Crops.
+
+tasting your home:
+You can't reach into Sector 4: Crops.
+
+drinking your home:
+You can't reach into Sector 4: Crops.
+
+eating your home:
+You can't reach into Sector 4: Crops.
+
+dropping your home:
+You can't reach into Sector 4: Crops.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24061">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24062"></child>
+        </children>
+    </item>
+    <item nodeId="node-24062">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24063"></child>
+        </children>
+    </item>
+    <item nodeId="node-24063">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24064"></child>
+        </children>
+    </item>
+    <item nodeId="node-24064">
+        <command xml:space="preserve">look under trees</command>
+        <result xml:space="preserve">Only the house and church.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24143">
+        <command xml:space="preserve">drop home</command>
+        <result xml:space="preserve">The home is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24144"></child>
+        </children>
+    </item>
+    <item nodeId="node-24144">
+        <command xml:space="preserve">showme home</command>
+        <result xml:space="preserve">(the home)
+home - building
+location: in Sector 4: Crops
+singular-named, improper-named; unlit, inedible, fixed in place, scenery; open, unopenable, unlocked, apparent
+list grouping key: none
+printed name: "home"
+printed plural name: "buildings"
+indefinite article: "your"
+description: "You were told it was built to look like a log cabin on Old Earth."
+initial appearance: none
+other side: Home
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24074">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24075"></child>
+        </children>
+    </item>
+    <item nodeId="node-24075">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24076"></child>
+        </children>
+    </item>
+    <item nodeId="node-24076">
+        <command xml:space="preserve">analyze pond</command>
+        <result xml:space="preserve">examining the pond:
+Something to do with water filtration, and there are still some fish.
+
+looking under the pond:
+The pond is pretty murky, but you can see a few fish from here.
+
+searching the pond:
+The pond is pretty murky, but you can see a few fish from here.
+
+listening to the pond:
+You hear nothing unexpected.
+
+smelling the pond:
+You smell nothing unexpected.
+
+attacking the pond:
+The Founder said that violence is never the answer.
+
+buying the pond:
+Nothing is on sale.
+
+climbing the pond:
+Little is to be achieved by that.
+
+pulling the pond:
+It is fixed in place.
+
+pushing the pond:
+It is fixed in place.
+
+turning the pond:
+It is fixed in place.
+
+pushing the pond to spinward:
+The pond cannot be pushed from place to place.
+
+opening the pond:
+It isn't something you can open.
+
+entering the pond:
+You can't hold your breath long enough to make that worthwhile.
+
+getting off the pond:
+But you aren't on the pond at the moment.
+
+closing the pond:
+It isn't something you can close.
+
+taking the pond:
+That's hardly portable.
+
+switching on the pond:
+It isn't something you can switch.
+
+switching off the pond:
+It isn't something you can switch.
+
+wearing the pond:
+(first taking the pond)
+That's hardly portable.
+
+taking off the pond:
+You aren't wearing the pond.
+
+touching the pond:
+You feel nothing unexpected.
+
+rubbing the pond:
+You rub the pond.
+
+waving the pond:
+But you aren't holding that.
+
+squeezing the pond:
+You achieve nothing by this.
+
+burning the pond:
+There is no open flame on the station.
+
+cutting the pond:
+The Founder said that violence is never the answer.
+
+tying the pond to the hub:
+You would achieve nothing by this.
+
+swinging the pond:
+There's nothing sensible to swing here.
+
+tasting the pond:
+It's a bit fishy.
+
+drinking the pond:
+It's a bit fishy.
+
+eating the pond:
+That's plainly inedible.
+
+dropping the pond:
+The pond is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24077"></child>
+        </children>
+    </item>
+    <item nodeId="node-24077">
+        <command xml:space="preserve">look under pond</command>
+        <result xml:space="preserve">The pond is pretty murky, but you can see a few fish from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24078"></child>
+        </children>
+    </item>
+    <item nodeId="node-24078">
+        <command xml:space="preserve">look under water</command>
+        <result xml:space="preserve">The pond is pretty murky, but you can see a few fish from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24079"></child>
+        </children>
+    </item>
+    <item nodeId="node-24079">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24080"></child>
+        </children>
+    </item>
+    <item nodeId="node-24080">
+        <command xml:space="preserve">x pylon</command>
+        <result xml:space="preserve">Made of smooth metal, anodized red, it connects the ground to the hub of the station many meters above.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24081"></child>
+        </children>
+    </item>
+    <item nodeId="node-24081">
+        <command xml:space="preserve">search funder</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24082"></child>
+        </children>
+    </item>
+    <item nodeId="node-24082">
+        <command xml:space="preserve">search pylon</command>
+        <result xml:space="preserve">You find nothing of interest.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24083"></child>
+        </children>
+    </item>
+    <item nodeId="node-24083">
+        <command xml:space="preserve">analyze pylon</command>
+        <result xml:space="preserve">examining the pylon:
+Made of smooth metal, anodized red, it connects the ground to the hub of the station many meters above.
+
+looking under the pylon:
+You find nothing of interest.
+
+searching the pylon:
+You find nothing of interest.
+
+listening to the pylon:
+You hear nothing unexpected.
+
+smelling the pylon:
+You smell nothing unexpected.
+
+attacking the pylon:
+The Founder said that violence is never the answer.
+
+buying the pylon:
+Nothing is on sale.
+
+climbing the pylon:
+The red pylon is designated for climbing, but you can't get a grip.
+
+pulling the pylon:
+It is fixed in place.
+
+pushing the pylon:
+It is fixed in place.
+
+turning the pylon:
+It is fixed in place.
+
+pushing the pylon to port:
+the pylon cannot be pushed from place to place.
+
+opening the pylon:
+It isn't something you can open.
+
+entering the pylon:
+That's not something you can enter.
+
+getting off the pylon:
+But you aren't on the pylon at the moment.
+
+closing the pylon:
+It isn't something you can close.
+
+taking the pylon:
+That's hardly portable.
+
+switching on the pylon:
+It isn't something you can switch.
+
+switching off the pylon:
+It isn't something you can switch.
+
+wearing the pylon:
+(first taking the pylon)
+That's hardly portable.
+
+taking off the pylon:
+You aren't wearing the pylon.
+
+touching the pylon:
+You feel nothing unexpected.
+
+rubbing the pylon:
+You rub the pylon.
+
+waving the pylon:
+But you aren't holding that.
+
+squeezing the pylon:
+You achieve nothing by this.
+
+burning the pylon:
+There is no open flame on the station.
+
+cutting the pylon:
+The Founder said that violence is never the answer.
+
+tying the pylon to the mirrors:
+You would achieve nothing by this.
+
+swinging the pylon:
+There's nothing sensible to swing here.
+
+tasting the pylon:
+You taste nothing unexpected.
+
+drinking the pylon:
+There's nothing suitable to drink here.
+
+eating the pylon:
+That's plainly inedible.
+
+dropping the pylon:
+the pylon is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24084"></child>
+        </children>
+    </item>
+    <item nodeId="node-24084">
+        <command xml:space="preserve"> drop me</command>
+        <result xml:space="preserve">You lack the dexterity.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24085"></child>
+        </children>
+    </item>
+    <item nodeId="node-24085">
+        <command xml:space="preserve">drop school</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24086"></child>
+        </children>
+    </item>
+    <item nodeId="node-24086">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24087"></child>
+        </children>
+    </item>
+    <item nodeId="node-24087">
+        <command xml:space="preserve">drop house</command>
+        <result xml:space="preserve">the house is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24088"></child>
+        </children>
+    </item>
+    <item nodeId="node-24088">
+        <command xml:space="preserve">drop church</command>
+        <result xml:space="preserve">church is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24105"></child>
+        </children>
+    </item>
+    <item nodeId="node-24105">
+        <command xml:space="preserve">get church</command>
+        <result xml:space="preserve">That's hardly portable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24106"></child>
+        </children>
+    </item>
+    <item nodeId="node-24106">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24107"></child>
+        </children>
+    </item>
+    <item nodeId="node-24107">
+        <command xml:space="preserve">x church</command>
+        <result xml:space="preserve">A small white building with a steeple.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24108"></child>
+        </children>
+    </item>
+    <item nodeId="node-24108">
+        <command xml:space="preserve">showme church</command>
+        <result xml:space="preserve">(church)
+church - building
+location: in Sector 3: Forest
+singular-named, proper-named; unlit, inedible, fixed in place, scenery; open, unopenable, unlocked, apparent
+list grouping key: none
+printed name: "church"
+printed plural name: "buildings"
+indefinite article: none
+description: "A small white building with a steeple."
+initial appearance: none
+other side: Church
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24109"></child>
+        </children>
+    </item>
+    <item nodeId="node-24109">
+        <command xml:space="preserve">showme scanner</command>
+        <result xml:space="preserve">scanner - thing
+location: carried by yourself in Sector 3: Forest
+singular-named, improper-named; unlit, inedible, portable, handled, machinelike, addressable; list grouping key: none
+printed name: "scanner"
+printed plural name: none
+indefinite article: none
+description: "The handheld voice-activated scanner you use when working on the station's machines."
+initial appearance: none
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24110"></child>
+        </children>
+    </item>
+    <item nodeId="node-24110">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24111"></child>
+        </children>
+    </item>
+    <item nodeId="node-24111">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The scanner is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24145">
+        <command xml:space="preserve">oout</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24146"></child>
+        </children>
+    </item>
+    <item nodeId="node-24146">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24147"></child>
+        </children>
+    </item>
+    <item nodeId="node-24147">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24148"></child>
+        </children>
+    </item>
+    <item nodeId="node-24148">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24149"></child>
+        </children>
+    </item>
+    <item nodeId="node-24149">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24150"></child>
+        </children>
+    </item>
+    <item nodeId="node-24150">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24151"></child>
+        </children>
+    </item>
+    <item nodeId="node-24151">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24152"></child>
+        </children>
+    </item>
+    <item nodeId="node-24152">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">You can enter the church or the house.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24153"></child>
+        </children>
+    </item>
+    <item nodeId="node-24153">
+        <command xml:space="preserve">go church</command>
+        <result xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against the far wall.
+
+On the altar is The Founder's Testament.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24154"></child>
+        </children>
+    </item>
+    <item nodeId="node-24154">
+        <command xml:space="preserve">get testament</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24155"></child>
+        </children>
+    </item>
+    <item nodeId="node-24155">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  The Founder's Testament
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24156"></child>
+        </children>
+    </item>
+    <item nodeId="node-24156">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against the far wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24157"></child>
+        </children>
+    </item>
+    <item nodeId="node-24157">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23927">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23928"></child>
+            <child nodeId="node-23931"></child>
+        </children>
+    </item>
+    <item nodeId="node-23931">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">You have been well-trained, because the hatch in the floor is secured shut.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23932"></child>
+        </children>
+    </item>
+    <item nodeId="node-23932">
+        <command xml:space="preserve">open hatch</command>
+        <result xml:space="preserve">You open the floor hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23933"></child>
+        </children>
+    </item>
+    <item nodeId="node-23933">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">You have been trained to keep hatches closed as a precaution against decompression, but the hatch in the floor is open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23950"></child>
+        </children>
+    </item>
+    <item nodeId="node-23950">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You scramble down through the hatch and close it behind yourself.
+
+Cellar
+A decompression shelter and space for storage.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23951"></child>
+        </children>
+    </item>
+    <item nodeId="node-23951">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">You have been well-trained, because the hatch in the ceiling is secured shut.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23952"></child>
+        </children>
+    </item>
+    <item nodeId="node-23952">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Cellar
+A decompression shelter and space for storage.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23967"></child>
+        </children>
+    </item>
+    <item nodeId="node-23967">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Cellar
+A decompression shelter and space for storage.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23968"></child>
+        </children>
+    </item>
+    <item nodeId="node-23968">
+        <command xml:space="preserve">gonear pond</command>
+        <result xml:space="preserve">Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23969"></child>
+        </children>
+    </item>
+    <item nodeId="node-23969">
+        <command xml:space="preserve">eat pond</command>
+        <result xml:space="preserve">That's plainly inedible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23970"></child>
+        </children>
+    </item>
+    <item nodeId="node-23970">
+        <command xml:space="preserve">taste pond</command>
+        <result xml:space="preserve">You taste nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23928">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Cellar
+A decompression shelter and space for storage.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23929"></child>
+        </children>
+    </item>
+    <item nodeId="node-23929">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">There is a secured hatch in the ceiling.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24167">
+        <command xml:space="preserve">listen to me</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24168"></child>
+        </children>
+    </item>
+    <item nodeId="node-24168">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24169"></child>
+        </children>
+    </item>
+    <item nodeId="node-24169">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24170"></child>
+        </children>
+    </item>
+    <item nodeId="node-24170">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">[listening to Home]
+You hear nothing unexpected.
+[listening to Home - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24158">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">You hear only the hum of the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24159"></child>
+        </children>
+    </item>
+    <item nodeId="node-24159">
+        <command xml:space="preserve">listen to me</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24160"></child>
+        </children>
+    </item>
+    <item nodeId="node-24160">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">You hear only the hum of the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23825">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23828"></child>
+            <child nodeId="node-23826"></child>
+        </children>
+    </item>
+    <item nodeId="node-23826">
+        <command xml:space="preserve">x scanner</command>
+        <result xml:space="preserve">The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23828">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Cellar
+Used for storage and as a decompression shelter.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23829"></child>
+        </children>
+    </item>
+    <item nodeId="node-23829">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23830"></child>
+        </children>
+    </item>
+    <item nodeId="node-23830">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Cellar
+Used for storage and as a decompression shelter.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23831"></child>
+        </children>
+    </item>
+    <item nodeId="node-23831">
+        <command xml:space="preserve">remove jump suit</command>
+        <result xml:space="preserve">Your nudity is pure and innocent, but still a little uncomfortable ... and cold.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23832"></child>
+        </children>
+    </item>
+    <item nodeId="node-23832">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Cellar
+Used for storage and as a decompression shelter.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23833"></child>
+        </children>
+    </item>
+    <item nodeId="node-23833">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Cellar
+Used for storage and as a decompression shelter.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23834"></child>
+        </children>
+    </item>
+    <item nodeId="node-23834">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23835"></child>
+        </children>
+    </item>
+    <item nodeId="node-23835">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">(first opening the ceiling hatch)
+You pull yourself up through the hatch and close it behind yourself.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23836"></child>
+        </children>
+    </item>
+    <item nodeId="node-23836">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23837"></child>
+        </children>
+    </item>
+    <item nodeId="node-23837">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23838"></child>
+        </children>
+    </item>
+    <item nodeId="node-23838">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23839"></child>
+        </children>
+    </item>
+    <item nodeId="node-23839">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23840"></child>
+        </children>
+    </item>
+    <item nodeId="node-23840">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">
+School
+One broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23841"></child>
+        </children>
+    </item>
+    <item nodeId="node-23841">
+        <command xml:space="preserve">erase board</command>
+        <result xml:space="preserve">You smudge the writing around.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23905">
+        <command xml:space="preserve">hit me</command>
+        <result xml:space="preserve">The Founder said that violence is never the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24067"></child>
+            <child nodeId="node-23907"></child>
+        </children>
+    </item>
+    <item nodeId="node-23907">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23908"></child>
+        </children>
+    </item>
+    <item nodeId="node-23908">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23909"></child>
+        </children>
+    </item>
+    <item nodeId="node-23909">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">
+School
+One broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23910"></child>
+        </children>
+    </item>
+    <item nodeId="node-23910">
+        <command xml:space="preserve">hit eraser</command>
+        <result xml:space="preserve">The Founder said that violence is never the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23911"></child>
+        </children>
+    </item>
+    <item nodeId="node-23911">
+        <command xml:space="preserve">get eraser</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23912"></child>
+        </children>
+    </item>
+    <item nodeId="node-23912">
+        <command xml:space="preserve">hit</command>
+        <result xml:space="preserve">What do you want to hit?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23913"></child>
+        </children>
+    </item>
+    <item nodeId="node-23913">
+        <command xml:space="preserve">erase boar</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23914"></child>
+        </children>
+    </item>
+    <item nodeId="node-23914">
+        <command xml:space="preserve">erase board</command>
+        <result xml:space="preserve">(with the eraser)
+You carefully erase the chalkboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23915"></child>
+        </children>
+    </item>
+    <item nodeId="node-23915">
+        <command xml:space="preserve">hit eraser</command>
+        <result xml:space="preserve">The Founder said that violence is never the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24067">
+        <command xml:space="preserve">cut me</command>
+        <result xml:space="preserve">Imperfect vessel that you are, that is not the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24183">
+        <command xml:space="preserve">gonear station</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24184"></child>
+        </children>
+    </item>
+    <item nodeId="node-24184">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Center Platform
+It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+You can just reach a red circuit breaker on the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24185"></child>
+        </children>
+    </item>
+    <item nodeId="node-24185">
+        <command xml:space="preserve">jump</command>
+        <result xml:space="preserve">Yes, definitely pseudogravity is much lighter here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24186"></child>
+        </children>
+    </item>
+    <item nodeId="node-24186">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24187"></child>
+        </children>
+    </item>
+    <item nodeId="node-24187">
+        <command xml:space="preserve">jump</command>
+        <result xml:space="preserve">You jump on the spot.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24121">
+        <command xml:space="preserve">gonear red pylon. drop church</command>
+        <result xml:space="preserve">Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+church is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24122"></child>
+        </children>
+    </item>
+    <item nodeId="node-24122">
+        <command xml:space="preserve">showme church</command>
+        <result xml:space="preserve">(church)
+church - building
+location: in Sector 3: Forest
+singular-named, proper-named; unlit, inedible, fixed in place, scenery; open, unopenable, unlocked, apparent
+list grouping key: none
+printed name: "church"
+printed plural name: "buildings"
+indefinite article: none
+description: "A small white building with a steeple."
+initial appearance: none
+other side: Church
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24129">
+        <command xml:space="preserve">gonear red pylon</command>
+        <result xml:space="preserve">Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24130"></child>
+        </children>
+    </item>
+    <item nodeId="node-24130">
+        <command xml:space="preserve">drop church</command>
+        <result xml:space="preserve">The church is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24131"></child>
+        </children>
+    </item>
+    <item nodeId="node-24131">
+        <command xml:space="preserve">drop building</command>
+        <result xml:space="preserve">The church is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24132"></child>
+        </children>
+    </item>
+    <item nodeId="node-24132">
+        <command xml:space="preserve">frop house</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24133"></child>
+        </children>
+    </item>
+    <item nodeId="node-24133">
+        <command xml:space="preserve">drop house</command>
+        <result xml:space="preserve">the house is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24134"></child>
+        </children>
+    </item>
+    <item nodeId="node-24134">
+        <command xml:space="preserve">as</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24135"></child>
+        </children>
+    </item>
+    <item nodeId="node-24135">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24136"></child>
+        </children>
+    </item>
+    <item nodeId="node-24136">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24137"></child>
+        </children>
+    </item>
+    <item nodeId="node-24137">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24138"></child>
+        </children>
+    </item>
+    <item nodeId="node-24138">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24139"></child>
+        </children>
+    </item>
+    <item nodeId="node-24139">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24140"></child>
+        </children>
+    </item>
+    <item nodeId="node-24140">
+        <command xml:space="preserve">x home</command>
+        <result xml:space="preserve">You were told it was built to look like a log cabin on Old Earth.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24141"></child>
+        </children>
+    </item>
+    <item nodeId="node-24141">
+        <command xml:space="preserve">drop home</command>
+        <result xml:space="preserve">your home is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24116">
+        <command xml:space="preserve">gonear red church</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24117"></child>
+        </children>
+    </item>
+    <item nodeId="node-24117">
+        <command xml:space="preserve">gonear red pylon</command>
+        <result xml:space="preserve">Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24118"></child>
+        </children>
+    </item>
+    <item nodeId="node-24118">
+        <command xml:space="preserve">drop church</command>
+        <result xml:space="preserve">church is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24119"></child>
+        </children>
+    </item>
+    <item nodeId="node-24119">
+        <command xml:space="preserve">showme church</command>
+        <result xml:space="preserve">(church)
+church - building
+location: in Sector 3: Forest
+singular-named, proper-named; unlit, inedible, fixed in place, scenery; open, unopenable, unlocked, apparent
+list grouping key: none
+printed name: "church"
+printed plural name: "buildings"
+indefinite article: none
+description: "A small white building with a steeple."
+initial appearance: none
+other side: Church
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24120"></child>
+        </children>
+    </item>
+    <item nodeId="node-24120">
+        <command xml:space="preserve">showme scanner</command>
+        <result xml:space="preserve">scanner - thing
+location: carried by yourself in Sector 3: Forest
+singular-named, improper-named; unlit, inedible, portable, handled, machinelike, addressable; list grouping key: none
+printed name: "scanner"
+printed plural name: none
+indefinite article: none
+description: "The handheld voice-activated scanner you use when working on the station's machines."
+initial appearance: none
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24112">
+        <command xml:space="preserve">gonear church</command>
+        <result xml:space="preserve">(Church)
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against the far wall.
+
+On the altar is The Founder's Testament.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24113"></child>
+        </children>
+    </item>
+    <item nodeId="node-24113">
+        <command xml:space="preserve">drop church</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24114"></child>
+        </children>
+    </item>
+    <item nodeId="node-24114">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24115"></child>
+        </children>
+    </item>
+    <item nodeId="node-24115">
+        <command xml:space="preserve">drop church</command>
+        <result xml:space="preserve">the church is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24019">
+        <command xml:space="preserve">burn me</command>
+        <result xml:space="preserve">There is no open flame on the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24162"></child>
+        </children>
+    </item>
+    <item nodeId="node-24162">
+        <command xml:space="preserve">cut me</command>
+        <result xml:space="preserve">Imperfect vessel that you are, that is not the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24163"></child>
+        </children>
+    </item>
+    <item nodeId="node-24163">
+        <command xml:space="preserve">cut door</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24164"></child>
+        </children>
+    </item>
+    <item nodeId="node-24164">
+        <command xml:space="preserve">cut hatch</command>
+        <result xml:space="preserve">The Founder said that violence is never the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24165"></child>
+        </children>
+    </item>
+    <item nodeId="node-24165">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24166"></child>
+        </children>
+    </item>
+    <item nodeId="node-24166">
+        <command xml:space="preserve">listen to me</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24020">
+        <command xml:space="preserve">burn hatch</command>
+        <result xml:space="preserve">x.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24068">
+        <command xml:space="preserve">attack me</command>
+        <result xml:space="preserve">Imperfect vessel that you are, that is not the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24069"></child>
+        </children>
+    </item>
+    <item nodeId="node-24069">
+        <command xml:space="preserve">cut me</command>
+        <result xml:space="preserve">Imperfect vessel that you are, that is not the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24070"></child>
+        </children>
+    </item>
+    <item nodeId="node-24070">
+        <command xml:space="preserve">attack hatch</command>
+        <result xml:space="preserve">The Founder said that violence is never the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24071"></child>
+        </children>
+    </item>
+    <item nodeId="node-24071">
+        <command xml:space="preserve">hit hatch</command>
+        <result xml:space="preserve">The Founder said that violence is never the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24072"></child>
+        </children>
+    </item>
+    <item nodeId="node-24072">
+        <command xml:space="preserve">analyze hatch</command>
+        <result xml:space="preserve">examining the floor hatch:
+You have been well-trained, because the hatch in the floor is secured shut.
+
+looking under the floor hatch:
+You find nothing of interest.
+
+searching the floor hatch:
+You find nothing of interest.
+
+listening to the floor hatch:
+You hear nothing unexpected.
+
+smelling the floor hatch:
+You smell nothing unexpected.
+
+attacking the floor hatch:
+The Founder said that violence is never the answer.
+
+buying the floor hatch:
+Nothing is on sale.
+
+climbing the floor hatch:
+Little is to be achieved by that.
+
+pulling the floor hatch:
+It is fixed in place.
+
+pushing the floor hatch:
+It is fixed in place.
+
+turning the floor hatch:
+It is fixed in place.
+
+pushing the floor hatch to down:
+the floor hatch cannot be pushed from place to place.
+
+opening the floor hatch:
+You open the floor hatch.
+
+entering the floor hatch:
+Cellar
+A decompression shelter and space for storage.
+
+There is an open hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+getting off the ceiling hatch:
+But you aren't on the ceiling hatch at the moment.
+
+closing the ceiling hatch:
+You close the ceiling hatch.
+
+taking the ceiling hatch:
+That's fixed in place.
+
+switching on the ceiling hatch:
+It isn't something you can switch.
+
+switching off the ceiling hatch:
+It isn't something you can switch.
+
+wearing the ceiling hatch:
+(first taking the ceiling hatch)
+That's fixed in place.
+
+taking off the ceiling hatch:
+You aren't wearing the ceiling hatch.
+
+touching the ceiling hatch:
+You feel nothing unexpected.
+
+rubbing the ceiling hatch:
+You rub the ceiling hatch.
+
+waving the ceiling hatch:
+But you aren't holding that.
+
+squeezing the ceiling hatch:
+You achieve nothing by this.
+
+burning the ceiling hatch:
+There is no open flame on the station.
+
+cutting the ceiling hatch:
+Cutting it up would achieve little.
+
+tying the ceiling hatch to the emergency mask:
+You would achieve nothing by this.
+
+swinging the ceiling hatch:
+There's nothing sensible to swing here.
+
+tasting the ceiling hatch:
+You taste nothing unexpected.
+
+drinking the ceiling hatch:
+There's nothing suitable to drink here.
+
+eating the ceiling hatch:
+That's plainly inedible.
+
+dropping the ceiling hatch:
+the ceiling hatch is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24021">
+        <command xml:space="preserve">analyze me</command>
+        <result xml:space="preserve">examining yourself:
+As virtuous as ever.
+
+looking under yourself:
+You find nothing of interest.
+
+searching yourself:
+You find nothing of interest.
+
+listening to yourself:
+You hear nothing unexpected.
+
+smelling yourself:
+You smell nothing unexpected.
+
+attacking yourself:
+The Founder said that violence is never the answer.
+
+buying yourself:
+Nothing is on sale.
+
+climbing yourself:
+Little is to be achieved by that.
+
+pulling yourself:
+You might not like that.
+
+pushing yourself:
+You might not like that.
+
+turning yourself:
+You might not like that.
+
+pushing yourself to down:
+You cannot be pushed from place to place.
+
+opening yourself:
+You aren't something you can open.
+
+entering yourself:
+You're not something you can enter.
+
+getting off yourself:
+But you aren't on yourself at the moment.
+
+closing yourself:
+You aren't something you can close.
+
+taking yourself:
+You are always self-possessed.
+
+switching on yourself:
+You aren't something you can switch.
+
+switching off yourself:
+You aren't something you can switch.
+
+wearing yourself:
+(first taking yourself)
+You are always self-possessed.
+
+taking off yourself:
+You aren't wearing yourself.
+
+throwing the scanner at yourself:
+You lack the nerve when it comes to the crucial moment.
+
+showing the scanner to yourself:
+The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+giving the scanner to yourself:
+You can't give the scanner to yourself.
+
+waking yourself:
+That seems unnecessary.
+
+kissing yourself:
+You don't get much from that.
+
+touching yourself:
+You achieve nothing by this.
+
+rubbing yourself:
+You rub yourself.
+
+waving yourself:
+But you aren't holding you.
+
+squeezing yourself:
+You might not like that.
+
+burning yourself:
+There is no source of ignition on the station.
+
+cutting yourself:
+Imperfect vessel that you are, that is not the answer.
+
+Cutting you up would achieve little.
+
+tying yourself to the floor hatch:
+You would achieve nothing by this.
+
+swinging yourself:
+There's nothing sensible to swing here.
+
+tasting yourself:
+You taste nothing unexpected.
+
+drinking yourself:
+There's nothing suitable to drink here.
+
+eating yourself:
+You're plainly inedible.
+
+dropping yourself:
+You lack the dexterity.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24022"></child>
+        </children>
+    </item>
+    <item nodeId="node-24022">
+        <command xml:space="preserve">nounless</command>
+        <result xml:space="preserve">taking inventory:
+You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+jumping:
+You jump on the spot.
+
+thinking:
+What a good idea.
+
+waiting:
+Time passes.
+
+sleeping:
+You aren't feeling especially drowsy.
+
+waking up:
+The dreadful truth is, this is not a dream.
+
+waving hands:
+You wave.
+
+saying yes:
+That was a rhetorical question.
+
+saying no:
+That was a rhetorical question.
+
+nounless listening:
+You hear nothing unexpected.
+
+nounless smelling:
+You smell nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24023"></child>
+        </children>
+    </item>
+    <item nodeId="node-24023">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve"></result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24024"></child>
+        </children>
+    </item>
+    <item nodeId="node-24024">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24025"></child>
+        </children>
+    </item>
+    <item nodeId="node-24025">
+        <command xml:space="preserve">cut me</command>
+        <result xml:space="preserve">Imperfect vessel that you are, that is not the answer.
+
+Cutting you up would achieve little.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23816">
+        <command xml:space="preserve">* scratch</command>
+        <result xml:space="preserve">(Noted.)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24027"></child>
+            <child nodeId="node-23972"></child>
+            <child nodeId="node-23917"></child>
+            <child nodeId="node-23988"></child>
+            <child nodeId="node-23817"></child>
+            <child nodeId="node-23843"></child>
+        </children>
+    </item>
+    <item nodeId="node-23843">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23844"></child>
+        </children>
+    </item>
+    <item nodeId="node-23844">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Cellar
+Used for storage and as a decompression shelter.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23817">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23818"></child>
+        </children>
+    </item>
+    <item nodeId="node-23818">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Cellar
+Used for storage and as a decompression shelter.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23819"></child>
+        </children>
+    </item>
+    <item nodeId="node-23819">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23820"></child>
+        </children>
+    </item>
+    <item nodeId="node-23820">
+        <command xml:space="preserve">x scanner</command>
+        <result xml:space="preserve">The handheld voice-activated scanner you use to scan electronic modules on the station.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23821"></child>
+        </children>
+    </item>
+    <item nodeId="node-23821">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23822"></child>
+        </children>
+    </item>
+    <item nodeId="node-23822">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Cellar
+Used for storage and as a decompression shelter.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23823"></child>
+        </children>
+    </item>
+    <item nodeId="node-23823">
+        <command xml:space="preserve">x scanner</command>
+        <result xml:space="preserve">The handheld voice-activated scanner you use to scan electronic modules on the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23824"></child>
+        </children>
+    </item>
+    <item nodeId="node-23824">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Cellar
+Used for storage and as a decompression shelter.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23988">
+        <command xml:space="preserve">kiss scanner</command>
+        <result xml:space="preserve">You can only do that to something animate.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23989"></child>
+        </children>
+    </item>
+    <item nodeId="node-23989">
+        <command xml:space="preserve">kiss me</command>
+        <result xml:space="preserve">You don't get much from that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23990"></child>
+        </children>
+    </item>
+    <item nodeId="node-23990">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23991"></child>
+        </children>
+    </item>
+    <item nodeId="node-23991">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23992"></child>
+        </children>
+    </item>
+    <item nodeId="node-23992">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23993"></child>
+        </children>
+    </item>
+    <item nodeId="node-23993">
+        <command xml:space="preserve">go house</command>
+        <result xml:space="preserve">
+School
+One broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23994"></child>
+        </children>
+    </item>
+    <item nodeId="node-23994">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23995"></child>
+        </children>
+    </item>
+    <item nodeId="node-23995">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23996"></child>
+        </children>
+    </item>
+    <item nodeId="node-23996">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23997"></child>
+        </children>
+    </item>
+    <item nodeId="node-23997">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23998"></child>
+        </children>
+    </item>
+    <item nodeId="node-23998">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23999"></child>
+        </children>
+    </item>
+    <item nodeId="node-23999">
+        <command xml:space="preserve">go house</command>
+        <result xml:space="preserve">
+House
+Two families lived here, but not recently.
+
+Someone has left a doll on the well swept floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24000"></child>
+        </children>
+    </item>
+    <item nodeId="node-24000">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24001"></child>
+        </children>
+    </item>
+    <item nodeId="node-24001">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24002"></child>
+        </children>
+    </item>
+    <item nodeId="node-24002">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24003"></child>
+        </children>
+    </item>
+    <item nodeId="node-24003">
+        <command xml:space="preserve">unlock hatch</command>
+        <result xml:space="preserve">What do you want to unlock the floor hatch with?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24004"></child>
+        </children>
+    </item>
+    <item nodeId="node-24004">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24005"></child>
+        </children>
+    </item>
+    <item nodeId="node-24005">
+        <command xml:space="preserve">unlock door</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24006"></child>
+        </children>
+    </item>
+    <item nodeId="node-24006">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24007"></child>
+        </children>
+    </item>
+    <item nodeId="node-24007">
+        <command xml:space="preserve">unlock door</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24008"></child>
+        </children>
+    </item>
+    <item nodeId="node-24008">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24009"></child>
+        </children>
+    </item>
+    <item nodeId="node-24009">
+        <command xml:space="preserve">unlock house</command>
+        <result xml:space="preserve">What do you want to unlock your home with?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24010"></child>
+        </children>
+    </item>
+    <item nodeId="node-24010">
+        <command xml:space="preserve">lock house</command>
+        <result xml:space="preserve">What do you want to lock your home with?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24011"></child>
+        </children>
+    </item>
+    <item nodeId="node-24011">
+        <command xml:space="preserve">open house</command>
+        <result xml:space="preserve">It isn't something you can open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24012"></child>
+        </children>
+    </item>
+    <item nodeId="node-24012">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24013"></child>
+        </children>
+    </item>
+    <item nodeId="node-24013">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24014"></child>
+        </children>
+    </item>
+    <item nodeId="node-24014">
+        <command xml:space="preserve">analyze scanner</command>
+        <result xml:space="preserve">examining the scanner:
+The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+looking under the scanner:
+You find nothing of interest.
+
+searching the scanner:
+You find nothing of interest.
+
+listening to the scanner:
+You hear nothing unexpected.
+
+smelling the scanner:
+You smell nothing unexpected.
+
+attacking the scanner:
+The Founder said that violence is never the answer.
+
+buying the scanner:
+Nothing is on sale.
+
+climbing the scanner:
+Little is to be achieved by that.
+
+pulling the scanner:
+Nothing obvious happens.
+
+pushing the scanner:
+Nothing obvious happens.
+
+turning the scanner:
+Nothing obvious happens.
+
+pushing the scanner to antispinward:
+The scanner cannot be pushed from place to place.
+
+opening the scanner:
+It isn't something you can open.
+
+entering the scanner:
+That's not something you can enter.
+
+getting off the scanner:
+But you aren't on the scanner at the moment.
+
+closing the scanner:
+It isn't something you can close.
+
+taking the scanner:
+You already have that.
+
+switching on the scanner:
+It isn't something you can switch.
+
+switching off the scanner:
+It isn't something you can switch.
+
+wearing the scanner:
+You can't wear that!
+
+taking off the scanner:
+You aren't wearing the scanner.
+
+(no other people in the location; can't test throwing at.)
+
+
+(no other people in the location; can't test showing to.)
+
+
+(no other people in the location; can't test giving to.)
+
+
+touching the scanner:
+You feel nothing unexpected.
+
+rubbing the scanner:
+You rub the scanner.
+
+waving the scanner:
+You wave the scanner.
+
+squeezing the scanner:
+You achieve nothing by this.
+
+burning the scanner:
+This dangerous act would achieve little.
+
+cutting the scanner:
+Cutting it up would achieve little.
+
+tying the scanner to the vegetables:
+You would achieve nothing by this.
+
+swinging the scanner:
+There's nothing sensible to swing here.
+
+tasting the scanner:
+You taste nothing unexpected.
+
+drinking the scanner:
+There's nothing suitable to drink here.
+
+eating the scanner:
+That's plainly inedible.
+
+dropping the scanner:
+Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24015"></child>
+        </children>
+    </item>
+    <item nodeId="node-24015">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24016"></child>
+        </children>
+    </item>
+    <item nodeId="node-24016">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+You can see a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24017"></child>
+        </children>
+    </item>
+    <item nodeId="node-24017">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24018"></child>
+        </children>
+    </item>
+    <item nodeId="node-24018">
+        <command xml:space="preserve">analyze forest</command>
+        <result xml:space="preserve">examining the some trees:
+The community grew trees for tradition, or maybe they help with air processing.
+
+looking under the some trees:
+You find nothing of interest.
+
+searching the some trees:
+You find nothing of interest.
+
+listening to the some trees:
+You hear nothing unexpected.
+
+smelling the some trees:
+You smell nothing unexpected.
+
+attacking the some trees:
+The Founder said that violence is never the answer.
+
+buying the some trees:
+Nothing is on sale.
+
+climbing the some trees:
+You can't get a good grip.
+
+pulling the some trees:
+They are fixed in place.
+
+pushing the some trees:
+They are fixed in place.
+
+turning the some trees:
+They are fixed in place.
+
+pushing the some trees to spinward:
+The some trees cannot be pushed from place to place.
+
+opening the some trees:
+They aren't something you can open.
+
+entering the some trees:
+They're not something you can enter.
+
+getting off the some trees:
+But you aren't on the some trees at the moment.
+
+closing the some trees:
+They aren't something you can close.
+
+taking the some trees:
+They're hardly portable.
+
+switching on the some trees:
+They aren't something you can switch.
+
+switching off the some trees:
+They aren't something you can switch.
+
+wearing the some trees:
+(first taking the some trees)
+They're hardly portable.
+
+taking off the some trees:
+You aren't wearing the some trees.
+
+touching the some trees:
+You feel nothing unexpected.
+
+rubbing the some trees:
+You rub the some trees.
+
+waving the some trees:
+But you aren't holding those.
+
+squeezing the some trees:
+You achieve nothing by this.
+
+burning the some trees:
+This dangerous act would achieve little.
+
+cutting the some trees:
+Cutting them up would achieve little.
+
+tying the some trees to the school building:
+You would achieve nothing by this.
+
+swinging the some trees:
+There's nothing sensible to swing here.
+
+tasting the some trees:
+You taste nothing unexpected.
+
+drinking the some trees:
+There's nothing suitable to drink here.
+
+eating the some trees:
+They're plainly inedible.
+
+dropping the some trees:
+The some trees are already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23917">
+        <command xml:space="preserve">hit me</command>
+        <result xml:space="preserve">The Founder said that violence is never the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23918"></child>
+        </children>
+    </item>
+    <item nodeId="node-23918">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23919"></child>
+        </children>
+    </item>
+    <item nodeId="node-23919">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23920"></child>
+        </children>
+    </item>
+    <item nodeId="node-23920">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">
+School
+One broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23921"></child>
+        </children>
+    </item>
+    <item nodeId="node-23921">
+        <command xml:space="preserve">hit eraser</command>
+        <result xml:space="preserve">(first taking the clean eraser)
+Nothing happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23922"></child>
+        </children>
+    </item>
+    <item nodeId="node-23922">
+        <command xml:space="preserve">get eraser</command>
+        <result xml:space="preserve">You already have that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23923"></child>
+        </children>
+    </item>
+    <item nodeId="node-23923">
+        <command xml:space="preserve">erase board</command>
+        <result xml:space="preserve">(with the eraser)
+You carefully erase the chalkboard.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23924"></child>
+        </children>
+    </item>
+    <item nodeId="node-23924">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a dusty eraser
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23925"></child>
+        </children>
+    </item>
+    <item nodeId="node-23925">
+        <command xml:space="preserve">hit eraser</command>
+        <result xml:space="preserve">You fill the room with a cloud of dust, which quickly clears.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23926"></child>
+        </children>
+    </item>
+    <item nodeId="node-23926">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">School
+One broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk and a chalkboard hangs on one wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-23972">
+        <command xml:space="preserve">gonear pond</command>
+        <result xml:space="preserve">Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23973"></child>
+        </children>
+    </item>
+    <item nodeId="node-23973">
+        <command xml:space="preserve">taste pond</command>
+        <result xml:space="preserve">It's a bit fishy.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23974"></child>
+        </children>
+    </item>
+    <item nodeId="node-23974">
+        <command xml:space="preserve">drink pond</command>
+        <result xml:space="preserve">It's a bit fishy.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23975"></child>
+        </children>
+    </item>
+    <item nodeId="node-23975">
+        <command xml:space="preserve">eat pond</command>
+        <result xml:space="preserve">That's plainly inedible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23976"></child>
+        </children>
+    </item>
+    <item nodeId="node-23976">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23977"></child>
+        </children>
+    </item>
+    <item nodeId="node-23977">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23978"></child>
+        </children>
+    </item>
+    <item nodeId="node-23978">
+        <command xml:space="preserve">x pond</command>
+        <result xml:space="preserve">Something to do with water filtration, and there are still some fish.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23979"></child>
+        </children>
+    </item>
+    <item nodeId="node-23979">
+        <command xml:space="preserve">enter pond</command>
+        <result xml:space="preserve">You can't hold your breath long enough to make that worthwhile.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23980"></child>
+        </children>
+    </item>
+    <item nodeId="node-23980">
+        <command xml:space="preserve">swim in pond</command>
+        <result xml:space="preserve">You can't hold your breath long enough to make that worthwhile.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23981"></child>
+        </children>
+    </item>
+    <item nodeId="node-23981">
+        <command xml:space="preserve">search pond</command>
+        <result xml:space="preserve">The pond is pretty murky, but you can see a few fish from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23982"></child>
+        </children>
+    </item>
+    <item nodeId="node-23982">
+        <command xml:space="preserve">x fish</command>
+        <result xml:space="preserve">There are still a few fish swimming in the pond, but they taste horrible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23983"></child>
+        </children>
+    </item>
+    <item nodeId="node-23983">
+        <command xml:space="preserve">get fish</command>
+        <result xml:space="preserve">The fish aren't easy to catch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23984"></child>
+        </children>
+    </item>
+    <item nodeId="node-23984">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23985"></child>
+        </children>
+    </item>
+    <item nodeId="node-23985">
+        <command xml:space="preserve">touch fish</command>
+        <result xml:space="preserve">The fish aren't easy to catch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-23986"></child>
+        </children>
+    </item>
+    <item nodeId="node-23986">
+        <command xml:space="preserve">kiss fish</command>
+        <result xml:space="preserve">You can only do that to something animate.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24027">
+        <command xml:space="preserve">cut me</command>
+        <result xml:space="preserve">Imperfect vessel that you are, that is not the answer.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24028"></child>
+        </children>
+    </item>
+    <item nodeId="node-24028">
+        <command xml:space="preserve">burn me</command>
+        <result xml:space="preserve">There is no open flame on the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24029"></child>
+        </children>
+    </item>
+    <item nodeId="node-24029">
+        <command xml:space="preserve">pray</command>
+        <result xml:space="preserve">You sing a hymn about virtue.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24030"></child>
+        </children>
+    </item>
+    <item nodeId="node-24030">
+        <command xml:space="preserve">turn scanner on</command>
+        <result xml:space="preserve">It isn't something you can switch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24031"></child>
+        </children>
+    </item>
+    <item nodeId="node-24031">
+        <command xml:space="preserve">turn scanner of</command>
+        <result xml:space="preserve">I only understood you as far as wanting to turn the scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-21856">
         <command xml:space="preserve">* minimal walkthrough</command>

@@ -1,4 +1,4 @@
-"Green" by Thomas Insel
+"Founder's Mercy" by Thomas Insel
 
 [
 	Copyright © 2018 Thomas Insel <tinsel@tinsel.org>
@@ -9,11 +9,21 @@
 ]
 
 [
+	The station is named RWSS Founder's Mercy, as well as the game.
+
+	Usage:
+		never use an article
+		italicize name but not prefix
+		RWSS=rotating wheel space station
+		RWSS _Founder's Mery_ is a _Founder's Glory_-class rotating wheel space station laid down in ...
+]
+
+[
 	TODO:
 
-	- "jump" adjusted for centripetal force and low gravity.	
+	- add a couple of references to the station name/initials.
+
 	- consistent approach to scenery responses ... just junk, etc.
-	- I am not satisfied with the name Green
 	
 	Machine bits:
 		- at least one more machine w/ components
@@ -21,6 +31,20 @@
 		- spare parts...
 
 	- another way to practice boots?	
+	
+	THESE ROOMS ARE STILL UNUSED:
+		
+		Barn
+		Church
+		House
+		
+		& some sectors are only connected to places
+
+	TODO: radio/win
+
+	Every turn when the player is in Pod Bay: [todo]
+		say "SInce the game isn't finished, here's some text: You notice that there are no pods left. You despair. But then you find the communications system and call for help. Someone comes.";
+		end the story finally saying "...you have won".
 ]
 
 Book 1 - Setup
@@ -28,8 +52,6 @@ Book 1 - Setup
 Chapter 1 - The story
 
 Use American dialect and the serial comma.
-
-Index map with EPS file.
 
 The story headline is "A Space Story". The story genre is "Science Fiction". The release number is 1. The story creation year is 2018.
 
@@ -171,13 +193,16 @@ Instead of entering the maintenance platform:
 Chapter 8 - Kinds of doors
 
 To say floor-hatch-desc (d - a floor hatch):
-	say "There is [if d is open]an open[otherwise]a secured[end if] hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if][no line break]";
+	if d is open:
+		say "You have been trained to keep hatches closed as a precaution against decompression, but the hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is open.[no line break]";
+	otherwise:
+		say "You have been well-trained, because the hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is secured shut.[no line break]";
 
 To say floor-hatch-short:
 	let d be a random floor hatch in the location;
-	say "There is [if d is open]an open[otherwise]a secured[end if] hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if][no line break]";
+	say "There is [if d is open]an open[otherwise]a secured[end if] hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if].[no line break]";
 
-A floor hatch is a kind of door. "[floor-hatch-short].". It is usually privately-named. It usually has description "[floor-hatch-desc noun]." It is usually closed. It usually has printed name "the [if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]".
+A floor hatch is a kind of door. "[floor-hatch-short]". It is usually privately-named. It usually has description "[floor-hatch-desc noun]". It is usually closed. It usually has printed name "the [if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]".
 
 After going up through a floor hatch:
 	let d be a random open floor hatch in the location;
@@ -197,7 +222,7 @@ Understand "floor" as floor hatch when the location is not in Underneath.
 
 Understand "secure [a door]" as closing.
 
-A building is a kind of door. It is usually open. It is usually not openable. It is usually privately-named.
+A building is a kind of door. It is usually open. It is usually not openable. It is usually privately-named. It is usually improper-named.
 
 [ To represent the outside of buildings you go out/in from in the ring. ]
 
@@ -218,7 +243,7 @@ Instead of switching off a circuit breaker (called b) when b is switched on:
 
 The green circuit breaker is a circuit breaker. It is switched off.
 
-A forest is a kind of  thing. It is usually scenery and privately-named and plural-named. It usually has printed name "some trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, or maybe they help with air processing."
+A forest is a kind of thing. It is usually scenery and privately-named and plural-named. It usually has printed name "some trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, or maybe they help with air processing."
 
 Instead of climbing a forest:
 	if the player is wearing the gravity boots:
@@ -236,8 +261,8 @@ After printing the banner text rule:
 	say "Type 'about' for credits and more information.";
 	
 Carry out requesting the credits:
-	say	"[bold type]About Green[roman type][line break]",
-		"[italic type]Green[roman type] is my second released Inform project, conceived and implemented in November of 2018. It should be impossible to put this game into an unwinnable state.[paragraph break]",
+	say	"[bold type]About Founder's Mercy[roman type][line break]",
+		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018. It should be impossible to put this game into an unwinnable state.[paragraph break]",
 		"The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]",
 		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this game at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]",
 		"This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type]).".
@@ -259,7 +284,7 @@ Section 1 - Components
 
 Status is a kind of value. The statuses are functional and faulty.
 
-A component is a kind of thing. A component has a status. The status of a component is usually functional. Understand "module" as a component. A component usually has description "It is a standardized machine component." [todo]
+A component is a kind of thing. A component has a status. The status of a component is usually functional. Understand "module" as a component. A component usually has description "It is a standardized machine module."
 
 After examining a component (called c):
 	if c is scanned, say "The scanner reported this [c] as [status of c]."
@@ -279,7 +304,7 @@ To say the qualifier of (c - a component):
 	otherwise:
 		do nothing.
 
-Before printing the plural name of  a component (called c), say the qualifier of c.
+Before printing the plural name of a component (called c), say the qualifier of c.
 
 Before printing the name of a component (called c) while not examining, say the qualifier of c.
 
@@ -372,7 +397,7 @@ Carry out bare scanning:
 
 The scanner is an addressable thing. The scanner can be explained. It is not explained. It is machinelike.
 The scanner fail count is a number that varies. Scanner fail count is 0.
-The scanner has description "The handheld voice-activated scanner you use to scan electronic modules on the station."
+The scanner has description "The handheld voice-activated scanner you use when working on the station's machines."
 
 Instead of scanning the scanner, computerize "Self test completed. Scanner is functional."
 
@@ -385,6 +410,12 @@ To decide if the scanner is at hand:
 	decide no.	
 
 After examining the scanner, explain the scanner.
+
+Instead of switching on the scanner:
+	say "The scanner is always on and listening.[paragraph break]";
+	explain the scanner.
+	
+Instead of switching off the scanner, try switching on the scanner.
 
 To explain the scanner:
 	if the scanner is not explained:
@@ -402,8 +433,8 @@ To scanner syntax error:
 
 [ scanner, scan <something that is visible> ]
 
-Persuasion rule for asking the scanner to try scanning or examining or opening something: 
-   persuasion succeeds.
+Persuasion rule for asking the scanner to try scanning or examining or opening something:
+	persuasion succeeds.
 
 Instead of the scanner scanning or examining something:
 	try the player scanning the noun;
@@ -432,12 +463,12 @@ Instead of opening a machine:
 	say "You will need to use the scanner to do that.";
 	
 After closing a machine (called m):
-	say "You close [the m] and it seals without any trace of a seam."; [todo]
+	say "You close [the m] and it seals without any trace of a seam.";
 
 [ scanner, scan ]
 
 Persuasion rule for asking the scanner to try bare scanning:
-   persuasion succeeds.
+	persuasion succeeds.
  
 Instead of an actor bare scanning when the actor is not the player:
 	unless the scanner is at hand, rule succeeds;
@@ -550,10 +581,27 @@ Chapter 13 - Actions
 
 Section 1 - Remove Some Actions
 
-Understand the command "wake" as something new.
-Understand the command "buy" as something new.
+Understand the command "wake" as something new. [ too self-referential ]
+Understand the command "buy" as something new. [ no money in this game ]
 
-Section 2 - And Add Some
+Section 2 - Modify Some Default Responses
+
+Before attacking or cutting something when the noun is not the eraser and the noun is not the player:
+	say "The Founder said that violence is never the answer.";
+	stop the action.
+
+Instead of burning something:
+	say "There is no open flame on the station." instead.
+	
+Instead of cutting or attacking yourself:
+	say "Imperfect vessel that you are, that is not the answer." instead.
+
+Instead of listening to a room:
+	say "You hear only the familiar hum of the station."
+
+Section 3 - And Add Some Actions
+
+[ for the pond ]
 
 Understand "swim" as swimming.
 Understand "swim in [something]" as swimming in.
@@ -564,6 +612,8 @@ Swimming in is an action applying to one thing.
 Instead of swimming, say "There's nothing to swim in."
 Instead of swimming in, say "You can't swim in [the noun]."
 
+[ for the black board ]
+
 Understand "rub [something] with [something]" as rubbing it with.
 Understand the command "erase" as "rub".
 
@@ -571,6 +621,8 @@ Rubbing it with is an action applying to one thing and one carried thing.
 
 Carry out an actor rubbing something with:
 	Try rubbing the noun instead;
+
+[ because they will check ]
 
 Understand "xyzzy" or "say xyzzy" or "cast xyzzy" as xyzzying.
 
@@ -581,6 +633,8 @@ Instead of xyzzying for the first time:
 
 Carry out xyzzying:
 	say "Once was enough."
+
+[ for atmosphere ]
 
 Understand "sing" as singing.
 Understand "pray" as singing.
@@ -693,7 +747,7 @@ Instead of examining the status display:
 	if the red circuit breaker is switched off:
 		say "[fixed letter spacing]Pod bay locked down[line break]",
 			"Diagnosis: telemetry sensor array offline[line break]",
-			"Remediation: reset breaker 36-87/A @ hub platform[roman type][paragraph break]";
+			"Remediation: reset breaker FM36-87/A @ hub platform[roman type][paragraph break]";
 	else unless the atmosphere pump is functional:
 		say "[fixed letter spacing]Pod bay locked down[line break]",
 			"Diagnosis: pod control atmosphere pump offline[line break]",
@@ -705,7 +759,7 @@ Instead of examining the status display:
 	else if the green circuit breaker is switched off:
 		say "[fixed letter spacing]Pod bay locked down[line break]",
 			"Diagnosis: launch system cooling loop offline[line break]",
-			"Remediation: reset circuit breaker 29-63/A @ Sector 2[roman type][paragraph break]";
+			"Remediation: reset circuit breaker FM29-63/A @ Sector 2[roman type][paragraph break]";
 	else if S1H1 is not closed:
 		say "[fixed letter spacing]Pod bay locked down[line break]",
 			"Secure ceiling hatch[roman type][paragraph break]";
@@ -713,7 +767,6 @@ Instead of examining the status display:
 		say "The status display glows green."
 
 The atmosphere pump is a machine in the Pod Control. It is openable. It is quiet. It has carrying capacity 2. It has description "[If the atmosphere pump is functional and the atmosphere pump is not open]The featureless atmosphere pump is softly humming.[otherwise]The atmosphere pump is a smooth featureless machine." Understand "machine" and "machinery" as the atmosphere pump.
-[todo contents?]
 
 Instead of scanning the atmosphere pump when the atmosphere pump is functional and the atmosphere pump is closed:
 	computerize "Machine is functional and operating."
@@ -753,19 +806,19 @@ After going through the wall hatch:
 
 Section 3 - Pod Bay
 
-There is a room called Pod Bay. "There are four slips for transit pods. [one of]Unexpectedly,[or]Disturbingly,[purely at random] all are empty." Pod Bay is in Underneath.
+There is a room called Pod Bay. "There are four berths for transit pods. [one of]Unexpectedly,[or]Disturbingly,[purely at random] all are empty." Pod Bay is in Underneath.
 
-Some slips are scenery in Pod Bay. Understand "four slips" or "slip" and "door" and "doors" and "rail" and "rails" and "iris" and "closed" and "iris" and "pod bay" as some slips. Some slips have description "Each slip would hold a transit pod, but now there are only support rails and closed iris doors." They are machinelike.
+Some berths are scenery in Pod Bay. Understand "four berths" or "berth" and "door" and "doors" and "rail" and "rails" and "iris" and "closed" and "iris" and "pod bay" as some berths. Some berths have description "Each berth would hold a transit pod, but now there are only support rails and closed iris doors." They are machinelike.
 
-Instead of the scanner opening some slips:
+Instead of the scanner opening some berths:
 	computerize "Opening failed. Safety violation.";
 	rule succeeds.
 
-Instead of opening or closing the slips:
+Instead of opening or closing the berths:
 	say "The doors open and close automatically as pods come and go."
 
-Instead of unlocking the slips with something, try opening the slips.
-Instead of locking the slips with something, try closing the slips.
+Instead of unlocking the berths with something, try opening the berths.
+Instead of locking the berths with something, try closing the berths.
 	
 A door called the wall hatch is port from Pod Control and starboard from Pod Bay. It is closed and locked. "[if the player is in Pod Control][pod-bay-hatch-pc][otherwise][pod-bay-hatch-pb][end if]."
 
@@ -782,18 +835,10 @@ Every turn when the player is in Pod Bay for the first time:
 	if the Pod Bay is not scored:
 		increase the score by 10;
 		now the Pod Bay is scored.
-
-
-
-[
-Every turn when the player is in Pod Bay: [todo]
-	say "SInce the game isn't finished, here's some text: You notice that there are no pods left. You despair. But then you find the communications system and call for help. Someone comes.";
-	end the story finally saying "...you have won".
-]
-		
+	
 Chapter 2 - Sector 2
 
-Sector 2 is spinward from Sector 1. It is in Main Level. "A deep pond serves as part of the water filtration system and for raising fish. You can walk spinward or antispinward." It has printed name "Sector 2: Aquaculture". It has destination name "sector 2".
+Sector 2 is spinward from Sector 1. It is in Main Level. "A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward." It has printed name "Sector 2: Aquaculture". It has destination name "sector 2".
 
 The pond is scenery in sector 2. It has description "Something to do with water filtration, and there are still some fish." Understand "water" and "deep" as the pond.
 
@@ -802,7 +847,7 @@ Some fish are scenery in sector 2. They have description "There are still a few 
 Instead of doing anything other than examining or scanning to the fish:
 	say "The fish aren't easy to catch."
 
-Instead of drinking the pond, say "It's a bit fishy for that."
+Instead of drinking or tasting the pond, say "It's a bit fishy."
 
 Instead of searching the pond, say "[The pond] is pretty murky, but you can see a few fish from here."
 
@@ -835,23 +880,25 @@ Instead of climbing S3P1:
 		say "It isn't easy, but with the boots, you are able to climb towards the hub.";
 		now the player is in center platform;
 	otherwise:
-		say "The red pylon is designated for climbing, but you still can't get a grip.";
+		say "The red pylon is designated for climbing, but you can't get a grip.";
 		stop the action.
-
-S3B1 is a building. It is scenery. It is port of Sector 3. It is privately-named. It has description "A small white building with a steeple." It has printed name "the church". Understand "church" and "steeple" and "small" and "white" and "building" as S3B1. Through it is Church.
-
-S3B2 is a building. It is scenery. It is starboard of Sector 3. It is privately-named. It has description "What looks like whitewashed siding is really a lightweight plastic." It has printed name "the house". Understand "whitewashed" and "siding" and "lightweight" and "plastic" and "house" as S3B2. Through it is House. 
 
 Nothing is inside from Sector 3.
 
 Instead of going nowhere from sector 3 when the noun is inside:
 	say "You can enter the church or the house."
 
+S3B1 is a building. It is scenery. It is port of Sector 3. It is privately-named. It has description "A small white building with a steeple." It has printed name "church". Understand "church" and "steeple" and "small" and "white" and "building" as S3B1. It is improper-named. Through it is Church.
+
+S3B2 is a building. It is scenery. It is starboard of Sector 3. It is privately-named. It has description "What looks like whitewashed siding is really a lightweight plastic." It has printed name "the house". Understand "whitewashed" and "siding" and "lightweight" and "plastic" and "house" and "building" as S3B2. It is improper-named. Through it is House.
+
 There is a forest in Sector 3.
 
+Instead of looking under a forest in Sector 3, say "Only the house and church."
+	
 Section 1 - Church
 
-Church is a room.  "Before everyone left or died, you celebrated every sabbath here. The altar stands against the far wall."
+Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against the far wall."
 
 An altar is a fixed in place scenery supporter in church. It has description "Really just a table."
 
@@ -874,6 +921,9 @@ Instead of going nowhere in house when the noun is port, try going outside.
 Section 3 - Center Platform
 
 Sector 3 is down from Center Platform. Nothing is up from Sector 3. Center Platform has description "It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down."
+
+Instead of jumping in Center Platform:
+	say "Yes, pseudogravity is definitely weaker up here."
 
 Before going down from Center Platform:
 	change the up exit of Sector 3 to Center Platform;
@@ -900,7 +950,7 @@ Chapter 4 - Sector 4
 
 Sector 4 is spinward from Sector 3. It is in Main Level. "Your home is here among the crops. You can walk spinward or antispinward." It has printed name "Sector 4: Crops". It has destination name "sector 4".
 
-S4B1 is a building. It is inside of Sector 4. It is scenery. It has description "You were told it was built to look like a log cabin on Old Earth." It has printed name "your home". Through it is Home. Understand "home" or "house" as S4B1.
+S4B1 is a building. It is inside of Sector 4. It is scenery. It has description "You were told it was built to look like a log cabin on Old Earth." It has printed name "home". It has indefinite article "your". [* doesn't seem to work ] It is improper-named. Through it is Home. Understand "home" or "house" as S4B1.
 
 Some vegetables are scenery in Sector 4. They have description "Greens, carrots, and potatoes." Understand "crops" and "greens" and "carrots" and "potatoes" as some vegetables.
 
@@ -918,7 +968,7 @@ Section 2 - Cellar
 
 S4H1 is a floor hatch. It is down from Home and up from Cellar.
 
-Cellar is in Underneath. "Used for storage and as a decompression shelter."
+Cellar is in Underneath. "A decompression shelter and space for storage."
 
 An emergency mask is in cellar. "There is an emergency mask hanging on the wall." It has description "You wore this mask when there were decompression drills every ten days." It is wearable. It is machinelike.
 
@@ -929,7 +979,10 @@ Sector 5 is spinward from Sector 4. It is in Main Level. "The school house is ne
 S5B1 is a building. It is scenery. It is inside of sector 5. It has description "Little and red, the traditional markings of a school building." It has printed name "the school building". Through it is School. Understand "school" and "house" as S5B1.
 
 There is a pylon in Sector 5.
+
 There is a forest in Sector 5.
+
+Instead of looking under a forest in Sector 5, say "Only the school house."
 
 Section 1 - School
 
@@ -966,10 +1019,10 @@ Instead of rubbing the chalkboard:
 	if the chalkboard is cleaned:
 		say "The chalkboard is already clean.";
 	otherwise if the chalkboard is smudged:
-		say "You smudge the smudges around.";
+		say "You smudge the smudges around with your hand.";
 	otherwise:
 		now the chalkboard is smudged;
-		say "You smudge the writing around."
+		say "You smudge the writing around with your hand."
 
 Instead of rubbing the chalkboard when the player encloses the eraser and the eraser is visible and the chalkboard is not cleaned:
 	say "(with the eraser)[command clarification break]";
@@ -985,21 +1038,21 @@ Instead of rubbing the chalkboard with something (called the rubber):
 			now the chalkboard is cleaned;
 			now the eraser is dusty;
 		-- otherwise:
-			say "You smudge the gibberish around.";
+			say "You smudge the gibberish around with [the rubber].";
 
 Instead of attacking the eraser:
 	if the actor is not carrying the eraser, carry out the implicitly taking activity with the eraser;
 	if the eraser is clean:
 		say "Nothing happens.";
 	otherwise if the location is the supply vault:
-		say "You fill the room with a cloud of dust and you can now see a laser beam scanning across the hatch.";
+		say "You fill the vault with a cloud of dust and you can now see a laser beam scanning across the hatch.";
 		now the laser visibility counter is 4;
 	otherwise:
-		say "You fill the room with a cloud of dust, which quickly clears."
+		say "You fill the area with a cloud of dust, which quickly clears."
 
 Chapter 6 - Sector 6
 
-Sector 6 is spinward from Sector 5 and antispinward from Sector 1. It is in Main Level. "Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward." It has printed name "Sector 6: Hydroponics". It has destination name "sector 6".
+Sector 6 is spinward from Sector 5 and antispinward from Sector 1. It is in Main Level. "Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward." It has printed name "Sector 6: Hydroponics". It has destination name "sector 6".
 
 Hydroponics machines are scenery in Sector 6. It is machinelike. It has description "You were thoroughly trained in hydroponics maintenance, but fixing these machines is beyond you." Understand "machine" and "machinery" as hydroponics machines.
 
@@ -1023,10 +1076,6 @@ Section 1 - The Supply Vault
 
 The Supply Vault is a room. "This room is dim, quiet, and stuffy. There is still a crate of machine parts left.[if laser is visible][paragraph break]You see a laser beam scan across the exit.[end if]". Supply Vault is in underneath.
 
-[ boots ]
-
-A pair of gravity boots is in the supply vault. The gravity boots are wearable. They are plural-named. They have description "Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity or on the outside of a rotating station."
-
 [ crate ]
 
 A crate of machine parts is scenery in the supply vault. It has description "These remaining parts never seem to fit where they might be useful."
@@ -1045,6 +1094,10 @@ Instead of searching the crate of machine parts, say "Many miscellaneous parts, 
 
 Before doing something other than searching or examining or scanning to the crate of machine parts:
 	say "That's just junk." instead.
+
+[ boots ]
+
+A pair of gravity boots is in the supply vault. The gravity boots are wearable. They are plural-named. They have description "Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity or on the outside of a rotating station."
 
 [ laser ]
 
@@ -1073,7 +1126,8 @@ Before doing something other than examining or touching when the current action 
 
 Before touching the laser beam:
 	if the player encloses the gravity boots:
-		say "An alarm sounds."; [todo]
+		say "An alarm sounds, [if the vault hatch is open]hatch slams shut, [end if]and a synthesized voice says 'Laser scan detects unauthorized materiel removal.'";
+		now the vault hatch is closed;
 	otherwise:
 		say "The laser beam is intangible.";
 	stop the action.
