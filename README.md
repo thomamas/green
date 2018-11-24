@@ -1,25 +1,19 @@
 # green
 
+This is the source code for the game Founder's Mercy to be built
+with Inform 7 build 6M62.
 
-https://www.flickr.com/photos/remix-man/3947468356/in/pool-nasa-public_domain/
+Copyright © 2018 Thomas Insel <tinsel@tinsel.org>
+http://tinsel.org/IF/
 
-https://www.flickr.com/photos/remix-man/3947468054/in/pool-nasa-public_domain/
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+https://creativecommons.org/licenses/by/4.0/	
 
-https://commons.wikimedia.org/wiki/File:Stanford_torus_external_view_by_Don_Davis_AC76-0525.jpg
+## Release Instructions
 
-https://images.nasa.gov/details-9132079.html
+After build, modify `index.html` with a line break and Unicode emoji:
 
-* https://images.nasa.gov/details-ARC-1976-AC76-1267.html
+    <br>
+    <li>&#x1F579;&nbsp;<a href="play.html">Play In-Browser</a> <span class="filetype">(link)</span></li>
 
-
-* http://space.nss.org/settlement/nasa/75SummerStudy/figure1.1.gif
-  http://space.nss.org/settlement/nasa/75SummerStudy/Chapt.1.html
-
-
-----
-
-Book
-  <li>&#x1F4D6;&nbsp;<a href="play.html">Play In-Browser</a> <span class="filetype">(link)</span></li>
-
-Joystick
-  U+1F579
+Note also `&#x1F4D6;` for an open book.

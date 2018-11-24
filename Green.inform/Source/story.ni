@@ -571,6 +571,8 @@ Section 1 - Remove Some Actions
 
 Understand the command "wake" as something new. [ too self-referential ]
 Understand the command "buy" as something new. [ no money in this game ]
+Understand the command "lock" as something new.
+Understand the command "unlock" as something new.
 
 Section 2 - Modify Some Default Responses
 

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<Skein rootNode="node-21855">
+<Skein rootNode="node-26580">
     <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
-    <item nodeId="node-21855">
+    <item nodeId="node-26580">
         <command xml:space="preserve">Green</command>
         <result xml:space="preserve">
 
@@ -44,10 +44,53 @@ The room where you've slept your entire life. You can go out towards the crops.
 There is a secured hatch in the floor.
 
 &gt;</commentary>
-        <children><child nodeId="node-21856"></child>
+        <children><child nodeId="node-26581"></child>
+            <child nodeId="node-26638"></child>
+            <child nodeId="node-26640"></child>
         </children>
     </item>
-    <item nodeId="node-21856">
+    <item nodeId="node-26640">
+        <command xml:space="preserve">unlock hatch</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26641"></child>
+        </children>
+    </item>
+    <item nodeId="node-26641">
+        <command xml:space="preserve">open hatch</command>
+        <result xml:space="preserve">You open the floor hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26642"></child>
+        </children>
+    </item>
+    <item nodeId="node-26642">
+        <command xml:space="preserve">lock hatch</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26638">
+        <command xml:space="preserve">* scratch</command>
+        <result xml:space="preserve">(Noted.)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-26639"></child>
+        </children>
+    </item>
+    <item nodeId="node-26639">
+        <command xml:space="preserve">unlock hatch</command>
+        <result xml:space="preserve">What do you want to unlock the floor hatch with?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-26581">
         <command xml:space="preserve">* minimal walkthrough</command>
         <result xml:space="preserve">(Noted.)
 
@@ -55,10 +98,10 @@ There is a secured hatch in the floor.
         <commentary xml:space="preserve">(Noted.)
 
 &gt;</commentary>
-        <children><child nodeId="node-21857"></child>
+        <children><child nodeId="node-26582"></child>
         </children>
     </item>
-    <item nodeId="node-21857">
+    <item nodeId="node-26582">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">(first opening the floor hatch)
 You scramble down through the hatch and close it behind yourself.
@@ -82,10 +125,10 @@ There is a secured hatch in the ceiling.
 There is an emergency mask hanging on the wall.
 
 &gt;</commentary>
-        <children><child nodeId="node-21858"></child>
+        <children><child nodeId="node-26583"></child>
         </children>
     </item>
-    <item nodeId="node-21858">
+    <item nodeId="node-26583">
         <command xml:space="preserve">get mask</command>
         <result xml:space="preserve">Taken.
 
@@ -93,10 +136,10 @@ There is an emergency mask hanging on the wall.
         <commentary xml:space="preserve">Taken.
 
 &gt;</commentary>
-        <children><child nodeId="node-21859"></child>
+        <children><child nodeId="node-26584"></child>
         </children>
     </item>
-    <item nodeId="node-21859">
+    <item nodeId="node-26584">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening the ceiling hatch)
 You pull yourself up through the hatch and close it behind yourself.
@@ -116,10 +159,10 @@ The room where you've slept your entire life. You can go out towards the crops.
 There is a secured hatch in the floor.
 
 &gt;</commentary>
-        <children><child nodeId="node-21860"></child>
+        <children><child nodeId="node-26585"></child>
         </children>
     </item>
-    <item nodeId="node-21860">
+    <item nodeId="node-26585">
         <command xml:space="preserve">out</command>
         <result xml:space="preserve">
 Sector 4: Crops
@@ -131,10 +174,10 @@ Sector 4: Crops
 Your home is here among the crops. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-21861"></child>
+        <children><child nodeId="node-26586"></child>
         </children>
     </item>
-    <item nodeId="node-21861">
+    <item nodeId="node-26586">
         <command xml:space="preserve">sw</command>
         <result xml:space="preserve">You walk a little ways to the next sector.
 
@@ -148,10 +191,10 @@ Sector 5: Forest
 The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-21862"></child>
+        <children><child nodeId="node-26587"></child>
         </children>
     </item>
-    <item nodeId="node-21862">
+    <item nodeId="node-26587">
         <command xml:space="preserve">in</command>
         <result xml:space="preserve">
 School
@@ -167,10 +210,10 @@ One broken learning machine remains in a corner, but mostly the older farmers to
 On the desk is a clean eraser.
 
 &gt;</commentary>
-        <children><child nodeId="node-21863"></child>
+        <children><child nodeId="node-26588"></child>
         </children>
     </item>
-    <item nodeId="node-21863">
+    <item nodeId="node-26588">
         <command xml:space="preserve">get eraser</command>
         <result xml:space="preserve">Taken.
 
@@ -178,10 +221,10 @@ On the desk is a clean eraser.
         <commentary xml:space="preserve">Taken.
 
 &gt;</commentary>
-        <children><child nodeId="node-21864"></child>
+        <children><child nodeId="node-26589"></child>
         </children>
     </item>
-    <item nodeId="node-21864">
+    <item nodeId="node-26589">
         <command xml:space="preserve">erase board</command>
         <result xml:space="preserve">(with the eraser)
 You carefully erase the chalkboard.
@@ -191,10 +234,10 @@ You carefully erase the chalkboard.
 You carefully erase the chalkboard.
 
 &gt;</commentary>
-        <children><child nodeId="node-21865"></child>
+        <children><child nodeId="node-26590"></child>
         </children>
     </item>
-    <item nodeId="node-21865">
+    <item nodeId="node-26590">
         <command xml:space="preserve">scanner, open machine</command>
         <result xml:space="preserve">Opening.
 
@@ -210,10 +253,10 @@ The learning machine swings open.
 [Your score has just gone up by five points.]
 
 &gt;</commentary>
-        <children><child nodeId="node-21866"></child>
+        <children><child nodeId="node-26591"></child>
         </children>
     </item>
-    <item nodeId="node-21866">
+    <item nodeId="node-26591">
         <command xml:space="preserve">get all from machine</command>
         <result xml:space="preserve">power module: (putting the scanner into your pocket to make room)
 Taken.
@@ -227,10 +270,10 @@ instruction module: (putting the emergency mask into your pocket to make room)
 Taken.
 
 &gt;</commentary>
-        <children><child nodeId="node-21867"></child>
+        <children><child nodeId="node-26592"></child>
         </children>
     </item>
-    <item nodeId="node-21867">
+    <item nodeId="node-26592">
         <command xml:space="preserve">out</command>
         <result xml:space="preserve">
 Sector 5: Forest
@@ -242,10 +285,10 @@ Sector 5: Forest
 The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-21868"></child>
+        <children><child nodeId="node-26593"></child>
         </children>
     </item>
-    <item nodeId="node-21868">
+    <item nodeId="node-26593">
         <command xml:space="preserve">sw</command>
         <result xml:space="preserve">You walk a little ways to the next sector.
 
@@ -263,10 +306,10 @@ Your people preferred to grow things the old fashioned way, but in truth the maj
 There is a secured hatch in the ground.
 
 &gt;</commentary>
-        <children><child nodeId="node-21869"></child>
+        <children><child nodeId="node-26594"></child>
         </children>
     </item>
-    <item nodeId="node-21869">
+    <item nodeId="node-26594">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">(first opening the floor hatch)
 You scramble down through the hatch and close it behind yourself.
@@ -290,10 +333,10 @@ There is a secured hatch in the ceiling.
 You can also see some pair of gravity boots here.
 
 &gt;</commentary>
-        <children><child nodeId="node-21871"></child>
+        <children><child nodeId="node-26595"></child>
         </children>
     </item>
-    <item nodeId="node-21871">
+    <item nodeId="node-26595">
         <command xml:space="preserve">search crate</command>
         <result xml:space="preserve">You find an instruction module.
 (putting the dusty eraser into your pocket to make room)
@@ -303,10 +346,10 @@ You can also see some pair of gravity boots here.
 (putting the dusty eraser into your pocket to make room)
 
 &gt;</commentary>
-        <children><child nodeId="node-21872"></child>
+        <children><child nodeId="node-26596"></child>
         </children>
     </item>
-    <item nodeId="node-21872">
+    <item nodeId="node-26596">
         <command xml:space="preserve">g</command>
         <result xml:space="preserve">You find a pressure regulator module.
 (putting the power module into your pocket to make room)
@@ -316,10 +359,10 @@ You can also see some pair of gravity boots here.
 (putting the power module into your pocket to make room)
 
 &gt;</commentary>
-        <children><child nodeId="node-21873"></child>
+        <children><child nodeId="node-26597"></child>
         </children>
     </item>
-    <item nodeId="node-21873">
+    <item nodeId="node-26597">
         <command xml:space="preserve">get boots</command>
         <result xml:space="preserve">(putting the instruction module into your pocket to make room)
 Taken.
@@ -329,10 +372,10 @@ Taken.
 Taken.
 
 &gt;</commentary>
-        <children><child nodeId="node-21874"></child>
+        <children><child nodeId="node-26598"></child>
         </children>
     </item>
-    <item nodeId="node-21874">
+    <item nodeId="node-26598">
         <command xml:space="preserve">hit eraser</command>
         <result xml:space="preserve">(first taking the dusty eraser)
 (putting the instruction module into your pocket to make room)
@@ -344,10 +387,10 @@ You fill the vault with a cloud of dust and you can now see a laser beam scannin
 You fill the vault with a cloud of dust and you can now see a laser beam scanning across the hatch.
 
 &gt;</commentary>
-        <children><child nodeId="node-21876"></child>
+        <children><child nodeId="node-26599"></child>
         </children>
     </item>
-    <item nodeId="node-21876">
+    <item nodeId="node-26599">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">You maneuver around the laser beam.
 
@@ -375,10 +418,10 @@ There is a secured hatch in the ground.
 [Your score has just gone up by five points.]
 
 &gt;</commentary>
-        <children><child nodeId="node-21877"></child>
+        <children><child nodeId="node-26600"></child>
         </children>
     </item>
-    <item nodeId="node-21877">
+    <item nodeId="node-26600">
         <command xml:space="preserve">wear boots</command>
         <result xml:space="preserve">You put on the pair of gravity boots.
 
@@ -386,10 +429,10 @@ There is a secured hatch in the ground.
         <commentary xml:space="preserve">You put on the pair of gravity boots.
 
 &gt;</commentary>
-        <children><child nodeId="node-21878"></child>
+        <children><child nodeId="node-26601"></child>
         </children>
     </item>
-    <item nodeId="node-21878">
+    <item nodeId="node-26601">
         <command xml:space="preserve">wear mask</command>
         <result xml:space="preserve">(first taking the emergency mask)
 You put on the emergency mask.
@@ -399,10 +442,10 @@ You put on the emergency mask.
 You put on the emergency mask.
 
 &gt;</commentary>
-        <children><child nodeId="node-21879"></child>
+        <children><child nodeId="node-26602"></child>
         </children>
     </item>
-    <item nodeId="node-21879">
+    <item nodeId="node-26602">
         <command xml:space="preserve">asw</command>
         <result xml:space="preserve">You walk a little ways to the next sector.
 
@@ -416,10 +459,10 @@ Sector 5: Forest
 The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-21880"></child>
+        <children><child nodeId="node-26603"></child>
         </children>
     </item>
-    <item nodeId="node-21880">
+    <item nodeId="node-26603">
         <command xml:space="preserve">asw</command>
         <result xml:space="preserve">You walk a little ways to the next sector.
 
@@ -433,10 +476,10 @@ Sector 4: Crops
 Your home is here among the crops. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-21881"></child>
+        <children><child nodeId="node-26604"></child>
         </children>
     </item>
-    <item nodeId="node-21881">
+    <item nodeId="node-26604">
         <command xml:space="preserve">asw</command>
         <result xml:space="preserve">You walk a little ways to the next sector.
 
@@ -450,10 +493,10 @@ Sector 3: Forest
 Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-21882"></child>
+        <children><child nodeId="node-26605"></child>
         </children>
     </item>
-    <item nodeId="node-21882">
+    <item nodeId="node-26605">
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">It isn't easy, but with the boots, you are able to climb towards the hub.
 
@@ -471,10 +514,10 @@ It's a mesh platform a little below the hub. You feel much lighter here, and you
 You can just reach a red circuit breaker on the hub.
 
 &gt;</commentary>
-        <children><child nodeId="node-21883"></child>
+        <children><child nodeId="node-26606"></child>
         </children>
     </item>
-    <item nodeId="node-21883">
+    <item nodeId="node-26606">
         <command xml:space="preserve">turn breaker on</command>
         <result xml:space="preserve">You switch the red circuit breaker on.
 
@@ -486,10 +529,10 @@ You can just reach a red circuit breaker on the hub.
 [Your score has just gone up by five points.]
 
 &gt;</commentary>
-        <children><child nodeId="node-21884"></child>
+        <children><child nodeId="node-26607"></child>
         </children>
     </item>
-    <item nodeId="node-21884">
+    <item nodeId="node-26607">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">You climb down the pylon.
 
@@ -503,10 +546,10 @@ Sector 3: Forest
 Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-21885"></child>
+        <children><child nodeId="node-26608"></child>
         </children>
     </item>
-    <item nodeId="node-21885">
+    <item nodeId="node-26608">
         <command xml:space="preserve">asw</command>
         <result xml:space="preserve">You walk a little ways to the next sector.
 
@@ -520,10 +563,10 @@ Sector 2: Aquaculture
 A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-21886"></child>
+        <children><child nodeId="node-26609"></child>
         </children>
     </item>
-    <item nodeId="node-21886">
+    <item nodeId="node-26609">
         <command xml:space="preserve">enter pond</command>
         <result xml:space="preserve">WIth the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a green circuit breaker and flip it on.
 
@@ -535,10 +578,10 @@ A deep pond is used as part of the water filtration system and for raising fish.
 [Your score has just gone up by ten points.]
 
 &gt;</commentary>
-        <children><child nodeId="node-21887"></child>
+        <children><child nodeId="node-26610"></child>
         </children>
     </item>
-    <item nodeId="node-21887">
+    <item nodeId="node-26610">
         <command xml:space="preserve">asw</command>
         <result xml:space="preserve">You walk a little ways to the next sector.
 
@@ -560,10 +603,10 @@ There is a secured hatch in the ground.
 You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave. The pods are below Sector 1.
 
 &gt;</commentary>
-        <children><child nodeId="node-21888"></child>
+        <children><child nodeId="node-26611"></child>
         </children>
     </item>
-    <item nodeId="node-21888">
+    <item nodeId="node-26611">
         <command xml:space="preserve">d</command>
         <result xml:space="preserve">(first opening the floor hatch)
 You scramble down through the hatch and close it behind yourself.
@@ -587,10 +630,10 @@ There is a secured hatch in the ceiling.
 Beside the secured port hatch, a status display shows an error message.
 
 &gt;</commentary>
-        <children><child nodeId="node-21889"></child>
+        <children><child nodeId="node-26612"></child>
         </children>
     </item>
-    <item nodeId="node-21889">
+    <item nodeId="node-26612">
         <command xml:space="preserve">scanner, open pump</command>
         <result xml:space="preserve">Opening.
 
@@ -602,10 +645,10 @@ The atmosphere pump swings open.
 The atmosphere pump swings open.
 
 &gt;</commentary>
-        <children><child nodeId="node-21890"></child>
+        <children><child nodeId="node-26613"></child>
         </children>
     </item>
-    <item nodeId="node-21890">
+    <item nodeId="node-26613">
         <command xml:space="preserve">get all from pump</command>
         <result xml:space="preserve">power module: Taken.
 pressure regulator module: (putting the pressure regulator module into your pocket to make room)
@@ -617,10 +660,10 @@ pressure regulator module: (putting the pressure regulator module into your pock
 Taken.
 
 &gt;</commentary>
-        <children><child nodeId="node-21891"></child>
+        <children><child nodeId="node-26614"></child>
         </children>
     </item>
-    <item nodeId="node-21891">
+    <item nodeId="node-26614">
         <command xml:space="preserve">scan regulator</command>
         <result xml:space="preserve">Component is faulty.
 
@@ -628,10 +671,10 @@ Taken.
         <commentary xml:space="preserve">Component is faulty.
 
 &gt;</commentary>
-        <children><child nodeId="node-21892"></child>
+        <children><child nodeId="node-26615"></child>
         </children>
     </item>
-    <item nodeId="node-21892">
+    <item nodeId="node-26615">
         <command xml:space="preserve">scan unscanned regulator</command>
         <result xml:space="preserve">Component is functional.
 
@@ -639,10 +682,10 @@ Taken.
         <commentary xml:space="preserve">Component is functional.
 
 &gt;</commentary>
-        <children><child nodeId="node-21893"></child>
+        <children><child nodeId="node-26616"></child>
         </children>
     </item>
-    <item nodeId="node-21893">
+    <item nodeId="node-26616">
         <command xml:space="preserve">put functional regulator in pump</command>
         <result xml:space="preserve">(first taking the functional pressure regulator module)
 (putting the dusty eraser into your pocket to make room)
@@ -654,10 +697,10 @@ You put the functional pressure regulator module into the atmosphere pump.
 You put the functional pressure regulator module into the atmosphere pump.
 
 &gt;</commentary>
-        <children><child nodeId="node-21894"></child>
+        <children><child nodeId="node-26617"></child>
         </children>
     </item>
-    <item nodeId="node-21894">
+    <item nodeId="node-26617">
         <command xml:space="preserve">scan power module</command>
         <result xml:space="preserve">Component is faulty.
 
@@ -665,10 +708,10 @@ You put the functional pressure regulator module into the atmosphere pump.
         <commentary xml:space="preserve">Component is faulty.
 
 &gt;</commentary>
-        <children><child nodeId="node-21895"></child>
+        <children><child nodeId="node-26618"></child>
         </children>
     </item>
-    <item nodeId="node-21895">
+    <item nodeId="node-26618">
         <command xml:space="preserve">scan unscanned power module</command>
         <result xml:space="preserve">Component is functional.
 
@@ -676,10 +719,10 @@ You put the functional pressure regulator module into the atmosphere pump.
         <commentary xml:space="preserve">Component is functional.
 
 &gt;</commentary>
-        <children><child nodeId="node-21896"></child>
+        <children><child nodeId="node-26619"></child>
         </children>
     </item>
-    <item nodeId="node-21896">
+    <item nodeId="node-26619">
         <command xml:space="preserve">put functional power module in pump</command>
         <result xml:space="preserve">(first taking the functional power module)
 You put the functional power module into the atmosphere pump.
@@ -689,10 +732,10 @@ You put the functional power module into the atmosphere pump.
 You put the functional power module into the atmosphere pump.
 
 &gt;</commentary>
-        <children><child nodeId="node-21897"></child>
+        <children><child nodeId="node-26620"></child>
         </children>
     </item>
-    <item nodeId="node-21897">
+    <item nodeId="node-26620">
         <command xml:space="preserve">close pump</command>
         <result xml:space="preserve">You close the atmosphere pump and it begins to hum.
 
@@ -708,10 +751,10 @@ It is time to say goodbye to the station. You are ready to leave in a pod.
 [Your score has just gone up by five points.]
 
 &gt;</commentary>
-        <children><child nodeId="node-23623"></child>
+        <children><child nodeId="node-26621"></child>
         </children>
     </item>
-    <item nodeId="node-23623">
+    <item nodeId="node-26621">
         <command xml:space="preserve">port</command>
         <result xml:space="preserve">(first opening the wall hatch)
 You close the hatch behind yourself.
@@ -743,10 +786,10 @@ This is troubling. You counted. You were sure there would be one pod left for yo
 [Your score has just gone up by ten points.]
 
 &gt;</commentary>
-        <children><child nodeId="node-25332"></child>
+        <children><child nodeId="node-26622"></child>
         </children>
     </item>
-    <item nodeId="node-25332">
+    <item nodeId="node-26622">
         <command xml:space="preserve">get communications unit</command>
         <result xml:space="preserve">Taken.
 
@@ -754,10 +797,10 @@ This is troubling. You counted. You were sure there would be one pod left for yo
         <commentary xml:space="preserve">Taken.
 
 &gt;</commentary>
-        <children><child nodeId="node-25375"></child>
+        <children><child nodeId="node-26623"></child>
         </children>
     </item>
-    <item nodeId="node-25375">
+    <item nodeId="node-26623">
         <command xml:space="preserve">starboard</command>
         <result xml:space="preserve">(first opening the wall hatch)
 You close the hatch behind yourself.
@@ -781,10 +824,10 @@ Beside the secured port hatch, a status display glows green.
 There is a secured hatch in the ceiling.
 
 &gt;</commentary>
-        <children><child nodeId="node-25376"></child>
+        <children><child nodeId="node-26624"></child>
         </children>
     </item>
-    <item nodeId="node-25376">
+    <item nodeId="node-26624">
         <command xml:space="preserve">scanner, open pump</command>
         <result xml:space="preserve">Opening.
 
@@ -800,10 +843,10 @@ The atmosphere pump swings open.
 No pods left ... you consider despair.
 
 &gt;</commentary>
-        <children><child nodeId="node-25377"></child>
+        <children><child nodeId="node-26625"></child>
         </children>
     </item>
-    <item nodeId="node-25377">
+    <item nodeId="node-26625">
         <command xml:space="preserve">get functional power module</command>
         <result xml:space="preserve">(putting the faulty power module into your pocket to make room)
 Taken.
@@ -813,10 +856,10 @@ Taken.
 Taken.
 
 &gt;</commentary>
-        <children><child nodeId="node-25378"></child>
+        <children><child nodeId="node-26626"></child>
         </children>
     </item>
-    <item nodeId="node-25378">
+    <item nodeId="node-26626">
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">(first opening the ceiling hatch)
 You pull yourself up through the hatch and close it behind yourself.
@@ -840,10 +883,10 @@ There is a secured hatch in the ground.
 So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working.
 
 &gt;</commentary>
-        <children><child nodeId="node-25379"></child>
+        <children><child nodeId="node-26627"></child>
         </children>
     </item>
-    <item nodeId="node-25379">
+    <item nodeId="node-26627">
         <command xml:space="preserve">sw</command>
         <result xml:space="preserve">You walk a little ways to the next sector.
 
@@ -857,10 +900,10 @@ Sector 2: Aquaculture
 A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-25380"></child>
+        <children><child nodeId="node-26628"></child>
         </children>
     </item>
-    <item nodeId="node-25380">
+    <item nodeId="node-26628">
         <command xml:space="preserve">sw</command>
         <result xml:space="preserve">You walk a little ways to the next sector.
 
@@ -874,10 +917,10 @@ Sector 3: Forest
 Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
 
 &gt;</commentary>
-        <children><child nodeId="node-25381"></child>
+        <children><child nodeId="node-26629"></child>
         </children>
     </item>
-    <item nodeId="node-25381">
+    <item nodeId="node-26629">
         <command xml:space="preserve">go church</command>
         <result xml:space="preserve">
 Church
@@ -897,10 +940,10 @@ On the altar is The Founder's Testament.
 You can also see an audio unit and a gray cable (plugged into the organ and an audio unit) here.
 
 &gt;</commentary>
-        <children><child nodeId="node-25382"></child>
+        <children><child nodeId="node-26630"></child>
         </children>
     </item>
-    <item nodeId="node-25382">
+    <item nodeId="node-26630">
         <command xml:space="preserve">unplug cable from organ</command>
         <result xml:space="preserve">You unplug the gray cable from the organ.
 
@@ -908,10 +951,10 @@ You can also see an audio unit and a gray cable (plugged into the organ and an a
         <commentary xml:space="preserve">You unplug the gray cable from the organ.
 
 &gt;</commentary>
-        <children><child nodeId="node-25383"></child>
+        <children><child nodeId="node-26631"></child>
         </children>
     </item>
-    <item nodeId="node-25383">
+    <item nodeId="node-26631">
         <command xml:space="preserve">plug cable into comms unit</command>
         <result xml:space="preserve">You plug the gray cable into the communications unit.
 
@@ -919,10 +962,10 @@ You can also see an audio unit and a gray cable (plugged into the organ and an a
         <commentary xml:space="preserve">You plug the gray cable into the communications unit.
 
 &gt;</commentary>
-        <children><child nodeId="node-25384"></child>
+        <children><child nodeId="node-26632"></child>
         </children>
     </item>
-    <item nodeId="node-25384">
+    <item nodeId="node-26632">
         <command xml:space="preserve">scanner, open audio</command>
         <result xml:space="preserve">Opening.
 
@@ -934,10 +977,10 @@ The audio unit swings open.
 The audio unit swings open.
 
 &gt;</commentary>
-        <children><child nodeId="node-25390"></child>
+        <children><child nodeId="node-26633"></child>
         </children>
     </item>
-    <item nodeId="node-25390">
+    <item nodeId="node-26633">
         <command xml:space="preserve">get power module from audio</command>
         <result xml:space="preserve">(putting the faulty pressure regulator module into your pocket to make room)
 Taken.
@@ -947,10 +990,10 @@ Taken.
 Taken.
 
 &gt;</commentary>
-        <children><child nodeId="node-25391"></child>
+        <children><child nodeId="node-26634"></child>
         </children>
     </item>
-    <item nodeId="node-25391">
+    <item nodeId="node-26634">
         <command xml:space="preserve">put functional power into audio</command>
         <result xml:space="preserve">You put the functional power module into the audio unit.
 
@@ -958,10 +1001,10 @@ Taken.
         <commentary xml:space="preserve">You put the functional power module into the audio unit.
 
 &gt;</commentary>
-        <children><child nodeId="node-25392"></child>
+        <children><child nodeId="node-26635"></child>
         </children>
     </item>
-    <item nodeId="node-25392">
+    <item nodeId="node-26635">
         <command xml:space="preserve">close audio</command>
         <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
 
