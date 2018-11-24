@@ -2,7 +2,7 @@ Version 4 of Plugs and Sockets by Sean Turner begins here.
 
 "System for handling plugs and sockets."
 
-Include Plurality by Emily Short.
+[ tinsel removed plurality November 2018 for work with Green ]
 
 Section 1 - Definitions
 
@@ -83,7 +83,7 @@ To say inserter status of the (item - a thing):
 To say exam receiver status of the (item - a thing):
 	if the count of occupied sockets of the item is 0, say "nothing";
 	else say "[receiver status of the item]";
-	say " plugged into [it-them of item].";
+	say " plugged into it.";
 
 To say receiver status of the (item - a thing):
 	now connect listing is true;
