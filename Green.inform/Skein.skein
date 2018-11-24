@@ -33,7 +33,7 @@ But maybe it isn't hopeless. There must still be other people in other worlds, a
 
 Today is the day.
 
-Green
+Founder's Mercy
 A Space Story by Thomas Insel
 Release 1 / Serial number 181123 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type "about" for credits and more information.
@@ -50,7 +50,12 @@ There is a secured hatch in the floor.
             <child nodeId="node-24068"></child>
             <child nodeId="node-24020"></child>
             <child nodeId="node-24019"></child>
+            <child nodeId="node-24606"></child>
+            <child nodeId="node-25212"></child>
+            <child nodeId="node-25209"></child>
+            <child nodeId="node-24610"></child>
             <child nodeId="node-24112"></child>
+            <child nodeId="node-24751"></child>
             <child nodeId="node-24116"></child>
             <child nodeId="node-24129"></child>
             <child nodeId="node-24121"></child>
@@ -62,10 +67,292 @@ There is a secured hatch in the floor.
             <child nodeId="node-23927"></child>
             <child nodeId="node-24145"></child>
             <child nodeId="node-23845"></child>
+            <child nodeId="node-24713"></child>
             <child nodeId="node-24174"></child>
             <child nodeId="node-24032"></child>
             <child nodeId="node-24123"></child>
+            <child nodeId="node-24764"></child>
         </children>
+    </item>
+    <item nodeId="node-24764">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24765"></child>
+        </children>
+    </item>
+    <item nodeId="node-24765">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a grey cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24766"></child>
+        </children>
+    </item>
+    <item nodeId="node-24766">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">You see nothing special about the organ.
+
+The organ has a grey cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24767"></child>
+        </children>
+    </item>
+    <item nodeId="node-24767">
+        <command xml:space="preserve">scanner, open organ</command>
+        <result xml:space="preserve">Machine is unitary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24768"></child>
+        </children>
+    </item>
+    <item nodeId="node-24768">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. No connection.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24769"></child>
+        </children>
+    </item>
+    <item nodeId="node-24769">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a grey cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24770"></child>
+        </children>
+    </item>
+    <item nodeId="node-24770">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24771"></child>
+        </children>
+    </item>
+    <item nodeId="node-24771">
+        <command xml:space="preserve">open audio</command>
+        <result xml:space="preserve">You will need to use the scanner to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24772"></child>
+        </children>
+    </item>
+    <item nodeId="node-24772">
+        <command xml:space="preserve">scanner, open audio</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24773"></child>
+        </children>
+    </item>
+    <item nodeId="node-24773">
+        <command xml:space="preserve">purloin functional power</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24774"></child>
+        </children>
+    </item>
+    <item nodeId="node-24774">
+        <command xml:space="preserve">purloin all power</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24775"></child>
+        </children>
+    </item>
+    <item nodeId="node-24775">
+        <command xml:space="preserve">x functional power</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24776"></child>
+        </children>
+    </item>
+    <item nodeId="node-24776">
+        <command xml:space="preserve">scan power</command>
+        <result xml:space="preserve">Component is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24777"></child>
+        </children>
+    </item>
+    <item nodeId="node-24777">
+        <command xml:space="preserve">put functional power in audio</command>
+        <result xml:space="preserve">You put the functional power module into the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24778"></child>
+        </children>
+    </item>
+    <item nodeId="node-24778">
+        <command xml:space="preserve">close audio</command>
+        <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24779"></child>
+        </children>
+    </item>
+    <item nodeId="node-24779">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a grey cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24780"></child>
+        </children>
+    </item>
+    <item nodeId="node-24780">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. Output connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24781"></child>
+        </children>
+    </item>
+    <item nodeId="node-24781">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine function. Input connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24782"></child>
+        </children>
+    </item>
+    <item nodeId="node-24782">
+        <command xml:space="preserve">play organ</command>
+        <result xml:space="preserve">You play a hymn.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24783"></child>
+        </children>
+    </item>
+    <item nodeId="node-24783">
+        <command xml:space="preserve">disconnect usb cable</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24784"></child>
+        </children>
+    </item>
+    <item nodeId="node-24784">
+        <command xml:space="preserve">remove usb cable</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24785"></child>
+        </children>
+    </item>
+    <item nodeId="node-24785">
+        <command xml:space="preserve">remove</command>
+        <result xml:space="preserve">(the green jumpsuit)
+Your nudity is pure and innocent, but still a little uncomfortable ... and cold.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25038"></child>
+        </children>
+    </item>
+    <item nodeId="node-25038">
+        <command xml:space="preserve">get usb cable</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25039"></child>
+        </children>
+    </item>
+    <item nodeId="node-25039">
+        <command xml:space="preserve">x usb cable</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25040"></child>
+        </children>
+    </item>
+    <item nodeId="node-25040">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a grey cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25041"></child>
+        </children>
+    </item>
+    <item nodeId="node-25041">
+        <command xml:space="preserve">disconnect grey cable</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25042"></child>
+        </children>
+    </item>
+    <item nodeId="node-25042">
+        <command xml:space="preserve">remove grey cable</command>
+        <result xml:space="preserve">The grey cable is plugged into more than one thing.
+
+[Try "unplug grey cable from SOMETHING".]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25043"></child>
+        </children>
+    </item>
+    <item nodeId="node-25043">
+        <command xml:space="preserve">x grey</command>
+        <result xml:space="preserve">It's a USB 7.2 Type-F cable.
+
+It is plugged into the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-24123">
         <command xml:space="preserve">x church</command>
@@ -569,6 +856,345 @@ The cover art is adapted from Figure 1.1 from NASA SP-413, Space Settlements: A 
 Please send your feedback, bug reports, and requests for help to tinsel@tinsel.org. You can always find the current version of this game at http://tinsel.org/IF/ .
 
 This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license (https://creativecommons.org/licenses/by/4.0/).
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24713">
+        <command xml:space="preserve">play me</command>
+        <result xml:space="preserve">You don't know how to play you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24730"></child>
+            <child nodeId="node-24714"></child>
+        </children>
+    </item>
+    <item nodeId="node-24714">
+        <command xml:space="preserve">play</command>
+        <result xml:space="preserve">What do you want to play?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24715"></child>
+        </children>
+    </item>
+    <item nodeId="node-24715">
+        <command xml:space="preserve">me</command>
+        <result xml:space="preserve">You don't know how to play that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24716"></child>
+        </children>
+    </item>
+    <item nodeId="node-24716">
+        <command xml:space="preserve">analyze me</command>
+        <result xml:space="preserve">examining yourself:
+As virtuous as ever.
+
+looking under yourself:
+You find nothing of interest.
+
+searching yourself:
+You find nothing of interest.
+
+listening to yourself:
+You hear nothing unexpected.
+
+smelling yourself:
+You smell nothing unexpected.
+
+attacking yourself:
+Imperfect vessel that you are, that is not the answer.
+
+buying yourself:
+Nothing is on sale.
+
+climbing yourself:
+Little is to be achieved by that.
+
+pulling yourself:
+You might not like that.
+
+pushing yourself:
+You might not like that.
+
+turning yourself:
+You might not like that.
+
+pushing yourself to outside:
+You cannot be pushed from place to place.
+
+opening yourself:
+You aren't something you can open.
+
+entering yourself:
+You're not something you can enter.
+
+getting off yourself:
+But you aren't on yourself at the moment.
+
+closing yourself:
+You aren't something you can close.
+
+taking yourself:
+You are always self-possessed.
+
+switching on yourself:
+You aren't something you can switch.
+
+switching off yourself:
+You aren't something you can switch.
+
+wearing yourself:
+(first taking yourself)
+You are always self-possessed.
+
+taking off yourself:
+You aren't wearing yourself.
+
+throwing the scanner at yourself:
+You lack the nerve when it comes to the crucial moment.
+
+showing the scanner to yourself:
+The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+giving the scanner to yourself:
+You can't give the scanner to yourself.
+
+waking yourself:
+That seems unnecessary.
+
+kissing yourself:
+You don't get much from that.
+
+touching yourself:
+You achieve nothing by this.
+
+rubbing yourself:
+You rub yourself.
+
+waving yourself:
+But you aren't holding you.
+
+squeezing yourself:
+You might not like that.
+
+burning yourself:
+There is no open flame on the station.
+
+cutting yourself:
+Imperfect vessel that you are, that is not the answer.
+
+tying yourself to the floor hatch:
+You would achieve nothing by this.
+
+swinging yourself:
+There's nothing sensible to swing here.
+
+tasting yourself:
+You taste nothing unexpected.
+
+drinking yourself:
+There's nothing suitable to drink here.
+
+eating yourself:
+You're plainly inedible.
+
+dropping yourself:
+You lack the dexterity.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24721"></child>
+        </children>
+    </item>
+    <item nodeId="node-24721">
+        <command xml:space="preserve"> play e</command>
+        <result xml:space="preserve">You must name something more substantial.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24722"></child>
+        </children>
+    </item>
+    <item nodeId="node-24722">
+        <command xml:space="preserve">play me</command>
+        <result xml:space="preserve">You don't know how to play that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24723"></child>
+        </children>
+    </item>
+    <item nodeId="node-24723">
+        <command xml:space="preserve">gonear trees</command>
+        <result xml:space="preserve">Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24724"></child>
+        </children>
+    </item>
+    <item nodeId="node-24724">
+        <command xml:space="preserve">play me</command>
+        <result xml:space="preserve">You don't know how to play that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24725"></child>
+        </children>
+    </item>
+    <item nodeId="node-24725">
+        <command xml:space="preserve">play trees</command>
+        <result xml:space="preserve">You don't know how to play that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24726"></child>
+        </children>
+    </item>
+    <item nodeId="node-24726">
+        <command xml:space="preserve">x trees</command>
+        <result xml:space="preserve">The community grew trees for tradition, or maybe they help with air processing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24727"></child>
+        </children>
+    </item>
+    <item nodeId="node-24727">
+        <command xml:space="preserve">showme trees</command>
+        <result xml:space="preserve">some trees - forest
+location: in Sector 3: Forest
+plural-named, improper-named; unlit, inedible, fixed in place, scenery
+list grouping key: none
+printed name: "some trees"
+printed plural name: "forests"
+indefinite article: none
+description: "The community grew trees for tradition, or maybe they help with air processing."
+initial appearance: none
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24728"></child>
+        </children>
+    </item>
+    <item nodeId="node-24728">
+        <command xml:space="preserve">play trees</command>
+        <result xml:space="preserve">You don't know how to play that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24730">
+        <command xml:space="preserve">gonear trees</command>
+        <result xml:space="preserve">Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24731"></child>
+        </children>
+    </item>
+    <item nodeId="node-24731">
+        <command xml:space="preserve">play trees</command>
+        <result xml:space="preserve">You don't know how to play those.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24732"></child>
+        </children>
+    </item>
+    <item nodeId="node-24732">
+        <command xml:space="preserve">x trees</command>
+        <result xml:space="preserve">The community grew trees for tradition, or maybe they help with air processing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24733"></child>
+        </children>
+    </item>
+    <item nodeId="node-24733">
+        <command xml:space="preserve">pronouns</command>
+        <result xml:space="preserve">At the moment, "it" means the floor hatch, "him" is unset, "her" is unset, and "them" means the some trees.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24734"></child>
+        </children>
+    </item>
+    <item nodeId="node-24734">
+        <command xml:space="preserve">play those</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24735"></child>
+        </children>
+    </item>
+    <item nodeId="node-24735">
+        <command xml:space="preserve">play that</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24736"></child>
+        </children>
+    </item>
+    <item nodeId="node-24736">
+        <command xml:space="preserve">play trees</command>
+        <result xml:space="preserve">You don't know how to play those.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24745"></child>
+        </children>
+    </item>
+    <item nodeId="node-24745">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24746"></child>
+        </children>
+    </item>
+    <item nodeId="node-24746">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24747"></child>
+        </children>
+    </item>
+    <item nodeId="node-24747">
+        <command xml:space="preserve">play forest</command>
+        <result xml:space="preserve">You don't know how to play those.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24748"></child>
+        </children>
+    </item>
+    <item nodeId="node-24748">
+        <command xml:space="preserve">play hub</command>
+        <result xml:space="preserve">You are too far away to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24749"></child>
+        </children>
+    </item>
+    <item nodeId="node-24749">
+        <command xml:space="preserve">scan hub</command>
+        <result xml:space="preserve">No modular technology detected.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1626,14 +2252,28 @@ Your home is here among the crops. You can walk spinward or antispinward.
 Sector 3: Forest
 Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
 
+You can see the organ, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-24064"></child>
+        <children><child nodeId="node-25271"></child>
+            <child nodeId="node-24064"></child>
         </children>
     </item>
     <item nodeId="node-24064">
         <command xml:space="preserve">look under trees</command>
         <result xml:space="preserve">Only the house and church.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25271">
+        <command xml:space="preserve">go church</command>
+        <result xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against the far wall.
+
+On the altar is The Founder's Testament.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1674,7 +2314,105 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-24075"></child>
+            <child nodeId="node-25274"></child>
+            <child nodeId="node-25278"></child>
         </children>
+    </item>
+    <item nodeId="node-25278">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">You can enter the church or the house.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25279"></child>
+        </children>
+    </item>
+    <item nodeId="node-25279">
+        <command xml:space="preserve">enter church</command>
+        <result xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stand against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see the audio unit and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25280"></child>
+        </children>
+    </item>
+    <item nodeId="node-25280">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">It's really just a keyboard. It has a single socket you would use to connect it to an audio unit.
+
+The organ has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25274">
+        <command xml:space="preserve">go church</command>
+        <result xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see the audio unit and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25284"></child>
+            <child nodeId="node-25275"></child>
+            <child nodeId="node-25289"></child>
+        </children>
+    </item>
+    <item nodeId="node-25289">
+        <command xml:space="preserve">x testament</command>
+        <result xml:space="preserve">The Founder's Testament tells how your people left Old Earth and first settled the station. You know the story by heart, and have already derived whatever comfort you can from this book.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25290"></child>
+        </children>
+    </item>
+    <item nodeId="node-25290">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see the audio unit and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25275">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">It's really just a keyboard. It has a single socket you would use to connect it to an audio unit.
+
+The organ has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25284">
+        <command xml:space="preserve">x church</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25285"></child>
+        </children>
+    </item>
+    <item nodeId="node-25285">
+        <command xml:space="preserve">x altar</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-24075">
         <command xml:space="preserve">asw</command>
@@ -3001,6 +3739,739 @@ initial appearance: none
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-24751">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25045"></child>
+            <child nodeId="node-25053"></child>
+            <child nodeId="node-25196"></child>
+            <child nodeId="node-25208"></child>
+            <child nodeId="node-25260"></child>
+            <child nodeId="node-25200"></child>
+            <child nodeId="node-24752"></child>
+        </children>
+    </item>
+    <item nodeId="node-24752">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">It's really just a keyboard. It has a single socket you would use to connect it to an audio unit.
+
+The organ has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25062"></child>
+            <child nodeId="node-24753"></child>
+        </children>
+    </item>
+    <item nodeId="node-24753">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. No connection.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24754"></child>
+        </children>
+    </item>
+    <item nodeId="node-24754">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The portable audio unit is a standardized machine component which includes both speaker/amplifier and microphone functionality. It has a single socket you would use to connect it to another device.
+
+There is space for one more module.
+
+The audio unit has a grey cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24755"></child>
+        </children>
+    </item>
+    <item nodeId="node-24755">
+        <command xml:space="preserve">x communications</command>
+        <result xml:space="preserve">You see nothing special about the communications unit.
+
+There is space for one hundred more modules.
+
+The communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24756"></child>
+        </children>
+    </item>
+    <item nodeId="node-24756">
+        <command xml:space="preserve">gonear learnong</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24757"></child>
+        </children>
+    </item>
+    <item nodeId="node-24757">
+        <command xml:space="preserve">gonear learning</command>
+        <result xml:space="preserve">School
+One broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24758"></child>
+        </children>
+    </item>
+    <item nodeId="node-24758">
+        <command xml:space="preserve">x learning</command>
+        <result xml:space="preserve">This last learning machine broke when you were maybe three thousand days old.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24759"></child>
+        </children>
+    </item>
+    <item nodeId="node-24759">
+        <command xml:space="preserve">scanner, open learning</command>
+        <result xml:space="preserve">Opening.
+
+The learning machine swings open.
+
+[Your score has just gone up by five points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24760"></child>
+        </children>
+    </item>
+    <item nodeId="node-24760">
+        <command xml:space="preserve">x learning</command>
+        <result xml:space="preserve">This last learning machine broke when you were maybe three thousand days old.
+
+In the learning machine are a power module and an instruction module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24761"></child>
+        </children>
+    </item>
+    <item nodeId="node-24761">
+        <command xml:space="preserve">get all</command>
+        <result xml:space="preserve">power module: Taken.
+instruction module: Taken.
+clean eraser: (putting the scanner into your pocket to make room)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24762"></child>
+        </children>
+    </item>
+    <item nodeId="node-24762">
+        <command xml:space="preserve">close learning</command>
+        <result xml:space="preserve">You close the learning machine and it seals without any trace of a seam.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24763"></child>
+        </children>
+    </item>
+    <item nodeId="node-24763">
+        <command xml:space="preserve">x learning</command>
+        <result xml:space="preserve">This last learning machine broke when you were maybe three thousand days old.
+
+There is space for two more modules.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25062">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25063"></child>
+        </children>
+    </item>
+    <item nodeId="node-25063">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. No output available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25064"></child>
+        </children>
+    </item>
+    <item nodeId="node-25064">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">It's really just a keyboard. It has a single socket you would use to connect it to an audio unit.
+
+The organ has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25065"></child>
+        </children>
+    </item>
+    <item nodeId="node-25065">
+        <command xml:space="preserve">x socket</command>
+        <result xml:space="preserve">It is a female standard connector of the organ. It has the gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25072"></child>
+        </children>
+    </item>
+    <item nodeId="node-25072">
+        <command xml:space="preserve">x keyboard</command>
+        <result xml:space="preserve">It's really just a keyboard. It has a single socket you would use to connect it to an audio unit.
+
+The organ has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25073"></child>
+        </children>
+    </item>
+    <item nodeId="node-25073">
+        <command xml:space="preserve">play organ</command>
+        <result xml:space="preserve">Nothing happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25074"></child>
+        </children>
+    </item>
+    <item nodeId="node-25074">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">It's really just a keyboard. It has a single socket you would use to connect it to an audio unit.
+
+The organ has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25075"></child>
+        </children>
+    </item>
+    <item nodeId="node-25075">
+        <command xml:space="preserve">x organ's socket</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25076"></child>
+        </children>
+    </item>
+    <item nodeId="node-25076">
+        <command xml:space="preserve">x socket</command>
+        <result xml:space="preserve">It is a female standard connector of the organ. It has the gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25077"></child>
+        </children>
+    </item>
+    <item nodeId="node-25077">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25078"></child>
+        </children>
+    </item>
+    <item nodeId="node-25078">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The portable audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device.
+
+The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25079"></child>
+        </children>
+    </item>
+    <item nodeId="node-25079">
+        <command xml:space="preserve">x communications</command>
+        <result xml:space="preserve">The communications unit is attached to the wall and has a single socket you would use to conenct it to an audio unit.
+
+The communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25080"></child>
+        </children>
+    </item>
+    <item nodeId="node-25080">
+        <command xml:space="preserve">x socet</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25081"></child>
+        </children>
+    </item>
+    <item nodeId="node-25081">
+        <command xml:space="preserve">x socket</command>
+        <result xml:space="preserve">It is a female standard connector of the organ. It has the gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25098"></child>
+        </children>
+    </item>
+    <item nodeId="node-25098">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25099"></child>
+        </children>
+    </item>
+    <item nodeId="node-25099">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25100"></child>
+        </children>
+    </item>
+    <item nodeId="node-25100">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">It's really just a keyboard. It has a single socket you would use to connect it to an audio unit.
+
+The organ has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25101"></child>
+        </children>
+    </item>
+    <item nodeId="node-25101">
+        <command xml:space="preserve">x sckt</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25102"></child>
+        </children>
+    </item>
+    <item nodeId="node-25102">
+        <command xml:space="preserve">x socket</command>
+        <result xml:space="preserve">It is a female standard connector of the organ. It has the gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25103"></child>
+        </children>
+    </item>
+    <item nodeId="node-25103">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">The communications unit is attached to the wall and has a single socket you would use to conenct it to an audio unit.
+
+The communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25104"></child>
+        </children>
+    </item>
+    <item nodeId="node-25104">
+        <command xml:space="preserve">x socket</command>
+        <result xml:space="preserve">It is a female standard connector of the organ. It has the gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25105"></child>
+        </children>
+    </item>
+    <item nodeId="node-25105">
+        <command xml:space="preserve">x communications unit socket</command>
+        <result xml:space="preserve">I only understood you as far as wanting to examine the communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25106"></child>
+        </children>
+    </item>
+    <item nodeId="node-25106">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Supply Vault - room
+    the ceiling hatch - floor hatch
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+    crate of machine parts
+    pair of gravity boots
+    organ - machine
+        usb socket (part of organ) - usb socket
+    communications unit - machine
+        usb socket (part of communications unit) - usb socket
+    audio unit - machine
+        usb socket (part of audio unit) - usb socket
+    gray cable
+        usb plug (part of gray cable) - usb plug
+        usb plug (part of gray cable) - usb plug
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25107"></child>
+        </children>
+    </item>
+    <item nodeId="node-25107">
+        <command xml:space="preserve">x usb socket in the organ</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25108"></child>
+        </children>
+    </item>
+    <item nodeId="node-25108">
+        <command xml:space="preserve">x usb socket in the communications</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25163"></child>
+        </children>
+    </item>
+    <item nodeId="node-25163">
+        <command xml:space="preserve">x audio unit</command>
+        <result xml:space="preserve">The portable audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device.
+
+The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25164"></child>
+        </children>
+    </item>
+    <item nodeId="node-25164">
+        <command xml:space="preserve">get it</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25194"></child>
+        </children>
+    </item>
+    <item nodeId="node-25194">
+        <command xml:space="preserve">version</command>
+        <result xml:space="preserve">Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181123 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits and more information.
+Identification number: //BCC61E7F-CE8E-4C25-9E9D-5550D1138D8C//
+Interpreter version 0.5.2 / VM 3.1.2 / Library serial number 080126
+Standard Rules version 3/120430 by Graham Nelson
+Unicode Character Names by Graham Nelson
+Exit Lister version 11 by Eric Eve
+Plugs and Sockets version 4 by Sean Turner
+Object Response Tests version 7 by Juhana Leinonen
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25200">
+        <command xml:space="preserve">x cable</command>
+        <result xml:space="preserve">It's a USB 7.2 Type-F cable.
+
+It is plugged into the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25201"></child>
+        </children>
+    </item>
+    <item nodeId="node-25201">
+        <command xml:space="preserve">unplug cable from orga</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25202"></child>
+        </children>
+    </item>
+    <item nodeId="node-25202">
+        <command xml:space="preserve">unplug cable from orgab</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25203"></child>
+        </children>
+    </item>
+    <item nodeId="node-25203">
+        <command xml:space="preserve">unplug cable from organ</command>
+        <result xml:space="preserve">You unplug the gray cable from the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25204"></child>
+        </children>
+    </item>
+    <item nodeId="node-25204">
+        <command xml:space="preserve">plug cable into comms</command>
+        <result xml:space="preserve">You plug the gray cable into the communications unit.
+
+You call for help.
+
+
+
+    *** You win. ***
+
+
+In that game you scored 10 out of a possible 50, in 4 turns.
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25205"></child>
+        </children>
+    </item>
+    <item nodeId="node-25205">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Supply Vault
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25206"></child>
+        </children>
+    </item>
+    <item nodeId="node-25206">
+        <command xml:space="preserve">scan comms</command>
+        <result xml:space="preserve">Machine function. No output available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25260">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device.
+
+The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25261"></child>
+        </children>
+    </item>
+    <item nodeId="node-25261">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device.
+
+The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25262"></child>
+        </children>
+    </item>
+    <item nodeId="node-25262">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25263"></child>
+        </children>
+    </item>
+    <item nodeId="node-25263">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25264"></child>
+        </children>
+    </item>
+    <item nodeId="node-25264">
+        <command xml:space="preserve">scan communications</command>
+        <result xml:space="preserve">Machine functional. No output available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25265"></child>
+        </children>
+    </item>
+    <item nodeId="node-25265">
+        <command xml:space="preserve">san organ</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25266"></child>
+        </children>
+    </item>
+    <item nodeId="node-25266">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. No output available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25208">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Home
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25196">
+        <command xml:space="preserve">scanner, open audio</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25197"></child>
+        </children>
+    </item>
+    <item nodeId="node-25197">
+        <command xml:space="preserve">purloin power units</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25198"></child>
+        </children>
+    </item>
+    <item nodeId="node-25198">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The portable audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device.
+
+There is space for one more module.
+
+The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25053">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. No output available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25054"></child>
+        </children>
+    </item>
+    <item nodeId="node-25054">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25055"></child>
+        </children>
+    </item>
+    <item nodeId="node-25055">
+        <command xml:space="preserve">scan communications</command>
+        <result xml:space="preserve">Machine function. No output available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25056"></child>
+        </children>
+    </item>
+    <item nodeId="node-25056">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">You see nothing special about the organ.
+
+The organ has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25057"></child>
+        </children>
+    </item>
+    <item nodeId="node-25057">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The portable audio unit is a standardized machine component which includes both speaker/amplifier and microphone functionality. It has a single socket you would use to connect it to another device.
+
+The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25058"></child>
+        </children>
+    </item>
+    <item nodeId="node-25058">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25059"></child>
+        </children>
+    </item>
+    <item nodeId="node-25059">
+        <command xml:space="preserve">x communications</command>
+        <result xml:space="preserve">You see nothing special about the communications unit.
+
+The communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25045">
+        <command xml:space="preserve">play organ</command>
+        <result xml:space="preserve">Nothing happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25046"></child>
+            <child nodeId="node-25051"></child>
+        </children>
+    </item>
+    <item nodeId="node-25051">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. No connection.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25046">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-24112">
         <command xml:space="preserve">gonear church</command>
         <result xml:space="preserve">(Church)
@@ -3037,6 +4508,705 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
     <item nodeId="node-24115">
         <command xml:space="preserve">drop church</command>
         <result xml:space="preserve">the church is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24610">
+        <command xml:space="preserve">gonear boots</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a grey cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24611"></child>
+        </children>
+    </item>
+    <item nodeId="node-24611">
+        <command xml:space="preserve">scan audio unit</command>
+        <result xml:space="preserve">Machine failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24612"></child>
+            <child nodeId="node-24616"></child>
+        </children>
+    </item>
+    <item nodeId="node-24616">
+        <command xml:space="preserve">scanner, open audio unit</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24617"></child>
+        </children>
+    </item>
+    <item nodeId="node-24617">
+        <command xml:space="preserve">purloin all power units</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24618"></child>
+        </children>
+    </item>
+    <item nodeId="node-24618">
+        <command xml:space="preserve">purloin all power modules</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24619"></child>
+        </children>
+    </item>
+    <item nodeId="node-24619">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  two power modules
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24620"></child>
+        </children>
+    </item>
+    <item nodeId="node-24620">
+        <command xml:space="preserve">scan power module</command>
+        <result xml:space="preserve">Component is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24621"></child>
+        </children>
+    </item>
+    <item nodeId="node-24621">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">Which do you mean, the functional power module or the unscanned power module?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24622"></child>
+        </children>
+    </item>
+    <item nodeId="node-24622">
+        <command xml:space="preserve">unscanned</command>
+        <result xml:space="preserve">Component is faulty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24623"></child>
+        </children>
+    </item>
+    <item nodeId="node-24623">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit (empty), a grey cable (plugged into the organ and the audio unit), and a meter here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24624"></child>
+        </children>
+    </item>
+    <item nodeId="node-24624">
+        <command xml:space="preserve">x audio module</command>
+        <result xml:space="preserve">I only understood you as far as wanting to examine the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24625"></child>
+        </children>
+    </item>
+    <item nodeId="node-24625">
+        <command xml:space="preserve">x audio unit</command>
+        <result xml:space="preserve">The portable audio unit is a standardized machine component which includes both speaker/amplifier and microphone functionality, although only the first is used with the organ.
+
+There is space for one more module.
+
+The audio unit has a grey cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24638"></child>
+        </children>
+    </item>
+    <item nodeId="node-24638">
+        <command xml:space="preserve">get audio unit</command>
+        <result xml:space="preserve">(putting the scanner into your pocket to make room)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24652"></child>
+        </children>
+    </item>
+    <item nodeId="node-24652">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  the audio unit (open but empty)
+  a functional power module
+  a faulty power module
+  a green jumpsuit (being worn)
+
+Your jumpsuit pocket contains:
+  a scanner
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24653"></child>
+        </children>
+    </item>
+    <item nodeId="node-24653">
+        <command xml:space="preserve">x audio unit</command>
+        <result xml:space="preserve">The portable audio unit is a standardized machine component which includes both speaker/amplifier and microphone functionality, although only the first is used with the organ.
+
+There is space for one more module.
+
+The audio unit has a grey cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24654"></child>
+        </children>
+    </item>
+    <item nodeId="node-24654">
+        <command xml:space="preserve">put functional power in audio unit</command>
+        <result xml:space="preserve">You put the functional power module into the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24655"></child>
+        </children>
+    </item>
+    <item nodeId="node-24655">
+        <command xml:space="preserve">close audio</command>
+        <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24656"></child>
+        </children>
+    </item>
+    <item nodeId="node-24656">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The portable audio unit is a standardized machine component which includes both speaker/amplifier and microphone functionality, although only the first is used with the organ.
+
+The audio unit has a grey cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24657"></child>
+        </children>
+    </item>
+    <item nodeId="node-24657">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine function. Input connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24658"></child>
+        </children>
+    </item>
+    <item nodeId="node-24658">
+        <command xml:space="preserve">showme audio</command>
+        <result xml:space="preserve">audio unit - machine
+    USB-socket (part of audio unit) - USB-socket
+    functional power module - power module
+location: carried by yourself in Supply Vault
+singular-named, improper-named; unlit, inedible, portable, handled; opaque, closed, openable, unlocked; list grouping key: none
+printed name: "audio unit"
+printed plural name: "machines"
+indefinite article: "the"
+description: "The portable audio unit is a standardized machine component which includes both speaker/amplifier and microphone functionality, although only the first is used with the organ."
+initial appearance: none
+carrying capacity: 1
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24679"></child>
+        </children>
+    </item>
+    <item nodeId="node-24679">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. Output connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24701"></child>
+        </children>
+    </item>
+    <item nodeId="node-24701">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, a grey cable (plugged into the organ and the audio unit), and a meter here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24702"></child>
+        </children>
+    </item>
+    <item nodeId="node-24702">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. Output connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24703"></child>
+        </children>
+    </item>
+    <item nodeId="node-24703">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine function. Input connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24704"></child>
+        </children>
+    </item>
+    <item nodeId="node-24704">
+        <command xml:space="preserve">unplug cable from organ</command>
+        <result xml:space="preserve">You unplug the grey cable from the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24705"></child>
+        </children>
+    </item>
+    <item nodeId="node-24705">
+        <command xml:space="preserve">plug cable into communications</command>
+        <result xml:space="preserve">You plug the grey cable into the communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24706"></child>
+        </children>
+    </item>
+    <item nodeId="node-24706">
+        <command xml:space="preserve">scan organ</command>
+        <result xml:space="preserve">Machine functional. No connection.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24707"></child>
+        </children>
+    </item>
+    <item nodeId="node-24707">
+        <command xml:space="preserve">scan communications</command>
+        <result xml:space="preserve">Machine function. Input and output connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24708"></child>
+        </children>
+    </item>
+    <item nodeId="node-24708">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine function. Input and output connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24709"></child>
+        </children>
+    </item>
+    <item nodeId="node-24709">
+        <command xml:space="preserve">scan meter</command>
+        <result xml:space="preserve">No modular technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24710"></child>
+        </children>
+    </item>
+    <item nodeId="node-24710">
+        <command xml:space="preserve">x meter</command>
+        <result xml:space="preserve">Audio/Comms!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24711"></child>
+        </children>
+    </item>
+    <item nodeId="node-24711">
+        <command xml:space="preserve">scan cable</command>
+        <result xml:space="preserve">No modular technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24712"></child>
+        </children>
+    </item>
+    <item nodeId="node-24712">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, a grey cable (plugged into the communications unit and the audio unit), and a meter here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24612">
+        <command xml:space="preserve">scan communications unit</command>
+        <result xml:space="preserve">No modular technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24613"></child>
+        </children>
+    </item>
+    <item nodeId="node-24613">
+        <command xml:space="preserve">scanner, open audio unit</command>
+        <result xml:space="preserve">Machine is unitary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25209">
+        <command xml:space="preserve">gonear audio unit</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25210"></child>
+        </children>
+    </item>
+    <item nodeId="node-25210">
+        <command xml:space="preserve">showme audio</command>
+        <result xml:space="preserve">audio unit - machine
+    usb socket (part of audio unit) - usb socket
+    power module - power module
+location: in Supply Vault
+singular-named, improper-named; unlit, inedible, portable; opaque, closed, openable, unlocked; list grouping key: none
+printed name: "audio unit"
+printed plural name: "machines"
+indefinite article: "the"
+description: "The portable audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device."
+initial appearance: none
+carrying capacity: 1
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25211"></child>
+        </children>
+    </item>
+    <item nodeId="node-25211">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-25212">
+        <command xml:space="preserve">gonear audio</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25213"></child>
+        </children>
+    </item>
+    <item nodeId="node-25213">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25214"></child>
+        </children>
+    </item>
+    <item nodeId="node-25214">
+        <command xml:space="preserve">scan comms</command>
+        <result xml:space="preserve">Machine functional. No output available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25215"></child>
+        </children>
+    </item>
+    <item nodeId="node-25215">
+        <command xml:space="preserve">remove cable from organ</command>
+        <result xml:space="preserve">You unplug the gray cable from the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25216"></child>
+        </children>
+    </item>
+    <item nodeId="node-25216">
+        <command xml:space="preserve">plug cable into comms</command>
+        <result xml:space="preserve">You plug the gray cable into the communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25217"></child>
+        </children>
+    </item>
+    <item nodeId="node-25217">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">The communications unit is attached to the wall and has a single socket you would use to connect it to an audio unit.
+
+The communications unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25218"></child>
+        </children>
+    </item>
+    <item nodeId="node-25218">
+        <command xml:space="preserve">scan comms</command>
+        <result xml:space="preserve">Machine functional. Input and output connected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25219"></child>
+        </children>
+    </item>
+    <item nodeId="node-25219">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25220"></child>
+        </children>
+    </item>
+    <item nodeId="node-25220">
+        <command xml:space="preserve">open audio</command>
+        <result xml:space="preserve">You will need to use the scanner to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25221"></child>
+        </children>
+    </item>
+    <item nodeId="node-25221">
+        <command xml:space="preserve">scanner, open audio</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25222"></child>
+        </children>
+    </item>
+    <item nodeId="node-25222">
+        <command xml:space="preserve">scan audio</command>
+        <result xml:space="preserve">Machine failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25223"></child>
+        </children>
+    </item>
+    <item nodeId="node-25223">
+        <command xml:space="preserve">x audio</command>
+        <result xml:space="preserve">The portable audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device.
+
+In the audio unit is a power module.
+
+The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25224"></child>
+        </children>
+    </item>
+    <item nodeId="node-25224">
+        <command xml:space="preserve">get power module</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25225"></child>
+        </children>
+    </item>
+    <item nodeId="node-25225">
+        <command xml:space="preserve">scan it</command>
+        <result xml:space="preserve">Component is faulty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25226"></child>
+        </children>
+    </item>
+    <item nodeId="node-25226">
+        <command xml:space="preserve">purloin unscanned audio modules</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25227"></child>
+        </children>
+    </item>
+    <item nodeId="node-25227">
+        <command xml:space="preserve">purloin unscanned power modules</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25228"></child>
+        </children>
+    </item>
+    <item nodeId="node-25228">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  two unscanned power modules
+  a faulty power module
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25229"></child>
+        </children>
+    </item>
+    <item nodeId="node-25229">
+        <command xml:space="preserve">scan unscanned module</command>
+        <result xml:space="preserve">Component is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25230"></child>
+        </children>
+    </item>
+    <item nodeId="node-25230">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">Component is faulty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25231"></child>
+        </children>
+    </item>
+    <item nodeId="node-25231">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25232"></child>
+        </children>
+    </item>
+    <item nodeId="node-25232">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit (empty), and a gray cable (plugged into the communications unit and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25233"></child>
+        </children>
+    </item>
+    <item nodeId="node-25233">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a functional power module
+  two faulty power modules
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25234"></child>
+        </children>
+    </item>
+    <item nodeId="node-25234">
+        <command xml:space="preserve">put functional power module in audio unit</command>
+        <result xml:space="preserve">You put the functional power module into the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25258"></child>
+        </children>
+    </item>
+    <item nodeId="node-25258">
+        <command xml:space="preserve">close audio unit</command>
+        <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+
+You call for help.
+
+
+
+    *** You win. ***
+
+
+In that game you scored 10 out of a possible 50, in 21 turns.
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-24606">
+        <command xml:space="preserve">goear boots</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24607"></child>
+        </children>
+    </item>
+    <item nodeId="node-24607">
+        <command xml:space="preserve">gonear boots</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots, the organ, the communications unit, the audio unit, a grey cable (plugged into the organ and the audio unit), and a meter here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24608"></child>
+        </children>
+    </item>
+    <item nodeId="node-24608">
+        <command xml:space="preserve">x organ</command>
+        <result xml:space="preserve">You see nothing special about the organ.
+
+The organ has a grey cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-24609"></child>
+        </children>
+    </item>
+    <item nodeId="node-24609">
+        <command xml:space="preserve">play organ</command>
+        <result xml:space="preserve">That's not a verb I recognize.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -4408,7 +6578,7 @@ A deep pond is used as part of the water filtration system and for raising fish.
 You scramble down through the hatch and close it behind yourself.
 
 Cellar
-Used for storage and as a decompression shelter.
+A decompression shelter and space for storage.
 
 There is a secured hatch in the ceiling.
 
@@ -4419,7 +6589,7 @@ There is an emergency mask hanging on the wall.
 You scramble down through the hatch and close it behind yourself.
 
 Cellar
-Used for storage and as a decompression shelter.
+A decompression shelter and space for storage.
 
 There is a secured hatch in the ceiling.
 
@@ -4594,7 +6764,7 @@ The school house is nestled among the trees. A pylon stretches up from the same 
         <result xml:space="preserve">You walk a little ways to the next sector.
 
 Sector 6: Hydroponics
-Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
 
 There is a secured hatch in the ground.
 
@@ -4602,7 +6772,7 @@ There is a secured hatch in the ground.
         <commentary xml:space="preserve">You walk a little ways to the next sector.
 
 Sector 6: Hydroponics
-Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
 
 There is a secured hatch in the ground.
 
@@ -4639,11 +6809,11 @@ You can also see some pair of gravity boots here.
     </item>
     <item nodeId="node-21871">
         <command xml:space="preserve">search crate</command>
-        <result xml:space="preserve">You find a pressure regulator module.
+        <result xml:space="preserve">You find an instruction module.
 (putting the dusty eraser into your pocket to make room)
 
 &gt;</result>
-        <commentary xml:space="preserve">You find a pressure regulator module.
+        <commentary xml:space="preserve">You find an instruction module.
 (putting the dusty eraser into your pocket to make room)
 
 &gt;</commentary>
@@ -4652,11 +6822,11 @@ You can also see some pair of gravity boots here.
     </item>
     <item nodeId="node-21872">
         <command xml:space="preserve">g</command>
-        <result xml:space="preserve">You find an instruction module.
+        <result xml:space="preserve">You find a pressure regulator module.
 (putting the power module into your pocket to make room)
 
 &gt;</result>
-        <commentary xml:space="preserve">You find an instruction module.
+        <commentary xml:space="preserve">You find a pressure regulator module.
 (putting the power module into your pocket to make room)
 
 &gt;</commentary>
@@ -4679,13 +6849,13 @@ Taken.
     <item nodeId="node-21874">
         <command xml:space="preserve">hit eraser</command>
         <result xml:space="preserve">(first taking the dusty eraser)
-(putting the pressure regulator module into your pocket to make room)
-You fill the room with a cloud of dust and you can now see a laser beam scanning across the hatch.
+(putting the instruction module into your pocket to make room)
+You fill the vault with a cloud of dust and you can now see a laser beam scanning across the hatch.
 
 &gt;</result>
         <commentary xml:space="preserve">(first taking the dusty eraser)
-(putting the pressure regulator module into your pocket to make room)
-You fill the room with a cloud of dust and you can now see a laser beam scanning across the hatch.
+(putting the instruction module into your pocket to make room)
+You fill the vault with a cloud of dust and you can now see a laser beam scanning across the hatch.
 
 &gt;</commentary>
         <children><child nodeId="node-21876"></child>
@@ -4699,7 +6869,7 @@ You fill the room with a cloud of dust and you can now see a laser beam scanning
 You pull yourself up through the hatch and close it behind yourself.
 
 Sector 6: Hydroponics
-Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
 
 There is a secured hatch in the ground.
 
@@ -4712,7 +6882,7 @@ There is a secured hatch in the ground.
 You pull yourself up through the hatch and close it behind yourself.
 
 Sector 6: Hydroponics
-Your people prefered to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
 
 There is a secured hatch in the ground.
 
@@ -4855,13 +7025,13 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
         <result xml:space="preserve">You walk a little ways to the next sector.
 
 Sector 2: Aquaculture
-A deep pond serves as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
 
 &gt;</result>
         <commentary xml:space="preserve">You walk a little ways to the next sector.
 
 Sector 2: Aquaculture
-A deep pond serves as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
 
 &gt;</commentary>
         <children><child nodeId="node-21886"></child>
@@ -4952,12 +7122,12 @@ The atmosphere pump swings open.
     <item nodeId="node-21890">
         <command xml:space="preserve">get all from pump</command>
         <result xml:space="preserve">power module: Taken.
-pressure regulator module: (putting the instruction module into your pocket to make room)
+pressure regulator module: (putting the pressure regulator module into your pocket to make room)
 Taken.
 
 &gt;</result>
         <commentary xml:space="preserve">power module: Taken.
-pressure regulator module: (putting the instruction module into your pocket to make room)
+pressure regulator module: (putting the pressure regulator module into your pocket to make room)
 Taken.
 
 &gt;</commentary>
@@ -5061,9 +7231,11 @@ It is time to say goodbye to the station. You are ready to leave in a pod.
 You close the hatch behind yourself.
 
 Pod Bay
-There are four slips for transit pods. Unexpectedly, all are empty.
+There are four berths for transit pods. Sadly, all are empty.
 
 A secured hatch leads starboard.
+
+Someone left a communications unit on the floor.
 
 This is troubling. You counted. You were sure there would be one pod left for you, but there are none.
 
@@ -5074,14 +7246,187 @@ This is troubling. You counted. You were sure there would be one pod left for yo
 You close the hatch behind yourself.
 
 Pod Bay
-There are four slips for transit pods. Unexpectedly, all are empty.
+There are four berths for transit pods. Sadly, all are empty.
 
 A secured hatch leads starboard.
+
+You can also see the communications unit here.
 
 This is troubling. You counted. You were sure there would be one pod left for you, but there are none.
 
 [Your score has just gone up by ten points.]
 
 &gt;</commentary>
+        <children><child nodeId="node-25332"></child>
+        </children>
+    </item>
+    <item nodeId="node-25332">
+        <command xml:space="preserve">get communications unit</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25375"></child>
+        </children>
+    </item>
+    <item nodeId="node-25375">
+        <command xml:space="preserve">starboard</command>
+        <result xml:space="preserve">(first opening the wall hatch)
+You close the hatch behind yourself.
+
+Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump.
+
+Beside the secured port hatch, a status display glows green.
+
+There is a secured hatch in the ceiling.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25376"></child>
+        </children>
+    </item>
+    <item nodeId="node-25376">
+        <command xml:space="preserve">scanner, open pump</command>
+        <result xml:space="preserve">Opening.
+
+The atmosphere pump swings open.
+
+So you can't escape in a pod, but maybe you can bring a pod here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25377"></child>
+        </children>
+    </item>
+    <item nodeId="node-25377">
+        <command xml:space="preserve">get functional power module</command>
+        <result xml:space="preserve">(putting the faulty power module into your pocket to make room)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25378"></child>
+        </children>
+    </item>
+    <item nodeId="node-25378">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">(first opening the ceiling hatch)
+You pull yourself up through the hatch and close it behind yourself.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25379"></child>
+        </children>
+    </item>
+    <item nodeId="node-25379">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25380"></child>
+        </children>
+    </item>
+    <item nodeId="node-25380">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25381"></child>
+        </children>
+    </item>
+    <item nodeId="node-25381">
+        <command xml:space="preserve">go church</command>
+        <result xml:space="preserve">
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other.
+
+On the altar is The Founder's Testament.
+
+You can also see the audio unit and a gray cable (plugged into the organ and the audio unit) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25382"></child>
+        </children>
+    </item>
+    <item nodeId="node-25382">
+        <command xml:space="preserve">unplug cable from organ</command>
+        <result xml:space="preserve">You unplug the gray cable from the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25383"></child>
+        </children>
+    </item>
+    <item nodeId="node-25383">
+        <command xml:space="preserve">plug cable into comms unit</command>
+        <result xml:space="preserve">You plug the gray cable into the communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25384"></child>
+        </children>
+    </item>
+    <item nodeId="node-25384">
+        <command xml:space="preserve">scanner, open audio</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25390"></child>
+        </children>
+    </item>
+    <item nodeId="node-25390">
+        <command xml:space="preserve">get power module from audio</command>
+        <result xml:space="preserve">(putting the faulty pressure regulator module into your pocket to make room)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25391"></child>
+        </children>
+    </item>
+    <item nodeId="node-25391">
+        <command xml:space="preserve">put functional power into audio</command>
+        <result xml:space="preserve">You put the functional power module into the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-25392"></child>
+        </children>
+    </item>
+    <item nodeId="node-25392">
+        <command xml:space="preserve">close audio</command>
+        <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+
+With the communications unit and attached to a functional audio unit, you call for help. I need to write this bit.
+
+
+
+    *** You win. ***
+
+
+In that game you scored 50 out of a possible 50, in 54 turns.
+
+
+Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
+&gt; </result>
+        <commentary xml:space="preserve"></commentary>
     </item>
 </Skein>

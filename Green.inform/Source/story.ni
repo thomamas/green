@@ -9,6 +9,13 @@
 ]
 
 [
+	Radio is in pod control, but old tech -- can't open with scanner.
+	Tool kit is in pod bay.
+	Use tools from pod bay to fix radio -- maybe as simple as connecting a cable or replacing a fuse/relay/???
+	
+]
+
+[
 	The station is named RWSS Founder's Mercy, as well as the game.
 
 	Usage:
@@ -121,6 +128,52 @@ The explain exit listing rule does nothing.
 Report ExitListing when listing explained is false:
 	now listing explained is true;
 	say "[start note]Type 'exits off' to disable the status line exit list and 'exits on' to turn it back on.[no line break][stop note][line break]"
+
+Include Plugs and Sockets by Sean Turner
+
+[
+	Because this is too ugly:
+		
+		You can see an organ (into which is plugged an USB cable), an audio unit (into which is plugged an USB cable), and an USB cable (plugged into an organ and an audio unit) here.
+
+	but this is better:		
+	
+		You can see an organ, an audio unit, and an USB cable (plugged into an organ and an audio unit) here.
+
+	Still not without issues, because if you are holding the cable then it doesn't show up in the room at all. Oh well.
+]
+
+
+The list attached things when listing receiver or inserter rule response (A) is "".
+
+[ make language fit ]
+
+The leaving room whilst attached to fixed things rule response (A) is "It is impractical to leave with [the item] attached to [the holder of the connectee]."
+
+[ make style fit ]
+
+The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are] plugged into more than one thing.[paragraph break][start note]Try 'unplug [noun] from SOMETHING'.[stop note][line break]";
+
+[ adapt to missing Plurality by Emily Short ]
+
+To say it-them of (s - something): say "it".
+
+[ and establish a few kinds for future use ]
+
+A usb plug is a kind of PS-plug.
+A usb socket is a kind of PS-socket.
+
+[ todo:
+
+>disconnect gray cable
+That's not a verb I recognize.
+
+>*connect cable to audio unit*
+That’s not a verb I recognize.
+
+>*plug cable into audio unit*
+You plug the USB cable into the audio unit.
+]
 
 Chapter 6 - Directions
 
@@ -267,15 +320,22 @@ Carry out requesting the credits:
 		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this game at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]",
 		"This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type]).".
 
-[
-	Includes
-		Exit Lister version 11 by Eric Eve
-		Unicode Character Names by Graham Nelson
-		Glulx Text Effects by Emily Short *
-		Inanimate Listeners by Emily Short *
-		
-	Tested with
-		Object Response Tests version 7 by Juhana Leinonen
+[ todo
+
+Credited:
+I've also read Standard Rules by Graham Nelson, which is 42655 words long.
+I've also read Unicode Character Names by Graham Nelson, which is 28382 words long.
+I've also read Exit Lister by Eric Eve, which is 3331 words long.
+I've also read Plugs and Sockets by Sean Turner, which is 5622 words long.
+
+Tested with:
+I've also read Object Response Tests by Juhana Leinonen, which is 3329 words long.
+
+Also:
+I've also read English Language by Graham Nelson, which is 2297 words long.
+I've also read Glulx Text Effects by Emily Short, which is 2182 words long.
+I've also read Inanimate Listeners by Emily Short, which is 412 words long.
+I've also read Basic Screen Effects by Emily Short, which is 2218 words long.
 ]
 
 Chapter 11 - Machines, Components, Scanning, etc
@@ -341,8 +401,9 @@ Before inserting something (called s) into a machine (called m):
 After examining a machine (called m):
 	let contents be the number of things contained in m;
 	let capacity be the carrying capacity of m;
-	if capacity is greater than contents:
+	if capacity is greater than contents and m is open:
 		say "There is space for [capacity - contents in words] more module[s].";
+	continue the action. [in case of cabling ]
 
 To decide if (m - a machine) is functional:
 	decide yes;
@@ -648,6 +709,15 @@ Check singing:
 
 Carry out singing:
 	say "You sing a hymn [one of]about hard work[or]about virtue[or]about penitence[or]praising the Founder[or]about Old Earth[at random].";
+	
+[ for the organ ]
+	
+Understand "play [something]" as Playing.
+Playing is an action applying to one thing.
+
+Carry out playing:
+	set pronouns from the noun;
+	say "[regarding the noun]You don't know how to play [those]."
 
 Chapter 14 - Testing - Not for release
 
@@ -701,7 +771,7 @@ Pod Problems is a scene. "This is troubling. You counted. You were sure there wo
 Every turn during Pod Problems:
 	let t be the minutes part of time since Pod Problems began;
 	if t is 3:
-		say "So you can't leave in a pod, but maybe you can bring a pod here."
+		say "So you can't escape in a pod, but maybe you can bring a pod here."
 
 Book 3 - The Ring
 
@@ -806,7 +876,7 @@ After going through the wall hatch:
 
 Section 3 - Pod Bay
 
-There is a room called Pod Bay. "There are four berths for transit pods. [one of]Unexpectedly,[or]Disturbingly,[purely at random] all are empty." Pod Bay is in Underneath.
+There is a room called Pod Bay. "There are four berths for transit pods. [one of]Unexpectedly,[or]Sadly,[purely at random] all are empty." Pod Bay is in Underneath.
 
 Some berths are scenery in Pod Bay. Understand "four berths" or "berth" and "door" and "doors" and "rail" and "rails" and "iris" and "closed" and "iris" and "pod bay" as some berths. Some berths have description "Each berth would hold a transit pod, but now there are only support rails and closed iris doors." They are machinelike.
 
@@ -835,7 +905,24 @@ Every turn when the player is in Pod Bay for the first time:
 	if the Pod Bay is not scored:
 		increase the score by 10;
 		now the Pod Bay is scored.
-	
+
+[ communications unit ]
+
+A communications unit is here. "Someone left a communications unit on the floor." It is a not fixed in place machine. It has description "A portable communications unit with a single socket to connect it to an audio unit." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket. [todo - description]
+
+Instead of scanning the communications unit:
+	if audio and communications are connected:
+		computerize "Machine functional. Input and output connected.";
+	else if organ and communications are connected:
+		computerize "Machine functional. Connection mismatch.";
+	else:
+		computerize "Machine functional. No output available.";
+
+Every turn when the communications unit is functional and audio unit is functional and audio unit is closed and audio and communications are connected:
+	increase the score by 10;
+	say "With the communications unit and attached to a functional audio unit, you call for help. I need to write this bit.";
+	end the story finally saying "You win."; [todo]
+
 Chapter 2 - Sector 2
 
 Sector 2 is spinward from Sector 1. It is in Main Level. "A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward." It has printed name "Sector 2: Aquaculture". It has destination name "sector 2".
@@ -898,7 +985,7 @@ Instead of looking under a forest in Sector 3, say "Only the house and church."
 	
 Section 1 - Church
 
-Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against the far wall."
+Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ stands against the other."
 
 An altar is a fixed in place scenery supporter in church. It has description "Really just a table."
 
@@ -907,6 +994,93 @@ The Founder's Testament is on the altar. It has description "The Founder's Testa
 Sector 3 is outside of church.
 
 Instead of going nowhere in church when the noun is starboard, try going outside.
+
+[ organ ]
+
+The organ is scenery in Church. It is a machine. It has description "It's really just a keyboard. It has a single socket you would use to connect it to an audio unit." It has indefinite article "the". Understand "keyboard" as the organ. The organ can be played. Incorporated by the organ is a usb socket. [todo -description]
+
+Instead of scanning the organ: [ organ is always functional ]
+	if audio and organ are connected and the audio unit is functional:
+		computerize "Machine functional. Output connected.";
+	else if organ and communications are connected:
+		computerize "Machine functional. Connection mismatch.";
+	else:
+		computerize "Machine functional. No output available.";
+
+Instead of playing the organ:
+	if audio and organ are connected and the audio unit is functional:
+		if the organ is not played:
+			say "You never really learned how to play, but you pick out a few notes on the keyboard and the sound reverberates from the audio unit.";
+			now the organ is played;
+		otherwise:
+			say "You play a few notes.";
+	otherwise:
+		say "Nothing happens."
+
+[ audio unit ]
+
+An audio unit is in Church. It is a openable machine. The description is "The audio unit incorporates a speaker, a microphone, and a single socket you would use to connect it to another device." It has carrying capacity 1. It has indefinite article "the". Understand "portable" as the audio unit. [todo -description]
+
+Incorporated by the audio unit is a usb socket.
+There is a faulty power module in the audio unit.
+
+Instead of scanning the audio unit:
+	unless the audio unit is functional:
+		computerize "Machine failed.";
+	else if audio and organ are connected:
+		computerize "Machine functional. Input connected.";
+	else if audio and communications are connected:
+		computerize "Machine functional. Input and output connected.";
+	else:
+		computerize "Machine functional. No input or output available.";
+
+To decide if (m - the audio unit) is functional:
+	unless there is a functional power module in m, decide no;
+	decide yes.
+
+Instead of taking the audio unit, say "It is too heavy to move."
+
+[ cable and connectivity ]
+
+A gray cable is in Church. Incorporated by it are two usb plugs. It has description "It's a USB 7.2 Type-F cable." Understand "grey" as the gray cable.
+
+When play begins: [* this can't be the right way to do this ]
+	let first plug be nothing;
+	repeat with p running through the usb plugs which are part of the gray cable:
+		if the attachment of p is nothing:
+			let first plug be p;
+			break;
+	;
+	let first socket be a random usb socket which is part of the organ;
+	;
+	now the attachment of first plug is the first socket;
+	now the attachment of first socket is the first plug;
+	;
+	let second plug be nothing;
+	repeat with p running through the usb plugs which are part of the gray cable:
+		if the attachment of p is nothing:
+			let second plug be p;
+			break;
+	;
+	let second socket be a random usb socket which is part of the audio unit;
+	;
+	now the attachment of second plug is the second socket;
+	now the attachment of second socket is the second plug;
+
+To decide if audio and organ are connected:
+	if the gray cable is inserted into the audio unit and the gray cable is inserted into the organ, decide yes;
+	decide no.
+
+To decide if organ and communications are connected:
+	if the gray cable is inserted into the communications unit and the gray cable is inserted into the organ, decide yes;
+	decide no.
+
+To decide if audio and communications are connected:
+	if the gray cable is inserted into the audio unit and the gray cable is inserted into the communications unit, decide yes;
+	decide no.
+
+[ todo -- output when you make valid connections ]
+
 
 Section 2 - House
 

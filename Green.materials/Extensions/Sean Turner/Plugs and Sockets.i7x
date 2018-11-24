@@ -83,7 +83,7 @@ To say inserter status of the (item - a thing):
 To say exam receiver status of the (item - a thing):
 	if the count of occupied sockets of the item is 0, say "nothing";
 	else say "[receiver status of the item]";
-	say " plugged into it.";
+	say " plugged into [it-them of item].";
 
 To say receiver status of the (item - a thing):
 	now connect listing is true;
