@@ -11,9 +11,11 @@ https://creativecommons.org/licenses/by/4.0/
 
 ## Release Instructions
 
-After build, modify `index.html` with a line break and Unicode emoji:
+1. Print `Map.graffle` as `Map.pdf` and save it into `Green.materials`
+
+2. Build for release with Inform
+
+3. After build, modify `index.html` with a line break and Unicode emoji:
 
     <br>
     <li>&#x1F579;&nbsp;<a href="play.html">Play In-Browser</a> <span class="filetype">(link)</span></li>
-
-Note also `&#x1F4D6;` for an open book.

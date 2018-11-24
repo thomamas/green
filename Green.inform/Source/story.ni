@@ -26,7 +26,12 @@ When play begins:
 	say "[the story description][paragraph break]";
 	now exit listing is enabled.
 
-Release along with cover art ("A space station."), an interpreter, the introductory booklet, the library card, and a "Local" website.
+Release along with cover art ("A space station."),
+	an interpreter,
+	the introductory booklet,
+	the library card,
+	a file of "Story Map" called "Map.pdf",
+	and a "Local" website.
 
 Chapter 2 - Scoring
 
