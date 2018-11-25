@@ -12,6 +12,8 @@
 	TODO:
 		is plugs and sockets too complicated?
 		more story bits
+		work on help.
+		scene-based points???
 ]
 
 Book 1 - Setup
@@ -291,7 +293,6 @@ Instead of climbing a forest:
 Chapter 10 - Help
 
 Help disabled is a truth state that varies. Help disabled is false.
-Help explained is a truth state that varies. Help explained is false.
 
 Getting help is an action applying to nothing.
 
@@ -316,47 +317,49 @@ Understand "help off" or "hint off" or "hints off" as disabling help.
 Instead of getting help when help disabled is true:
 	say "You have disabled hints, but don't despair. It is still impossible to put this game into an unwinnable state, so feel free to explore and experiment."
 
-After the player getting help:
+After the player getting help for the first time:
 	say
 		"By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.[paragraph break]"
 		,
 		"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
 		,
 		"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
-	unless help explained is true:
-		note "If you prefer not to be tempted by further hints, you can type 'hints off' to disable them.";
-		now help explained is true.
+		note "If you prefer not to be tempted by further hints, you can type 'hints off' to disable them."
 
 Carry out getting help when Beginning is happening:
 	say "Your goal is simply to leave the station and find other people. You can start by looking around and leaving your initial location."
 
 Carry out getting help when Ready to Repair is happening:
-	if Pod Control is not visited:
-		say "It's time to leave the station, but you need to explore a little more.";
-	otherwise if the status display is not examined:
+	say "It's time to leave the station, but you need to explore a little more.";
+
+Carry out getting help when Repairing Pod Bay is happening:
+	[ todo -- has door been tried? ]
+	if the status display is not examined:
 		say "You need to fix something. Check out the status display in Pod Control.";
 	otherwise:
-		if the red circuit breaker is switched off:
+		if Repairing Red Breaker is happening:
 			say "According to the status display, you need to reset a circuit breaker on the hub platform.";
 			[ todo - progressive hints ? climb, boots (not seen, seen, tried to take, eraser, etc. if not scored), etc.]
-		else if the green circuit breaker is switched off:
+		else if Repairing Green Breaker is happening:
 			say "According to the status display, you need to rest a circuit breaker somewhere in Sector 2.";
-		else unless the atmosphere pump is functional:
-			say "According to the status display, you need to fix the atmosphere pump. Now might be a good time to check out the scanner.";
-			[ todo - if learning machine was scored, then maybe tyr something else]
-		else if the atmosphere pump is open:
-			say "You're almost there. The status display is fairly clear about what you need to do now.";
-		else if S1H1 is open:
-			say "Pod Control acts as an airlock.";
+		else if Repairing Atmosphere Pump is happening:
+			if the atmosphere pump is functional and the atmosphere pump is open:
+				say "You're almost there. The status display is fairly clear about what you need to do now.";
+			else:
+				say "According to the status display, you need to fix the atmosphere pump. Now might be a good time to check out the scanner.";
+				[ todo - maybe if learning machine was scored, know about scanner? ]
 		else:
-			say "You just need to enter the pod bay now."
+			say "Something odd has happened." [ this can't happen ]
 
-Carry out getting help when 	Anxious to Leave is happening:
-	say "There's no point in waiting. You just need to enter the pod bay."
+Carry out getting help when 	Between Repairs is happening:
+	if S1H1 is open:
+		say "Pod Control acts as an airlock.";
+	otherwise:
+		say "There's no point in waiting. You just need to enter the pod bay."
 
-Carry out getting help when Pod Problems is happening:
+Carry out getting help when Repairing Comms is happening:
 	unless communications unit is handled:
-		say "Take a look at the communications unit.";
+		say "Find the emergency communications unit.";
 	else unless audio and communications are connected:
 		say "You will need to attach the communications unit to an audio unit.";
 	else unless audio unit is functional:
@@ -364,7 +367,10 @@ Carry out getting help when Pod Problems is happening:
 	else if audio unit is open:
 		say "Close the audio unit.";
 	else:
-		say "You really should have won by now." [ HELP ]
+		say "Just wait."
+		
+Carry out getting help when The End is happening:
+	say "Just wait."
 
 Chapter 11 - About
 
@@ -392,10 +398,13 @@ Section 1 - Components
 
 Status is a kind of value. The statuses are functional and faulty.
 
-A component is a kind of thing. A component has a status. The status of a component is usually functional. Understand "module" as a component. A component usually has description "It is a standardized machine module."
+A component is a kind of thing. A component has a status. The status of a component is usually functional. Understand "module" as a component.
 
-After examining a component (called c):
-	if c is scanned, say "The scanner reported this [c] as [status of c]."
+Instead of examining a component (called c):
+	if c is scanned:
+		say "The scanner reported that this [c] is [status of c].";
+	otherwise:
+		say "It is a standardized [c]."
 
 A component can be scanned.
 
@@ -655,7 +664,7 @@ Section 4 - Kinds of Components
 
 A power module is a kind of component.
 An instruction module is a kind of component.
-A pressure regulator module is a kind of component.
+A pressure regulation module is a kind of component. Understand "regulator" as a pressure regulation module.
 
 Chapter 13 - The Player
 
@@ -839,55 +848,94 @@ To decide if all sectors are visited:
 		if r is not visited, decide no;
 	decide yes.
 
-Beginning is a scene. Beginning begins when play begins. Beginning ends when Ready to Repair begins. Beginning ends when Anxious to Leave begins.
+[ main scenes, with their own sections, don't overlap ]
+
+Section 1 - Beginning
+
+Beginning is a scene.
+Beginning begins when play begins.
+Beginning ends when Ready to Repair begins.
+Beginning ends when Repairing Pod Bay begins.
+
+Section 2 - Ready to Repair
+[ this scene may not happen ]
 
 Ready to Repair is a scene. "You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave. The pods are below Sector 1."
+Ready to Repair begins when all sectors are visited for the first time and Beginning has not ended.
+Ready to Repair ends when Repairing Pod Bay begins.
 
-Ready to Repair begins when all sectors are visited for the first time and Anxious to Leave has not happened.
+Section 3 - Repairing Pod Bay
 
-Ready to Repair ends when Anxious to Leave begins.
+Repairing Pod Bay is a scene.
+Repairing Pod Bay begins when Pod Control is visited.
+Repairing Pod Bay ends when Repairing Red Breaker has ended and Repairing Green Breaker has ended and Repairing Atmosphere Pump has ended.
 
-Anxious to Leave is a scene. "It is time to say goodbye to the station. You are ready to leave in a pod." Anxious to Leave begins when the pod bay is ready for the first time.
+[ these subscenes could begin/end at the same time if repairs have already happened, so shouldn't print anything ]
 
-Every turn during Anxious to Leave:
-	let t be the minutes part of time since Anxious to Leave began;
+Repairing Red Breaker is a scene.
+Repairing Red Breaker begins when Repairing Pod Bay begins.
+Repairing Red Breaker ends when the red circuit breaker is switched on.
+
+Repairing Green Breaker is a scene.
+Repairing Green Breaker begins when Repairing Pod Bay begins.
+Repairing Green Breaker ends when the green circuit breaker is switched on.
+
+Repairing Atmosphere Pump is a scene.
+Repairing Atmosphere Pump begins when Repairing Pod Bay begins.
+Repairing Atmosphere Pump ends when the atmosphere pump is scored. [* because atmosphere pump is functional here seems to check the (non-existent) status instead of the phrase ]
+
+Section 4 - Between Repairs
+
+Between Repairs is a scene. "It is time to say goodbye to the station. You are ready to leave in a pod."
+[ Between Repairs begins when the pod bay is ready for the first time. ]
+Between Repairs begins when Repairing Pod Bay ends.
+Between Repairs ends when Repairing Comms begins.
+
+Every turn during Between Repairs:
+	let t be the minutes part of time since Between Repairs began;
 	if t is greater than 0 and the remainder after dividing t by 10 is 0:	
 		say "There is nothing left for you here. It's time to take a pod and leave."
 
-Anxious to Leave ends when Pod Problems begins.
+Section 5 - Repairing Comms
 
-Pod Problems is a scene. "This is troubling. You counted. You were sure there would be one pod left. There are none." Pod Problems begins when the player is in Pod Bay for the first time.
+[
+	TODO: break this down into smaller scenes like repairing Pod Bay
+]
 
-Every turn during Pod Problems:
-	let t be the total minutes of time since Pod Problems began;
+Repairing Comms is a scene. "This is troubling. You counted. You were sure there would be one pod left. There are none."
+Repairing Comms begins when the player is in Pod Bay for the first time.
+Repairing Comms ends when The End begins.
+
+Every turn during Repairing Comms:
+	let t be the total minutes of time since Repairing Comms began;
 	if t is 3:
 		say "No pods left ... you consider despair.";
 	if t is 5:
 		say "So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working."
+	[ todo -- more messages ?]
 
-[ todo -- more messages ?]
+Section 6 - The End
 
-Pod Problems ends when The End begins.
-
-The End is a scene. The End begins when the communications unit is usable for the first time.
+The End is a scene.
+The End begins when the communications unit is usable for the first time.
 
 When The End begins:
 	increase the score by 10;
 	say	"The audio unit beeps and a synthesized voice says 'Comms ready.'[paragraph break]",
-		"After a moment, it says 'Launching automatic help routine.'[paragraph break]",
-		"[the command prompt][no line break]";
+		"After a moment, it says 'Launching automatic help routine.'"
 
 Every turn during The End:
 	let t be the total minutes of time since The End began;
+	let ov be a random number between 2100 and 9998; [* I have no idea why I want to randomize this ]
 	if t is greater than zero and the communications unit is usable and the communications unit is visible:
 		say
-			"You hear a human voice from the audio unit: 'OV-6268 calling RWSS [italic type]Founder's Glory[roman type]...[paragraph break]"
+			"You hear a human speaking from the audio unit: 'RWSS [italic type]Founder's Glory[roman type], this is OV-[ov], over...[paragraph break]"
 			,
 			"'There's really somebody there? We thought your station had been abandoned for kilodays...[paragraph break]"
 			,
 			"'Standby...[paragraph break]"
 			,
-			"'We can have a pod there in a couple of hours.'[no line break]";
+			"'We can have a pod there in about one hundred minutes.'[no line break]";
 		end the story finally saying "You are not alone.";
 
 Book 3 - The Ring
@@ -960,11 +1008,11 @@ Instead of scanning the atmosphere pump when the atmosphere pump is functional a
 	computerize "Machine is functional and operating."
 
 There is a faulty power module in the atmosphere pump.
-There is a faulty pressure regulator module in the atmosphere pump.
+There is a faulty pressure regulation module in the atmosphere pump.
 
 To decide if (m - the atmosphere pump) is functional:
 	unless there is a functional power module in the atmosphere pump, decide no;
-	unless there is a functional pressure regulator module in the atmosphere pump, decide no;
+	unless there is a functional pressure regulation module in the atmosphere pump, decide no;
 	decide yes.	
 
 After closing the atmosphere pump when the atmosphere pump is functional:
@@ -992,7 +1040,7 @@ After going through the wall hatch:
 	try silently closing the wall hatch;
 	continue the action.
 
-A brass plaque is fixed in place scenery in pod control. It has description "The plaque reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2533, Launched 2537.[line break]    'May His mercy shine upon us.'".
+A brass plaque is fixed in place scenery in pod control. It has description "The plaque reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2238, Launched 2241.[line break]    'May His mercy shine upon us.'".
 
 Section 3 - Pod Bay
 
@@ -1028,7 +1076,7 @@ Every turn when the player is in Pod Bay for the first time:
 
 [ communications unit ]
 
-An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit with a single socket to connect it to a transit pod or other audio source." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket called the cream socket.
+An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit with a single socket to connect it to a transit pod or other audio source." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket called the almond socket.
 
 Instead of scanning the communications unit:
 	if audio and communications are connected:
@@ -1048,7 +1096,7 @@ Chapter 2 - Sector 2
 
 Sector 2 is spinward from Sector 1. It is in Main Level. "A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward." It has printed name "Sector 2: Aquaculture". It has destination name "sector 2".
 
-The pond is scenery in sector 2. It has description "Something to do with water filtration, and there are still some fish." Understand "water" and "deep" as the pond.
+The pond is scenery in sector 2. It has description "Something to do with water filtration, and there are still some fish." Understand "water" and "deep" and "pool" as the pond.
 
 Some fish are scenery in sector 2. They have description "There are still a few fish swimming in the pond, but they taste horrible."
 
@@ -1144,7 +1192,7 @@ Instead of taking the organ, say "It is too heavy to move."
 
 An audio unit is scenery in Church. It is a openable machine. The description is "The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device." It has carrying capacity 1. Understand "portable" as the audio unit.
 
-Incorporated by the audio unit is a usb socket called the ivory socket.
+Incorporated by the audio unit is a usb socket called the beige socket.
 There is a faulty power module in the audio unit.
 
 Instead of scanning the audio unit:
@@ -1236,7 +1284,7 @@ Section 2 - House
 
 House is a room. "Two families lived here, but not recently."
 
-A doll is in house. "Someone has left a doll on the well swept floor." It has description "Wearing a brown jumpsuit and faceless, because we are all alike in the Founder's eyes." Understand "faceless" and "red jumpsuit" and "jumpsuit" as the doll.
+A doll is in house. "Someone has left a doll on the well swept floor." It has description "Wearing a brown jumpsuit and faceless, because we are all alike in the Founder's eyes." Understand "faceless" and "brown" and "jumpsuit" as the doll.
 
 Sector 3 is outside of house.
 
@@ -1260,6 +1308,9 @@ A red circuit breaker is a circuit breaker in center platform. "You can just rea
 
 Instead of scanning the red circuit breaker:
 	computerize "Machine is functional. Breaker is [if the red circuit breaker is switched on]closed[otherwise]open[end if]."
+
+Instead of touching the red circuit breaker:
+	say "It is at arm's reach but accessible."
 
 After switching on the red circuit breaker:
 	increase the score by 5;
@@ -1310,7 +1361,7 @@ Instead of looking under a forest in Sector 5, say "Only the school house."
 
 Section 1 - School
 
-School is a room. "One broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk and a chalkboard hangs on one wall."
+School is a room. "A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall."
 
 Sector 5 is outside of school.
 
@@ -1405,7 +1456,7 @@ The Supply Vault is a room. "This room is dim, quiet, and stuffy. There is still
 A crate of machine parts is scenery in the supply vault. It has description "These remaining parts never seem to fit where they might be useful."
 
 One faulty instruction module is in the junk repository.
-One functional pressure regulator module is in the junk repository.
+One functional pressure regulation module is in the junk repository.
 
 To grab some junk:
 	let q be a random thing in the junk repository;

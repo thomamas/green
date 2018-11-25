@@ -7,7 +7,7 @@ in
 get eraser
 erase board
 scanner, open machine
-get all from machine
+get power from machine
 out
 sw
 d
