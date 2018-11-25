@@ -11,6 +11,7 @@
 [
 	TODO:
 		is plugs and sockets too complicated?
+		order of three pod bay sub-puzzles? or all visible at once on display.
 		more story bits
 		work on help.
 		scene-based points???
@@ -65,6 +66,9 @@ To say stop note: say "[close bracket][roman type]".
 
 To say start computer: say "[fixed letter spacing]".
 To say stop computer: say "[roman type]".
+
+To display (x - some text):
+	say "[start computer][x][stop computer][line break]";
 
 To computerize (x - some text):
 	say "[start computer][x][stop computer][paragraph break]";
@@ -149,7 +153,7 @@ This is the new leaving room whilst attached to fixed things rule:
 					now the attachment of the connectee is nothing;
 					say "[The item] [pull] out from [the holder of connectee]." (B).
 
-The new leaving room whilst attached to fixed things rule substitutes for the the leaving room whilst attached to fixed things rule.
+The new leaving room whilst attached to fixed things rule substitutes for the leaving room whilst attached to fixed things rule.
 
 [ E. Some action synonyms ]
 
@@ -332,38 +336,75 @@ Carry out getting help when Beginning is happening:
 Carry out getting help when Ready to Repair is happening:
 	say "It's time to leave the station, but you need to explore a little more.";
 
+To decide what number is the open pod repair count:
+	let n be 0;
+	if Repairing Red Breaker is happening, increment n;
+	if Repairing Green Breaker is happening, increment n;
+	if Repairing Atmosphere pump is happening, increment n;
+	decide on n.
+
 Carry out getting help when Repairing Pod Bay is happening:
-	[ todo -- has door been tried? ]
 	if the status display is not examined:
-		say "You need to fix something. Check out the status display in Pod Control.";
+		say "You need to fix some things. Check out the status display in Pod Control.";
 	otherwise:
+		let c be the open pod repair count;
+		if c is greater than one, say "You need to fix [c in words] things:[paragraph break]";
+		let i be 1;
 		if Repairing Red Breaker is happening:
-			say "According to the status display, you need to reset a circuit breaker on the hub platform.";
-			[ todo - progressive hints ? climb, boots (not seen, seen, tried to take, eraser, etc. if not scored), etc.]
-		else if Repairing Green Breaker is happening:
-			say "According to the status display, you need to rest a circuit breaker somewhere in Sector 2.";
-		else if Repairing Atmosphere Pump is happening:
-			if the atmosphere pump is functional and the atmosphere pump is open:
-				say "You're almost there. The status display is fairly clear about what you need to do now.";
-			else:
-				say "According to the status display, you need to fix the atmosphere pump. Now might be a good time to check out the scanner.";
-				[ todo - maybe if learning machine was scored, know about scanner? ]
-		else:
-			say "Something odd has happened." [ this can't happen ]
+			say "[if c > 1] [i]. [end if][red breaker help][unless c is i][line break][end if]";
+			increment i;
+		if Repairing Green Breaker is happening:
+			say "[if c > 1] [i]. [end if][green breaker help][unless c is i][line break][end if]";
+			increment i;
+		if Repairing Atmosphere Pump is happening:
+			say "[if c > 1] [i]. [end if][pump help][unless c is i][line break][end if]";
+
+To say pump help:
+	if the atmosphere pump is functional and the atmosphere pump is open:
+		say "The status display has some clear directions®.";
+	else:
+		say "Now might be a good time to try out the scanner.";
+	[ todo - maybe if learning machine was scored, know about scanner? ]
+
+To say green breaker help:
+	say "Reset a circuit breaker somewhere in Sector 2.";
+
+To say red breaker help:
+	if Center Platform is visited:
+		say "Just turn the red breaker on.";
+	else if the gravity boots are scored:
+		say "You have found what you need to reset the circuit breaker, so go figure out where to use it.";
+	else if the laser alarmed is true: [ i.e., you have tried but not yet succeeded to remove to boots ]
+		say eraser help;
+	else if the supply vault is visited:
+		say "You have seen what you need to reset the circuit breaker.";
+	else:
+		say "Explore a bit more.";
+
+To say eraser help:
+	if eraser hit is true:
+		say "You seem to have figured out the trick to avoiding the alarm.";
+	else if the eraser is dusty:
+		say "You have completed the necessary preparation to avoid the alarm.";
+	else if School is visited:
+		say "You have found what you need to evade the alarm, but it still needs some preparation.";
+	else:
+		say "You need to evade the alarm, but first explore a bit more.";
 
 Carry out getting help when 	Between Repairs is happening:
+	[ todo - has door been tried since this scene began? ]
 	if S1H1 is open:
 		say "Pod Control acts as an airlock.";
 	otherwise:
 		say "There's no point in waiting. You just need to enter the pod bay."
 
-Carry out getting help when Repairing Comms is happening:
+Carry out getting help when Repairing Comms is happening: [todo]
 	unless communications unit is handled:
 		say "Find the emergency communications unit.";
 	else unless audio and communications are connected:
-		say "You will need to attach the communications unit to an audio unit.";
+		say "You will need to connect the communications unit to an audio unit.";
 	else unless audio unit is functional:
-		say "Repair the audio unit.";
+		say "Repair the audio unit. The scanner might help here.";
 	else if audio unit is open:
 		say "Close the audio unit.";
 	else:
@@ -925,11 +966,10 @@ When The End begins:
 		"After a moment, it says 'Launching automatic help routine.'"
 
 Every turn during The End:
-	let t be the total minutes of time since The End began;
-	let ov be a random number between 2100 and 9998; [* I have no idea why I want to randomize this ]
-	if t is greater than zero and the communications unit is usable and the communications unit is visible:
+	if the total minutes of time since The End began is greater than zero and the communications unit is usable and the communications unit is visible:
+		let ov be a random number between 2100 and 9998; [* I have no idea why I want to randomize this ]
 		say
-			"You hear a human speaking from the audio unit: 'RWSS [italic type]Founder's Glory[roman type], this is OV-[ov], over...[paragraph break]"
+			"You hear a human speaking from the audio unit: 'RWSS [italic type]Founder's Mercy[roman type], this is OV-[ov], over...[paragraph break]"
 			,
 			"'There's really somebody there? We thought your station had been abandoned for kilodays...[paragraph break]"
 			,
@@ -978,29 +1018,24 @@ Instead of scanning the space suit, computerize "Machine is failed."
 A status display is a machine in Pod Control. It is scenery. It is not openable. The status display can be examined.
 Understand "message" and "error" as the status display when the pod bay is not ready.
 
-Instead of examining the status display:
+Instead of examining the status display: [todo - shorten lines?]
 	now the status display is examined;
-	if the red circuit breaker is switched off:
-		say "[fixed letter spacing]Pod bay locked down[line break]",
-			"Diagnosis: telemetry sensor array offline[line break]",
-			"Remediation: reset breaker FM36-87/A @ hub platform[roman type][paragraph break]";
-	else if the green circuit breaker is switched off:
-		say "[fixed letter spacing]Pod bay locked down[line break]",
-			"Diagnosis: launch system cooling loop offline[line break]",
-			"Remediation: reset circuit breaker FM29-63/A @ Sector 2[roman type][paragraph break]";
-	else unless the atmosphere pump is functional:
-		say "[fixed letter spacing]Pod bay locked down[line break]",
-			"Diagnosis: pod control atmosphere pump offline[line break]",
-			"Remediation: scan and repair pump[roman type][paragraph break]";
-	else if the atmosphere pump is open:
-		say "[fixed letter spacing]Pod bay locked down[line break]",
-			"Diagnosis: pod control atmosphere pump offline[line break]",
-			"Remediation: close pump[roman type][paragraph break]";
-	else if S1H1 is not closed:
-		say "[fixed letter spacing]Pod bay locked down[line break]",
-			"Secure ceiling hatch[roman type][paragraph break]";
-	else:
-		say "The status display glows green."
+	if the pod bay is ready:
+		say "The status display glows green.";
+	otherwise:
+		display "Pod bay locked down";
+		let i be 1;
+		if red circuit breaker is switched off,
+			display " [i]. Telemetry sensor array offline - reset breaker FM36-87/A @ hub platform";
+			increment i;
+		if green circuit breaker is switched off,
+			display " [i]. Launch system cooling loop offline - reset breaker FM29-63/A @ Sector 2";
+			increment i;
+		if the atmosphere pump is functional:
+			if S1H1 is not locked:
+				display " [i]. Pod control atmosphere pump offline - close pump";
+		else: [the atmosphere pump is not functional]
+			display " [i]. Pod control atmosphere pump offline - scan and repair";
 
 The atmosphere pump is a machine in the Pod Control. It is openable. It is quiet. It has carrying capacity 2. It has description "[If the atmosphere pump is functional and the atmosphere pump is not open]The featureless atmosphere pump is softly humming.[otherwise]The atmosphere pump is a smooth featureless machine." Understand "machine" and "machinery" as the atmosphere pump.
 
@@ -1117,7 +1152,7 @@ Instead of entering the pond:
 		if the green circuit breaker is switched on:
 			say "You have already turned the green breaker on.";
 		otherwise:		
-			say "WIth the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a green circuit breaker and flip it on.";
+			say "With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a green circuit breaker and flip it on.";
 			now the green breaker is switched on;
 			increase the score by 10;
 	otherwise:
@@ -1317,7 +1352,7 @@ After switching on the red circuit breaker:
 	continue the action.
 
 After dropping something (called s) in Center Platform:
-	say "You drop [the s] and it spirals off the the ground below.";
+	say "You drop [the s] and it spirals off to the ground below.";
 	let r be a random room in the Main Level;
 	now s is in r.
 
@@ -1365,7 +1400,7 @@ School is a room. "A broken learning machine remains in a corner, but mostly the
 
 Sector 5 is outside of school.
 
-The learning machine is an openable quiet machine in the the school. It has carrying capacity 2. It has description "This last learning machine broke when you were maybe three thousand days old."
+The learning machine is an openable quiet machine in the school. It has carrying capacity 2. It has description "This last learning machine broke when you were maybe three thousand days old."
 
 Every turn:
 	if the learning machine is open and the learning machine is not scored:
@@ -1415,6 +1450,8 @@ Instead of rubbing the chalkboard with something (called the rubber):
 		-- otherwise:
 			say "You smudge the gibberish around with [the rubber].";
 
+Eraser hit is a truth state that varies. Eraser hit is false.
+
 Instead of attacking the eraser:
 	if the actor is not carrying the eraser, carry out the implicitly taking activity with the eraser;
 	if the eraser is clean:
@@ -1422,8 +1459,10 @@ Instead of attacking the eraser:
 	otherwise if the location is the supply vault:
 		say "You fill the vault with a cloud of dust and you can now see a laser beam scanning across the hatch.";
 		now the laser visibility counter is 4;
+		now eraser hit is true;
 	otherwise:
-		say "You fill the area with a cloud of dust, which quickly clears."
+		now eraser hit is true;
+		say "You fill the area with a cloud of dust, which quickly clears."		
 
 Chapter 6 - Sector 6
 
@@ -1477,9 +1516,12 @@ A pair of gravity boots is in the supply vault. The gravity boots are wearable. 
 [ laser ]
 
 The laser visibility counter is a number that varies. Laser visibility counter is 0.
+The laser alarmed is a truth state that varies. The laser alarmed is false;
 
 Every turn when the laser visibility counter is greater than zero:
-	decrease the laser visibility counter by one.
+	decrease the laser visibility counter by one;
+	if the laser visibility counter is zero and the player is in the Supply Vault:
+		say "The cloud of dust finally dissipates.";
 
 To decide if the laser is visible:
 	if the laser visibility counter is greater than zero, decide yes.
@@ -1490,6 +1532,7 @@ Before going up from the supply vault when the laser is visible:
 Before going up from the supply vault when the player encloses the gravity boots and the laser is not visible:
 	say "An alarm sounds, [if the vault hatch is open]hatch slams shut, [end if]and a synthesized voice says 'Laser scan detects unauthorized materiel removal.' The hatch seems to be locked.";
 	now the vault hatch is closed;
+	now the laser alarmed is true;
 	stop the action.
 
 Laser beam is scenery. It has description "The cloud of dust scatters the laser beam just enough that you can see it scan across the north passageway at seemingly random angles." Understand "dust" and "cloud" and "cloud of dust" as the laser beam.
@@ -1503,6 +1546,7 @@ Before touching the laser beam:
 	if the player encloses the gravity boots:
 		say "An alarm sounds, [if the vault hatch is open]hatch slams shut, [end if]and a synthesized voice says 'Laser scan detects unauthorized materiel removal.'";
 		now the vault hatch is closed;
+		now the laser alarmed is true;
 	otherwise:
 		say "The laser beam is intangible.";
 	stop the action.
