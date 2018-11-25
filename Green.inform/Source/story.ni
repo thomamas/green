@@ -11,10 +11,8 @@
 [
 	TODO:
 		is plugs and sockets too complicated?
-		order of three pod bay sub-puzzles? or all visible at once on display.
 		more story bits
-		work on help.
-		scene-based points???
+		Review help
 ]
 
 Book 1 - Setup
@@ -294,126 +292,8 @@ Instead of climbing a forest:
 	otherwise:
 		say "You can't get a good grip."
 
-Chapter 10 - Help
 
-Help disabled is a truth state that varies. Help disabled is false.
-
-Getting help is an action applying to nothing.
-
-Disabling help is an action out of world applying to nothing.
-
-Carry out disabling help:
-	if help disabled is true, say "Hints are already disabled." instead;
-	say "Disabling hints is irreversible.[paragraph break]Are you sure? >";
-	if the player consents:
-		say "Ok. Hints are now disabled.";
-		now help disabled is true;
-	otherwise:
-		say "Ok. Hints remain available.";
-
-Understand "help" or "hint" or "hints" as getting help.
-
-Understand "help off" or "hint off" or "hints off" as disabling help.
-
-[ todo -- look at wording & level of detail ]
-[ todo -- make progressive? ]
-
-Instead of getting help when help disabled is true:
-	say "You have disabled hints, but don't despair. It is still impossible to put this game into an unwinnable state, so feel free to explore and experiment."
-
-After the player getting help for the first time:
-	say
-		"By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.[paragraph break]"
-		,
-		"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
-		,
-		"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
-		note "If you prefer not to be tempted by further hints, you can type 'hints off' to disable them."
-
-Carry out getting help when Beginning is happening:
-	say "Your goal is simply to leave the station and find other people. You can start by looking around and leaving your initial location."
-
-Carry out getting help when Ready to Repair is happening:
-	say "It's time to leave the station, but you need to explore a little more.";
-
-To decide what number is the open pod repair count:
-	let n be 0;
-	if Repairing Red Breaker is happening, increment n;
-	if Repairing Green Breaker is happening, increment n;
-	if Repairing Atmosphere pump is happening, increment n;
-	decide on n.
-
-Carry out getting help when Repairing Pod Bay is happening:
-	if the status display is not examined:
-		say "You need to fix some things. Check out the status display in Pod Control.";
-	otherwise:
-		let c be the open pod repair count;
-		if c is greater than one, say "You need to fix [c in words] things:[paragraph break]";
-		let i be 1;
-		if Repairing Red Breaker is happening:
-			say "[if c > 1] [i]. [end if][red breaker help][unless c is i][line break][end if]";
-			increment i;
-		if Repairing Green Breaker is happening:
-			say "[if c > 1] [i]. [end if][green breaker help][unless c is i][line break][end if]";
-			increment i;
-		if Repairing Atmosphere Pump is happening:
-			say "[if c > 1] [i]. [end if][pump help][unless c is i][line break][end if]";
-
-To say pump help:
-	if the atmosphere pump is functional and the atmosphere pump is open:
-		say "The status display has some clear directions®.";
-	else:
-		say "Now might be a good time to try out the scanner.";
-	[ todo - maybe if learning machine was scored, know about scanner? ]
-
-To say green breaker help:
-	say "Reset a circuit breaker somewhere in Sector 2.";
-
-To say red breaker help:
-	if Center Platform is visited:
-		say "Just turn the red breaker on.";
-	else if the gravity boots are scored:
-		say "You have found what you need to reset the circuit breaker, so go figure out where to use it.";
-	else if the laser alarmed is true: [ i.e., you have tried but not yet succeeded to remove to boots ]
-		say eraser help;
-	else if the supply vault is visited:
-		say "You have seen what you need to reset the circuit breaker.";
-	else:
-		say "Explore a bit more.";
-
-To say eraser help:
-	if eraser hit is true:
-		say "You seem to have figured out the trick to avoiding the alarm.";
-	else if the eraser is dusty:
-		say "You have completed the necessary preparation to avoid the alarm.";
-	else if School is visited:
-		say "You have found what you need to evade the alarm, but it still needs some preparation.";
-	else:
-		say "You need to evade the alarm, but first explore a bit more.";
-
-Carry out getting help when 	Between Repairs is happening:
-	[ todo - has door been tried since this scene began? ]
-	if S1H1 is open:
-		say "Pod Control acts as an airlock.";
-	otherwise:
-		say "There's no point in waiting. You just need to enter the pod bay."
-
-Carry out getting help when Repairing Comms is happening: [todo]
-	unless communications unit is handled:
-		say "Find the emergency communications unit.";
-	else unless audio and communications are connected:
-		say "You will need to connect the communications unit to an audio unit.";
-	else unless audio unit is functional:
-		say "Repair the audio unit. The scanner might help here.";
-	else if audio unit is open:
-		say "Close the audio unit.";
-	else:
-		say "Just wait."
-		
-Carry out getting help when The End is happening:
-	say "Just wait."
-
-Chapter 11 - About
+Chapter 10 - About
 
 Requesting the credits is an action out of world and applying to nothing.
 
@@ -433,7 +313,7 @@ Carry out requesting the credits:
 		,
 		"This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type]).".
 
-Chapter 12 - Machines, Components, Scanning, etc
+Chapter 11 - Machines, Components, Scanning, etc
 
 Section 1 - Components
 
@@ -480,7 +360,7 @@ Section 2 - Machines
 
 [ Machinelike things get a default response to scanner actions. ]
 
-Something can be machinelike. Things are usually not machinelike.
+Something can be machinelike. Things are usually not machinelike. Things can be scanned.
 
 Instead of the scanner opening something that is machinelike:
 	computerize "Machine is unitary.";
@@ -491,7 +371,12 @@ Instead of scanning something that is machinelike:
 
 [ Real machines ]
 
-A machine is a kind of container. A machine is usually closed and unopenable and fixed in place.
+A machine is a kind of container. A machine is usually closed and unopenable and fixed in place. A machine can be scanned.
+
+To decide if any machine is scanned:
+	repeat with x running through machines:
+		if x is scanned, decide yes;
+	decide no.
 
 Before inserting something (called s) into a machine (called m):
 	if s is not a component:
@@ -515,6 +400,7 @@ To say the machine status of (m - a machine):
 		say "failed";
 
 Instead of scanning a machine (called m):
+	now m is scanned;
 	computerize "Machine is [the machine status of m].";
 
 [ quiet is from example 357, like scenery but will still print info if opened ]
@@ -534,8 +420,13 @@ Section 3 - Scanner and Scanning
 Include Inanimate Listeners by Emily Short.
 
 Scanning is an action applying to one thing.
+Scanning it with is an action applying to two things.
 
 Understand "scan [something]" as scanning.
+Understand "scan [something] with [the scanner]" as scanning it with.
+
+Carry out scanning it with:
+	Try scanning the noun instead.
 
 Before scanning:
 	unless the scanner is at hand, stop the action.
@@ -614,6 +505,8 @@ Instead of the scanner scanning or examining something:
 	try the player scanning the noun;
 	rule succeeds.
 
+Scanner opened something is a truth state that varies. Scanner opened something is false.
+
 Instead of the scanner opening something (called m):
 	if m is a component:
 		computerize "Component is unitary.";
@@ -623,6 +516,7 @@ Instead of the scanner opening something (called m):
 		otherwise if m is open:
 			computerize "Machine is already open.";
 		otherwise:
+			now scanner opened something is true;
 			computerize "Opening.";
 			say "[The m] swings open.";
 			now the m is open;
@@ -707,7 +601,7 @@ A power module is a kind of component.
 An instruction module is a kind of component.
 A pressure regulation module is a kind of component. Understand "regulator" as a pressure regulation module.
 
-Chapter 13 - The Player
+Chapter 12 - The Player
 
 The player is female. The carrying capacity of the player is 3.
 
@@ -752,7 +646,7 @@ Instead of taking inventory:
 		say "[line break][Our] jumpsuit pocket contains:[line break]";
 		list the contents of the pocket, with newlines, indented, including contents, giving inventory information, with extra indentation.
 
-Chapter 14 - Actions
+Chapter 13 - Actions
 
 Section 1 - Remove Some Actions
 
@@ -850,7 +744,7 @@ Carry out playing:
 	set pronouns from the noun;
 	say "[regarding the noun]You don't know how to play [those]."
 
-Chapter 15 - Testing - Not for release
+Chapter 14 - Testing - Not for release
 
 Include Object Response Tests by Juhana Leinonen.
 
@@ -939,10 +833,6 @@ Every turn during Between Repairs:
 
 Section 5 - Repairing Comms
 
-[
-	TODO: break this down into smaller scenes like repairing Pod Bay
-]
-
 Repairing Comms is a scene. "This is troubling. You counted. You were sure there would be one pod left. There are none."
 Repairing Comms begins when the player is in Pod Bay for the first time.
 Repairing Comms ends when The End begins.
@@ -978,7 +868,144 @@ Every turn during The End:
 			"'We can have a pod there in about one hundred minutes.'[no line break]";
 		end the story finally saying "You are not alone.";
 
-Book 3 - The Ring
+Book 3 - Hints
+
+Section 0 - Setup
+
+Help disabled is a truth state that varies. Help disabled is false.
+
+Understand "help" or "hint" or "hints" as getting help.
+Getting help is an action applying to nothing.
+
+Understand "help off" or "hint off" or "hints off" or "disable help/hint/hints" as disabling help.
+Disabling help is an action out of world applying to nothing.
+
+Instead of getting help when help disabled is true:
+	say "You have disabled hints, but don't despair. It is still impossible to put this game into an unwinnable state, so feel free to explore and experiment."
+
+Before the player getting help for the first time:
+	if help disabled is false:
+		say "Your objective is simply to leave the station and find other people."
+
+After the player getting help for the first time:
+	say
+		"By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.[paragraph break]"
+		,
+		"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
+		,
+		"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
+		note "If you prefer not to be tempted by further hints, you can type 'hints off' to disable them."
+
+Carry out disabling help:
+	if help disabled is true, say "Hints are already disabled." instead;
+	say "Disabling hints is irreversible.[paragraph break]Are you sure? >";
+	if the player consents:
+		say "Ok. Hints are now disabled.";
+		now help disabled is true;
+	otherwise:
+		say "Ok. Hints remain available.";
+
+Section 1 - Beginning
+
+Carry out getting help when Beginning is happening:
+	say "You can start by looking around and leaving your initial location."
+
+Section 2 - Ready to Repair
+
+Carry out getting help when Ready to Repair is happening:
+	say "It's time to leave the station, but you need to explore a little more.";
+
+To decide what number is the open pod repair count:
+	let n be 0;
+	if Repairing Red Breaker is happening, increment n;
+	if Repairing Green Breaker is happening, increment n;
+	if Repairing Atmosphere pump is happening, increment n;
+	decide on n.
+
+Carry out getting help when Repairing Pod Bay is happening:
+	if the status display is not examined:
+		say "You need to repair some things. Check out the status display in Pod Control.";
+	otherwise:
+		let c be the open pod repair count;
+		if c is greater than one, say "You need to repair [c in words] things, so you get [c in words] hints:[paragraph break]";
+		if Repairing Red Breaker is happening, say "[if c > 1]  • [end if][red breaker help]";
+		if Repairing Green Breaker is happening, say "[if c > 1]  • [end if][green breaker help]";
+		if Repairing Atmosphere Pump is happening, say "[if c > 1]  • [end if][pump help]";
+
+To say pump help:
+	if the atmosphere pump is functional:
+		if the atmosphere pump is open:
+			say "The status display has some clear directions.";
+		else:
+			say "Now this is strange."; [* this should not happen because the scene will have ended ]
+	else:
+		unless any machine is scanned:
+			say "Now might be a good time to try out the scanner.";
+		else unless scanner opened something is true:
+			say "Scanning isn't the only thing that the scanner can do.";
+		else unless any component is scanned:
+			say "You an also scan components.";
+		else unless the player encloses a functional scanned power module and the player encloses a functional scanned pressure regulation module:
+			say "You still need to identify some components.";
+		else:
+			say "Put appropriate functional components into the pump."
+
+To say green breaker help:
+	say "Reset a circuit breaker somewhere in Sector 2.";
+
+To say red breaker help:
+	if Center Platform is visited:
+		say "Just turn the red breaker on.";
+	else if the gravity boots are scored:
+		say "You have found what you need to reset the circuit breaker, so go figure out where to use it.";
+	else if the laser alarmed is true: [ i.e., you have tried but not yet succeeded to remove to boots ]
+		say eraser help;
+	else if the supply vault is visited:
+		say "You have seen what you need to reset the circuit breaker.";
+	else:
+		say "Explore a bit more.";
+
+To say eraser help:
+	if eraser hit is true:
+		say "You seem to have figured out the trick to avoiding the alarm.";
+	else if the eraser is dusty:
+		say "You have completed the necessary preparation to avoid the alarm.";
+	else if School is visited:
+		say "You have found what you need to evade the alarm, but it still needs some preparation.";
+	else:
+		say "You need to evade the alarm, but first explore a bit more.";
+
+Section 3 - Between Repairs
+
+Carry out getting help when 	Between Repairs is happening:
+	[ todo - has door been tried since this scene began? ]
+	if S1H1 is open:
+		say "Pod Control acts as an airlock.";
+	else if atmosphere pump is open:
+		say "The status display has some clear directions.";
+	otherwise:
+		say "There's no point in waiting. You just need to enter the pod bay."
+
+Section 4 - Repairing Comms
+
+Carry out getting help when Repairing Comms is happening: [todo]
+	unless communications unit is handled:
+		say "Find the emergency communications unit.";
+	else unless audio and communications are connected:
+		say "Connect the communications unit to an audio source.";
+	else unless audio unit is functional:
+		say "Repair the audio unit.";
+	else if audio unit is open:
+		say "Close the audio unit.";
+	else:
+		say "Just wait."
+
+Section 5 - The End
+
+Carry out getting help when The End is happening:
+	say "Just wait."
+
+Book 4 - The Ring
 
 Chapter 1 - Sector 1
 
@@ -1012,7 +1039,7 @@ A space suit is scenery in Pod Control. It is machinelike. It has description "F
 Before doing anything other than examining or scanning to the space suit:
 	say "All of the seals are shot, so the suit won't be useful.";
 	stop the action.
-	
+
 Instead of scanning the space suit, computerize "Machine is failed."
 
 A status display is a machine in Pod Control. It is scenery. It is not openable. The status display can be examined.
@@ -1040,6 +1067,7 @@ Instead of examining the status display: [todo - shorten lines?]
 The atmosphere pump is a machine in the Pod Control. It is openable. It is quiet. It has carrying capacity 2. It has description "[If the atmosphere pump is functional and the atmosphere pump is not open]The featureless atmosphere pump is softly humming.[otherwise]The atmosphere pump is a smooth featureless machine." Understand "machine" and "machinery" as the atmosphere pump.
 
 Instead of scanning the atmosphere pump when the atmosphere pump is functional and the atmosphere pump is closed:
+	now the atmosphere pump is scanned;
 	computerize "Machine is functional and operating."
 
 There is a faulty power module in the atmosphere pump.
@@ -1049,6 +1077,11 @@ To decide if (m - the atmosphere pump) is functional:
 	unless there is a functional power module in the atmosphere pump, decide no;
 	unless there is a functional pressure regulation module in the atmosphere pump, decide no;
 	decide yes.	
+
+Atmosphere pump ever opened is a truth state that varies. Atmosphere pump ever opened is false.
+
+After the scanner opening the atmosphere pump:
+	now atmosphere pump ever opened is true.
 
 After closing the atmosphere pump when the atmosphere pump is functional:
 	say "You close the atmosphere pump and it begins to hum.";
@@ -1114,6 +1147,7 @@ Every turn when the player is in Pod Bay for the first time:
 An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit with a single socket to connect it to a transit pod or other audio source." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket called the almond socket.
 
 Instead of scanning the communications unit:
+	now the communications unit is scanned;
 	if audio and communications are connected:
 		computerize "Machine functional. Input and output connected.";
 	else if organ and communications are connected:
@@ -1204,6 +1238,7 @@ Instead of going nowhere in church when the noun is starboard, try going outside
 The organ is scenery in Church. It is a machine. It has description "It's really just a keyboard in a fancy box with a socket to connect it to an audio unit." It has indefinite article "the". Understand "keyboard" as the organ. The organ can be played. Incorporated by the organ is a usb socket called the tan socket.
 
 Instead of scanning the organ: [ organ is always functional ]
+	now the organ is scanned;
 	if audio and organ are connected and the audio unit is functional:
 		computerize "Machine functional. Output connected.";
 	else if organ and communications are connected:
@@ -1231,6 +1266,7 @@ Incorporated by the audio unit is a usb socket called the beige socket.
 There is a faulty power module in the audio unit.
 
 Instead of scanning the audio unit:
+	now the audio unit is scanned;
 	unless the audio unit is functional:
 		computerize "Machine failed.";
 	else if audio and organ are connected:
