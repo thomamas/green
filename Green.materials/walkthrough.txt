@@ -52,3 +52,4 @@ scanner, open audio
 get power module from audio
 put functional power into audio
 close audio
+z

@@ -12,7 +12,6 @@
 	TODO:
 		is plugs and sockets too complicated?
 		more story bits
-		ending text
 ]
 
 Book 1 - Setup
@@ -30,14 +29,13 @@ But maybe it isn’t hopeless. There must still be other people in other worlds,
 Today is the day."
 
 When play begins:
-	say "[the story description][paragraph break]";
-	now exit listing is enabled.
+	say "[the story description][paragraph break]"
 
 Release along with cover art ("A space station."),
 	an interpreter,
 	the introductory booklet,
 	the library card,
-	a file of "Story Map" called "Map.pdf",
+	[ a file of "Story Map" called "Map.pdf", ]
 	and a "Local" website.
 
 Chapter 2 - Scoring
@@ -89,6 +87,9 @@ Include Unicode Character Names by Graham Nelson.
 
 Include Exit Lister by Eric Eve.
 
+When play begins:
+	now exit listing is enabled.
+
 The explain exit listing rule does nothing.
 
 Report ExitListing when listing explained is false:
@@ -108,7 +109,8 @@ Include Plugs and Sockets by Sean Turner
 
 [ A. adapt to missing Plurality by Emily Short ]
 
-To say it-them of (s - something): say "it".
+To say it-them of (s - something):
+	say "[regarding s][them]".
 
 [ B.  Suppress the list of attachments for sockets because this is too ugly:
 		
@@ -288,57 +290,81 @@ Instead of climbing a forest:
 
 Chapter 10 - Help
 
+Help disabled is a truth state that varies. Help disabled is false.
+Help explained is a truth state that varies. Help explained is false.
+
 Getting help is an action applying to nothing.
 
-Understand "help" or "hint" as getting help.
+Disabling help is an action out of world applying to nothing.
 
-[ todo -- hints off command? ]
+Carry out disabling help:
+	if help disabled is true, say "Hints are already disabled." instead;
+	say "Disabling hints is irreversible.[paragraph break]Are you sure? >";
+	if the player consents:
+		say "Ok. Hints are now disabled.";
+		now help disabled is true;
+	otherwise:
+		say "Ok. Hints remain available.";
+
+Understand "help" or "hint" or "hints" as getting help.
+
+Understand "help off" or "hint off" or "hints off" as disabling help.
+
 [ todo -- look at wording & level of detail ]
 [ todo -- make progressive? ]
 
-Carry out getting help:
-	if Beginning is happening:
-		say
-			"Your goal is simply to leave the station and find other people. You can start by looking around and leaving your initial location.[paragraph break]"
-			,
-			"By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.[paragraph break]"
-			,
-			"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
-			,
-			"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
-	otherwise if Ready to Repair is happening:
-		if Pod Control is not visited:
-			say "It's time to leave the station, but you need to explore a little more.";
-		otherwise if the status display is not examined:
-			say "You need to fix something. Check out the status display in Pod Control.";
-		otherwise:
-			if the red circuit breaker is switched off:
-				say "According to the status display, you need to check out a circuit breaker on the hub platform.";
-				[ todo - progressive hints ? climb, boots (not seen, seen, tried to take, eraser, etc. if not scored), etc.]
-			else if the green circuit breaker is switched off:
-				say "According to the status display, you need to check out a circuit breaker somewhere in Sector 2.";
-			else unless the atmosphere pump is functional:
-				say "According to the status display, you need to fix the atmosphere pump. Now might be a good time to check out the scanner.";
-				[ todo - if learning machine was scored, then maybe tyr something else]
-			else if the atmosphere pump is open:
-				say "You're almost there. The status display is fairly clear about what you need to do now.";
-			else if S1H1 is open:
-				say "Pod Control acts as an airlock.";
-			else:
-				say "You just need to enter the pod bay now.";
-	otherwise if Anxious to Leave is happening:
-		say "There's no point in waiting. You just need to enter the pod bay now.";
-	otherwise if Pod Problems is happening:
-		unless communications unit is handled:
-			say "Take a look at the communications unit.";
-		else unless audio and communications are connected:
-			say "You will need to attach the communications unit to an audio unit.";
-		else unless audio unit is functional:
-			say "Repair the audio unit.";
-		else if audio unit is open:
-			say "Close the audio unit.";
+Instead of getting help when help disabled is true:
+	say "You have disabled hints, but don't despair. It is still impossible to put this game into an unwinnable state, so feel free to explore and experiment."
+
+After the player getting help:
+	say
+		"By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.[paragraph break]"
+		,
+		"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
+		,
+		"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
+	unless help explained is true:
+		note "If you prefer not to be tempted by further hints, you can type 'hints off' to disable them.";
+		now help explained is true.
+
+Carry out getting help when Beginning is happening:
+	say "Your goal is simply to leave the station and find other people. You can start by looking around and leaving your initial location."
+
+Carry out getting help when Ready to Repair is happening:
+	if Pod Control is not visited:
+		say "It's time to leave the station, but you need to explore a little more.";
+	otherwise if the status display is not examined:
+		say "You need to fix something. Check out the status display in Pod Control.";
+	otherwise:
+		if the red circuit breaker is switched off:
+			say "According to the status display, you need to reset a circuit breaker on the hub platform.";
+			[ todo - progressive hints ? climb, boots (not seen, seen, tried to take, eraser, etc. if not scored), etc.]
+		else if the green circuit breaker is switched off:
+			say "According to the status display, you need to rest a circuit breaker somewhere in Sector 2.";
+		else unless the atmosphere pump is functional:
+			say "According to the status display, you need to fix the atmosphere pump. Now might be a good time to check out the scanner.";
+			[ todo - if learning machine was scored, then maybe tyr something else]
+		else if the atmosphere pump is open:
+			say "You're almost there. The status display is fairly clear about what you need to do now.";
+		else if S1H1 is open:
+			say "Pod Control acts as an airlock.";
 		else:
-			say "You really should have won by now."; [ HELP ]
+			say "You just need to enter the pod bay now."
+
+Carry out getting help when 	Anxious to Leave is happening:
+	say "There's no point in waiting. You just need to enter the pod bay."
+
+Carry out getting help when Pod Problems is happening:
+	unless communications unit is handled:
+		say "Take a look at the communications unit.";
+	else unless audio and communications are connected:
+		say "You will need to attach the communications unit to an audio unit.";
+	else unless audio unit is functional:
+		say "Repair the audio unit.";
+	else if audio unit is open:
+		say "Close the audio unit.";
+	else:
+		say "You really should have won by now." [ HELP ]
 
 Chapter 11 - About
 
@@ -347,7 +373,7 @@ Requesting the credits is an action out of world and applying to nothing.
 Understand "about" or "credits" as requesting the credits.
 	
 After printing the banner text rule:
-	say "Type 'about' for credits and more information.";
+	say "Type 'about' for credits or 'help' for assistance.";
 	
 Carry out requesting the credits:
 	say	"[bold type]About Founder's Mercy[roman type][line break]"
@@ -391,7 +417,6 @@ Before printing the plural name of a component (called c), say the qualifier of 
 Before printing the name of a component (called c) while not examining, say the qualifier of c.
 
 Before printing the name of a component (called c) while examining, unless the noun is a component, say the qualifier of c.
-
 
 Understand the status property as describing a component when the item described is scanned.
 Understand "unscanned" as a component when the item described is not scanned.
@@ -685,6 +710,21 @@ Understand the command "wake" as something new. [ too self-referential ]
 Understand the command "buy" as something new. [ no money in this game ]
 Understand the command "lock" as something new.
 Understand the command "unlock" as something new.
+Understand the command "sorry" as something new.
+
+[ this is a lot of trouble just to get rid of consulting it about ]
+
+Understand the command "look" as something new.
+Understand "look" as looking.
+Understand "look at [something]" as examining.
+Understand "look [something]" as examining.
+Understand "look inside/in/into/through [something]" as searching.
+Understand "look under [something]" as looking under.
+
+Understand the command "read" as something new.
+Understand "read [something]" as examining.
+
+Understand the command "consult" as something new.
 
 Section 2 - Modify Some Default Responses
 
@@ -791,6 +831,9 @@ Carry out commenting on the transcript: say "(Noted.)"
 
 Book 2 - Scenes
 
+To decide what number is the total minutes of (t - a time):
+	decide on the minutes part of t plus 60 times the hours part of t;
+
 To decide if all sectors are visited:
 	Repeat with r running through rooms in Main Level:
 		if r is not visited, decide no;
@@ -798,7 +841,11 @@ To decide if all sectors are visited:
 
 Beginning is a scene. Beginning begins when play begins. Beginning ends when Ready to Repair begins. Beginning ends when Anxious to Leave begins.
 
-Ready to Repair is a scene. "You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave. The pods are below Sector 1." Ready to Repair begins when all sectors are visited for the first time and Anxious to Leave has not happened. Ready to Repair ends when Anxious to Leave begins.
+Ready to Repair is a scene. "You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave. The pods are below Sector 1."
+
+Ready to Repair begins when all sectors are visited for the first time and Anxious to Leave has not happened.
+
+Ready to Repair ends when Anxious to Leave begins.
 
 Anxious to Leave is a scene. "It is time to say goodbye to the station. You are ready to leave in a pod." Anxious to Leave begins when the pod bay is ready for the first time.
 
@@ -807,20 +854,41 @@ Every turn during Anxious to Leave:
 	if t is greater than 0 and the remainder after dividing t by 10 is 0:	
 		say "There is nothing left for you here. It's time to take a pod and leave."
 
-[ todo -- periodically remind player to check the status display if they have seen it. ]
-
 Anxious to Leave ends when Pod Problems begins.
 
 Pod Problems is a scene. "This is troubling. You counted. You were sure there would be one pod left. There are none." Pod Problems begins when the player is in Pod Bay for the first time.
 
 Every turn during Pod Problems:
-	let t be the minutes part of time since Pod Problems began plus 60 times the hours part of time since Pod Problems began;
+	let t be the total minutes of time since Pod Problems began;
 	if t is 3:
 		say "No pods left ... you consider despair.";
 	if t is 5:
 		say "So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working."
 
-[ todo -- some sort of periodic reminder ]
+[ todo -- more messages ?]
+
+Pod Problems ends when The End begins.
+
+The End is a scene. The End begins when the communications unit is usable for the first time.
+
+When The End begins:
+	increase the score by 10;
+	say	"The audio unit beeps and a synthesized voice says 'Comms ready.'[paragraph break]",
+		"After a moment, it says 'Launching automatic help routine.'[paragraph break]",
+		"[the command prompt][no line break]";
+
+Every turn during The End:
+	let t be the total minutes of time since The End began;
+	if t is greater than zero and the communications unit is usable and the communications unit is visible:
+		say
+			"You hear a human voice from the audio unit: 'OV-6268 calling RWSS [italic type]Founder's Glory[roman type]...[paragraph break]"
+			,
+			"'There's really somebody there? We thought your station had been abandoned for kilodays...[paragraph break]"
+			,
+			"'Standby...[paragraph break]"
+			,
+			"'We can have a pod there in a couple of hours.'[no line break]";
+		end the story finally saying "You are not alone.";
 
 Book 3 - The Ring
 
@@ -960,7 +1028,7 @@ Every turn when the player is in Pod Bay for the first time:
 
 [ communications unit ]
 
-A communications unit is here. "Someone left a communications unit on the floor." It is a not fixed in place machine. It has description "A portable communications unit with a single socket to connect it to an audio unit." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket called the cream socket.
+An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit with a single socket to connect it to a transit pod or other audio source." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket called the cream socket.
 
 Instead of scanning the communications unit:
 	if audio and communications are connected:
@@ -969,12 +1037,6 @@ Instead of scanning the communications unit:
 		computerize "Machine functional. Connection mismatch.";
 	else:
 		computerize "Machine functional. No output available.";
-
-Every turn when the communications unit is usable:
-	increase the score by 10;
-	say "The audio unit beeps and a synthesized voice says 'Comms ready.'[paragraph break]",
-		"You call for help. I need to write this bit.[no line break]";
-	end the story finally saying "You win."; [todo]
 
 Instead of going nowhere from Pod Bay:
 	if the noun is outside:
