@@ -16,7 +16,7 @@ Today is the day.
 Founder's Mercy
 A Space Story by Thomas Insel
 Release 1 / Serial number 181125 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
-Type "about" for credits or "help" for assistance.
+Type "about" for credits or "hint" for assistance.
 
 Home
 The room where you've slept your entire life. You can go out towards the crops.
@@ -46,6 +46,7 @@ There is a secured hatch in the floor.
 &gt;</commentary>
         <children><child nodeId="node-31140"></child>
             <child nodeId="node-26581"></child>
+            <child nodeId="node-31855"></child>
             <child nodeId="node-31436"></child>
             <child nodeId="node-31229"></child>
             <child nodeId="node-31308"></child>
@@ -4103,7 +4104,8 @@ Scene 'Repairing Atmosphere Pump' playing (for 11 mins now)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-31340"></child>
+        <children><child nodeId="node-31893"></child>
+            <child nodeId="node-31340"></child>
         </children>
     </item>
     <item nodeId="node-31340">
@@ -4586,9 +4588,146 @@ There is a secured hatch in the ground.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-31893">
+        <command xml:space="preserve">gonear hatch</command>
+        <result xml:space="preserve">(the floor hatch)
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31894"></child>
+        </children>
+    </item>
+    <item nodeId="node-31894">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">You have been well-trained, because the hatch in the floor is secured shut.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31895"></child>
+        </children>
+    </item>
+    <item nodeId="node-31895">
+        <command xml:space="preserve">loo</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31896"></child>
+        </children>
+    </item>
+    <item nodeId="node-31896">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31897"></child>
+        </children>
+    </item>
+    <item nodeId="node-31897">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31898"></child>
+        </children>
+    </item>
+    <item nodeId="node-31898">
+        <command xml:space="preserve">x crops</command>
+        <result xml:space="preserve">Greens, carrots, and potatoes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31899"></child>
+        </children>
+    </item>
+    <item nodeId="node-31899">
+        <command xml:space="preserve">x carrots</command>
+        <result xml:space="preserve">Greens, carrots, and potatoes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31900"></child>
+        </children>
+    </item>
+    <item nodeId="node-31900">
+        <command xml:space="preserve">get carrots</command>
+        <result xml:space="preserve">They're hardly portable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31901"></child>
+        </children>
+    </item>
+    <item nodeId="node-31901">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31902"></child>
+        </children>
+    </item>
+    <item nodeId="node-31902">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181125 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits or "hint" for assistance.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31903"></child>
+        </children>
+    </item>
+    <item nodeId="node-31903">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31904"></child>
+        </children>
+    </item>
+    <item nodeId="node-31904">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-31462">
         <command xml:space="preserve">hint</command>
-        <result xml:space="preserve">Your goal is simply to leave the station and find other people. You can start by looking around and leaving your initial location.
+        <result xml:space="preserve">Your objective is simply to leave the station and find other people.
+
+You can start by looking around and leaving your initial location.
 
 By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.
 
@@ -4596,13 +4735,30 @@ If you are having trouble getting started, I suggest reading A Beginner's Guide 
 
   https://brasslantern.org/players/howto/beginnersguide.html
 
-[If you prefer not to be tempted by further hints, you can type "hints off" to disable them.]
+[You can type "hint" any time if you need assistance. If you prefer not to be tempted, you can type "hints off" to disable hints.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-31463"></child>
             <child nodeId="node-31568"></child>
+            <child nodeId="node-31852"></child>
         </children>
+    </item>
+    <item nodeId="node-31852">
+        <command xml:space="preserve">hints off</command>
+        <result xml:space="preserve">Disabling hints is irreversible.
+
+Are you sure? &gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31853"></child>
+        </children>
+    </item>
+    <item nodeId="node-31853">
+        <command xml:space="preserve">no</command>
+        <result xml:space="preserve">Ok. Hints remain available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-31568">
         <command xml:space="preserve">gonear scanner</command>
@@ -4905,6 +5061,58 @@ Beside the secured port hatch, a status display shows an error message.
   • Explore a bit more.
   • Reset a circuit breaker somewhere in Sector 2.
   • Now might be a good time to try out the scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31848"></child>
+        </children>
+    </item>
+    <item nodeId="node-31848">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31849"></child>
+        </children>
+    </item>
+    <item nodeId="node-31849">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181125 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits or "help" for assistance.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31850"></child>
+        </children>
+    </item>
+    <item nodeId="node-31850">
+        <command xml:space="preserve">help</command>
+        <result xml:space="preserve">Your objective is simply to leave the station and find other people.
+
+You can start by looking around and leaving your initial location.
+
+By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.
+
+If you are having trouble getting started, I suggest reading A Beginner's Guide to Interactive Fiction by Stephen Granade and Emily Short, available at:
+
+  https://brasslantern.org/players/howto/beginnersguide.html
+
+[If you prefer not to be tempted by further hints, you can type "hints off" to disable them.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -7416,7 +7624,13 @@ The emergency communications unit has nothing plugged into it.
     </item>
     <item nodeId="node-31279">
         <command xml:space="preserve">hint</command>
-        <result xml:space="preserve">According the the status display, you need to reset a circuit breaker on the hub platform.
+        <result xml:space="preserve">Your objective is simply to leave the station and find other people.
+
+You need to make three repairs, so you get three hints:
+
+  • Explore a bit more.
+  • Reset a circuit breaker somewhere in Sector 2.
+  • Now might be a good time to try out the scanner.
 
 By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.
 
@@ -7424,7 +7638,7 @@ If you are having trouble getting started, I suggest reading A Beginner's Guide 
 
   https://brasslantern.org/players/howto/beginnersguide.html
 
-[If you prefer not to be tempted by further hints, you can type "hints off" to disable them.]
+[You can type "hint" any time for contextual assistance. If you prefer not to be tempted, you can type "hints off" to disable hints.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -7433,11 +7647,16 @@ If you are having trouble getting started, I suggest reading A Beginner's Guide 
     </item>
     <item nodeId="node-31280">
         <command xml:space="preserve">hint</command>
-        <result xml:space="preserve">According the the status display, you need to reset a circuit breaker on the hub platform.
+        <result xml:space="preserve">You need to make three repairs, so you get three hints:
+
+  • Explore a bit more.
+  • Reset a circuit breaker somewhere in Sector 2.
+  • Now might be a good time to try out the scanner.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-31281"></child>
+        <children><child nodeId="node-31869"></child>
+            <child nodeId="node-31281"></child>
         </children>
     </item>
     <item nodeId="node-31281">
@@ -7701,6 +7920,275 @@ You can also see some pair of gravity boots here.
         <result xml:space="preserve">According the the status display, you need to reset a circuit breaker on the hub platform.
 
 You have touched what you need, but you need to figure out how to get it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-31869">
+        <command xml:space="preserve">scanner, scan pump</command>
+        <result xml:space="preserve">Machine is failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31870"></child>
+        </children>
+    </item>
+    <item nodeId="node-31870">
+        <command xml:space="preserve">hint</command>
+        <result xml:space="preserve">You need to make three repairs, so you get three hints:
+
+  • Explore a bit more.
+  • Reset a circuit breaker somewhere in Sector 2.
+  • Scanning isn't the only thing that the scanner can do.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31871"></child>
+        </children>
+    </item>
+    <item nodeId="node-31871">
+        <command xml:space="preserve">scanner, open pump</command>
+        <result xml:space="preserve">Opening.
+
+The atmosphere pump swings open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31872"></child>
+        </children>
+    </item>
+    <item nodeId="node-31872">
+        <command xml:space="preserve">hint</command>
+        <result xml:space="preserve">You need to make three repairs, so you get three hints:
+
+  • Explore a bit more.
+  • Reset a circuit breaker somewhere in Sector 2.
+  • You an also scan modules.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31873"></child>
+        </children>
+    </item>
+    <item nodeId="node-31873">
+        <command xml:space="preserve">x pump</command>
+        <result xml:space="preserve">The atmosphere pump is a smooth featureless machine.
+
+In the atmosphere pump are a power module and a pressure regulation module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31874"></child>
+        </children>
+    </item>
+    <item nodeId="node-31874">
+        <command xml:space="preserve">scanner, scan power</command>
+        <result xml:space="preserve">Component is faulty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31875"></child>
+        </children>
+    </item>
+    <item nodeId="node-31875">
+        <command xml:space="preserve">scanner, scan pressure</command>
+        <result xml:space="preserve">Component is faulty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31876"></child>
+        </children>
+    </item>
+    <item nodeId="node-31876">
+        <command xml:space="preserve">hint</command>
+        <result xml:space="preserve">You need to make three repairs, so you get three hints:
+
+  • Explore a bit more.
+  • Reset a circuit breaker somewhere in Sector 2.
+  • You still need to find some modules.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31877"></child>
+        </children>
+    </item>
+    <item nodeId="node-31877">
+        <command xml:space="preserve">purloin all modules</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31878"></child>
+        </children>
+    </item>
+    <item nodeId="node-31878">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  an unscanned pressure regulation module
+  two unscanned instruction modules
+  two unscanned power modules
+  a faulty pressure regulation module
+  a faulty power module
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31879"></child>
+        </children>
+    </item>
+    <item nodeId="node-31879">
+        <command xml:space="preserve">hint</command>
+        <result xml:space="preserve">You need to make three repairs, so you get three hints:
+
+  • Explore a bit more.
+  • Reset a circuit breaker somewhere in Sector 2.
+  • You still need to identify some modules.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31880"></child>
+        </children>
+    </item>
+    <item nodeId="node-31880">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Pod Control
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31881"></child>
+        </children>
+    </item>
+    <item nodeId="node-31881">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Pod Control
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31882"></child>
+        </children>
+    </item>
+    <item nodeId="node-31882">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Pod Control
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31883"></child>
+        </children>
+    </item>
+    <item nodeId="node-31883">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31884"></child>
+        </children>
+    </item>
+    <item nodeId="node-31884">
+        <command xml:space="preserve">hint</command>
+        <result xml:space="preserve">You need to make three repairs, so you get three hints:
+
+  • Explore a bit more.
+  • Reset a circuit breaker somewhere in Sector 2.
+  • You still need to find some modules.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31885"></child>
+        </children>
+    </item>
+    <item nodeId="node-31885">
+        <command xml:space="preserve">gonear learning</command>
+        <result xml:space="preserve">School
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31886"></child>
+        </children>
+    </item>
+    <item nodeId="node-31886">
+        <command xml:space="preserve">scanner, open learning</command>
+        <result xml:space="preserve">Opening.
+
+The learning machine swings open.
+
+[Your score has just gone up by five points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31887"></child>
+        </children>
+    </item>
+    <item nodeId="node-31887">
+        <command xml:space="preserve">get all from learning</command>
+        <result xml:space="preserve">unscanned power module: Taken.
+unscanned instruction module: Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31888"></child>
+        </children>
+    </item>
+    <item nodeId="node-31888">
+        <command xml:space="preserve">gonear crate</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31889"></child>
+        </children>
+    </item>
+    <item nodeId="node-31889">
+        <command xml:space="preserve">hint</command>
+        <result xml:space="preserve">You need to make three repairs, so you get three hints:
+
+  • You have seen what you need to reset the circuit breaker.
+  • Reset a circuit breaker somewhere in Sector 2.
+  • You still need to find some modules.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31890"></child>
+        </children>
+    </item>
+    <item nodeId="node-31890">
+        <command xml:space="preserve">search crate</command>
+        <result xml:space="preserve">You find an unscanned pressure regulation module.
+(putting the scanner into your pocket to make room)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31891"></child>
+        </children>
+    </item>
+    <item nodeId="node-31891">
+        <command xml:space="preserve">hint</command>
+        <result xml:space="preserve">You need to make three repairs, so you get three hints:
+
+  • You have seen what you need to reset the circuit breaker.
+  • Reset a circuit breaker somewhere in Sector 2.
+  • You still need to identify some modules.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8177,6 +8665,72 @@ Telemetry sensor array offline - reset breaker FM36-87/A @ hub platform
 Launch system cooling loop offline - reset circuit breaker FM29-63/A @ Sector 2
 
 Pod control atmosphere pump offline - scan and repair
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-31855">
+        <command xml:space="preserve">gonear boots</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still a crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see some pair of gravity boots here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31856"></child>
+        </children>
+    </item>
+    <item nodeId="node-31856">
+        <command xml:space="preserve">look in crate</command>
+        <result xml:space="preserve">You find a pressure regulation module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31857"></child>
+        </children>
+    </item>
+    <item nodeId="node-31857">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">You find an instruction module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31858"></child>
+        </children>
+    </item>
+    <item nodeId="node-31858">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">Many miscellaneous parts, none useful.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31859"></child>
+        </children>
+    </item>
+    <item nodeId="node-31859">
+        <command xml:space="preserve">x regulation</command>
+        <result xml:space="preserve">It is a standardized pressure regulation module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-31860"></child>
+        </children>
+    </item>
+    <item nodeId="node-31860">
+        <command xml:space="preserve">showme regulation</command>
+        <result xml:space="preserve">pressure regulation module - pressure regulation module
+location: carried by yourself in Supply Vault
+singular-named, improper-named; unlit, inedible, portable, handled
+list grouping key: none
+printed name: "pressure regulation module"
+printed plural name: "pressure regulation modules"
+indefinite article: none
+description: none
+initial appearance: none
+status: functional
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

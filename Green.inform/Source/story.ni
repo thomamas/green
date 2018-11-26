@@ -300,7 +300,7 @@ Requesting the credits is an action out of world and applying to nothing.
 Understand "about" or "credits" as requesting the credits.
 	
 After printing the banner text rule:
-	say "Type 'about' for credits or 'help' for assistance.";
+	say "Type 'about' for credits or 'hint' for assistance.";
 	
 Carry out requesting the credits:
 	say	"[bold type]About Founder's Mercy[roman type][line break]"
@@ -894,7 +894,7 @@ After the player getting help for the first time:
 		"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
 		,
 		"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
-		note "If you prefer not to be tempted by further hints, you can type 'hints off' to disable them."
+		note "You can type 'hint' any time for contextual assistance. If you prefer not to be tempted, you can type 'hints off' to disable hints."
 
 Carry out disabling help:
 	if help disabled is true, say "Hints are already disabled." instead;
@@ -927,7 +927,7 @@ Carry out getting help when Repairing Pod Bay is happening:
 		say "You need to repair some things. Check out the status display in Pod Control.";
 	otherwise:
 		let c be the open pod repair count;
-		if c is greater than one, say "You need to repair [c in words] things, so you get [c in words] hints:[paragraph break]";
+		if c is greater than one, say "You need to make [c in words] repairs, so you get [c in words] hints:[paragraph break]";
 		if Repairing Red Breaker is happening, say "[if c > 1]  • [end if][red breaker help]";
 		if Repairing Green Breaker is happening, say "[if c > 1]  • [end if][green breaker help]";
 		if Repairing Atmosphere Pump is happening, say "[if c > 1]  • [end if][pump help]";
@@ -944,11 +944,13 @@ To say pump help:
 		else unless scanner opened something is true:
 			say "Scanning isn't the only thing that the scanner can do.";
 		else unless any component is scanned:
-			say "You an also scan components.";
+			say "You an also scan modules.";
+		else unless there is a functional handled power module and there is a functional handled pressure regulation module:
+			say "You still need to find some modules.";
 		else unless the player encloses a functional scanned power module and the player encloses a functional scanned pressure regulation module:
-			say "You still need to identify some components.";
+			say "You still need to scan some modules.";
 		else:
-			say "Put appropriate functional components into the pump."
+			say "Put appropriate functional modules into the pump."
 
 To say green breaker help:
 	say "Reset a circuit breaker somewhere in Sector 2.";
@@ -998,7 +1000,7 @@ Carry out getting help when Repairing Comms is happening: [todo]
 	else if audio unit is open:
 		say "Close the audio unit.";
 	else:
-		say "Just wait."
+		say "Just wait." [* this shouldn't happen either ]
 
 Section 5 - The End
 
@@ -1108,7 +1110,7 @@ After going through the wall hatch:
 	try silently closing the wall hatch;
 	continue the action.
 
-A brass plaque is fixed in place scenery in pod control. It has description "The plaque reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2238, Launched 2241.[line break]    'May His mercy shine upon us.'".
+A brass plaque is fixed in place scenery in pod control. It has description "The plaque reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2238, Launched 2241.[line break]    'May His mercy shine upon us.'"
 
 Section 3 - Pod Bay
 
