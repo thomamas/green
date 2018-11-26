@@ -1,4 +1,4 @@
-"Founder's Mercy" by Thomas Insel
+ "Founder's Mercy" by Thomas Insel
 
 [
 	Copyright © 2018 Thomas Insel <tinsel@tinsel.org>
