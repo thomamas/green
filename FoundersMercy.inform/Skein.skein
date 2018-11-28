@@ -67,6 +67,8 @@ There is a secured hatch in the floor.
             <child nodeId="node-6538"></child>
             <child nodeId="node-6537"></child>
             <child nodeId="node-6443"></child>
+            <child nodeId="node-7986"></child>
+            <child nodeId="node-7967"></child>
             <child nodeId="node-6412"></child>
             <child nodeId="node-6388"></child>
             <child nodeId="node-6386"></child>
@@ -77,6 +79,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-6204"></child>
             <child nodeId="node-6198"></child>
             <child nodeId="node-6154"></child>
+            <child nodeId="node-7984"></child>
             <child nodeId="node-7588"></child>
             <child nodeId="node-6143"></child>
             <child nodeId="node-6135"></child>
@@ -92,6 +95,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-5994"></child>
             <child nodeId="node-5990"></child>
             <child nodeId="node-7167"></child>
+            <child nodeId="node-7768"></child>
             <child nodeId="node-5836"></child>
             <child nodeId="node-5822"></child>
             <child nodeId="node-5814"></child>
@@ -101,8 +105,11 @@ There is a secured hatch in the floor.
             <child nodeId="node-5797"></child>
             <child nodeId="node-5793"></child>
             <child nodeId="node-7483"></child>
+            <child nodeId="node-7886"></child>
             <child nodeId="node-7349"></child>
+            <child nodeId="node-7725"></child>
             <child nodeId="node-7404"></child>
+            <child nodeId="node-7752"></child>
             <child nodeId="node-7368"></child>
             <child nodeId="node-7473"></child>
             <child nodeId="node-7372"></child>
@@ -2898,6 +2905,246 @@ Beside the secured port hatch, a status display shows an error message.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-7752">
+        <command xml:space="preserve">scanner, open hatch</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7755"></child>
+            <child nodeId="node-7780"></child>
+            <child nodeId="node-7774"></child>
+        </children>
+    </item>
+    <item nodeId="node-7774">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">You have been well-trained, because the hatch in the floor is secured shut.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7775"></child>
+        </children>
+    </item>
+    <item nodeId="node-7775">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7776"></child>
+        </children>
+    </item>
+    <item nodeId="node-7776">
+        <command xml:space="preserve">scanner, scan scanner</command>
+        <result xml:space="preserve">Machine is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7777"></child>
+        </children>
+    </item>
+    <item nodeId="node-7777">
+        <command xml:space="preserve">scanner, close hatch</command>
+        <result xml:space="preserve">The scanner is unable to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7778"></child>
+        </children>
+    </item>
+    <item nodeId="node-7778">
+        <command xml:space="preserve">scanner, close hatch</command>
+        <result xml:space="preserve">The scanner is unable to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7780">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7781"></child>
+        </children>
+    </item>
+    <item nodeId="node-7781">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7782"></child>
+        </children>
+    </item>
+    <item nodeId="node-7782">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7783"></child>
+        </children>
+    </item>
+    <item nodeId="node-7783">
+        <command xml:space="preserve">scanner, open hatch</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7784"></child>
+        </children>
+    </item>
+    <item nodeId="node-7784">
+        <command xml:space="preserve">scan hatch with scanner</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7755">
+        <command xml:space="preserve">gonear audio</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7756"></child>
+        </children>
+    </item>
+    <item nodeId="node-7756">
+        <command xml:space="preserve">scanner, open audio</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open, revealing a power module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7757"></child>
+        </children>
+    </item>
+    <item nodeId="node-7757">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Church
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7758"></child>
+        </children>
+    </item>
+    <item nodeId="node-7758">
+        <command xml:space="preserve">open audio</command>
+        <result xml:space="preserve">You will need to use the scanner to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7759"></child>
+        </children>
+    </item>
+    <item nodeId="node-7759">
+        <command xml:space="preserve">open audio with scanner</command>
+        <result xml:space="preserve">Opening.
+
+The audio unit swings open, revealing a power module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7760"></child>
+        </children>
+    </item>
+    <item nodeId="node-7760">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7761"></child>
+        </children>
+    </item>
+    <item nodeId="node-7761">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7762"></child>
+        </children>
+    </item>
+    <item nodeId="node-7762">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7763"></child>
+        </children>
+    </item>
+    <item nodeId="node-7763">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7764"></child>
+        </children>
+    </item>
+    <item nodeId="node-7764">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">That doesn't seem to be something you can unlock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7765"></child>
+        </children>
+    </item>
+    <item nodeId="node-7765">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">That doesn't seem to be something you can unlock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7766"></child>
+        </children>
+    </item>
+    <item nodeId="node-7766">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7767"></child>
+        </children>
+    </item>
+    <item nodeId="node-7767">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">[unlocking the floor hatch with the scanner]
+That doesn't seem to be something you can unlock.
+[unlocking the floor hatch with the scanner - failed the can't unlock without a lock rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-7404">
         <command xml:space="preserve">scanner, look</command>
         <result xml:space="preserve">Syntax error: command not in vocabulary.
@@ -3163,6 +3410,243 @@ There is a secured hatch in the floor.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-7725">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7726"></child>
+            <child nodeId="node-7737"></child>
+            <child nodeId="node-7748"></child>
+        </children>
+    </item>
+    <item nodeId="node-7748">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7749"></child>
+        </children>
+    </item>
+    <item nodeId="node-7749">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7750"></child>
+        </children>
+    </item>
+    <item nodeId="node-7750">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7751"></child>
+        </children>
+    </item>
+    <item nodeId="node-7751">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7737">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7816"></child>
+            <child nodeId="node-7741"></child>
+            <child nodeId="node-7738"></child>
+        </children>
+    </item>
+    <item nodeId="node-7738">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7741">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7742"></child>
+        </children>
+    </item>
+    <item nodeId="node-7742">
+        <command xml:space="preserve">drop the scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7743"></child>
+        </children>
+    </item>
+    <item nodeId="node-7743">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7744"></child>
+        </children>
+    </item>
+    <item nodeId="node-7744">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7745"></child>
+        </children>
+    </item>
+    <item nodeId="node-7745">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7746"></child>
+        </children>
+    </item>
+    <item nodeId="node-7746">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7816">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7817"></child>
+        </children>
+    </item>
+    <item nodeId="node-7817">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7818"></child>
+        </children>
+    </item>
+    <item nodeId="node-7818">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7726">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7727"></child>
+            <child nodeId="node-7735"></child>
+        </children>
+    </item>
+    <item nodeId="node-7735">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7727">
+        <command xml:space="preserve">canner, help</command>
+        <result xml:space="preserve">You seem to want to talk to someone, but I can't see whom.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7728"></child>
+        </children>
+    </item>
+    <item nodeId="node-7728">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7729"></child>
+        </children>
+    </item>
+    <item nodeId="node-7729">
+        <command xml:space="preserve">trace</command>
+        <result xml:space="preserve">[Trace on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7730"></child>
+        </children>
+    </item>
+    <item nodeId="node-7730">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">[Actor is the scanner in Home]
+[Parsing for the verb 'help' (2 lines)]
+[line 0 * -&gt; A104_getting_help]
+[Line successfully parsed]
+
+You must be carrying the scanner to use it.
+
+You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7731"></child>
+        </children>
+    </item>
+    <item nodeId="node-7731">
+        <command xml:space="preserve">actions on</command>
+        <result xml:space="preserve">[Parsing for the verb 'actions' (3 lines)]
+[line 0 * -&gt; ActionsOn]
+[line 1 * 'on' -&gt; ActionsOn]
+[Line successfully parsed]
+Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7732"></child>
+        </children>
+    </item>
+    <item nodeId="node-7732">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">[Actor is the scanner in Home]
+[Parsing for the verb 'help' (2 lines)]
+[line 0 * -&gt; A104_getting_help]
+[Line successfully parsed]
+
+[asking the scanner to try getting help]
+You must be carrying the scanner to use it.
+
+You must be carrying the scanner to use it.
+[asking the scanner to try getting help - failed the Persuasion rule for asking the scanner to try doing something]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-7349">
         <command xml:space="preserve">scan scanner</command>
         <result xml:space="preserve">Self test completed. Scanner is functional.
@@ -3216,13 +3700,214 @@ There is an emergency mask hanging on the wall.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-7886">
+        <command xml:space="preserve">scan hatch with scanner</command>
+        <result xml:space="preserve">No modular technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7887"></child>
+            <child nodeId="node-7889"></child>
+            <child nodeId="node-7899"></child>
+        </children>
+    </item>
+    <item nodeId="node-7899">
+        <command xml:space="preserve">scan hatch with scadsfdfs</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7900"></child>
+        </children>
+    </item>
+    <item nodeId="node-7900">
+        <command xml:space="preserve">scan hatch with me</command>
+        <result xml:space="preserve">You aren't a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7901"></child>
+        </children>
+    </item>
+    <item nodeId="node-7901">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7902"></child>
+        </children>
+    </item>
+    <item nodeId="node-7902">
+        <command xml:space="preserve">scan hatch with scanner</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7903"></child>
+        </children>
+    </item>
+    <item nodeId="node-7903">
+        <command xml:space="preserve">scan hatch with me</command>
+        <result xml:space="preserve">You aren't a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7904"></child>
+        </children>
+    </item>
+    <item nodeId="node-7904">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7905"></child>
+        </children>
+    </item>
+    <item nodeId="node-7905">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Cellar
+A decompression shelter and space for storage.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7906"></child>
+        </children>
+    </item>
+    <item nodeId="node-7906">
+        <command xml:space="preserve">get mask</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7907"></child>
+        </children>
+    </item>
+    <item nodeId="node-7907">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">(first opening the ceiling hatch)
+You pull yourself up through the hatch and close it behind yourself.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+You can also see a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7908"></child>
+        </children>
+    </item>
+    <item nodeId="node-7908">
+        <command xml:space="preserve">scan hatch with mask</command>
+        <result xml:space="preserve">That isn't a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7889">
+        <command xml:space="preserve">scan hatch with me</command>
+        <result xml:space="preserve">You aren't a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7892"></child>
+        </children>
+    </item>
+    <item nodeId="node-7892">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7893"></child>
+        </children>
+    </item>
+    <item nodeId="node-7893">
+        <command xml:space="preserve">can</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7894"></child>
+        </children>
+    </item>
+    <item nodeId="node-7894">
+        <command xml:space="preserve">scan</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7895"></child>
+        </children>
+    </item>
+    <item nodeId="node-7895">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Cellar
+A decompression shelter and space for storage.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7896"></child>
+        </children>
+    </item>
+    <item nodeId="node-7896">
+        <command xml:space="preserve">scan</command>
+        <result xml:space="preserve">That makes no sense without a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7897"></child>
+        </children>
+    </item>
+    <item nodeId="node-7897">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">(first opening the ceiling hatch)
+You pull yourself up through the hatch and close it behind yourself.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+You can also see a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7887">
+        <command xml:space="preserve">scan hatch with jumpsuit</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-7483">
         <command xml:space="preserve">scan hatch</command>
         <result xml:space="preserve">No modular technology detected.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-7484"></child>
+        <children><child nodeId="node-7820"></child>
+            <child nodeId="node-7484"></child>
         </children>
     </item>
     <item nodeId="node-7484">
@@ -3270,6 +3955,100 @@ The scanner is unable to do that.
         <result xml:space="preserve">Machine is functional.
 
 The scanner is unable to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7820">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7821"></child>
+        </children>
+    </item>
+    <item nodeId="node-7821">
+        <command xml:space="preserve">scan hatch</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7822"></child>
+        </children>
+    </item>
+    <item nodeId="node-7822">
+        <command xml:space="preserve">scan hatch with scanner</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7823"></child>
+        </children>
+    </item>
+    <item nodeId="node-7823">
+        <command xml:space="preserve">scan</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7824"></child>
+        </children>
+    </item>
+    <item nodeId="node-7824">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7825"></child>
+        </children>
+    </item>
+    <item nodeId="node-7825">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7826"></child>
+        </children>
+    </item>
+    <item nodeId="node-7826">
+        <command xml:space="preserve">open hatch</command>
+        <result xml:space="preserve">You open the floor hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7827"></child>
+        </children>
+    </item>
+    <item nodeId="node-7827">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You scramble down through the hatch and close it behind yourself.
+
+Cellar
+A decompression shelter and space for storage.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7828"></child>
+        </children>
+    </item>
+    <item nodeId="node-7828">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">(first opening the ceiling hatch)
+You pull yourself up through the hatch and close it behind yourself.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+You can also see a scanner here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -6212,6 +6991,86 @@ Scene 'Repairing Atmosphere Pump' playing (for 11 mins now)
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-7768">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7769"></child>
+        </children>
+    </item>
+    <item nodeId="node-7769">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7770"></child>
+        </children>
+    </item>
+    <item nodeId="node-7770">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7771"></child>
+            <child nodeId="node-7811"></child>
+        </children>
+    </item>
+    <item nodeId="node-7811">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+The scanner is unable to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7812"></child>
+        </children>
+    </item>
+    <item nodeId="node-7812">
+        <command xml:space="preserve">trace</command>
+        <result xml:space="preserve">[Trace on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7813"></child>
+        </children>
+    </item>
+    <item nodeId="node-7813">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">[Actor is the scanner in Home]
+[Parsing for the verb 'help' (2 lines)]
+[line 0 * -&gt; A104_getting_help]
+[Line successfully parsed]
+
+You must be carrying the scanner to use it.
+
+The scanner is unable to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7771">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+The scanner opens the floor hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7772"></child>
+        </children>
+    </item>
+    <item nodeId="node-7772">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">You have been well-trained, because the hatch in the floor is secured shut.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-7167">
         <command xml:space="preserve">objects</command>
         <result xml:space="preserve">That's not a verb I recognize.
@@ -8265,6 +9124,25 @@ The audio unit has a gray cable plugged into it.
     <item nodeId="node-7593">
         <command xml:space="preserve">scanner, scan power</command>
         <result xml:space="preserve">Module is faulty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7984">
+        <command xml:space="preserve">gonear radio</command>
+        <result xml:space="preserve">Fake room
+You can see a transistor radio and two AA batteries here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7985"></child>
+        </children>
+    </item>
+    <item nodeId="node-7985">
+        <command xml:space="preserve">scanner, open radio</command>
+        <result xml:space="preserve">Opening.
+
+The transistor radio swings open, revealing a failed AA battery and space for one more module.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -11531,6 +12409,395 @@ You need to evade the alarm : prepare something you've already found.
 
 You need to evade the alarm , but you seem to have figured out that trick.
 , but you seem to have figured out that trick
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7967">
+        <command xml:space="preserve">gonear fake room</command>
+        <result xml:space="preserve">Fake room
+You can see a transistor radio and two AA batteries here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7968"></child>
+        </children>
+    </item>
+    <item nodeId="node-7968">
+        <command xml:space="preserve">s radio</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7969"></child>
+        </children>
+    </item>
+    <item nodeId="node-7969">
+        <command xml:space="preserve">x radio</command>
+        <result xml:space="preserve">
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7970"></child>
+        </children>
+    </item>
+    <item nodeId="node-7970">
+        <command xml:space="preserve">scan radio</command>
+        <result xml:space="preserve">Machine is failed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7975"></child>
+        </children>
+    </item>
+    <item nodeId="node-7975">
+        <command xml:space="preserve">look in radio</command>
+        <result xml:space="preserve">You can't see inside, since the transistor radio is closed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7976"></child>
+        </children>
+    </item>
+    <item nodeId="node-7976">
+        <command xml:space="preserve">scanner, open radio</command>
+        <result xml:space="preserve">Opening.
+
+The transistor radio swings open, revealing two failed AA batteries and space for ninety-nine more modules.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7983"></child>
+        </children>
+    </item>
+    <item nodeId="node-7983">
+        <command xml:space="preserve">rtree</command>
+        <result xml:space="preserve">Barn
+    the plow
+Cellar
+    the emergency mask
+Center Platform
+    the red circuit breaker
+Church
+    the altar + Founder's Testament 
+    the organ &amp; tan socket
+    the audio unit + power module &amp; beige socket
+    the gray cable &amp; usb plug and usb plug
+Fake room
+    yourself + green jumpsuit, pocket, and scanner 
+    the transistor radio + two failed AA batteries 
+    the AA battery
+    the AA battery
+Home
+House
+    the doll
+Pod Bay
+    the berths
+    the emergency communications unit &amp; almond socket
+Pod Control
+    the space suit
+    the brass plate
+    the status display
+    the atmosphere pump + power module and pressure regulation module 
+School
+    the learning machine + instruction module and power module 
+    the desk + clean eraser 
+    the chalkboard
+Sector 1: Crops
+    the pylon
+    the crops
+    the graveyard
+Sector 2: Aquaculture
+    the pond
+    the fish
+Sector 3: Forest
+    the pylon
+    the trees
+Sector 4: Crops
+    the vegetables
+Sector 5: Forest
+    the pylon
+    the trees
+Sector 6: Hydroponics
+    the hydroponics machines
+Supply Vault
+    the crate of machine parts
+    the pair of gravity boots
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7986">
+        <command xml:space="preserve">gonear fake</command>
+        <result xml:space="preserve">Fake room
+You can see a futuristic radio and a lithium battery here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7987"></child>
+            <child nodeId="node-7989"></child>
+        </children>
+    </item>
+    <item nodeId="node-7989">
+        <command xml:space="preserve">showme battery</command>
+        <result xml:space="preserve">(the lithium battery)
+lithium battery - lithium battery
+location: in Fake room
+singular-named, improper-named; unlit, inedible, portable
+list grouping key: none
+printed name: "lithium battery"
+printed plural name: "lithium batteries"
+indefinite article: none
+description: none
+initial appearance: none
+status: functional
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7990"></child>
+        </children>
+    </item>
+    <item nodeId="node-7990">
+        <command xml:space="preserve">scan battery</command>
+        <result xml:space="preserve">Module is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7991"></child>
+        </children>
+    </item>
+    <item nodeId="node-7991">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Fake room
+You can see a futuristic radio and a functional lithium battery here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7992"></child>
+        </children>
+    </item>
+    <item nodeId="node-7992">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7993"></child>
+        </children>
+    </item>
+    <item nodeId="node-7993">
+        <command xml:space="preserve">scanner, open radio</command>
+        <result xml:space="preserve">Opening.
+
+The futuristic radio swings open, revealing a failed lithium battery.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8000"></child>
+        </children>
+    </item>
+    <item nodeId="node-8000">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8001"></child>
+        </children>
+    </item>
+    <item nodeId="node-8001">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181128 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits or "hint" for assistance.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8002"></child>
+        </children>
+    </item>
+    <item nodeId="node-8002">
+        <command xml:space="preserve">gonear fake</command>
+        <result xml:space="preserve">Fake room
+You can see a futuristic radio and a lithium battery here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8003"></child>
+        </children>
+    </item>
+    <item nodeId="node-8003">
+        <command xml:space="preserve">test radio</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] x radio
+It's a radio.
+
+&gt;[2] get battery
+Taken.
+
+&gt;[3] scanner, open radio
+Opening.
+
+The futuristic radio swings open, revealing a failed lithium battery.
+
+&gt;[4] get battery from radio
+Taken.
+
+&gt;[5] scan battery
+Which do you mean, the failed lithium battery or the lithium battery?
+
+&gt;[6] scan unscanned battery
+Module is functional.
+
+&gt;[7] put functional battery in radio
+You put the functional lithium battery into the futuristic radio.
+
+&gt;[8] close radio
+You close the futuristic radio and it seals without any trace of a seam.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] x radio
+[2] get battery
+[3] scanner, open radio
+[4] get battery from radio
+[5] scan battery
+[6] scan unscanned battery
+[7] put functional battery in radio
+[8] close radio
+</commentary>
+        <children><child nodeId="node-8029"></child>
+        </children>
+    </item>
+    <item nodeId="node-8029">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8030"></child>
+        </children>
+    </item>
+    <item nodeId="node-8030">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181128 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits or "hint" for assistance.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8031"></child>
+        </children>
+    </item>
+    <item nodeId="node-8031">
+        <command xml:space="preserve">gonear radio</command>
+        <result xml:space="preserve">Fake room
+You can see a futuristic radio and a lithium battery here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8032"></child>
+        </children>
+    </item>
+    <item nodeId="node-8032">
+        <command xml:space="preserve">x radio</command>
+        <result xml:space="preserve">It's a radio.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8033"></child>
+        </children>
+    </item>
+    <item nodeId="node-8033">
+        <command xml:space="preserve">test radio</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] x radio
+It's a radio.
+
+&gt;[2] get battery
+Taken.
+
+&gt;[3] scanner, open radio
+Opening.
+
+The futuristic radio swings open, revealing a failed lithium battery.
+
+&gt;[4] get battery from radio
+Taken.
+
+&gt;[5] scan battery
+Which do you mean, the failed lithium battery or the lithium battery?
+
+&gt;[6] scan unscanned battery
+Module is functional.
+
+&gt;[7] put functional battery in radio
+You put the functional lithium battery into the futuristic radio.
+
+&gt;[8] close radio
+You close the futuristic radio and it seals without any trace of a seam.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] x radio
+[2] get battery
+[3] scanner, open radio
+[4] get battery from radio
+[5] scan battery
+[6] scan unscanned battery
+[7] put functional battery in radio
+[8] close radio
+</commentary>
+        <children><child nodeId="node-8042"></child>
+        </children>
+    </item>
+    <item nodeId="node-8042">
+        <command xml:space="preserve">x radi</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8043"></child>
+        </children>
+    </item>
+    <item nodeId="node-8043">
+        <command xml:space="preserve">x radio</command>
+        <result xml:space="preserve">The radio is playing music like you've never heard before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7987">
+        <command xml:space="preserve">scan battery</command>
+        <result xml:space="preserve">No modular technology detected.
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
@@ -17657,9 +18924,108 @@ Your home is here among the crops. You can walk spinward or antispinward.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-7586"></child>
+        <children><child nodeId="node-7786"></child>
+            <child nodeId="node-7586"></child>
             <child nodeId="node-7362"></child>
+            <child nodeId="node-7796"></child>
+            <child nodeId="node-7717"></child>
         </children>
+    </item>
+    <item nodeId="node-7717">
+        <command xml:space="preserve">scanner, san</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7718"></child>
+        </children>
+    </item>
+    <item nodeId="node-7718">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7722"></child>
+        </children>
+    </item>
+    <item nodeId="node-7722">
+        <command xml:space="preserve">scanner, look at me</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7723"></child>
+        </children>
+    </item>
+    <item nodeId="node-7723">
+        <command xml:space="preserve">scanner, open hatch</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7724"></child>
+        </children>
+    </item>
+    <item nodeId="node-7724">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7796">
+        <command xml:space="preserve">scanner, open hatch</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7801"></child>
+        </children>
+    </item>
+    <item nodeId="node-7801">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7805"></child>
+        </children>
+    </item>
+    <item nodeId="node-7805">
+        <command xml:space="preserve">trace</command>
+        <result xml:space="preserve">[Trace on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7806"></child>
+        </children>
+    </item>
+    <item nodeId="node-7806">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">[Parsing for the verb 'open' (2 lines)]
+[line 0 * noun -&gt; Open]
+[line 1 * noun 'with' held -&gt; Unlock]
+[Line successfully parsed]
+You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7807"></child>
+        </children>
+    </item>
+    <item nodeId="node-7807">
+        <command xml:space="preserve">stop</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-7362">
         <command xml:space="preserve">scanner, help</command>
@@ -17731,6 +19097,40 @@ You must be carrying the scanner to use it.
     <item nodeId="node-7587">
         <command xml:space="preserve">scan hatch</command>
         <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7786">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7787"></child>
+        </children>
+    </item>
+    <item nodeId="node-7787">
+        <command xml:space="preserve">get scanner</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7788"></child>
+        </children>
+    </item>
+    <item nodeId="node-7788">
+        <command xml:space="preserve">open hatch with scanner</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7789"></child>
+        </children>
+    </item>
+    <item nodeId="node-7789">
+        <command xml:space="preserve">scanner, open hatch</command>
+        <result xml:space="preserve">No electronic technology detected.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

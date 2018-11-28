@@ -81,9 +81,9 @@ Chapter 5 - Misc Phrases
 To find and take (s - an object):	
 	now s is in the holder of the player;
 	try silently taking s;
-	set pronouns from s;
+	set pronouns from s.
 
-To decide what number is the total minutes of (t - a time): decide on the minutes part of t plus 60 times the hours part of t;
+To decide what number is the total minutes of (t - a time): decide on the minutes part of t plus 60 times the hours part of t.
 
 Chapter 6 - Extensions
 
@@ -162,6 +162,15 @@ Understand "connect [something] to [something]" as plugging it into.
 
 A usb plug is a kind of PS-plug. 
 A usb socket is a kind of PS-socket.
+
+Section 4 - Machines
+
+Include Machines by Thomas Insel.
+
+A power module is a kind of module.
+An instruction module is a kind of module.
+A pressure regulation module is a kind of module. Understand "regulator" as a pressure regulation module.
+
 
 Chapter 7 - Directions
 
@@ -405,292 +414,7 @@ Chapter 13 - Testing - Not for release
 Include Object Response Tests by Juhana Leinonen.
 Include Testing Commands by Thomas Insel.
 
-Book 2 - Machines & Modules, Scanner and Scanning
-
-Chapter 1 - New Grammar
-
-Scanning is an action applying to one thing.
-Scanning it with is an action applying to two things.
-Barescanning is an action applying to nothing.
-
-Understand "scan [something]" as scanning.
-Understand "scan [something] with [the scanner]" as scanning it with.
-Understand "scan" as barescanning.
-
-Check scanning: unless the scanner is at hand, stop the action.
-Check scanning it with: unless the scanner is at hand, stop the action.
-Check barescanning: unless the scanner is at hand, stop the action.
-
-[ support "scan ___" and similar ]
-Carry out scanning: try the scanner scanning the noun instead.
-Carry out scanning it with: try the scanner scanning the noun instead.
-Carry out barescanning: try the scanner barescanning instead.
-
-[ as a bonus, support open __ with scanner ]
-Before unlocking a machine (called m) with the scanner, try the scanner opening m instead.
-
-Chapter 2 - Modules
-
-Status is a kind of value. The statuses are functional and faulty.
-
-A module is a kind of thing.
-A module has a status. The status of a module is usually functional. 
-A module can be scanned.
-
-Understand "module" as a module.
-Understand the status property as describing a module when the item described is scanned.
-Understand "unscanned" as a module when the item described is not scanned.
-Understand "scanned" as a module when the item described is scanned.
-
-To say the qualifier of (c - a module):
-	if c is scanned:
-		say "[status of c] ";
-	else if any module has been scanned:
-		say "unscanned ";
-	otherwise:
-		do nothing.
-
-Before printing the plural name of a module (called c), say the qualifier of c.
-Before printing the name of a module (called c) while not examining, say the qualifier of c.
-Before printing the name of a module (called c) while examining, unless the noun is a module, say the qualifier of c.
-
-Instead of examining a module (called c):
-	if c is scanned:
-		say "The scanner reported that this [c] is [status of c].";
-	otherwise:
-		say "It is a standardized [c]."
-
-Instead of the scanner scanning a module (called c):
-	computerize "Module is [status of c].";
-	now c is scanned;
-	rule succeeds.
-
-Instead of the scanner opening a module:
-	computerize "Module is unitary.";
-	rule succeeds.
-
-Chapter 3 - Machines
-
-A machine is a kind of container. A machine is usually closed and unopenable and fixed in place. A machine can be scanned.
-
-To decide if (m - a machine) is functional: decide yes.
-
-A machine can be quiet. [* quiet is from example 357, like scenery but will still print info if opened ]
-
-Rule for writing a paragraph about a quiet machine (called m):
-	if m is open:
-		if a thing is in m:
-			say "[The m] is open and contains [a list of things which are in m].";
-		otherwise:
-			say "[The m] is open and empty.";
-	now the m is mentioned.
-
-Before inserting something (called s) into a machine (called m) when m is open:
-	if s is not a module:
-		say "Only modules fit into [the m].";
-		stop the action.
-
-Instead of examining a machine (called m):
-	say the description of m;
-	let open space be the carrying capacity of m minus the number of things contained in m;
-	;
-	if m is open:
-		say paragraph break;
-		if a thing is in m:
-			say "[regarding the m][They] [are] open, revealing [a list of things which are in m]";
-			if open space is positive:
-				say " and space for [open space in words] more module[s]."; [todo test]
-			otherwise:
-				say ".";
-		otherwise if the carrying capacity of m is zero:
-			say "[regarding the m][They] [are] open.";
-		otherwise:
-			say "[regarding the m][They] [are] open, revealing space for [open space in words] module[s]."; [ todo ]
-	otherwise:
-		say "[line break]";
-	;
-	follow the list attached things when examining receiver or inserter rule. [* from Plugs and Sockets ]
-
-Instead of the scanner scanning a machine (called m):
-	now m is scanned;
-	computerize "Machine is [if m is functional]functional[else]failed[end if].";
-	rule succeeds.
-
-Instead of the scanner opening a machine (called m):
-	if m is not openable:
-		computerize "Machine is unitary.";
-	otherwise if m is open:
-		computerize "Machine is already open.";
-	otherwise:
-		computerize "Opening.";
-		;
-		if a thing is in m:
-			say "[The m] swing[s] open, revealing [a list of things which are in m]";
-			let open space be the carrying capacity of m minus the number of things contained in m;
-			if open space is positive:
-				say " and space for [open space in words] more module[s]."; [todo test s]
-			otherwise:
-				say ".";
-		otherwise if the carrying capacity of m is zero:
-			say "[The m] swing[s] open.";
-		otherwise:
-			say "[The m] swing[s] open, revealing space for [the carrying capacity of m in words] module[s]."; [todo]
-		;
-		now the m is open;
-	rule succeeds.
-
-Instead of opening a machine, say "You will need to use the scanner to do that.";
-
-After closing a machine (called m), say "You close [the m] and it seals without any trace of a seam.";
-
-After printing the name of a machine (called m), if m is closed, omit contents in listing.
-
-Chapter 4 - Machinelike
-
-[ An adjective to apply to other things so that they get a default response from the scanner. ]
-
-A thing can be machinelike. Things are usually not machinelike. Things can be scanned.
-
-Instead of the scanner scanning something that is machinelike:
-	computerize "Machine is functional.";
-	rule succeeds.
-
-Instead of the scanner opening something that is machinelike:
-	computerize "Machine is unitary.";
-	rule succeeds.
-
-Chapter 5 - The Scanner and Scanning
-
-Include Inanimate Listeners by Emily Short.
-
-The scanner is a machinelike addressable thing. The scanner can be explained. It is not explained. It has description "The handheld voice-activated scanner you use when working on the station's machines."
-
-The scanner fail count is a number that varies. Scanner fail count is 0.
-
-To explain the scanner:
-	if the scanner is not explained:
-		now the scanner fail count is 0;
-		now the scanner is explained;
-		lnote "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' or 'scanner, open SOMETHING' where SOMETHING is a visible object.";
-	otherwise:
-		increase the scanner fail count by 1;
-		if the scanner fail count is 3:
-			now the scanner is not explained;
-
-To decide if the scanner is at hand:
-	if the player encloses the scanner and the scanner is visible, decide yes;
-	if the scanner is visible:
-		say "You must be carrying the scanner to use it.";
-	otherwise:
-		say "That makes no sense without a scanner.";
-	decide no.
-
-To scanner syntax error:
-	computerize "Syntax error: command not in vocabulary.";
-	explain the scanner;
-
-Persuasion rule for asking the scanner to try scanning or opening or closing something:
-	if the scanner is at hand, persuasion succeeds;
-	persuasion fails.
-
-Persuasion rule for asking the scanner to try getting help: [todo mrege with next]
-	if the scanner is at hand, persuasion succeeds.
-
-Persuasion rule for asking the scanner to try barescanning:
-	if the scanner is at hand, persuasion succeeds.
-
-Persuasion rule for asking the scanner to try doing something: [ any other interaction fails ]
-	if the scanner is at hand:
-		say "[start computer]Syntax error: command not in vocabulary.[stop computer]";
-		if the scanner fail count is 3, now the scanner is not explained;
-		if the scanner is not explained:
-			say "[line break]";
-			explain the scanner;
-		otherwise:
-			increase the scanner fail count by 1;
-		[ gymnastics & lnote rather than note above to avoid Inform deciding to fall through to the "has better things to do" message, this is the don't end with paragraph break issue, see Writing with Inform §12.4 ]
-	persuasion fails.
-
-Instead of switching on or switching off the scanner:
-	say "The scanner is always on and listening.[paragraph break]";
-	explain the scanner.
-
-Instead of the scanner closing something:
-	computerize "Command error: closing is a manual process.";
-	rule succeeds.
-
-Instead of the scanner scanning something:
-	computerize "No modular technology detected.";
-	rule succeeds.
-
-Instead of the scanner scanning the scanner:
-	computerize "Self test completed. Scanner is functional.";
-	rule succeeds.
-
-Instead of the scanner getting help:
-	computerize "Recognized commands are 'help', 'open', and 'scan'.";
-	now the scanner is not explained;
-	explain the scanner;
-	rule succeeds.
-
-Instead of the scanner opening something (called m):
-	computerize "No electronic technology detected.";
-	rule succeeds.
-
-Instead of the scanner barescanning:
-	computerize "Syntax error: no target.";
-	explain the scanner;
-	rule succeeds.
-
-Instead of answering the scanner that something:
-	unless the scanner is at hand, stop the action;
-	if the topic understood matches the regular expression "^help\s":
-		try the scanner getting help instead;
-	else if the topic understood matches the regular expression "^(scan|open|close)\s+(.*)":
-		computerize "Search error: cannot find [text matching subexpression 2].";
-		explain the scanner;
-	otherwise:
-		scanner syntax error;
-		explain the scanner;
-
-Instead of asking or telling the scanner about something, if the scanner is at hand, scanner syntax error.
-
-After examining the scanner, explain the scanner.
-
-Chapter 6 - Tweaks for Standard Rules
-
-[ 
-	Zarf's fix from	https://intfiction.org/forum/viewtopic.php?f=7&t=26951 for:
-
-	>scanner, go
-	You'll have to say which compass direction to go in.
-	I didn't understand that instruction.
-]
-
-The action processing internal rule response (K) is "[internal rule exception]"
-
-To say internal rule exception:
-	if the action name part of the current action is the going action and the person asked is not yourself:
-		say "[run paragraph on]";
-	else:
-		say "I didn't understand that instruction."
-
-[
-	Let's also change the message for vaguely going, because we don't have compass directions.
-	
-	It is possible to put logic here like "if the person asked is the scanner and the player is holding the scanner", but then we would probably need to deal with other incomplete commands like "scanner, open" and let's just not open that door.
-]
-
-The block vaguely going rule response (A) is "You'll have to say which direction to go in."
-
-Chapter 7 - Kinds of Modules
-
-A power module is a kind of module.
-An instruction module is a kind of module.
-A pressure regulation module is a kind of module. Understand "regulator" as a pressure regulation module.
-
-
-Book 3 - Scenes
+Book 2 - Scenes
 
 Section 1 - Beginning
 
@@ -774,7 +498,7 @@ Every turn during The End:
 			"'We can have a pod there in about a thousand minutes.'[no line break]";
 		end the story finally saying "You are not alone.".
 
-Book 4 - Hints
+Book 3 - Hints
 
 Section 0 - Setup
 
@@ -912,7 +636,7 @@ Section 5 - The End
 Carry out getting help when The End is happening:
 	say "Just wait."
 
-Book 5 - Regions
+Book 4 - Regions
 
 Underneath is a region.
 
@@ -952,7 +676,7 @@ Instead of doing anything other than examining or entering or scanning to the ma
 Instead of entering the maintenance platform:
 	say "You will need to climb a pylon to get there."
 
-Book 6 - The Ring
+Book 5 - The Ring
 
 Chapter 1 - Sector 1
 

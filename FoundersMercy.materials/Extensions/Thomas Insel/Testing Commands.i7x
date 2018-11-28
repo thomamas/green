@@ -23,7 +23,6 @@ Understand "rtree" as listing the tree.
 Listing the tree is an action out of world.
 
 Carry out listing the tree:
-	now every component is scanned; [* side effect ]
 	let room list be the list of rooms;
 	sort room list in printed name order;
 	repeat with r running through room list:
