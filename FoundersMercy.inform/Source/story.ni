@@ -407,9 +407,29 @@ Include Testing Commands by Thomas Insel.
 
 Book 2 - Machines & Modules, Scanner and Scanning
 
-Chapter 1 - Modules
+Chapter 1 - New Grammar
 
-[ known as modules in text ]
+Scanning is an action applying to one thing.
+Scanning it with is an action applying to two things.
+Barescanning is an action applying to nothing.
+
+Understand "scan [something]" as scanning.
+Understand "scan [something] with [the scanner]" as scanning it with.
+Understand "scan" as barescanning.
+
+Check scanning: unless the scanner is at hand, stop the action.
+Check scanning it with: unless the scanner is at hand, stop the action.
+Check barescanning: unless the scanner is at hand, stop the action.
+
+[ support "scan ___" and similar ]
+Carry out scanning: try the scanner scanning the noun instead.
+Carry out scanning it with: try the scanner scanning the noun instead.
+Carry out barescanning: try the scanner barescanning instead.
+
+[ as a bonus, support open __ with scanner ]
+Before unlocking a machine (called m) with the scanner, try the scanner opening m instead.
+
+Chapter 2 - Modules
 
 Status is a kind of value. The statuses are functional and faulty.
 
@@ -440,15 +460,16 @@ Instead of examining a module (called c):
 	otherwise:
 		say "It is a standardized [c]."
 
-Instead of scanning a module (called c):
+Instead of the scanner scanning a module (called c):
 	computerize "Module is [status of c].";
-	now c is scanned.
+	now c is scanned;
+	rule succeeds.
 
 Instead of the scanner opening a module:
 	computerize "Module is unitary.";
 	rule succeeds.
 
-Chapter 2 - Machines
+Chapter 3 - Machines
 
 A machine is a kind of container. A machine is usually closed and unopenable and fixed in place. A machine can be scanned.
 
@@ -490,9 +511,10 @@ Instead of examining a machine (called m):
 	;
 	follow the list attached things when examining receiver or inserter rule. [* from Plugs and Sockets ]
 
-Instead of scanning a machine (called m):
+Instead of the scanner scanning a machine (called m):
 	now m is scanned;
-	computerize "Machine is [if m is functional]functional[else]failed[end if]."
+	computerize "Machine is [if m is functional]functional[else]failed[end if].";
+	rule succeeds.
 
 Instead of the scanner opening a machine (called m):
 	if m is not openable:
@@ -523,45 +545,23 @@ After closing a machine (called m), say "You close [the m] and it seals without 
 
 After printing the name of a machine (called m), if m is closed, omit contents in listing.
 
-Chapter 3 - Machinelike
+Chapter 4 - Machinelike
 
 [ An adjective to apply to other things so that they get a default response from the scanner. ]
 
 A thing can be machinelike. Things are usually not machinelike. Things can be scanned.
 
-Instead of scanning something that is machinelike, computerize "Machine is functional.";
+Instead of the scanner scanning something that is machinelike:
+	computerize "Machine is functional.";
+	rule succeeds.
 
 Instead of the scanner opening something that is machinelike:
 	computerize "Machine is unitary.";
 	rule succeeds.
 
-Chapter 4 - The Scanner and Scanning
+Chapter 5 - The Scanner and Scanning
 
 Include Inanimate Listeners by Emily Short.
-
-Section 1 - New Grammar
-
-[ Note that we implement scanning as the player scanning something, but pretend this is a shortcut for "scanner, scan ___" but we implement help and opening only as the second form, because the commands are already in use. One downside is that means the scanning action needs a Check rule to make sure the scanner is available, while this lives elsew]
-			
-Scanning is an action applying to one thing.
-Scanning it with is an action applying to two things.
-Bare scanning is an action applying to nothing.
-
-Understand "scan [something]" as scanning.
-Understand "scan [something] with [the scanner]" as scanning it with.
-Understand "scan" as bare scanning.
-
-Check scanning: unless the scanner is at hand, stop the action.
-Check bare scanning: unless the scanner is at hand, stop the action.
-
-Carry out scanning: computerize "No modular technology detected."
-Carry out scanning it with: try scanning the noun instead.
-
-Carry out bare scanning:
-	computerize "Syntax error: no target.";
-	explain the scanner
-
-Section 2 - The Scanner
 
 The scanner is a machinelike addressable thing. The scanner can be explained. It is not explained. It has description "The handheld voice-activated scanner you use when working on the station's machines."
 
@@ -593,10 +593,10 @@ Persuasion rule for asking the scanner to try scanning or opening or closing som
 	if the scanner is at hand, persuasion succeeds;
 	persuasion fails.
 
-Persuasion rule for asking the scanner to try getting help:
+Persuasion rule for asking the scanner to try getting help: [todo mrege with next]
 	if the scanner is at hand, persuasion succeeds.
 
-Persuasion rule for asking the scanner to try bare scanning:
+Persuasion rule for asking the scanner to try barescanning:
 	if the scanner is at hand, persuasion succeeds.
 
 Persuasion rule for asking the scanner to try doing something: [ any other interaction fails ]
@@ -620,10 +620,12 @@ Instead of the scanner closing something:
 	rule succeeds.
 
 Instead of the scanner scanning something:
-	try the player scanning the noun;
+	computerize "No modular technology detected.";
 	rule succeeds.
 
-Instead of scanning the scanner, computerize "Self test completed. Scanner is functional."
+Instead of the scanner scanning the scanner:
+	computerize "Self test completed. Scanner is functional.";
+	rule succeeds.
 
 Instead of the scanner getting help:
 	computerize "Recognized commands are 'help', 'open', and 'scan'.";
@@ -635,9 +637,9 @@ Instead of the scanner opening something (called m):
 	computerize "No electronic technology detected.";
 	rule succeeds.
 
-Instead of an actor bare scanning when the actor is not the player:
-	unless the scanner is at hand, rule succeeds;
-	try bare scanning;
+Instead of the scanner barescanning:
+	computerize "Syntax error: no target.";
+	explain the scanner;
 	rule succeeds.
 
 Instead of answering the scanner that something:
@@ -651,11 +653,11 @@ Instead of answering the scanner that something:
 		scanner syntax error;
 		explain the scanner;
 
-Instead of asking or telling the scanner about something, if the scanner is at hand, scanner syntax error;
+Instead of asking or telling the scanner about something, if the scanner is at hand, scanner syntax error.
 
 After examining the scanner, explain the scanner.
 
-Section 1 - Tweaks for Standard Rules
+Chapter 6 - Tweaks for Standard Rules
 
 [ 
 	Zarf's fix from	https://intfiction.org/forum/viewtopic.php?f=7&t=26951 for:
@@ -681,12 +683,11 @@ To say internal rule exception:
 
 The block vaguely going rule response (A) is "You'll have to say which direction to go in."
 
-Chapter 5 - Kinds of Modules
+Chapter 7 - Kinds of Modules
 
 A power module is a kind of module.
 An instruction module is a kind of module.
 A pressure regulation module is a kind of module. Understand "regulator" as a pressure regulation module.
-
 
 
 Book 3 - Scenes
@@ -937,8 +938,9 @@ Instead of doing anything other than examining or scanning to the hub when the p
 Instead of doing anything other than examining or scanning to the solar panels:
 	say "You are too far away to do that."
 
-Instead of scanning the solar panels:
-	computerize "Machine is functional. Operating at [one of]73[or]72[or]71[then purely at random]% efficiency."
+Instead of the scanner scanning the solar panels:
+	computerize "Machine is functional. Operating at [one of]73[or]72[or]71[then purely at random]% efficiency.";
+	rule succeeds.
 
 Instead of the scanner opening the solar panels:
 	computerize "Machine is unitary.";
@@ -988,7 +990,9 @@ A space suit is here. It is machinelike scenery. It has description "For EVA or 
 
 Before doing anything other than examining or scanning to the space suit, say "All of the seals are shot, so the suit won't be useful." instead
 
-Instead of scanning the space suit, computerize "Machine is failed."
+Instead of the scanner scanning the space suit:
+	computerize "Machine is failed.";
+	rule succeeds.
 
 A brass plate is here. It is scenery. It has description "The plate reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2238, Launched 2241.[line break]    'May His mercy shine upon us.'" Understand "plaque" as plate.
 
@@ -1024,9 +1028,10 @@ To decide if (m - the atmosphere pump) is functional:
 	unless there is a functional pressure regulation module in the atmosphere pump, decide no;
 	decide yes.	
 
-Instead of scanning the atmosphere pump when the atmosphere pump is functional and the atmosphere pump is closed:
+Instead of the scanner scanning the atmosphere pump when the atmosphere pump is functional and the atmosphere pump is closed:
 	now the atmosphere pump is scanned;
-	computerize "Machine is functional and operating."
+	computerize "Machine is functional and operating.";
+	rule succeeds.
 
 After closing the atmosphere pump when the atmosphere pump is functional:
 	say "You close the atmosphere pump and it begins to hum.";
@@ -1077,7 +1082,7 @@ Instead of locking the berths with something, try closing the berths.
 
 An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit with a single socket to connect it to a transit pod or other audio source." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket called the almond socket.
 
-Instead of scanning the communications unit:
+Instead of the scanner scanning the communications unit:
 	now the communications unit is scanned;
 	if audio and communications are connected:
 		computerize "Machine functional. Input and output connected.";
@@ -1085,6 +1090,7 @@ Instead of scanning the communications unit:
 		computerize "Machine functional. Connection mismatch.";
 	else:
 		computerize "Machine functional. No output available.";
+	rule succeeds.
 
 Chapter 2 - Sector 2
 
@@ -1157,7 +1163,7 @@ Instead of going nowhere in church when the noun is starboard, try going outside
 
 The organ is scenery in Church. It is a machine. It has description "It's really just a keyboard in a fancy box with a socket to connect it to an audio unit." It has indefinite article "the". Understand "keyboard" as the organ. The organ can be played. Incorporated by the organ is a usb socket called the tan socket.
 
-Instead of scanning the organ: [ organ is always functional ]
+Instead of the scanner scanning the organ: [ organ is always functional ]
 	now the organ is scanned;
 	if audio and organ are connected and the audio unit is functional:
 		computerize "Machine functional. Output connected.";
@@ -1165,6 +1171,7 @@ Instead of scanning the organ: [ organ is always functional ]
 		computerize "Machine functional. Connection mismatch.";
 	else:
 		computerize "Machine functional. No output available.";
+	rule succeeds.
 
 Instead of playing the organ:
 	unless the organ is usable, say "Nothing happens." instead;
@@ -1184,7 +1191,7 @@ To decide if (m - the audio unit) is functional:
 	unless there is a functional power module in m, decide no;
 	decide yes.
 
-Instead of scanning the audio unit:
+Instead of the scanner scanning the audio unit:
 	now the audio unit is scanned;
 	unless the audio unit is functional:
 		computerize "Machine failed.";
@@ -1194,6 +1201,7 @@ Instead of scanning the audio unit:
 		computerize "Machine functional. Input and output connected.";
 	else:
 		computerize "Machine functional. No input or output available.";
+	rule succeeds.
 
 Instead of taking the audio unit, say "That is attached to the wall."
 
@@ -1207,7 +1215,9 @@ Every turn when the audio unit is visible:
 
 A gray cable is in Church. "A gray cable connects the organ and the audio unit." Incorporated by it are two usb plugs. It has description "A one meter USB 7.2 cable with a Type-F plug at each end." Understand "grey" and "usb" and "plug" and "plugs" and "connector" and "connector" as the gray cable. It is machinelike.
 
-Instead of scanning the cable, computerize "Cable is functional."
+Instead of the scanner scanning the cable:
+	computerize "Cable is functional.";
+	rule succeeds;
 
 Instead of the scanner opening the cable:
 	computerize "Cable is unitary.";
@@ -1279,7 +1289,9 @@ After dropping something (called s) in Center Platform:
 
 A red circuit breaker is a circuit breaker in center platform. "You can just reach a red circuit breaker on the hub." The red circuit breaker is machinelike.
 
-Instead of scanning the red circuit breaker, computerize "Machine is functional. Breaker is [if the red circuit breaker is switched on]closed[otherwise]open[end if]."
+Instead of the scanner scanning the red circuit breaker:
+	computerize "Machine is functional. Breaker is [if the red circuit breaker is switched on]closed[otherwise]open[end if].";
+	rule succeeds.
 
 Instead of touching the red circuit breaker, say "It is at arm's reach but accessible."
 
@@ -1392,7 +1404,9 @@ Some hydroponics machines are scenery in Sector 6. It is machinelike. It has des
 
 Instead of doing anything other than examining or scanning to the hydroponics machines, say "The hydroponics machines are just so much junk."
 
-Instead of scanning the hydroponics machines, computerize "Machine failed."
+Instead of the scanner scanning the hydroponics machines:
+	computerize "Machine failed.";
+	rule succeeds.
 
 Instead of the scanner opening the hydroponics machines:
 	computerize "Opening failed.";
