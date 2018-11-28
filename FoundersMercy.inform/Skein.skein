@@ -15,7 +15,7 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 181127 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 181128 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type "about" for credits or "hint" for assistance.
 
 Home
@@ -35,7 +35,7 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 181126 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 181127 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type "about" for credits or "hint" for assistance.
 
 Home
@@ -51,6 +51,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-6985"></child>
             <child nodeId="node-6975"></child>
             <child nodeId="node-6970"></child>
+            <child nodeId="node-7361"></child>
             <child nodeId="node-6960"></child>
             <child nodeId="node-6953"></child>
             <child nodeId="node-6933"></child>
@@ -96,9 +97,14 @@ There is a secured hatch in the floor.
             <child nodeId="node-5798"></child>
             <child nodeId="node-5797"></child>
             <child nodeId="node-5793"></child>
+            <child nodeId="node-7349"></child>
+            <child nodeId="node-7404"></child>
+            <child nodeId="node-7368"></child>
+            <child nodeId="node-7372"></child>
             <child nodeId="node-5612"></child>
             <child nodeId="node-5609"></child>
             <child nodeId="node-5608"></child>
+            <child nodeId="node-7354"></child>
             <child nodeId="node-5605"></child>
         </children>
     </item>
@@ -123,6 +129,81 @@ There is a secured hatch in the floor.
     <item nodeId="node-5607">
         <command xml:space="preserve">xyzzy</command>
         <result xml:space="preserve">Once was enough.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7354">
+        <command xml:space="preserve">x scanner</command>
+        <result xml:space="preserve">The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7355"></child>
+        </children>
+    </item>
+    <item nodeId="node-7355">
+        <command xml:space="preserve">version</command>
+        <result xml:space="preserve">Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181128 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits or "hint" for assistance.
+Identification number: //BCC61E7F-CE8E-4C25-9E9D-5550D1138D8C//
+Interpreter version 0.5.2 / VM 3.1.2 / Library serial number 080126
+Standard Rules version 3/120430 by Graham Nelson
+Unicode Character Names by Graham Nelson
+Exit Lister version 11 by Eric Eve
+Plugs and Sockets version 4 by Sean Turner
+Object Response Tests version 7 by Juhana Leinonen
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7356"></child>
+        </children>
+    </item>
+    <item nodeId="node-7356">
+        <command xml:space="preserve">scanner, open hatch</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7357"></child>
+        </children>
+    </item>
+    <item nodeId="node-7357">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7358"></child>
+        </children>
+    </item>
+    <item nodeId="node-7358">
+        <command xml:space="preserve">scanner, open hatch</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7359"></child>
+        </children>
+    </item>
+    <item nodeId="node-7359">
+        <command xml:space="preserve">scanner, scan hatch</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7360"></child>
+        </children>
+    </item>
+    <item nodeId="node-7360">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -2368,6 +2449,640 @@ Scene 'Repairing Atmosphere Pump' playing (for 15 mins now)
         <result xml:space="preserve">According the the status display, you need to reset a circuit breaker on the hub platform.
 
 Two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7372">
+        <command xml:space="preserve">scanner, x</command>
+        <result xml:space="preserve">(the floor hatch)
+Syntax error: command not in vocabulary.
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+The scanner has better things to do.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7373"></child>
+        </children>
+    </item>
+    <item nodeId="node-7373">
+        <command xml:space="preserve">scanner, z</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7374"></child>
+        </children>
+    </item>
+    <item nodeId="node-7374">
+        <command xml:space="preserve">scanner, z</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7375"></child>
+        </children>
+    </item>
+    <item nodeId="node-7375">
+        <command xml:space="preserve">scanner, z</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7376"></child>
+        </children>
+    </item>
+    <item nodeId="node-7376">
+        <command xml:space="preserve">scanner, z</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+The scanner has better things to do.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7377"></child>
+        </children>
+    </item>
+    <item nodeId="node-7377">
+        <command xml:space="preserve">scanner, z</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7378"></child>
+        </children>
+    </item>
+    <item nodeId="node-7378">
+        <command xml:space="preserve">scanner, z</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7379"></child>
+        </children>
+    </item>
+    <item nodeId="node-7379">
+        <command xml:space="preserve">scanner, z</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7380"></child>
+        </children>
+    </item>
+    <item nodeId="node-7380">
+        <command xml:space="preserve">scanner, z</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+The scanner has better things to do.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7381"></child>
+        </children>
+    </item>
+    <item nodeId="node-7381">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7382"></child>
+        </children>
+    </item>
+    <item nodeId="node-7382">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7383"></child>
+        </children>
+    </item>
+    <item nodeId="node-7383">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7384"></child>
+        </children>
+    </item>
+    <item nodeId="node-7384">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7385"></child>
+        </children>
+    </item>
+    <item nodeId="node-7385">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7386"></child>
+        </children>
+    </item>
+    <item nodeId="node-7386">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7387"></child>
+        </children>
+    </item>
+    <item nodeId="node-7387">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7388"></child>
+        </children>
+    </item>
+    <item nodeId="node-7388">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7389"></child>
+        </children>
+    </item>
+    <item nodeId="node-7389">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7390"></child>
+        </children>
+    </item>
+    <item nodeId="node-7390">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7391"></child>
+        </children>
+    </item>
+    <item nodeId="node-7391">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7392"></child>
+        </children>
+    </item>
+    <item nodeId="node-7392">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">Syntax error: no target.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7393"></child>
+        </children>
+    </item>
+    <item nodeId="node-7393">
+        <command xml:space="preserve">scanner, jkjkjkjk</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7394"></child>
+        </children>
+    </item>
+    <item nodeId="node-7394">
+        <command xml:space="preserve">scanner, jkjkjkjk</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7395"></child>
+        </children>
+    </item>
+    <item nodeId="node-7395">
+        <command xml:space="preserve">scanner, jkjkjkjk</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7396"></child>
+        </children>
+    </item>
+    <item nodeId="node-7396">
+        <command xml:space="preserve">scanner, jkjkjkjk</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7397"></child>
+        </children>
+    </item>
+    <item nodeId="node-7397">
+        <command xml:space="preserve">scanner, jkjkjkjk</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7398"></child>
+        </children>
+    </item>
+    <item nodeId="node-7398">
+        <command xml:space="preserve">scanner, jkjkjkjk</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7399"></child>
+        </children>
+    </item>
+    <item nodeId="node-7399">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7400"></child>
+        </children>
+    </item>
+    <item nodeId="node-7400">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7401"></child>
+        </children>
+    </item>
+    <item nodeId="node-7401">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7402"></child>
+        </children>
+    </item>
+    <item nodeId="node-7402">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+The scanner has better things to do.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7403"></child>
+        </children>
+    </item>
+    <item nodeId="node-7403">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7368">
+        <command xml:space="preserve">scanner, open me</command>
+        <result xml:space="preserve">No electronic technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7369"></child>
+        </children>
+    </item>
+    <item nodeId="node-7369">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7370"></child>
+        </children>
+    </item>
+    <item nodeId="node-7370">
+        <command xml:space="preserve">scanner, open me</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7371"></child>
+        </children>
+    </item>
+    <item nodeId="node-7371">
+        <command xml:space="preserve">scanner, open hatch</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7404">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7414"></child>
+            <child nodeId="node-7405"></child>
+        </children>
+    </item>
+    <item nodeId="node-7405">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7406"></child>
+        </children>
+    </item>
+    <item nodeId="node-7406">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7407"></child>
+        </children>
+    </item>
+    <item nodeId="node-7407">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7412"></child>
+        </children>
+    </item>
+    <item nodeId="node-7412">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7426"></child>
+        </children>
+    </item>
+    <item nodeId="node-7426">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7427"></child>
+        </children>
+    </item>
+    <item nodeId="node-7427">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7442"></child>
+        </children>
+    </item>
+    <item nodeId="node-7442">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7451"></child>
+        </children>
+    </item>
+    <item nodeId="node-7451">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7466"></child>
+            <child nodeId="node-7452"></child>
+        </children>
+    </item>
+    <item nodeId="node-7452">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7453"></child>
+        </children>
+    </item>
+    <item nodeId="node-7453">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7454"></child>
+        </children>
+    </item>
+    <item nodeId="node-7454">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7455"></child>
+        </children>
+    </item>
+    <item nodeId="node-7455">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7456"></child>
+        </children>
+    </item>
+    <item nodeId="node-7456">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7466">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7467"></child>
+        </children>
+    </item>
+    <item nodeId="node-7467">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7468"></child>
+        </children>
+    </item>
+    <item nodeId="node-7468">
+        <command xml:space="preserve">scanner, jkjklj</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7469"></child>
+        </children>
+    </item>
+    <item nodeId="node-7469">
+        <command xml:space="preserve">tell scanner about me</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7414">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7415"></child>
+        </children>
+    </item>
+    <item nodeId="node-7415">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7416"></child>
+        </children>
+    </item>
+    <item nodeId="node-7416">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7417"></child>
+        </children>
+    </item>
+    <item nodeId="node-7417">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7418"></child>
+        </children>
+    </item>
+    <item nodeId="node-7418">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7419"></child>
+        </children>
+    </item>
+    <item nodeId="node-7419">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7420"></child>
+        </children>
+    </item>
+    <item nodeId="node-7420">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-7349">
+        <command xml:space="preserve">scan scanner</command>
+        <result xml:space="preserve">Self test completed. Scanner is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7350"></child>
+        </children>
+    </item>
+    <item nodeId="node-7350">
+        <command xml:space="preserve">scanner, open machine</command>
+        <result xml:space="preserve">Search error: cannot find machine.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7351"></child>
+        </children>
+    </item>
+    <item nodeId="node-7351">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first opening the floor hatch)
+You scramble down through the hatch and close it behind yourself.
+
+Cellar
+A decompression shelter and space for storage.
+
+There is a secured hatch in the ceiling.
+
+There is an emergency mask hanging on the wall.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7352"></child>
+        </children>
+    </item>
+    <item nodeId="node-7352">
+        <command xml:space="preserve">scan mask</command>
+        <result xml:space="preserve">Machine is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7353"></child>
+        </children>
+    </item>
+    <item nodeId="node-7353">
+        <command xml:space="preserve">scanner, open mask</command>
+        <result xml:space="preserve">Machine is unitary.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -16378,6 +17093,73 @@ Your home is here among the crops. You can walk spinward or antispinward.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-7361">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7362"></child>
+        </children>
+    </item>
+    <item nodeId="node-7362">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7363"></child>
+        </children>
+    </item>
+    <item nodeId="node-7363">
+        <command xml:space="preserve">scanner, scan</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7364"></child>
+        </children>
+    </item>
+    <item nodeId="node-7364">
+        <command xml:space="preserve">san</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7365"></child>
+        </children>
+    </item>
+    <item nodeId="node-7365">
+        <command xml:space="preserve">scan</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7366"></child>
+        </children>
+    </item>
+    <item nodeId="node-7366">
+        <command xml:space="preserve">sanner, open hatch</command>
+        <result xml:space="preserve">You seem to want to talk to someone, but I can't see whom.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-7367"></child>
+        </children>
+    </item>
+    <item nodeId="node-7367">
+        <command xml:space="preserve">scanner, open hatch</command>
+        <result xml:space="preserve">You must be carrying the scanner to use it.
+
+You must be carrying the scanner to use it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-6970">
         <command xml:space="preserve">cut me</command>
         <result xml:space="preserve">Imperfect vessel that you are, that is not the answer.
@@ -17819,10 +18601,10 @@ Taken.
     </item>
     <item nodeId="node-7042">
         <command xml:space="preserve">scan regulator</command>
-        <result xml:space="preserve">Component is faulty.
+        <result xml:space="preserve">Module is faulty.
 
 &gt;</result>
-        <commentary xml:space="preserve">Component is faulty.
+        <commentary xml:space="preserve">Module is faulty.
 
 &gt;</commentary>
         <children><child nodeId="node-7043"></child>
@@ -17830,10 +18612,10 @@ Taken.
     </item>
     <item nodeId="node-7043">
         <command xml:space="preserve">scan unscanned regulator</command>
-        <result xml:space="preserve">Component is functional.
+        <result xml:space="preserve">Module is functional.
 
 &gt;</result>
-        <commentary xml:space="preserve">Component is functional.
+        <commentary xml:space="preserve">Module is functional.
 
 &gt;</commentary>
         <children><child nodeId="node-7044"></child>
@@ -17856,10 +18638,10 @@ You put the functional pressure regulation module into the atmosphere pump.
     </item>
     <item nodeId="node-7045">
         <command xml:space="preserve">scan power module</command>
-        <result xml:space="preserve">Component is faulty.
+        <result xml:space="preserve">Module is faulty.
 
 &gt;</result>
-        <commentary xml:space="preserve">Component is faulty.
+        <commentary xml:space="preserve">Module is faulty.
 
 &gt;</commentary>
         <children><child nodeId="node-7046"></child>
@@ -17867,10 +18649,10 @@ You put the functional pressure regulation module into the atmosphere pump.
     </item>
     <item nodeId="node-7046">
         <command xml:space="preserve">scan unscanned power module</command>
-        <result xml:space="preserve">Component is functional.
+        <result xml:space="preserve">Module is functional.
 
 &gt;</result>
-        <commentary xml:space="preserve">Component is functional.
+        <commentary xml:space="preserve">Module is functional.
 
 &gt;</commentary>
         <children><child nodeId="node-7047"></child>

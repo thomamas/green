@@ -73,6 +73,8 @@ To say stop computer: say "[roman type]".
 To display (x - some text): say "[start computer][x][stop computer][line break]";
 To computerize (x - some text): say "[start computer][x][stop computer][paragraph break]";
 To note (x - some text): say "[start note][x][stop note][paragraph break]";
+To lnote (x - some text): say "[start note][x][stop note][line break]"; [todo - resolve these two ]
+
 
 Chapter 5 - Misc Phrases
 
@@ -403,53 +405,47 @@ Chapter 13 - Testing - Not for release
 Include Object Response Tests by Juhana Leinonen.
 Include Testing Commands by Thomas Insel.
 
-Book 2 - Machines & Components, Scanner and Scanning
+Book 2 - Machines & Modules, Scanner and Scanning
 
-Chapter 1 - Components
+Chapter 1 - Modules
 
 [ known as modules in text ]
 
 Status is a kind of value. The statuses are functional and faulty.
 
-A component is a kind of thing.
-A component has a status. The status of a component is usually functional. 
+A module is a kind of thing.
+A module has a status. The status of a module is usually functional. 
+A module can be scanned.
 
-A component can be scanned.
+Understand "module" as a module.
+Understand the status property as describing a module when the item described is scanned.
+Understand "unscanned" as a module when the item described is not scanned.
+Understand "scanned" as a module when the item described is scanned.
 
-Understand "module" as a component.
-Understand the status property as describing a component when the item described is scanned.
-Understand "unscanned" as a component when the item described is not scanned.
-Understand "scanned" as a component when the item described is scanned.
-
-[]
-
-To say the qualifier of (c - a component):
+To say the qualifier of (c - a module):
 	if c is scanned:
 		say "[status of c] ";
-	else if any component has been scanned:
+	else if any module has been scanned:
 		say "unscanned ";
 	otherwise:
 		do nothing.
-[]
 
-Before printing the plural name of a component (called c), say the qualifier of c.
+Before printing the plural name of a module (called c), say the qualifier of c.
+Before printing the name of a module (called c) while not examining, say the qualifier of c.
+Before printing the name of a module (called c) while examining, unless the noun is a module, say the qualifier of c.
 
-Before printing the name of a component (called c) while not examining, say the qualifier of c.
-
-Before printing the name of a component (called c) while examining, unless the noun is a component, say the qualifier of c.
-
-Instead of examining a component (called c):
+Instead of examining a module (called c):
 	if c is scanned:
 		say "The scanner reported that this [c] is [status of c].";
 	otherwise:
 		say "It is a standardized [c]."
 
-Instead of scanning a component (called c):
-	computerize "Component is [status of c].";
+Instead of scanning a module (called c):
+	computerize "Module is [status of c].";
 	now c is scanned.
 
-Instead of the scanner opening a component:
-	computerize "Component is unitary.";
+Instead of the scanner opening a module:
+	computerize "Module is unitary.";
 	rule succeeds.
 
 Chapter 2 - Machines
@@ -458,8 +454,18 @@ A machine is a kind of container. A machine is usually closed and unopenable and
 
 To decide if (m - a machine) is functional: decide yes.
 
+A machine can be quiet. [* quiet is from example 357, like scenery but will still print info if opened ]
+
+Rule for writing a paragraph about a quiet machine (called m):
+	if m is open:
+		if a thing is in m:
+			say "[The m] is open and contains [a list of things which are in m].";
+		otherwise:
+			say "[The m] is open and empty.";
+	now the m is mentioned.
+
 Before inserting something (called s) into a machine (called m) when m is open:
-	if s is not a component:
+	if s is not a module:
 		say "Only modules fit into [the m].";
 		stop the action.
 
@@ -511,34 +517,17 @@ Instead of the scanner opening a machine (called m):
 		now the m is open;
 	rule succeeds.
 
-
-
-
 Instead of opening a machine, say "You will need to use the scanner to do that.";
 
 After closing a machine (called m), say "You close [the m] and it seals without any trace of a seam.";
 
-After printing the name of a machine (called m):
-	if m is closed, omit contents in listing.
-
-	
-[ quiet is from example 357, like scenery but will still print info if opened ]
-
-A machine can be quiet.
-
-Rule for writing a paragraph about a quiet machine (called m):
-	if m is open:
-		if a thing is in m:
-			say "[The m] is open and contains [a list of things which are in m].";
-		otherwise:
-			say "[The m] is open and empty.";
-	now the m is mentioned.
+After printing the name of a machine (called m), if m is closed, omit contents in listing.
 
 Chapter 3 - Machinelike
 
-[ Machinelike things get a default response to scanner actions. ]
+[ An adjective to apply to other things so that they get a default response from the scanner. ]
 
-Something can be machinelike. Things are usually not machinelike. Things can be scanned.
+A thing can be machinelike. Things are usually not machinelike. Things can be scanned.
 
 Instead of scanning something that is machinelike, computerize "Machine is functional.";
 
@@ -546,11 +535,13 @@ Instead of the scanner opening something that is machinelike:
 	computerize "Machine is unitary.";
 	rule succeeds.
 
-Chapter 4 - Scanner and Scanning
+Chapter 4 - The Scanner and Scanning
 
 Include Inanimate Listeners by Emily Short.
 
 Section 1 - New Grammar
+
+[ Note that we implement scanning as the player scanning something, but pretend this is a shortcut for "scanner, scan ___" but we implement help and opening only as the second form, because the commands are already in use. One downside is that means the scanning action needs a Check rule to make sure the scanner is available, while this lives elsew]
 			
 Scanning is an action applying to one thing.
 Scanning it with is an action applying to two things.
@@ -572,11 +563,19 @@ Carry out bare scanning:
 
 Section 2 - The Scanner
 
-The scanner is an addressable thing. The scanner can be explained. It is not explained. It is machinelike.
-The scanner fail count is a number that varies. Scanner fail count is 0.
-The scanner has description "The handheld voice-activated scanner you use when working on the station's machines."
+The scanner is a machinelike addressable thing. The scanner can be explained. It is not explained. It has description "The handheld voice-activated scanner you use when working on the station's machines."
 
-Instead of scanning the scanner, computerize "Self test completed. Scanner is functional."
+The scanner fail count is a number that varies. Scanner fail count is 0.
+
+To explain the scanner:
+	if the scanner is not explained:
+		now the scanner fail count is 0;
+		now the scanner is explained;
+		lnote "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' or 'scanner, open SOMETHING' where SOMETHING is a visible object.";
+	otherwise:
+		increase the scanner fail count by 1;
+		if the scanner fail count is 3:
+			now the scanner is not explained;
 
 To decide if the scanner is at hand:
 	if the player encloses the scanner and the scanner is visible, decide yes;
@@ -584,39 +583,47 @@ To decide if the scanner is at hand:
 		say "You must be carrying the scanner to use it.";
 	otherwise:
 		say "That makes no sense without a scanner.";
-	decide no.	
-
-After examining the scanner, explain the scanner.
-
-Instead of switching on or switching off the scanner:
-	say "The scanner is always on and listening.[paragraph break]";
-	explain the scanner.
-
-To explain the scanner:
-	if the scanner is not explained:
-		now the scanner fail count is 0;
-		now the scanner is explained;
-		note "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' or 'scanner, open SOMETHING' where SOMETHING is a visible object.";
-	otherwise:
-		increase the scanner fail count by 1;
-		if the scanner fail count is 3:
-			now the scanner is not explained;
+	decide no.
 
 To scanner syntax error:
 	computerize "Syntax error: command not in vocabulary.";
 	explain the scanner;
 
-[ scanner, scan <something that is visible> ]
-
-Persuasion rule for asking the scanner to try scanning or examining or opening or closing something:
-	persuasion succeeds.
+Persuasion rule for asking the scanner to try scanning or opening or closing something:
+	if the scanner is at hand, persuasion succeeds;
+	persuasion fails.
 
 Persuasion rule for asking the scanner to try getting help:
-	persuasion succeeds.
+	if the scanner is at hand, persuasion succeeds.
+
+Persuasion rule for asking the scanner to try bare scanning:
+	if the scanner is at hand, persuasion succeeds.
+
+Persuasion rule for asking the scanner to try doing something: [ any other interaction fails ]
+	if the scanner is at hand:
+		say "[start computer]Syntax error: command not in vocabulary.[stop computer]";
+		if the scanner fail count is 3, now the scanner is not explained;
+		if the scanner is not explained:
+			say "[line break]";
+			explain the scanner;
+		otherwise:
+			increase the scanner fail count by 1;
+		[ gymnastics & lnote rather than note above to avoid Inform deciding to fall through to the "has better things to do" message, this is the don't end with paragraph break issue, see Writing with Inform §12.4 ]
+	persuasion fails.
+
+Instead of switching on or switching off the scanner:
+	say "The scanner is always on and listening.[paragraph break]";
+	explain the scanner.
 
 Instead of the scanner closing something:
 	computerize "Command error: closing is a manual process.";
 	rule succeeds.
+
+Instead of the scanner scanning something:
+	try the player scanning the noun;
+	rule succeeds.
+
+Instead of scanning the scanner, computerize "Self test completed. Scanner is functional."
 
 Instead of the scanner getting help:
 	computerize "Recognized commands are 'help', 'open', and 'scan'.";
@@ -624,31 +631,14 @@ Instead of the scanner getting help:
 	explain the scanner;
 	rule succeeds.
 
-Instead of the scanner scanning or examining something:
-	try the player scanning the noun;
-	rule succeeds.
-
 Instead of the scanner opening something (called m):
 	computerize "No electronic technology detected.";
 	rule succeeds.
 
-[ scanner, scan ]
-
-Persuasion rule for asking the scanner to try bare scanning:
-	persuasion succeeds.
- 
 Instead of an actor bare scanning when the actor is not the player:
 	unless the scanner is at hand, rule succeeds;
 	try bare scanning;
 	rule succeeds.
-
-[ any other interaction fails ]
-
-Persuasion rule for asking the scanner to try doing something:
-	if the scanner is at hand:
-		say "[start computer]Syntax error: command not in vocabulary.[stop computer]";
-		[ skip explanation to avoid Inform deciding to fall through to the "has better things to do" message, this is the don't end with paragraph break issue, see Writing with Inform §12.4 ]
-	persuasion fails.
 
 Instead of answering the scanner that something:
 	unless the scanner is at hand, stop the action;
@@ -661,11 +651,9 @@ Instead of answering the scanner that something:
 		scanner syntax error;
 		explain the scanner;
 
-Instead of asking the scanner about something:
-	if the scanner is at hand, scanner syntax error;	
+Instead of asking or telling the scanner about something, if the scanner is at hand, scanner syntax error;
 
-Instead of telling the scanner about something:
-	if the scanner is at hand, scanner syntax error;
+After examining the scanner, explain the scanner.
 
 Section 1 - Tweaks for Standard Rules
 
@@ -693,11 +681,11 @@ To say internal rule exception:
 
 The block vaguely going rule response (A) is "You'll have to say which direction to go in."
 
-Chapter 5 - Kinds of Components
+Chapter 5 - Kinds of Modules
 
-A power module is a kind of component.
-An instruction module is a kind of component.
-A pressure regulation module is a kind of component. Understand "regulator" as a pressure regulation module.
+A power module is a kind of module.
+An instruction module is a kind of module.
+A pressure regulation module is a kind of module. Understand "regulator" as a pressure regulation module.
 
 
 
@@ -860,7 +848,7 @@ To say pump help:
 			say "Now might be a good time to try out the scanner.";
 		else unless a machine has been open:
 			say "Scanning isn't the only thing that the scanner can do.";
-		else unless any component has been scanned:
+		else unless any module has been scanned:
 			say "You can also scan modules.";
 		else unless there is a functional handled power module and there is a functional handled pressure regulation module:
 			say "You still need to find some modules.";
@@ -1257,7 +1245,7 @@ When play begins: [* this can't be the right way to do this ]
 To decide if (s - a machine) and (t - a machine) are connected:
 	decide on whether or not the gray cable is inserted into the s and the gray cable is inserted into the t.
 
-Definition: the communications unit is usable if the communications unit is functional and the audio unit is functional and the audio unit is closed and audio and communications are connected. [* usable means ready for its special purpose, functional just means that components are all correct and functional ]
+Definition: the communications unit is usable if the communications unit is functional and the audio unit is functional and the audio unit is closed and audio and communications are connected. [* usable means ready for its special purpose, functional just means that modules are all correct and functional ]
 
 Definition: the organ is usable if audio unit and organ are connected and the audio unit is functional and audio unit is closed.
 
