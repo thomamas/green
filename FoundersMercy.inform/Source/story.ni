@@ -8,19 +8,11 @@
 	https://creativecommons.org/licenses/by/4.0/	
 ]
 
-[
-	TODO:
-		is plugs and sockets too complicated?
-		more story bits
-		Review help
-
-		crate: maybe something esides the instruction module?
-			or make it a useful instruction module and you can fix the learning machine.
-]
-
 Book 1 - Setup
 
-Chapter 1 - The story
+Chapter 2 - The story
+
+[ There is no way to automatically check, but this story was written for use with Inform 7 build 6M62. ]
 
 Use American dialect and the serial comma.
 
@@ -42,7 +34,7 @@ Release along with cover art ("A space station."),
 	a file of "Story Map" called "Map.pdf",
 	and a "Local" website.
 
-Chapter 2 - Scoring
+Chapter 3 - Scoring
 
 Use scoring. The maximum score is 50. An object can be scored. An object is usually not scored.
 
@@ -60,7 +52,17 @@ Use scoring. The maximum score is 50. An object can be scored. An object is usua
 	10 - getting the communications unit working (and calling for help)
 ]
 
-Chapter 3 - Notes
+Chapter 4 - Notes
+
+Section 1G (for Glulx only)
+
+Include Glulx Text Effects by Emily Short
+
+Section 1Z (for Z-machine only)
+
+To say note style: say "".
+
+Section 2 - 
 
 To say start note: say "[note style][bracket]".
 To say stop note: say "[close bracket][roman type]".
@@ -68,30 +70,22 @@ To say stop note: say "[close bracket][roman type]".
 To say start computer: say "[fixed letter spacing]".
 To say stop computer: say "[roman type]".
 
-To display (x - some text):
-	say "[start computer][x][stop computer][line break]";
+To display (x - some text): say "[start computer][x][stop computer][line break]";
+To computerize (x - some text): say "[start computer][x][stop computer][paragraph break]";
+To note (x - some text): say "[start note][x][stop note][paragraph break]";
 
-To computerize (x - some text):
-	say "[start computer][x][stop computer][paragraph break]";
-
-To note (x - some text):
-	say "[start note][x][stop note][paragraph break]";
-
-Chapter 4 - Misc Phrases
+Chapter 5 - Misc Phrases
 
 To find and take (s - an object):	
 	now s is in the holder of the player;
 	try silently taking s;
 	set pronouns from s;
 
-To decide what number is the total minutes of (t - a time):
-	decide on the minutes part of t plus 60 times the hours part of t;
+To decide what number is the total minutes of (t - a time): decide on the minutes part of t plus 60 times the hours part of t;
 
-Chapter 5 - Extensions
+Chapter 6 - Extensions
 
 Section 1 - Basic Infrastructure
-
-Include Glulx Text Effects by Emily Short
 
 Include Unicode Character Names by Graham Nelson.
 
@@ -101,7 +95,7 @@ Include Exit Lister by Eric Eve.
 
 When play begins: now exit listing is enabled.
 
-The explain exit listing rule response (A) is "[start note]Type 'exits off' to disable the status line exit list and 'exits on' to turn it back on.[no line break][stop note][line break]"
+The explain exit listing rule response (A) is "[start note]Type 'exits off' to disable the status line exit list and 'exits on' to turn it back on.[no line break][stop note]"
 
 Instead of going nowhere, say "You can't go that way. [list the exits]";
 
@@ -167,7 +161,7 @@ Understand "connect [something] to [something]" as plugging it into.
 A usb plug is a kind of PS-plug. 
 A usb socket is a kind of PS-socket.
 
-Chapter 6 - Directions
+Chapter 7 - Directions
 
 The starboard is a direction. The starboard has opposite port. Understand "s" as starboard.
 
@@ -191,45 +185,6 @@ Before going a planetbound direction:
 	stop the action.
 
 Index map with spinward mapped as north. Index map with antispinward mapped as south. Index map with port mapped as west. Index map with starboard mapped as east.
-
-Chapter 7 - Regions
-
-Underneath is a region.
-
-The Sectors is a region.
-
-Before going spinward in the The Sectors:
-	say "You walk a little ways to the next sector."
-
-Before going antispinward in the The Sectors:
-	say "You walk a little ways to the next sector."
-	
-The hub is a backdrop in The Sectors and in Center Platform. It has description "The station rotates around the hub, which extends out to hold solar panels on the port and mirrors on the starboard side.[if the player is not in the center platform] On the inside, there is a mesh maintenance platform."
-
-The solar panels are a backdrop in The Sectors and in Center Platform. They have description "The primary source of station power." Understand "panel" as solar panels..
-
-The mirrors are a backdrop in The Sectors and in Center Platform. They have description "The mirrors reflect sun light into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
-
-The maintenance platform is a backdrop in The Sectors. It has description "Since the main power and sensor feeds pass through the hub, there is a platform where you can perform various maintenance tasks."
-
-Instead of doing anything other than examining or scanning to the hub when the player is not in the center platform:
-	say "You are too far away to do that."
-	
-Instead of doing anything other than examining or scanning to the solar panels:
-	say "You are too far away to do that."
-
-Instead of scanning the solar panels:
-	computerize "Machine is functional. Operating at [one of]73[or]72[or]71[then purely at random]% efficiency."
-
-Instead of the scanner opening the solar panels:
-	computerize "Machine is unitary.";
-	rule succeeds.
-	
-Instead of doing anything other than examining or entering or scanning to the maintenance platform:
-	say "You are too far away to do that."
-
-Instead of entering the maintenance platform:
-	say "You will need to climb a pylon to get there."
 
 Chapter 8 - Kinds of doors
 
@@ -269,7 +224,7 @@ A building is a kind of door. It is usually open. It is usually not openable. It
 
 Chapter 9 - Kinds of Other Things
 
-A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "the pylon". Understand "pylon" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station many meters above."
+A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "pylon". Understand "pylon" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station many meters above."
 
 Instead of climbing a pylon (called p):
 	say "The pylon is slick metal with no obvious handholds."
@@ -284,14 +239,13 @@ Instead of switching off a circuit breaker (called b) when b is switched on:
 
 The green circuit breaker is a circuit breaker. It is switched off.
 
-A forest is a kind of thing. It is usually scenery and privately-named and plural-named. It usually has printed name "some trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, and they help with air processing."
+A forest is a kind of thing. It is usually scenery and privately-named and plural-named. It usually has printed name "trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, and they help with air processing."
 
 Instead of climbing a forest:
 	if the player is wearing the gravity boots:
 		say "Trees aren't magnetized, so the boots won't help.";
 	otherwise:
 		say "You can't get a good grip."
-
 
 Chapter 10 - About
 
@@ -313,295 +267,7 @@ Carry out requesting the credits:
 		,
 		"This work is Copyright © [the story creation year] Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type]).".
 
-Chapter 11 - Machines, Components, Scanning, etc
-
-Section 1 - Components
-
-Status is a kind of value. The statuses are functional and faulty.
-
-A component is a kind of thing. A component has a status. The status of a component is usually functional. Understand "module" as a component.
-
-Instead of examining a component (called c):
-	if c is scanned:
-		say "The scanner reported that this [c] is [status of c].";
-	otherwise:
-		say "It is a standardized [c]."
-
-A component can be scanned.
-
-To say the qualifier of (c - a component):
-	if c is scanned:
-		say "[status of c] ";
-	else if any component has been scanned:
-		say "unscanned ";
-	otherwise:
-		do nothing.
-
-Before printing the plural name of a component (called c), say the qualifier of c.
-
-Before printing the name of a component (called c) while not examining, say the qualifier of c.
-
-Before printing the name of a component (called c) while examining, unless the noun is a component, say the qualifier of c.
-
-Understand the status property as describing a component when the item described is scanned.
-Understand "unscanned" as a component when the item described is not scanned.
-Understand "scanned" as a component when the item described is scanned.
-
-Instead of scanning a component (called c):
-	computerize "Component is [status of c].";
-	now c is scanned.
-
-Section 2 - Machines
-
-[ Machinelike things get a default response to scanner actions. ]
-
-Something can be machinelike. Things are usually not machinelike. Things can be scanned.
-
-Instead of scanning something that is machinelike, computerize "Machine is functional.";
-
-Instead of the scanner opening something that is machinelike:
-	computerize "Machine is unitary.";
-	rule succeeds.
-
-[ Real machines ]
-
-A machine is a kind of container. A machine is usually closed and unopenable and fixed in place. A machine can be scanned.
-
-To decide if (m - a machine) is functional: decide yes.
-
-Before inserting something (called s) into a machine (called m):
-	if s is not a component:
-		say "Only modules fit into [the m].";
-		stop the action.
-
-Instead of examining a machine (called m):
-	say the description of m;
-	;
-	if m is open:
-		say paragraph break;
-		if a thing is in m:
-			say "[regarding the m][They] [are] open, revealing [a list of things which are in m]";
-			let open space be the carrying capacity of m minus the number of things contained in m;
-			if open space is positive:
-				say " and space for [open space in words] more module[s].";
-			otherwise:
-				say ".";
-		otherwise if the carrying capacity of m is zero:
-			say "[regarding the m][They] [are] open.";
-		otherwise:
-			say "[regarding the m][They] [are] open, revealing space for [the carrying capacity of m in words] module[s].";
-	otherwise:
-		say "[line break]";
-	;
-	follow the list attached things when examining receiver or inserter rule. [* from Plugs and Sockets ]
-
-Instead of scanning a machine (called m):
-	now m is scanned;
-	computerize "Machine is [if m is functional]functional[else]failed[end if]."
-
-Instead of opening a machine, say "You will need to use the scanner to do that.";
-
-After closing a machine (called m), say "You close [the m] and it seals without any trace of a seam.";
-
-[ quiet is from example 357, like scenery but will still print info if opened ]
-
-A machine can be quiet.
-
-Rule for writing a paragraph about a quiet machine (called m):
-	if m is open:
-		if a thing is in m:
-			say "[The m] is open and contains [a list of things which are in m].";
-		otherwise:
-			say "[The m] is open and empty.";
-	now the m is mentioned.
-
-Section 3 - Scanner and Scanning
-
-Include Inanimate Listeners by Emily Short.
-
-Scanning is an action applying to one thing.
-Scanning it with is an action applying to two things.
-
-Understand "scan [something]" as scanning.
-Understand "scan [something] with [the scanner]" as scanning it with.
-
-Carry out scanning it with:
-	Try scanning the noun instead.
-
-Before scanning:
-	unless the scanner is at hand, stop the action.
-
-Carry out scanning:
-	computerize "No modular technology detected.";
-
-Bare scanning is an action applying to nothing.
-
-Understand "scan" as bare scanning.
-
-Before bare scanning:
-	unless the scanner is at hand, stop the action.
-
-Carry out bare scanning:
-	computerize "Syntax error: no target.";
-	explain the scanner
-
-[]
-
-The scanner is an addressable thing. The scanner can be explained. It is not explained. It is machinelike.
-The scanner fail count is a number that varies. Scanner fail count is 0.
-The scanner has description "The handheld voice-activated scanner you use when working on the station's machines."
-
-Instead of scanning the scanner, computerize "Self test completed. Scanner is functional."
-
-To decide if the scanner is at hand:
-	if the player encloses the scanner and the scanner is visible, decide yes;
-	if the scanner is visible:
-		say "You must be carrying the scanner to use it.";
-	otherwise:
-		say "That makes no sense without a scanner.";
-	decide no.	
-
-After examining the scanner, explain the scanner.
-
-Instead of switching on the scanner:
-	say "The scanner is always on and listening.[paragraph break]";
-	explain the scanner.
-	
-Instead of switching off the scanner, try switching on the scanner.
-
-To explain the scanner:
-	if the scanner is not explained:
-		now the scanner fail count is 0;
-		now the scanner is explained;
-		note "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' or 'scanner, open SOMETHING' where SOMETHING is a visible object.";
-	otherwise:
-		increase the scanner fail count by 1;
-		if the scanner fail count is 3:
-			now the scanner is not explained;
-
-To scanner syntax error:
-	computerize "Syntax error: command not in vocabulary.";
-	explain the scanner;
-
-[ scanner, scan <something that is visible> ]
-
-Persuasion rule for asking the scanner to try scanning or examining or opening or closing something:
-	persuasion succeeds.
-
-Persuasion rule for asking the scanner to try getting help:
-	persuasion succeeds.
-
-Instead of the scanner closing something:
-	computerize "Command error: closing is a manual process.";
-	rule succeeds.
-
-Instead of the scanner getting help:
-	computerize "Recognized commands are 'help', 'open', and 'scan'.";
-	now the scanner is not explained;
-	explain the scanner;
-	rule succeeds.
-
-Instead of the scanner scanning or examining something:
-	try the player scanning the noun;
-	rule succeeds.
-
-Instead of the scanner opening something (called m):
-	if m is a component:
-		computerize "Component is unitary.";
-	otherwise if m is a machine:
-		if m is not openable:
-			computerize "Machine is unitary.";
-		otherwise if m is open:
-			computerize "Machine is already open.";
-		otherwise:
-			computerize "Opening.";
-			;
-			if a thing is in m:
-				say "[The m] swing[s] open, revealing [a list of things which are in m]";
-				let open space be the carrying capacity of m minus the number of things contained in m;
-				if open space is positive:
-					say " and space for [open space in words] more module[s].";
-				otherwise:
-					say ".";
-			otherwise if the carrying capacity of m is zero:
-				say "[The m] swing[s] open.";
-			otherwise:
-				say "[The m] swing[s] open, revealing space for [the carrying capacity of m in words] modules.";
-			;
-			now the m is open;
-	otherwise:
-		computerize "No electronic technology detected.";
-	rule succeeds.
-
-After printing the name of a machine (called m):
-	if m is closed, omit contents in listing.
-
-[ scanner, scan ]
-
-Persuasion rule for asking the scanner to try bare scanning:
-	persuasion succeeds.
- 
-Instead of an actor bare scanning when the actor is not the player:
-	unless the scanner is at hand, rule succeeds;
-	try bare scanning;
-	rule succeeds.
-
-[ any other interaction fails ]
-
-Persuasion rule for asking the scanner to try doing something:
-	if the scanner is at hand:
-		say "[start computer]Syntax error: command not in vocabulary.[stop computer]";
-		[ skip explanation to avoid Inform deciding to fall through to the "has better things to do" message, this is the don't end with paragraph break issue, see Writing with Inform §12.4 ]
-	persuasion fails.
-
-Instead of answering the scanner that something:
-	unless the scanner is at hand, stop the action;
-	if the topic understood matches the regular expression "^help\s":
-		try the scanner getting help instead;
-	else if the topic understood matches the regular expression "^(scan|open|close)\s+(.*)":
-		computerize "Search error: cannot find [text matching subexpression 2].";
-		explain the scanner;
-	otherwise:
-		scanner syntax error;
-		explain the scanner;
-
-Instead of asking the scanner about something:
-	if the scanner is at hand, scanner syntax error;	
-
-Instead of telling the scanner about something:
-	if the scanner is at hand, scanner syntax error;
-
-[ 
-	Zarf's fix from	https://intfiction.org/forum/viewtopic.php?f=7&t=26951 for:
-
-	>scanner, go
-	You'll have to say which compass direction to go in.
-	I didn't understand that instruction.
-]
-
-The action processing internal rule response (K) is "[internal rule exception]"
-
-To say internal rule exception:
-	if the action name part of the current action is the going action and the person asked is not yourself:
-		say "[run paragraph on]";
-	else:
-		say "I didn't understand that instruction."
-
-[
-	Let's also change the message for vaguely going, because we don't have compass directions.
-	
-	It is possible to put logic here like "if the person asked is the scanner and the player is holding the scanner", but then we would probably need to deal with other incomplete commands like "scanner, open" and let's just not open that door.
-]
-
-The block vaguely going rule response (A) is "You'll have to say which direction to go in."
-
-Section 4 - Kinds of Components
-
-A power module is a kind of component.
-An instruction module is a kind of component.
-A pressure regulation module is a kind of component. Understand "regulator" as a pressure regulation module.
-
-Chapter 12 - The Player
+Chapter 11 - The Player
 
 The player is female. The carrying capacity of the player is 3.
 
@@ -642,7 +308,7 @@ Instead of taking inventory:
 		say "[line break][Our] jumpsuit pocket contains:[line break]";
 		list the contents of the pocket, with newlines, indented, including contents, giving inventory information, with extra indentation.
 
-Chapter 13 - Actions
+Chapter 12 - Actions
 
 Section 1 - Remove Some Actions
 
@@ -732,36 +398,310 @@ Playing is an action applying to one thing.
 
 Carry out playing: say "[regarding the noun]You don't know how to play [those]."
 
-Chapter 14 - Testing - Not for release
+Chapter 13 - Testing - Not for release
 
 Include Object Response Tests by Juhana Leinonen.
+Include Testing Commands by Thomas Insel.
 
-Understand "checkobj" as checking objects;
+Book 2 - Machines & Components, Scanner and Scanning
 
-Checking objects is an action out of world;
+Chapter 1 - Components
 
-Carry out checking objects:
-	repeat with item running through things: 
-		if description of the item is "": 
-			say "[item] has no description."
+[ known as modules in text ]
 
-Understand "listobj" as listing objects;
+Status is a kind of value. The statuses are functional and faulty.
 
-Listing objects is an action out of world;
+A component is a kind of thing.
+A component has a status. The status of a component is usually functional. 
 
-Carry out listing objects:
-	let L be the list of things;
-	sort L in printed name order;
-	repeat with item running through L:
-		say "[item][if item is fixed in place] (F)[end if][if item is scenery] (S)[end if][if item is part of something] (P)[end if][line break]"
+A component can be scanned.
 
-Understand "* [text]" as commenting on the transcript.
+Understand "module" as a component.
+Understand the status property as describing a component when the item described is scanned.
+Understand "unscanned" as a component when the item described is not scanned.
+Understand "scanned" as a component when the item described is scanned.
 
-Commenting on the transcript is an action out of world applying to a topic.
+[]
 
-Carry out commenting on the transcript: say "(Noted.)"
+To say the qualifier of (c - a component):
+	if c is scanned:
+		say "[status of c] ";
+	else if any component has been scanned:
+		say "unscanned ";
+	otherwise:
+		do nothing.
+[]
 
-Book 2 - Scenes
+Before printing the plural name of a component (called c), say the qualifier of c.
+
+Before printing the name of a component (called c) while not examining, say the qualifier of c.
+
+Before printing the name of a component (called c) while examining, unless the noun is a component, say the qualifier of c.
+
+Instead of examining a component (called c):
+	if c is scanned:
+		say "The scanner reported that this [c] is [status of c].";
+	otherwise:
+		say "It is a standardized [c]."
+
+Instead of scanning a component (called c):
+	computerize "Component is [status of c].";
+	now c is scanned.
+
+Instead of the scanner opening a component:
+	computerize "Component is unitary.";
+	rule succeeds.
+
+Chapter 2 - Machines
+
+A machine is a kind of container. A machine is usually closed and unopenable and fixed in place. A machine can be scanned.
+
+To decide if (m - a machine) is functional: decide yes.
+
+Before inserting something (called s) into a machine (called m) when m is open:
+	if s is not a component:
+		say "Only modules fit into [the m].";
+		stop the action.
+
+Instead of examining a machine (called m):
+	say the description of m;
+	let open space be the carrying capacity of m minus the number of things contained in m;
+	;
+	if m is open:
+		say paragraph break;
+		if a thing is in m:
+			say "[regarding the m][They] [are] open, revealing [a list of things which are in m]";
+			if open space is positive:
+				say " and space for [open space in words] more module[s]."; [todo test]
+			otherwise:
+				say ".";
+		otherwise if the carrying capacity of m is zero:
+			say "[regarding the m][They] [are] open.";
+		otherwise:
+			say "[regarding the m][They] [are] open, revealing space for [open space in words] module[s]."; [ todo ]
+	otherwise:
+		say "[line break]";
+	;
+	follow the list attached things when examining receiver or inserter rule. [* from Plugs and Sockets ]
+
+Instead of scanning a machine (called m):
+	now m is scanned;
+	computerize "Machine is [if m is functional]functional[else]failed[end if]."
+
+Instead of the scanner opening a machine (called m):
+	if m is not openable:
+		computerize "Machine is unitary.";
+	otherwise if m is open:
+		computerize "Machine is already open.";
+	otherwise:
+		computerize "Opening.";
+		;
+		if a thing is in m:
+			say "[The m] swing[s] open, revealing [a list of things which are in m]";
+			let open space be the carrying capacity of m minus the number of things contained in m;
+			if open space is positive:
+				say " and space for [open space in words] more module[s]."; [todo test s]
+			otherwise:
+				say ".";
+		otherwise if the carrying capacity of m is zero:
+			say "[The m] swing[s] open.";
+		otherwise:
+			say "[The m] swing[s] open, revealing space for [the carrying capacity of m in words] module[s]."; [todo]
+		;
+		now the m is open;
+	rule succeeds.
+
+
+
+
+Instead of opening a machine, say "You will need to use the scanner to do that.";
+
+After closing a machine (called m), say "You close [the m] and it seals without any trace of a seam.";
+
+After printing the name of a machine (called m):
+	if m is closed, omit contents in listing.
+
+	
+[ quiet is from example 357, like scenery but will still print info if opened ]
+
+A machine can be quiet.
+
+Rule for writing a paragraph about a quiet machine (called m):
+	if m is open:
+		if a thing is in m:
+			say "[The m] is open and contains [a list of things which are in m].";
+		otherwise:
+			say "[The m] is open and empty.";
+	now the m is mentioned.
+
+Chapter 3 - Machinelike
+
+[ Machinelike things get a default response to scanner actions. ]
+
+Something can be machinelike. Things are usually not machinelike. Things can be scanned.
+
+Instead of scanning something that is machinelike, computerize "Machine is functional.";
+
+Instead of the scanner opening something that is machinelike:
+	computerize "Machine is unitary.";
+	rule succeeds.
+
+Chapter 4 - Scanner and Scanning
+
+Include Inanimate Listeners by Emily Short.
+
+Section 1 - New Grammar
+			
+Scanning is an action applying to one thing.
+Scanning it with is an action applying to two things.
+Bare scanning is an action applying to nothing.
+
+Understand "scan [something]" as scanning.
+Understand "scan [something] with [the scanner]" as scanning it with.
+Understand "scan" as bare scanning.
+
+Check scanning: unless the scanner is at hand, stop the action.
+Check bare scanning: unless the scanner is at hand, stop the action.
+
+Carry out scanning: computerize "No modular technology detected."
+Carry out scanning it with: try scanning the noun instead.
+
+Carry out bare scanning:
+	computerize "Syntax error: no target.";
+	explain the scanner
+
+Section 2 - The Scanner
+
+The scanner is an addressable thing. The scanner can be explained. It is not explained. It is machinelike.
+The scanner fail count is a number that varies. Scanner fail count is 0.
+The scanner has description "The handheld voice-activated scanner you use when working on the station's machines."
+
+Instead of scanning the scanner, computerize "Self test completed. Scanner is functional."
+
+To decide if the scanner is at hand:
+	if the player encloses the scanner and the scanner is visible, decide yes;
+	if the scanner is visible:
+		say "You must be carrying the scanner to use it.";
+	otherwise:
+		say "That makes no sense without a scanner.";
+	decide no.	
+
+After examining the scanner, explain the scanner.
+
+Instead of switching on or switching off the scanner:
+	say "The scanner is always on and listening.[paragraph break]";
+	explain the scanner.
+
+To explain the scanner:
+	if the scanner is not explained:
+		now the scanner fail count is 0;
+		now the scanner is explained;
+		note "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' or 'scanner, open SOMETHING' where SOMETHING is a visible object.";
+	otherwise:
+		increase the scanner fail count by 1;
+		if the scanner fail count is 3:
+			now the scanner is not explained;
+
+To scanner syntax error:
+	computerize "Syntax error: command not in vocabulary.";
+	explain the scanner;
+
+[ scanner, scan <something that is visible> ]
+
+Persuasion rule for asking the scanner to try scanning or examining or opening or closing something:
+	persuasion succeeds.
+
+Persuasion rule for asking the scanner to try getting help:
+	persuasion succeeds.
+
+Instead of the scanner closing something:
+	computerize "Command error: closing is a manual process.";
+	rule succeeds.
+
+Instead of the scanner getting help:
+	computerize "Recognized commands are 'help', 'open', and 'scan'.";
+	now the scanner is not explained;
+	explain the scanner;
+	rule succeeds.
+
+Instead of the scanner scanning or examining something:
+	try the player scanning the noun;
+	rule succeeds.
+
+Instead of the scanner opening something (called m):
+	computerize "No electronic technology detected.";
+	rule succeeds.
+
+[ scanner, scan ]
+
+Persuasion rule for asking the scanner to try bare scanning:
+	persuasion succeeds.
+ 
+Instead of an actor bare scanning when the actor is not the player:
+	unless the scanner is at hand, rule succeeds;
+	try bare scanning;
+	rule succeeds.
+
+[ any other interaction fails ]
+
+Persuasion rule for asking the scanner to try doing something:
+	if the scanner is at hand:
+		say "[start computer]Syntax error: command not in vocabulary.[stop computer]";
+		[ skip explanation to avoid Inform deciding to fall through to the "has better things to do" message, this is the don't end with paragraph break issue, see Writing with Inform §12.4 ]
+	persuasion fails.
+
+Instead of answering the scanner that something:
+	unless the scanner is at hand, stop the action;
+	if the topic understood matches the regular expression "^help\s":
+		try the scanner getting help instead;
+	else if the topic understood matches the regular expression "^(scan|open|close)\s+(.*)":
+		computerize "Search error: cannot find [text matching subexpression 2].";
+		explain the scanner;
+	otherwise:
+		scanner syntax error;
+		explain the scanner;
+
+Instead of asking the scanner about something:
+	if the scanner is at hand, scanner syntax error;	
+
+Instead of telling the scanner about something:
+	if the scanner is at hand, scanner syntax error;
+
+Section 1 - Tweaks for Standard Rules
+
+[ 
+	Zarf's fix from	https://intfiction.org/forum/viewtopic.php?f=7&t=26951 for:
+
+	>scanner, go
+	You'll have to say which compass direction to go in.
+	I didn't understand that instruction.
+]
+
+The action processing internal rule response (K) is "[internal rule exception]"
+
+To say internal rule exception:
+	if the action name part of the current action is the going action and the person asked is not yourself:
+		say "[run paragraph on]";
+	else:
+		say "I didn't understand that instruction."
+
+[
+	Let's also change the message for vaguely going, because we don't have compass directions.
+	
+	It is possible to put logic here like "if the person asked is the scanner and the player is holding the scanner", but then we would probably need to deal with other incomplete commands like "scanner, open" and let's just not open that door.
+]
+
+The block vaguely going rule response (A) is "You'll have to say which direction to go in."
+
+Chapter 5 - Kinds of Components
+
+A power module is a kind of component.
+An instruction module is a kind of component.
+A pressure regulation module is a kind of component. Understand "regulator" as a pressure regulation module.
+
+
+
+Book 3 - Scenes
 
 Section 1 - Beginning
 
@@ -827,7 +767,7 @@ Every turn during Repairing Comms:
 
 Section 6 - The End
 
-The End is a scene. "The audio unit beeps and a synthesized voice says 'Comms ready.'[paragraph break]After a moment, it says 'Launching automatic help routine.'"
+The End is a scene. "The audio unit beeps and a synthesized voice says 'Comms ready.'[paragraph break]After a moment, it says 'Launching automatic routines.'"
 The End begins when the communications unit is usable for the first time.
 
 When The End begins: increase the score by 10. [* for calling for help ]
@@ -842,10 +782,10 @@ Every turn during The End:
 			,
 			"'Standby...[paragraph break]"
 			,
-			"'We can have a pod there in about one hundred minutes.'[no line break]";
-		end the story finally saying "You are not alone.";
+			"'We can have a pod there in about a thousand minutes.'[no line break]";
+		end the story finally saying "You are not alone.".
 
-Book 3 - Hints
+Book 4 - Hints
 
 Section 0 - Setup
 
@@ -983,7 +923,46 @@ Section 5 - The End
 Carry out getting help when The End is happening:
 	say "Just wait."
 
-Book 4 - The Ring
+Book 5 - Regions
+
+Underneath is a region.
+
+The Sectors is a region.
+
+Before going spinward in the The Sectors:
+	say "You walk a little ways to the next sector."
+
+Before going antispinward in the The Sectors:
+	say "You walk a little ways to the next sector."
+	
+The hub is a backdrop in The Sectors and in Center Platform. It has description "The station rotates around the hub, which extends out to hold solar panels on the port and mirrors on the starboard side.[if the player is not in the center platform] On the inside, there is a mesh maintenance platform."
+
+The solar panels are a backdrop in The Sectors and in Center Platform. They have description "The primary source of station power." Understand "panel" as solar panels..
+
+The mirrors are a backdrop in The Sectors and in Center Platform. They have description "The mirrors reflect sunlight into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
+
+The maintenance platform is a backdrop in The Sectors. It has description "Since the main power and sensor feeds pass through the hub, there is a platform where you can perform various maintenance tasks."
+
+Instead of doing anything other than examining or scanning to the hub when the player is not in the center platform:
+	say "You are too far away to do that."
+	
+Instead of doing anything other than examining or scanning to the solar panels:
+	say "You are too far away to do that."
+
+Instead of scanning the solar panels:
+	computerize "Machine is functional. Operating at [one of]73[or]72[or]71[then purely at random]% efficiency."
+
+Instead of the scanner opening the solar panels:
+	computerize "Machine is unitary.";
+	rule succeeds.
+	
+Instead of doing anything other than examining or entering or scanning to the maintenance platform:
+	say "You are too far away to do that."
+
+Instead of entering the maintenance platform:
+	say "You will need to climb a pylon to get there."
+
+Book 6 - The Ring
 
 Chapter 1 - Sector 1
 
@@ -999,13 +978,19 @@ Instead of eating some crops, say "You're not hungry."
 
 Section 1 - Barn
 
-A S1B1 is a building. It is inside of Sector 1. Through it is the Barn. S1B1 is scenery. It has description "A single story barn." It has printed name "barn". Understand "barn" as S1B1.
+A S1B1 is a building. It is inside of Sector 1. Through it is Barn. S1B1 is scenery. It has description "A single story barn." It has printed name "barn". Understand "barn" as S1B1.
 
-Barn is a room. "Not fancy: livestock on one side and feed on the other, but nothing remains of either." Sector 1 is outside of barn.
+Barn is a room. "Not fancy: livestock on one side and feed on the other, but nothing remains of either. There is a plow near the entrance." Sector 1 is outside of barn.
+
+A plow is scenery in the barn. It is pushable between rooms. It has description "A steel walking plow."
+
+Before pushing or pulling or turning or taking the plow, say "This plow is too heavy to move around without purpose." instead.
+
+Before going with the plow, try pushing the plow instead.
 
 Section 2 - Pod Control
 
-There is a room called Pod Control. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall."
+There is a room called Pod Control. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall."
 
 Pod Control is in Underneath.
 
@@ -1017,7 +1002,7 @@ Before doing anything other than examining or scanning to the space suit, say "A
 
 Instead of scanning the space suit, computerize "Machine is failed."
 
-A brass plaque is here. It is scenery. It has description "The plaque reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2238, Launched 2241.[line break]    'May His mercy shine upon us.'"
+A brass plate is here. It is scenery. It has description "The plate reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2238, Launched 2241.[line break]    'May His mercy shine upon us.'" Understand "plaque" as plate.
 
 A status display is here. It is scenery and a machine. The status display can be examined.
 
@@ -1098,7 +1083,7 @@ Instead of the scanner opening some berths:
 	computerize "Opening failed. Safety violation.";
 	rule succeeds.
 
-Instead of opening or closing the berths, say "The doors open and close automatically as pods come and go."
+Instead of opening or closing the berths, say "The doors open and close automatically as pods dock and launchc."
 Instead of unlocking the berths with something, try opening the berths.
 Instead of locking the berths with something, try closing the berths.
 
@@ -1149,7 +1134,7 @@ Nothing is inside from Sector 3.
 
 Instead of going nowhere from sector 3 when the noun is inside, say "You can enter the church or the house."
 
-A pylon called S3P1 is here. It has description "Made of smooth metal, anodized red, it connects the ground to the hub of the station many meters above." Understand "red" as S3P1.
+A pylon called S3P1 is here. It is improper-named. It has description "Made of smooth metal, anodized red, it connects the ground to the hub of the station many meters above." Understand "red" as S3P1.
 
 Before going up in Sector 3, try climbing S3P1 instead.
 
@@ -1415,7 +1400,7 @@ Chapter 6 - Sector 6
 
 Sector 6 is spinward from Sector 5 and antispinward from Sector 1. It is in The Sectors. "Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward." It has printed name "Sector 6: Hydroponics". It has destination name "sector 6".
 
-Hydroponics machines are scenery in Sector 6. It is machinelike. It has description "You were thoroughly trained in hydroponics maintenance, but fixing these machines is beyond you." Understand "machine" and "machinery" as hydroponics machines.
+Some hydroponics machines are scenery in Sector 6. It is machinelike. It has description "You were thoroughly trained in hydroponics maintenance, but fixing these machines is beyond you." Understand "machine" and "machinery" as hydroponics machines.
 
 Instead of doing anything other than examining or scanning to the hydroponics machines, say "The hydroponics machines are just so much junk."
 
@@ -1461,7 +1446,7 @@ A pair of gravity boots is in the supply vault. The gravity boots are wearable. 
 
 [ laser ]
 
-Laser beam is scenery. It has description "The cloud of dust scatters the laser beam just enough that you can see it scan across the north passageway at seemingly random angles." Understand "dust" and "cloud" and "cloud of dust" as the laser beam. The laser can be dusty. The laser beam is not dusty. The laser can be alarmed. The laser is not alarmed.
+A laser beam is scenery. It has description "The cloud of dust scatters the laser beam just enough that you can see it scan across the north passageway at seemingly random angles." Understand "dust" and "cloud" and "cloud of dust" as the laser beam. The laser can be dusty. The laser beam is not dusty. The laser can be alarmed. The laser is not alarmed.
 
 To trip the laser alarm:
 	say "An alarm sounds, [if the vault hatch is open]the hatch slams shut, [end if]and a synthesized voice says 'Laser scan detects unauthorized materiel removal.'";
@@ -1472,11 +1457,11 @@ To trip the laser alarm:
 
 Before doing something other than examining when the current action involves the laser beam, say "The laser beam is intangible." instead.
 
-Before going up from the supply vault when the laser is dusty, say "You maneuver around the laser beam.";
-
-Before going up from the supply vault when the player encloses the gravity boots and the laser is not dusty, trip the laser alarm instead.
+Before going up from the supply vault when the laser is dusty and the vault hatch is open, say "You maneuver around the laser beam."
 
 Before opening vault hatch when the player is in the supply vault and the laser is dusty, say "You maneuver around the laser beam."
+
+Before going up from the supply vault when the player encloses the gravity boots and the laser is not dusty, trip the laser alarm instead.
 
 Before opening vault hatch when
 	the player is in the supply vault and

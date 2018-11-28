@@ -8,7 +8,10 @@
 		<true/>
 	</dict>
 	<key>IFI7OutputSettings</key>
-	<dict/>
+	<dict>
+		<key>IFSettingCreateBlorb</key>
+		<true/>
+	</dict>
 	<key>IFLibrarySettings</key>
 	<dict>
 		<key>IFSettingLibraryToUse</key>
@@ -21,12 +24,14 @@
 		<key>IFSettingTestingTabHelpShown</key>
 		<true/>
 		<key>IFSettingTestingTabShownCount</key>
-		<integer>110</integer>
+		<integer>121</integer>
 	</dict>
 	<key>IFOutputSettings</key>
 	<dict>
 		<key>IFSettingNobbleRng</key>
 		<true/>
+		<key>IFSettingZCodeVersion</key>
+		<integer>256</integer>
 	</dict>
 	<key>IFRandomSettings</key>
 	<dict/>
