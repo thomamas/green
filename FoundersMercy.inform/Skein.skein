@@ -49,6 +49,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-6993"></child>
             <child nodeId="node-6986"></child>
             <child nodeId="node-6985"></child>
+            <child nodeId="node-8114"></child>
             <child nodeId="node-6975"></child>
             <child nodeId="node-6970"></child>
             <child nodeId="node-7489"></child>
@@ -108,6 +109,8 @@ There is a secured hatch in the floor.
             <child nodeId="node-7886"></child>
             <child nodeId="node-7349"></child>
             <child nodeId="node-7725"></child>
+            <child nodeId="node-8123"></child>
+            <child nodeId="node-8111"></child>
             <child nodeId="node-7404"></child>
             <child nodeId="node-7752"></child>
             <child nodeId="node-7368"></child>
@@ -116,6 +119,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-5612"></child>
             <child nodeId="node-5609"></child>
             <child nodeId="node-5608"></child>
+            <child nodeId="node-8268"></child>
             <child nodeId="node-7354"></child>
             <child nodeId="node-5605"></child>
         </children>
@@ -216,6 +220,55 @@ Object Response Tests version 7 by Juhana Leinonen
         <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
 
 [You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8268">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">As virtuous as ever.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8269"></child>
+        </children>
+    </item>
+    <item nodeId="node-8269">
+        <command xml:space="preserve">inventory</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8270"></child>
+        </children>
+    </item>
+    <item nodeId="node-8270">
+        <command xml:space="preserve">x scanner</command>
+        <result xml:space="preserve">The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8271"></child>
+        </children>
+    </item>
+    <item nodeId="node-8271">
+        <command xml:space="preserve">x jumpsuit</command>
+        <result xml:space="preserve">You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: green for farmers, blue for technicians, and so on, but that distinction died even before the population.
+
+It features a single large pocket, currently empty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8272"></child>
+        </children>
+    </item>
+    <item nodeId="node-8272">
+        <command xml:space="preserve">x pocket</command>
+        <result xml:space="preserve">The pocket is empty.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -3154,8 +3207,79 @@ That doesn't seem to be something you can unlock.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-7414"></child>
+            <child nodeId="node-8126"></child>
             <child nodeId="node-7405"></child>
+            <child nodeId="node-8104"></child>
         </children>
+    </item>
+    <item nodeId="node-8104">
+        <command xml:space="preserve">scanner, scan  me</command>
+        <result xml:space="preserve">No modular technology detected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8105"></child>
+        </children>
+    </item>
+    <item nodeId="node-8105">
+        <command xml:space="preserve">scanner, sjkdjfl</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8106"></child>
+        </children>
+    </item>
+    <item nodeId="node-8106">
+        <command xml:space="preserve">scanner, go up</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8107"></child>
+        </children>
+    </item>
+    <item nodeId="node-8107">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[** You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8108"></child>
+        </children>
+    </item>
+    <item nodeId="node-8108">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8109"></child>
+        </children>
+    </item>
+    <item nodeId="node-8109">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+
+[** You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8110"></child>
+        </children>
+    </item>
+    <item nodeId="node-8110">
+        <command xml:space="preserve">scanner, scan jjk</command>
+        <result xml:space="preserve">Search error: cannot find jjk.
+
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-7405">
         <command xml:space="preserve">scanner, look</command>
@@ -3340,6 +3464,62 @@ You must be carrying the scanner to use it.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-8126">
+        <command xml:space="preserve">scanner, jkjkj</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8127"></child>
+        </children>
+    </item>
+    <item nodeId="node-8127">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8128"></child>
+        </children>
+    </item>
+    <item nodeId="node-8128">
+        <command xml:space="preserve">scanner, scan organ</command>
+        <result xml:space="preserve">Machine functional. No output available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8129"></child>
+        </children>
+    </item>
+    <item nodeId="node-8129">
+        <command xml:space="preserve">gonear display</command>
+        <result xml:space="preserve">Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall.
+
+There is a secured hatch in the ceiling.
+
+Beside the secured port hatch, a status display shows an error message.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8130"></child>
+        </children>
+    </item>
+    <item nodeId="node-8130">
+        <command xml:space="preserve">x display</command>
+        <result xml:space="preserve">Pod bay locked down
+ 1. Telemetry sensor array offline - reset breaker FM36-87/A @ hub platform
+ 2. Launch system cooling loop offline - reset breaker FM29-63/A @ Sector 2
+ 3. Pod control atmosphere pump offline - scan and repair
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-7414">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Home
@@ -3410,11 +3590,58 @@ There is a secured hatch in the floor.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-8111">
+        <command xml:space="preserve">scanner, jskfjklds</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[** You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8112"></child>
+        </children>
+    </item>
+    <item nodeId="node-8112">
+        <command xml:space="preserve">scanner, look</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8113"></child>
+        </children>
+    </item>
+    <item nodeId="node-8113">
+        <command xml:space="preserve">ask scanner about me</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+There is no reply.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8123">
+        <command xml:space="preserve">scanner, jkjk</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8124"></child>
+        </children>
+    </item>
+    <item nodeId="node-8124">
+        <command xml:space="preserve">scanner, jkjkj</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-7725">
         <command xml:space="preserve">scanner, help</command>
         <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
 
-[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+[** You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -7296,12 +7523,67 @@ This work is Copyright © 2018 Thomas Insel but may be freely shared according t
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-6004"></child>
+        <children><child nodeId="node-8118"></child>
+            <child nodeId="node-6004"></child>
         </children>
     </item>
     <item nodeId="node-6004">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">You have heard of compass directions like north, but they don't make any sense here. Instead, you can go spinward, antispinward, port, and starboard. When you look spinward, port is left and starboard is right.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8118">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">The obvious exits are down and outside.
+
+[Type "exits off" to disable the status line exit list and "exits on" to turn it back on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8119"></child>
+        </children>
+    </item>
+    <item nodeId="node-8119">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">The obvious exits are down and outside.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8120"></child>
+        </children>
+    </item>
+    <item nodeId="node-8120">
+        <command xml:space="preserve">gonear organ</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ and the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8121"></child>
+        </children>
+    </item>
+    <item nodeId="node-8121">
+        <command xml:space="preserve">unplug gray</command>
+        <result xml:space="preserve">The gray cable is plugged into more than one thing.
+
+[Try "unplug gray cable from SOMETHING".]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8122"></child>
+        </children>
+    </item>
+    <item nodeId="node-8122">
+        <command xml:space="preserve">unplug gray</command>
+        <result xml:space="preserve">The gray cable is plugged into more than one thing.
+
+[Try "unplug gray cable from SOMETHING".]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8557,7 +8839,7 @@ If you are having trouble getting started, I suggest reading A Beginner's Guide 
     </item>
     <item nodeId="node-6109">
         <command xml:space="preserve">help</command>
-        <result xml:space="preserve">Your goal is simply to leave the station and find other people.
+        <result xml:space="preserve">Your objective is simply to leave the station and find other people.
 
 You can start by looking around and leaving your initial location.
 
@@ -8567,7 +8849,7 @@ If you are having trouble getting started, I suggest reading A Beginner's Guide 
 
   https://brasslantern.org/players/howto/beginnersguide.html
 
-[If you prefer not to be tempted by further hints, you can type "hints off" to disable them.]
+[You can type "hint" any time for contextual assistance. If you prefer not to be tempted, you can type "hints off" to disable hints.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8686,8 +8968,47 @@ There is a secured hatch in the floor.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-6124"></child>
+            <child nodeId="node-8261"></child>
+            <child nodeId="node-8249"></child>
             <child nodeId="node-6121"></child>
+            <child nodeId="node-8255"></child>
         </children>
+    </item>
+    <item nodeId="node-8255">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8256"></child>
+        </children>
+    </item>
+    <item nodeId="node-8256">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8257"></child>
+        </children>
+    </item>
+    <item nodeId="node-8257">
+        <command xml:space="preserve">help</command>
+        <result xml:space="preserve">You can start by looking around and leaving your initial location.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8258"></child>
+        </children>
+    </item>
+    <item nodeId="node-8258">
+        <command xml:space="preserve">help</command>
+        <result xml:space="preserve">You can start by looking around and leaving your initial location.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-6121">
         <command xml:space="preserve">restart</command>
@@ -8725,6 +9046,139 @@ There is a secured hatch in the floor.
     <item nodeId="node-6123">
         <command xml:space="preserve">disable help</command>
         <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8249">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8250"></child>
+        </children>
+    </item>
+    <item nodeId="node-8250">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8251"></child>
+        </children>
+    </item>
+    <item nodeId="node-8251">
+        <command xml:space="preserve">about</command>
+        <result xml:space="preserve">About Founder's Mercy
+Founder's Mercy is my second released Inform project, conceived and implemented in November of 2018.
+
+Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, Space Settlements: A Design Study, edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at https://archive.org/details/SpaceSettlementsADesignStudy1977 .
+
+Please send your feedback, bug reports, and requests for help to tinsel@tinsel.org. You can always find the current version of this game at http://tinsel.org/IF/ .
+
+This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license (https://creativecommons.org/licenses/by/4.0/).
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8252"></child>
+        </children>
+    </item>
+    <item nodeId="node-8252">
+        <command xml:space="preserve">about</command>
+        <result xml:space="preserve">About Founder's Mercy
+Founder's Mercy is my second released Inform project, conceived and implemented in November of 2018.
+
+Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, Space Settlements: A Design Study, edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at https://archive.org/details/SpaceSettlementsADesignStudy1977 .
+
+Please send your feedback, bug reports, and requests for help to tinsel@tinsel.org. You can always find the current version of this game at http://tinsel.org/IF/ .
+
+This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license (https://creativecommons.org/licenses/by/4.0/).
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8261">
+        <command xml:space="preserve">hint</command>
+        <result xml:space="preserve">You can start by looking around and leaving your initial location.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8262"></child>
+        </children>
+    </item>
+    <item nodeId="node-8262">
+        <command xml:space="preserve">score</command>
+        <result xml:space="preserve">You have so far scored 0 out of a possible 50, in 1 turn.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8263"></child>
+        </children>
+    </item>
+    <item nodeId="node-8263">
+        <command xml:space="preserve">about</command>
+        <result xml:space="preserve">About Founder's Mercy
+Founder's Mercy is my second released Inform project, conceived and implemented in November of 2018.
+
+Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, Space Settlements: A Design Study, edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at https://archive.org/details/SpaceSettlementsADesignStudy1977 .
+
+Please send your feedback, bug reports, and requests for help to tinsel@tinsel.org. You can always find the current version of this game at http://tinsel.org/IF/ .
+
+This work is Copyright © 2018 Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license (https://creativecommons.org/licenses/by/4.0/).
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8264"></child>
+        </children>
+    </item>
+    <item nodeId="node-8264">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8265"></child>
+        </children>
+    </item>
+    <item nodeId="node-8265">
+        <command xml:space="preserve">ye</command>
+        <result xml:space="preserve">Please answer yes or no.&gt; </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8266"></child>
+        </children>
+    </item>
+    <item nodeId="node-8266">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181128 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits or "hint" for assistance.
+
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8267"></child>
+        </children>
+    </item>
+    <item nodeId="node-8267">
+        <command xml:space="preserve">score</command>
+        <result xml:space="preserve">You have so far scored 0 out of a possible 50, in 1 turn.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -13828,7 +14282,7 @@ Someone has left a doll on the well swept floor.
     <item nodeId="node-6538">
         <command xml:space="preserve">gonear display</command>
         <result xml:space="preserve">Pod Control
-This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plaque on the wall.
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall.
 
 There is a secured hatch in the ceiling.
 
@@ -19364,6 +19818,24 @@ Syntax error: no target.
 [You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
 
 [bare scanning - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8114">
+        <command xml:space="preserve">ask scanner about em</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
+
+[** You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8115"></child>
+        </children>
+    </item>
+    <item nodeId="node-8115">
+        <command xml:space="preserve">ask scanner about me</command>
+        <result xml:space="preserve">Syntax error: command not in vocabulary.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

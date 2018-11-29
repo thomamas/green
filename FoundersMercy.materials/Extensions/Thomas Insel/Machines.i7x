@@ -4,6 +4,11 @@ Version 1 of Machines by Thomas Insel begins here.
 
 Use authorial modesty.
 
+Chapter 0 - Saying
+
+To scanner-note (x - some text): say "[italic type][x][roman type][line break]";
+To scanner-say (x - some text): say "[fixed letter spacing][x][stop computer][roman type]";
+
 Chapter 1 - New Grammar
 
 Scanning is an action applying to one thing.
@@ -59,12 +64,12 @@ Instead of examining a module (called c):
 		say "It is a standardized [c]."
 
 Instead of the scanner scanning a module (called c):
-	computerize "Module is [status of c].";
+	scanner-say "Module is [status of c].";
 	now c is scanned;
 	rule succeeds.
 
 Instead of the scanner opening a module:
-	computerize "Module is unitary.";
+	scanner-say "Module is unitary.";
 	rule succeeds.
 
 Chapter 3 - Machines
@@ -111,16 +116,16 @@ Instead of examining a machine (called m):
 
 Instead of the scanner scanning a machine (called m):
 	now m is scanned;
-	computerize "Machine is [if m is functional]functional[else]failed[end if].";
+	scanner-say "Machine is [if m is functional]functional[else]failed[end if].";
 	rule succeeds.
 
 Instead of the scanner opening a machine (called m):
 	if m is not openable:
-		computerize "Machine is unitary.";
+		scanner-say "Machine is unitary.";
 	otherwise if m is open:
-		computerize "Machine is already open.";
+		scanner-say "Machine is already open.";
 	otherwise:
-		computerize "Opening.";
+		scanner-say "Opening.[line break]";
 		;
 		if a thing is in m:
 			say "[The m] swing[s] open, revealing [a list of things which are in m]";
@@ -150,11 +155,11 @@ Chapter 4 - Machinelike
 A thing can be machinelike. Things are usually not machinelike. Things can be scanned.
 
 Instead of the scanner scanning something that is machinelike:
-	computerize "Machine is functional.";
+	scanner-say "Machine is functional.";
 	rule succeeds.
 
 Instead of the scanner opening something that is machinelike:
-	computerize "Machine is unitary.";
+	scanner-say "Machine is unitary.";
 	rule succeeds.
 
 Chapter 5 - The Scanner and Scanning
@@ -169,21 +174,18 @@ Instead of switching on or switching off the scanner:
 	say "The scanner is automatically on and listening whenever you are carrying it.[paragraph break]";
 	explain the scanner.
 
-Carry out answering the scanner that something:
+Instead of answering the scanner that something:
 	unless the scanner is at hand, stop the action;
 	if the topic understood matches the regular expression "^help\s":
 		try the scanner getting help instead;
 	else if the topic understood matches the regular expression "^(scan|open|close)\s+(.*)":
-		computerize "Search error: cannot find [text matching subexpression 2].";
+		scanner-say "Search error: cannot find [text matching subexpression 2].";
 		explain the scanner;
 	otherwise:
 		scanner syntax error;
 		explain the scanner;
 
-Carry out asking the scanner about something:
-	if the scanner is at hand, scanner syntax error.
-
-Carry out telling the scanner about something:
+Instead of asking or telling the scanner about something:
 	if the scanner is at hand, scanner syntax error.
 
 After examining the scanner, explain the scanner.
@@ -196,7 +198,7 @@ To explain the scanner:
 	if the scanner is not explained:
 		now the scanner fail count is 0;
 		now the scanner is explained;
-		lnote "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' or 'scanner, open SOMETHING' where SOMETHING is a visible object.";
+		scanner-note "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' or 'scanner, open SOMETHING' where SOMETHING is a visible object.";
 	otherwise:
 		increase the scanner fail count by 1;
 		if the scanner fail count is 3:
@@ -211,7 +213,7 @@ To decide if the scanner is at hand:
 	decide no.
 
 To scanner syntax error:
-	computerize "Syntax error: command not in vocabulary.";
+	scanner-say "Syntax error: command not in vocabulary.";
 	explain the scanner;
 
 Before the scanner doing something: [* catch the try the scanner... bits ]
@@ -225,7 +227,7 @@ Persuasion rule for asking the scanner to try getting help or barescanning:
 	unless the scanner is at hand, stop the action;
 	persuasion succeeds.
 
-Persuasion rule for asking the scanner to try doing something: [ any other interaction fails - gymnastics & lnote rather than note above to avoid Inform deciding to fall through to the "has better things to do" message, this is the don't end with paragraph break issue, see Writing with Inform §12.4 ]
+Persuasion rule for asking the scanner to try doing something: [ any other interaction fails - gymnastics & make sure scanner-note ends in line feed to avoid Inform deciding to fall through to the "has better things to do" message, this is the don't end with paragraph break issue, see Writing with Inform §12.4 ]
 	if the scanner is at hand:
 		say "[start computer]Syntax error: command not in vocabulary.[stop computer]";
 		if the scanner fail count is 3, now the scanner is not explained;
@@ -237,29 +239,29 @@ Persuasion rule for asking the scanner to try doing something: [ any other inter
 	persuasion fails.
 
 Instead of the scanner closing something:
-	computerize "Command error: closing is a manual process.";
+	scanner-say "Command error: closing is a manual process.";
 	rule succeeds.
 
 Carry out the scanner scanning something:
-	computerize "No modular technology detected.";
+	scanner-say "No modular technology detected.";
 	rule succeeds.
 
 Carry out the scanner scanning the scanner:
-	computerize "Self test completed. Scanner is functional.";
+	scanner-say "Self test completed. Scanner is functional.";
 	rule succeeds.
 
 Carry out the scanner getting help:
-	computerize "Recognized commands are 'help', 'open', and 'scan'.";
+	scanner-say "Recognized commands are 'help', 'open', and 'scan'.";
 	now the scanner is not explained;
 	explain the scanner;
 	rule succeeds.
 
 Instead of the scanner opening something (called m):
-	computerize "No electronic technology detected.";
+	scanner-say "No electronic technology detected.";
 	rule succeeds.
 
 Carry out the scanner barescanning:
-	computerize "Syntax error: no target.";
+	scanner-say "Syntax error: no target.";
 	explain the scanner;
 	rule succeeds.
 

@@ -10,9 +10,9 @@
 
 Book 1 - Setup
 
-Chapter 2 - The story
+Chapter 1 - About the Story
 
-[ There is no way to automatically check, but this story was written for use with Inform 7 build 6M62. ]
+[ This story was written for use with Inform 7 build 6M62. ]
 
 Use American dialect and the serial comma.
 
@@ -33,8 +33,26 @@ Release along with cover art ("A space station."),
 	the library card,
 	a file of "Story Map" called "Map.pdf",
 	and a "Local" website.
+	
+Requesting the credits is an action out of world and applying to nothing.
 
-Chapter 3 - Scoring
+Understand "about" or "credits" as requesting the credits.
+	
+After printing the banner text rule:
+	say "Type 'about' for credits or 'hint' for assistance.";
+	
+Carry out requesting the credits:
+	say	"[bold type]About Founder's Mercy[roman type][line break]"
+		,
+		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018.[paragraph break]"
+		,
+		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]"
+		,
+		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this game at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]"
+		,
+		"This work is Copyright © [the story creation year] Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type])."
+
+Chapter 2 - Scoring
 
 Use scoring. The maximum score is 50. An object can be scored. An object is usually not scored.
 
@@ -52,17 +70,7 @@ Use scoring. The maximum score is 50. An object can be scored. An object is usua
 	10 - getting the communications unit working (and calling for help)
 ]
 
-Chapter 4 - Notes
-
-Section 1G (for Glulx only)
-
-Include Glulx Text Effects by Emily Short
-
-Section 1Z (for Z-machine only)
-
-To say note style: say "".
-
-Section 2 - 
+Chapter 3 - Notes
 
 To say start note: say "[note style][bracket]".
 To say stop note: say "[close bracket][roman type]".
@@ -70,13 +78,10 @@ To say stop note: say "[close bracket][roman type]".
 To say start computer: say "[fixed letter spacing]".
 To say stop computer: say "[roman type]".
 
-To display (x - some text): say "[start computer][x][stop computer][line break]";
-To computerize (x - some text): say "[start computer][x][stop computer][paragraph break]";
-To note (x - some text): say "[start note][x][stop note][paragraph break]";
-To lnote (x - some text): say "[start note][x][stop note][line break]"; [todo - resolve these two ]
+To computerize (x - some text): say "[start computer][x][stop computer][line break]".
+To note (x - some text): say "[start note][x][stop note][line break]".
 
-
-Chapter 5 - Misc Phrases
+Chapter 4 - Misc Phrases
 
 To find and take (s - an object):	
 	now s is in the holder of the player;
@@ -85,11 +90,13 @@ To find and take (s - an object):
 
 To decide what number is the total minutes of (t - a time): decide on the minutes part of t plus 60 times the hours part of t.
 
-Chapter 6 - Extensions
+Chapter 5 - Extensions
 
-Section 1 - Basic Infrastructure
+Section 1 - Text
 
 Include Unicode Character Names by Graham Nelson.
+
+Include Glulx Text Effects by Emily Short. [ for note style ]
 
 Section 2 - Exit Listen
 
@@ -99,7 +106,7 @@ When play begins: now exit listing is enabled.
 
 The explain exit listing rule response (A) is "[start note]Type 'exits off' to disable the status line exit list and 'exits on' to turn it back on.[no line break][stop note]"
 
-Instead of going nowhere, say "You can't go that way. [list the exits]";
+Instead of going nowhere, say "You can't go that way. [list the exits]"
 
 Section 3 - Plugs and Sockets
 
@@ -167,12 +174,19 @@ Section 4 - Machines
 
 Include Machines by Thomas Insel.
 
+To scanner-note (x - some text): note x.
+To scanner-say (x - some text): computerize x.
+
 A power module is a kind of module.
 An instruction module is a kind of module.
 A pressure regulation module is a kind of module. Understand "regulator" as a pressure regulation module.
 
+Section 5 - Testing - Not for Release
 
-Chapter 7 - Directions
+Include Object Response Tests by Juhana Leinonen.
+Include Testing Commands by Thomas Insel.
+
+Chapter 6 - Directions
 
 The starboard is a direction. The starboard has opposite port. Understand "s" as starboard.
 
@@ -197,88 +211,7 @@ Before going a planetbound direction:
 
 Index map with spinward mapped as north. Index map with antispinward mapped as south. Index map with port mapped as west. Index map with starboard mapped as east.
 
-Chapter 8 - Kinds of doors
-
-To say floor-hatch-desc (d - a floor hatch):
-	if d is open:
-		say "You have been trained to keep hatches closed as a precaution against decompression, but the hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is open.[no line break]";
-	otherwise:
-		say "You have been well-trained, because the hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is secured shut.[no line break]";
-
-To say floor-hatch-short:
-	let d be a random floor hatch in the location;
-	say "There is [if d is open]an open[otherwise]a secured[end if] hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if].[no line break]";
-
-A floor hatch is a kind of door. "[floor-hatch-short]". It is usually privately-named. It usually has description "[floor-hatch-desc noun]". It is usually closed. It usually has printed name "the [if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]".
-
-After going up through a floor hatch:
-	let d be a random open floor hatch in the location;
-	say "You pull yourself up through the hatch and close it behind yourself.";
-	try silently closing d;
-	continue the action.
-	
-After going down through a floor hatch:
-	let d be a random open floor hatch in the location;
-	say "You scramble down through the hatch and close it behind yourself.";
-	try silently closing d;
-	continue the action.
-
-Understand "hatch" as a floor hatch.
-Understand "ceiling" as floor hatch when the location is in Underneath.
-Understand "floor" as floor hatch when the location is not in Underneath.
-
-Understand "secure [a door]" as closing.
-
-A building is a kind of door. It is usually open. It is usually not openable. It is usually privately-named.
-
-[ To represent the outside of buildings you go out/in from in the ring. ]
-
-Chapter 9 - Kinds of Other Things
-
-A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "pylon". Understand "pylon" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station many meters above."
-
-Instead of climbing a pylon (called p):
-	say "The pylon is slick metal with no obvious handholds."
-
-Before going nowhere when a pylon (called p) is visible:
-	if the noun is up, try climbing p instead.
-
-A circuit breaker is a kind of device. Circuit breakers are usually fixed in place.
-
-Instead of switching off a circuit breaker (called b) when b is switched on:
-	say "[The b] seems to be locked on."
-
-The green circuit breaker is a circuit breaker. It is switched off.
-
-A forest is a kind of thing. It is usually scenery and privately-named and plural-named. It usually has printed name "trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, and they help with air processing."
-
-Instead of climbing a forest:
-	if the player is wearing the gravity boots:
-		say "Trees aren't magnetized, so the boots won't help.";
-	otherwise:
-		say "You can't get a good grip."
-
-Chapter 10 - About
-
-Requesting the credits is an action out of world and applying to nothing.
-
-Understand "about" or "credits" as requesting the credits.
-	
-After printing the banner text rule:
-	say "Type 'about' for credits or 'hint' for assistance.";
-	
-Carry out requesting the credits:
-	say	"[bold type]About Founder's Mercy[roman type][line break]"
-		,
-		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018.[paragraph break]"
-		,
-		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]"
-		,
-		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this game at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]"
-		,
-		"This work is Copyright © [the story creation year] Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type]).".
-
-Chapter 11 - The Player
+Chapter 7 - The Player
 
 The player is female. The carrying capacity of the player is 3.
 
@@ -288,7 +221,7 @@ The player is wearing a green jumpsuit. The jumpsuit has description "You have w
 
 The pocket is part of the jumpsuit. It is a container.
 
-Before an actor taking: [* a player's holdall must be directly carried, so let's try this instead ]
+Before an actor taking: [* the pocket can't work as a player's holdall, which be directly carried, so let's try this instead ]
 	if the number of things carried by the actor is at least the carrying capacity of the actor:
 		if the actor is wearing the green jumpsuit:
 			let the transferred item be nothing;
@@ -319,7 +252,7 @@ Instead of taking inventory:
 		say "[line break][Our] jumpsuit pocket contains:[line break]";
 		list the contents of the pocket, with newlines, indented, including contents, giving inventory information, with extra indentation.
 
-Chapter 12 - Actions
+Chapter 8 - Actions
 
 Section 1 - Remove Some Actions
 
@@ -355,7 +288,7 @@ Instead of listening to a room, say "You hear only the familiar hum of the stati
 
 Instead of smelling a room, say "Only familiar odors."
 
-Section 3 - And Add Some Actions
+Section 3 - And Add Some Miscellaneous Actions
 
 [ for the pond ]
 
@@ -409,11 +342,6 @@ Playing is an action applying to one thing.
 
 Carry out playing: say "[regarding the noun]You don't know how to play [those]."
 
-Chapter 13 - Testing - Not for release
-
-Include Object Response Tests by Juhana Leinonen.
-Include Testing Commands by Thomas Insel.
-
 Book 2 - Scenes
 
 Section 1 - Beginning
@@ -424,9 +352,10 @@ Beginning ends when Ready to Repair begins.
 Beginning ends when Repairing Pod Bay begins.
 
 Section 2 - Ready to Repair
-[ this scene may not happen ]
 
-Ready to Repair is a scene. "You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave. The pods are below Sector 1."
+[ this scene will be skipped if the player visits Pod Control before all sectors, so it is more of a motivator rather than core to the game play. ]
+
+Ready to Repair is a scene. "You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave: the pods are below Sector 1."
 Ready to Repair begins when every room in The Sectors is visited for the first time and Beginning has not ended.
 Ready to Repair ends when Repairing Pod Bay begins.
 
@@ -448,12 +377,11 @@ Repairing Green Breaker ends when the green circuit breaker is switched on.
 
 Repairing Atmosphere Pump is a scene.
 Repairing Atmosphere Pump begins when Repairing Pod Bay begins.
-Repairing Atmosphere Pump ends when the atmosphere pump is scored. [* because "atmosphere pump is functional" here seems to check the (non-existent) status adjective instead of the phrase ]
+Repairing Atmosphere Pump ends when the atmosphere pump is scored. [* because "atmosphere pump is functional" here seems to check the (non-applicable) status adjective instead of the phrase ]
 
 Section 4 - Between Repairs
 
 Between Repairs is a scene. "It is time to say goodbye to the station. You are ready to leave in a pod."
-[ Between Repairs begins when the pod bay is ready for the first time. ]
 Between Repairs begins when Repairing Pod Bay ends.
 Between Repairs ends when Repairing Comms begins.
 
@@ -506,6 +434,11 @@ Help disabled is a truth state that varies. Help disabled is false.
 
 Understand "help" or "hint" or "hints" as getting help.
 Getting help is an action applying to nothing.
+
+[ Stolen from Damnatio Memoriae's instant actions so that help can take no time even though it can't be an action out of world lest "scanner, help" fail. ]
+
+The help takes no time rule is listed before the every turn stage rule in the turn sequence rules.
+This is the help takes no time rule: if getting help, rule succeeds.
 
 Understand "help off" or "hint off" or "hints off" or "disable help/hint/hints" as disabling help.
 Disabling help is an action out of world applying to nothing.
@@ -636,7 +569,11 @@ Section 5 - The End
 Carry out getting help when The End is happening:
 	say "Just wait."
 
-Book 4 - Regions
+Book 4 - The Ring
+
+Chapter 0 - Regions and Backdrops
+
+Section 1 - Regions
 
 Underneath is a region.
 
@@ -647,7 +584,9 @@ Before going spinward in the The Sectors:
 
 Before going antispinward in the The Sectors:
 	say "You walk a little ways to the next sector."
-	
+
+Section 2 - Backdrops in The Sectors
+
 The hub is a backdrop in The Sectors and in Center Platform. It has description "The station rotates around the hub, which extends out to hold solar panels on the port and mirrors on the starboard side.[if the player is not in the center platform] On the inside, there is a mesh maintenance platform."
 
 The solar panels are a backdrop in The Sectors and in Center Platform. They have description "The primary source of station power." Understand "panel" as solar panels..
@@ -676,7 +615,72 @@ Instead of doing anything other than examining or entering or scanning to the ma
 Instead of entering the maintenance platform:
 	say "You will need to climb a pylon to get there."
 
-Book 5 - The Ring
+Section 3 - Pylons
+
+A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "pylon". Understand "pylon" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station many meters above."
+
+Instead of climbing a pylon (called p):
+	say "The pylon is slick metal with no obvious handholds."
+
+Before going nowhere when a pylon (called p) is visible:
+	if the noun is up, try climbing p instead.
+
+Section 4 - Circuit Breakers
+
+A circuit breaker is a kind of device. Circuit breakers are usually fixed in place.
+
+Instead of switching off a circuit breaker (called b) when b is switched on:
+	say "[The b] seems to be locked on."
+
+The green circuit breaker is a circuit breaker. It is switched off.
+
+Section 5 - Forests
+
+A forest is a kind of thing. It is usually scenery and privately-named and plural-named. It usually has printed name "trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, and they help with air processing."
+
+Instead of climbing a forest:
+	if the player is wearing the gravity boots:
+		say "Trees aren't magnetized, so the boots won't help.";
+	otherwise:
+		say "You can't get a good grip."
+
+Section 6 - Hatches
+
+To say floor-hatch-desc (d - a floor hatch):
+	if d is open:
+		say "You have been trained to keep hatches closed as a precaution against decompression, but the hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is open.[no line break]";
+	otherwise:
+		say "You have been well-trained, because the hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is secured shut.[no line break]";
+
+To say floor-hatch-short:
+	let d be a random floor hatch in the location;
+	say "There is [if d is open]an open[otherwise]a secured[end if] hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if].[no line break]";
+
+A floor hatch is a kind of door. "[floor-hatch-short]". It is usually privately-named. It usually has description "[floor-hatch-desc noun]". It is usually closed. It usually has printed name "the [if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]".
+
+After going up through a floor hatch:
+	let d be a random open floor hatch in the location;
+	say "You pull yourself up through the hatch and close it behind yourself.";
+	try silently closing d;
+	continue the action.
+	
+After going down through a floor hatch:
+	let d be a random open floor hatch in the location;
+	say "You scramble down through the hatch and close it behind yourself.";
+	try silently closing d;
+	continue the action.
+
+Understand "hatch" as a floor hatch.
+Understand "ceiling" as floor hatch when the location is in Underneath.
+Understand "floor" as floor hatch when the location is not in Underneath.
+
+Understand "secure [a door]" as closing.
+
+Section 7 - Buildings
+
+A building is a kind of door. It is usually open. It is usually not openable. It is usually privately-named.
+
+[ To represent the outside of buildings you go out/in from in the ring. ]
 
 Chapter 1 - Sector 1
 
@@ -729,19 +733,19 @@ Instead of examining the status display: [todo - shorten lines?]
 	if the pod bay is ready:
 		say "The status display glows green.";
 	otherwise:
-		display "Pod bay locked down";
+		computerize "Pod bay locked down";
 		let i be 1;
 		if red circuit breaker is switched off,
-			display " [i]. Telemetry sensor array offline - reset breaker FM36-87/A @ hub platform";
+			computerize " [i]. Telemetry sensor array offline - reset breaker FM36-87/A @ hub platform";
 			increment i;
 		if green circuit breaker is switched off,
-			display " [i]. Launch system cooling loop offline - reset breaker FM29-63/A @ Sector 2";
+			computerize " [i]. Launch system cooling loop offline - reset breaker FM29-63/A @ Sector 2";
 			increment i;
 		if the atmosphere pump is functional:
 			if S1H1 is not locked:
-				display " [i]. Pod control atmosphere pump offline - close pump";
+				computerize " [i]. Pod control atmosphere pump offline - close pump";
 		else: [the atmosphere pump is not functional]
-			display " [i]. Pod control atmosphere pump offline - scan and repair";
+			computerize " [i]. Pod control atmosphere pump offline - scan and repair";
 
 The atmosphere pump is here. It is a quiet openable machine. It has carrying capacity 2. It has description "[If the atmosphere pump is functional and the atmosphere pump is not open]The featureless atmosphere pump is softly humming.[otherwise]The atmosphere pump is a smooth featureless machine." Understand "machine" and "machinery" as the atmosphere pump.
 
@@ -800,7 +804,7 @@ Instead of the scanner opening some berths:
 	computerize "Opening failed. Safety violation.";
 	rule succeeds.
 
-Instead of opening or closing the berths, say "The doors open and close automatically as pods dock and launchc."
+Instead of opening or closing the berths, say "The doors open and close automatically as pods dock and launch."
 Instead of unlocking the berths with something, try opening the berths.
 Instead of locking the berths with something, try closing the berths.
 
@@ -1047,7 +1051,7 @@ S4H1 is a floor hatch. It is down from Home and up from Cellar.
 
 Cellar is in Underneath. "A decompression shelter and space for storage."
 
-An emergency mask is in cellar. "There is an emergency mask hanging on the wall." It has description "You wore this mask when there were decompression drills every ten days." It is wearable and machinelike.
+An emergency mask is in cellar. "There is an emergency mask hanging on the wall." It has description "You wore this mask when there were regular decompression drills." It is wearable and machinelike.
 
 Chapter 5 - Sector 5
 
