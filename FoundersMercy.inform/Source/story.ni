@@ -54,20 +54,20 @@ Carry out requesting the credits:
 
 Chapter 2 - Scoring
 
-Use scoring. The maximum score is 50. An object can be scored. An object is usually not scored.
+Use scoring. The maximum score is 10. An object can be scored. An object is usually not scored.
 
 [
-	5 - getting the boots out of the vault
-	5 - red breaker
+	1 - getting the boots out of the vault
+	1 - red breaker
 
-	10 - green breaker in the pond
+	2 - green breaker in the pond
 
-	5 - opening the learning machine
-	5 - fixing and closing the atmosphere pump
+	1 - opening the learning machine
+	1 - fixing and closing the atmosphere pump
 
-	10 - visiting pod bay for the first time
+	2 - visiting pod bay for the first time
 
-	10 - getting the communications unit working (and calling for help)
+	2 - getting the communications unit working (and calling for help)
 ]
 
 Chapter 3 - Notes
@@ -340,7 +340,9 @@ Understand "play [something]" as Playing.
 
 Playing is an action applying to one thing.
 
-Carry out playing: say "[regarding the noun]You don't know how to play [those]."
+Carry out playing: say "[regarding the noun][Those] [aren't] something you can play."
+
+Instead of playing the player: say "I don't even know what that means."
 
 Book 2 - Scenes
 
@@ -396,7 +398,7 @@ Repairing Comms is a scene. "This is troubling. You counted. You were sure there
 Repairing Comms begins when the player is in Pod Bay for the first time.
 Repairing Comms ends when The End begins.
 
-When Repairing Comms begins: increase the score by 10. [* for entering the pod bay ]
+When Repairing Comms begins: increase the score by 2. [* for entering the pod bay ]
 
 Every turn during Repairing Comms:
 	let t be the total minutes of time since Repairing Comms began;
@@ -404,14 +406,13 @@ Every turn during Repairing Comms:
 		say "No pods left ... you consider despair.";
 	if t is 5:
 		say "So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working."
-	[ todo -- more messages ?]
 
 Section 6 - The End
 
 The End is a scene. "The audio unit beeps and a synthesized voice says 'Comms ready.'[paragraph break]After a moment, it says 'Launching automatic routines.'"
 The End begins when the communications unit is usable for the first time.
 
-When The End begins: increase the score by 10. [* for calling for help ]
+When The End begins: increase the score by 2. [* for calling for help ]
 
 Every turn during The End:
 	if the total minutes of time since The End began is greater than zero and the communications unit is usable and the communications unit is visible:
@@ -516,17 +517,17 @@ To say pump help:
 			say "Put appropriate functional modules into the pump."
 
 To say green breaker help:
-	say "Reset a circuit breaker somewhere in Sector 2.";
+	say "The Sector 2 circuit breaker is in an awkward spot.";
 
 To say red breaker help:
 	if Center Platform is visited:
 		say "Just turn the red breaker on.";
 	else if the gravity boots are scored:
-		say "You have found what you need to reach the circuit breaker, so go figure out where to use it.";
+		say "Figure out where to go to the hub.";
 	else if the laser is alarmed: [ i.e., you have tried but not yet succeeded to remove to boots ]
 		say eraser help;
 	else if the supply vault is visited:
-		say "You have seen what you need to reach the circuit breaker.";
+		say "You have seen what you need to reach the hub circuit breaker.";
 	else:
 		say "Explore a bit more.";
 
@@ -579,27 +580,19 @@ Underneath is a region.
 
 The Sectors is a region.
 
-Before going spinward in the The Sectors:
-	say "You walk a little ways to the next sector."
+Before going spinward in the The Sectors, say "You walk a little ways to the next sector."
 
-Before going antispinward in the The Sectors:
-	say "You walk a little ways to the next sector."
+Before going antispinward in the The Sectors, say "You walk a little ways to the next sector."
 
 Section 2 - Backdrops in The Sectors
 
 The hub is a backdrop in The Sectors and in Center Platform. It has description "The station rotates around the hub, which extends out to hold solar panels on the port and mirrors on the starboard side.[if the player is not in the center platform] On the inside, there is a mesh maintenance platform."
 
-The solar panels are a backdrop in The Sectors and in Center Platform. They have description "The primary source of station power." Understand "panel" as solar panels..
+Instead of doing anything other than examining or scanning to the hub when the player is not in the center platform, say "You are too far away to do that."
 
-The mirrors are a backdrop in The Sectors and in Center Platform. They have description "The mirrors reflect sunlight into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
+The solar panels are a backdrop in The Sectors and in Center Platform. They have description "The primary source of station power." Understand "panel" as solar panels.
 
-The maintenance platform is a backdrop in The Sectors. It has description "Since the main power and sensor feeds pass through the hub, there is a platform where you can perform various maintenance tasks."
-
-Instead of doing anything other than examining or scanning to the hub when the player is not in the center platform:
-	say "You are too far away to do that."
-	
-Instead of doing anything other than examining or scanning to the solar panels:
-	say "You are too far away to do that."
+Instead of doing anything other than examining or scanning to the solar panels, say "You are too far away to do that."
 
 Instead of the scanner scanning the solar panels:
 	computerize "Machine is functional. Operating at [one of]73[or]72[or]71[then purely at random]% efficiency.";
@@ -608,31 +601,30 @@ Instead of the scanner scanning the solar panels:
 Instead of the scanner opening the solar panels:
 	computerize "Machine is unitary.";
 	rule succeeds.
-	
-Instead of doing anything other than examining or entering or scanning to the maintenance platform:
-	say "You are too far away to do that."
 
-Instead of entering the maintenance platform:
-	say "You will need to climb a pylon to get there."
+The mirrors are a backdrop in The Sectors and in Center Platform. They have description "The mirrors reflect sunlight into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
+
+Instead of doing anything other than examining or scanning to the mirrors when the player is not in the center platform, say "You are too far away to do that."
+
+The maintenance platform is a backdrop in The Sectors. It has description "Since the main power and sensor feeds pass through the hub, there is a platform where you can perform various maintenance tasks."
+
+Instead of doing anything other than examining or entering or scanning to the maintenance platform, say "You are too far away to do that."
+
+Instead of entering the maintenance platform, say "You will need to climb a pylon to get there."
 
 Section 3 - Pylons
 
 A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "pylon". Understand "pylon" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station many meters above."
 
-Instead of climbing a pylon (called p):
-	say "The pylon is slick metal with no obvious handholds."
+Instead of climbing a pylon (called p), say "The pylon is slick metal with no obvious handholds."
 
-Before going nowhere when a pylon (called p) is visible:
-	if the noun is up, try climbing p instead.
+Before going nowhere when a pylon (called p) is visible, if the noun is up, try climbing p instead.
 
 Section 4 - Circuit Breakers
 
 A circuit breaker is a kind of device. Circuit breakers are usually fixed in place.
 
-Instead of switching off a circuit breaker (called b) when b is switched on:
-	say "[The b] seems to be locked on."
-
-The green circuit breaker is a circuit breaker. It is switched off.
+Instead of switching off a circuit breaker (called b) when b is switched on, say "[The b] seems to be locked on."
 
 Section 5 - Forests
 
@@ -640,24 +632,31 @@ A forest is a kind of thing. It is usually scenery and privately-named and plura
 
 Instead of climbing a forest:
 	if the player is wearing the gravity boots:
-		say "Trees aren't magnetized, so the boots won't help.";
+		say "You can't get a good grip, and because trees aren't magnetized, the boots don't help.";
 	otherwise:
 		say "You can't get a good grip."
 
 Section 6 - Hatches
 
-To say floor-hatch-desc (d - a floor hatch):
+[ todo - consider restore or drop the commented hatch functionality ]
+
+[To say floor-hatch-desc (d - a floor hatch):
 	if d is open:
 		say "You have been trained to keep hatches closed as a precaution against decompression, but the hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is open.[no line break]";
 	otherwise:
-		say "You have been well-trained, because the hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is secured shut.[no line break]";
+		say "The hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is secured shut, as you were trained, to protect against decompression.[no line break]";
+]
+
+To say floor-hatch-desc (d - a floor hatch):
+	say "[The d] is [if d is open]open[else]closed[end if]."
 
 To say floor-hatch-short:
 	let d be a random floor hatch in the location;
 	say "There is [if d is open]an open[otherwise]a secured[end if] hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if].[no line break]";
 
-A floor hatch is a kind of door. "[floor-hatch-short]". It is usually privately-named. It usually has description "[floor-hatch-desc noun]". It is usually closed. It usually has printed name "the [if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]".
+A floor hatch is a kind of door. "[floor-hatch-short]". It is usually privately-named. It usually has description "[floor-hatch-desc noun]". It is usually closed. It usually has printed name "[if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]".
 
+[
 After going up through a floor hatch:
 	let d be a random open floor hatch in the location;
 	say "You pull yourself up through the hatch and close it behind yourself.";
@@ -669,6 +668,7 @@ After going down through a floor hatch:
 	say "You scramble down through the hatch and close it behind yourself.";
 	try silently closing d;
 	continue the action.
+]
 
 Understand "hatch" as a floor hatch.
 Understand "ceiling" as floor hatch when the location is in Underneath.
@@ -712,7 +712,7 @@ There is a room called Pod Control. "This room serves as an airlock for the pod 
 
 Pod Control is in Underneath.
 
-S1H1 is a floor hatch. S1H1 is down from Sector 1 and up from Pod Control.
+A S1H1 is a floor hatch. S1H1 is down from Sector 1 and up from Pod Control.
 
 A space suit is here. It is machinelike scenery. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: the seals are leaking and there are no spares left." Understand "old" as the space suit.
 
@@ -728,7 +728,7 @@ A status display is here. It is scenery and a machine. The status display can be
 
 Understand "message" and "error" as the status display when the pod bay is not ready.
 
-Instead of examining the status display: [todo - shorten lines?]
+Instead of examining the status display:
 	now the status display is examined;
 	if the pod bay is ready:
 		say "The status display glows green.";
@@ -742,8 +742,10 @@ Instead of examining the status display: [todo - shorten lines?]
 			computerize " [i]. Launch system cooling loop offline - reset breaker FM29-63/A @ Sector 2";
 			increment i;
 		if the atmosphere pump is functional:
-			if S1H1 is not locked:
+			if the atmosphere pump is open:
 				computerize " [i]. Pod control atmosphere pump offline - close pump";
+			else if S1H1 is open:
+				computerize " [i]. Secure pod control hatch";
 		else: [the atmosphere pump is not functional]
 			computerize " [i]. Pod control atmosphere pump offline - scan and repair";
 
@@ -764,7 +766,7 @@ Instead of the scanner scanning the atmosphere pump when the atmosphere pump is 
 After closing the atmosphere pump when the atmosphere pump is functional:
 	say "You close the atmosphere pump and it begins to hum.";
 	if the atmosphere pump is not scored:
-		increase the score by 5;
+		increase the score by 1;
 		now the atmosphere pump is scored.
 
 Definition: the pod bay is ready if every circuit breaker is switched on and the atmosphere pump is functional and the atmosphere pump is closed and S1H1 is closed.
@@ -773,7 +775,11 @@ Every turn when the player is in Pod Control:
 	if the pod bay is ready:
 		now the wall hatch is unlocked;
 	otherwise:
-		now the wall hatch is locked.
+		now the wall hatch is locked;
+	if the wall hatch is open:
+		now S1H1 is locked;
+	otherwise:
+		now S1H1 is unlocked.
 
 After going through the wall hatch:
 	say "You close the hatch behind yourself.";
@@ -808,7 +814,7 @@ Instead of opening or closing the berths, say "The doors open and close automati
 Instead of unlocking the berths with something, try opening the berths.
 Instead of locking the berths with something, try closing the berths.
 
-An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit with a single socket to connect it to a transit pod or other audio source." It has indefinite article "the". Understand "comms" as communications. Incorporated by the communications unit is a usb socket called the almond socket.
+An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit with a single socket to connect it to a transit pod or other audio source." It has indefinite article "the". Understand "comms" as communications unit. Incorporated by the communications unit is a usb socket called the almond socket.
 
 Instead of the scanner scanning the communications unit:
 	now the communications unit is scanned;
@@ -840,13 +846,15 @@ Instead of entering the pond:
 		otherwise:		
 			say "With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a green circuit breaker and flip it on.";
 			now the green breaker is switched on;
-			increase the score by 10;
+			increase the score by 2;
 	otherwise:
 		say "You can't hold your breath long enough to make that worthwhile."
 
 Some fish are scenery in sector 2. They have description "There are still a few fish swimming in the pond, but they taste horrible."
 
 Instead of doing anything other than examining or scanning to the fish, say "The fish aren't easy to catch."
+
+The green circuit breaker is a circuit breaker. It is switched off. It is nowhere.
 
 Chapter 3 - Sector 3
 
@@ -1024,7 +1032,7 @@ Instead of the scanner scanning the red circuit breaker:
 Instead of touching the red circuit breaker, say "It is at arm's reach but accessible."
 
 After switching on the red circuit breaker:
-	increase the score by 5;
+	increase the score by 1;
 	continue the action.
 
 Chapter 4 - Sector 4
@@ -1047,11 +1055,23 @@ The player is in Home. The player is carrying the scanner.
 
 Section 2 - Cellar
 
-S4H1 is a floor hatch. It is down from Home and up from Cellar.
+A S4H1 is a floor hatch. It is down from Home and up from Cellar.
 
-Cellar is in Underneath. "A decompression shelter and space for storage."
+Cellar is in Underneath. "Your decompression shelter and space for some increasingly empty shelves of canned vegetables."
 
-An emergency mask is in cellar. "There is an emergency mask hanging on the wall." It has description "You wore this mask when there were regular decompression drills." It is wearable and machinelike.
+Some shelves are scenery in cellar. "Almost a hundred jars of canned vegetables are on the makeshift shelves that line the wall.[if the emergency mask is undescribed] So is your emergency mask." They are a supporter. Understand "shelf" and "shelfs" and "wall" and "wall of shelves" and "spinward" as shelves.
+
+Instead of climbing the shelves: say "There is no chance they would support your weight."
+
+Before searching the shelves, try examining the shelves instead.
+
+Some canned vegetables are scenery on shelves. "Mostly tomatoes, green beans, carrots, and okra. Without a new source of salt or acid, too much of your recent harvest has been left to spoil." Understand "tomatoes" and "green" and "beans" and "carrots" and "okra" and "mason" and "jar" and "jars" as canned vegetables.
+
+Instead of eating or opening or taking or tasting or drinking the canned vegetables, say "You aren't hungry."
+
+Instead of doing anything other than examining to the canned vegetables, say "That's not where your attention belongs just now."
+
+An emergency mask is on shelves. It is undescribed, wearable, and machinelike. It has description "You wore this mask when there were regular decompression drills."
 
 Chapter 5 - Sector 5
 
@@ -1075,15 +1095,11 @@ The learning machine is an openable quiet machine in the school. It has carrying
 
 Every turn when the learning machine is open and the learning machine is not scored:
 	now the learning machine is scored;
-	increase the score by 5.
+	increase the score by 1.
 
 There are a functional power module and a faulty instruction module in the learning machine.
 
-To decide if (m - the learning machine) is functional: decide no. [* since there are no functional instruction modules in the game world ]
-
-After choosing notable locale objects when the player is in the School: 
-	set the locale priority of the learning machine to 2;
-	continue the activity.
+To decide if (m - the learning machine) is functional: decide no. [* there are no functional instruction modules in the game world ]
 
 A desk is a fixed in place scenery supporter in the school. It has description "You wrote your lessons at this desk. Your people were practical, plain folk, so you learned practical things in school: reading, writing, arithmetic. More importantly, practical mechanics and farming."
 
@@ -1143,9 +1159,9 @@ Instead of the scanner opening the hydroponics machines:
 Every turn when the player is in Sector 6:
 	if the player encloses the gravity boots and the gravity boots are not scored:
 		now the gravity boots are scored;
-		increase the score by 5.
+		increase the score by 1.
 
-Vault hatch is a floor hatch. Vault hatch is down from Sector 6 and up from Supply Vault.
+A vault hatch is a floor hatch. Vault hatch is down from Sector 6 and up from Supply Vault.
 
 Section 1 - The Supply Vault
 
@@ -1168,11 +1184,11 @@ Instead of looking under the crate of machine parts, say "The crate rests firmly
 
 Instead of inserting something (called s) into the crate of machine parts:
 	now s is in the junk repository;
-	say "You put [the s] into the crate of machine parts.";
+	say "You add [the s] to the machine parts in the crate."
 
 [ boots ]
 
-A pair of gravity boots is in the supply vault. The gravity boots are wearable. They are plural-named. They have description "Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity or on the outside of a rotating station."
+A pair of gravity boots is in the supply vault. The gravity boots are wearable. They have description "Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity or on the outside of a rotating station."
 
 [ laser ]
 

@@ -311,3 +311,11 @@ Machines ends here.
 
         Test radio with "x radio / get battery / scanner, open radio / get battery from radio / scan battery / scan unscanned battery / put functional battery in radio / close radio / x radio"
 
+
+
+Consider a generalized version of this if necessary:
+
+        After choosing notable locale objects when the player is in the School: 
+          set the locale priority of the learning machine to 2;
+          continue the activity.
+

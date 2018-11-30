@@ -26,10 +26,11 @@ Carry out listing the tree:
 	let room list be the list of rooms;
 	sort room list in printed name order;
 	repeat with r running through room list:
-		say "[bold type][the r][roman type][line break]";
+		say "[bold type][r][roman type][line break]";
 		repeat with item running through things in r:
 			if item is a door, next;
-			say "    [if item is fixed in place or item is scenery][italic type][end if][the item][roman type]";
+			if item is a backdrop, next;
+			say "    [if item is fixed in place or item is scenery][italic type][end if][item][roman type]";
 			if item encloses a thing:
 				let L1 be the list of things which are enclosed by item;
 				let L2 be the list of things which are part of item;
@@ -40,6 +41,11 @@ Carry out listing the tree:
 				unless L1 is empty, say "+ [L1] ";
 				unless L2 is empty, say "& [L2]";
 			say "[line break]";
+	say "[bold type](Nowhere)[roman type][line break]";
+	let L be the list of things that are nowhere;
+	sort L in printed name order;
+	repeat with item running through L:
+		say "    [item][line break]";
 
 Testing Commands ends here.
 

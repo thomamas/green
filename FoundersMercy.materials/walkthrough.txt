@@ -36,6 +36,7 @@ put functional regulator in pump
 scan power module
 scan unscanned power module
 put functional power module in pump
+close ceiling hatch
 close pump
 port
 get communications unit
