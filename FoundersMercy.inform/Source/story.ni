@@ -31,7 +31,7 @@ Release along with cover art ("A space station."),
 	an interpreter,
 	the introductory booklet,
 	the library card,
-	a file of "Story Map" called "Map.pdf",
+	a file of "Station Map" called "Map.pdf",
 	and a "Local" website.
 	
 Requesting the credits is an action out of world and applying to nothing.
@@ -48,7 +48,7 @@ Carry out requesting the credits:
 		,
 		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]"
 		,
-		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this game at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]"
+		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this story at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]"
 		,
 		"This work is Copyright © [the story creation year] Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type])."
 
@@ -110,29 +110,26 @@ Instead of going nowhere, say "You can't go that way. [list the exits]"
 
 Section 3 - Plugs and Sockets
 
-[ Consider:
+[
+	Fix or adapt a few things about Plugs and Sockets, but it is still a bit complicated and has some issues. Also consider:
 
 	Special language for picking up a cable that is connected to something not carried.
 	Blocking putting the cable in the pocket if it is connected to something not carried.
-	If there were a portable closable container which could hold a cable, there would be issues.
+	What to do if there were a portable closable container which could hold a cable.
 ]
 
-Include Plugs and Sockets by Sean Turner
+Include version 4/170924 of Plugs and Sockets by Sean Turner
 
-[ A. adapt to missing Plurality by Emily Short ]
-
-To say it-them of (s - something):
-	say "[regarding s][them]".
-
-[ B.  Suppress the list of attachments for sockets because this is too ugly:
+[
+	B.  Suppress the list of attachments for sockets because this is too ugly:
 		
-	You can see an organ (into which is plugged an USB cable), an audio unit (into which is plugged an USB cable), and an USB cable (plugged into an organ and an audio unit) here.
+		You can see an organ (into which is plugged an USB cable), an audio unit (into which is plugged an USB cable), and an USB cable (plugged into an organ and an audio unit) here.
 
-but this is better:		
+	but this is better:
 
-	You can see an organ, an audio unit, and an USB cable (plugged into an organ and an audio unit) here.
+		You can see an organ, an audio unit, and an USB cable (plugged into an organ and an audio unit) here.
 
-Still not without issues: if you are holding the cable then it doesn't show up in the room at all, complicated connections wouldn't be clear, etc.
+	Still not without issues: if you are holding the cable then it doesn't show up in the room at all, complicated connections wouldn't be clear, etc.
 ]
 
 The list attached things when listing receiver or inserter rule response (A) is "".
@@ -211,13 +208,16 @@ Before going a planetbound direction:
 
 Index map with spinward mapped as north. Index map with antispinward mapped as south. Index map with port mapped as west. Index map with starboard mapped as east.
 
+Before climbing up, try going up instead.
+Before climbing down, try going down instead.
+
 Chapter 7 - The Player
 
 The player is female. The carrying capacity of the player is 3.
 
 Instead of examining the player, say "As virtuous as ever."
 
-The player is wearing a green jumpsuit. The jumpsuit has description "You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: green for farmers, blue for technicians, and so on, but that distinction died even before the population." Understand "suit" and "jump suit" as jumpsuit.
+The player is wearing a green jumpsuit. The jumpsuit has description "You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population." Understand "suit" and "jump suit" and "forest green" and "forest jumpsuit" and "forest suit" and "forest jump" as jumpsuit. Understand "forest" as the green jumpsuit when the location is not Sector 5 and the location is not Sector 3. [* otherwise "forest" alone will have priority over the scenery trees, which is unlikely to be what the player intends ]
 
 The pocket is part of the jumpsuit. It is a container.
 
@@ -242,7 +242,7 @@ After examining the jumpsuit:
 
 Before inserting something into the jumpsuit, try inserting the noun into the pocket instead.
 
-After taking off the jumpsuit, say "Your nudity is pure and innocent, but still a little uncomfortable ... and cold."
+After taking off the jumpsuit, say "Your nudity is pure and innocent, but still a little cold and uncomfortable."
 
 Instead of taking inventory:
 	if the first thing held by the player is nothing, say "[We] [are] carrying nothing." instead;
@@ -257,12 +257,12 @@ Chapter 8 - Actions
 Section 1 - Remove Some Actions
 
 Understand the command "wake" as something new. [ too self-referential ]
-Understand the command "buy" as something new. [ no money in this game ]
+Understand the command "buy" as something new. [ no money in this story ]
 Understand the command "lock" as something new.
 Understand the command "unlock" as something new.
 Understand the command "sorry" as something new.
 
-[ this is a lot of trouble just to get rid of consulting it about ]
+[ the following is a lot of trouble just to get rid of consulting it about ]
 
 Understand the command "look" as something new.
 Understand "look" as looking.
@@ -275,6 +275,16 @@ Understand the command "read" as something new.
 Understand "read [something]" as examining.
 
 Understand the command "consult" as something new.
+
+[ Simplify communication -- note this means some bits of Machines.i7x will never be used ]
+
+Understand the commands "ask" and "tell" and "answer" and "say" as something new.
+
+Understand "ask [text]" or "tell [text]" or "answer [text]" or "say [text]" or "talk" or "talk [text]" as a mistake ("[start note]To communicate in this story, type 'CHARACTER, MESSAGE' where CHARACTER is someone or something and MESSAGE is what you want to say.[no line break][stop note]").
+
+[ To be nice ]
+
+Understand "use [text]" as a mistake ("Please try specific a more specific verb.").
 
 Section 2 - Modify Some Default Responses
 
@@ -312,7 +322,7 @@ Carry out an actor rubbing something with: try rubbing the noun instead.
 
 [ because they will check ]
 
-Understand "xyzzy" or "say xyzzy" as xyzzying.
+Understand "xyzzy" as xyzzying.
 
 xyzzying is an action applying to nothing.
 
@@ -327,12 +337,7 @@ Understand "pray" as singing.
 
 Singing is an action applying to nothing.
 
-Check singing:
-	if the actor is wearing the emergency mask:
-		say "You can't sing with the mask on.";
-		stop the action.
-
-Carry out singing: say "You sing a hymn [one of]about hard work[or]about virtue[or]about penitence[or]praising the Founder[or]about Old Earth[at random].";
+Carry out singing: say "You sing a hymn [one of]about hard work[or]about virtue[or]about penitence[or]praising the Founder[or]about your exile from Old Earth[at random].";
 	
 [ for the organ ]
 	
@@ -355,7 +360,7 @@ Beginning ends when Repairing Pod Bay begins.
 
 Section 2 - Ready to Repair
 
-[ this scene will be skipped if the player visits Pod Control before all sectors, so it is more of a motivator rather than core to the game play. ]
+[ this scene will be skipped if the player visits Pod Control before all sectors, so it is more of a motivator rather than core to the story play. ]
 
 Ready to Repair is a scene. "You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave: the pods are below Sector 1."
 Ready to Repair begins when every room in The Sectors is visited for the first time and Beginning has not ended.
@@ -445,7 +450,7 @@ Understand "help off" or "hint off" or "hints off" or "disable help/hint/hints" 
 Disabling help is an action out of world applying to nothing.
 
 Instead of getting help when help disabled is true:
-	say "You have disabled hints, but don't despair. It is still impossible to put this game into an unwinnable state, so feel free to explore and experiment."
+	say "You have disabled hints, but don't despair. It is still impossible to put this story into an unwinnable state, so feel free to explore and experiment."
 
 Before the player getting help for the first time:
 	if help disabled is false:
@@ -453,7 +458,7 @@ Before the player getting help for the first time:
 
 After the player getting help for the first time:
 	say
-		"By the way, it should be impossible to put this game into an unwinnable state, so feel free to explore and experiment.[paragraph break]"
+		"By the way, it should be impossible to put this story into an unwinnable state, so feel free to explore and experiment.[paragraph break]"
 		,
 		"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
 		,
@@ -543,8 +548,8 @@ To say eraser help:
 
 Section 3 - Between Repairs
 
-Carry out getting help when 	Between Repairs is happening:
-	if S1H1 is open: 	[ todo - check if door has been tried since this scene began? ]
+Carry out getting help when Between Repairs is happening:
+	if S1H1 is open: [ todo - check if door has been tried since this scene began? ]
 		say "Pod Control acts as an airlock.";
 	else if atmosphere pump is open:
 		say "The status display has some clear directions.";
@@ -638,37 +643,21 @@ Instead of climbing a forest:
 
 Section 6 - Hatches
 
-[ todo - consider restore or drop the commented hatch functionality ]
+[
+	There are some serious issues with this implementation, including:
 
-[To say floor-hatch-desc (d - a floor hatch):
-	if d is open:
-		say "You have been trained to keep hatches closed as a precaution against decompression, but the hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is open.[no line break]";
-	otherwise:
-		say "The hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if] is secured shut, as you were trained, to protect against decompression.[no line break]";
+	1. that it's not possible to have a hatch up and down from the same location and expect "ceiling" and "floor" to refer to the different things.
+
+	2. if there are more than one floor hatch, the "let d be a random..." behavior means the description can be wrong.
+
+	Since we never have more than one of these in any location, these aren't a problem for this story. The wall hatch doesn't count, since it isn't one of these objects.
 ]
 
-To say floor-hatch-desc (d - a floor hatch):
-	say "[The d] is [if d is open]open[else]closed[end if]."
+A floor hatch is a kind of door. "[floor-hatch-short]". It is usually privately-named. It usually has description "[The noun] [are] [if noun is open]open[else]closed[end if]." It usually has printed name "[if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]". It usually has printed plural name "[if the player is in Underneath]ceiling hatches[otherwise]floor hatches[end if]"
 
 To say floor-hatch-short:
 	let d be a random floor hatch in the location;
 	say "There is [if d is open]an open[otherwise]a secured[end if] hatch in the [if the direction of d from the location is up]ceiling[otherwise if the location is Home]floor[otherwise]ground[end if].[no line break]";
-
-A floor hatch is a kind of door. "[floor-hatch-short]". It is usually privately-named. It usually has description "[floor-hatch-desc noun]". It is usually closed. It usually has printed name "[if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]".
-
-[
-After going up through a floor hatch:
-	let d be a random open floor hatch in the location;
-	say "You pull yourself up through the hatch and close it behind yourself.";
-	try silently closing d;
-	continue the action.
-	
-After going down through a floor hatch:
-	let d be a random open floor hatch in the location;
-	say "You scramble down through the hatch and close it behind yourself.";
-	try silently closing d;
-	continue the action.
-]
 
 Understand "hatch" as a floor hatch.
 Understand "ceiling" as floor hatch when the location is in Underneath.
@@ -690,9 +679,9 @@ There is a pylon in Sector 1.
 
 Some crops are scenery in Sector 1. They have description "You are proud of the grain and legumes." Understand "grain" and "legumes" as some crops.
 
-The graveyard is scenery in Sector 1. It has description "Fenced off but unmarked graves. You buried your parents here." Understand "graves" and "grave" and "fence" as the graveyard.
-
 Instead of eating some crops, say "You're not hungry."
+
+The graveyard is scenery in Sector 1. It has description "Fenced off but unmarked graves. You buried your parents here." Understand "small" and "graves" and "grave" and "fence" as the graveyard.
 
 Section 1 - Barn
 
@@ -714,7 +703,7 @@ Pod Control is in Underneath.
 
 A S1H1 is a floor hatch. S1H1 is down from Sector 1 and up from Pod Control.
 
-A space suit is here. It is machinelike scenery. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: the seals are leaking and there are no spares left." Understand "old" as the space suit.
+A space suit is here. It is machinelike scenery. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: the seals are leaking and there are no spares left."
 
 Before doing anything other than examining or scanning to the space suit, say "All of the seals are shot, so the suit won't be useful." instead
 
@@ -949,7 +938,7 @@ Every turn when the audio unit is visible:
 
 [ cable and connectivity ]
 
-A gray cable is in Church. "A gray cable connects the organ and the audio unit." Incorporated by it are two usb plugs. It has description "A one meter USB 7.2 cable with a Type-F plug at each end." Understand "grey" and "usb" and "plug" and "plugs" and "connector" and "connector" as the gray cable. It is machinelike.
+A gray cable is in Church. "A gray cable connects the organ to the audio unit." Incorporated by it are two usb plugs. It has description "A one meter USB 7.2 cable with a Type-F plug at each end." Understand "grey" and "usb" and "plug" and "plugs" and "connector" and "connector" as the gray cable. It is machinelike.
 
 Instead of the scanner scanning the cable:
 	computerize "Cable is functional.";
@@ -960,31 +949,17 @@ Instead of the scanner opening the cable:
 	rule succeeds.
 
 Understand "pull [the gray cable]" as unplugging.
-
 [ Instead of tying the cable to something, say "Tying the cable would damage it." ]
 
-When play begins: [* this can't be the right way to do this ]
-	let first plug be nothing;
-	repeat with p running through the usb plugs which are part of the gray cable:
-		if the attachment of p is nothing:
-			let first plug be p;
-			break;
-	;
-	let first socket be a random usb socket which is part of the organ;
-	;
-	now the attachment of first plug is the first socket;
-	now the attachment of first socket is the first plug;
-	;
-	let second plug be nothing;
-	repeat with p running through the usb plugs which are part of the gray cable:
-		if the attachment of p is nothing:
-			let second plug be p;
-			break;
-	;
-	let second socket be a random usb socket which is part of the audio unit;
-	;
-	now the attachment of second plug is the second socket;
-	now the attachment of second socket is the second plug;
+A rule for reaching inside Church: [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
+	if the turn count is greater than 1:
+		deny access;
+	otherwise:
+		allow access.
+
+When play begins:
+	silently try plugging the gray cable into the tan socket;
+	silently try plugging the gray cable into the beige socket.
 
 [ connection checking ]
 
@@ -1003,7 +978,7 @@ Sector 3 is outside of house.
 
 Instead of going nowhere in house when the noun is port, try going outside.
 
-A doll is in house. "Someone has left a doll on the well swept floor." It has description "Wearing a brown jumpsuit and faceless, because we are all alike in the Founder's eyes." Understand "faceless" and "brown" and "jumpsuit" as the doll.
+A doll is in house. "Someone has left a doll on the well swept floor." It has description "Wearing a brown jumpsuit and faceless, because we are all alike in the Founder's eyes." Understand "faceless" and "brown" and "jumpsuit" as the doll. [todo: play with doll]
 
 Section 3 - Center Platform
 
@@ -1016,7 +991,7 @@ Before going down from Center Platform:
 	otherwise:
 		say "You slide down the pylon."
 
-Instead of jumping in Center Platform, say "Yes, pseudogravity is definitely weaker up here."
+Instead of jumping in Center Platform, say "Pseudogravity is definitely weaker up here."
 
 After dropping something (called s) in Center Platform:
 	say "You drop [the s] and it spirals off to the ground below.";
@@ -1032,8 +1007,8 @@ Instead of the scanner scanning the red circuit breaker:
 Instead of touching the red circuit breaker, say "It is at arm's reach but accessible."
 
 After switching on the red circuit breaker:
-	increase the score by 1;
-	continue the action.
+	say "You reach up and switch the circuit breaker on.";
+	increase the score by 1.
 
 Chapter 4 - Sector 4
 
@@ -1059,7 +1034,7 @@ A S4H1 is a floor hatch. It is down from Home and up from Cellar.
 
 Cellar is in Underneath. "Your decompression shelter and space for some increasingly empty shelves of canned vegetables."
 
-Some shelves are scenery in cellar. "Almost a hundred jars of canned vegetables are on the makeshift shelves that line the wall.[if the emergency mask is undescribed] So is your emergency mask." They are a supporter. Understand "shelf" and "shelfs" and "wall" and "wall of shelves" and "spinward" as shelves.
+Some shelves are scenery in cellar. "Almost a hundred jars of canned vegetables are on the makeshift shelves that line the wall.[if the emergency mask is undescribed] So is your emergency mask." They are a supporter. Understand "shelf" and "shelfs" and "wall" and "wall of shelves" and "spinward" and "makeshift" as shelves.
 
 Instead of climbing the shelves: say "There is no chance they would support your weight."
 
@@ -1072,6 +1047,16 @@ Instead of eating or opening or taking or tasting or drinking the canned vegetab
 Instead of doing anything other than examining to the canned vegetables, say "That's not where your attention belongs just now."
 
 An emergency mask is on shelves. It is undescribed, wearable, and machinelike. It has description "You wore this mask when there were regular decompression drills."
+
+Instead of singing when the player is wearing the emergency mask:
+	say "You can't sing while wearing the mask.";
+
+The can't scan with your mask on rule is listed before the scanner must be enclosed rule in the scanner precheck rules.
+
+This is the can't scan with your mask on rule:
+	if the player is wearing the emergency mask:
+		say "You can't talk to [the scanner] while wearing the mask.";
+		rule fails.
 
 Chapter 5 - Sector 5
 
@@ -1099,7 +1084,7 @@ Every turn when the learning machine is open and the learning machine is not sco
 
 There are a functional power module and a faulty instruction module in the learning machine.
 
-To decide if (m - the learning machine) is functional: decide no. [* there are no functional instruction modules in the game world ]
+To decide if (m - the learning machine) is functional: decide no. [* there are no functional instruction modules in the story world ]
 
 A desk is a fixed in place scenery supporter in the school. It has description "You wrote your lessons at this desk. Your people were practical, plain folk, so you learned practical things in school: reading, writing, arithmetic. More importantly, practical mechanics and farming."
 
@@ -1203,7 +1188,7 @@ To trip the laser alarm:
 
 Before doing something other than examining when the current action involves the laser beam, say "The laser beam is intangible." instead.
 
-Before going up from the supply vault when the laser is dusty and the vault hatch is open, say "You maneuver around the laser beam."
+Before going up from the supply vault when the laser is dusty and the vault hatch is open, say "You maneuver around the laser beam and pull yourself up through the ceiling hatch."
 
 Before opening vault hatch when the player is in the supply vault and the laser is dusty, say "You maneuver around the laser beam."
 
