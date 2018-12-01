@@ -182,8 +182,7 @@ Instead of answering the scanner that something:
 		scanner-say "Search error: cannot find [text matching subexpression 2].";
 		explain the scanner;
 	otherwise:
-		scanner syntax error;
-		explain the scanner;
+		scanner syntax error.
 
 Instead of asking or telling the scanner about something:
 	if the scanner is at hand, scanner syntax error.
@@ -229,9 +228,7 @@ Persuasion rule for asking the scanner to try getting help or barescanning:
 	persuasion succeeds.
 
 Persuasion rule for asking the scanner to try doing something: [ any other interaction fails ]
-	if the scanner is at hand:
-		scanner-say "Syntax error: command not in vocabulary.";
-		explain the scanner;
+	if the scanner is at hand, scanner syntax error;	
 	persuasion fails.
 
 Instead of the scanner closing something:
