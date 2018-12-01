@@ -7,7 +7,7 @@ Use authorial modesty.
 Chapter 0 - Saying
 
 To scanner-note (x - some text): say "[italic type][x][roman type][line break]";
-To scanner-say (x - some text): say "[fixed letter spacing][x][stop computer][roman type]";
+To scanner-say (x - some text): say "[fixed letter spacing][x][roman type][line break]";
 
 Chapter 1 - New Grammar
 
@@ -168,6 +168,25 @@ Include Inanimate Listeners by Emily Short.
 
 The scanner is a machinelike addressable thing. It has description "The handheld voice-activated scanner you use when working on the station's machines."
 
+[ scanner availability ]
+
+Scanner precheck is a rulebook.
+
+A scanner precheck rule (this is the scanner must be visible rule): [* only relevant for the scan command, not "scanner, ___" ]
+	if the scanner is not visible:
+		say "That makes no sense without a scanner.";
+		rule fails.
+
+A scanner precheck rule (this is the scanner must be enclosed rule):
+	if the player does not enclose the scanner:
+		say "You must be carrying the scanner to use it.";
+		rule fails.
+
+To decide if the scanner is at hand:
+	follow the scanner precheck rulebook;
+	if rule failed, decide no;
+	decide yes.
+
 [ normal actions ]
 
 Instead of switching on or switching off the scanner:
@@ -203,14 +222,6 @@ To explain the scanner:
 		increase the scanner fail count by 1;
 		if the scanner fail count is 3:
 			now the scanner is not explained;
-
-To decide if the scanner is at hand:
-	if the player encloses the scanner and the scanner is visible, decide yes;
-	if the scanner is visible:
-		say "You must be carrying the scanner to use it.";
-	otherwise:
-		say "That makes no sense without a scanner.";
-	decide no.
 
 To scanner syntax error:
 	scanner-say "Syntax error: command not in vocabulary.";
