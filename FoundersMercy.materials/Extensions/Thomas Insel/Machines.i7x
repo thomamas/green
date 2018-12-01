@@ -166,12 +166,12 @@ Chapter 5 - The Scanner and Scanning
 
 Include Inanimate Listeners by Emily Short.
 
-The scanner is a machinelike addressable thing. The scanner can be explained. It is not explained. It has description "The handheld voice-activated scanner you use when working on the station's machines."
+The scanner is a machinelike addressable thing. It has description "The handheld voice-activated scanner you use when working on the station's machines."
 
 [ normal actions ]
 
 Instead of switching on or switching off the scanner:
-	say "The scanner is automatically on and listening whenever you are carrying it.[paragraph break]";
+	say "The scanner is automatically on and listening whenever you are carrying it.";
 	explain the scanner.
 
 Instead of answering the scanner that something:
@@ -192,12 +192,13 @@ After examining the scanner, explain the scanner.
 
 [ actions the scanner does ]
 
-The scanner fail count is a number that varies. Scanner fail count is 0.
+The scanner fail count is a number that varies. Scanner fail count is 0. The scanner can be explained.
 
 To explain the scanner:
 	if the scanner is not explained:
 		now the scanner fail count is 0;
 		now the scanner is explained;
+		unless examining, say "[line break]";
 		scanner-note "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' or 'scanner, open SOMETHING' where SOMETHING is a visible object.";
 	otherwise:
 		increase the scanner fail count by 1;
@@ -227,15 +228,10 @@ Persuasion rule for asking the scanner to try getting help or barescanning:
 	unless the scanner is at hand, stop the action;
 	persuasion succeeds.
 
-Persuasion rule for asking the scanner to try doing something: [ any other interaction fails - gymnastics & make sure scanner-note ends in line feed to avoid Inform deciding to fall through to the "has better things to do" message, this is the don't end with paragraph break issue, see Writing with Inform §12.4 ]
+Persuasion rule for asking the scanner to try doing something: [ any other interaction fails ]
 	if the scanner is at hand:
-		say "[start computer]Syntax error: command not in vocabulary.[stop computer]";
-		if the scanner fail count is 3, now the scanner is not explained;
-		if the scanner is not explained:
-			say "[line break]";
-			explain the scanner;
-		otherwise:
-			increase the scanner fail count by 1;
+		scanner-say "Syntax error: command not in vocabulary.";
+		explain the scanner;
 	persuasion fails.
 
 Instead of the scanner closing something:
