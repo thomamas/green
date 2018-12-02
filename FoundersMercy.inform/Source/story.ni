@@ -46,7 +46,7 @@ Carry out requesting the credits:
 		,
 		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018.[paragraph break]"
 		,
-		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also to Eric Eve for the Exit Lister extension, Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]"
+		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]"
 		,
 		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this story at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]"
 		,
@@ -96,17 +96,11 @@ Section 1 - Text
 
 Include Unicode Character Names by Graham Nelson.
 
-Include Glulx Text Effects by Emily Short. [ for note style ]
+Include Glulx Text Effects by Emily Short. [ for the note style ]
 
-Section 2 - Exit Listen
+Section 2 - Exit Lister
 
-Include Exit Lister by Eric Eve.
-
-When play begins: now exit listing is enabled.
-
-The explain exit listing rule response (A) is "[start note]Type 'exits off' to disable the status line exit list and 'exits on' to turn it back on.[no line break][stop note]"
-
-Instead of going nowhere, say "You can't go that way. [list the exits]"
+Include version 1 of Simple Exit Lister by Thomas Insel.
 
 Section 3 - Plugs and Sockets
 
@@ -665,11 +659,20 @@ Understand "floor" as floor hatch when the location is not in Underneath.
 
 Understand "secure [a door]" as closing.
 
+Instead of searching a door:
+	if the noun is closed:
+		say "[The noun] is secured.";
+	otherwise:
+		let oside be "[destname the other side of the noun]" in sentence case;
+		say "[oside] [regarding the other side of the noun][are] [direction of noun from location] through [the noun].";
+
 Section 7 - Buildings
+
+[ To represent the outside of buildings you go out/in from in the ring. ]
 
 A building is a kind of door. It is usually open. It is usually not openable. It is usually privately-named.
 
-[ To represent the outside of buildings you go out/in from in the ring. ]
+Instead of searching a building, say "You would need to enter [the noun] to do that."
 
 Chapter 1 - Sector 1
 
@@ -687,7 +690,7 @@ Section 1 - Barn
 
 A S1B1 is a building. It is inside of Sector 1. Through it is Barn. S1B1 is scenery. It has description "A single story barn." It has printed name "barn". Understand "barn" as S1B1.
 
-Barn is a room. "Not fancy: livestock on one side and feed on the other, but nothing remains of either. There is a plow near the entrance." Sector 1 is outside of barn.
+Barn is a room. "Not fancy: livestock on one side and feed on the other, but nothing remains of either. There is a plow near the entrance." It has destination name "the barn". Sector 1 is outside of barn.
 
 A plow is scenery in the barn. It is pushable between rooms. It has description "A steel walking plow."
 
@@ -697,7 +700,7 @@ Before going with the plow, try pushing the plow instead.
 
 Section 2 - Pod Control
 
-There is a room called Pod Control. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall."
+There is a room called Pod Control. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall." It has destination name "pod control".
 
 Pod Control is in Underneath.
 
@@ -770,11 +773,6 @@ Every turn when the player is in Pod Control:
 	otherwise:
 		now S1H1 is unlocked.
 
-After going through the wall hatch:
-	say "You close the hatch behind yourself.";
-	try silently closing the wall hatch;
-	continue the action.
-
 A door called the wall hatch is port from Pod Control and starboard from Pod Bay. It is closed and locked. "[if the player is in Pod Control][pod-bay-hatch-pc][otherwise][pod-bay-hatch-pb][end if]."
 
 Understand "port" as the wall hatch when the player is in Pod Control.
@@ -784,11 +782,11 @@ To say pod-bay-hatch-pc:
 	say "Beside the [if wall hatch is open]open[otherwise]secured[end if] port hatch, a status display [if pod bay is ready]glows green[otherwise]shows an error message[end if]"
 	
 To say pod-bay-hatch-pb:
-	say "A [if wall hatch is open]open[otherwise]secured[end if] hatch leads starboard"
+	say "[if wall hatch is open]An open[otherwise]A secured[end if] hatch leads starboard"
 
 Section 3 - Pod Bay
 
-There is a room called Pod Bay. "There are four berths for transit pods. [one of]Unexpectedly,[or]Sadly,[purely at random] all are empty." Pod Bay is in Underneath.
+There is a room called Pod Bay. "There are four berths for transit pods. Unfortunately, all are empty." It has destination name "the pod bay". Pod Bay is in Underneath. 
 
 Instead of going nowhere from Pod Bay when the noun is outside, try going starboard.
 Instead of exiting in Pod Bay, try going starboard.
@@ -859,7 +857,7 @@ Before going up in Sector 3, try climbing S3P1 instead.
 
 Instead of climbing S3P1:	
 	 if the player is wearing the gravity boots:
-		say "It isn't easy, but with the boots, you are able to climb towards the hub.";
+		say "It isn't easy, but with the boots, you make a long climb towards the hub.";
 		now the player is in center platform;
 	otherwise:
 		say "The red pylon is designated for climbing, but you can't get a grip."
@@ -874,7 +872,7 @@ A S3B2 is a building. It is scenery. It is starboard of Sector 3. It is privatel
 
 Section 1 - Church
 
-Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other."
+Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other." It has destination name "the church".
 
 An altar is a fixed in place scenery supporter in church. It has description "Really just a table."
 
@@ -972,7 +970,7 @@ Definition: the organ is usable if audio unit and organ are connected and the au
 
 Section 2 - House
 
-House is a room. "Two families lived here, but not recently."
+House is a room. "Two families lived here, but not recently." It has destination name "the house".
 
 Sector 3 is outside of house.
 
@@ -982,14 +980,11 @@ A doll is in house. "Someone has left a doll on the well swept floor." It has de
 
 Section 3 - Center Platform
 
-Sector 3 is down from Center Platform. Nothing is up from Sector 3. Center Platform has description "It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down."
+Sector 3 is down from Center Platform. Nothing is up from Sector 3. Center Platform has description "It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down." It has destination name "the center platform".
 
 Before going down from Center Platform:
 	change the up exit of Sector 3 to Center Platform;
-	if the player is wearing the gravity boots:
-		say "You climb down the pylon.";
-	otherwise:
-		say "You slide down the pylon."
+	say "You [if the player is wearing the gravity boots]climb[else]slide[end if] down the pylon.";
 
 Instead of jumping in Center Platform, say "Pseudogravity is definitely weaker up here."
 
@@ -1016,13 +1011,15 @@ Sector 4 is spinward from Sector 3. It is in The Sectors. "Your home is here amo
 
 The S4B1 is a building. It is inside of Sector 4. It is scenery. It has description "You were told it was built to look like a log cabin on Old Earth." It has printed name "home". Through it is Home. Understand "home" or "house" as S4B1.
 
+Instead of searching S4B1, say "You would need to enter your home to do that."
+
 Some vegetables are scenery in Sector 4. They have description "Greens, carrots, and potatoes." Understand "crops" and "greens" and "carrots" and "potatoes" as some vegetables.
 
 Instead of eating some vegetables, say "You're not hungry."
 
 Section 1 - Home
 
-Home is a room. "The room where you've slept your entire life. You can go out towards the crops."
+Home is a room. "The room where you've slept your entire life. You can go out towards the crops." It has destination name "your home".
 
 Sector 4 is outside of home.
 
@@ -1032,7 +1029,7 @@ Section 2 - Cellar
 
 A S4H1 is a floor hatch. It is down from Home and up from Cellar.
 
-Cellar is in Underneath. "Your decompression shelter and space for some increasingly empty shelves of canned vegetables."
+Cellar is in Underneath. "Your decompression shelter and space for some increasingly empty shelves of canned vegetables." It has destination name "the cellar".
 
 Some shelves are scenery in cellar. "Almost a hundred jars of canned vegetables are on the makeshift shelves that line the wall.[if the emergency mask is undescribed] So is your emergency mask." They are a supporter. Understand "shelf" and "shelfs" and "wall" and "wall of shelves" and "spinward" and "makeshift" as shelves.
 
@@ -1062,7 +1059,7 @@ Chapter 5 - Sector 5
 
 Sector 5 is spinward from Sector 4. It is in The Sectors. "The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward." It has printed name "Sector 5: Forest". It has destination name "sector 5".
 
-A S5B1 is a building. It is scenery. It is inside of sector 5. It has description "Little and red, the traditional markings of a school building." It has printed name "school building". Through it is School. Understand "school" and "house" as S5B1.
+A S5B1 is a building. It is scenery. It is inside of sector 5. It has description "Little and red, the traditional markings of a school building." It has printed name "school house". Through it is School House. Understand "school" and "building" and "house" as S5B1.
 
 There is a pylon in Sector 5.
 
@@ -1070,11 +1067,11 @@ There is a forest in Sector 5.
 
 Instead of looking under a forest in Sector 5, say "Only the school house."
 
-Section 1 - School
+Section 1 - School House
 
-School is a room. "A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall."
+School House is a room. "A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall." It has destination name "the school house".
 
-Sector 5 is outside of school.
+Sector 5 is outside of school house.
 
 The learning machine is an openable quiet machine in the school. It has carrying capacity 2. It has description "This last learning machine broke when you were maybe three thousand days old."
 
@@ -1150,7 +1147,7 @@ A vault hatch is a floor hatch. Vault hatch is down from Sector 6 and up from Su
 
 Section 1 - The Supply Vault
 
-The Supply Vault is a room. "This room is dim, quiet, and stuffy. There is still a crate of machine parts left.[if laser is dusty][paragraph break]You see a laser beam scan across the exit.[end if]". Supply Vault is in underneath.
+The Supply Vault is a room. "This room is dim, quiet, and stuffy. There is still a crate of machine parts left.[if laser is dusty][paragraph break]You see a laser beam scan across the exit.[end if]". It has destination name "the supply vault". Supply Vault is in underneath.
 
 [ crate ]
 

@@ -42,3 +42,8 @@ https://github.com/erkyrath/quixe/wiki/Quixe-Graphics-Support
 
 See https://github.com/i7/extensions, but we have copied in any extension that doesn't ship
 with Inform 7. Also, extensions by Thomas Insel are local.
+
+## Independent Study
+
+* https://oikofuge.com/coriolis-effect-rotating-space-habitat/
+* https://www.artificial-gravity.com/sw/SpinCalc/
