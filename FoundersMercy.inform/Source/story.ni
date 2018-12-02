@@ -31,7 +31,7 @@ Release along with cover art ("A space station."),
 	an interpreter,
 	the introductory booklet,
 	the library card,
-	a file of "Station Map" called "Map.pdf",
+	a file of "Map & Feelies" called "Map.pdf",
 	and a "Local" website.
 	
 Requesting the credits is an action out of world and applying to nothing.
@@ -1023,7 +1023,7 @@ Home is a room. "The room where you've slept your entire life. You can go out to
 
 Sector 4 is outside of home.
 
-The player is in Home. The player is carrying the scanner.
+The player is in Home. The player is carrying the scanner. Understand "hey scanner" and "ok scanner" as the scanner.
 
 Section 2 - Cellar
 

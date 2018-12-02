@@ -15,7 +15,7 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 181201 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 181202 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type "about" for credits or "hint" for assistance.
 
 Home
@@ -65,6 +65,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-2504"></child>
             <child nodeId="node-1881"></child>
             <child nodeId="node-2442"></child>
+            <child nodeId="node-3151"></child>
             <child nodeId="node-2495"></child>
             <child nodeId="node-1868"></child>
             <child nodeId="node-2390"></child>
@@ -6936,6 +6937,26 @@ It features a single large pocket, currently empty.
     <item nodeId="node-2503">
         <command xml:space="preserve">play doll</command>
         <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3151">
+        <command xml:space="preserve">hey scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3152"></child>
+        </children>
+    </item>
+    <item nodeId="node-3152">
+        <command xml:space="preserve">hey scanner, help me</command>
+        <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

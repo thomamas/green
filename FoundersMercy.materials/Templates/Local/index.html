@@ -6,6 +6,10 @@
   <meta name="author" content="[AUTHOR]" />
   <meta name="description" content="A page for the game [TITLE] by [AUTHOR]." />
   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <style>
+  div.links li:nth-last-child(3)::before { content: "🕹  " /* unicode &#x1F579; */ }
+  div.links li:nth-last-child(3) { padding-top: 1ex }
+  </style>
 </head>
 <body>
 <div class="container">
@@ -29,9 +33,6 @@
 <div class="playinfo">
 	<p>
     [TITLE] was created with <a href="http://inform7.com/">Inform</a> and has IFID [IFID]. 
-    <!-- To play a work like this one, you need an interpreter program: many are available, among them 
-    <a href="http://ccxvii.net/spatterlight/">Spatterlight</a> for macOS and 
-    <a href="http://ccxvii.net/gargoyle/">Gargoyle</a> for macOS, Windows, and Linux. -->
     To play a work like this one, you need an interpreter program such as
     <a href="https://github.com/erkyrath/garglk/releases">Gargoyle</a>.
     [OTHERCREDITS] 
