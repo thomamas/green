@@ -714,7 +714,7 @@ Instead of the scanner scanning the space suit:
 	computerize "Machine is failed.";
 	rule succeeds.
 
-A brass plate is here. It is scenery. It has description "The plate reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2238, Launched 2241.[line break]    'May His mercy shine upon us.'" Understand "plaque" as plate.
+A brass plate is here. It is scenery. It has description "The plate reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2138, Launched 2141.[line break]    'May His mercy shine upon us.'" Understand "plaque" as plate.
 
 A status display is here. It is scenery and a machine. The status display can be examined.
 

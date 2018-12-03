@@ -1,0 +1,12 @@
+Export canvases from OmniGraffle.
+  Map
+  Scanner
+  
+Export sheet from Numbers
+  Balance Sheet
+
+Merge with Acrobat
+
+TODO:
+  Front page?
+  Look at file size
