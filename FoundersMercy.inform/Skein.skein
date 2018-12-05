@@ -48,6 +48,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-1838"></child>
             <child nodeId="node-1832"></child>
             <child nodeId="node-1830"></child>
+            <child nodeId="node-2482"></child>
             <child nodeId="node-1826"></child>
             <child nodeId="node-1815"></child>
             <child nodeId="node-1810"></child>
@@ -59,21 +60,29 @@ There is a secured hatch in the floor.
             <child nodeId="node-1686"></child>
             <child nodeId="node-1681"></child>
             <child nodeId="node-2000"></child>
+            <child nodeId="node-2399"></child>
             <child nodeId="node-1679"></child>
             <child nodeId="node-1676"></child>
             <child nodeId="node-1657"></child>
+            <child nodeId="node-2696"></child>
             <child nodeId="node-1646"></child>
+            <child nodeId="node-2519"></child>
+            <child nodeId="node-2407"></child>
             <child nodeId="node-1636"></child>
             <child nodeId="node-1634"></child>
             <child nodeId="node-1631"></child>
             <child nodeId="node-2054"></child>
+            <child nodeId="node-2762"></child>
+            <child nodeId="node-2633"></child>
             <child nodeId="node-1629"></child>
             <child nodeId="node-1620"></child>
             <child nodeId="node-2076"></child>
+            <child nodeId="node-2749"></child>
             <child nodeId="node-1561"></child>
             <child nodeId="node-1555"></child>
             <child nodeId="node-1544"></child>
             <child nodeId="node-1543"></child>
+            <child nodeId="node-2662"></child>
             <child nodeId="node-1483"></child>
             <child nodeId="node-1463"></child>
             <child nodeId="node-1461"></child>
@@ -1029,7 +1038,32 @@ There is an open hatch in the ceiling.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1073"></child>
+            <child nodeId="node-2718"></child>
         </children>
+    </item>
+    <item nodeId="node-2718">
+        <command xml:space="preserve">gonear ladder</command>
+        <result xml:space="preserve">Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2719"></child>
+        </children>
+    </item>
+    <item nodeId="node-2719">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see  floating here.
+
+
+*** Run-time problem P13: Tried to abandon an activity which wasn't going on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1073">
         <command xml:space="preserve">d</command>
@@ -4972,14 +5006,154 @@ Your home is here among the crops. You can walk spinward or antispinward.
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1934"></child>
             <child nodeId="node-1479"></child>
+            <child nodeId="node-2370"></child>
             <child nodeId="node-2261"></child>
             <child nodeId="node-2093"></child>
             <child nodeId="node-1477"></child>
+            <child nodeId="node-2486"></child>
             <child nodeId="node-1475"></child>
             <child nodeId="node-1472"></child>
             <child nodeId="node-1466"></child>
+            <child nodeId="node-2356"></child>
+            <child nodeId="node-2359"></child>
+            <child nodeId="node-2376"></child>
             <child nodeId="node-1464"></child>
+            <child nodeId="node-2346"></child>
+            <child nodeId="node-2361"></child>
         </children>
+    </item>
+    <item nodeId="node-2361">
+        <command xml:space="preserve">x pylons</command>
+        <result xml:space="preserve">Spinward and antispinward from here, you can see pylons connecting the ground to the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2362"></child>
+        </children>
+    </item>
+    <item nodeId="node-2362">
+        <command xml:space="preserve">touch pylons</command>
+        <result xml:space="preserve">You will need to go to the next sector to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2363"></child>
+            <child nodeId="node-2382"></child>
+        </children>
+    </item>
+    <item nodeId="node-2382">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2383"></child>
+        </children>
+    </item>
+    <item nodeId="node-2383">
+        <command xml:space="preserve">touch pylons</command>
+        <result xml:space="preserve">You feel nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2363">
+        <command xml:space="preserve">climb pylons</command>
+        <result xml:space="preserve">Little is to be achieved by that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2364"></child>
+        </children>
+    </item>
+    <item nodeId="node-2364">
+        <command xml:space="preserve">touch mirrors</command>
+        <result xml:space="preserve">You are too far away to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2365"></child>
+        </children>
+    </item>
+    <item nodeId="node-2365">
+        <command xml:space="preserve">touch mirror</command>
+        <result xml:space="preserve">You are too far away to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2366"></child>
+        </children>
+    </item>
+    <item nodeId="node-2366">
+        <command xml:space="preserve">showme pylons</command>
+        <result xml:space="preserve">(the pylons)
+pylons - backdrop
+location: in Sector 4: Crops
+singular-named, improper-named; unlit, inedible, fixed in place, scenery
+list grouping key: none
+printed name: "pylons"
+printed plural name: "backdrops"
+indefinite article: none
+description: "Spinward and antispinward from here, you can see pylons connecting the ground to the hub."
+initial appearance: none
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2367"></child>
+        </children>
+    </item>
+    <item nodeId="node-2367">
+        <command xml:space="preserve">drop pylons</command>
+        <result xml:space="preserve">The pylons is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2368"></child>
+        </children>
+    </item>
+    <item nodeId="node-2368">
+        <command xml:space="preserve">drop pylon</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2346">
+        <command xml:space="preserve">x mirror</command>
+        <result xml:space="preserve">The mirrors reflect sunlight into the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2347"></child>
+        </children>
+    </item>
+    <item nodeId="node-2347">
+        <command xml:space="preserve">x pylons</command>
+        <result xml:space="preserve">Spinward and antispinward from here, you can see pylons connecting the ground to the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2348"></child>
+        </children>
+    </item>
+    <item nodeId="node-2348">
+        <command xml:space="preserve">touch pylons</command>
+        <result xml:space="preserve">You feel nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2349"></child>
+        </children>
+    </item>
+    <item nodeId="node-2349">
+        <command xml:space="preserve">climb pylons</command>
+        <result xml:space="preserve">Little is to be achieved by that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1464">
         <command xml:space="preserve">x home</command>
@@ -4993,6 +5167,54 @@ Your home is here among the crops. You can walk spinward or antispinward.
     <item nodeId="node-1465">
         <command xml:space="preserve">drop home</command>
         <result xml:space="preserve">The home is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2376">
+        <command xml:space="preserve">x bdp</command>
+        <result xml:space="preserve">Spinward and antispinward from here, you can see pylons connecting the ground to the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2377"></child>
+        </children>
+    </item>
+    <item nodeId="node-2377">
+        <command xml:space="preserve">dorp bdp</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2378"></child>
+        </children>
+    </item>
+    <item nodeId="node-2378">
+        <command xml:space="preserve">drop bdp</command>
+        <result xml:space="preserve">You will need to go to the next sector to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2359">
+        <command xml:space="preserve">touch pylons</command>
+        <result xml:space="preserve">You feel nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2356">
+        <command xml:space="preserve">touch mirror</command>
+        <result xml:space="preserve">You are too far away to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2357"></child>
+        </children>
+    </item>
+    <item nodeId="node-2357">
+        <command xml:space="preserve">touch pylons</command>
+        <result xml:space="preserve">You feel nothing unexpected.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -5203,6 +5425,100 @@ A gray cable connects the organ to the audio unit.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2486">
+        <command xml:space="preserve">look up</command>
+        <result xml:space="preserve">The station rotates around the hub, which extends out to hold solar panels to the port and mirrors on the starboard side. On the inside, there is a maintenance platform about two thirds of the way up the pylons.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2487"></child>
+        </children>
+    </item>
+    <item nodeId="node-2487">
+        <command xml:space="preserve">look down</command>
+        <result xml:space="preserve">You see nothing unexpected in that direction.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2488"></child>
+        </children>
+    </item>
+    <item nodeId="node-2488">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2489"></child>
+        </children>
+    </item>
+    <item nodeId="node-2489">
+        <command xml:space="preserve">look down</command>
+        <result xml:space="preserve">DOWN.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2490"></child>
+        </children>
+    </item>
+    <item nodeId="node-2490">
+        <command xml:space="preserve">look up</command>
+        <result xml:space="preserve">The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2491"></child>
+        </children>
+    </item>
+    <item nodeId="node-2491">
+        <command xml:space="preserve">x ground</command>
+        <result xml:space="preserve">DOWN.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2492"></child>
+        </children>
+    </item>
+    <item nodeId="node-2492">
+        <command xml:space="preserve">touch ground</command>
+        <result xml:space="preserve">You are too far away to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2493"></child>
+        </children>
+    </item>
+    <item nodeId="node-2493">
+        <command xml:space="preserve">go ground</command>
+        <result xml:space="preserve">You are too far away to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2494"></child>
+        </children>
+    </item>
+    <item nodeId="node-2494">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2495"></child>
+        </children>
+    </item>
+    <item nodeId="node-2495">
+        <command xml:space="preserve">go ground</command>
+        <result xml:space="preserve">[entering the ground]
+You are too far away to do that.
+[entering the ground - failed]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1477">
         <command xml:space="preserve">look in home</command>
         <result xml:space="preserve">Your home is inside through the home.
@@ -5221,12 +5537,66 @@ A gray cable connects the organ to the audio unit.
     </item>
     <item nodeId="node-2093">
         <command xml:space="preserve">in</command>
-        <result xml:space="preserve">You can't go inside, but you can go down to the cellar or outside to sector 4.
+        <result xml:space="preserve">
+Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2094"></child>
+            <child nodeId="node-2333"></child>
         </children>
+    </item>
+    <item nodeId="node-2333">
+        <command xml:space="preserve">x pylons</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2334"></child>
+        </children>
+    </item>
+    <item nodeId="node-2334">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2335"></child>
+        </children>
+    </item>
+    <item nodeId="node-2335">
+        <command xml:space="preserve">x pylons</command>
+        <result xml:space="preserve">Spinward and antispinward from here, you can see pylons connecting the ground to the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2336"></child>
+        </children>
+    </item>
+    <item nodeId="node-2336">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2337"></child>
+        </children>
+    </item>
+    <item nodeId="node-2337">
+        <command xml:space="preserve">x pylons</command>
+        <result xml:space="preserve">(the pylon)
+Made of smooth metal, it connects the ground to the hub of the station many meters above. You can see similar pylons spinward and antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-2094">
         <command xml:space="preserve">d</command>
@@ -5353,6 +5723,53 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2370">
+        <command xml:space="preserve">drop pylons</command>
+        <result xml:space="preserve">The pylons are already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2371"></child>
+        </children>
+    </item>
+    <item nodeId="node-2371">
+        <command xml:space="preserve">drop mirrors</command>
+        <result xml:space="preserve">You are too far away to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2372"></child>
+        </children>
+    </item>
+    <item nodeId="node-2372">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2373"></child>
+        </children>
+    </item>
+    <item nodeId="node-2373">
+        <command xml:space="preserve">drop mirrors</command>
+        <result xml:space="preserve">[dropping the mirrors]
+You are too far away to do that.
+[dropping the mirrors - failed]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2374"></child>
+        </children>
+    </item>
+    <item nodeId="node-2374">
+        <command xml:space="preserve">drop pylons</command>
+        <result xml:space="preserve">[dropping the pylons]
+The pylons are already here.
+[dropping the pylons - failed the can't drop what's already dropped rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1479">
         <command xml:space="preserve">drop home</command>
         <result xml:space="preserve">The home is already here.
@@ -5395,8 +5812,191 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1935"></child>
+        <children><child nodeId="node-2418"></child>
+            <child nodeId="node-1935"></child>
+            <child nodeId="node-2386"></child>
         </children>
+    </item>
+    <item nodeId="node-2386">
+        <command xml:space="preserve">purloin boots</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2387"></child>
+        </children>
+    </item>
+    <item nodeId="node-2387">
+        <command xml:space="preserve">wear boots</command>
+        <result xml:space="preserve">You put on the pair of gravity boots.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2388"></child>
+        </children>
+    </item>
+    <item nodeId="node-2388">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">It isn't easy, but with the boots, you make a long climb towards the hub.
+
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2567"></child>
+            <child nodeId="node-2389"></child>
+            <child nodeId="node-2561"></child>
+        </children>
+    </item>
+    <item nodeId="node-2561">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2389">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You climb down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2390"></child>
+        </children>
+    </item>
+    <item nodeId="node-2390">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Center Platform 3
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2391"></child>
+        </children>
+    </item>
+    <item nodeId="node-2391">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Sector 3: Forest
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2392"></child>
+        </children>
+    </item>
+    <item nodeId="node-2392">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">It isn't easy, but with the boots, you make a long climb towards the hub.
+
+Center Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2393"></child>
+        </children>
+    </item>
+    <item nodeId="node-2393">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You climb down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2394"></child>
+        </children>
+    </item>
+    <item nodeId="node-2394">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a pair of gravity boots (being worn)
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2395"></child>
+        </children>
+    </item>
+    <item nodeId="node-2395">
+        <command xml:space="preserve">x pylons</command>
+        <result xml:space="preserve">Made of smooth metal, anodized red, it connects the ground to the hub of the station many meters above.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2396"></child>
+        </children>
+    </item>
+    <item nodeId="node-2396">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2397"></child>
+        </children>
+    </item>
+    <item nodeId="node-2397">
+        <command xml:space="preserve">x pylons</command>
+        <result xml:space="preserve">Spinward and antispinward from here, you can see pylons connecting the ground to the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2398"></child>
+        </children>
+    </item>
+    <item nodeId="node-2398">
+        <command xml:space="preserve">x hub</command>
+        <result xml:space="preserve">The station rotates around the hub, which extends out to hold solar panels on the port and mirrors on the starboard side. On the inside, there is a maintenance platform about two thirds of the way up the pylons.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2567">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2568"></child>
+        </children>
+    </item>
+    <item nodeId="node-2568">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2569"></child>
+        </children>
+    </item>
+    <item nodeId="node-2569">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1935">
         <command xml:space="preserve">in</command>
@@ -5657,6 +6257,308 @@ The only exit is outside to sector 3.
         <result xml:space="preserve">The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device.
 
 The audio unit has a gray cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2418">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2419"></child>
+        </children>
+    </item>
+    <item nodeId="node-2419">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2420"></child>
+        </children>
+    </item>
+    <item nodeId="node-2420">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2421"></child>
+        </children>
+    </item>
+    <item nodeId="node-2421">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go up, but you can go spinward to sector 3 or antispinward to sector 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2422"></child>
+        </children>
+    </item>
+    <item nodeId="node-2422">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2423"></child>
+        </children>
+    </item>
+    <item nodeId="node-2423">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">The pylon is slick metal with no obvious handholds.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2424"></child>
+        </children>
+    </item>
+    <item nodeId="node-2424">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2425"></child>
+        </children>
+    </item>
+    <item nodeId="node-2425">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2426"></child>
+        </children>
+    </item>
+    <item nodeId="node-2426">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2438"></child>
+        </children>
+    </item>
+    <item nodeId="node-2438">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">The pylon is slick metal with no obvious handholds.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2439"></child>
+        </children>
+    </item>
+    <item nodeId="node-2439">
+        <command xml:space="preserve">gonear rd</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2440"></child>
+        </children>
+    </item>
+    <item nodeId="node-2440">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2441"></child>
+        </children>
+    </item>
+    <item nodeId="node-2441">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2442"></child>
+        </children>
+    </item>
+    <item nodeId="node-2442">
+        <command xml:space="preserve">drop scaner</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2443"></child>
+        </children>
+    </item>
+    <item nodeId="node-2443">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">You drop the scanner and it spirals off to the ground below.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2444"></child>
+        </children>
+    </item>
+    <item nodeId="node-2444">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2445"></child>
+        </children>
+    </item>
+    <item nodeId="node-2445">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward.
+
+You can see a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2446"></child>
+        </children>
+    </item>
+    <item nodeId="node-2446">
+        <command xml:space="preserve">get scanner</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2447"></child>
+        </children>
+    </item>
+    <item nodeId="node-2447">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2448"></child>
+        </children>
+    </item>
+    <item nodeId="node-2448">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2449"></child>
+        </children>
+    </item>
+    <item nodeId="node-2449">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You can't go spinward, but you can go down to sector 3 or antispinward to platform 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2450"></child>
+        </children>
+    </item>
+    <item nodeId="node-2450">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2451"></child>
+        </children>
+    </item>
+    <item nodeId="node-2451">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Platform 1
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2452"></child>
+        </children>
+    </item>
+    <item nodeId="node-2452">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">You have heard of compass directions like north, but they don't make any sense here. Instead, you can go spinward, antispinward, port, and starboard. When you look spinward, port is left and starboard is right.
+
+[You can use the abbreviations "sw", "asw", "p", and "s". You can also go "up", "down", "in", and "out" where appropriate. Type "exits" if you get confused about geography.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2453"></child>
+        </children>
+    </item>
+    <item nodeId="node-2453">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2454"></child>
+        </children>
+    </item>
+    <item nodeId="node-2454">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2455"></child>
+        </children>
+    </item>
+    <item nodeId="node-2455">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You can't go antispinward, but you can go down to sector 1 or spinward to platform 3.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -6332,6 +7234,118 @@ There is an open hatch in the ceiling.
     <item nodeId="node-1542">
         <command xml:space="preserve">look through hatch</command>
         <result xml:space="preserve">Your home is up through the ceiling hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2662">
+        <command xml:space="preserve">onear red</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2663"></child>
+        </children>
+    </item>
+    <item nodeId="node-2663">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2664"></child>
+        </children>
+    </item>
+    <item nodeId="node-2664">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2665"></child>
+        </children>
+    </item>
+    <item nodeId="node-2665">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2666"></child>
+        </children>
+    </item>
+    <item nodeId="node-2666">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2667"></child>
+        </children>
+    </item>
+    <item nodeId="node-2667">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2668"></child>
+        </children>
+    </item>
+    <item nodeId="node-2668">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2669"></child>
+        </children>
+    </item>
+    <item nodeId="node-2669">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2670"></child>
+        </children>
+    </item>
+    <item nodeId="node-2670">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2671"></child>
+        </children>
+    </item>
+    <item nodeId="node-2671">
+        <command xml:space="preserve">get scanner</command>
+        <result xml:space="preserve">Taken.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -7363,6 +8377,252 @@ The shelves are already here.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2749">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2750"></child>
+        </children>
+    </item>
+    <item nodeId="node-2750">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">scanner: Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2751"></child>
+        </children>
+    </item>
+    <item nodeId="node-2751">
+        <command xml:space="preserve">ook</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2752"></child>
+        </children>
+    </item>
+    <item nodeId="node-2752">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+You can also see a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2753"></child>
+        </children>
+    </item>
+    <item nodeId="node-2753">
+        <command xml:space="preserve">get scanner</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2754"></child>
+        </children>
+    </item>
+    <item nodeId="node-2754">
+        <command xml:space="preserve">gonear ladder</command>
+        <result xml:space="preserve">Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2755"></child>
+        </children>
+    </item>
+    <item nodeId="node-2755">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2756"></child>
+        </children>
+    </item>
+    <item nodeId="node-2756">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2757"></child>
+        </children>
+    </item>
+    <item nodeId="node-2757">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2758"></child>
+        </children>
+    </item>
+    <item nodeId="node-2758">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2759"></child>
+        </children>
+    </item>
+    <item nodeId="node-2759">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2760"></child>
+        </children>
+    </item>
+    <item nodeId="node-2760">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2761"></child>
+        </children>
+    </item>
+    <item nodeId="node-2761">
+        <command xml:space="preserve">analyze</command>
+        <result xml:space="preserve">(the green jumpsuit)
+examining the green jumpsuit:
+You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population.
+
+It features a single large pocket, currently empty.
+
+looking under the green jumpsuit:
+You find nothing of interest.
+
+searching the green jumpsuit:
+You find nothing of interest.
+
+listening to the green jumpsuit:
+You hear nothing unexpected.
+
+smelling the green jumpsuit:
+You smell nothing unexpected.
+
+attacking the green jumpsuit:
+The Founder said that violence is never the answer.
+
+buying the green jumpsuit:
+Nothing is on sale.
+
+climbing the green jumpsuit:
+Little is to be achieved by that.
+
+pulling the green jumpsuit:
+Nothing obvious happens.
+
+pushing the green jumpsuit:
+Nothing obvious happens.
+
+turning the green jumpsuit:
+Nothing obvious happens.
+
+pushing the green jumpsuit to outside:
+The green jumpsuit cannot be pushed from place to place.
+
+opening the green jumpsuit:
+It isn't something you can open.
+
+entering the green jumpsuit:
+That's not something you can enter.
+
+getting off the green jumpsuit:
+But you aren't on the green jumpsuit at the moment.
+
+closing the green jumpsuit:
+It isn't something you can close.
+
+taking the green jumpsuit:
+You already have that.
+
+switching on the green jumpsuit:
+It isn't something you can switch.
+
+switching off the green jumpsuit:
+It isn't something you can switch.
+
+wearing the green jumpsuit:
+You're already wearing that!
+
+taking off the green jumpsuit:
+Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+(no other people in the location; can't test throwing at.)
+
+
+(no other people in the location; can't test showing to.)
+
+
+(no other people in the location; can't test giving to.)
+
+
+touching the green jumpsuit:
+You feel nothing unexpected.
+
+rubbing the green jumpsuit:
+You rub the green jumpsuit.
+
+waving the green jumpsuit:
+You wave the green jumpsuit.
+
+squeezing the green jumpsuit:
+You achieve nothing by this.
+
+burning the green jumpsuit:
+There is no open flame on the station.
+
+cutting the green jumpsuit:
+The Founder said that violence is never the answer.
+
+tying the green jumpsuit to yourself:
+You would achieve nothing by this.
+
+swinging the green jumpsuit:
+There's nothing sensible to swing here.
+
+tasting the green jumpsuit:
+You taste nothing unexpected.
+
+drinking the green jumpsuit:
+There's nothing suitable to drink here.
+
+eating the green jumpsuit:
+That's plainly inedible.
+
+dropping the green jumpsuit:
+Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-2076">
         <command xml:space="preserve">in</command>
         <result xml:space="preserve">X.
@@ -7380,7 +8640,8 @@ You can't go inside, but you can go down to the cellar or outside to sector 4.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1621"></child>
+        <children><child nodeId="node-2689"></child>
+            <child nodeId="node-1621"></child>
         </children>
     </item>
     <item nodeId="node-1621">
@@ -7457,6 +8718,75 @@ It features a single large pocket, currently empty.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2689">
+        <command xml:space="preserve">gonear ladder</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2690"></child>
+        </children>
+    </item>
+    <item nodeId="node-2690">
+        <command xml:space="preserve">gonear the ladder</command>
+        <result xml:space="preserve">I only understood you as far as wanting to gonear Inside the Hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2691"></child>
+        </children>
+    </item>
+    <item nodeId="node-2691">
+        <command xml:space="preserve">onear red</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2692"></child>
+        </children>
+    </item>
+    <item nodeId="node-2692">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2693"></child>
+        </children>
+    </item>
+    <item nodeId="node-2693">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2694"></child>
+        </children>
+    </item>
+    <item nodeId="node-2694">
+        <command xml:space="preserve">x laddre</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2695"></child>
+        </children>
+    </item>
+    <item nodeId="node-2695">
+        <command xml:space="preserve">x ladder</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1629">
         <command xml:space="preserve">hey scanner, help</command>
         <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
@@ -7473,6 +8803,121 @@ It features a single large pocket, currently empty.
         <result xml:space="preserve">Recognized commands are "help", "open", and "scan".
 
 [You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" or "scanner, open SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2633">
+        <command xml:space="preserve">help</command>
+        <result xml:space="preserve">Your objective is simply to leave the station and find other people.
+
+You can start by looking around and leaving your initial location.
+
+By the way, it should be impossible to put this story into an unwinnable state, so feel free to explore and experiment.
+
+If you are having trouble getting started, I suggest reading A Beginner's Guide to Interactive Fiction by Stephen Granade and Emily Short, available at:
+
+  https://brasslantern.org/players/howto/beginnersguide.html
+
+[You can type "hint" any time for contextual assistance. If you prefer not to be tempted, you can type "hints off" to disable hints.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2634"></child>
+        </children>
+    </item>
+    <item nodeId="node-2634">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2635"></child>
+        </children>
+    </item>
+    <item nodeId="node-2635">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2636"></child>
+        </children>
+    </item>
+    <item nodeId="node-2636">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2637"></child>
+        </children>
+    </item>
+    <item nodeId="node-2637">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">jdskjfksd.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2762">
+        <command xml:space="preserve">goto ladder</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2763"></child>
+        </children>
+    </item>
+    <item nodeId="node-2763">
+        <command xml:space="preserve">gonear ladder</command>
+        <result xml:space="preserve">Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2764"></child>
+        </children>
+    </item>
+    <item nodeId="node-2764">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2765"></child>
+        </children>
+    </item>
+    <item nodeId="node-2765">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">That floats.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2766"></child>
+        </children>
+    </item>
+    <item nodeId="node-2766">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner floating here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8186,16 +9631,231 @@ On the desk is a clean eraser.
     <item nodeId="node-1636">
         <command xml:space="preserve">gonear red</command>
         <result xml:space="preserve">(the red circuit breaker)
-Center Platform
-It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
 
-You can just reach a red circuit breaker on the hub.
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1639"></child>
+        <children><child nodeId="node-2571"></child>
+            <child nodeId="node-2579"></child>
+            <child nodeId="node-2518"></child>
+            <child nodeId="node-2526"></child>
+            <child nodeId="node-2497"></child>
+            <child nodeId="node-2553"></child>
+            <child nodeId="node-2507"></child>
+            <child nodeId="node-2591"></child>
+            <child nodeId="node-2457"></child>
+            <child nodeId="node-1639"></child>
             <child nodeId="node-1637"></child>
+            <child nodeId="node-2673"></child>
+            <child nodeId="node-2466"></child>
+            <child nodeId="node-2477"></child>
         </children>
+    </item>
+    <item nodeId="node-2477">
+        <command xml:space="preserve">x platform</command>
+        <result xml:space="preserve">You are on a circular platform that connects the pylons about two thirds of the way up to the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2478"></child>
+        </children>
+    </item>
+    <item nodeId="node-2478">
+        <command xml:space="preserve">x hub</command>
+        <result xml:space="preserve">The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2479"></child>
+        </children>
+    </item>
+    <item nodeId="node-2479">
+        <command xml:space="preserve">x ground</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2480"></child>
+        </children>
+    </item>
+    <item nodeId="node-2480">
+        <command xml:space="preserve">look down</command>
+        <result xml:space="preserve">You see nothing unexpected in that direction.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2481"></child>
+        </children>
+    </item>
+    <item nodeId="node-2481">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2466">
+        <command xml:space="preserve">x hub</command>
+        <result xml:space="preserve">The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2467"></child>
+        </children>
+    </item>
+    <item nodeId="node-2467">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2468"></child>
+        </children>
+    </item>
+    <item nodeId="node-2468">
+        <command xml:space="preserve">x hub</command>
+        <result xml:space="preserve">The station rotates around the hub, which extends out to hold solar panels to the port and mirrors on the starboard side. On the inside, there is a maintenance platform about two thirds of the way up the pylons.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2469"></child>
+        </children>
+    </item>
+    <item nodeId="node-2469">
+        <command xml:space="preserve">x platform</command>
+        <result xml:space="preserve">A circular platform connects the pylons about two thirds of the way up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2470"></child>
+        </children>
+    </item>
+    <item nodeId="node-2470">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the pylon)
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2471"></child>
+        </children>
+    </item>
+    <item nodeId="node-2471">
+        <command xml:space="preserve">x platform</command>
+        <result xml:space="preserve">A circular platform connects the pylons about two thirds of the way up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2472"></child>
+        </children>
+    </item>
+    <item nodeId="node-2472">
+        <command xml:space="preserve">gonear red breaker</command>
+        <result xml:space="preserve">Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2473"></child>
+        </children>
+    </item>
+    <item nodeId="node-2473">
+        <command xml:space="preserve">x platform</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2474"></child>
+        </children>
+    </item>
+    <item nodeId="node-2474">
+        <command xml:space="preserve">touch platform</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2475"></child>
+        </children>
+    </item>
+    <item nodeId="node-2475">
+        <command xml:space="preserve">touch room</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2673">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">You can't go up, but you can go down to sector 3, spinward to platform 5, or antispinward to platform 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2674"></child>
+        </children>
+    </item>
+    <item nodeId="node-2674">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2675"></child>
+        </children>
+    </item>
+    <item nodeId="node-2675">
+        <command xml:space="preserve">p</command>
+        <result xml:space="preserve">You can't go port, but you can go up to inside the hub, down to sector 1, inside to inside the hub, spinward to platform 3, or antispinward to platform 5.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2676"></child>
+        </children>
+    </item>
+    <item nodeId="node-2676">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2677"></child>
+        </children>
+    </item>
+    <item nodeId="node-2677">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">scanner: Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2678"></child>
+        </children>
+    </item>
+    <item nodeId="node-2678">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1637">
         <command xml:space="preserve">turn on breake</command>
@@ -8293,6 +9953,1291 @@ There is a secured hatch in the floor.
         <result xml:space="preserve">The obvious exits are down and outside.
 
 [Type "exits off" to disable the status line exit list and "exits on" to turn it back on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2457">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 5
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2548"></child>
+            <child nodeId="node-2458"></child>
+        </children>
+    </item>
+    <item nodeId="node-2458">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2459"></child>
+            <child nodeId="node-2626"></child>
+        </children>
+    </item>
+    <item nodeId="node-2626">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2627"></child>
+        </children>
+    </item>
+    <item nodeId="node-2627">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">jdskjfksd.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2459">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2460"></child>
+        </children>
+    </item>
+    <item nodeId="node-2460">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 5
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2461"></child>
+        </children>
+    </item>
+    <item nodeId="node-2461">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2462"></child>
+        </children>
+    </item>
+    <item nodeId="node-2462">
+        <command xml:space="preserve">x hub</command>
+        <result xml:space="preserve">The station rotates around the hub, which extends out to hold solar panels on the port and mirrors on the starboard side. On the inside, there is a maintenance platform about two thirds of the way up the pylons.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2463"></child>
+        </children>
+    </item>
+    <item nodeId="node-2463">
+        <command xml:space="preserve">x platform</command>
+        <result xml:space="preserve">A circular platform connects the pylons about two thirds of the way up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2464"></child>
+        </children>
+    </item>
+    <item nodeId="node-2464">
+        <command xml:space="preserve">touch platform</command>
+        <result xml:space="preserve">You are too far away to do that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2548">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2549"></child>
+        </children>
+    </item>
+    <item nodeId="node-2549">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 5
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2550"></child>
+        </children>
+    </item>
+    <item nodeId="node-2550">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2551"></child>
+        </children>
+    </item>
+    <item nodeId="node-2551">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2591">
+        <command xml:space="preserve">look up</command>
+        <result xml:space="preserve">The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2592"></child>
+        </children>
+    </item>
+    <item nodeId="node-2592">
+        <command xml:space="preserve">x station</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2593"></child>
+        </children>
+    </item>
+    <item nodeId="node-2593">
+        <command xml:space="preserve">x panel</command>
+        <result xml:space="preserve">The primary source of station power.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2594"></child>
+        </children>
+    </item>
+    <item nodeId="node-2594">
+        <command xml:space="preserve">x panels</command>
+        <result xml:space="preserve">The primary source of station power.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2595"></child>
+        </children>
+    </item>
+    <item nodeId="node-2595">
+        <command xml:space="preserve">x mirror</command>
+        <result xml:space="preserve">The mirrors reflect sunlight into the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2596"></child>
+        </children>
+    </item>
+    <item nodeId="node-2596">
+        <command xml:space="preserve">x mirror</command>
+        <result xml:space="preserve">The mirrors reflect sunlight into the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2597"></child>
+        </children>
+    </item>
+    <item nodeId="node-2597">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You can't go up, but you can go down to sector 3, spinward to platform 5, or antispinward to platform 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2598"></child>
+        </children>
+    </item>
+    <item nodeId="node-2598">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2599"></child>
+        </children>
+    </item>
+    <item nodeId="node-2599">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2600"></child>
+        </children>
+    </item>
+    <item nodeId="node-2600">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 5
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2601"></child>
+        </children>
+    </item>
+    <item nodeId="node-2601">
+        <command xml:space="preserve">aws</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2602"></child>
+        </children>
+    </item>
+    <item nodeId="node-2602">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2603"></child>
+        </children>
+    </item>
+    <item nodeId="node-2603">
+        <command xml:space="preserve">p</command>
+        <result xml:space="preserve">You can't go port, but you can go down to sector 3, spinward to platform 5, or antispinward to platform 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2604"></child>
+        </children>
+    </item>
+    <item nodeId="node-2604">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go starboard, but you can go down to sector 3, spinward to platform 5, or antispinward to platform 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2507">
+        <command xml:space="preserve">look down</command>
+        <result xml:space="preserve">The pylon descends into a forest below you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2515"></child>
+            <child nodeId="node-2508"></child>
+        </children>
+    </item>
+    <item nodeId="node-2508">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 5
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2509"></child>
+        </children>
+    </item>
+    <item nodeId="node-2509">
+        <command xml:space="preserve">look down</command>
+        <result xml:space="preserve">The pylon descends into a forest below you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2510"></child>
+        </children>
+    </item>
+    <item nodeId="node-2510">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 1
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2511"></child>
+        </children>
+    </item>
+    <item nodeId="node-2511">
+        <command xml:space="preserve">ook down</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2512"></child>
+        </children>
+    </item>
+    <item nodeId="node-2512">
+        <command xml:space="preserve">look down</command>
+        <result xml:space="preserve">The pylon descends into a field of crops below you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2515">
+        <command xml:space="preserve">look up</command>
+        <result xml:space="preserve">The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2516"></child>
+        </children>
+    </item>
+    <item nodeId="node-2516">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2553">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down..
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2554"></child>
+        </children>
+    </item>
+    <item nodeId="node-2554">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2555"></child>
+        </children>
+    </item>
+    <item nodeId="node-2555">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2497">
+        <command xml:space="preserve">go ground</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2498"></child>
+        </children>
+    </item>
+    <item nodeId="node-2498">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Platform 3
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2499"></child>
+        </children>
+    </item>
+    <item nodeId="node-2499">
+        <command xml:space="preserve">enter ground</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2500"></child>
+        </children>
+    </item>
+    <item nodeId="node-2500">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2501"></child>
+        </children>
+    </item>
+    <item nodeId="node-2501">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2502"></child>
+        </children>
+    </item>
+    <item nodeId="node-2502">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2503"></child>
+        </children>
+    </item>
+    <item nodeId="node-2503">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2504"></child>
+        </children>
+    </item>
+    <item nodeId="node-2504">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2505"></child>
+        </children>
+    </item>
+    <item nodeId="node-2505">
+        <command xml:space="preserve">x pylon</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2526">
+        <command xml:space="preserve">enter pylon</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2527"></child>
+        </children>
+    </item>
+    <item nodeId="node-2527">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Platform 3
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2528"></child>
+        </children>
+    </item>
+    <item nodeId="node-2528">
+        <command xml:space="preserve">go pylon</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2529"></child>
+        </children>
+    </item>
+    <item nodeId="node-2529">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Platform 3
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2530"></child>
+        </children>
+    </item>
+    <item nodeId="node-2530">
+        <command xml:space="preserve">jump down</command>
+        <result xml:space="preserve">I only understood you as far as wanting to jump.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2531"></child>
+        </children>
+    </item>
+    <item nodeId="node-2531">
+        <command xml:space="preserve">ations</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2532"></child>
+        </children>
+    </item>
+    <item nodeId="node-2532">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2533"></child>
+        </children>
+    </item>
+    <item nodeId="node-2533">
+        <command xml:space="preserve">jump</command>
+        <result xml:space="preserve">[jumping]
+Pseudogravity is definitely weaker up here.
+[jumping - failed]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2534"></child>
+        </children>
+    </item>
+    <item nodeId="node-2534">
+        <command xml:space="preserve">jump down</command>
+        <result xml:space="preserve">I only understood you as far as wanting to jump.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2535"></child>
+        </children>
+    </item>
+    <item nodeId="node-2535">
+        <command xml:space="preserve">go to ground</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2536"></child>
+        </children>
+    </item>
+    <item nodeId="node-2536">
+        <command xml:space="preserve">go ground</command>
+        <result xml:space="preserve">[entering the ground]
+[(1) going down]
+You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+[(1) going down - succeeded]
+
+[entering the ground - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2537"></child>
+        </children>
+    </item>
+    <item nodeId="node-2537">
+        <command xml:space="preserve">go to the north</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2538"></child>
+        </children>
+    </item>
+    <item nodeId="node-2538">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the pylon)
+[(1) looking]
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+[(1) looking - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2539"></child>
+        </children>
+    </item>
+    <item nodeId="node-2539">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">[going spinward]
+You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+[going spinward - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2540"></child>
+        </children>
+    </item>
+    <item nodeId="node-2540">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">[going spinward]
+You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+[going spinward - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2541"></child>
+        </children>
+    </item>
+    <item nodeId="node-2541">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">[going spinward]
+You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+[going spinward - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2542"></child>
+        </children>
+    </item>
+    <item nodeId="node-2542">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+[(1) looking]
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+[(1) looking - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2543"></child>
+        </children>
+    </item>
+    <item nodeId="node-2543">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">[going spinward]
+
+Platform 5
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+[going spinward - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2544"></child>
+        </children>
+    </item>
+    <item nodeId="node-2544">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">[going spinward]
+
+Platform 1
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+[going spinward - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2545"></child>
+        </children>
+    </item>
+    <item nodeId="node-2545">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">[going spinward]
+
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+[going spinward - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2518">
+        <command xml:space="preserve">drop platform</command>
+        <result xml:space="preserve">maintenance platform is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2579">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2580"></child>
+        </children>
+    </item>
+    <item nodeId="node-2580">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Platform 3
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2581"></child>
+        </children>
+    </item>
+    <item nodeId="node-2581">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2582"></child>
+        </children>
+    </item>
+    <item nodeId="node-2582">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2583"></child>
+        </children>
+    </item>
+    <item nodeId="node-2583">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 5
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2584"></child>
+        </children>
+    </item>
+    <item nodeId="node-2584">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2585"></child>
+        </children>
+    </item>
+    <item nodeId="node-2585">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2586"></child>
+        </children>
+    </item>
+    <item nodeId="node-2586">
+        <command xml:space="preserve">x hb</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2587"></child>
+        </children>
+    </item>
+    <item nodeId="node-2587">
+        <command xml:space="preserve">x hub</command>
+        <result xml:space="preserve">The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2588"></child>
+        </children>
+    </item>
+    <item nodeId="node-2588">
+        <command xml:space="preserve">x platform</command>
+        <result xml:space="preserve">You are on a circular platform suspended  about two thirds of the way up the pylons to the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2589"></child>
+        </children>
+    </item>
+    <item nodeId="node-2589">
+        <command xml:space="preserve">x pylon</command>
+        <result xml:space="preserve">The pylon stretches between the ground, the maintenance platform, and the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2571">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2572"></child>
+            <child nodeId="node-2607"></child>
+        </children>
+    </item>
+    <item nodeId="node-2607">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+yourself
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2641"></child>
+            <child nodeId="node-2682"></child>
+            <child nodeId="node-2608"></child>
+        </children>
+    </item>
+    <item nodeId="node-2608">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+yourself
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2609"></child>
+            <child nodeId="node-2616"></child>
+        </children>
+    </item>
+    <item nodeId="node-2616">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2617"></child>
+        </children>
+    </item>
+    <item nodeId="node-2617">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">There are no obvious exits.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2609">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">There are no obvious exits.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2610"></child>
+        </children>
+    </item>
+    <item nodeId="node-2610">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">There are no obvious exits.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2611"></child>
+        </children>
+    </item>
+    <item nodeId="node-2611">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+A ladder leads up into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2682">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">scanner: Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2683"></child>
+        </children>
+    </item>
+    <item nodeId="node-2683">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+the scanneryourself
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2641">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2646"></child>
+            <child nodeId="node-2652"></child>
+        </children>
+    </item>
+    <item nodeId="node-2652">
+        <command xml:space="preserve">trace</command>
+        <result xml:space="preserve">[Trace on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2653"></child>
+        </children>
+    </item>
+    <item nodeId="node-2653">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">[Parsing for the verb 'look' (5 lines)]
+[line 0 * -&gt; Look]
+[Line successfully parsed]
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2654"></child>
+        </children>
+    </item>
+    <item nodeId="node-2654">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 5
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2655"></child>
+        </children>
+    </item>
+    <item nodeId="node-2655">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2656"></child>
+        </children>
+    </item>
+    <item nodeId="node-2656">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">[Parsing for the verb 'look' (5 lines)]
+[line 0 * -&gt; Look]
+[Line successfully parsed]
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2657"></child>
+        </children>
+    </item>
+    <item nodeId="node-2657">
+        <command xml:space="preserve">trace</command>
+        <result xml:space="preserve">[Parsing for the verb 'trace' (4 lines)]
+[line 0 * -&gt; TraceOn]
+[Line successfully parsed]
+[Trace on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2658"></child>
+        </children>
+    </item>
+    <item nodeId="node-2658">
+        <command xml:space="preserve">trace on</command>
+        <result xml:space="preserve">[Parsing for the verb 'trace' (4 lines)]
+[line 0 * -&gt; TraceOn]
+[line 1 * number -&gt; TraceLevel]
+[line 2 * 'on' -&gt; TraceOn]
+[Line successfully parsed]
+[Trace on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2659"></child>
+        </children>
+    </item>
+    <item nodeId="node-2659">
+        <command xml:space="preserve">trace high</command>
+        <result xml:space="preserve">[Parsing for the verb 'trace' (4 lines)]
+[line 0 * -&gt; TraceOn]
+[line 1 * number -&gt; TraceLevel]
+[line 2 * 'on' -&gt; TraceOn]
+[line 3 * 'off' -&gt; TraceOff]
+I didn't understand that number.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2660"></child>
+        </children>
+    </item>
+    <item nodeId="node-2660">
+        <command xml:space="preserve">grace 5</command>
+        <result xml:space="preserve">[Parsing for the verb 'no.verb' (1 lines)]
+[line 0 * noun=Routine(463752) -&gt; Enter]
+That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2661"></child>
+        </children>
+    </item>
+    <item nodeId="node-2661">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2646">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2647"></child>
+        </children>
+    </item>
+    <item nodeId="node-2647">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">[going down]
+The only exit is outside to platform 1.
+[going down - failed]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2572">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2573"></child>
+        </children>
+    </item>
+    <item nodeId="node-2573">
+        <command xml:space="preserve">look down</command>
+        <result xml:space="preserve">The pylon descends into a forest below you.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2407">
+        <command xml:space="preserve">gonear read</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2408"></child>
+        </children>
+    </item>
+    <item nodeId="node-2408">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2409"></child>
+        </children>
+    </item>
+    <item nodeId="node-2409">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2410"></child>
+        </children>
+    </item>
+    <item nodeId="node-2410">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Platform 3
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2411"></child>
+        </children>
+    </item>
+    <item nodeId="node-2411">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2412"></child>
+        </children>
+    </item>
+    <item nodeId="node-2412">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The only exit is spinward to platform 3.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2413"></child>
+        </children>
+    </item>
+    <item nodeId="node-2413">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">The only exit is spinward to platform 3.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2414"></child>
+        </children>
+    </item>
+    <item nodeId="node-2414">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The only exit is spinward to platform 3.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2415"></child>
+        </children>
+    </item>
+    <item nodeId="node-2415">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2519">
+        <command xml:space="preserve">gonear platform</command>
+        <result xml:space="preserve">Which do you mean, the maintenance platform, the maintenance platform, Platform 1, Platform 3, or Platform 5?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2520"></child>
+        </children>
+    </item>
+    <item nodeId="node-2520">
+        <command xml:space="preserve">red</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2521"></child>
+        </children>
+    </item>
+    <item nodeId="node-2521">
+        <command xml:space="preserve">gonear red</command>
+        <result xml:space="preserve">(the red circuit breaker)
+Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2522"></child>
+        </children>
+    </item>
+    <item nodeId="node-2522">
+        <command xml:space="preserve">x platform</command>
+        <result xml:space="preserve">You are on a circular platform suspended  about two thirds of the way up the pylons to the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2523"></child>
+        </children>
+    </item>
+    <item nodeId="node-2523">
+        <command xml:space="preserve">x pylon</command>
+        <result xml:space="preserve">The pylon stretches between the ground, the maintenance platform, and the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2524"></child>
+        </children>
+    </item>
+    <item nodeId="node-2524">
+        <command xml:space="preserve">go pylon</command>
+        <result xml:space="preserve">That's not something you can enter.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8410,6 +11355,1338 @@ A broken learning machine remains in a corner, but mostly the older farmers took
 The learning machine is open and contains a power module and an instruction module.
 
 On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2696">
+        <command xml:space="preserve">gonear ladder</command>
+        <result xml:space="preserve">Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2768"></child>
+            <child nodeId="node-2886"></child>
+            <child nodeId="node-2803"></child>
+            <child nodeId="node-2697"></child>
+            <child nodeId="node-2706"></child>
+        </children>
+    </item>
+    <item nodeId="node-2706">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2821"></child>
+            <child nodeId="node-2797"></child>
+            <child nodeId="node-2707"></child>
+        </children>
+    </item>
+    <item nodeId="node-2707">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2708"></child>
+        </children>
+    </item>
+    <item nodeId="node-2708">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">scanner: Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2709"></child>
+        </children>
+    </item>
+    <item nodeId="node-2709">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2710"></child>
+        </children>
+    </item>
+    <item nodeId="node-2710">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2711"></child>
+        </children>
+    </item>
+    <item nodeId="node-2711">
+        <command xml:space="preserve">get jumpsuit</command>
+        <result xml:space="preserve">You already have that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2712"></child>
+        </children>
+    </item>
+    <item nodeId="node-2712">
+        <command xml:space="preserve">remove jumpsuit</command>
+        <result xml:space="preserve">Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2713"></child>
+        </children>
+    </item>
+    <item nodeId="node-2713">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">(the green jumpsuit)
+Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2714"></child>
+        </children>
+    </item>
+    <item nodeId="node-2714">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a green jumpsuit and a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2797">
+        <command xml:space="preserve">drop boots</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2798"></child>
+        </children>
+    </item>
+    <item nodeId="node-2798">
+        <command xml:space="preserve">purloin boots</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2799"></child>
+        </children>
+    </item>
+    <item nodeId="node-2799">
+        <command xml:space="preserve">drop boots</command>
+        <result xml:space="preserve">It floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2800"></child>
+        </children>
+    </item>
+    <item nodeId="node-2800">
+        <command xml:space="preserve">x boots</command>
+        <result xml:space="preserve">Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity or on the outside of a rotating station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2801"></child>
+        </children>
+    </item>
+    <item nodeId="node-2801">
+        <command xml:space="preserve">showme boots</command>
+        <result xml:space="preserve">pair of gravity boots - thing
+location: in Inside the Hub
+plural-named, improper-named; unlit, inedible, portable, wearable, handled
+list grouping key: none
+printed name: "pair of gravity boots"
+printed plural name: none
+indefinite article: none
+description: "Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity or on the outside of a rotating station."
+initial appearance: none
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2821">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">yourself.
+
+You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2697">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2817"></child>
+            <child nodeId="node-2852"></child>
+            <child nodeId="node-2810"></child>
+            <child nodeId="node-2731"></child>
+            <child nodeId="node-2698"></child>
+            <child nodeId="node-2728"></child>
+            <child nodeId="node-2701"></child>
+        </children>
+    </item>
+    <item nodeId="node-2701">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2702"></child>
+        </children>
+    </item>
+    <item nodeId="node-2702">
+        <command xml:space="preserve">remove jumpsuit</command>
+        <result xml:space="preserve">Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2703"></child>
+        </children>
+    </item>
+    <item nodeId="node-2703">
+        <command xml:space="preserve">drop it</command>
+        <result xml:space="preserve">You drop the green jumpsuit and it spirals off to the ground below.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2704"></child>
+        </children>
+    </item>
+    <item nodeId="node-2704">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+A scanner is floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2728">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder.  A ladder leads up or down or maybe out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2791"></child>
+        </children>
+    </item>
+    <item nodeId="node-2791">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2792"></child>
+        </children>
+    </item>
+    <item nodeId="node-2792">
+        <command xml:space="preserve">purloin boots</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2793"></child>
+        </children>
+    </item>
+    <item nodeId="node-2793">
+        <command xml:space="preserve">drop boots</command>
+        <result xml:space="preserve">It floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2794"></child>
+        </children>
+    </item>
+    <item nodeId="node-2794">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder.  A ladder leads up or down or maybe out.
+
+You can see a pair of gravity boots floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2698">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2731">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2732"></child>
+        </children>
+    </item>
+    <item nodeId="node-2732">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2733"></child>
+        </children>
+    </item>
+    <item nodeId="node-2733">
+        <command xml:space="preserve">remove jumpsuit</command>
+        <result xml:space="preserve">Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2734"></child>
+        </children>
+    </item>
+    <item nodeId="node-2734">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2735"></child>
+        </children>
+    </item>
+    <item nodeId="node-2735">
+        <command xml:space="preserve">drop jumpsuit</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2736"></child>
+        </children>
+    </item>
+    <item nodeId="node-2736">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a green jumpsuit and a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2810">
+        <command xml:space="preserve">drop boots</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2811"></child>
+        </children>
+    </item>
+    <item nodeId="node-2811">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2812"></child>
+        </children>
+    </item>
+    <item nodeId="node-2812">
+        <command xml:space="preserve">purloin boots</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2813"></child>
+        </children>
+    </item>
+    <item nodeId="node-2813">
+        <command xml:space="preserve">rop all</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2814"></child>
+        </children>
+    </item>
+    <item nodeId="node-2814">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">pair of gravity boots: You drop the pair of gravity boots, and it floats nearby.
+scanner: You drop the scanner, and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2852">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">scanner: You drop the scanner and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2853"></child>
+        </children>
+    </item>
+    <item nodeId="node-2853">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the scanner behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2817">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2818"></child>
+            <child nodeId="node-2828"></child>
+        </children>
+    </item>
+    <item nodeId="node-2828">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2829"></child>
+        </children>
+    </item>
+    <item nodeId="node-2829">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">scanner: You drop the scanner and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2830"></child>
+        </children>
+    </item>
+    <item nodeId="node-2830">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the scanner behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2831"></child>
+        </children>
+    </item>
+    <item nodeId="node-2831">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the scanner behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2865"></child>
+            <child nodeId="node-2832"></child>
+            <child nodeId="node-2842"></child>
+        </children>
+    </item>
+    <item nodeId="node-2842">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">The only exit is outside to platform 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2843"></child>
+        </children>
+    </item>
+    <item nodeId="node-2843">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+You can see a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2844"></child>
+        </children>
+    </item>
+    <item nodeId="node-2844">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2845"></child>
+        </children>
+    </item>
+    <item nodeId="node-2845">
+        <command xml:space="preserve">get jumpsuit</command>
+        <result xml:space="preserve">You already have that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2846"></child>
+        </children>
+    </item>
+    <item nodeId="node-2846">
+        <command xml:space="preserve">remove jumpsuit</command>
+        <result xml:space="preserve">Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2847"></child>
+        </children>
+    </item>
+    <item nodeId="node-2847">
+        <command xml:space="preserve">drop it</command>
+        <result xml:space="preserve">You drop the green jumpsuit and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2848"></child>
+        </children>
+    </item>
+    <item nodeId="node-2848">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+You can see a green jumpsuit and a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2849"></child>
+        </children>
+    </item>
+    <item nodeId="node-2849">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the green jumpsuit and the scanner behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2832">
+        <command xml:space="preserve">remove all</command>
+        <result xml:space="preserve">(the green jumpsuit)
+Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2833"></child>
+        </children>
+    </item>
+    <item nodeId="node-2833">
+        <command xml:space="preserve">drop suit</command>
+        <result xml:space="preserve">You drop the green jumpsuit and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2834"></child>
+        </children>
+    </item>
+    <item nodeId="node-2834">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">the green jumpsuit and the scanner.
+
+You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2865">
+        <command xml:space="preserve">purloin modules</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2866"></child>
+        </children>
+    </item>
+    <item nodeId="node-2866">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">pressure regulation module: You drop the pressure regulation module and it floats nearby.
+instruction module: You drop the instruction module and it floats nearby.
+instruction module: You drop the instruction module and it floats nearby.
+power module: You drop the power module and it floats nearby.
+power module: You drop the power module and it floats nearby.
+pressure regulation module: You drop the pressure regulation module and it floats nearby.
+power module: You drop the power module and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2867"></child>
+        </children>
+    </item>
+    <item nodeId="node-2867">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the instruction module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2868"></child>
+        </children>
+    </item>
+    <item nodeId="node-2868">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the instruction module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2869"></child>
+        </children>
+    </item>
+    <item nodeId="node-2869">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the instruction module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2870"></child>
+        </children>
+    </item>
+    <item nodeId="node-2870">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+You can see three power modules, two pressure regulation modules, two instruction modules, and a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2871"></child>
+        </children>
+    </item>
+    <item nodeId="node-2871">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the pressure regulation module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2872"></child>
+        </children>
+    </item>
+    <item nodeId="node-2872">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the instruction module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2873"></child>
+        </children>
+    </item>
+    <item nodeId="node-2873">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the pressure regulation module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2874"></child>
+        </children>
+    </item>
+    <item nodeId="node-2874">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the instruction module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2875"></child>
+        </children>
+    </item>
+    <item nodeId="node-2875">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the power module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2876"></child>
+        </children>
+    </item>
+    <item nodeId="node-2876">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the scanner behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2877"></child>
+        </children>
+    </item>
+    <item nodeId="node-2877">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the power module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2878"></child>
+        </children>
+    </item>
+    <item nodeId="node-2878">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the instruction module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2879"></child>
+        </children>
+    </item>
+    <item nodeId="node-2879">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the power module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2880"></child>
+        </children>
+    </item>
+    <item nodeId="node-2880">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the instruction module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2881"></child>
+        </children>
+    </item>
+    <item nodeId="node-2881">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the pressure regulation module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2882"></child>
+        </children>
+    </item>
+    <item nodeId="node-2882">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the scanner behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2883"></child>
+        </children>
+    </item>
+    <item nodeId="node-2883">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the power module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2884"></child>
+        </children>
+    </item>
+    <item nodeId="node-2884">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the pressure regulation module behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2818">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">No.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2803">
+        <command xml:space="preserve">purloin boots</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2804"></child>
+        </children>
+    </item>
+    <item nodeId="node-2804">
+        <command xml:space="preserve">drop boots</command>
+        <result xml:space="preserve">You drop the pair of gravity boots and it spirals off to the ground below.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2805"></child>
+        </children>
+    </item>
+    <item nodeId="node-2805">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Platform 1
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2806"></child>
+        </children>
+    </item>
+    <item nodeId="node-2806">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2807"></child>
+        </children>
+    </item>
+    <item nodeId="node-2807">
+        <command xml:space="preserve">drop boots</command>
+        <result xml:space="preserve">It floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2886">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2887"></child>
+        </children>
+    </item>
+    <item nodeId="node-2887">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2888"></child>
+        </children>
+    </item>
+    <item nodeId="node-2888">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2889"></child>
+        </children>
+    </item>
+    <item nodeId="node-2889">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2890"></child>
+        </children>
+    </item>
+    <item nodeId="node-2890">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2891"></child>
+        </children>
+    </item>
+    <item nodeId="node-2891">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2892"></child>
+        </children>
+    </item>
+    <item nodeId="node-2892">
+        <command xml:space="preserve">get scanner</command>
+        <result xml:space="preserve">You already have that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2893"></child>
+        </children>
+    </item>
+    <item nodeId="node-2893">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">You drop the scanner and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2894"></child>
+        </children>
+    </item>
+    <item nodeId="node-2894">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the scanner behind.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2768">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2769"></child>
+        </children>
+    </item>
+    <item nodeId="node-2769">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2770"></child>
+        </children>
+    </item>
+    <item nodeId="node-2770">
+        <command xml:space="preserve">remove jumpsuit</command>
+        <result xml:space="preserve">Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2771"></child>
+        </children>
+    </item>
+    <item nodeId="node-2771">
+        <command xml:space="preserve">drop all</command>
+        <result xml:space="preserve">scanner: It floats nearby.
+green jumpsuit: It floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2772"></child>
+        </children>
+    </item>
+    <item nodeId="node-2772">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a green jumpsuit and a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2773"></child>
+        </children>
+    </item>
+    <item nodeId="node-2773">
+        <command xml:space="preserve">x jumpsuit</command>
+        <result xml:space="preserve">You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population.
+
+It features a single large pocket, currently empty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2774"></child>
+        </children>
+    </item>
+    <item nodeId="node-2774">
+        <command xml:space="preserve">put scanner in pocket</command>
+        <result xml:space="preserve">(first taking the scanner)
+You put the scanner into the pocket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2775"></child>
+        </children>
+    </item>
+    <item nodeId="node-2775">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a green jumpsuit floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2776"></child>
+        </children>
+    </item>
+    <item nodeId="node-2776">
+        <command xml:space="preserve">x jumpsuit</command>
+        <result xml:space="preserve">You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population.
+
+The pocket contains a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2777"></child>
+        </children>
+    </item>
+    <item nodeId="node-2777">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2778"></child>
+        </children>
+    </item>
+    <item nodeId="node-2778">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a green jumpsuit floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2779"></child>
+        </children>
+    </item>
+    <item nodeId="node-2779">
+        <command xml:space="preserve">analyze</command>
+        <result xml:space="preserve">(the green jumpsuit)
+examining the green jumpsuit:
+You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population.
+
+The pocket contains a scanner.
+
+looking under the green jumpsuit:
+You find nothing of interest.
+
+searching the green jumpsuit:
+You find nothing of interest.
+
+listening to the green jumpsuit:
+You hear nothing unexpected.
+
+smelling the green jumpsuit:
+You smell nothing unexpected.
+
+attacking the green jumpsuit:
+The Founder said that violence is never the answer.
+
+buying the green jumpsuit:
+Nothing is on sale.
+
+climbing the green jumpsuit:
+Little is to be achieved by that.
+
+pulling the green jumpsuit:
+Nothing obvious happens.
+
+pushing the green jumpsuit:
+Nothing obvious happens.
+
+turning the green jumpsuit:
+Nothing obvious happens.
+
+pushing the green jumpsuit to outside:
+The green jumpsuit cannot be pushed from place to place.
+
+opening the green jumpsuit:
+It isn't something you can open.
+
+entering the green jumpsuit:
+That's not something you can enter.
+
+getting off the green jumpsuit:
+But you aren't on the green jumpsuit at the moment.
+
+closing the green jumpsuit:
+It isn't something you can close.
+
+taking the green jumpsuit:
+Taken.
+
+switching on the green jumpsuit:
+It isn't something you can switch.
+
+switching off the green jumpsuit:
+It isn't something you can switch.
+
+wearing the green jumpsuit:
+You put on the green jumpsuit.
+
+taking off the green jumpsuit:
+Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+(no other people in the location; can't test throwing at.)
+
+
+(no other people in the location; can't test showing to.)
+
+
+(no other people in the location; can't test giving to.)
+
+
+touching the green jumpsuit:
+You feel nothing unexpected.
+
+rubbing the green jumpsuit:
+You rub the green jumpsuit.
+
+waving the green jumpsuit:
+You wave the green jumpsuit.
+
+squeezing the green jumpsuit:
+You achieve nothing by this.
+
+burning the green jumpsuit:
+There is no open flame on the station.
+
+cutting the green jumpsuit:
+The Founder said that violence is never the answer.
+
+tying the green jumpsuit to yourself:
+You would achieve nothing by this.
+
+swinging the green jumpsuit:
+There's nothing sensible to swing here.
+
+tasting the green jumpsuit:
+You taste nothing unexpected.
+
+drinking the green jumpsuit:
+There's nothing suitable to drink here.
+
+eating the green jumpsuit:
+That's plainly inedible.
+
+dropping the green jumpsuit:
+It floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2780"></child>
+        </children>
+    </item>
+    <item nodeId="node-2780">
+        <command xml:space="preserve">get jumpsuit</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2781"></child>
+        </children>
+    </item>
+    <item nodeId="node-2781">
+        <command xml:space="preserve">wear jumpsuit</command>
+        <result xml:space="preserve">You put on the green jumpsuit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2782"></child>
+        </children>
+    </item>
+    <item nodeId="node-2782">
+        <command xml:space="preserve">analyze</command>
+        <result xml:space="preserve">(the green jumpsuit)
+examining the green jumpsuit:
+You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population.
+
+The pocket contains a scanner.
+
+looking under the green jumpsuit:
+You find nothing of interest.
+
+searching the green jumpsuit:
+You find nothing of interest.
+
+listening to the green jumpsuit:
+You hear nothing unexpected.
+
+smelling the green jumpsuit:
+You smell nothing unexpected.
+
+attacking the green jumpsuit:
+The Founder said that violence is never the answer.
+
+buying the green jumpsuit:
+Nothing is on sale.
+
+climbing the green jumpsuit:
+Little is to be achieved by that.
+
+pulling the green jumpsuit:
+Nothing obvious happens.
+
+pushing the green jumpsuit:
+Nothing obvious happens.
+
+turning the green jumpsuit:
+Nothing obvious happens.
+
+pushing the green jumpsuit to outside:
+The green jumpsuit cannot be pushed from place to place.
+
+opening the green jumpsuit:
+It isn't something you can open.
+
+entering the green jumpsuit:
+That's not something you can enter.
+
+getting off the green jumpsuit:
+But you aren't on the green jumpsuit at the moment.
+
+closing the green jumpsuit:
+It isn't something you can close.
+
+taking the green jumpsuit:
+You already have that.
+
+switching on the green jumpsuit:
+It isn't something you can switch.
+
+switching off the green jumpsuit:
+It isn't something you can switch.
+
+wearing the green jumpsuit:
+You're already wearing that!
+
+taking off the green jumpsuit:
+Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+(no other people in the location; can't test throwing at.)
+
+
+(no other people in the location; can't test showing to.)
+
+
+(no other people in the location; can't test giving to.)
+
+
+touching the green jumpsuit:
+You feel nothing unexpected.
+
+rubbing the green jumpsuit:
+You rub the green jumpsuit.
+
+waving the green jumpsuit:
+You wave the green jumpsuit.
+
+squeezing the green jumpsuit:
+You achieve nothing by this.
+
+burning the green jumpsuit:
+There is no open flame on the station.
+
+cutting the green jumpsuit:
+The Founder said that violence is never the answer.
+
+tying the green jumpsuit to yourself:
+You would achieve nothing by this.
+
+swinging the green jumpsuit:
+There's nothing sensible to swing here.
+
+tasting the green jumpsuit:
+You taste nothing unexpected.
+
+drinking the green jumpsuit:
+There's nothing suitable to drink here.
+
+eating the green jumpsuit:
+That's plainly inedible.
+
+dropping the green jumpsuit:
+It floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2783"></child>
+        </children>
+    </item>
+    <item nodeId="node-2783">
+        <command xml:space="preserve">nounless</command>
+        <result xml:space="preserve">taking inventory:
+You are carrying nothing.
+
+jumping:
+You jump on the spot.
+
+thinking:
+What a good idea.
+
+waiting:
+Time passes.
+
+sleeping:
+You aren't feeling especially drowsy.
+
+waking up:
+The dreadful truth is, this is not a dream.
+
+waving hands:
+You wave.
+
+saying yes:
+That was a rhetorical question.
+
+saying no:
+That was a rhetorical question.
+
+nounless listening:
+You hear only the familiar hum of the station.
+
+nounless smelling:
+Only familiar odors.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2784"></child>
+        </children>
+    </item>
+    <item nodeId="node-2784">
+        <command xml:space="preserve">push</command>
+        <result xml:space="preserve">(the green jumpsuit)
+Nothing obvious happens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2785"></child>
+        </children>
+    </item>
+    <item nodeId="node-2785">
+        <command xml:space="preserve">swim</command>
+        <result xml:space="preserve">There's nothing to swim in.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -9472,6 +13749,82 @@ The only exit is outside to sector 3.
         <result xml:space="preserve">&gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2399">
+        <command xml:space="preserve">gonear breaker</command>
+        <result xml:space="preserve">Which do you mean, the green circuit breaker or the red circuit breaker?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2400"></child>
+        </children>
+    </item>
+    <item nodeId="node-2400">
+        <command xml:space="preserve">red</command>
+        <result xml:space="preserve">Platform 3
+It's a mesh platform about two thirds of the way towards the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2401"></child>
+        </children>
+    </item>
+    <item nodeId="node-2401">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You slide down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2402"></child>
+        </children>
+    </item>
+    <item nodeId="node-2402">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">The red pylon is designated for climbing, but you can't get a grip.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2403"></child>
+        </children>
+    </item>
+    <item nodeId="node-2403">
+        <command xml:space="preserve">x ground</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2404"></child>
+        </children>
+    </item>
+    <item nodeId="node-2404">
+        <command xml:space="preserve">x hubg</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2405"></child>
+        </children>
+    </item>
+    <item nodeId="node-2405">
+        <command xml:space="preserve">x hub</command>
+        <result xml:space="preserve">The station rotates around the hub, which extends out to hold solar panels on the port and mirrors on the starboard side. On the inside, there is a maintenance platform about two thirds of the way up the pylons.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2406"></child>
+        </children>
+    </item>
+    <item nodeId="node-2406">
+        <command xml:space="preserve">x pylon</command>
+        <result xml:space="preserve">Made of smooth metal, anodized red, it connects the ground to the hub of the station many meters above.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-2000">
         <command xml:space="preserve">gonear audio</command>
         <result xml:space="preserve">Church
@@ -10129,7 +14482,8 @@ Object Response Tests version 7 by Juhana Leinonen
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1721"></child>
+        <children><child nodeId="node-2738"></child>
+            <child nodeId="node-1721"></child>
         </children>
     </item>
     <item nodeId="node-1721">
@@ -10270,6 +14624,124 @@ There is an open hatch in the ceiling.
     <item nodeId="node-1733">
         <command xml:space="preserve">scan</command>
         <result xml:space="preserve">That makes no sense without a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2738">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. You can go out towards the crops.
+
+There is a secured hatch in the floor.
+
+You can also see a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2739"></child>
+        </children>
+    </item>
+    <item nodeId="node-2739">
+        <command xml:space="preserve">get scanner</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2740"></child>
+        </children>
+    </item>
+    <item nodeId="node-2740">
+        <command xml:space="preserve">gonear adder</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2741"></child>
+        </children>
+    </item>
+    <item nodeId="node-2741">
+        <command xml:space="preserve">gonear ladder</command>
+        <result xml:space="preserve">Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2742"></child>
+        </children>
+    </item>
+    <item nodeId="node-2742">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2743"></child>
+        </children>
+    </item>
+    <item nodeId="node-2743">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2744"></child>
+        </children>
+    </item>
+    <item nodeId="node-2744">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2745"></child>
+        </children>
+    </item>
+    <item nodeId="node-2745">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2746"></child>
+        </children>
+    </item>
+    <item nodeId="node-2746">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2747"></child>
+        </children>
+    </item>
+    <item nodeId="node-2747">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2748"></child>
+        </children>
+    </item>
+    <item nodeId="node-2748">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Inside the Hub
+You are weightless, so instead of up and down, you think of the ladder as leading "out."
+
+You can see a scanner floating here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -11555,6 +16027,37 @@ You must name something more substantial.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2482">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2483"></child>
+        </children>
+    </item>
+    <item nodeId="node-2483">
+        <command xml:space="preserve">look down</command>
+        <result xml:space="preserve">[examining down]
+You see nothing unexpected in that direction.
+
+[examining down - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2484"></child>
+        </children>
+    </item>
+    <item nodeId="node-2484">
+        <command xml:space="preserve">look up</command>
+        <result xml:space="preserve">[examining up]
+You see nothing unexpected in that direction.
+
+[examining up - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1830">
         <command xml:space="preserve">act</command>
         <result xml:space="preserve">That's not a verb I recognize.
@@ -12280,18 +16783,18 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
         <command xml:space="preserve">up</command>
         <result xml:space="preserve">It isn't easy, but with the boots, you make a long climb towards the hub.
 
-Center Platform
+Center Platform 2
 It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
 
-You can just reach a red circuit breaker on the hub.
+There is a red circuit breaker here.
 
 &gt;</result>
-        <commentary xml:space="preserve">It isn't easy, but with the boots, you are able to climb towards the hub.
+        <commentary xml:space="preserve">It isn't easy, but with the boots, you make a long climb towards the hub.
 
-Center Platform
+Center Platform 2
 It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
 
-You can just reach a red circuit breaker on the hub.
+There is a red circuit breaker here.
 
 &gt;</commentary>
         <children><child nodeId="node-1887"></child>
@@ -12729,7 +17232,7 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
         <command xml:space="preserve">go church</command>
         <result xml:space="preserve">
 Church
-Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and a portable audio unit stand against the other.
 
 On the altar is The Founder's Testament.
 
@@ -12738,7 +17241,7 @@ A gray cable connects the organ to the audio unit.
 &gt;</result>
         <commentary xml:space="preserve">
 Church
-Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other.
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and a portable audio unit stand against the other.
 
 On the altar is The Founder's Testament.
 

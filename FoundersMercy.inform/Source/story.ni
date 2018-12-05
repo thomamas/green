@@ -90,6 +90,10 @@ To find and take (s - an object):
 
 To decide what number is the total minutes of (t - a time): decide on the minutes part of t plus 60 times the hours part of t.
 
+To decide what object is a random object in (L - a list of objects):
+	let r be a random number between 1 and the number of entries in L;
+	decide on entry r of L.
+
 Chapter 5 - Extensions
 
 Section 1 - Text
@@ -231,7 +235,7 @@ The pocket is part of the jumpsuit. It is a container.
 
 Before an actor taking: [* the pocket can't work as a player's holdall, which be directly carried, so let's try this instead ]
 	if the number of things carried by the actor is at least the carrying capacity of the actor:
-		if the actor is wearing the green jumpsuit:
+		if the actor is wearing the green jumpsuit or the actor is holding the green jumpsuit:
 			let the transferred item be nothing;
 			repeat with the possible item running through things carried by the actor:
 				if the possible item is not lit and the possible item is not the jumpsuit, let the transferred item be the possible item;
@@ -533,7 +537,7 @@ To say green breaker help:
 	say "The Sector 2 circuit breaker is in an awkward spot.";
 
 To say red breaker help:
-	if Center Platform is visited:
+	if Platform 3 is visited:
 		say "Just turn the red breaker on.";
 	else if the gravity boots are scored:
 		say "Figure out where to go to the hub.";
@@ -592,18 +596,30 @@ Section 1 - Regions
 Underneath is a region.
 
 The Sectors is a region.
+The Even Sectors is a region in The Sectors.
 
 Before going spinward in the The Sectors, say "You walk a little ways to the next sector."
 
 Before going antispinward in the The Sectors, say "You walk a little ways to the next sector."
 
+The Platforms is a region.
+
+Instead of jumping in The Platforms, say "Pseudogravity is definitely weaker up here."
+
+After dropping something (called s) in The Platforms:
+	say "You drop [the s] and it spirals off to the ground below.";
+	let r be a random room in the The Sectors;
+	now s is in r.
+
 Section 2 - Backdrops in The Sectors
 
-The hub is a backdrop in The Sectors and in Center Platform. It has description "The station rotates around the hub, which extends out to hold solar panels on the port and mirrors on the starboard side.[if the player is not in the center platform] On the inside, there is a mesh maintenance platform."
+[todo]
 
-Instead of doing anything other than examining or scanning to the hub when the player is not in the center platform, say "You are too far away to do that."
+The hub is a backdrop in The Sectors and in The Platforms. It has description "[if the player is in The Platforms]The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.[otherwise]The station rotates around the hub, which extends out to hold solar panels to the port and mirrors on the starboard side. On the inside, there is a maintenance platform about two thirds of the way up the pylons."
 
-The solar panels are a backdrop in The Sectors and in Center Platform. They have description "The primary source of station power." Understand "panel" as solar panels.
+Instead of doing anything other than examining or scanning to the hub, say "You are too far away to do that." [todo]
+
+The solar panels are a backdrop in The Sectors and in The Platforms. They have description "The primary source of station power." Understand "panel" as solar panels. [todo]
 
 Instead of doing anything other than examining or scanning to the solar panels, say "You are too far away to do that."
 
@@ -615,19 +631,38 @@ Instead of the scanner opening the solar panels:
 	computerize "Machine is unitary.";
 	rule succeeds.
 
-The mirrors are a backdrop in The Sectors and in Center Platform. They have description "The mirrors reflect sunlight into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
+The mirrors are a backdrop in The Sectors and in The Platforms. They have description "The mirrors reflect sunlight into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
 
-Instead of doing anything other than examining or scanning to the mirrors when the player is not in the center platform, say "You are too far away to do that."
+Instead of doing anything other than examining or scanning to the mirrors, say "You are too far away to do that."
 
-The maintenance platform is a backdrop in The Sectors. It has description "Since the main power and sensor feeds pass through the hub, there is a platform where you can perform various maintenance tasks."
+The maintenance platform is a backdrop in The Sectors. It has description "A circular platform connects the pylons about two thirds of the way up."
 
 Instead of doing anything other than examining or entering or scanning to the maintenance platform, say "You are too far away to do that."
 
 Instead of entering the maintenance platform, say "You will need to climb a pylon to get there."
 
+The TMP is a backdrop in The Platforms. It has description "You are on a circular platform suspended  about two thirds of the way up the pylon to the hub." Understand "maintenance" and "platform" as TMP. TMP is privately-named. It has printed name "maintenance platform".
+
+The TP is a backdrop in The Platforms. It has description "The pylon stretches up from  the ground, to the maintenance platform, and finally the hub." Understand "pylon" as TP. TP is privately-named. It has printed name "pylon".
+
+Before entering TP, try going down instead.
+
+The BDP are a backdrop in The Even Sectors. They are privately-named and plural-named. They have description "Spinward and antispinward from here, you can see pylons connecting the ground to the hub." They have printed name "pylons". Understand "pylons" as BDP.
+
+Instead of doing anything other than examining to BDP, say "You will need to go to the next sector to do that."
+
+The ground is a backdrop in The Platforms. "You see the ground below you." [override in each platform]
+
+Instead of doing anything other than examining to the ground, say "You are too far away to do that."
+
+Before examining down in the platforms, try examining the ground instead.
+Before examining up in the platforms, try examining the hub instead.
+Before examining up in the sectors, try examining the hub instead.
+Before entering the ground in the platforms, try going down instead.
+
 Section 3 - Pylons
 
-A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "pylon". Understand "pylon" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station many meters above."
+A pylon is a kind of thing. It is usually scenery. It is usually privately-named. It usually has printed name "pylon". Understand "pylon" and "pylons" as pylon. A pylon usually has indefinite article "the". A pylon usually has description "Made of smooth metal, it connects the ground to the hub of the station many meters above. You can see similar pylons spinward and antispinward."
 
 Instead of climbing a pylon (called p), say "The pylon is slick metal with no obvious handholds."
 
@@ -829,9 +864,29 @@ Instead of the scanner scanning the communications unit:
 		computerize "Machine functional. No output available.";
 	rule succeeds.
 
+
+Section 4 - Platform 1
+
+Platform 1 is a room in The Platforms. Sector 1 is down from Platform 1. Nothing is up from Sector 1. 
+
+Platform 1 has description "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub." [todo pylon]
+
+After going down from Platform 1:
+	say "You slide down the pylon.";
+	now the player is in Sector 1.
+	
+Instead of examining the ground in platform 1, say "The pylon descends into a field of crops below you."
+
+Before entering the hub in platform 1, try going up instead.
+
+The ladder is a building. It is scenery. It is up from Platform 1. It has description "A ladder leads up into the hub." 
+ Through it is Inside the Hub.  Understand "ladder" as the ladder.
+
+[todo crops]
+
 Chapter 2 - Sector 2
 
-Sector 2 is spinward from Sector 1. It is in The Sectors. "A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward." It has printed name "Sector 2: Aquaculture". It has destination name "sector 2".
+Sector 2 is spinward from Sector 1.  It is in The Even Sectors. "A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward." It has printed name "Sector 2: Aquaculture". It has destination name "sector 2".
 
 The pond is scenery in sector 2. It has description "Something to do with water filtration, and there are still some fish." Understand "water" and "deep" and "pool" as the pond.
 
@@ -874,7 +929,7 @@ Before going up in Sector 3, try climbing S3P1 instead.
 Instead of climbing S3P1:	
 	 if the player is wearing the gravity boots:
 		say "It isn't easy, but with the boots, you make a long climb towards the hub.";
-		now the player is in center platform;
+		now the player is in Platform 3;
 	otherwise:
 		say "The red pylon is designated for climbing, but you can't get a grip."
 
@@ -996,36 +1051,33 @@ Instead of going nowhere in house when the noun is port, try going outside.
 
 A doll is in house. "Someone has left a doll on the well swept floor." It has description "Wearing a brown jumpsuit and faceless, because we are all alike in the Founder's eyes." Understand "faceless" and "brown" and "jumpsuit" as the doll. [todo: play with doll]
 
-Section 3 - Center Platform
+Section 3 - Platform 3
 
-Sector 3 is down from Center Platform. Nothing is up from Sector 3. Center Platform has description "It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down." It has destination name "the center platform".
+Sector 3 is down from Platform 3. Platform 3 is spinward from Platform 1. Nothing is up from Sector 3. Platform 3 has description "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward[if the player is in platform 3 for the first time].[paragraph break]You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down[end if]."
 
-Before going down from Center Platform:
-	change the up exit of Sector 3 to Center Platform;
+Platform 3 is in the Platforms.
+
+Before going down from Platform 3:
+	change the up exit of Sector 3 to Platform 3;
 	say "You [if the player is wearing the gravity boots]climb[else]slide[end if] down the pylon.";
 
-Instead of jumping in Center Platform, say "Pseudogravity is definitely weaker up here."
-
-After dropping something (called s) in Center Platform:
-	say "You drop [the s] and it spirals off to the ground below.";
-	let r be a random room in the The Sectors;
-	now s is in r.
-
-A red circuit breaker is a circuit breaker in center platform. "You can just reach a red circuit breaker on the hub." The red circuit breaker is machinelike.
+A red circuit breaker is a circuit breaker in Platform 3. "There is a red circuit breaker here." The red circuit breaker is machinelike. [todo]
 
 Instead of the scanner scanning the red circuit breaker:
 	computerize "Machine is functional. Breaker is [if the red circuit breaker is switched on]closed[otherwise]open[end if].";
 	rule succeeds.
 
-Instead of touching the red circuit breaker, say "It is at arm's reach but accessible."
-
 After switching on the red circuit breaker:
-	say "You reach up and switch the circuit breaker on.";
+	say "You reach out and switch the circuit breaker on.";
 	increase the score by 1.
+
+Instead of examining the ground in platform 3, say "The pylon descends into a forest below you."
+
+[todo - forest]
 
 Chapter 4 - Sector 4
 
-Sector 4 is spinward from Sector 3. It is in The Sectors. "Your home is here among the crops. You can walk spinward or antispinward." It has printed name "Sector 4: Crops". It has destination name "sector 4".
+Sector 4 is spinward from Sector 3. It is in The Even Sectors. "Your home is here among the crops. You can walk spinward or antispinward." It has printed name "Sector 4: Crops". It has destination name "sector 4".
 
 The S4B1 is a building. It is inside of Sector 4. It is scenery. It has description "You were told it was built to look like a log cabin on Old Earth." It has printed name "home". Through it is Home. Understand "home" or "house" as S4B1.
 
@@ -1140,9 +1192,23 @@ Instead of attacking the eraser:
 		now eraser is attacked;
 		say "You fill the area with a cloud of dust, which quickly clears."		
 
+Section 4 - Platform 5
+
+Platform 5 is a room in The Platforms. Sector 5 is down from Platform 5. Nothing is up from Sector 5. Platform 5 is spinward from Platform 3 and antispinward from Platform 1.
+
+Platform 5 has description "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward."
+
+After going down from Platform 5:
+	say "You slide down the pylon.";
+	now the player is in Sector 5.
+
+Instead of examining the ground in platform 5, say "The pylon descends into a forest below you."
+
+[todo forest]
+
 Chapter 6 - Sector 6
 
-Sector 6 is spinward from Sector 5 and antispinward from Sector 1. It is in The Sectors. "Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward." It has printed name "Sector 6: Hydroponics". It has destination name "sector 6".
+Sector 6 is spinward from Sector 5 and antispinward from Sector 1. It is in The Even Sectors. "Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward." It has printed name "Sector 6: Hydroponics". It has destination name "sector 6".
 
 Some hydroponics machines are scenery in Sector 6. It is machinelike. It has description "You were thoroughly trained in hydroponics maintenance, but fixing these machines is beyond you." Understand "machine" and "machinery" as hydroponics machines.
 
@@ -1232,5 +1298,36 @@ After deciding the scope of the player when the location is the supply vault and
 At the time when the laser dust settles:
 	now the laser is not dusty;
 	if the player is in the Supply Vault, say "The cloud of dust finally dissipates.";
+
+Chapter 7 - Inside the Hub
+
+Inside the Hub has description "You float weightless in the middle of a cylinder. A ladder leads up or down or maybe out."
+
+Platform 1 is outside from Inside the Hub.
+
+Before printing the locale description:
+	if the location is Inside the Hub, now the you-can-also-see rule response (F) is " floating here";
+	otherwise now the you-can-also-see rule response (F) is " here";
+
+Before going down in Inside the Hub, try going outside instead.
+Before going up in Inside the Hub, try going outside instead.
+
+After going outside from Inside the Hub:
+	say "You struggle a little to make sure you are heading legs first and follow the ladder.";
+	continue the action.
+
+Before going outside from Inside the Hub: [* This is arbitrary, and it might be friendlier to autotake, but it's only insurance against making the game unwinnable. ]
+	let L be the list of things in Inside the Hub;
+	remove yourself from L;
+	if the number of entries in L is positive:
+		let item be a random object in L;
+		say "You feel that you shouldn't leave [the item] behind.";
+		stop the action.
+
+[ zero-g rules ]
+
+After dropping something in Inside the Hub, say "You drop [the noun] and [they] float[s] nearby." [todo]
+Instead of jumping in Inside the Hub, say "That's meaningless without gravity."
+Instead of swimming in Inside the Hub, say "You flail around in zero g."
 
 [ --- ]
