@@ -1,12 +1,10 @@
-Export canvases from OmniGraffle.
-  Map
-  Scanner
-  
-Export sheet from Numbers
-  Balance Sheet
+1. In OmniGraffle, from Feelies.graffle, export these canvases as PDF:
 
-Merge with Acrobat
+     Map
+     Scanner
+ 
+2. In Numbers, export Balance Sheet as a PDF:
 
-TODO:
-  Front page?
-  Look at file size
+3. Merge with Acrobat, rename/move to FoundersMercy.materials/Map.pdf
+
+TODO: Add a first or last page?

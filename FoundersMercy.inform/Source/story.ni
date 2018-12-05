@@ -83,7 +83,7 @@ To note (x - some text): say "[start note][x][stop note][line break]".
 
 Chapter 4 - Misc Phrases
 
-To find and take (s - an object):	
+To find and take (s - an object):
 	now s is in the holder of the player;
 	try silently taking s;
 	set pronouns from s.
@@ -132,24 +132,38 @@ The list attached things when listing receiver or inserter rule response (A) is 
 
 The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are] plugged into more than one thing.[paragraph break][start note]Try 'unplug [noun] from SOMETHING'.[stop note][line break]";
 
-[ D. Fix leaving whilst attached bug: the existing rule doesn't apply if the cable is in a container. Also substitute our preferred language. ]
+[
+	D. There is a bug in the existing leavings whilst attached to fixed things rule: it doesn't apply if thing is in a container. We fix this by  changing "if the holder of the connectee is not carried by the player" to "if the holder of the connectee is not carried by the player".
 
+	Another bug: the rule applies even if the travel is stopped, for example if the player goes in an invalid direction. We try to fix this by moving to an Instead rule instead of a Before rule. Note this is mostly only tested for the case where PS-leaving is PS-allowed.
+
+	Additionally, we substitute our preferred language, and adjust so that we don't end up with "The organ pulls out from the cable." instead of "The cable pulls out from the organ."
+
+	Finally, there is an outstanding issue with the world modeling here. If the player takes two heavy things connected by a cable, but not the cable, they will still pull out and leave the cable behind. Maybe we could fix this by forcing the player to take the cable when they take the other items?
+]
+	
 When play begins, now PS-leaving is PS-allowed.
 
-This is the new leaving room whilst attached to fixed things rule:
+The leaving room whilst attached to fixed things rule is not listed in the Before rulebook.
+
+Instead of an actor going to somewhere (this is the new leaving room whilst attached to fixed things rule):
 	repeat with item running through the attached things enclosed by the player:
 		repeat with loop-item running through the PS-connectors which are part of the item:
 			let the connectee be the attachment of the loop-item;
 			if the connectee is not nothing:
 				if the holder of the connectee is not enclosed by the player:
 					if PS-leaving is PS-denied:
-						say "It is impractical to leave with [the item] attached to [the holder of the connectee]." (A);
+						say "It is impractical to leave with [the item] attached to [the holder of the connectee].";
 						stop the action;
 					now the attachment of the loop-item is nothing;
 					now the attachment of the connectee is nothing;
-					say "[The item] [pull] out from [the holder of connectee]." (B).
+					if the loop-item is a PS-socket:
+						say "[The holder of the connectee] [pull] out of [the item].";
+					otherwise:
+						say "[The item] [pull] out of [the holder of connectee].";
+	continue the action.
 
-The new leaving room whilst attached to fixed things rule substitutes for the leaving room whilst attached to fixed things rule.
+[todo -- when taking a an item with a socket, if you already have another item with a socket, and the two are attached, take the cable[s] between them -- that is the holder of the connectees connecting them. ]
 
 [ E. Some action synonyms ]
 
@@ -672,6 +686,8 @@ Section 7 - Buildings
 
 A building is a kind of door. It is usually open. It is usually not openable. It is usually privately-named.
 
+Understand "[building]" as entering.
+
 Instead of searching a building, say "You would need to enter [the noun] to do that."
 
 Chapter 1 - Sector 1
@@ -872,7 +888,7 @@ A S3B2 is a building. It is scenery. It is starboard of Sector 3. It is privatel
 
 Section 1 - Church
 
-Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and an audio unit stand against the other." It has destination name "the church".
+Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ[if the portable audio unit is undescribed] and a portable audio unit stand[else] stands[end if] against the other." It has destination name "the church".
 
 An altar is a fixed in place scenery supporter in church. It has description "Really just a table."
 
@@ -906,7 +922,7 @@ Instead of taking the organ, say "It is too heavy to move."
 
 [ audio unit ]
 
-An audio unit is scenery in Church. It is a openable machine. The description is "The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device." It has carrying capacity 1. Understand "portable" as the audio unit. Incorporated by the audio unit is a usb socket called the beige socket.
+An audio unit is an undescribed openable machine in Church. It is not fixed in place. The description is "The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device." It has carrying capacity 1. Understand "portable" as the audio unit. Incorporated by the audio unit is a usb socket called the beige socket.
 
 There is a faulty power module in the audio unit.
 
@@ -926,13 +942,15 @@ Instead of the scanner scanning the audio unit:
 		computerize "Machine functional. No input or output available.";
 	rule succeeds.
 
-Instead of taking the audio unit, say "That is attached to the wall."
-
 Every turn when the audio unit is visible:
 	if the organ was not usable and the organ is usable:
 		say "The audio unit beeps and a synthesized voice says 'Organ ready.'";
 	if the organ was usable and the organ is not usable and the audio unit is functional and the audio unit is closed:
 		say "The audio unit beeps and a synthesized voice says 'No input.'";
+
+After taking the audio unit:
+	now the gray cable is handled;
+	continue the action.
 
 [ cable and connectivity ]
 
