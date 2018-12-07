@@ -35,11 +35,11 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 181128 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 181206 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type "about" for credits or "hint" for assistance.
 
 Home
-The room where you've slept your entire life. You can go out towards the crops.
+The room where you've slept your entire life. You can go out to your crops.
 
 There is a secured hatch in the floor.
 
@@ -64,6 +64,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-4453"></child>
             <child nodeId="node-4442"></child>
             <child nodeId="node-4377"></child>
+            <child nodeId="node-4896"></child>
             <child nodeId="node-4358"></child>
             <child nodeId="node-4341"></child>
             <child nodeId="node-4339"></child>
@@ -123,6 +124,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-3047"></child>
             <child nodeId="node-3044"></child>
             <child nodeId="node-3041"></child>
+            <child nodeId="node-5403"></child>
             <child nodeId="node-3035"></child>
             <child nodeId="node-3030"></child>
             <child nodeId="node-3028"></child>
@@ -1501,6 +1503,175 @@ indefinite article: none
 description: "The floor hatch is open."
 initial appearance: "There is an open hatch in the floor."
 other side: Cellar
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5403">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Home - room
+    floor hatch - floor hatch
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5404"></child>
+        </children>
+    </item>
+    <item nodeId="node-5404">
+        <command xml:space="preserve">showme home</command>
+        <result xml:space="preserve">(Home)
+Home - room
+    floor hatch - floor hatch
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+singular-named, proper-named; lighted, visited, familiar
+list grouping key: none
+printed name: "Home"
+printed plural name: none
+indefinite article: none
+description: "The room where you've slept your entire life. You can go out to your crops."
+destination name: "your home"
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5405"></child>
+        </children>
+    </item>
+    <item nodeId="node-5405">
+        <command xml:space="preserve">gonear ladder</command>
+        <result xml:space="preserve">Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5406"></child>
+        </children>
+    </item>
+    <item nodeId="node-5406">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Platform 1 - room
+    ground - backdrop
+    pylon - backdrop
+    maintenance platform - backdrop
+    mirrors - backdrop
+    solar panels - backdrop
+    hub - backdrop
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+    ladder - open door
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5407"></child>
+        </children>
+    </item>
+    <item nodeId="node-5407">
+        <command xml:space="preserve">showme platform i</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5408"></child>
+        </children>
+    </item>
+    <item nodeId="node-5408">
+        <command xml:space="preserve">showme platform 1</command>
+        <result xml:space="preserve">Platform 1 - room
+    ground - backdrop
+    pylon - backdrop
+    maintenance platform - backdrop
+    mirrors - backdrop
+    solar panels - backdrop
+    hub - backdrop
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+    ladder - open door
+singular-named, proper-named; lighted, visited, familiar
+list grouping key: none
+printed name: "Platform 1"
+printed plural name: none
+indefinite article: none
+description: "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub."
+map region: Platforms
+destination name: none
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5409"></child>
+        </children>
+    </item>
+    <item nodeId="node-5409">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5410"></child>
+        </children>
+    </item>
+    <item nodeId="node-5410">
+        <command xml:space="preserve">showme hub</command>
+        <result xml:space="preserve">(Inside the Hub)
+Inside the Hub - room
+    ladder - open door
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+    antenna panel - machine
+        RF socket (part of antenna panel) - RF socket
+    yellow cable - cable
+        RF plug (part of yellow cable) - RF plug
+        RF plug (part of yellow cable) - RF plug
+singular-named, proper-named; lighted, visited, unfamiliar
+list grouping key: none
+printed name: "Inside the Hub"
+printed plural name: none
+indefinite article: none
+description: "You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out."
+map region: Zero-G
+destination name: none
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5411"></child>
+        </children>
+    </item>
+    <item nodeId="node-5411">
+        <command xml:space="preserve">showme inside the hub</command>
+        <result xml:space="preserve">Inside the Hub - room
+    ladder - open door
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+    antenna panel - machine
+        RF socket (part of antenna panel) - RF socket
+    yellow cable - cable
+        RF plug (part of yellow cable) - RF plug
+        RF plug (part of yellow cable) - RF plug
+singular-named, proper-named; lighted, visited, unfamiliar
+list grouping key: none
+printed name: "Inside the Hub"
+printed plural name: none
+indefinite article: none
+description: "You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out."
+map region: Zero-G
+destination name: none
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -8992,7 +9163,7 @@ There is an open hatch in the ceiling.
     <item nodeId="node-3703">
         <command xml:space="preserve">look</command>
         <result xml:space="preserve">Home
-The room where you've slept your entire life. You can go out towards the crops.
+The room where you've slept your entire life. You can go out to your crops.
 
 There is a secured hatch in the floor.
 
@@ -9000,6 +9171,7 @@ There is a secured hatch in the floor.
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-3762"></child>
             <child nodeId="node-3750"></child>
+            <child nodeId="node-5426"></child>
             <child nodeId="node-3704"></child>
         </children>
     </item>
@@ -9481,6 +9653,42 @@ Unicode Character Names by Graham Nelson
 Exit Lister version 11 by Eric Eve
 Plugs and Sockets version 4/170924 by Sean Turner
 Object Response Tests version 7 by Juhana Leinonen
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5426">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">As virtuous as ever.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5427"></child>
+        </children>
+    </item>
+    <item nodeId="node-5427">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5428"></child>
+        </children>
+    </item>
+    <item nodeId="node-5428">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">A portable emergency communications unit. Normally, its sockets would be for audio and antenna connections in a pod, but you will need to find another way.
+
+The emergency communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5429"></child>
+        </children>
+    </item>
+    <item nodeId="node-5429">
+        <command xml:space="preserve">x sockets</command>
+        <result xml:space="preserve">You can't use multiple objects with that verb.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -11004,7 +11212,7 @@ You feel that you shouldn't leave the ladder behind in case it floats off.
         <result xml:space="preserve">Inside the Hub
 You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
 
-A yellow cable flaps from a small panel.
+A yellow cable waves from a small panel.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -11012,10 +11220,22 @@ A yellow cable flaps from a small panel.
             <child nodeId="node-3897"></child>
             <child nodeId="node-3892"></child>
             <child nodeId="node-3883"></child>
+            <child nodeId="node-4928"></child>
+            <child nodeId="node-4934"></child>
             <child nodeId="node-3881"></child>
             <child nodeId="node-3878"></child>
             <child nodeId="node-3873"></child>
+            <child nodeId="node-5419"></child>
         </children>
+    </item>
+    <item nodeId="node-5419">
+        <command xml:space="preserve">x panel</command>
+        <result xml:space="preserve">
+
+The antenna panel has a yellow cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3873">
         <command xml:space="preserve">unplug yellow</command>
@@ -11117,6 +11337,123 @@ You feel that you shouldn't leave the yellow cable behind in case it floats off.
 • the panel"item" = thing: panel
 "L" = list of things: {yellow cable}
 You feel that you shouldn't leave the yellow cable behind in case it floats off.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-4934">
+        <command xml:space="preserve">purloin scanner</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4935"></child>
+        </children>
+    </item>
+    <item nodeId="node-4935">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4936"></child>
+        </children>
+    </item>
+    <item nodeId="node-4936">
+        <command xml:space="preserve">scan comms</command>
+        <result xml:space="preserve">Machine functional. No Audio connection. No RF connection.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4937"></child>
+        </children>
+    </item>
+    <item nodeId="node-4937">
+        <command xml:space="preserve">plug yellow into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4938"></child>
+        </children>
+    </item>
+    <item nodeId="node-4938">
+        <command xml:space="preserve">scan comms</command>
+        <result xml:space="preserve">Machine functional. No Audio connection. RF connection.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4939"></child>
+        </children>
+    </item>
+    <item nodeId="node-4939">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The yellow cable pulls out of the emergency communications unit.
+
+You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4940"></child>
+        </children>
+    </item>
+    <item nodeId="node-4940">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  the emergency communications unit
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-4928">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4929"></child>
+        </children>
+    </item>
+    <item nodeId="node-4929">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">A portable emergency communications unit. Normally, its sockets would be for audio and antenna connections in a pod, but you will need to find another way.
+
+The emergency communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4930"></child>
+        </children>
+    </item>
+    <item nodeId="node-4930">
+        <command xml:space="preserve">plug yellow into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4931"></child>
+        </children>
+    </item>
+    <item nodeId="node-4931">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">A portable emergency communications unit. Normally, its sockets would be for audio and antenna connections in a pod, but you will need to find another way.
+
+The emergency communications unit has a yellow cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4932"></child>
+        </children>
+    </item>
+    <item nodeId="node-4932">
+        <command xml:space="preserve">scanner, scan comms</command>
+        <result xml:space="preserve">Machine functional. No Audio connection. No RF connection.
+.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -13507,11 +13844,12 @@ There is a red circuit breaker here.
     </item>
     <item nodeId="node-4108">
         <command xml:space="preserve">gonear panel</command>
-        <result xml:space="preserve">Which do you mean, the solar panels or the panel?
+        <result xml:space="preserve">Which do you mean, the solar panels or the antenna panel?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-4111"></child>
+        <children><child nodeId="node-5421"></child>
+            <child nodeId="node-4111"></child>
             <child nodeId="node-4109"></child>
         </children>
     </item>
@@ -13843,6 +14181,45 @@ You unplug the gray cable from the panel.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-5421">
+        <command xml:space="preserve">antenna</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5422"></child>
+        </children>
+    </item>
+    <item nodeId="node-5422">
+        <command xml:space="preserve">x panel</command>
+        <result xml:space="preserve">Panel.
+
+The antenna panel has a yellow cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5423"></child>
+        </children>
+    </item>
+    <item nodeId="node-5423">
+        <command xml:space="preserve">scan panel</command>
+        <result xml:space="preserve">Machine is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5424"></child>
+        </children>
+    </item>
+    <item nodeId="node-5424">
+        <command xml:space="preserve">scanner, open panel</command>
+        <result xml:space="preserve">Machine is unitary.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-4142">
         <command xml:space="preserve">gonear organ</command>
         <result xml:space="preserve">Church
@@ -14154,6 +14531,7 @@ A mesh platform about two thirds of the way towards the hub. You can continue sp
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-4321"></child>
             <child nodeId="node-4314"></child>
+            <child nodeId="node-5413"></child>
             <child nodeId="node-4309"></child>
             <child nodeId="node-4300"></child>
             <child nodeId="node-4295"></child>
@@ -15060,6 +15438,29 @@ You can see a green jumpsuit and a scanner floating here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4835"></child>
+        </children>
+    </item>
+    <item nodeId="node-4835">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel that you shouldn't leave the scanner behind in case it floats off.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4836"></child>
+        </children>
+    </item>
+    <item nodeId="node-4836">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+
+A yellow cable waves from a small panel.
+
+You can also see a scanner floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-4826">
         <command xml:space="preserve">u</command>
@@ -15703,6 +16104,56 @@ A yellow cable flaps from a small panel.
 • the yellow cable • "item" = thing: yellow cable
 "L" = list of things: {ladder, panel, yellow cable}
 You feel that you shouldn't leave the yellow cable behind in case it floats off.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5413">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">The exits are up, down to sector 1, spinward to platform 3, and antispinward to platform 5.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5414"></child>
+        </children>
+    </item>
+    <item nodeId="node-5414">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5415"></child>
+        </children>
+    </item>
+    <item nodeId="node-5415">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">The only exit is outside to platform 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5416"></child>
+        </children>
+    </item>
+    <item nodeId="node-5416">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You struggle a little to make sure you are heading legs first and follow the ladder.
+
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5417"></child>
+        </children>
+    </item>
+    <item nodeId="node-5417">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">The exits are up to inside the hub, down to sector 1, spinward to platform 3, and antispinward to platform 5.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -16650,6 +17101,303 @@ You must name something more substantial.
         <result xml:space="preserve">[climbing down]
 You must name something more substantial.
 [climbing down - failed the basic accessibility rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-4896">
+        <command xml:space="preserve">gonear comms</command>
+        <result xml:space="preserve">Pod Bay
+There are four berths for transit pods. Unfortunately, all are empty.
+
+A secured hatch leads starboard.
+
+Someone left an emergency communications unit on the floor.
+
+This is troubling. You counted. You were sure there would be one pod left. There are none.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4903"></child>
+            <child nodeId="node-4897"></child>
+        </children>
+    </item>
+    <item nodeId="node-4897">
+        <command xml:space="preserve">x coms</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4898"></child>
+        </children>
+    </item>
+    <item nodeId="node-4898">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">A portable emergency communications unit. Normally, its sockets would be for audio and antenna connections in a pod, but you will need to find another way.
+
+The emergency communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4899"></child>
+        </children>
+    </item>
+    <item nodeId="node-4899">
+        <command xml:space="preserve">x socket</command>
+        <result xml:space="preserve">Which do you mean, the almond socket or the RF socket?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4900"></child>
+        </children>
+    </item>
+    <item nodeId="node-4900">
+        <command xml:space="preserve">almond</command>
+        <result xml:space="preserve">It is a female standard connector of the emergency communications unit. It has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4901"></child>
+        </children>
+    </item>
+    <item nodeId="node-4901">
+        <command xml:space="preserve">x rf socket</command>
+        <result xml:space="preserve">It is a female standard connector of the emergency communications unit. It has nothing plugged into it.
+
+No pods left ... you consider despair.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-4903">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">A portable emergency communications unit. Normally, its sockets would be for audio and antenna connections in a pod, but you will need to find another way.
+
+The emergency communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4926"></child>
+            <child nodeId="node-4904"></child>
+        </children>
+    </item>
+    <item nodeId="node-4904">
+        <command xml:space="preserve">x socket</command>
+        <result xml:space="preserve">Which do you mean, the almond socket or the RF socket?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4905"></child>
+        </children>
+    </item>
+    <item nodeId="node-4905">
+        <command xml:space="preserve">RF</command>
+        <result xml:space="preserve">It is a female RF connector of the emergency communications unit. It has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4906"></child>
+        </children>
+    </item>
+    <item nodeId="node-4906">
+        <command xml:space="preserve">x usb</command>
+        <result xml:space="preserve">It is a female USB connector of the emergency communications unit. It has nothing plugged into it.
+
+No pods left ... you consider despair.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4907"></child>
+        </children>
+    </item>
+    <item nodeId="node-4907">
+        <command xml:space="preserve">x usb socket</command>
+        <result xml:space="preserve">It is a female USB connector of the emergency communications unit. It has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4908"></child>
+        </children>
+    </item>
+    <item nodeId="node-4908">
+        <command xml:space="preserve">get comms</command>
+        <result xml:space="preserve">Taken.
+
+So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4909"></child>
+        </children>
+    </item>
+    <item nodeId="node-4909">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4910"></child>
+        </children>
+    </item>
+    <item nodeId="node-4910">
+        <command xml:space="preserve">x cable</command>
+        <result xml:space="preserve">A yellow RF cable.
+
+It is plugged into a panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4911"></child>
+        </children>
+    </item>
+    <item nodeId="node-4911">
+        <command xml:space="preserve">plug cable into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4912"></child>
+        </children>
+    </item>
+    <item nodeId="node-4912">
+        <command xml:space="preserve">x cable</command>
+        <result xml:space="preserve">A yellow RF cable.
+
+It is plugged into a panel and the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4913"></child>
+        </children>
+    </item>
+    <item nodeId="node-4913">
+        <command xml:space="preserve">unplug cable from panel</command>
+        <result xml:space="preserve">The yellow cable is permanently attached to the panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4914"></child>
+        </children>
+    </item>
+    <item nodeId="node-4914">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">A portable emergency communications unit. Normally, its sockets would be for audio and antenna connections in a pod, but you will need to find another way.
+
+The emergency communications unit has a yellow cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4915"></child>
+        </children>
+    </item>
+    <item nodeId="node-4915">
+        <command xml:space="preserve">gonear gray</command>
+        <result xml:space="preserve">Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and a portable audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ to the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4916"></child>
+        </children>
+    </item>
+    <item nodeId="node-4916">
+        <command xml:space="preserve">get gray</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4917"></child>
+        </children>
+    </item>
+    <item nodeId="node-4917">
+        <command xml:space="preserve">unplug gray from organ</command>
+        <result xml:space="preserve">You unplug the gray cable from the organ.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4918"></child>
+        </children>
+    </item>
+    <item nodeId="node-4918">
+        <command xml:space="preserve">get audio</command>
+        <result xml:space="preserve">(putting the scanner into your pocket to make room)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4919"></child>
+        </children>
+    </item>
+    <item nodeId="node-4919">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4920"></child>
+        </children>
+    </item>
+    <item nodeId="node-4920">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4921"></child>
+        </children>
+    </item>
+    <item nodeId="node-4921">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  an audio unit
+  a gray cable (plugged into an audio unit)
+  the emergency communications unit
+  a green jumpsuit (being worn)
+
+Your jumpsuit pocket contains:
+  a scanner
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4922"></child>
+        </children>
+    </item>
+    <item nodeId="node-4922">
+        <command xml:space="preserve">plug gray into comms</command>
+        <result xml:space="preserve">You plug the gray cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4923"></child>
+        </children>
+    </item>
+    <item nodeId="node-4923">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">A portable emergency communications unit. Normally, its sockets would be for audio and antenna connections in a pod, but you will need to find another way.
+
+The emergency communications unit has a gray cable and a yellow cable plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-4926">
+        <command xml:space="preserve">scan comms</command>
+        <result xml:space="preserve">Machine functional. No Audio connection.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -20337,14 +21085,14 @@ There is an open hatch in the ceiling.
         <command xml:space="preserve">u</command>
         <result xml:space="preserve">
 Home
-The room where you've slept your entire life. You can go out towards the crops.
+The room where you've slept your entire life. You can go out to your crops.
 
 There is an open hatch in the floor.
 
 &gt;</result>
         <commentary xml:space="preserve">
 Home
-The room where you've slept your entire life. You can go out towards the crops.
+The room where you've slept your entire life. You can go out to your crops.
 
 There is an open hatch in the floor.
 
@@ -20676,18 +21424,22 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
     </item>
     <item nodeId="node-4721">
         <command xml:space="preserve">up</command>
-        <result xml:space="preserve">It isn't easy, but with the boots, you make a long climb towards the hub.
+        <result xml:space="preserve">With the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.
 
-Center Platform 2
-It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
 
 There is a red circuit breaker here.
 
 &gt;</result>
-        <commentary xml:space="preserve">It isn't easy, but with the boots, you make a long climb towards the hub.
+        <commentary xml:space="preserve">With the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.
 
-Center Platform 2
-It's a mesh platform a little below the hub. You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
 
 There is a red circuit breaker here.
 
@@ -20697,12 +21449,12 @@ There is a red circuit breaker here.
     </item>
     <item nodeId="node-4722">
         <command xml:space="preserve">turn breaker on</command>
-        <result xml:space="preserve">You reach up and switch the circuit breaker on.
+        <result xml:space="preserve">You reach out and switch the circuit breaker on.
 
 [Your score has just gone up by one point.]
 
 &gt;</result>
-        <commentary xml:space="preserve">You reach up and switch the circuit breaker on.
+        <commentary xml:space="preserve">You reach out and switch the circuit breaker on.
 
 [Your score has just gone up by one point.]
 
@@ -21211,6 +21963,106 @@ Taken.
         <command xml:space="preserve">close audio</command>
         <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
 
+The audio unit beeps and a synthesized voice says "No antenna connection."
+
+&gt;</result>
+        <commentary xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+
+The audio unit beeps and a synthesized voice says "No antenna connection."
+
+&gt;</commentary>
+        <children><child nodeId="node-5337"></child>
+        </children>
+    </item>
+    <item nodeId="node-5337">
+        <command xml:space="preserve">get cable and audio</command>
+        <result xml:space="preserve">gray cable: Taken.
+audio unit: (putting the emergency communications unit into your pocket to make room)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve">gray cable: Taken.
+audio unit: (putting the emergency communications unit into your pocket to make room)
+Taken.
+
+&gt;</commentary>
+        <children><child nodeId="node-5008"></child>
+        </children>
+    </item>
+    <item nodeId="node-5008">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</commentary>
+        <children><child nodeId="node-5010"></child>
+        </children>
+    </item>
+    <item nodeId="node-5010">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">With the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.
+
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve">With the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.
+
+Platform 3
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+&gt;</commentary>
+        <children><child nodeId="node-5011"></child>
+        </children>
+    </item>
+    <item nodeId="node-5011">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</commentary>
+        <children><child nodeId="node-5012"></child>
+        </children>
+    </item>
+    <item nodeId="node-5012">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+
+A yellow cable waves from a small panel.
+
+&gt;</commentary>
+        <children><child nodeId="node-5013"></child>
+        </children>
+    </item>
+    <item nodeId="node-5013">
+        <command xml:space="preserve">plug yellow into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
 The audio unit beeps and a synthesized voice says "Comms ready."
 
 After a moment, it says "Launching automatic routines."
@@ -21218,7 +22070,7 @@ After a moment, it says "Launching automatic routines."
 [Your score has just gone up by two points.]
 
 &gt;</result>
-        <commentary xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+        <commentary xml:space="preserve">You plug the yellow cable into the emergency communications unit.
 
 The audio unit beeps and a synthesized voice says "Comms ready."
 
@@ -21227,10 +22079,10 @@ After a moment, it says "Launching automatic routines."
 [Your score has just gone up by two points.]
 
 &gt;</commentary>
-        <children><child nodeId="node-4755"></child>
+        <children><child nodeId="node-5014"></child>
         </children>
     </item>
-    <item nodeId="node-4755">
+    <item nodeId="node-5014">
         <command xml:space="preserve">z</command>
         <result xml:space="preserve">Time passes.
 
@@ -21246,7 +22098,7 @@ You hear a human speaking from the audio unit: "RWSS Founder's Mercy, this is OV
     *** You are not alone. ***
 
 
-In that game you scored 10 out of a possible 10, in 58 turns.
+In that game you scored 10 out of a possible 10, in 64 turns.
 
 
 Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
@@ -21265,7 +22117,7 @@ You hear a human speaking from the audio unit: "RWSS Founder's Mercy, this is OV
     *** You are not alone. ***
 
 
-In that game you scored 10 out of a possible 10, in 58 turns.
+In that game you scored 10 out of a possible 10, in 65 turns.
 
 
 Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?

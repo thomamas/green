@@ -43,6 +43,7 @@ get communications unit
 starboard
 scanner, open pump
 get functional power module
+close wall hatch
 u
 sw
 sw
@@ -53,4 +54,10 @@ scanner, open audio
 get power module from audio
 put functional power into audio
 close audio
+get cable and audio
+out
+u
+asw
+u
+plug yellow into comms
 z

@@ -44,7 +44,7 @@ After printing the banner text rule:
 Carry out requesting the credits:
 	say	"[bold type]About Founder's Mercy[roman type][line break]"
 		,
-		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018.[paragraph break]"
+		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018.[paragraph break]" [todo]
 		,
 		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]"
 		,
@@ -105,6 +105,7 @@ Include Glulx Text Effects by Emily Short. [ for the note style ]
 Section 2 - Exit Lister
 
 Include version 1 of Simple Exit Lister by Thomas Insel.
+A room is usually familiar. [* since the player has already visited most of the station ]
 
 Section 3 - Plugs and Sockets
 
@@ -177,11 +178,13 @@ Understand "connect [something] to [something]" as plugging it into.
 
 [ F. Establish a few kinds for future use ]
 
-A USB plug is a kind of PS-plug. 
-A USB socket is a kind of PS-socket.
+A USB plug is a kind of PS-plug. It has PS-type "USB".
+A USB socket is a kind of PS-socket. It has PS-type "USB".
 
-An RF plug is a kind of PS-plug.
-An RF socket is a kind of PS-socket.
+An RF plug is a kind of PS-plug. It has PS-type "RF".
+An RF socket is a kind of PS-socket. It has PS-type "RF".
+
+A cable is a kind of thing.
 
 Section 4 - Machines
 
@@ -641,7 +644,7 @@ Before going from a room in zero-g:
 	remove the list of things that are floating-exceptioned from L;
 	if the number of entries in L is positive:
 		let item be a random object in L;
-		say "You feel that you shouldn't leave [the item] behind in case it float[s] off.";
+		say "You feel that you shouldn't abondon [the item] floating in zero gravity.";
 		stop the action.
 
 Section 3 - Backdrops in The Sectors
@@ -650,7 +653,7 @@ The hub is a backdrop in The Sectors and in The Platforms. It has description "[
 
 Instead of doing anything other than examining or scanning to the hub, say "You are too far away to do that." [todo]
 
-The solar panels are a backdrop in The Sectors and in The Platforms. They have description "The primary source of station power." Understand "panel" as solar panels. [todo]
+The solar panels are a backdrop in The Sectors and in The Platforms. They have description "The primary source of station power." Understand "panel" as solar panels.
 
 Instead of doing anything other than examining or scanning to the solar panels, say "You are too far away to do that."
 
@@ -906,18 +909,26 @@ Instead of opening or closing the berths, say "The doors open and close automati
 Instead of unlocking the berths with something, try opening the berths.
 Instead of locking the berths with something, try closing the berths.
 
-An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit with a single socket to connect it to a transit pod or other audio source." It has indefinite article "the". Understand "comms" as communications unit. Incorporated by the communications unit is a usb socket called the almond socket.
+An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit. Normally, it would connect to audio and antenna cables in a pod, but you will need to find another way." It has indefinite article "the". Understand "comms" as communications unit. Incorporated by the communications unit is a usb socket called the almond socket. Incorporated by the communications unit is an rf socket.
+
+To say comms-usb-status:
+	if audio and communications are connected:
+		say "Audio connected";
+	else if organ and communications are connected:
+		say "Audio mismatch";
+	else:
+		say "No audio connection";
+
+To say comms-rf-status:
+	if communications unit and antenna panel are connected:
+		say "RF connection";
+	otherwise:
+		say "No RF connection"
 
 Instead of the scanner scanning the communications unit:
 	now the communications unit is scanned;
-	if audio and communications are connected:
-		computerize "Machine functional. Input and output connected.";
-	else if organ and communications are connected:
-		computerize "Machine functional. Connection mismatch.";
-	else:
-		computerize "Machine functional. No output available.";
+	computerize "Machine functional. [comms-usb-status]. [comms-rf-status].";
 	rule succeeds.
-
 
 Section 4 - Platform 1
 
@@ -1067,6 +1078,8 @@ Every turn when the audio unit is visible:
 		say "The audio unit beeps and a synthesized voice says 'Organ ready.'";
 	if the organ was usable and the organ is not usable and the audio unit is functional and the audio unit is closed:
 		say "The audio unit beeps and a synthesized voice says 'No input.'";
+	if the communications unit was not almost usable and the communications unit is almost usable:
+		say "The audio unit beeps and a synthesized voice says 'No antenna connection.'";
 
 After taking the audio unit:
 	now the gray cable is handled;
@@ -1074,7 +1087,7 @@ After taking the audio unit:
 
 [ cable and connectivity ]
 
-A gray cable is in Church. "A gray cable connects the organ to the audio unit." Incorporated by it are two usb plugs. It has description "A one meter USB 7.2 cable with a Type-F plug at each end." Understand "grey" and "usb" as the gray cable. It is machinelike.
+A gray cable is a cable in Church. "A gray cable connects the organ to the audio unit." Incorporated by it are two usb plugs. It has description "A one meter USB 7.2 cable with a Type-F plug at each end." Understand "grey" and "usb" as the gray cable. It is machinelike.
 
 Instead of the scanner scanning the cable:
 	computerize "Cable is functional.";
@@ -1100,9 +1113,22 @@ When play begins:
 [ connection checking ]
 
 To decide if (s - a machine) and (t - a machine) are connected:
-	decide on whether or not the gray cable is inserted into the s and the gray cable is inserted into the t.
+	repeat with c running through cables:
+		if c is inserted into the s and c is inserted into the t, decide yes;
+	decide no.
 
-Definition: the communications unit is usable if the communications unit is functional and the audio unit is functional and the audio unit is closed and audio and communications are connected. [* usable means ready for its special purpose, functional just means that modules are all correct and functional ]
+Definition: the communications unit is almost usable if
+	the communications unit is functional and
+	the audio unit is functional and
+	the audio unit is closed and
+	audio and communications are connected.
+
+Definition: the communications unit is usable if
+	the communications unit is functional and
+	the audio unit is functional and
+	the audio unit is closed and
+	audio and communications are connected and
+	communications and antenna panel are connected. [* usable means ready for its special purpose, functional just means that modules are all correct and functional ]
 
 Definition: the organ is usable if audio unit and organ are connected and the audio unit is functional and audio unit is closed.
 
@@ -1384,24 +1410,27 @@ Chapter 7 - The Hub
 
 Section 1 - Inside the Hub
 
-Inside the Hub has description "You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out." It is in zero-g.
+Inside the Hub has description "You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out." It is in zero-g. It is unfamiliar.
 
 Before going down in Inside the Hub, try going outside instead.
 Before going up in Inside the Hub, try going outside instead.
 
 After going outside from Inside the Hub:
-	say "You [one of]struggle a little to make sure you are heading legs first and follow the ladder[or]arrange yourself legs first and follow the ladder[or]fight off a moment of vertigo and climb the ladder[at random].";
+	say "You [one of]make sure you are heading legs first and follow the ladder[or]struggle a little to arrange your orientation and follow the ladder[or]fight off a moment of vertigo and climb the ladder[at random].";
 	continue the action.
 
+[ -------- -------- -------- -------- -------- -------- -------- -------- ]
 
-[ todo - description ]
-A panel is scenery in Inside the Hub.  It is machinelike. Incorporated by the panel is an RF socket.
+The antenna panel is scenery in Inside the Hub.  It is a machine. It has description "Panel." Incorporated by the antenna panel is an RF socket. [ todo - description ]
 
-[ todo scan panel if needed for antenna puzzle ]
+[ todo: scan panel if needed for antenna puzzle
 
-A yellow cable is in Inside the Hub. "A yellow cable waves from a small panel." It is machinelike. It is floating-exceptioned. It has description "A yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
+	cable name, description, ...
+]
 
-Instead of unplugging the yellow cable from the panel:
+A yellow cable is a cable in Inside the Hub. "A yellow cable waves from a small panel." It is machinelike. It is floating-exceptioned. It has description "A yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
+
+Instead of unplugging the yellow cable from the antenna panel:
 	say "The yellow cable is permanently attached to the panel.";
 	stop the action.
 
@@ -1422,7 +1451,7 @@ A rule for reaching inside Inside the Hub: [* https://intfiction.org/forum/viewt
 		allow access.
 
 When play begins:
-	silently try plugging the yellow cable into the panel.
+	silently try plugging the yellow cable into the antenna panel.
 
 The leaving room with the yellow cable rule is listed before the new leaving room whilst attached to fixed things rule in the Instead rulebook.
 
