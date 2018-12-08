@@ -1,4 +1,4 @@
-Version 1 of Machines by Thomas Insel begins here.
+Version 2 of Machines by Thomas Insel begins here.
 
 "Implement the components & machine model that I use in Founder's Mercy, along with related verbs."
 
@@ -23,7 +23,6 @@ Check scanning something with:
 	say "[regarding the second noun][Those] [aren't] a scanner.";
 	stop the action.
 
-Before unlocking something (called m) with the scanner, try the scanner opening m instead.
 Before scanning something (called m) with the scanner, try the scanner scanning m instead.
 
 Carry out scanning: try the scanner scanning the noun instead.
@@ -68,50 +67,25 @@ Instead of the scanner scanning a module (called c):
 	now c is scanned;
 	rule succeeds.
 
-Instead of the scanner opening a module:
-	scanner-say "Module is unitary.";
-	rule succeeds.
-
 Chapter 3 - Machines
 
-A machine is a kind of container. A machine is usually closed and unopenable and fixed in place. A machine can be scanned.
+A machine is a kind of container. A machine is usually open and not openable. A machine is usually fixed in place. A machine can be scanned. A machine usually has carrying capacity zero.
 
 To decide if (m - a machine) is functional: decide yes.
 
-A machine can be quiet. [* quiet is from example 357, like scenery but will still print info if opened ]
+Before inserting something into a machine:
+	if the noun is not a module, say "[The second noun] can only contain modules." instead;
 
-Rule for writing a paragraph about a quiet machine (called m):
-	if m is open:
-		if a thing is in m:
-			say "[The m] is open and contains [a list of things which are in m].";
+Instead of examining a machine:
+	say the description of the noun;
+	if noun is a machine and the carrying capacity of noun is positive:
+		let open space be the carrying capacity of the noun minus the number of things contained in the noun;
+		if a thing is in the noun:
+			say " [regarding the noun][It] contain[if the noun is not plural-named]s[end if] [a list of things which are in the noun]";
+			if open space is positive, say " as well as space[if open space is greater than one]s[end if] for [open space in words] more module[s]";
+			say ".";
 		otherwise:
-			say "[The m] is open and empty.";
-	now the m is mentioned.
-
-Before inserting something (called s) into a machine (called m) when m is open:
-	if s is not a module:
-		say "Only modules fit into [the m].";
-		stop the action.
-
-Instead of examining a machine (called m):
-	say the description of m;
-	let open space be the carrying capacity of m minus the number of things contained in m;
-	;
-	if m is open:
-		say paragraph break;
-		if a thing is in m:
-			say "[regarding the m][They] [are] open, revealing [a list of things which are in m]";
-			if open space is positive:
-				say " and space for [open space in words] more module[s].";
-			otherwise:
-				say ".";
-		otherwise if the carrying capacity of m is zero:
-			say "[regarding the m][They] [are] open.";
-		otherwise:
-			say "[regarding the m][They] [are] open, revealing space for [open space in words] module[s].";
-	otherwise:
-		say "[line break]";
-	;
+			say " [regarding open space]There [are] space[s] for [open space in words] module[s].";
 	follow the list attached things when examining receiver or inserter rule. [* from Plugs and Sockets ]
 
 Instead of the scanner scanning a machine (called m):
@@ -119,36 +93,9 @@ Instead of the scanner scanning a machine (called m):
 	scanner-say "Machine is [if m is functional]functional[else]failed[end if].";
 	rule succeeds.
 
-Instead of the scanner opening a machine (called m):
-	if m is not openable:
-		scanner-say "Machine is unitary.";
-	otherwise if m is open:
-		scanner-say "Machine is already open.";
-	otherwise:
-		scanner-say "Opening.[line break]";
-		;
-		if a thing is in m:
-			say "[The m] swing[s] open, revealing [a list of things which are in m]";
-			let open space be the carrying capacity of m minus the number of things contained in m;
-			if open space is positive:
-				say " and space for [open space in words] more module[s].";
-			otherwise:
-				say ".";
-		otherwise if the carrying capacity of m is zero:
-			say "[The m] swing[s] open.";
-		otherwise:
-			say "[The m] swing[s] open, revealing space for [the carrying capacity of m in words] module[s].";
-		;
-		now the m is open;
-	rule succeeds.
-
-Instead of opening a machine, say "You will need to use the scanner to do that.";
-
-After closing a machine (called m), say "You close [the m] and it seals without any trace of a seam.";
-
 After printing the name of a machine (called m), if m is closed, omit contents in listing.
 
-Chapter 4 - Machinelike
+Chapter 5 - Machinelike
 
 [ An adjective to apply to other things so that they get a default response from the scanner. ]
 
@@ -158,11 +105,8 @@ Instead of the scanner scanning something that is machinelike:
 	scanner-say "Machine is functional.";
 	rule succeeds.
 
-Instead of the scanner opening something that is machinelike:
-	scanner-say "Machine is unitary.";
-	rule succeeds.
 
-Chapter 5 - The Scanner and Scanning
+Chapter 6 - The Scanner and Scanning
 
 Include Inanimate Listeners by Emily Short.
 
@@ -197,7 +141,7 @@ Instead of answering the scanner that something:
 	unless the scanner is at hand, stop the action;
 	if the topic understood matches the regular expression "^help\s":
 		try the scanner getting help instead;
-	else if the topic understood matches the regular expression "^(scan|open|close)\s+(.*)":
+	else if the topic understood matches the regular expression "^(scan)\s+(.*)":
 		scanner-say "Search error: cannot find [text matching subexpression 2].";
 		explain the scanner;
 	otherwise:
@@ -217,7 +161,7 @@ To explain the scanner:
 		now the scanner fail count is 0;
 		now the scanner is explained;
 		unless examining, say "[line break]";
-		scanner-note "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' or 'scanner, open SOMETHING' where SOMETHING is a visible object.";
+		scanner-note "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' where SOMETHING is a visible object.";
 	otherwise:
 		increase the scanner fail count by 1;
 		if the scanner fail count is 3:
@@ -230,7 +174,7 @@ To scanner syntax error:
 Before the scanner doing something: [* catch the try the scanner... bits ]
 	unless the scanner is at hand, stop the action.
 
-Persuasion rule for asking the scanner to try scanning or opening or closing something:
+Persuasion rule for asking the scanner to try scanning something:
 	unless the scanner is at hand, stop the action;
 	persuasion succeeds.
 
@@ -255,13 +199,9 @@ Carry out the scanner scanning the scanner:
 	rule succeeds.
 
 Carry out the scanner getting help:
-	scanner-say "Recognized commands are 'help', 'open', and 'scan'.";
+	scanner-say "Recognized commands are 'help' and 'scan'.";
 	now the scanner is not explained;
 	explain the scanner;
-	rule succeeds.
-
-Instead of the scanner opening something (called m):
-	scanner-say "No electronic technology detected.";
 	rule succeeds.
 
 Carry out the scanner barescanning:
@@ -269,7 +209,7 @@ Carry out the scanner barescanning:
 	explain the scanner;
 	rule succeeds.
 
-Chapter 6 - Tweaks for Standard Rules
+Chapter 7 - Tweaks for Standard Rules
 
 [
 	Zarf's fix from	https://intfiction.org/forum/viewtopic.php?f=7&t=26951 for:
@@ -297,29 +237,26 @@ The block vaguely going rule response (A) is "You'll have to say which direction
 
 Machines ends here.
 
+
 ---- Documentation ----
 
         Example: * Machine
 
-        Include Machines by Thomas Insel.
+        Include version 2 of Machines by Thomas Insel.
 
-        A lithium battery is a kind of module.
-
-        A futuristic radio is here. It is an openable machine. It has carrying capacity 1. It contains a failed lithium battery. It has description "[if the futuristic radio is functional]The radio is playing music like you've never heard before.[else]It's a radio.[end if]"
-
-        To decide if (m - the futuristic radio) is functional:
-          unless there is a functional lithium battery in the futuristic radio, decide no;
-          decide yes.  
-
-        One functional lithium battery is here.
-
-        Test radio with "x radio / get battery / scanner, open radio / get battery from radio / scan battery / scan unscanned battery / put functional battery in radio / close radio / x radio"
-
-
-
-Consider a generalized version of this if necessary:
-
-        After choosing notable locale objects when the player is in the School: 
-          set the locale priority of the learning machine to 2;
-          continue the activity.
-
+	A power module is a kind of module.
+	
+	There are three functional power modules.
+	
+	There are two functional power modules in Example Location.
+	
+	There is a ball in Example Location.
+	
+	The radio is a machine in Example Location. It has description "It is a [if radio is functional]working[otherwise]broken[end if] radio." Three slots are part of the radio.
+	
+	When play begins:
+		let b be a random functional power module that is nowhere;
+		now b is in an available slot in the radio.
+	
+	To decide if (m - the radio) is functional:
+		decide on whether or not m encloses two functional power modules.

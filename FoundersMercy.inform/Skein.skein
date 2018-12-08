@@ -15,7 +15,7 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 181206 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 181207 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type "about" for credits or "hint" for assistance.
 
 Home
@@ -141,7 +141,53 @@ There is a secured hatch in the floor.
             <child nodeId="node-2954"></child>
             <child nodeId="node-2940"></child>
             <child nodeId="node-2935"></child>
+            <child nodeId="node-6050"></child>
         </children>
+    </item>
+    <item nodeId="node-6050">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6051"></child>
+        </children>
+    </item>
+    <item nodeId="node-6051">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6052"></child>
+        </children>
+    </item>
+    <item nodeId="node-6052">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6053"></child>
+        </children>
+    </item>
+    <item nodeId="node-6053">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6054"></child>
+        </children>
+    </item>
+    <item nodeId="node-6054">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-2935">
         <command xml:space="preserve">x xxx</command>
@@ -5596,6 +5642,8 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
 Sector 4: Crops
 Your home is here among the crops. You can walk spinward or antispinward.
 
+
+[** Programming error: tried to read (something) **]
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-3531"></child>
@@ -5610,12 +5658,23 @@ Your home is here among the crops. You can walk spinward or antispinward.
             <child nodeId="node-3444"></child>
             <child nodeId="node-3442"></child>
             <child nodeId="node-3441"></child>
+            <child nodeId="node-6045"></child>
             <child nodeId="node-3434"></child>
             <child nodeId="node-3431"></child>
             <child nodeId="node-3429"></child>
             <child nodeId="node-3425"></child>
             <child nodeId="node-3415"></child>
+            <child nodeId="node-6061"></child>
         </children>
+    </item>
+    <item nodeId="node-6061">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+
+[** Programming error: tried to read (something) **]
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-3415">
         <command xml:space="preserve">x pylons</command>
@@ -5864,6 +5923,80 @@ Someone has left a doll on the well swept floor.
         <command xml:space="preserve">x doll</command>
         <result xml:space="preserve">Wearing a brown jumpsuit and faceless, because we are all alike in the Founder's eyes. This doll was yours once, but you passed it on with other childish things when you were old enough to help in the fields.
 
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-6045">
+        <command xml:space="preserve">trace</command>
+        <result xml:space="preserve">[Trace on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6046"></child>
+        </children>
+    </item>
+    <item nodeId="node-6046">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">[Parsing for the verb 'out' (1 lines)]
+[line 0 * -&gt; Exit]
+[Line successfully parsed]
+But you aren't in anything at the moment.
+
+
+[** Programming error: tried to read (something) **]
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6047"></child>
+        </children>
+    </item>
+    <item nodeId="node-6047">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">[Parsing for the verb 'z' (1 lines)]
+[line 0 * -&gt; Wait]
+[Line successfully parsed]
+Time passes.
+
+
+[** Programming error: tried to read (something) **]
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6048"></child>
+        </children>
+    </item>
+    <item nodeId="node-6048">
+        <command xml:space="preserve">showme pump</command>
+        <result xml:space="preserve">[Parsing for the verb 'showme' (2 lines)]
+[line 0 * -&gt; ShowMe]
+[line 1 * scope=Routine(355557) -&gt; ShowMe]
+[Line successfully parsed]
+atmosphere pump - machine
+    power module - power module
+    pressure regulation module - pressure regulation module
+location: in Pod Control
+singular-named, improper-named; unlit, inedible, fixed in place, scenery; opaque, open, unopenable, unlocked
+list grouping key: none
+printed name: "atmosphere pump"
+printed plural name: "machines"
+indefinite article: none
+description: "The atmosphere pump is a smooth featureless machine."
+initial appearance: none
+carrying capacity: 2
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-6049"></child>
+        </children>
+    </item>
+    <item nodeId="node-6049">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">[Parsing for the verb 'look' (5 lines)]
+[line 0 * -&gt; Look]
+[Line successfully parsed]
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+
+[** Programming error: tried to read (something) **]
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
@@ -21172,25 +21305,6 @@ You carefully erase the chalkboard.
 You carefully erase the chalkboard.
 
 &gt;</commentary>
-        <children><child nodeId="node-4706"></child>
-        </children>
-    </item>
-    <item nodeId="node-4706">
-        <command xml:space="preserve">scanner, open machine</command>
-        <result xml:space="preserve">Opening.
-
-The learning machine swings open, revealing a power module and an instruction module.
-
-[Your score has just gone up by one point.]
-
-&gt;</result>
-        <commentary xml:space="preserve">Opening.
-
-The learning machine swings open, revealing a power module and an instruction module.
-
-[Your score has just gone up by one point.]
-
-&gt;</commentary>
         <children><child nodeId="node-4707"></child>
         </children>
     </item>
@@ -21569,21 +21683,6 @@ There is an open hatch in the ceiling.
 Beside the secured port hatch, a status display shows an error message.
 
 &gt;</commentary>
-        <children><child nodeId="node-4729"></child>
-        </children>
-    </item>
-    <item nodeId="node-4729">
-        <command xml:space="preserve">scanner, open pump</command>
-        <result xml:space="preserve">Opening.
-
-The atmosphere pump swings open, revealing a power module and a pressure regulation module.
-
-&gt;</result>
-        <commentary xml:space="preserve">Opening.
-
-The atmosphere pump swings open, revealing a power module and a pressure regulation module.
-
-&gt;</commentary>
         <children><child nodeId="node-4730"></child>
         </children>
     </item>
@@ -21668,24 +21767,17 @@ You put the functional pressure regulation module into the atmosphere pump.
         <result xml:space="preserve">(first taking the functional power module)
 You put the functional power module into the atmosphere pump.
 
-&gt;</result>
-        <commentary xml:space="preserve">(first taking the functional power module)
-You put the functional power module into the atmosphere pump.
-
-&gt;</commentary>
-        <children><child nodeId="node-4737"></child>
-        </children>
-    </item>
-    <item nodeId="node-4737">
-        <command xml:space="preserve">close pump</command>
-        <result xml:space="preserve">You close the atmosphere pump and it begins to hum.
+The atmosphere pump begins to hum.
 
 It is time to say goodbye to the station. You are ready to leave in a pod.
 
 [Your score has just gone up by one point.]
 
 &gt;</result>
-        <commentary xml:space="preserve">You close the atmosphere pump and it begins to hum.
+        <commentary xml:space="preserve">(first taking the functional power module)
+You put the functional power module into the atmosphere pump.
+
+The atmosphere pump begins to hum.
 
 It is time to say goodbye to the station. You are ready to leave in a pod.
 
@@ -21770,25 +21862,6 @@ Beside the open port hatch, a status display glows green.
 There is a secured hatch in the ceiling.
 
 &gt;</commentary>
-        <children><child nodeId="node-4742"></child>
-        </children>
-    </item>
-    <item nodeId="node-4742">
-        <command xml:space="preserve">scanner, open pump</command>
-        <result xml:space="preserve">Opening.
-
-The atmosphere pump swings open, revealing a functional power module and a functional pressure regulation module.
-
-No pods left ... you consider despair.
-
-&gt;</result>
-        <commentary xml:space="preserve">Opening.
-
-The atmosphere pump swings open, revealing a functional power module and a functional pressure regulation module.
-
-No pods left ... you consider despair.
-
-&gt;</commentary>
         <children><child nodeId="node-4743"></child>
         </children>
     </item>
@@ -21797,9 +21870,13 @@ No pods left ... you consider despair.
         <result xml:space="preserve">(putting the faulty power module into your pocket to make room)
 Taken.
 
+No pods left ... you consider despair.
+
 &gt;</result>
         <commentary xml:space="preserve">(putting the faulty power module into your pocket to make room)
 Taken.
+
+No pods left ... you consider despair.
 
 &gt;</commentary>
         <children><child nodeId="node-4744"></child>
@@ -21809,12 +21886,8 @@ Taken.
         <command xml:space="preserve">close wall hatch</command>
         <result xml:space="preserve">You close the wall hatch.
 
-So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working.
-
 &gt;</result>
         <commentary xml:space="preserve">You close the wall hatch.
-
-So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working.
 
 &gt;</commentary>
         <children><child nodeId="node-4745"></child>
@@ -21829,6 +21902,8 @@ You still maintain the crops here. There is a small graveyard and the barn remai
 
 There is an open hatch in the ground.
 
+So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working.
+
 &gt;</result>
         <commentary xml:space="preserve">(first opening the ceiling hatch)
 
@@ -21836,6 +21911,8 @@ Sector 1: Crops
 You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
 
 There is an open hatch in the ground.
+
+So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working.
 
 &gt;</commentary>
         <children><child nodeId="node-4746"></child>
@@ -21917,21 +21994,6 @@ A gray cable connects the organ to the audio unit.
         <commentary xml:space="preserve">You plug the gray cable into the emergency communications unit.
 
 &gt;</commentary>
-        <children><child nodeId="node-4751"></child>
-        </children>
-    </item>
-    <item nodeId="node-4751">
-        <command xml:space="preserve">scanner, open audio</command>
-        <result xml:space="preserve">Opening.
-
-The audio unit swings open, revealing an unscanned power module.
-
-&gt;</result>
-        <commentary xml:space="preserve">Opening.
-
-The audio unit swings open, revealing an unscanned power module.
-
-&gt;</commentary>
         <children><child nodeId="node-4752"></child>
         </children>
     </item>
@@ -21952,21 +22014,10 @@ Taken.
         <command xml:space="preserve">put functional power into audio</command>
         <result xml:space="preserve">You put the functional power module into the audio unit.
 
-&gt;</result>
-        <commentary xml:space="preserve">You put the functional power module into the audio unit.
-
-&gt;</commentary>
-        <children><child nodeId="node-4754"></child>
-        </children>
-    </item>
-    <item nodeId="node-4754">
-        <command xml:space="preserve">close audio</command>
-        <result xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
-
 The audio unit beeps and a synthesized voice says "No antenna connection."
 
 &gt;</result>
-        <commentary xml:space="preserve">You close the audio unit and it seals without any trace of a seam.
+        <commentary xml:space="preserve">You put the functional power module into the audio unit.
 
 The audio unit beeps and a synthesized voice says "No antenna connection."
 
@@ -22098,7 +22149,7 @@ You hear a human speaking from the audio unit: "RWSS Founder's Mercy, this is OV
     *** You are not alone. ***
 
 
-In that game you scored 10 out of a possible 10, in 64 turns.
+In that game you scored 9 out of a possible 9, in 58 turns.
 
 
 Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
@@ -22117,7 +22168,7 @@ You hear a human speaking from the audio unit: "RWSS Founder's Mercy, this is OV
     *** You are not alone. ***
 
 
-In that game you scored 10 out of a possible 10, in 65 turns.
+In that game you scored 9 out of a possible 9, in 58 turns.
 
 
 Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?

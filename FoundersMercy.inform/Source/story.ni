@@ -54,7 +54,7 @@ Carry out requesting the credits:
 
 Chapter 2 - Scoring
 
-Use scoring. The maximum score is 10. An object can be scored. An object is usually not scored.
+Use scoring. The maximum score is 9. An object can be scored. An object is usually not scored.
 
 [
 	1 - getting the boots out of the vault
@@ -62,7 +62,6 @@ Use scoring. The maximum score is 10. An object can be scored. An object is usua
 
 	2 - green breaker in the pond
 
-	1 - opening the learning machine
 	1 - fixing and closing the atmosphere pump
 
 	2 - visiting pod bay for the first time
@@ -570,8 +569,6 @@ Section 3 - Between Repairs
 Carry out getting help when Between Repairs is happening:
 	if S1H1 is open: [ todo - check if door has been tried since this scene began? ]
 		say "Pod Control acts as an airlock.";
-	else if atmosphere pump is open:
-		say "The status display has some clear directions.";
 	otherwise:
 		say "There's no point in waiting. You just need to enter the pod bay."
 
@@ -584,8 +581,6 @@ Carry out getting help when Repairing Comms is happening: [todo]
 		say "Connect the communications unit to an audio source.";
 	else unless audio unit is functional:
 		say "Repair the audio unit.";
-	else if audio unit is open:
-		say "Close the audio unit.";
 	else:
 		say "Just wait." [* this shouldn't happen either ]
 
@@ -659,10 +654,6 @@ Instead of doing anything other than examining or scanning to the solar panels, 
 
 Instead of the scanner scanning the solar panels:
 	computerize "Machine is functional. Operating at [one of]73[or]72[or]71[then purely at random]% efficiency.";
-	rule succeeds.
-
-Instead of the scanner opening the solar panels:
-	computerize "Machine is unitary.";
 	rule succeeds.
 
 The mirrors are a backdrop in The Sectors and in The Platforms. They have description "The mirrors reflect sunlight into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
@@ -841,35 +832,35 @@ Instead of examining the status display:
 		if green circuit breaker is switched off,
 			computerize " [i]. Launch system cooling loop offline - reset breaker FM29-63/A @ Sector 2";
 			increment i;
-		if the atmosphere pump is functional:
-			if the atmosphere pump is open:
-				computerize " [i]. Pod control atmosphere pump offline - close pump";
-			else if S1H1 is open:
+		if the atmosphere pump is functional: [todo]
+			if S1H1 is open:
 				computerize " [i]. Secure pod control hatch";
 		else: [the atmosphere pump is not functional]
 			computerize " [i]. Pod control atmosphere pump offline - scan and repair";
 
-The atmosphere pump is here. It is a quiet openable machine. It has carrying capacity 2. It has description "[If the atmosphere pump is functional and the atmosphere pump is not open]The featureless atmosphere pump is softly humming.[otherwise]The atmosphere pump is a smooth featureless machine." Understand "machine" and "machinery" as the atmosphere pump.
+The atmosphere pump is a machine. It is in Pod Control. It is scenery. It has carrying capacity 2. It has description "[If the atmosphere pump is functional]The featureless atmosphere pump is softly humming.[otherwise]The atmosphere pump is a smooth featureless machine." Understand "machine" and "machinery" as the atmosphere pump.
 
-There is a faulty power module and a faulty pressure regulation module in the atmosphere pump.
-
+The atmosphere pump contains a faulty power module and a faulty pressure regulation module.	
 To decide if (m - the atmosphere pump) is functional:
-	unless there is a functional power module in the atmosphere pump, decide no;
-	unless there is a functional pressure regulation module in the atmosphere pump, decide no;
+	unless m encloses a functional power module, decide no;
+	unless m encloses a functional pressure regulation module, decide no;
 	decide yes.	
 
-Instead of the scanner scanning the atmosphere pump when the atmosphere pump is functional and the atmosphere pump is closed:
+Instead of the scanner scanning the atmosphere pump when the atmosphere pump is functional:
 	now the atmosphere pump is scanned;
 	computerize "Machine is functional and operating.";
 	rule succeeds.
 
-After closing the atmosphere pump when the atmosphere pump is functional:
-	say "You close the atmosphere pump and it begins to hum.";
-	if the atmosphere pump is not scored:
-		increase the score by 1;
-		now the atmosphere pump is scored.
+Definition: the atmosphere pump is usable if the atmosphere pump is functional. [* can use was with a definition but not a to decide phrase]
 
-Definition: the pod bay is ready if every circuit breaker is switched on and the atmosphere pump is functional and the atmosphere pump is closed and S1H1 is closed.
+Every turn when the atmosphere pump is visible:
+	if the atmosphere pump was not usable and the atmosphere pump is usable:
+		say "The atmosphere pump begins to hum.";
+		if the atmosphere pump is not scored:
+			increase the score by 1;
+			now the atmosphere pump is scored.
+
+Definition: the pod bay is ready if every circuit breaker is switched on and the atmosphere pump is functional and S1H1 is closed.
 
 Every turn when the player is in Pod Control:
 	if the pod bay is ready:
@@ -900,10 +891,6 @@ Instead of going nowhere from Pod Bay when the noun is outside, try going starbo
 Instead of exiting in Pod Bay, try going starboard.
 
 Some berths are here. They are machinelike scenery. Understand "four berths" or "berth" and "door" and "doors" and "rail" and "rails" and "iris" and "closed" and "iris" and "pod bay" as some berths. Some berths have description "Each berth would hold a transit pod, but now there are only support rails and closed iris doors."
-
-Instead of the scanner opening some berths:
-	computerize "Opening failed. Safety violation.";
-	rule succeeds.
 
 Instead of opening or closing the berths, say "The doors open and close automatically as pods dock and launch."
 Instead of unlocking the berths with something, try opening the berths.
@@ -1053,12 +1040,12 @@ Instead of taking the organ, say "It is too heavy to move."
 
 [ audio unit ]
 
-An audio unit is an undescribed openable machine in Church. It is not fixed in place. The description is "The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device." It has carrying capacity 1. Understand "portable" as the audio unit. Incorporated by the audio unit is a usb socket called the beige socket.
+An audio unit is an undescribed machine in Church. It is not fixed in place. It has carrying capacity 1. The description is "The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device." Understand "portable" as the audio unit. Incorporated by the audio unit is a usb socket called the beige socket.
 
-There is a faulty power module in the audio unit.
+The audio unit contains a faulty power module.
 
-To decide if (m - the audio unit) is functional:
-	unless there is a functional power module in m, decide no;
+To decide if (m - the audio unit) is functional:	
+	unless m encloses a functional power module, decide no;
 	decide yes.
 
 Instead of the scanner scanning the audio unit:
@@ -1093,10 +1080,6 @@ Instead of the scanner scanning the cable:
 	computerize "Cable is functional.";
 	rule succeeds;
 
-Instead of the scanner opening the cable:
-	computerize "Cable is unitary.";
-	rule succeeds.
-
 Understand "pull [the gray cable]" as unplugging.
 [ Instead of tying the cable to something, say "Tying the cable would damage it." ]
 
@@ -1120,17 +1103,15 @@ To decide if (s - a machine) and (t - a machine) are connected:
 Definition: the communications unit is almost usable if
 	the communications unit is functional and
 	the audio unit is functional and
-	the audio unit is closed and
 	audio and communications are connected.
 
 Definition: the communications unit is usable if
 	the communications unit is functional and
 	the audio unit is functional and
-	the audio unit is closed and
 	audio and communications are connected and
 	communications and antenna panel are connected. [* usable means ready for its special purpose, functional just means that modules are all correct and functional ]
 
-Definition: the organ is usable if audio unit and organ are connected and the audio unit is functional and audio unit is closed.
+Definition: the organ is usable if audio unit and organ are connected and the audio unit is functional..
 
 Section 2 - House
 
@@ -1249,13 +1230,9 @@ School House is a room. "A broken learning machine remains in a corner, but most
 
 Sector 5 is outside of school house.
 
-The learning machine is an openable quiet machine in the school. It has carrying capacity 2. It has description "This last learning machine broke when you were maybe three thousand days old."
+The learning machine is an machine in the school. It is scenery. It has description "This last learning machine broke when you were maybe three thousand days old." It has carrying capacity 2.
 
-Every turn when the learning machine is open and the learning machine is not scored:
-	now the learning machine is scored;
-	increase the score by 1.
-
-There are a functional power module and a faulty instruction module in the learning machine.
+The learning machine contains a functional power module and a faulty instruction module.
 
 To decide if (m - the learning machine) is functional: decide no. [* there are no functional instruction modules in the story world ]
 
@@ -1323,10 +1300,6 @@ Instead of doing anything other than examining or scanning to the hydroponics ma
 
 Instead of the scanner scanning the hydroponics machines:
 	computerize "Machine failed.";
-	rule succeeds.
-
-Instead of the scanner opening the hydroponics machines:
-	computerize "Opening failed.";
 	rule succeeds.
 
 Every turn when the player is in Sector 6:
@@ -1437,10 +1410,6 @@ Instead of unplugging the yellow cable from the antenna panel:
 Instead of the scanner scanning the yellow cable:
 	computerize "Cable is functional.";
 	rule succeeds;
-
-Instead of the scanner opening the yellow cable:
-	computerize "Cable is unitary.";
-	rule succeeds.
 
 Understand "pull [the yellow cable]" as unplugging.
 
