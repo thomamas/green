@@ -625,6 +625,8 @@ Zero-G is a region.
 
 Section 2 - Backdrops
 
+[ todo -- add antenna here with solar ]
+
 The hub is a backdrop in The Sectors and in The Platforms. It has description "[if the player is in The Platforms]The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.[otherwise]The station rotates around the hub, which extends out to hold solar panels to the port and mirrors on the starboard side. On the inside, there is a maintenance platform about two thirds of the way up the pylons."
 
 Instead of doing anything other than examining or scanning to the hub, say "You are too far away to do that." [todo]
@@ -759,7 +761,7 @@ Barn is a room. "Not fancy: livestock on one side and feed on the other, but not
 
 A plow is scenery in the barn. It is pushable between rooms. It has description "A steel walking plow." Understand "plough" as plow.
 
-Before pushing or pulling or turning or taking the plow, say "This plow is too heavy to move around without purpose." instead.
+Before pushing or pulling or turning or taking the plow, say "The plow is too heavy to move around without purpose." instead.
 
 Before going with the plow, try pushing the plow instead.
 
@@ -945,11 +947,13 @@ Instead of drinking or tasting the pond, say "It tastes murky."
 Instead of searching the pond, say "From above, you can make out a few fish in the murky water."
 
 Instead of entering the pond:
-	if the player is wearing the mask:
+	if the player is wearing the blanket:
+		say "Not while you're wearing the blanket. It would be soaked.";
+	otherwise if the player is wearing the mask:
 		if the green valve is switched on:
-			say "You have already completed everything necessary underwater.";
+			say "There is nothing more for you to do underwater.";
 		otherwise:		
-			say "With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a valve and open it.";
+			say "You set your belongings aside. With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a valve and open it, then swim to the surface, climb out, and recover everything you were carrying.";
 			now the green valve is switched on;
 			increase the score by 2;
 	otherwise:
@@ -1120,7 +1124,29 @@ Home is a room. "The room where you've slept your entire life. The crops are out
 
 Sector 4 is outside of home.
 
-The player is in Home.
+A blanket is in Home. The blanket is a portable wearable enterable supporter. It has description "Homespun wool."
+
+The player is on the blanket.
+
+Before wearing or taking the blanket: [* see Modified Exit by Emily Short ]
+	if the holder of the player is the blanket:
+		say "(first getting off the blanket)[command clarification break]";
+		silently try exiting;
+		if the holder of the player is the blanket, stop the action;
+	if something is on the blanket:
+		repeat with t running through the list of things on the blanket:
+			say "(first taking [the t])[command clarification break]";
+			silently try taking the t;
+		if something is on the blanket, stop the action.
+
+Before putting something on the blanket:
+	if the player is wearing the blanket:
+		say "Not while you are wearing the blanket." instead;
+	if the player encloses the blanket:
+		say "Not while you are carrying the blanket." instead.
+
+After dropping the blanket when the player is not in zero-g:
+	say "You arrange the blanket on the ground."
 
 Section 2 - Cellar
 
@@ -1422,7 +1448,7 @@ Before going from a room in zero-g:
 
 Section 1 - Inside the Hub
 
-Inside the Hub has description "You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out, and you can continue port or starboard inside the hub." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub". [todo - port/sbd]
+Inside the Hub has description "You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and you can continue port or starboard inside the hub." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub". [todo - port/sbd]
 
 Before going down in Inside the Hub, try going outside instead.
 Before going up in Inside the Hub, try going outside instead.
@@ -1431,20 +1457,28 @@ After going outside from Inside the Hub:
 	say "You [one of]make sure you are heading legs first and follow the ladder[or]struggle a little to arrange your orientation and follow the ladder[or]fight off a moment of vertigo and climb the ladder[at random].";
 	continue the action.
 
+Before going port from Inside the Hub:
+	if the player is wearing the jumpsuit and the player is wearing the blanket, continue the action;
+	if the player is wearing the jumpsuit, say "The passageway to the port is colder still, too cold for you in only your jumpsuit." instead;
+	if the player is wearing the blanket, say "They passageway to the port is colder still, too cold for you wearing nothing under the blanket." instead;
+	say "The passageway to the port is colder still, too cold for you to bear nude." instead.
+
 Section 2 - Port End
 
 [ this end is near the solar panels and antennas ]
 
-Port End is port of Inside the hub. "You float weightless at the port end of a cylinder." It is in zero-g. It is unfamiliar.It has destination name "the port end of the hub".
+[ todo -- can't remove jumpsuit or blanket  here ]
 
-The antenna panel is scenery in Port End.  It is a machine. It has description "Panel." Incorporated by the antenna panel is an RF socket. [ todo - description ]
+Port End is port of Inside the hub. "You float weightless at the port end of a cylinder. It is very cold and dark here." It is in zero-g. It is unfamiliar.It has destination name "the port end of the hub".
+
+The antenna panel is scenery in Port End.  It is a machine. It has description "It's a small panel with a permanently attached yellow RF cable." Incorporated by the antenna panel is an RF socket. [ todo - description ]
 
 [ todo: scan panel if needed for antenna puzzle
 
 	cable name, description, ...
 ]
 
-A yellow cable is a cable in Port End. "A yellow cable waves from a small panel." It is floating-exceptioned. It has description "A yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
+A yellow cable is a cable in Port End. "A yellow cable waves from a small panel." It is floating-exceptioned. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
 
 Instead of unplugging the yellow cable from the antenna panel:
 	say "The yellow cable is permanently attached to the panel.";
@@ -1457,6 +1491,10 @@ When play begins:
 
 Instead of an actor going to somewhere when the yellow cable is enclosed by the actor:
 	say "The yellow cable is permanently attached to the panel, so you must drop it before leaving."
+
+Instead of taking off something in Port End:
+	unless the noun is the jumpsuit or the noun is the blanket, continue the action;
+	say "It is too cold here to even consider removing [the noun].";
 
 Section 3 - Starboard End
 

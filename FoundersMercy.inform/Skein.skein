@@ -18,7 +18,7 @@ A Space Story by Thomas Insel
 Release 1 / Serial number 181209 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type "about" for credits or "hint" for assistance.
 
-Home
+Home (on the blanket)
 The room where you've slept your entire life. The crops are outside.
 
 There is a secured hatch in the floor.
@@ -44,7 +44,8 @@ The room where you've slept your entire life. The crops are outside.
 There is a secured hatch in the floor.
 
 &gt;</commentary>
-        <children><child nodeId="node-7793"></child>
+        <children><child nodeId="node-9345"></child>
+            <child nodeId="node-7793"></child>
             <child nodeId="node-7758"></child>
             <child nodeId="node-7752"></child>
             <child nodeId="node-7750"></child>
@@ -59,6 +60,9 @@ There is a secured hatch in the floor.
             <child nodeId="node-7602"></child>
             <child nodeId="node-7577"></child>
             <child nodeId="node-7543"></child>
+            <child nodeId="node-8657"></child>
+            <child nodeId="node-9263"></child>
+            <child nodeId="node-9286"></child>
             <child nodeId="node-7538"></child>
             <child nodeId="node-7520"></child>
             <child nodeId="node-7863"></child>
@@ -116,6 +120,7 @@ There is a secured hatch in the floor.
             <child nodeId="node-8341"></child>
             <child nodeId="node-8589"></child>
             <child nodeId="node-7936"></child>
+            <child nodeId="node-9279"></child>
             <child nodeId="node-6160"></child>
             <child nodeId="node-6130"></child>
             <child nodeId="node-6125"></child>
@@ -152,8 +157,10 @@ There is a secured hatch in the floor.
             <child nodeId="node-5745"></child>
             <child nodeId="node-5735"></child>
             <child nodeId="node-5728"></child>
+            <child nodeId="node-9293"></child>
             <child nodeId="node-5725"></child>
             <child nodeId="node-5724"></child>
+            <child nodeId="node-9317"></child>
             <child nodeId="node-5716"></child>
             <child nodeId="node-5713"></child>
             <child nodeId="node-5700"></child>
@@ -1027,6 +1034,42 @@ It features a single large pocket, currently empty.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-9317">
+        <command xml:space="preserve">x blanket</command>
+        <result xml:space="preserve">Blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9319"></child>
+        </children>
+    </item>
+    <item nodeId="node-9319">
+        <command xml:space="preserve">x blanket</command>
+        <result xml:space="preserve">Blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9320"></child>
+        </children>
+    </item>
+    <item nodeId="node-9320">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9321"></child>
+        </children>
+    </item>
+    <item nodeId="node-9321">
+        <command xml:space="preserve">x blanket</command>
+        <result xml:space="preserve">Blanket.
+
+On the blanket is a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-5724">
         <command xml:space="preserve">wordcheck</command>
         <result xml:space="preserve">Center Platform
@@ -1289,6 +1332,42 @@ left: You can't see any such thing.
     <item nodeId="node-5727">
         <command xml:space="preserve">why</command>
         <result xml:space="preserve">Hello
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-9293">
+        <command xml:space="preserve">wear blanket</command>
+        <result xml:space="preserve">(first taking the blanket)
+You put on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9294"></child>
+        </children>
+    </item>
+    <item nodeId="node-9294">
+        <command xml:space="preserve">put scanner in blanket</command>
+        <result xml:space="preserve">That can't contain things.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9295"></child>
+        </children>
+    </item>
+    <item nodeId="node-9295">
+        <command xml:space="preserve">put scanner on blanket</command>
+        <result xml:space="preserve">Not while you are wearning the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9296"></child>
+        </children>
+    </item>
+    <item nodeId="node-9296">
+        <command xml:space="preserve">drop blanket</command>
+        <result xml:space="preserve">(first taking the blanket off)
+Dropped.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -5956,6 +6035,68 @@ Trees, a house, and a church. A red pylon stretches up from the ground to the hu
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-9279">
+        <command xml:space="preserve">put scanner on blanket</command>
+        <result xml:space="preserve">You put the scanner on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9280"></child>
+        </children>
+    </item>
+    <item nodeId="node-9280">
+        <command xml:space="preserve">take blanket</command>
+        <result xml:space="preserve">You need to take everything off of the blanket first.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9281"></child>
+        </children>
+    </item>
+    <item nodeId="node-9281">
+        <command xml:space="preserve">get scanner</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9282"></child>
+        </children>
+    </item>
+    <item nodeId="node-9282">
+        <command xml:space="preserve">get blanket</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9283"></child>
+        </children>
+    </item>
+    <item nodeId="node-9283">
+        <command xml:space="preserve">put scanner in blanket</command>
+        <result xml:space="preserve">That can't contain things.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9284"></child>
+        </children>
+    </item>
+    <item nodeId="node-9284">
+        <command xml:space="preserve">put scanner on blanket</command>
+        <result xml:space="preserve">You put the scanner on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9285"></child>
+        </children>
+    </item>
+    <item nodeId="node-9285">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Home
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-7936">
         <command xml:space="preserve">put</command>
         <result xml:space="preserve">What do you want to put on?
@@ -9901,14 +10042,15 @@ There is an open hatch in the ceiling.
     </item>
     <item nodeId="node-6494">
         <command xml:space="preserve">look</command>
-        <result xml:space="preserve">Home
-The room where you've slept your entire life. You can go out to your crops.
+        <result xml:space="preserve">Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
 
 There is a secured hatch in the floor.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-6557"></child>
+        <children><child nodeId="node-9314"></child>
+            <child nodeId="node-6557"></child>
             <child nodeId="node-6545"></child>
             <child nodeId="node-6541"></child>
             <child nodeId="node-6495"></child>
@@ -10693,6 +10835,43 @@ You float weightless in the middle of a cylinder. A ladder rotates around you, l
 
 Platform 1
 A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-9314">
+        <command xml:space="preserve">get up</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+You can also see a blanket here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9315"></child>
+        </children>
+    </item>
+    <item nodeId="node-9315">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+You can also see a blanket here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9316"></child>
+        </children>
+    </item>
+    <item nodeId="node-9316">
+        <command xml:space="preserve">x blanket</command>
+        <result xml:space="preserve">Home.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -17681,7 +17860,7 @@ A mesh platform about two thirds of the way towards the hub. You can continue sp
         <result xml:space="preserve">Gravity fades as you climb.
 
 Inside the Hub
-You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out.
+You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and you can continue port or starboard inside the hub.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -17693,6 +17872,7 @@ You float weightless in the middle of a cylinder. A ladder rotates around you, l
             <child nodeId="node-7082"></child>
             <child nodeId="node-7078"></child>
             <child nodeId="node-8050"></child>
+            <child nodeId="node-9326"></child>
             <child nodeId="node-7067"></child>
             <child nodeId="node-7051"></child>
             <child nodeId="node-7048"></child>
@@ -18106,15 +18286,177 @@ A mesh platform about two thirds of the way towards the hub. You can continue sp
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-8050">
-        <command xml:space="preserve">p</command>
+    <item nodeId="node-9326">
+        <command xml:space="preserve">port</command>
+        <result xml:space="preserve">The passageway to the port is colder still, too cold for you in only your jumpsuit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9327"></child>
+        </children>
+    </item>
+    <item nodeId="node-9327">
+        <command xml:space="preserve">purloin blaket</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9328"></child>
+        </children>
+    </item>
+    <item nodeId="node-9328">
+        <command xml:space="preserve">purloin blanket</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9329"></child>
+        </children>
+    </item>
+    <item nodeId="node-9329">
+        <command xml:space="preserve">wear blanket</command>
+        <result xml:space="preserve">You put on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9330"></child>
+        </children>
+    </item>
+    <item nodeId="node-9330">
+        <command xml:space="preserve">port</command>
         <result xml:space="preserve">
 Port End
+You float weightless at the port end of a cylinder.
+
 A yellow cable waves from a small panel.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-8054"></child>
+        <children><child nodeId="node-9331"></child>
+        </children>
+    </item>
+    <item nodeId="node-9331">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a blanket (being worn)
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9332"></child>
+        </children>
+    </item>
+    <item nodeId="node-9332">
+        <command xml:space="preserve">x me</command>
+        <result xml:space="preserve">As virtuous as ever.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9333"></child>
+        </children>
+    </item>
+    <item nodeId="node-9333">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Inside the Hub
+You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and you can continue port or starboard inside the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9334"></child>
+        </children>
+    </item>
+    <item nodeId="node-9334">
+        <command xml:space="preserve">remove blanket</command>
+        <result xml:space="preserve">You take off the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9335"></child>
+        </children>
+    </item>
+    <item nodeId="node-9335">
+        <command xml:space="preserve">remove jumpsuit</command>
+        <result xml:space="preserve">Your nudity is pure and innocent, but still a little cold and uncomfortable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9336"></child>
+        </children>
+    </item>
+    <item nodeId="node-9336">
+        <command xml:space="preserve">port</command>
+        <result xml:space="preserve">The passageway to the port is colder still, too cold for you to bear nude.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9337"></child>
+        </children>
+    </item>
+    <item nodeId="node-9337">
+        <command xml:space="preserve">wear blanket</command>
+        <result xml:space="preserve">You put on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9338"></child>
+        </children>
+    </item>
+    <item nodeId="node-9338">
+        <command xml:space="preserve">port</command>
+        <result xml:space="preserve">They passageway to the port is colder still, too cold for you wearing nothing under the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9339"></child>
+        </children>
+    </item>
+    <item nodeId="node-9339">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a blanket (being worn)
+  a scanner
+  a green jumpsuit
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9340"></child>
+        </children>
+    </item>
+    <item nodeId="node-9340">
+        <command xml:space="preserve">wear jumpsuit</command>
+        <result xml:space="preserve">You put on the green jumpsuit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9341"></child>
+        </children>
+    </item>
+    <item nodeId="node-9341">
+        <command xml:space="preserve">remove blanket</command>
+        <result xml:space="preserve">You take off the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9342"></child>
+        </children>
+    </item>
+    <item nodeId="node-9342">
+        <command xml:space="preserve">port</command>
+        <result xml:space="preserve">The passageway to the port is colder still, too cold for you in only your jumpsuit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8050">
+        <command xml:space="preserve">p</command>
+        <result xml:space="preserve">The passageway to the port is colder still, too cold for you in only your jumpsuit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9349"></child>
+            <child nodeId="node-8054"></child>
         </children>
     </item>
     <item nodeId="node-8054">
@@ -18132,6 +18474,64 @@ You float weightless in the middle of a cylinder. A ladder rotates around you, l
         <command xml:space="preserve">s</command>
         <result xml:space="preserve">
 Starboard End
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-9349">
+        <command xml:space="preserve">purloin blanket</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9350"></child>
+        </children>
+    </item>
+    <item nodeId="node-9350">
+        <command xml:space="preserve">wear blanket</command>
+        <result xml:space="preserve">You put on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9351"></child>
+        </children>
+    </item>
+    <item nodeId="node-9351">
+        <command xml:space="preserve">port</command>
+        <result xml:space="preserve">
+Port End
+You float weightless at the port end of a cylinder.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9352"></child>
+        </children>
+    </item>
+    <item nodeId="node-9352">
+        <command xml:space="preserve">remove blanket</command>
+        <result xml:space="preserve">It is too cold here to even consider removing the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9353"></child>
+        </children>
+    </item>
+    <item nodeId="node-9353">
+        <command xml:space="preserve">drop blanket</command>
+        <result xml:space="preserve">(first taking the blanket off)
+It is too cold here to even consider removing the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9354"></child>
+        </children>
+    </item>
+    <item nodeId="node-9354">
+        <command xml:space="preserve">drop jumpsuit</command>
+        <result xml:space="preserve">(first taking the green jumpsuit off)
+It is too cold here to even consider removing the green jumpsuit.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -24502,6 +24902,507 @@ The only exit is outside to sector 3.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-9286">
+        <command xml:space="preserve">get up</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9287"></child>
+        </children>
+    </item>
+    <item nodeId="node-9287">
+        <command xml:space="preserve">x blanket</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9288"></child>
+        </children>
+    </item>
+    <item nodeId="node-9288">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9289"></child>
+        </children>
+    </item>
+    <item nodeId="node-9289">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181209 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type "about" for credits or "hint" for assistance.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+You can also see a blanket here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9290"></child>
+        </children>
+    </item>
+    <item nodeId="node-9290">
+        <command xml:space="preserve">wear blanket</command>
+        <result xml:space="preserve">(first taking the blanket)
+You put on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9291"></child>
+        </children>
+    </item>
+    <item nodeId="node-9291">
+        <command xml:space="preserve">put scanner in blanket</command>
+        <result xml:space="preserve">That can't contain things.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9292"></child>
+        </children>
+    </item>
+    <item nodeId="node-9292">
+        <command xml:space="preserve">put scanner on blanket</command>
+        <result xml:space="preserve">You can only do that if you drop the blanket first.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-9263">
+        <command xml:space="preserve">get on blanket</command>
+        <result xml:space="preserve">You get onto the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9305"></child>
+            <child nodeId="node-9301"></child>
+            <child nodeId="node-9271"></child>
+            <child nodeId="node-9264"></child>
+        </children>
+    </item>
+    <item nodeId="node-9264">
+        <command xml:space="preserve">wear blanket</command>
+        <result xml:space="preserve">(first taking the blanket)
+You would have to get off the blanket first.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9265"></child>
+        </children>
+    </item>
+    <item nodeId="node-9265">
+        <command xml:space="preserve">get off blanket</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+You can also see a blanket here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9266"></child>
+        </children>
+    </item>
+    <item nodeId="node-9266">
+        <command xml:space="preserve">wear blanket</command>
+        <result xml:space="preserve">(first taking the blanket)
+You put on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9267"></child>
+        </children>
+    </item>
+    <item nodeId="node-9267">
+        <command xml:space="preserve">put blanket on ground</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9268"></child>
+        </children>
+    </item>
+    <item nodeId="node-9268">
+        <command xml:space="preserve">drop blanket</command>
+        <result xml:space="preserve">(first taking the blanket off)
+Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9269"></child>
+        </children>
+    </item>
+    <item nodeId="node-9269">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Home
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-9271">
+        <command xml:space="preserve">take blanket</command>
+        <result xml:space="preserve">You would have to get off the blanket first.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9272"></child>
+        </children>
+    </item>
+    <item nodeId="node-9272">
+        <command xml:space="preserve">get off blanket</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+You can also see a blanket here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9273"></child>
+        </children>
+    </item>
+    <item nodeId="node-9273">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9274"></child>
+        </children>
+    </item>
+    <item nodeId="node-9274">
+        <command xml:space="preserve">put scanner on blanket</command>
+        <result xml:space="preserve">You put the scanner on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9275"></child>
+        </children>
+    </item>
+    <item nodeId="node-9275">
+        <command xml:space="preserve">take blanket</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9276"></child>
+        </children>
+    </item>
+    <item nodeId="node-9276">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Home
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9277"></child>
+        </children>
+    </item>
+    <item nodeId="node-9277">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9278"></child>
+        </children>
+    </item>
+    <item nodeId="node-9278">
+        <command xml:space="preserve">take blanket</command>
+        <result xml:space="preserve">[taking the blanket]
+Taken.
+[taking the blanket - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-9301">
+        <command xml:space="preserve">get up</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+You can also see a blanket here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9302"></child>
+        </children>
+    </item>
+    <item nodeId="node-9302">
+        <command xml:space="preserve">get on blanket</command>
+        <result xml:space="preserve">You get onto the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9303"></child>
+        </children>
+    </item>
+    <item nodeId="node-9303">
+        <command xml:space="preserve">take blanket</command>
+        <result xml:space="preserve">(first taking yourself)
+You are always self-possessed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-9305">
+        <command xml:space="preserve">get blanket</command>
+        <result xml:space="preserve">(first getting off the blanket)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9306"></child>
+        </children>
+    </item>
+    <item nodeId="node-9306">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Home
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9307"></child>
+        </children>
+    </item>
+    <item nodeId="node-9307">
+        <command xml:space="preserve">drop scanner</command>
+        <result xml:space="preserve">Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9308"></child>
+        </children>
+    </item>
+    <item nodeId="node-9308">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+On the blanket you can see a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9309"></child>
+        </children>
+    </item>
+    <item nodeId="node-9309">
+        <command xml:space="preserve">get up</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+You can also see a blanket (on which is a scanner) here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9310"></child>
+        </children>
+    </item>
+    <item nodeId="node-9310">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Home
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9311"></child>
+        </children>
+    </item>
+    <item nodeId="node-9311">
+        <command xml:space="preserve">get blanket</command>
+        <result xml:space="preserve">(first getting off the blanket)
+(first taking the scanner)
+Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9312"></child>
+        </children>
+    </item>
+    <item nodeId="node-9312">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8657">
+        <command xml:space="preserve">get blanket</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9298"></child>
+            <child nodeId="node-8658"></child>
+        </children>
+    </item>
+    <item nodeId="node-8658">
+        <command xml:space="preserve">wear blanket</command>
+        <result xml:space="preserve">You put on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8661"></child>
+        </children>
+    </item>
+    <item nodeId="node-8661">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a blanket (being worn)
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8662"></child>
+        </children>
+    </item>
+    <item nodeId="node-8662">
+        <command xml:space="preserve">put scanner on blanket</command>
+        <result xml:space="preserve">You put the scanner on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8663"></child>
+        </children>
+    </item>
+    <item nodeId="node-8663">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a blanket (being worn)
+    a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8664"></child>
+        </children>
+    </item>
+    <item nodeId="node-8664">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8665"></child>
+        </children>
+    </item>
+    <item nodeId="node-8665">
+        <command xml:space="preserve">drop blanket</command>
+        <result xml:space="preserve">(first taking the blanket off)
+Dropped.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8666"></child>
+        </children>
+    </item>
+    <item nodeId="node-8666">
+        <command xml:space="preserve">get on blanket</command>
+        <result xml:space="preserve">You get onto the blanket.
+
+On the blanket you can see a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8667"></child>
+        </children>
+    </item>
+    <item nodeId="node-8667">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+On the blanket you can see a scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8668"></child>
+        </children>
+    </item>
+    <item nodeId="node-8668">
+        <command xml:space="preserve">showme blanket</command>
+        <result xml:space="preserve">blanket - supporter
+    yourself - person
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+    scanner
+location: in Home
+singular-named, improper-named; unlit, inedible, portable, wearable, handled; enterable
+list grouping key: none
+printed name: "blanket"
+printed plural name: "supporters"
+indefinite article: none
+description: none
+initial appearance: none
+carrying capacity: 100
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-9298">
+        <command xml:space="preserve">drop blanket</command>
+        <result xml:space="preserve">You arrange the blanket on the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-9299"></child>
+        </children>
+    </item>
+    <item nodeId="node-9299">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+You can also see a blanket here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-7543">
         <command xml:space="preserve">exits</command>
         <result xml:space="preserve">The exits are down to the cellar and outside to sector 4.
@@ -26994,7 +27895,17 @@ You must name something more substantial.
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-7748"></child>
             <child nodeId="node-7741"></child>
+            <child nodeId="node-9344"></child>
         </children>
+    </item>
+    <item nodeId="node-9344">
+        <command xml:space="preserve">remove jumpsuit</command>
+        <result xml:space="preserve">[taking off the green jumpsuit]
+Your nudity is pure and innocent, but still a little cold and uncomfortable.
+[taking off the green jumpsuit - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-7741">
         <command xml:space="preserve">out</command>
@@ -28589,5 +29500,12 @@ In that game you scored 9 out of a possible 9, in 59 turns.
 
 Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
 &gt; </commentary>
+    </item>
+    <item nodeId="node-9345">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
 </Skein>
