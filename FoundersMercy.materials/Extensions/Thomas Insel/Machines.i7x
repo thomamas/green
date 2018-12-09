@@ -71,6 +71,9 @@ Chapter 3 - Machines
 
 A machine is a kind of container. A machine is usually open and not openable. A machine is usually fixed in place. A machine can be scanned. A machine usually has carrying capacity zero.
 
+After printing the name of a machine:
+        omit contents in listing.
+
 To decide if (m - a machine) is functional: decide yes.
 
 Before inserting something into a machine:
@@ -86,6 +89,8 @@ Instead of examining a machine:
 			say ".";
 		otherwise:
 			say " [regarding open space]There [are] space[s] for [open space in words] module[s].";
+	otherwise:
+		say line break;
 	follow the list attached things when examining receiver or inserter rule. [* from Plugs and Sockets ]
 
 Instead of the scanner scanning a machine (called m):
@@ -240,9 +245,9 @@ Machines ends here.
 
 ---- Documentation ----
 
-        Example: * Machine
+	Example: * Machine
 
-        Include version 2 of Machines by Thomas Insel.
+	Include version 2 of Machines by Thomas Insel.
 
 	A power module is a kind of module.
 	

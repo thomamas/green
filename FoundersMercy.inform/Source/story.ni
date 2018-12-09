@@ -60,7 +60,7 @@ Use scoring. The maximum score is 9. An object can be scored. An object is usual
 	1 - getting the boots out of the vault
 	1 - red breaker
 
-	2 - green breaker in the pond
+	2 - green valve in the pond
 
 	1 - fixing and closing the atmosphere pump
 
@@ -183,7 +183,23 @@ A USB socket is a kind of PS-socket. It has PS-type "USB".
 An RF plug is a kind of PS-plug. It has PS-type "RF".
 An RF socket is a kind of PS-socket. It has PS-type "RF".
 
+[ G. Cables ]
+
 A cable is a kind of thing.
+
+Instead of examining a cable, say "[the description of the noun] [exam inserter status of the noun]."  [* assume cables have only plugs, no sockets ]
+
+Instead of the scanner scanning a cable:
+	computerize "Cable is functional.";
+	rule succeeds;
+
+Understand "pull [a cable]" as unplugging.
+[ Instead of tying a cable to something, say "Tying the cable would damage it." ]
+
+To decide if (s - a machine) and (t - a machine) are connected:
+	repeat with c running through cables:
+		if c is inserted into the s and c is inserted into the t, decide yes;
+	decide no.
 
 Section 4 - Machines
 
@@ -235,6 +251,8 @@ The player is female. The carrying capacity of the player is 3.
 
 Instead of examining the player, say "As virtuous as ever."
 
+	The player is carrying the scanner. Understand "hey scanner" and "ok scanner" as the scanner.
+
 The player is wearing a green jumpsuit. The jumpsuit has description "You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population." Understand "suit" and "jump suit" and "forest green" and "forest jumpsuit" and "forest suit" and "forest jump" as jumpsuit. Understand "forest" as the green jumpsuit when the location is not Sector 5 and the location is not Sector 3. [* otherwise "forest" alone will have priority over the scenery trees, which is unlikely to be what the player intends ]
 
 The pocket is part of the jumpsuit. It is a container.
@@ -254,7 +272,7 @@ Before an actor taking: [* the pocket can't work as a player's holdall, which be
 
 After examining the jumpsuit:
 	if the pocket contains something:
-		say "The pocket contains [a list of things in the pocket].";
+		say "The pocket contains [a list of things in the pocket including contents].";
 	otherwise:
 		say "It features a single large pocket, currently empty.";
 
@@ -388,7 +406,7 @@ Section 3 - Repairing Pod Bay
 
 Repairing Pod Bay is a scene.
 Repairing Pod Bay begins when Pod Control is visited.
-Repairing Pod Bay ends when Repairing Red Breaker has ended and Repairing Green Breaker has ended and Repairing Atmosphere Pump has ended.
+Repairing Pod Bay ends when Repairing Red Breaker has ended and Repairing Green Valve has ended and Repairing Atmosphere Pump has ended.
 
 [ these subscenes could begin/end at the same time if repairs have already happened, so shouldn't print anything ]
 
@@ -396,9 +414,9 @@ Repairing Red Breaker is a scene.
 Repairing Red Breaker begins when Repairing Pod Bay begins.
 Repairing Red Breaker ends when the red circuit breaker is switched on.
 
-Repairing Green Breaker is a scene.
-Repairing Green Breaker begins when Repairing Pod Bay begins.
-Repairing Green Breaker ends when the green circuit breaker is switched on.
+Repairing Green Valve is a scene.
+Repairing Green Valve begins when Repairing Pod Bay begins.
+Repairing Green Valve ends when the green valve is switched on.
 
 Repairing Atmosphere Pump is a scene.
 Repairing Atmosphere Pump begins when Repairing Pod Bay begins.
@@ -505,7 +523,7 @@ Carry out getting help when Ready to Repair is happening:
 To decide what number is the open pod repair count:
 	let n be 0;
 	if Repairing Red Breaker is happening, increment n;
-	if Repairing Green Breaker is happening, increment n;
+	if Repairing Green Valve is happening, increment n;
 	if Repairing Atmosphere pump is happening, increment n;
 	decide on n.
 
@@ -516,7 +534,7 @@ Carry out getting help when Repairing Pod Bay is happening:
 		let c be the open pod repair count;
 		if c is greater than one, say "You need to make [c in words] repairs, so you get [c in words] hints:[paragraph break]";
 		if Repairing Red Breaker is happening, say "[if c > 1]  • [end if][red breaker help]";
-		if Repairing Green Breaker is happening, say "[if c > 1]  • [end if][green breaker help]";
+		if Repairing Green Valve is happening, say "[if c > 1]  • [end if][green valve help]";
 		if Repairing Atmosphere Pump is happening, say "[if c > 1]  • [end if][pump help]";
 
 To say pump help:
@@ -528,19 +546,17 @@ To say pump help:
 	else:
 		unless any machine has been scanned:
 			say "Now might be a good time to try out the scanner.";
-		else unless a machine has been open:
-			say "Scanning isn't the only thing that the scanner can do.";
 		else unless any module has been scanned:
 			say "You can also scan modules.";
 		else unless there is a functional handled power module and there is a functional handled pressure regulation module:
-			say "You still need to find some modules.";
+			say "You need to find some more modules.";
 		else unless the player encloses a functional scanned power module and the player encloses a functional scanned pressure regulation module:
 			say "You still need to scan some modules.";
 		else:
-			say "Put appropriate functional modules into the pump."
+			say "Put the right functional modules into the pump."
 
-To say green breaker help:
-	say "The Sector 2 circuit breaker is in an awkward spot.";
+To say green valve help:
+	say "The valve is in an awkward spot.";
 
 To say red breaker help:
 	if Platform 3 is visited:
@@ -605,44 +621,9 @@ Before going spinward in the The Sectors, say "You walk a little ways to the nex
 Before going antispinward in the The Sectors, say "You walk a little ways to the next sector."
 
 The Platforms is a region.
-
-Instead of jumping in The Platforms, say "Pseudogravity is definitely weaker up here."
-
-After dropping something (called s) in The Platforms:
-	say "You drop [the s] and it spirals off to the ground below.";
-	let r be a random room in the The Sectors;
-	now s is in r.
-
 Zero-G is a region.
 
-Section 2 - Zero-G rooms
-
-A thing can be floating-exceptioned. Yourself is floating-exceptioned.
-
-After dropping something in zero-g, say "You drop [the noun] and [they] float[s] nearby."
-Instead of jumping in zero-g, say "That's meaningless without gravity."
-Instead of swimming in zero-g, say "You flail around in zero g."
-
-Before printing the locale description:
-	if the location is in zero-g, now the you-can-also-see rule response (F) is " floating here";
-	otherwise now the you-can-also-see rule response (F) is " here";
-
-[
-	This is arbitrary, and it might be friendlier to autotake, but it's only insurance against making the game unwinnable because if the player leaves the gravity boots in the platforms or above, she won't be able to return. This depends on (1) objects dropped in the platforms falling to the sectors, and (2) all rooms above the platforms being zero-g.
-
-	TODO: another way to accomplish this would be to keep the player from dropping the gravity boots in the platforms and to keep her from going down in the platforms without them. Think about this.
-]
-
-Before going from a room in zero-g:
-	let L be the list of things in the location;
-	remove the list of things that are scenery from L;
-	remove the list of things that are floating-exceptioned from L;
-	if the number of entries in L is positive:
-		let item be a random object in L;
-		say "You feel that you shouldn't abondon [the item] floating in zero gravity.";
-		stop the action.
-
-Section 3 - Backdrops in The Sectors
+Section 2 - Backdrops
 
 The hub is a backdrop in The Sectors and in The Platforms. It has description "[if the player is in The Platforms]The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.[otherwise]The station rotates around the hub, which extends out to hold solar panels to the port and mirrors on the starboard side. On the inside, there is a maintenance platform about two thirds of the way up the pylons."
 
@@ -666,24 +647,9 @@ Instead of doing anything other than examining or entering or scanning to the ma
 
 Instead of entering the maintenance platform, say "You will need to climb a pylon to get there."
 
-The TMP is a backdrop in The Platforms. It has description "You are on a circular platform suspended about two thirds of the way up the pylon to the hub." Understand "maintenance" and "platform" as TMP. TMP is privately-named. It has printed name "maintenance platform".
-
-The TP is a backdrop in The Platforms. It has description "The pylon stretches up from the ground, to the maintenance platform, and finally the hub." Understand "pylon" as TP. TP is privately-named. It has printed name "pylon".
-
-Before entering TP, try going down instead.
-
 The BDP are a backdrop in The Even Sectors. They are privately-named and plural-named. They have description "Spinward and antispinward from here, you can see pylons connecting the ground to the hub." They have printed name "pylons". Understand "pylons" as BDP.
 
 Instead of doing anything other than examining to BDP, say "You will need to go to the next sector to do that."
-
-The ground is a backdrop in The Platforms. "You see the ground below you." [override in each platform]
-
-Instead of doing anything other than examining to the ground, say "You are too far away to do that."
-
-Before examining down in the platforms, try examining the ground instead.
-Before examining up in the platforms, try examining the hub instead.
-Before examining up in the sectors, try examining the hub instead.
-Before entering the ground in the platforms, try going down instead.
 
 Section 4 - Pylons
 
@@ -718,7 +684,7 @@ Section 7 - Hatches
 
 	2. if there are more than one floor hatch, the "let d be a random..." behavior means the description can be wrong.
 
-	Since we never have more than one of these in any location, these aren't a problem for this story. The wall hatch doesn't count, since it isn't one of these objects.
+	Since we never have more than one of these in any location, these aren't a problem for this story.
 ]
 
 A floor hatch is a kind of door. "[floor-hatch-short]". It is usually privately-named. It usually has description "[The noun] [are] [if noun is open]open[else]closed[end if]." It usually has printed name "[if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]". It usually has printed plural name "[if the player is in Underneath]ceiling hatches[otherwise]floor hatches[end if]"
@@ -771,27 +737,27 @@ Chapter 1 - Sector 1
 
 Sector 1 is a room in The Sectors. "You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward." It has printed name "Sector 1: Crops". It has destination name "sector 1".
 
-There is a pylon in Sector 1.
-
 Some crops are scenery in Sector 1. They have description "You are proud of the grain and legumes." Understand "grain" and "legumes" as some crops.
 
-Instead of eating some crops, say "You're not hungry."
+Instead of eating some crops, say "You aren't hungry."
 
 The graveyard is scenery in Sector 1. It has description "Fenced off but unmarked graves. You buried your parents here." Understand "small" and "graves" and "grave" and "fence" as the graveyard.
 
-Section 1 - Barn
+There is a pylon in Sector 1.
+
+A S1H1 is a floor hatch. S1H1 is down from Sector 1 and up from Pod Control.
 
 A S1B1 is a building. It is inside of Sector 1. Through it is Barn. S1B1 is scenery. It has description "A single story barn." It has printed name "barn". Understand "barn" as S1B1.
 
-[ Because we can't use Understand "[building]" as entering... See note in Book 4 Section 7 ]
-
 Understand "barn" as barn-going when the S1B1 is visible.
 Barn-going is an action applying to nothing.
-Before barn-going, try entering S1B1 instead.
+Before barn-going, try entering S1B1 instead. [* Because we can't use Understand "[building]" as entering... See note in Book 4 Section 8 ]
+
+Section 1 - Barn
 
 Barn is a room. "Not fancy: livestock on one side and feed on the other, but nothing remains of either. There is a plow near the entrance." It has destination name "the barn". Sector 1 is outside of barn.
 
-A plow is scenery in the barn. It is pushable between rooms. It has description "A steel walking plow."
+A plow is scenery in the barn. It is pushable between rooms. It has description "A steel walking plow." Understand "plough" as plow.
 
 Before pushing or pulling or turning or taking the plow, say "This plow is too heavy to move around without purpose." instead.
 
@@ -799,11 +765,7 @@ Before going with the plow, try pushing the plow instead.
 
 Section 2 - Pod Control
 
-There is a room called Pod Control. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall." It has destination name "pod control".
-
-Pod Control is in Underneath.
-
-A S1H1 is a floor hatch. S1H1 is down from Sector 1 and up from Pod Control.
+Pod Control is a room in Underneath. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall." It has destination name "pod control".
 
 A space suit is here. It is machinelike scenery. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: the seals are leaking and there are no spares left."
 
@@ -826,21 +788,23 @@ Instead of examining the status display:
 	otherwise:
 		computerize "Pod bay locked down";
 		let i be 1;
-		if red circuit breaker is switched off,
+		if red circuit breaker is switched off:
 			computerize " [i]. Telemetry sensor array offline - reset breaker FM36-87/A @ hub platform";
 			increment i;
-		if green circuit breaker is switched off,
-			computerize " [i]. Launch system cooling loop offline - reset breaker FM29-63/A @ Sector 2";
+		if green valve is switched off:
+			computerize " [i]. Launch system cooling loop offline - open backup valve @ Sector 2";
 			increment i;
-		if the atmosphere pump is functional: [todo]
-			if S1H1 is open:
-				computerize " [i]. Secure pod control hatch";
-		else: [the atmosphere pump is not functional]
-			computerize " [i]. Pod control atmosphere pump offline - scan and repair";
+		unless the Pod Bay is pressurized:
+			computerize " [i]. Pod bay depressurized - scan and repair atmosphere pump";
+		else unless the atmosphere pump is functional:
+			computerize " [i]. Atmosphere pump offline";
+		else if S1H1 is open:
+			computerize " [i]. Secure pod control hatch";
 
 The atmosphere pump is a machine. It is in Pod Control. It is scenery. It has carrying capacity 2. It has description "[If the atmosphere pump is functional]The featureless atmosphere pump is softly humming.[otherwise]The atmosphere pump is a smooth featureless machine." Understand "machine" and "machinery" as the atmosphere pump.
 
-The atmosphere pump contains a faulty power module and a faulty pressure regulation module.	
+The atmosphere pump contains a faulty power module and a faulty pressure regulation module.
+
 To decide if (m - the atmosphere pump) is functional:
 	unless m encloses a functional power module, decide no;
 	unless m encloses a functional pressure regulation module, decide no;
@@ -856,6 +820,7 @@ Definition: the atmosphere pump is usable if the atmosphere pump is functional. 
 Every turn when the atmosphere pump is visible:
 	if the atmosphere pump was not usable and the atmosphere pump is usable:
 		say "The atmosphere pump begins to hum.";
+		now Pod Bay is pressurized;
 		if the atmosphere pump is not scored:
 			increase the score by 1;
 			now the atmosphere pump is scored.
@@ -864,28 +829,28 @@ Definition: the pod bay is ready if every circuit breaker is switched on and the
 
 Every turn when the player is in Pod Control:
 	if the pod bay is ready:
-		now the wall hatch is unlocked;
+		now the bulkhead door is unlocked;
 	otherwise:
-		now the wall hatch is locked;
-	if the wall hatch is open:
+		now the bulkhead door is locked;
+	if the bulkhead door is open:
 		now S1H1 is locked;
 	otherwise:
 		now S1H1 is unlocked.
 
-A door called the wall hatch is port from Pod Control and starboard from Pod Bay. It is closed and locked. "[if the player is in Pod Control][pod-bay-hatch-pc][otherwise][pod-bay-hatch-pb][end if]."
+A door called the bulkhead door is port from Pod Control and starboard from Pod Bay. It is closed and locked. "[if the player is in Pod Control][pod-bay-door-pc][otherwise][pod-bay-door-pb][end if]."
 
-Understand "port" as the wall hatch when the player is in Pod Control.
-Understand "starboard" as the wall hatch when the player is in Pod Bay.
+Understand "port" as the bulkhead door when the player is in Pod Control.
+Understand "starboard" as the bulkhead door when the player is in Pod Bay.
 
-To say pod-bay-hatch-pc:
-	say "Beside the [if wall hatch is open]open[otherwise]secured[end if] port hatch, a status display [if pod bay is ready]glows green[otherwise]shows an error message[end if]"
+To say pod-bay-door-pc:
+	say "Beside the [if bulkhead door is open]open[otherwise]secured[end if] port door, a status display [if pod bay is ready]glows green[otherwise]shows an error message[end if]"
 	
-To say pod-bay-hatch-pb:
-	say "[if wall hatch is open]An open[otherwise]A secured[end if] hatch leads starboard"
+To say pod-bay-door-pb:
+	say "[if bulkhead door is open]An open[otherwise]A secured[end if] door leads starboard"
 
 Section 3 - Pod Bay
 
-There is a room called Pod Bay. "There are four berths for transit pods. Unfortunately, all are empty." It has destination name "the pod bay". Pod Bay is in Underneath. 
+There is a room called Pod Bay. "There are four berths for transit pods. Unfortunately, all are empty." It has destination name "the pod bay". Pod Bay is in Underneath. Pod Bay can be pressurized. Pod Bay is not pressurized.
 
 Instead of going nowhere from Pod Bay when the noun is outside, try going starboard.
 Instead of exiting in Pod Bay, try going starboard.
@@ -896,7 +861,56 @@ Instead of opening or closing the berths, say "The doors open and close automati
 Instead of unlocking the berths with something, try opening the berths.
 Instead of locking the berths with something, try closing the berths.
 
-An emergency communications unit is here. "Someone left an emergency communications unit on the floor." It is a not fixed in place machine. It has description "A portable emergency communications unit. Normally, it would connect to audio and antenna cables in a pod, but you will need to find another way." It has indefinite article "the". Understand "comms" as communications unit. Incorporated by the communications unit is a usb socket called the almond socket. Incorporated by the communications unit is an rf socket.
+A pile of clutter is here. It is fixed in place. "There is a pile of clutter. It looks like equipment removed to free up space in the transit pods."
+
+To decide what list of things is clutter things:
+	let L be a list of things;
+	if the atmosphere sensor is undescribed, add the atmosphere sensor to L;
+	if the emergency communications unit is undescribed, add the emergency communications unit to L;
+	add some unremarkable junk to L; [* junk is fixed in place, so L is never empty ]
+	decide on L;
+
+Instead of pulling or pushing or turning or squeezing or swinging the pile:
+	say "That isn't practical."
+
+Before going with the pile, try pushing the pile instead.
+
+Instead of examining the pile of clutter:
+	let L be clutter things;
+	say "[regarding the number of entries in L]There [are] [if the number of entries in L is one]only [end if][L with indefinite articles]."
+
+Instead of searching the pile of clutter:
+	let L be clutter things;
+	say "You find [if the number of entries in L is one]nothing of interest[otherwise][L with indefinite articles][end if]."
+
+Before taking the pile of clutter:
+	let L be clutter things;
+	if the number of entries in L is one:
+		say "There is nothing you need left in the pile." instead;
+	otherwise:
+		say "You should try taking something specific instead." instead.
+
+Pile-taking is an action applying to two things. [* because I didn't want the pile to be a container for some reason ]
+
+Understand "take [something] from [the pile]" as pile-taking when the pile is visible.
+Understand "get [something] from [the pile]" as pile-taking when the pile is visible.
+
+Instead of pile-taking:
+	if the noun is undescribed:
+		try taking the noun;
+	otherwise:
+		say "But [regarding the noun][they] [aren't] there now.";
+
+Some unremarkable junk is here. It is undescribed. It is fixed in place. Instead of doing something to the unremarkable junk, say "It really is unremarkable."
+
+An atmosphere sensor is here. It has description "A small box with a large light that is slowly flashing amber." It is undescribed.
+
+Instead of the scanner scanning the atmosphere sensor:
+	now the atmosphere sensor is scanned;
+	computerize "Machine functional. Pressure low at 80 kilopascals, O[Unicode 8322] normal, CO[Unicode 8322] high at 0.10%. No immediate danger.";
+	rule succeeds;
+
+An emergency communications unit is here. It is an undescribed not fixed in place machine. It has description "A bulky but portable emergency communications unit from a transit pod. It can work independently if you provide audio and antenna connections." Understand "comms" as communications unit. Incorporated by the communications unit is a usb socket called the almond socket. Incorporated by the communications unit is an rf socket.
 
 To say comms-usb-status:
 	if audio and communications are connected:
@@ -917,46 +931,26 @@ Instead of the scanner scanning the communications unit:
 	computerize "Machine functional. [comms-usb-status]. [comms-rf-status].";
 	rule succeeds.
 
-Section 4 - Platform 1
-
-Platform 1 is a room in The Platforms. Sector 1 is down from Platform 1. Nothing is up from Sector 1. 
-
-Platform 1 has description "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub." [todo pylon]
-
-After going down from Platform 1:
-	say "You slide down the pylon.";
-	now the player is in Sector 1.
-
-Understand "crops" as the ground when the player is in Platform 1.
-
-Instead of examining the ground in platform 1, say "The pylon descends to the crops below you."
-
-Before entering the hub in platform 1, try going up instead.
-
-After going up in platform 1, say "Gravity fades as you climb."
-
-The ladder is a door. It is open and not openable and scenery. It is up from Platform 1 and outside from Inside the Hub. It has description "[if the location is Platform 1]A ladder leads up into the hub.[otherwise]The ladder moves with the station, rotating around you about four times every minute."
-
 Chapter 2 - Sector 2
 
-Sector 2 is spinward from Sector 1. It is in The Even Sectors. "A deep pond is used as part of the water filtration system and for raising fish. You can walk spinward or antispinward." It has printed name "Sector 2: Aquaculture". It has destination name "sector 2".
+Sector 2 is spinward from Sector 1. It is in The Even Sectors. "A deep pond with some fish. You can walk spinward or antispinward." It has printed name "Sector 2: Aquaculture". It has destination name "sector 2".
 
-The pond is scenery in sector 2. It has description "Something to do with water filtration, and there are still some fish." Understand "water" and "deep" and "pool" as the pond.
+The pond is scenery in sector 2. It has description "Something to do with water filtration, and it was used for raising fish. A few remain." Understand "water" and "deep" and "pool" as the pond.
 
 Before looking under the pond, try searching the pond instead.
-Before swimming when the player is in Sector 2, try entering the pond instead.
+Before swimming when the pond is visible, try entering the pond instead.
 Before swimming in the pond, try entering the pond instead.
 
-Instead of drinking or tasting the pond, say "It's a bit fishy."
-Instead of searching the pond, say "[The pond] is pretty murky, but you can see a few fish from here."
+Instead of drinking or tasting the pond, say "It tastes murky."
+Instead of searching the pond, say "From above, you can make out a few fish in the murky water."
 
 Instead of entering the pond:
 	if the player is wearing the mask:
-		if the green circuit breaker is switched on:
-			say "You have already turned the green breaker on.";
+		if the green valve is switched on:
+			say "You have already completed everything necessary underwater.";
 		otherwise:		
-			say "With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a green circuit breaker and flip it on.";
-			now the green breaker is switched on;
+			say "With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a valve and open it.";
+			now the green valve is switched on;
 			increase the score by 2;
 	otherwise:
 		say "You can't hold your breath long enough to make that worthwhile."
@@ -965,7 +959,7 @@ Some fish are scenery in sector 2. They have description "There are still a few 
 
 Instead of doing anything other than examining or scanning to the fish, say "The fish aren't easy to catch."
 
-The green circuit breaker is a circuit breaker. It is switched off. It is nowhere.
+The green valve is a circuit breaker. It is switched off. It is nowhere.
 
 Chapter 3 - Sector 3
 
@@ -981,10 +975,11 @@ Before going up in Sector 3, try climbing S3P1 instead.
 
 Instead of climbing S3P1:	
 	 if the player is wearing the gravity boots:
-		say "With the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.";
+		say "Wearing the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.";
 		now the player is in Platform 3;
+		change the up exit of Sector 3 to Platform 3;
 	otherwise:
-		say "The red pylon is designated for climbing, but you can't get a grip."
+		say "The red pylon is designated for climbing, but your feet keep slipping when you try to go up."
 
 There is a forest in Sector 3.
 
@@ -993,8 +988,6 @@ Instead of looking under a forest in Sector 3, say "Only the house and church."
 A S3B1 is a building. It is scenery. It is port of Sector 3. It is privately-named. It has description "A small white building with a steeple." It has printed name "church". Understand "church" and "steeple" and "small" and "white" and "building" as S3B1. Through it is Church.
 
 A S3B2 is a building. It is scenery. It is starboard of Sector 3. It is privately-named. It has description "What looks like whitewashed siding is really a lightweight plastic." It has printed name "the house". Understand "whitewashed" and "siding" and "lightweight" and "plastic" and "house" and "building" as S3B2. Through it is House.
-
-[ Because we can't use Understand "[building]" as entering... See note in Book 4 Section 7 ]
 
 Understand "church" as church-going when the S3B1 is visible.
 Church-going is an action applying to nothing.
@@ -1006,15 +999,15 @@ Before house-going, try entering S3B2 instead.
 
 Section 1 - Church
 
-Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ[if the portable audio unit is undescribed] and a portable audio unit stand[else] stands[end if] against the other." It has destination name "the church".
-
-An altar is a fixed in place scenery supporter in church. It has description "Really just a table."
-
-The Founder's Testament is on the altar. It has description "The Founder's Testament tells how your people left Old Earth and first settled the station. You know the story by heart, and have already derived whatever comfort you can from this book." It has indefinite article "The". Understand "book" and "bible" as testament.
+The Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ[if the portable audio unit is undescribed] and a portable audio unit stand[else] stands[end if] against the other." It has destination name "the church".
 
 Sector 3 is outside of church.
 
 Instead of going nowhere in church when the noun is starboard, try going outside.
+
+An altar is a fixed in place scenery supporter in church. It has description "Really just a table."
+
+The Founder's Testament is on the altar. It has description "The Founder's Testament tells how your people left Old Earth and first settled the station. You know the story by heart, and have already derived whatever comfort you can from this book." It has indefinite article "The". Understand "book" and "bible" as testament.
 
 [ organ ]
 
@@ -1074,31 +1067,13 @@ After taking the audio unit:
 
 [ cable and connectivity ]
 
-A gray cable is a cable in Church. "A gray cable connects the organ to the audio unit." Incorporated by it are two usb plugs. It has description "A one meter USB 7.2 cable with a Type-F plug at each end." Understand "grey" and "usb" as the gray cable. It is machinelike.
+A gray cable is a cable in Church. "A gray cable connects the organ to the audio unit." Incorporated by it are two usb plugs. It has description "A one meter USB 7.2 cable with a Type-F plug at each end." Understand "grey" and "usb" as the gray cable.
 
-Instead of the scanner scanning the cable:
-	computerize "Cable is functional.";
-	rule succeeds;
-
-Understand "pull [the gray cable]" as unplugging.
-[ Instead of tying the cable to something, say "Tying the cable would damage it." ]
-
-A rule for reaching inside Church: [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
-	if the turn count is greater than 1:
-		deny access;
-	otherwise:
-		allow access.
+A rule for reaching inside Church when the turn count is one: allow access. [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
 
 When play begins:
 	silently try plugging the gray cable into the tan socket;
 	silently try plugging the gray cable into the beige socket.
-
-[ connection checking ]
-
-To decide if (s - a machine) and (t - a machine) are connected:
-	repeat with c running through cables:
-		if c is inserted into the s and c is inserted into the t, decide yes;
-	decide no.
 
 Definition: the communications unit is almost usable if
 	the communications unit is functional and
@@ -1115,7 +1090,7 @@ Definition: the organ is usable if audio unit and organ are connected and the au
 
 Section 2 - House
 
-House is a room. "Two families lived here, but not recently." It has destination name "the house".
+The House is a room. "Two families lived here, but not recently." It has destination name "the house".
 
 Sector 3 is outside of house.
 
@@ -1123,40 +1098,11 @@ Instead of going nowhere in house when the noun is port, try going outside.
 
 A doll is in house. "Someone has left a doll on the well swept floor." It has description "Wearing a brown jumpsuit and faceless, because we are all alike in the Founder's eyes. It was yours once, but you passed it on with other childish things when you were old enough to help in the fields." Understand "faceless" and "brown" and "jumpsuit" as the doll. [todo: play with doll]
 
-Section 3 - Platform 3
-
-After going up in platform 1, say "Gravity fades as you climb."
-
-Sector 3 is down from Platform 3. Platform 3 is spinward from Platform 1. Nothing is up from Sector 3. Platform 3 has description "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward[if the player is in platform 3 for the first time].[paragraph break]You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down[end if]."
-
-Platform 3 is in the Platforms.
-
-Before going down from Platform 3:
-	change the up exit of Sector 3 to Platform 3;
-	say "You [if the player is wearing the gravity boots]climb[else]slide[end if] down the pylon.";
-
-A red circuit breaker is a circuit breaker in Platform 3. "There is a red circuit breaker here." The red circuit breaker is machinelike. [todo - better description]
-
-Instead of the scanner scanning the red circuit breaker:
-	computerize "Machine is functional. Breaker is [if the red circuit breaker is switched on]closed[otherwise]open[end if].";
-	rule succeeds.
-
-After switching on the red circuit breaker:
-	say "You reach out and switch the circuit breaker on.";
-	increase the score by 1.
-
-Instead of examining the ground in platform 3, say "The pylon descends into the forest below you."
-
-Understand "trees" or "forest" as the ground when the player is in platform 3.
-
-
 Chapter 4 - Sector 4
 
 Sector 4 is spinward from Sector 3. It is in The Even Sectors. "Your home is here among the crops. You can walk spinward or antispinward." It has printed name "Sector 4: Crops". It has destination name "sector 4".
 
-The S4B1 is a building. It is inside of Sector 4. It is scenery. It has description "You were told it was built to look like a log cabin on Old Earth." It has printed name "home". Through it is Home. Understand "home" or "house" as S4B1.
-
-[ Because we can't use Understand "[building]" as entering... See note in Book 4 Section 7 ]
+The S4B1 is a building. It is inside of Sector 4. It is scenery. It has description "You father always said it was built to look like a log cabin on Old Earth." It has printed name "home". Through it is Home. Understand "home" or "house" as S4B1.
 
 Understand "home" as home-going when the S4B1 is visible.
 Home-going is an action applying to nothing.
@@ -1166,38 +1112,47 @@ Instead of searching S4B1, say "You would need to enter your home to do that."
 
 Some vegetables are scenery in Sector 4. They have description "Greens, carrots, and potatoes." Understand "crops" and "greens" and "carrots" and "potatoes" as some vegetables.
 
-Instead of eating some vegetables, say "You're not hungry."
+Instead of eating some vegetables, say "You aren't hungry."
 
 Section 1 - Home
 
-Home is a room. "The room where you've slept your entire life. You can go out to your crops." It has destination name "your home".
+Home is a room. "The room where you've slept your entire life. The crops are outside." It has destination name "your home".
 
 Sector 4 is outside of home.
 
-The player is in Home. The player is carrying the scanner. Understand "hey scanner" and "ok scanner" as the scanner.
+The player is in Home.
 
 Section 2 - Cellar
 
 A S4H1 is a floor hatch. It is down from Home and up from Cellar.
 
-Cellar is in Underneath. "Your decompression shelter and space for some increasingly empty shelves of canned vegetables." It has destination name "the cellar".
+The Cellar is in Underneath. "Your decompression shelter and storage space for increasingly empty shelves of canned vegetables and one more large bag of split peas." It has destination name "the cellar".
+
+[ scenery ]
 
 Some shelves are scenery in cellar. "Almost a hundred jars of canned vegetables are on the makeshift shelves that line the wall.[if the emergency mask is undescribed] So is your emergency mask." They are a supporter. Understand "shelf" and "shelfs" and "wall" and "wall of shelves" and "spinward" and "makeshift" as shelves.
 
-Instead of climbing the shelves: say "There is no chance they would support your weight."
+Instead of climbing the shelves, say "There is no chance they would support your weight."
 
 Before searching the shelves, try examining the shelves instead.
 
-Some canned vegetables are scenery on shelves. "Mostly tomatoes, green beans, carrots, and okra. Without a new source of salt or acid, too much of your recent harvest has been left to spoil." Understand "tomatoes" and "green" and "beans" and "carrots" and "okra" and "mason" and "jar" and "jars" as canned vegetables.
+Some canned vegetables are scenery on shelves. "Mostly tomatoes, green beans, carrots, and okra. Without a new source of salt or acid, too much of your recent harvest has been left to spoil." Understand "tomatoes" and "green" and "beans" and "carrots" and "okra" and "mason" and "jar" and "jars" and "can" and "cans" as canned vegetables.
 
 Instead of eating or opening or taking or tasting or drinking the canned vegetables, say "You aren't hungry."
 
 Instead of doing anything other than examining to the canned vegetables, say "That's not where your attention belongs just now."
 
+A large bag of split peas is here. It is scenery. It has description "Legumes are your best remaining source of protein."
+
+Instead of eating or opening or taking or tasting or drinking the bag of split peas, say "You aren't hungry."
+
+Instead of doing anything other than examining to the bag of split peas, say "That's not where your attention belongs just now."
+
+[ mask ]
+
 An emergency mask is on shelves. It is undescribed, wearable, and machinelike. It has description "You wore this mask when there were regular decompression drills."
 
-Instead of singing when the player is wearing the emergency mask:
-	say "You can't sing while wearing the mask.";
+Instead of singing when the player is wearing the emergency mask, say "You can't sing while wearing the mask.";
 
 The can't scan with your mask on rule is listed before the scanner must be enclosed rule in the scanner precheck rules.
 
@@ -1211,8 +1166,6 @@ Chapter 5 - Sector 5
 Sector 5 is spinward from Sector 4. It is in The Sectors. "The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward." It has printed name "Sector 5: Forest". It has destination name "sector 5".
 
 A S5B1 is a building. It is scenery. It is inside of sector 5. It has description "Little and red, the traditional markings of a school building." It has printed name "school house". Through it is School House. Understand "school" and "building" and "house" as S5B1.
-
-[ Because we can't use Understand "[building]" as entering... See note in Book 4 Section 7 ]
 
 Understand "school" or "school house" as school-going when the S5B1 is visible.
 School-going is an action applying to nothing.
@@ -1275,20 +1228,7 @@ Instead of attacking the eraser:
 		now eraser is attacked;
 		say "You fill the area with a cloud of dust, which quickly clears."		
 
-Section 4 - Platform 5
-
-Platform 5 is a room in The Platforms. Sector 5 is down from Platform 5. Nothing is up from Sector 5. Platform 5 is spinward from Platform 3 and antispinward from Platform 1.
-
-Platform 5 has description "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward."
-
-After going down from Platform 5:
-	say "You slide down the pylon.";
-	now the player is in Sector 5.
-
-Instead of examining the ground in platform 5, say "The pylon descends into the forest below you."
-
-Understand "trees" or "forest" as the ground when the player is in platform 5.
-
+[ todo "clean/rub eraser" ]
 
 Chapter 6 - Sector 6
 
@@ -1311,7 +1251,7 @@ A vault hatch is a floor hatch. Vault hatch is down from Sector 6 and up from Su
 
 Section 1 - The Supply Vault
 
-The Supply Vault is a room. "This room is dim, quiet, and stuffy. There is still a crate of machine parts left.[if laser is dusty][paragraph break]You see a laser beam scan across the exit.[end if]". It has destination name "the supply vault". Supply Vault is in underneath.
+The Supply Vault is a room. "This room is dim, quiet, and stuffy. There is still one crate of machine parts left.[if laser is dusty][paragraph break]You see a laser beam scan across the exit.[end if]". It has destination name "the supply vault". Supply Vault is in underneath.
 
 [ crate ]
 
@@ -1332,13 +1272,13 @@ Instead of inserting something (called s) into the crate of machine parts:
 	now s is in the junk repository;
 	say "You add [the s] to the machine parts in the crate."
 
-[ boots ]
+[ laser & boots ]
 
-A pair of gravity boots is in the supply vault. The gravity boots are wearable. They have description "Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity or on the outside of a rotating station."
+A pair of gravity boots is in the supply vault. The gravity boots are wearable. They have description "Black work boots with red stripes. They don't really make gravity, but they do stick to some maintenance walkways to help workers get around in low gravity."
 
-[ laser ]
+A laser beam is scenery. It has description "The cloud of dust scatters the laser beam just enough that you can see it scan across the north passageway at seemingly random angles." Understand "dust" and "cloud" and "cloud of dust" as the laser beam. The laser beam can be dusty. The laser beam is not dusty. The laser can be alarmed. The laser is not alarmed.
 
-A laser beam is scenery. It has description "The cloud of dust scatters the laser beam just enough that you can see it scan across the north passageway at seemingly random angles." Understand "dust" and "cloud" and "cloud of dust" as the laser beam. The laser can be dusty. The laser beam is not dusty. The laser can be alarmed. The laser is not alarmed.
+Before doing something other than examining when the current action involves the laser beam, say "The laser beam is intangible." instead.
 
 To trip the laser alarm:
 	say "An alarm sounds, [if the vault hatch is open]the hatch slams shut, [end if]and a synthesized voice says 'Laser scan detects unauthorized materiel removal.'";
@@ -1347,43 +1287,142 @@ To trip the laser alarm:
 	now the laser is alarmed;
 	stop the action.
 
-Before doing something other than examining when the current action involves the laser beam, say "The laser beam is intangible." instead.
-
-Before going up from the supply vault when the laser is dusty and the vault hatch is open, say "You maneuver around the laser beam and pull yourself up through the ceiling hatch."
-
-Before opening vault hatch when the player is in the supply vault and the laser is dusty, say "You maneuver around the laser beam."
-
 Before going up from the supply vault when the player encloses the gravity boots and the laser is not dusty, trip the laser alarm instead.
 
-Before opening vault hatch when
-	the player is in the supply vault and
-	the vault hatch is closed and
-	the player encloses the gravity boots and
-	the laser is not dusty, trip the laser alarm instead.
+Before opening the vault hatch when the player is in the supply vault and the player encloses the gravity boots and the laser is not dusty and the vault hatch is closed, trip the laser alarm instead.
 
 Before touching the laser beam when the player encloses the gravity boots, trip the laser alarm instead.
+
+Escaping from vault is a truth state that varies. Escaping from vault is false.
+Every turn: now escaping from vault is false. [* this is ugly ]
+Before going up from the supply vault when the laser is dusty: now escaping from vault is true;
+
+After opening the vault hatch when the player is in the supply vault and the laser is dusty:
+	if escaping from vault is true:
+		say "You maneuver around the laser beam, open [the vault hatch], and pull yourself up through it.";
+	otherwise:
+		say "You maneuver around the laser beam and open [the vault hatch].";
+
+Before going up from the supply vault when the laser is dusty and the vault hatch is open, say "You maneuver around the laser beam and pull yourself up through the ceiling hatch."
 
 Instead of attacking the dusty eraser in the supply vault:
 	if the actor is not carrying the eraser, carry out the implicitly taking activity with the eraser;
 	if the laser is dusty:
 		say "You add to the cloud of dust.";
 	otherwise:
-		say "You fill the vault with a cloud of dust and you can now see a laser beam scanning across the hatch.";
+		say "You fill the vault with a cloud of dust which scatters the laser beam that you can now see scanning across the hatch.";
 	the laser dust settles in four turns from now;
 	now the laser is dusty;
-	now eraser is attacked;
+	now eraser is attacked.
 
 After deciding the scope of the player when the location is the supply vault and the laser beam is dusty, place the laser beam in scope.
 
 At the time when the laser dust settles:
 	now the laser is not dusty;
-	if the player is in the Supply Vault, say "The cloud of dust finally dissipates.";
+	if the player is in the Supply Vault, say "The cloud of dust dissipates.";
 
-Chapter 7 - The Hub
+Chapter 7 - The Platforms
+
+Instead of jumping in The Platforms, say "Pseudogravity is definitely weaker up here."
+
+After dropping something (called s) in The Platforms:
+	say "You drop [the s] and it spirals off to the ground below.";
+	let r be a random room in the The Sectors;
+	now s is in r.
+
+The TMP is a backdrop in The Platforms. It has description "You are on a circular platform suspended about two thirds of the way up the pylon to the hub." Understand "maintenance" and "platform" as TMP. TMP is privately-named. It has printed name "maintenance platform".
+
+The TP is a backdrop in The Platforms. It has description "The pylon stretches up from the ground, to the maintenance platform, and finally the hub." Understand "pylon" as TP. TP is privately-named. It has printed name "pylon".
+
+Before entering TP, try going down instead.
+
+The ground is a backdrop in The Platforms. "You see the ground below you." [override in each platform]
+
+Instead of doing anything other than examining to the ground, say "You are too far away to do that."
+
+Before examining down in the platforms, try examining the ground instead.
+Before examining up in the platforms, try examining the hub instead.
+Before examining up in the sectors, try examining the hub instead.
+Before entering the ground in the platforms, try going down instead.
+
+Section 1 - Platform 1
+
+Platform 1 is a room in The Platforms. "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub." [todo pylon] Sector 1 is down from Platform 1. Nothing is up from Sector 1. 
+
+Before going down from Platform 1, say "You slide down the pylon."
+
+Before going up from platform 1, say "Gravity fades as you climb."
+
+Before entering the hub in platform 1, try going up instead.
+
+The ladder is a door. It is open and not openable and scenery. It is up from Platform 1 and outside from Inside the Hub. It has description "[if the location is Platform 1]A ladder leads up into the hub.[otherwise]The ladder moves with the station, rotating around you about four times every minute."
+
+Understand "crops" as the ground when the player is in Platform 1.
+
+Instead of examining the ground in platform 1, say "The pylon descends to the crops below you."
+
+
+Section 2 - Platform 3
+
+Platform 3 is a room in The Platforms. "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward[if the player is in platform 3 for the first time].[paragraph break]You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down[end if]." Sector 3 is down from Platform 3. Nothing is up from Sector 3. Platform 3 is spinward from Platform 1.
+
+Before going down from Platform 3, say "You [if the player is wearing the gravity boots]climb[else]slide[end if] down the pylon.";
+
+A red circuit breaker is a circuit breaker in Platform 3. "There is a red circuit breaker here." The red circuit breaker is machinelike. [todo - better description]
+
+Instead of the scanner scanning the red circuit breaker:
+	computerize "Machine is functional. Breaker is [if the red circuit breaker is switched on]closed[otherwise]open[end if].";
+	rule succeeds.
+
+After switching on the red circuit breaker:
+	say "You reach out and switch the circuit breaker on.";
+	increase the score by 1.
+
+Understand "trees" or "forest" as the ground when the player is in platform 3.
+
+Instead of examining the ground in platform 3, say "The pylon descends into the forest below you."
+
+Section 3 - Platform 5
+
+Platform 5 is a room in The Platforms. "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward." Sector 5 is down from Platform 5. Nothing is up from Sector 5. Platform 5 is spinward from Platform 3 and antispinward from Platform 1.
+
+Before going down from Platform 5, say "You slide down the pylon."
+
+Understand "trees" or "forest" as the ground when the player is in platform 5.
+
+Instead of examining the ground in platform 5, say "The pylon descends into the forest below you."
+
+Chapter 8 - The Hub
+
+After dropping something in zero-g, say "You drop [the noun] and [they] float[s] nearby."
+Instead of jumping in zero-g, say "That's meaningless without gravity."
+Instead of swimming in zero-g, say "You flail around in zero g."
+
+Before printing the locale description:
+	if the location is in zero-g, now the you-can-also-see rule response (F) is " floating here";
+	otherwise now the you-can-also-see rule response (F) is " here";
+
+[
+	This is arbitrary, and it might be friendlier to autotake, but it's only insurance against making the game unwinnable because if the player leaves the gravity boots in the platforms or above, she won't be able to return. This depends on (1) objects dropped in the platforms falling to the sectors, and (2) all rooms above the platforms being zero-g.
+
+	TODO: another way to accomplish this would be to keep the player from dropping the gravity boots in the platforms and to keep her from going down in the platforms without them. Think about this.
+]
+
+A thing can be floating-exceptioned. Yourself is floating-exceptioned.
+
+Before going from a room in zero-g:
+	let L be the list of things in the location;
+	remove the list of things that are scenery from L;
+	remove the list of things that are fixed in place from L;
+	remove the list of things that are floating-exceptioned from L;
+	if the number of entries in L is positive:
+		let item be a random object in L;
+		say "You aren't comfortable leaving behind [the item] floating in zero gravity.";
+		stop the action.
 
 Section 1 - Inside the Hub
 
-Inside the Hub has description "You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out." It is in zero-g. It is unfamiliar.
+Inside the Hub has description "You float weightless in the middle of a cylinder. A ladder rotates around you, leading up or down or maybe out, and you can continue port or starboard inside the hub." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub". [todo - port/sbd]
 
 Before going down in Inside the Hub, try going outside instead.
 Before going up in Inside the Hub, try going outside instead.
@@ -1392,42 +1431,37 @@ After going outside from Inside the Hub:
 	say "You [one of]make sure you are heading legs first and follow the ladder[or]struggle a little to arrange your orientation and follow the ladder[or]fight off a moment of vertigo and climb the ladder[at random].";
 	continue the action.
 
-[ -------- -------- -------- -------- -------- -------- -------- -------- ]
+Section 2 - Port End
 
-The antenna panel is scenery in Inside the Hub.  It is a machine. It has description "Panel." Incorporated by the antenna panel is an RF socket. [ todo - description ]
+[ this end is near the solar panels and antennas ]
+
+Port End is port of Inside the hub. "You float weightless at the port end of a cylinder." It is in zero-g. It is unfamiliar.It has destination name "the port end of the hub".
+
+The antenna panel is scenery in Port End.  It is a machine. It has description "Panel." Incorporated by the antenna panel is an RF socket. [ todo - description ]
 
 [ todo: scan panel if needed for antenna puzzle
 
 	cable name, description, ...
 ]
 
-A yellow cable is a cable in Inside the Hub. "A yellow cable waves from a small panel." It is machinelike. It is floating-exceptioned. It has description "A yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
+A yellow cable is a cable in Port End. "A yellow cable waves from a small panel." It is floating-exceptioned. It has description "A yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
 
 Instead of unplugging the yellow cable from the antenna panel:
 	say "The yellow cable is permanently attached to the panel.";
 	stop the action.
 
-Instead of the scanner scanning the yellow cable:
-	computerize "Cable is functional.";
-	rule succeeds;
-
-Understand "pull [the yellow cable]" as unplugging.
-
-A rule for reaching inside Inside the Hub: [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
-	if the turn count is greater than 1:
-		deny access;
-	otherwise:
-		allow access.
+A rule for reaching inside Port End when the turn count is one: allow access. [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
 
 When play begins:
 	silently try plugging the yellow cable into the antenna panel.
 
-The leaving room with the yellow cable rule is listed before the new leaving room whilst attached to fixed things rule in the Instead rulebook.
+Instead of an actor going to somewhere when the yellow cable is enclosed by the actor:
+	say "The yellow cable is permanently attached to the panel, so you must drop it before leaving."
 
-Instead of an actor going to somewhere (this is the leaving room with the yellow cable rule):
-	if the yellow cable is enclosed by the player:
-		say "The yellow cable is permanently attached to the panel, so you must drop it before leaving.";
-		stop the action;
-	continue the action.
+Section 3 - Starboard End
+
+[maybe drop if there isn't any reason to use this room]
+
+Starboard End is starboard of Inside the Hub. "You float weightless at the starboard end of a cylinder." It is in zero-g. It is unfamiliar. It has destination name "the starboard end of the hub".
 
 [ --- ]

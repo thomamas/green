@@ -6,7 +6,6 @@ sw
 in
 get eraser
 erase board
-scanner, open machine
 get power from machine
 out
 sw
@@ -26,9 +25,9 @@ turn breaker on
 d
 asw
 enter pond
+remove mask
 asw
 d
-scanner, open pump
 get all from pump
 scan regulator
 scan unscanned regulator
@@ -37,27 +36,24 @@ scan power module
 scan unscanned power module
 put functional power module in pump
 close ceiling hatch
-close pump
 port
 get communications unit
 starboard
-scanner, open pump
 get functional power module
-close wall hatch
+close door
 u
 sw
 sw
 go church
 unplug cable from organ
 plug cable into comms unit
-scanner, open audio
 get power module from audio
 put functional power into audio
-close audio
 get cable and audio
 out
 u
 asw
 u
+port
 plug yellow into comms
 z
