@@ -1,6 +1,7 @@
 d
 get mask
 u
+get blanket
 out
 sw
 in
@@ -26,6 +27,7 @@ d
 asw
 enter pond
 remove mask
+wear blanket
 asw
 d
 get all from pump

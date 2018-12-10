@@ -18,7 +18,7 @@ Use American dialect and the serial comma.
 
 The story headline is "A Space Story". The story genre is "Science Fiction". The release number is 1. The story creation year is 2018.
 
-The story description is "You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. No, you are the last. Alone. Adrift.
+The story description is "You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
 
 But maybe it isn’t hopeless. There must still be other people in other worlds, and you think you know how to get there.
 
@@ -257,12 +257,14 @@ The player is wearing a green jumpsuit. The jumpsuit has description "You have w
 
 The pocket is part of the jumpsuit. It is a container.
 
+A thing can be bulky. A thing is usually not bulky.
+
 Before an actor taking: [* the pocket can't work as a player's holdall, which be directly carried, so let's try this instead ]
 	if the number of things carried by the actor is at least the carrying capacity of the actor:
 		if the actor is wearing the green jumpsuit or the actor is holding the green jumpsuit:
 			let the transferred item be nothing;
 			repeat with the possible item running through things carried by the actor:
-				if the possible item is not lit and the possible item is not the jumpsuit, let the transferred item be the possible item;
+				if the possible item is not lit and the possible item is not the jumpsuit and the possible item is not bulky, let the transferred item be the possible item;
 			if the transferred item is not nothing:
 				if the actor is the player:
 					say "(putting [the transferred item] into your pocket to make room)[command clarification break]";
@@ -277,6 +279,9 @@ After examining the jumpsuit:
 		say "It features a single large pocket, currently empty.";
 
 Before inserting something into the jumpsuit, try inserting the noun into the pocket instead.
+
+Before inserting something into the pocket:
+	if the noun is bulky, say "It's a large pocket, but not large enough to hold [a noun]." instead.
 
 After taking off the jumpsuit, say "Your nudity is pure and innocent, but still a little cold and uncomfortable."
 
@@ -863,56 +868,32 @@ Instead of opening or closing the berths, say "The doors open and close automati
 Instead of unlocking the berths with something, try opening the berths.
 Instead of locking the berths with something, try closing the berths.
 
-A pile of clutter is here. It is fixed in place. "There is a pile of clutter. It looks like equipment removed to free up space in the transit pods."
-
-To decide what list of things is clutter things:
-	let L be a list of things;
-	if the atmosphere sensor is undescribed, add the atmosphere sensor to L;
-	if the emergency communications unit is undescribed, add the emergency communications unit to L;
-	add some unremarkable junk to L; [* junk is fixed in place, so L is never empty ]
-	decide on L;
+A pile of clutter is here. It is a fixed in place container. "There is a pile of clutter. It looks like equipment removed to free up space in the transit pods." Understand "equipment" as the pile of clutter.
 
 Instead of pulling or pushing or turning or squeezing or swinging the pile:
 	say "That isn't practical."
 
 Before going with the pile, try pushing the pile instead.
 
-Instead of examining the pile of clutter:
-	let L be clutter things;
-	say "[regarding the number of entries in L]There [are] [if the number of entries in L is one]only [end if][L with indefinite articles]."
+Before taking the pile of clutter when the number of things in the pile of clutter is one:
+	say "There is nothing useful left in the pile." instead.
 
-Instead of searching the pile of clutter:
-	let L be clutter things;
-	say "You find [if the number of entries in L is one]nothing of interest[otherwise][L with indefinite articles][end if]."
+Instead of taking the pile of clutter: [* Because I'm not sure there is a way to "try removing all from pile" ]
+	let L be the list of things in the pile of clutter;
+	remove the list of fixed in place things from L;
+	repeat with item running through L:
+		say "[item]: [no line break]";
+		try silently taking the item;
+		if the player encloses the item, say "Taken.";
 
-Before taking the pile of clutter:
-	let L be clutter things;
-	if the number of entries in L is one:
-		say "There is nothing you need left in the pile." instead;
-	otherwise:
-		say "You should try taking something specific instead." instead.
-
-Pile-taking is an action applying to two things. [* because I didn't want the pile to be a container for some reason ]
-
-Understand "take [something] from [the pile]" as pile-taking when the pile is visible.
-Understand "get [something] from [the pile]" as pile-taking when the pile is visible.
-
-Instead of pile-taking:
-	if the noun is undescribed:
-		try taking the noun;
-	otherwise:
-		say "But [regarding the noun][they] [aren't] there now.";
-
-Some unremarkable junk is here. It is undescribed. It is fixed in place. Instead of doing something to the unremarkable junk, say "It really is unremarkable."
-
-An atmosphere sensor is here. It has description "A small box with a large light that is slowly flashing amber." It is undescribed.
+An atmosphere sensor is in the pile. It has description "A small box with a large lamp that is slowly flashing amber." Understand "small" and "box" and "large" and "lamp" as the atmosphere sensor.
 
 Instead of the scanner scanning the atmosphere sensor:
 	now the atmosphere sensor is scanned;
 	computerize "Machine functional. Pressure low at 80 kilopascals, O[Unicode 8322] normal, CO[Unicode 8322] high at 0.10%. No immediate danger.";
 	rule succeeds;
 
-An emergency communications unit is here. It is an undescribed not fixed in place machine. It has description "A bulky but portable emergency communications unit from a transit pod. It can work independently if you provide audio and antenna connections." Understand "comms" as communications unit. Incorporated by the communications unit is a usb socket called the almond socket. Incorporated by the communications unit is an rf socket.
+An emergency communications unit is in the pile. It is a not fixed in place machine. It is bulky. It has description "A bulky but portable emergency communications unit from a transit pod. It can work independently if you provide audio and antenna connections." Understand "comms" as communications unit. Incorporated by the communications unit is a usb socket called the almond socket. Incorporated by the communications unit is an rf socket.
 
 To say comms-usb-status:
 	if audio and communications are connected:
@@ -932,6 +913,8 @@ Instead of the scanner scanning the communications unit:
 	now the communications unit is scanned;
 	computerize "Machine functional. [comms-usb-status]. [comms-rf-status].";
 	rule succeeds.
+
+Some unremarkable junk is in the pile. It is fixed in place. It is not plural-named. It has indefinite article "some". Instead of doing something to the unremarkable junk, say "It really is unremarkable."
 
 Chapter 2 - Sector 2
 
@@ -1037,7 +1020,7 @@ Instead of taking the organ, say "It is too heavy to move."
 
 [ audio unit ]
 
-An audio unit is an undescribed machine in Church. It is not fixed in place. It has carrying capacity 1. The description is "The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device." Understand "portable" as the audio unit. Incorporated by the audio unit is a usb socket called the beige socket.
+An audio unit is an undescribed machine in Church. It is not fixed in place. It is bulky. It has carrying capacity 1. The description is "The audio unit incorporates a speaker, a microphone, and a socket you would use to connect it to another device." Understand "portable" as the audio unit. Incorporated by the audio unit is a usb socket called the beige socket.
 
 The audio unit contains a faulty power module.
 
@@ -1124,7 +1107,7 @@ Home is a room. "The room where you've slept your entire life. The crops are out
 
 Sector 4 is outside of home.
 
-A blanket is in Home. The blanket is a portable wearable enterable supporter. It has description "Homespun wool."
+A blanket is in Home. "The homespun blanket which you use as your bed is arranged on the ground." The blanket is a bulky portable wearable enterable supporter. It has description "Homespun wool." Understand "homespun" and "wool" as the blanket.
 
 The player is on the blanket.
 
@@ -1134,9 +1117,9 @@ Before wearing or taking the blanket: [* see Modified Exit by Emily Short ]
 		silently try exiting;
 		if the holder of the player is the blanket, stop the action;
 	if something is on the blanket:
-		repeat with t running through the list of things on the blanket:
-			say "(first taking [the t])[command clarification break]";
-			silently try taking the t;
+		repeat with item running through the list of things on the blanket:
+			say "(first taking [the item])[command clarification break]";
+			silently try taking the item;
 		if something is on the blanket, stop the action.
 
 Before putting something on the blanket:
@@ -1285,12 +1268,11 @@ A crate of machine parts is scenery in the supply vault. It has description "The
 
 One faulty instruction module and one functional pressure regulation module are in the junk repository.
 
-To grab some junk:
-	let q be a random thing in the junk repository;
-	say "You find [a q].";
-	find and take q.
+Instead of searching the crate of machine parts when something is in the junk repository:
+	say "You find [list of things in the junk repository with indefinite articles].";
+	repeat with item running through things in the junk repository:
+		find and take item;
 
-Instead of searching the crate of machine parts when something is in the junk repository, grab some junk.
 Instead of searching the crate of machine parts, say "Miscellaneous parts, none useful."
 Instead of looking under the crate of machine parts, say "The crate rests firmly on the ground."
 
