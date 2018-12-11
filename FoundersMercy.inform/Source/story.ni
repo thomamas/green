@@ -54,13 +54,13 @@ Carry out requesting the credits:
 
 Chapter 2 - Scoring
 
-Use scoring. The maximum score is 9. An object can be scored. An object is usually not scored.
+Use scoring. The maximum score is 8. An object can be scored. An object is usually not scored.
 
 [
 	1 - getting the boots out of the vault
 	1 - red breaker
 
-	2 - green valve in the pond
+	1 - green valve in the pond
 
 	1 - fixing and closing the atmosphere pump
 
@@ -595,7 +595,7 @@ Carry out getting help when Between Repairs is happening:
 
 Section 4 - Repairing Comms
 
-Carry out getting help when Repairing Comms is happening: [todo]
+Carry out getting help when Repairing Comms is happening:
 	unless communications unit is handled:
 		say "Find the emergency communications unit.";
 	else unless audio and communications are connected:
@@ -604,6 +604,17 @@ Carry out getting help when Repairing Comms is happening: [todo]
 		say "Repair the audio unit.";
 	else:
 		say "Just wait." [* this shouldn't happen either ]
+
+[
+	TODO:
+		find comms & use it
+		connect to audio
+		audio needs to be functional
+		connect to antenna
+		antenna puzzle (tbd)
+		& work in air puzzle (tbd)
+]
+
 
 Section 5 - The End
 
@@ -938,7 +949,7 @@ Instead of entering the pond:
 		otherwise:		
 			say "You set your belongings aside. With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a valve and open it, then swim to the surface, climb out, and recover everything you were carrying.";
 			now the green valve is switched on;
-			increase the score by 2;
+			increase the score by 1;
 	otherwise:
 		say "You can't hold your breath long enough to make that worthwhile."
 
@@ -966,7 +977,7 @@ Instead of climbing S3P1:
 		now the player is in Platform 3;
 		change the up exit of Sector 3 to Platform 3;
 	otherwise:
-		say "The red pylon is designated for climbing, but your feet keep slipping when you try to go up."
+		say "The red pylon is designated for climbing, but your feet slip when you try to go up."
 
 There is a forest in Sector 3.
 
@@ -1107,7 +1118,7 @@ Home is a room. "The room where you've slept your entire life. The crops are out
 
 Sector 4 is outside of home.
 
-A blanket is in Home. "The homespun blanket which you use as your bed is arranged on the ground." The blanket is a bulky portable wearable enterable supporter. It has description "Homespun wool." Understand "homespun" and "wool" as the blanket.
+The blanket is in Home. "The homespun blanket which you use as your bed is arranged on the ground." The blanket is a bulky portable wearable enterable supporter. It has indefinite article "your". It has description "Homespun wool." Understand "homespun" and "wool" as the blanket.
 
 The player is on the blanket.
 
@@ -1445,11 +1456,13 @@ Before going port from Inside the Hub:
 	if the player is wearing the blanket, say "They passageway to the port is colder still, too cold for you wearing nothing under the blanket." instead;
 	say "The passageway to the port is colder still, too cold for you to bear nude." instead.
 
+After going port from Inside the Hub:
+	say "You follow a narrow passageway."; [todo]
+	continue the action;
+
 Section 2 - Port End
 
 [ this end is near the solar panels and antennas ]
-
-[ todo -- can't remove jumpsuit or blanket  here ]
 
 Port End is port of Inside the hub. "You float weightless at the port end of a cylinder. It is very cold and dark here." It is in zero-g. It is unfamiliar.It has destination name "the port end of the hub".
 
@@ -1478,9 +1491,15 @@ Instead of taking off something in Port End:
 	unless the noun is the jumpsuit or the noun is the blanket, continue the action;
 	say "It is too cold here to even consider removing [the noun].";
 
+After going starboard from Port End:
+	say "You follow a narrow passageway."; [todo]
+	continue the action.
+
+Before going outside from Port End, try going starboard instead.
+	
 Section 3 - Starboard End
 
-[maybe drop if there isn't any reason to use this room]
+[ TODO: maybe drop if there isn't any reason to use this room ]
 
 Starboard End is starboard of Inside the Hub. "You float weightless at the starboard end of a cylinder." It is in zero-g. It is unfamiliar. It has destination name "the starboard end of the hub".
 

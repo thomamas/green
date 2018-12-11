@@ -74,28 +74,4 @@ To say destname (place - a room):
 
 Instead of going nowhere, try ExitListing;
 
-[
-Instead of going nowhere: [* argh: code duplication ]
-	let exit count be the number of exits;
-	if exit count is:
-		-- 0:
-			say "There are no obvious exits.";
-			rule fails;
-		-- 1:
-			say "The only exit is ";
-		-- otherwise:
-			say "You can't go [noun], but you can go ";
-	let i be exit count;
-	repeat with way running through directions:
-		if the room-or-door way from the location is not nowhere:
-			if the room way from the location is visited or the room way from the location is familiar:
-				say "[way] to [destname the room way from the location]";
-			otherwise:
-				say "[way]";
-			decrease i by 1;
-			if i is 0, say ".";
-			if i is 1, say "[if exit count > 2 and serial comma option is active],[end if] or ";
-			if i > 1, say ", "
-]
-
 Simple Exit Lister ends here.

@@ -12,7 +12,6 @@ out
 sw
 d
 search crate
-g
 get boots
 hit eraser
 u
