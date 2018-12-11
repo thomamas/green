@@ -1,3 +1,4 @@
+* walkthrough
 d
 get mask
 u
@@ -55,6 +56,9 @@ out
 u
 asw
 u
+wear mask
+port
+push red button
 port
 plug yellow into comms
 z

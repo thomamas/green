@@ -44,7 +44,7 @@ After printing the banner text rule:
 Carry out requesting the credits:
 	say	"[bold type]About Founder's Mercy[roman type][line break]"
 		,
-		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in November of 2018.[paragraph break]" [todo]
+		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in the last months of 2018.[paragraph break]" [todo]
 		,
 		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]"
 		,
@@ -54,7 +54,7 @@ Carry out requesting the credits:
 
 Chapter 2 - Scoring
 
-Use scoring. The maximum score is 8. An object can be scored. An object is usually not scored.
+Use scoring. The maximum score is 10. An object can be scored. An object is usually not scored.
 
 [
 	1 - getting the boots out of the vault
@@ -65,8 +65,10 @@ Use scoring. The maximum score is 8. An object can be scored. An object is usual
 	1 - fixing and closing the atmosphere pump
 
 	2 - visiting pod bay for the first time
+	2 - visiting antenna control for the first time
 
 	2 - getting the communications unit working (and calling for help)
+
 ]
 
 Chapter 3 - Notes
@@ -93,7 +95,17 @@ To decide what object is a random object in (L - a list of objects):
 	let r be a random number between 1 and the number of entries in L;
 	decide on entry r of L.
 
-Chapter 5 - Extensions
+Chapter 5 - 
+
+A room can be pressurized. A room is usually pressurized.
+
+A room can be frigid. A room is usually not frigid.
+
+Instead of taking off something in a frigid room:
+	unless the noun is the jumpsuit or the noun is the blanket, continue the action;
+	say "It is too cold here to even consider removing [the noun]."
+
+Chapter 6 - Extensions
 
 Section 1 - Text
 
@@ -217,7 +229,7 @@ Section 5 - Testing - Not for Release
 Include Object Response Tests by Juhana Leinonen.
 Include Testing Commands by Thomas Insel.
 
-Chapter 6 - Directions
+Chapter 7 - Directions
 
 The starboard is a direction. The starboard has opposite port. Understand "s" as starboard.
 
@@ -245,7 +257,7 @@ Index map with spinward mapped as north. Index map with antispinward mapped as s
 Before climbing up, try going up instead.
 Before climbing down, try going down instead.
 
-Chapter 7 - The Player
+Chapter 8 - The Player
 
 The player is female. The carrying capacity of the player is 3.
 
@@ -293,7 +305,7 @@ Instead of taking inventory:
 		say "[line break][Our] jumpsuit pocket contains:[line break]";
 		list the contents of the pocket, with newlines, indented, including contents, giving inventory information, with extra indentation.
 
-Chapter 8 - Actions
+Chapter 9 - Actions
 
 Section 1 - Remove Some Actions
 
@@ -335,9 +347,17 @@ Instead of cutting or attacking yourself, say "Imperfect vessel that you are, th
 
 Instead of burning something, say "There is no open flame on the station."
 	
-Instead of listening to a room, say "You hear only the familiar hum of the station."
+Instead of listening to a room:
+	if the location is not pressurized:
+		say "Profound silence.";
+	otherwise:
+		say "You hear only the familiar hum of the station."
 
-Instead of smelling a room, say "Only familiar odors."
+Instead of smelling a room:
+	if the player is wearing the emergency mask:
+		say "You can't smell anything with the mask on.";
+	otherwise:
+		say "Only familiar odors."
 
 Section 3 - And Add Some Miscellaneous Actions
 
@@ -603,7 +623,7 @@ Carry out getting help when Repairing Comms is happening:
 	else unless audio unit is functional:
 		say "Repair the audio unit.";
 	else:
-		say "Just wait." [* this shouldn't happen either ]
+		say "Just wait."
 
 [
 	TODO:
@@ -647,7 +667,7 @@ The hub is a backdrop in The Sectors and in The Platforms. It has description "[
 
 Instead of doing anything other than examining or scanning to the hub, say "You are too far away to do that." [todo]
 
-The solar panels are a backdrop in The Sectors and in The Platforms. They have description "The primary source of station power." Understand "panel" as solar panels.
+The solar panels are a backdrop in The Sectors and in The Platforms. They have description "The solar panels are the primary source of station power and support a small array of antennas." Understand "panel" and "antenna" and "antennas" and "array" and "small array" and "small array of" and "array of" as solar panels.
 
 Instead of doing anything other than examining or scanning to the solar panels, say "You are too far away to do that."
 
@@ -668,6 +688,20 @@ Instead of entering the maintenance platform, say "You will need to climb a pylo
 The BDP are a backdrop in The Even Sectors. They are privately-named and plural-named. They have description "Spinward and antispinward from here, you can see pylons connecting the ground to the hub." They have printed name "pylons". Understand "pylons" as BDP.
 
 Instead of doing anything other than examining to BDP, say "You will need to go to the next sector to do that."
+
+The station walls are a backdrop in The Sectors and in The Platforms. They have description "The walls form the ends of the rotating cylinder that is the station, stretching from the ground to the hub. The top third is transparent, through which you can see solar panels, mirrors, and the stars." Understand "wall" as the walls.
+
+Instead of doing anything other than examining to the station walls when the player is in The Platforms, say "You can't reach the walls from here."
+
+The stars are a backdrop in The Sectors and in The Platforms. They have description "The sky is awash with stars." Understand "sky" as the stars.
+
+Instead of doing anything other than examining to the stars, say "They are trillions of meters or more away."
+
+Understand "ground" as the down.
+
+Instead of going nowhere in The Sectors when the noun is port or the noun is starboard:
+	say "You are blocked by the station wall. [run paragraph on]";
+	list the exits.
 
 Section 4 - Pylons
 
@@ -868,7 +902,7 @@ To say pod-bay-door-pb:
 
 Section 3 - Pod Bay
 
-There is a room called Pod Bay. "There are four berths for transit pods. Unfortunately, all are empty." It has destination name "the pod bay". Pod Bay is in Underneath. Pod Bay can be pressurized. Pod Bay is not pressurized.
+There is a room called Pod Bay. "There are four berths for transit pods. Unfortunately, all are empty." It has destination name "the pod bay". Pod Bay is in Underneath. Pod Bay is not pressurized.
 
 Instead of going nowhere from Pod Bay when the noun is outside, try going starboard.
 Instead of exiting in Pod Bay, try going starboard.
@@ -897,11 +931,14 @@ Instead of taking the pile of clutter: [* Because I'm not sure there is a way to
 		try silently taking the item;
 		if the player encloses the item, say "Taken.";
 
-An atmosphere sensor is in the pile. It has description "A small box with a large lamp that is slowly flashing amber." Understand "small" and "box" and "large" and "lamp" as the atmosphere sensor.
+An atmosphere sensor is in the pile. It has description "A small box with a large lamp that is slowly flashing [if the location is pressurized]amber[otherwise]red[end if]." Understand "small" and "box" and "large" and "lamp" as the atmosphere sensor.
 
 Instead of the scanner scanning the atmosphere sensor:
 	now the atmosphere sensor is scanned;
-	computerize "Machine functional. Pressure low at 80 kilopascals, O[Unicode 8322] normal, CO[Unicode 8322] high at 0.10%. No immediate danger.";
+	if the location is pressurized:
+		computerize "Machine functional. Pressure low at 80 kilopascals, O[Unicode 8322] normal, CO[Unicode 8322] high at 0.10%. No immediate danger.";
+	otherwise:
+		computerize "Machine functional. No breathable atmosphere.";
 	rule succeeds;
 
 An emergency communications unit is in the pile. It is a not fixed in place machine. It is bulky. It has description "A bulky but portable emergency communications unit from a transit pod. It can work independently if you provide audio and antenna connections." Understand "comms" as communications unit. Incorporated by the communications unit is a usb socket called the almond socket. Incorporated by the communications unit is an rf socket.
@@ -1098,7 +1135,7 @@ A doll is in house. "Someone has left a doll on the well swept floor." It has de
 
 Chapter 4 - Sector 4
 
-Sector 4 is spinward from Sector 3. It is in The Even Sectors. "Your home is here among the crops. You can walk spinward or antispinward." It has printed name "Sector 4: Crops". It has destination name "sector 4".
+Sector 4 is spinward from Sector 3. It is in The Even Sectors. "Your home is here among the crops. To the port and starboard, the station walls rise up to the hub above. You can walk spinward or antispinward." It has printed name "Sector 4: Crops". It has destination name "sector 4".
 
 The S4B1 is a building. It is inside of Sector 4. It is scenery. It has description "You father always said it was built to look like a log cabin on Old Earth." It has printed name "home". Through it is Home. Understand "home" or "house" as S4B1.
 
@@ -1174,12 +1211,17 @@ An emergency mask is on shelves. It is undescribed, wearable, and machinelike. I
 
 Instead of singing when the player is wearing the emergency mask, say "You can't sing while wearing the mask.";
 
+Before smelling something when the player is wearing the emergency mask, say "You can't smell anything with the mask on." instead.
+
 The can't scan with your mask on rule is listed before the scanner must be enclosed rule in the scanner precheck rules.
 
 This is the can't scan with your mask on rule:
 	if the player is wearing the emergency mask:
 		say "You can't talk to [the scanner] while wearing the mask.";
 		rule fails.
+
+Before taking off the emergency mask when the location is not pressurized:
+	say "You wouldn't be able to breath if you did that." instead.
 
 Chapter 5 - Sector 5
 
@@ -1441,7 +1483,11 @@ Before going from a room in zero-g:
 
 Section 1 - Inside the Hub
 
-Inside the Hub has description "You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and you can continue port or starboard inside the hub." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub". [todo - port/sbd]
+Inside the Hub has description "You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and a door leads to the port." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub".
+
+[ todo -airlock door ]
+
+[ todo - nver been here before]
 
 Before going down in Inside the Hub, try going outside instead.
 Before going up in Inside the Hub, try going outside instead.
@@ -1450,36 +1496,102 @@ After going outside from Inside the Hub:
 	say "You [one of]make sure you are heading legs first and follow the ladder[or]struggle a little to arrange your orientation and follow the ladder[or]fight off a moment of vertigo and climb the ladder[at random].";
 	continue the action.
 
-Before going port from Inside the Hub:
+Before going port from Inside the Hub: [todo -rephrase to airlock door]
 	if the player is wearing the jumpsuit and the player is wearing the blanket, continue the action;
 	if the player is wearing the jumpsuit, say "The passageway to the port is colder still, too cold for you in only your jumpsuit." instead;
 	if the player is wearing the blanket, say "They passageway to the port is colder still, too cold for you wearing nothing under the blanket." instead;
-	say "The passageway to the port is colder still, too cold for you to bear nude." instead.
+	say "The passageway to the port is colder still, too cold for you to bear nude." instead. [todo]
 
-After going port from Inside the Hub:
-	say "You follow a narrow passageway."; [todo]
-	continue the action;
+Before going nowhere from Inside the Hub when the noun is inside, try going port instead.
 
-Section 2 - Port End
+Section 2 - The Airlock
+
+The Airlock is a room in zero-g. "There are port and starboard doors and a red button." [todo description,] It is frigid.
+
+[todo -description matches pressurization]
+
+The starboard airlock door is a door. It is port of Inside the Hub and starboard of The Airlock. It is scenery.
+
+The port airlock door is a door. It is port of The Airlock and starboard of Antenna Control. It is scenery. It is locked.
+
+A red button is scenery in the Airlock.
+
+The airlock has a room called match. The match of the airlock is Inside the Hub.
+
+To decide if (a - a room) and (b - a room) match pressure:
+	if a is pressurized and b is pressurized, decide yes;
+	if a is not pressurized and b is not pressurized, decide yes;
+	decide no.
+
+When play begins: adjust the airlock doors.
+
+To adjust the airlock doors:
+	if Inside the Hub and The Airlock match pressure:
+		now the starboard airlock door is unlocked;
+	otherwise:
+		if the starboard airlock door is open, say "The starboard door slams shut. [run paragraph on]";
+		now the starboard airlock door is locked;
+		now the starboard airlock door is closed;
+	;
+	if Antenna Control and The Airlock match pressure:
+		now the port airlock door is unlocked;
+	otherwise:
+		if the port airlock door is open, say "The port door slams shut. [run paragraph on]";
+		now the port airlock door is locked;
+		now the port airlock door is closed;
+
+Before pushing the red button when the player is not wearing the emergency mask and the match of the airlock is Inside the Hub and Antenna Control is not pressurized:
+	say "You know from your safety training not to press the button without a backup oxygen source." instead.
+
+Instead of pushing the red button:
+	if the match of the airlock is Inside the Hub:
+		now the match of the airlock is Antenna Control;
+	otherwise:
+		now the match of the airlock is Inside the Hub;
+	;
+	if the airlock is not pressurized and the match of the airlock is pressurized:
+		now the airlock is pressurized;
+		adjust the airlock doors;
+		say "You feel the airlock pressurize.";
+	else if the airlock is pressurized and the match of the airlock is not pressurized:
+		now the airlock is not pressurized;
+		adjust the airlock doors;
+		say "You feel the air rush out of the airlock.";
+	otherwise:
+		adjust the airlock doors;
+		say "Nothing obvious happens.";
+
+Before exiting from The Airlock, try going starboard instead.
+Before going nowhere from The Airlock when the noun is inside, try going port instead.
+
+After going port from The Airlock:
+	say "You crawl through a narrow accessway."; [todo]
+	continue the action.
+
+Section 3 - Antenna Control
 
 [ this end is near the solar panels and antennas ]
 
-Port End is port of Inside the hub. "You float weightless at the port end of a cylinder. It is very cold and dark here." It is in zero-g. It is unfamiliar.It has destination name "the port end of the hub".
+Antenna Control is a room. "You float weightless at the port end of a cylinder. It is very cold and dark here[if antenna control is not pressurized] in the near vacuum[end if]. A door leads starboard." It is in zero-g. It is frigid. It is unfamiliar. It has destination name "antenna control". Antenna Control is not pressurized. [todo -description matches pressurization]
 
-The antenna panel is scenery in Port End.  It is a machine. It has description "It's a small panel with a permanently attached yellow RF cable." Incorporated by the antenna panel is an RF socket. [ todo - description ]
+Every turn when the player is in Antenna Control and Antenna Control is not scored:
+	increase the score by 2;
+	now Antenna Control is scored.
+
+The antenna panel is scenery in Antenna Control.  It is a machine. It has description "A yellow RF cable leads out of this small panel." Incorporated by the antenna panel is an RF socket. [ todo - description ]
 
 [ todo: scan panel if needed for antenna puzzle
 
 	cable name, description, ...
 ]
 
-A yellow cable is a cable in Port End. "A yellow cable waves from a small panel." It is floating-exceptioned. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
+A yellow cable is a cable in Antenna Control. "A yellow cable waves from a small panel." It is floating-exceptioned. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
 
 Instead of unplugging the yellow cable from the antenna panel:
 	say "The yellow cable is permanently attached to the panel.";
 	stop the action.
 
-A rule for reaching inside Port End when the turn count is one: allow access. [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
+A rule for reaching inside Antenna Control when the turn count is one: allow access. [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
 
 When play begins:
 	silently try plugging the yellow cable into the antenna panel.
@@ -1487,20 +1599,10 @@ When play begins:
 Instead of an actor going to somewhere when the yellow cable is enclosed by the actor:
 	say "The yellow cable is permanently attached to the panel, so you must drop it before leaving."
 
-Instead of taking off something in Port End:
-	unless the noun is the jumpsuit or the noun is the blanket, continue the action;
-	say "It is too cold here to even consider removing [the noun].";
-
-After going starboard from Port End:
-	say "You follow a narrow passageway."; [todo]
+After going starboard from Antenna Control:
+	say "You make your way back along the narrow accessway."; [todo]
 	continue the action.
 
-Before going outside from Port End, try going starboard instead.
-	
-Section 3 - Starboard End
-
-[ TODO: maybe drop if there isn't any reason to use this room ]
-
-Starboard End is starboard of Inside the Hub. "You float weightless at the starboard end of a cylinder." It is in zero-g. It is unfamiliar. It has destination name "the starboard end of the hub".
+Before exiting from Antenna Control, try going starboard instead.
 
 [ --- ]
