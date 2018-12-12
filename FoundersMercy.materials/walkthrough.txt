@@ -61,4 +61,8 @@ port
 push red button
 port
 plug yellow into comms
+press 3
+press 8
+press 5
+press 2
 z

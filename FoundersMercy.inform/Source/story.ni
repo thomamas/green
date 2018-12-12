@@ -16,7 +16,7 @@ Chapter 1 - About the Story
 
 Use American dialect and the serial comma.
 
-The story headline is "A Space Story". The story genre is "Science Fiction". The release number is 1. The story creation year is 2018.
+The story headline is "A Space Story". The story genre is "Science Fiction". The release number is 1. The story creation year is 2019.
 
 The story description is "You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
 
@@ -39,18 +39,22 @@ Requesting the credits is an action out of world and applying to nothing.
 Understand "about" or "credits" as requesting the credits.
 	
 After printing the banner text rule:
-	say "Type 'about' for credits or 'hint' for assistance.";
+	say "Type ABOUT for credits or HINT for assistance.";
 	
 Carry out requesting the credits:
 	say	"[bold type]About Founder's Mercy[roman type][line break]"
 		,
-		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in the last months of 2018.[paragraph break]" [todo]
-		,
-		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister. The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]"
-		,
-		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this story at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]"
-		,
+		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in the last months of 2018.[paragraph break]" [todo],
+		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister. Keypad code is inspired by Emily Short's Computers.[paragraph break]",
+		"The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]",
+		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this story at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]",
 		"This work is Copyright © [the story creation year] Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type])."
+
+Table of Final Question Options (continued) 
+final question wording	only if victorious	topic	final response rule	final response activity
+"read the CREDITS"	false	"credits"	final credits rule	--
+
+This is the final credits rule: try requesting the credits.
 
 Chapter 2 - Scoring
 
@@ -96,7 +100,11 @@ To decide what object is a random object in (L - a list of objects):
 	let r be a random number between 1 and the number of entries in L;
 	decide on entry r of L.
 
-Chapter 5 - 
+To say uc (t - a thing): [* is this really the best way to do this? ]
+	let a be "[t]";
+	say "[a in upper case]";
+
+Chapter 5 - Room Adjectives
 
 A room can be pressurized. A room is usually pressurized.
 
@@ -109,8 +117,6 @@ Instead of taking off something in a frigid room:
 Chapter 6 - Extensions
 
 Section 1 - Text
-
-Include Unicode Character Names by Graham Nelson.
 
 Include Glulx Text Effects by Emily Short.
 
@@ -154,7 +160,7 @@ The list attached things when listing receiver or inserter rule response (A) is 
 
 [ C. Make style fit for command explanation ]
 
-The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are] plugged into more than one thing.[paragraph break][start note]Try 'unplug [noun] from SOMETHING'.[stop note][line break]";
+The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are] plugged into more than one thing.[paragraph break][start note]Try UNPLUG [uc noun] FROM SOMETHING.[stop note][line break]";
 
 [
 	D. There is a bug in the existing leavings whilst attached to fixed things rule: it doesn't apply if thing is in a container. We fix this by changing "if the holder of the connectee is not carried by the player" to "if the holder of the connectee is not carried by the player".
@@ -255,7 +261,7 @@ Directions were explained is a truth state that varies. Directions were explaine
 Before going a planetbound direction:
 	say	"You have heard of compass directions like [noun], but they don't make any sense here. Instead, you can go spinward, antispinward, port, and starboard. When you look spinward, port is left and starboard is right.[paragraph break]";
 	unless directions were explained is true:
-		say "[start note]You can use the abbreviations 'sw', 'asw', 'p', and 's'. You can also go 'up', 'down', 'in', and 'out' where appropriate. Type 'exits' if you get confused about geography.[no line break][stop note][paragraph break]";
+		say "[start note]You can use the abbreviations SW, ASW, P, and S. You can also go UP, DOWN, IN, and OUT where appropriate. Type EXITS if you get confused about geography.[no line break][stop note][paragraph break]";
 		now directions were explained is true;
 	stop the action.
 
@@ -340,7 +346,7 @@ Understand the command "consult" as something new.
 
 Understand the commands "ask" and "tell" and "answer" and "say" as something new.
 
-Understand "ask [text]" or "tell [text]" or "answer [text]" or "say [text]" or "talk" or "talk [text]" as a mistake ("[start note]To communicate in this story, type 'CHARACTER, MESSAGE' where CHARACTER is someone or something and MESSAGE is what you want to say.[no line break][stop note]").
+Understand "ask [text]" or "tell [text]" or "answer [text]" or "say [text]" or "talk" or "talk [text]" as a mistake ("[start note]To communicate in this story, type CHARACTER, MESSAGE where CHARACTER is someone or something and MESSAGE is what you want to say.[no line break][stop note]").
 
 [ To be nice ]
 
@@ -531,7 +537,7 @@ After the player getting help for the first time:
 		"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
 		,
 		"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
-		note "You can type 'hint' any time for contextual assistance. If you prefer not to be tempted, you can type 'hints off' to disable hints."
+		note "You can type 'hint' any time for contextual assistance. If you prefer not to be tempted, you can type HINTS OFF to disable hints."
 
 Carry out disabling help:
 	if help disabled is true, say "Hints are already disabled." instead;
@@ -960,7 +966,10 @@ To say comms-usb-status:
 
 To say comms-rf-status:
 	if communications unit and antenna panel are connected:
-		say "RF connection";
+		if the antenna is calibrated:
+			say "RF connection and signal";
+		otherwise:
+			say "RF connection but no signal";
 	otherwise:
 		say "No RF connection"
 
@@ -1095,13 +1104,31 @@ Instead of the scanner scanning the audio unit:
 		computerize "Machine functional. No input or output available.";
 	rule succeeds.
 
+The audio unit has a text called state. The state of the audio unit is "not-functional".
+
 Every turn when the audio unit is visible:
-	if the organ was not usable and the organ is usable:
-		say "The audio unit beeps and a synthesized voice says 'Organ ready.'";
-	if the organ was usable and the organ is not usable and the audio unit is functional and the audio unit is closed:
-		say "The audio unit beeps and a synthesized voice says 'No input.'";
-	if the communications unit was not almost usable and the communications unit is almost usable:
-		say "The audio unit beeps and a synthesized voice says 'No antenna connection.'";
+	let old state be the state of the audio unit;
+	let new state be "";
+	;
+	unless the audio unit is functional:
+		now new state is "not-functional";
+	else if the organ is usable:
+		now new state is "organ";
+	else if the communications unit is almost usable:
+		now new state is "comms";
+	else:
+		now new state is "not-connected";
+	;
+	now the state of the audio unit is new state;
+	;
+	if the old state is not the new state and the location is pressurized:
+		if the new state is:
+			-- "organ":
+				say "The audio unit beeps and a synthesized voice says 'Organ connected.'";
+			-- "comms":
+				say "The audio unit beeps and a synthesized voice says 'Comms unit connected.'";
+			-- "not-connected":
+				say "The audio unit beeps and a synthesized voice says 'No input.'";
 
 After taking the audio unit:
 	now the gray cable is handled;
@@ -1126,7 +1153,8 @@ Definition: the communications unit is usable if
 	the communications unit is functional and
 	the audio unit is functional and
 	audio and communications are connected and
-	communications and antenna panel are connected. [* usable means ready for its special purpose, functional just means that modules are all correct and functional ]
+	communications and antenna panel are connected and
+	the antenna is calibrated. [* usable means ready for its special purpose, functional just means that modules are all correct and functional ]
 
 Definition: the organ is usable if audio unit and organ are connected and the audio unit is functional..
 
@@ -1490,7 +1518,7 @@ Before going from a room in zero-g:
 
 Section 1 - Inside the Hub
 
-Inside the Hub has description "You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and a door leads to the port." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub".
+Inside the Hub has description "You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and an airlock is to the port." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub".
 
 [ todo -airlock door ]
 
@@ -1505,15 +1533,15 @@ After going outside from Inside the Hub:
 
 Before going port from Inside the Hub: [todo -rephrase to airlock door]
 	if the player is wearing the jumpsuit and the player is wearing the blanket, continue the action;
-	if the player is wearing the jumpsuit, say "The passageway to the port is colder still, too cold for you in only your jumpsuit." instead;
-	if the player is wearing the blanket, say "They passageway to the port is colder still, too cold for you wearing nothing under the blanket." instead;
-	say "The passageway to the port is colder still, too cold for you to bear nude." instead. [todo]
+	if the player is wearing the jumpsuit, say "The airlock is colder still, too cold for you in only your jumpsuit." instead;
+	if the player is wearing the blanket, say "The airlock is colder still, too cold for you wearing nothing under the blanket." instead;
+	say "The airlock is colder still, too cold for you to bear nude." instead. [todo]
 
 Before going nowhere from Inside the Hub when the noun is inside, try going port instead.
 
 Section 2 - The Airlock
 
-The Airlock is a room in zero-g. "There are port and starboard doors and a red button." [todo description,] It is frigid.
+The Airlock is an unfamiliar frigid room in zero-g. "There are port and starboard doors and a red button." [todo description]
 
 [todo -description matches pressurization]
 
@@ -1579,18 +1607,19 @@ Section 3 - Antenna Control
 
 [ this end is near the solar panels and antennas ]
 
-Antenna Control is a room. "You float weightless at the port end of a cylinder. It is very cold and dark here[if antenna control is not pressurized] in the near vacuum[end if]. A door leads starboard." It is in zero-g. It is frigid. It is unfamiliar. It has destination name "antenna control". Antenna Control is not pressurized. [todo -description matches pressurization]
+Antenna Control is an unfamiliar frigid room in zero-g. "You float weightless at the port end of a cylinder. It is very cold and dark here[if antenna control is not pressurized] in the near vacuum[end if]. A door leads starboard." It has destination name "antenna control". Antenna Control is not pressurized. [todo -description matches pressurization]
 
 Every turn when the player is in Antenna Control and Antenna Control is not scored:
 	increase the score by 2;
 	now Antenna Control is scored.
 
-The antenna panel is scenery in Antenna Control.  It is a machine. It has description "A yellow RF cable leads out of this small panel." Incorporated by the antenna panel is an RF socket. [ todo - description ]
+After going starboard from Antenna Control:
+	say "You make your way back along the narrow accessway."; [todo]
+	continue the action.
 
-[ todo: scan panel if needed for antenna puzzle
+Before exiting from Antenna Control, try going starboard instead.
 
-	cable name, description, ...
-]
+The antenna calibration panel is scenery in Antenna Control.  It is a machine. It has printed name "panel". It has description "This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable." Incorporated by the antenna panel is an RF socket.
 
 A yellow cable is a cable in Antenna Control. "A yellow cable waves from a small panel." It is floating-exceptioned. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
 
@@ -1606,10 +1635,72 @@ When play begins:
 Instead of an actor going to somewhere when the yellow cable is enclosed by the actor:
 	say "The yellow cable is permanently attached to the panel, so you must drop it before leaving."
 
-After going starboard from Antenna Control:
-	say "You make your way back along the narrow accessway."; [todo]
-	continue the action.
+To decide if the antenna is calibrated: decide on whether or not the sequence position of the keypad is greater than the sequence length of the keypad.
 
-Before exiting from Antenna Control, try going starboard instead.
+An antenna calibration display is part of the panel. It has description "[first custom style][entry (sequence position of the keypad) of the hints of the keypad][roman type]". It has printed name "display".
+
+A keypad is part of the panel. [ Adapted, poorly, from part of Computers by Emily Short. ]
+It has description "The keypad has the digits from 0 through 9."
+It has a list of numbers called the combo. The combo of the keypad is {3, 8, 5, 2}. [* We could randomize but that would be silly. ]
+It has a number called the sequence position. The sequence position of the keypad is 1.
+It has a number called the sequence length. The sequence length of the keypad is 4.
+It has a list of texts called the hints. The hints of the keypad are {
+	"Calibrate to Epsilon/Lime.",
+	"Calibrate to Delta/Plum.",
+	"Calibrate to Gamma/Banana.",
+	"Calibrate to Beta/Cherry.",
+	"Antenna calibrated."}.
+
+After examining the antenna display for the first time:
+	note "Now might be a good time to consult your Official Space Relay League Antenna Calibration Guide."
+
+Typing it on is an action applying to one number and one thing.
+
+Understand "press [a number] into/on/in [the keypad]" as typing it on.
+Understand "enter [a number] into/on/in [the keypad]" as typing it on.
+Understand "type [a number] into/on/in [the keypad]" as typing it on.
+Understand "key [a number] into/on/in [the keypad]" as typing it on.
+Understand "push [a number] into/on/in [the keypad]" as typing it on.
+
+Understand "press [a number] into/on/in [something]" as typing it on.
+Understand "enter [a number] into/on/in [something]" as typing it on.
+Understand "type [a number] into/on/in [something]" as typing it on.
+Understand "key [a number] into/on/in [something]" as typing it on.
+Understand "push [a number] into/on/in [something]" as typing it on.
+
+Understand "press [a number]" as typing it on.
+Understand "enter [a number]" as typing it on.
+Understand "type [a number]" as typing it on.
+Understand "key [a number]" as typing it on.
+Understand "push [a number]" as typing it on.
+
+Rule for supplying a missing second noun while typing the number understood on:
+	if the player can touch the keypad:
+		now the second noun is the keypad;
+	otherwise:
+		say "There's nothing obvious to type on." instead.
+
+Check typing it on:
+	if the second noun is the antenna display, try typing the number understood on the keypad instead;
+	unless the second noun is the keypad, say "There is no keypad on [the second noun]." instead;
+	if the number understood is less than zero or the number understood is greater than nine:
+		say "The keypad only has the digits from 0 to 9.";
+
+Carry out typing it on:
+	if (sequence position of the keypad) is greater than (sequence length of the keypad):
+		say "Nothing happens.";
+	else if the number understood is entry (sequence position of the keypad) of the combo of the keypad:
+		if (sequence position of the keypad) is (sequence length of the keypad):
+			increase the sequence position of the keypad by one;
+			computerize2 "Calibration successful.";
+		otherwise:
+			increase the sequence position of the keypad by one;
+			computerize2 "[entry (sequence position of the keypad) of the hints of the keypad]";
+	otherwise:
+		computerize2 "Calibration rejected. Restarting sequence.";
+		now the sequence position of the keypad is one;
+
+[ todo - scan display, panel, keypad, etc. ]
+
 
 [ --- ]
