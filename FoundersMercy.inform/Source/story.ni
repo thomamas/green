@@ -76,11 +76,12 @@ Chapter 3 - Notes
 To say start note: say "[note style][bracket]".
 To say stop note: say "[close bracket][roman type]".
 
-To say start computer: say "[fixed letter spacing]".
+To say start computer: say "[second custom style]".
 To say stop computer: say "[roman type]".
 
 To computerize (x - some text): say "[start computer][x][stop computer][line break]".
 To note (x - some text): say "[start note][x][stop note][line break]".
+To computerize2 (x - some text): say "[first custom style][x][roman type][line break]"
 
 Chapter 4 - Misc Phrases
 
@@ -111,7 +112,13 @@ Section 1 - Text
 
 Include Unicode Character Names by Graham Nelson.
 
-Include Glulx Text Effects by Emily Short. [ for the note style ]
+Include Glulx Text Effects by Emily Short.
+
+Table of User Styles (continued) [* used with computer styles above ]
+style name	color	fixed width
+special-style-1	"#227722"	true
+special-style-2	"#2222cc"	true
+alert-style	"#cc2222"	false
 
 Section 2 - Exit Lister
 
@@ -838,20 +845,20 @@ Instead of examining the status display:
 	if the pod bay is ready:
 		say "The status display glows green.";
 	otherwise:
-		computerize "Pod bay locked down";
+		computerize2 "Pod bay locked down";
 		let i be 1;
 		if red circuit breaker is switched off:
-			computerize " [i]. Telemetry sensor array offline - reset breaker FM36-87/A @ hub platform";
+			computerize2 " [i]. Telemetry sensor array offline - reset breaker FM36-87/A @ hub platform";
 			increment i;
 		if green valve is switched off:
-			computerize " [i]. Launch system cooling loop offline - open backup valve @ Sector 2";
+			computerize2 " [i]. Launch system cooling loop offline - open backup valve @ Sector 2";
 			increment i;
 		unless the Pod Bay is pressurized:
-			computerize " [i]. Pod bay depressurized - scan and repair atmosphere pump";
+			computerize2 " [i]. Pod bay depressurized - scan and repair atmosphere pump";
 		else unless the atmosphere pump is functional:
-			computerize " [i]. Atmosphere pump offline";
+			computerize2 " [i]. Atmosphere pump offline";
 		else if S1H1 is open:
-			computerize " [i]. Secure pod control hatch";
+			computerize2 " [i]. Secure pod control hatch";
 
 The atmosphere pump is a machine. It is in Pod Control. It is scenery. It has carrying capacity 2. It has description "[If the atmosphere pump is functional]The featureless atmosphere pump is softly humming.[otherwise]The atmosphere pump is a smooth featureless machine." Understand "machine" and "machinery" as the atmosphere pump.
 

@@ -1,5 +1,7 @@
 /* "Local" CSS file */
 
+@import url('https://fonts.googleapis.com/css?family=Orbitron|VT323');
+
 body {
 	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 	/* font-size: 100%; */
@@ -30,6 +32,35 @@ body {
 #gameport .Style_preformatted { 
   font-family: courier, courier new, lucidatypewriter, monaco, andale mono, monospace;
   font-size:11pt;
+}
+
+#gameport .Style_header {
+  font-size: 17px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+}
+
+#gameport .Style_user1 {
+  font-family: 'VT323', courier, courier new, lucidatypewriter, monaco, andale mono, monospace;
+  font-size:19px;
+  font-variant-ligatures: none;
+  color:#227722;
+  line-height:1.5ex;
+}
+
+#gameport .Style_user2 {
+  font-family: courier, courier new, lucidatypewriter, monaco, andale mono, monospace;
+  font-size:11pt;
+  font-variant-ligatures: none;
+  color:#2222cc;
+}
+
+#gameport .Style_alert {
+  color:#cc2222;
+}
+
+#gameport .Style_subheader {
+  color:#ffff00;
 }
 
 .container { margin-top: 2em; }

@@ -45,10 +45,47 @@ There is a secured hatch in the floor.
 
 &gt;</commentary>
         <children><child nodeId="node-4024"></child>
+            <child nodeId="node-4246"></child>
             <child nodeId="node-4165"></child>
             <child nodeId="node-4158"></child>
             <child nodeId="node-4152"></child>
+            <child nodeId="node-4242"></child>
         </children>
+    </item>
+    <item nodeId="node-4242">
+        <command xml:space="preserve">scanner, help</command>
+        <result xml:space="preserve">Recognized commands are "help" and "scan".
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" where SOMETHING is a visible object.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4244"></child>
+        </children>
+    </item>
+    <item nodeId="node-4244">
+        <command xml:space="preserve">gonear display</command>
+        <result xml:space="preserve">Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall.
+
+There is a secured hatch in the ceiling.
+
+Beside the secured port door, a status display shows an error message.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4245"></child>
+        </children>
+    </item>
+    <item nodeId="node-4245">
+        <command xml:space="preserve">x display</command>
+        <result xml:space="preserve">Pod bay locked down
+ 1. Telemetry sensor array offline - reset breaker FM36-87/A @ hub platform
+ 2. Launch system cooling loop offline - open backup valve @ Sector 2
+ 3. Pod bay depressurized - scan and repair atmosphere pump
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-4152">
         <command xml:space="preserve">listen</command>
@@ -595,6 +632,31 @@ There are port and starboard doors and a red button.
     <item nodeId="node-4227">
         <command xml:space="preserve">x mask</command>
         <result xml:space="preserve">You wore this mask when there were regular decompression drills.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-4246">
+        <command xml:space="preserve">gonear display</command>
+        <result xml:space="preserve">Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall.
+
+There is a secured hatch in the ceiling.
+
+Beside the secured port door, a status display shows an error message.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-4247"></child>
+        </children>
+    </item>
+    <item nodeId="node-4247">
+        <command xml:space="preserve">x plaque</command>
+        <result xml:space="preserve">The plate reads:
+
+    RWSS Founder's Mercy
+    Laid down 2138, Launched 2141.
+    "May His mercy shine upon us."
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1571,14 +1633,12 @@ You put on the emergency mask.
     <item nodeId="node-4083">
         <command xml:space="preserve">port</command>
         <result xml:space="preserve">(first opening the starboard airlock door)
-You follow a narrow passageway.
 
 Airlock
 There are port and starboard doors and a red button.
 
 &gt;</result>
         <commentary xml:space="preserve">(first opening the starboard airlock door)
-You follow a narrow passageway.
 
 Airlock
 There are port and starboard doors and a red button.
@@ -1589,10 +1649,10 @@ There are port and starboard doors and a red button.
     </item>
     <item nodeId="node-4084">
         <command xml:space="preserve">push red button</command>
-        <result xml:space="preserve">The starboard door slams shut. You feel the air rush out of the room.
+        <result xml:space="preserve">The starboard door slams shut. You feel the air rush out of the airlock.
 
 &gt;</result>
-        <commentary xml:space="preserve">The starboard door slams shut. You feel the air rush out of the room.
+        <commentary xml:space="preserve">The starboard door slams shut. You feel the air rush out of the airlock.
 
 &gt;</commentary>
         <children><child nodeId="node-4085"></child>
@@ -1601,19 +1661,25 @@ There are port and starboard doors and a red button.
     <item nodeId="node-4085">
         <command xml:space="preserve">port</command>
         <result xml:space="preserve">(first opening the port airlock door)
+You crawl through a narrow accessway.
 
 Antenna Control
-You float weightless at the port end of a cylinder. It is very cold and dark here. A door leads starboard.
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
 
 A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
 
 &gt;</result>
         <commentary xml:space="preserve">(first opening the port airlock door)
+You crawl through a narrow accessway.
 
 Antenna Control
-You float weightless at the port end of a cylinder. It is very cold and dark here. A door leads starboard.
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
 
 A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
 
 &gt;</commentary>
         <children><child nodeId="node-4086"></child>
@@ -1658,7 +1724,7 @@ You hear a human speaking from the audio unit: "RWSS Founder's Mercy, this is OV
     *** You are not alone. ***
 
 
-In that game you scored 8 out of a possible 8, in 63 turns.
+In that game you scored 10 out of a possible 10, in 63 turns.
 
 
 Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
@@ -1677,7 +1743,7 @@ You hear a human speaking from the audio unit: "RWSS Founder's Mercy, this is OV
     *** You are not alone. ***
 
 
-In that game you scored 8 out of a possible 8, in 63 turns.
+In that game you scored 10 out of a possible 10, in 63 turns.
 
 
 Would you like to RESTART, RESTORE a saved game, QUIT, or UNDO the last command?
