@@ -272,7 +272,7 @@ Before climbing down, try going down instead.
 
 Chapter 8 - The Player
 
-The player is female. The carrying capacity of the player is 3.
+The player is female. The carrying capacity of the player is 5. [ 3 is too little because of the hoe & blanket ]
 
 Instead of examining the player, say "As virtuous as ever."
 
@@ -828,6 +828,8 @@ Before pushing or pulling or turning or taking the plow, say "The plow is too he
 
 Before going with the plow, try pushing the plow instead.
 
+A hoe is in the barn. It is bulky. It has description "A straight-handled draw hoe. You have worked the fields by hand for a long time, so it is well worn."
+
 Section 2 - Pod Control
 
 Pod Control is a room in Underneath. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall." It has destination name "pod control".
@@ -840,7 +842,7 @@ Instead of the scanner scanning the space suit:
 	computerize "Machine is failed.";
 	rule succeeds.
 
-A brass plate is here. It is scenery. It has description "The plate reads:[paragraph break]    RWSS [italic type]Founder's Mercy[roman type][line break]    Laid down 2138, Launched 2141.[line break]    'May His mercy shine upon us.'" Understand "plaque" as plate.
+A brass plate is here. It is scenery. It has description "[blockquote style]    RWSS Founder's Mercy ๛[line break]    Laid down 2138, Launched 2141.[line break]    'May His mercy shine upon us.'[roman type]". Understand "plaque" as plate.
 
 A status display is here. It is scenery and a machine. The status display can be examined.
 
@@ -1149,12 +1151,17 @@ Definition: the communications unit is almost usable if
 	the audio unit is functional and
 	audio and communications are connected.
 
-Definition: the communications unit is usable if
-	the communications unit is functional and
-	the audio unit is functional and
-	audio and communications are connected and
+Definition: the communications unit is nearly usable if
+	the communications unit is almost usable and
 	communications and antenna panel are connected and
-	the antenna is calibrated. [* usable means ready for its special purpose, functional just means that modules are all correct and functional ]
+	the antenna is calibrated;
+
+Every turn when the player encloses the communications unit and the communications unit is nearly usable and the communications unit is not usable:
+	say "The audio unit vibrates, but in the vacuum, you can't hear what it is saying."
+
+Definition: the communications unit is usable if
+	the communications unit is nearly usable and
+	the location of the communications unit is pressurized. [* usable means ready for its special purpose, functional just means that modules are all correct and functional ]
 
 Definition: the organ is usable if audio unit and organ are connected and the audio unit is functional..
 
@@ -1453,6 +1460,8 @@ Before entering the hub in platform 1, try going up instead.
 
 The ladder is a door. It is open and not openable and scenery. It is up from Platform 1 and outside from Inside the Hub. It has description "[if the location is Platform 1]A ladder leads up into the hub.[otherwise]The ladder moves with the station, rotating around you about four times every minute."
 
+Before going through the ladder when the player is not wearing the gravity boots: say "You feel unstable on the ladder without the gravity boots." instead. [todo]
+
 Understand "crops" as the ground when the player is in Platform 1.
 
 Instead of examining the ground in platform 1, say "The pylon descends to the crops below you."
@@ -1501,12 +1510,12 @@ Before printing the locale description:
 [
 	This is arbitrary, and it might be friendlier to autotake, but it's only insurance against making the game unwinnable because if the player leaves the gravity boots in the platforms or above, she won't be able to return. This depends on (1) objects dropped in the platforms falling to the sectors, and (2) all rooms above the platforms being zero-g.
 
-	TODO: another way to accomplish this would be to keep the player from dropping the gravity boots in the platforms and to keep her from going down in the platforms without them. Think about this.
+	TODO: another way to accomplish this would be to keep the player from dropping the gravity boots in the platforms and to keep her from going down in the platforms without them. Think about this. Maybe, just "You would feel unstead without the boots." Also, in zero-g, have the boots keep the player on the ground, otherwise she will float!
 ]
 
-A thing can be floating-exceptioned. Yourself is floating-exceptioned.
+A thing can be floating-exceptioned. Yourself is floating-exceptioned. [drop this if we abandon the code below]
 
-Before going from a room in zero-g:
+[Before going from a room in zero-g:
 	let L be the list of things in the location;
 	remove the list of things that are scenery from L;
 	remove the list of things that are fixed in place from L;
@@ -1514,7 +1523,7 @@ Before going from a room in zero-g:
 	if the number of entries in L is positive:
 		let item be a random object in L;
 		say "You aren't comfortable leaving behind [the item] floating in zero gravity.";
-		stop the action.
+		stop the action.]
 
 Section 1 - Inside the Hub
 
@@ -1619,6 +1628,49 @@ After going starboard from Antenna Control:
 
 Before exiting from Antenna Control, try going starboard instead.
 
+[ lever ]
+
+A lever is here. It is fixed in place and a container with carrying capacity 1. "[if the hoe is in the lever]Your hoe extends the short lever.[else]A short lever extends from the floor."
+
+Instead of examining the lever:
+	if the hoe is in the lever:
+		say "The hoe extends from a short length of hollow steel pipe, forming a lever which [if the location is pressurized]is pushed against the wall[otherwise]is pulled out from the wall[end if].";
+	otherwise:
+		say "A short length of hollow steel pipe [if the location is pressurized]pushed against the wall[otherwise]pulled out from the wall[end if]."
+
+Before pushing the hoe when the hoe is in the lever, try pushing the lever instead.
+Before pulling the hoe when the hoe is in the lever, try pulling the lever instead.
+
+Instead of pushing the lever:
+	if the location is pressurized:
+		say "The lever is already pushed as far as it goes.";
+	otherwise if the hoe is in the lever:
+		say "You push the hoe and the lever moves. After a moment, you feel air rush into the room.";
+		now the location is pressurized;
+		now the airlock is pressurized;
+	otherwise:
+		say "You try, but is too hard to push the lever without more mechanical advantage."
+
+Instead of pulling the lever:
+	if the location is not pressurized:
+		say "The lever is already pulled as far as it goes.";
+	otherwise if the hoe is in the lever:
+		say "The lever seems locked into position.";
+	otherwise:
+		say "You try, but it is too hard to pull the lever without more mechanical advantage."
+
+This is the hoes only rule:  [* simply using instead of would block default behaviors like first taking... ]
+	if the second noun is the lever and the noun is not the hoe:
+		say "[Those] [don't] fit.";
+		stop the action.
+		
+The hoes only rule is listed before the can't insert if this exceeds carrying capacity rule in the check inserting it into rulebook.
+
+After inserting the hoe into the lever:
+	say "You slide the hoe into the hollow lever, forming a longer lever."
+	
+[ antenna ]
+
 The antenna calibration panel is scenery in Antenna Control.  It is a machine. It has printed name "panel". It has description "This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable." Incorporated by the antenna panel is an RF socket.
 
 A yellow cable is a cable in Antenna Control. "A yellow cable waves from a small panel." It is floating-exceptioned. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
@@ -1659,29 +1711,26 @@ Typing it on is an action applying to one number and one thing.
 Understand "press [a number] into/on/in [the keypad]" as typing it on.
 Understand "enter [a number] into/on/in [the keypad]" as typing it on.
 Understand "type [a number] into/on/in [the keypad]" as typing it on.
-Understand "key [a number] into/on/in [the keypad]" as typing it on.
-Understand "push [a number] into/on/in [the keypad]" as typing it on.
 
 Understand "press [a number] into/on/in [something]" as typing it on.
 Understand "enter [a number] into/on/in [something]" as typing it on.
 Understand "type [a number] into/on/in [something]" as typing it on.
-Understand "key [a number] into/on/in [something]" as typing it on.
-Understand "push [a number] into/on/in [something]" as typing it on.
 
 Understand "press [a number]" as typing it on.
 Understand "enter [a number]" as typing it on.
 Understand "type [a number]" as typing it on.
-Understand "key [a number]" as typing it on.
-Understand "push [a number]" as typing it on.
+
+Understand the command "key" as "type".
 
 Rule for supplying a missing second noun while typing the number understood on:
 	if the player can touch the keypad:
 		now the second noun is the keypad;
 	otherwise:
-		say "There's nothing obvious to type on." instead.
+		say "There's nothing here you can type on." instead.
 
 Check typing it on:
 	if the second noun is the antenna display, try typing the number understood on the keypad instead;
+	if the second noun is the antenna panel, try typing the number understood on the keypad instead;
 	unless the second noun is the keypad, say "There is no keypad on [the second noun]." instead;
 	if the number understood is less than zero or the number understood is greater than nine:
 		say "The keypad only has the digits from 0 to 9.";
@@ -1697,10 +1746,10 @@ Carry out typing it on:
 			increase the sequence position of the keypad by one;
 			computerize2 "[entry (sequence position of the keypad) of the hints of the keypad]";
 	otherwise:
-		computerize2 "Calibration rejected. Restarting sequence.";
+		computerize2 "Calibration rejected.[line break]Restarting sequence.";
 		now the sequence position of the keypad is one;
+		computerize2 "[entry (sequence position of the keypad) of the hints of the keypad]";
 
 [ todo - scan display, panel, keypad, etc. ]
-
 
 [ --- ]
