@@ -15,7 +15,7 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 181212 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 181214 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type ABOUT for credits or HINT for assistance.
 
 Home (on the blanket)
@@ -45,19 +45,1839 @@ There is a secured hatch in the floor.
 
 &gt;</commentary>
         <children><child nodeId="node-8102"></child>
+            <child nodeId="node-8650"></child>
+            <child nodeId="node-8665"></child>
+            <child nodeId="node-8541"></child>
+            <child nodeId="node-8420"></child>
+            <child nodeId="node-8554"></child>
+            <child nodeId="node-8660"></child>
+            <child nodeId="node-8799"></child>
             <child nodeId="node-8325"></child>
+            <child nodeId="node-8415"></child>
+            <child nodeId="node-8735"></child>
+            <child nodeId="node-8655"></child>
+            <child nodeId="node-8422"></child>
+            <child nodeId="node-8408"></child>
+            <child nodeId="node-8473"></child>
+            <child nodeId="node-8501"></child>
+            <child nodeId="node-8760"></child>
+            <child nodeId="node-8498"></child>
         </children>
+    </item>
+    <item nodeId="node-8498">
+        <command xml:space="preserve">x yellow cable</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8499"></child>
+        </children>
+    </item>
+    <item nodeId="node-8499">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+You can also see a yellow cable floating here.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8500"></child>
+        </children>
+    </item>
+    <item nodeId="node-8500">
+        <command xml:space="preserve">x yellow</command>
+        <result xml:space="preserve">A two meter yellow RF cable. It is not plugged into anything.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8760">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+The homespun blanket which you use as your bed is arranged on the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8761"></child>
+        </children>
+    </item>
+    <item nodeId="node-8761">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. To the port and starboard, the station walls rise up to the hub above. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8766"></child>
+            <child nodeId="node-8762"></child>
+        </children>
+    </item>
+    <item nodeId="node-8762">
+        <command xml:space="preserve">take crops</command>
+        <result xml:space="preserve">It is not - may never be - harvest time.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8763"></child>
+        </children>
+    </item>
+    <item nodeId="node-8763">
+        <command xml:space="preserve">eat crops</command>
+        <result xml:space="preserve">You aren't hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8766">
+        <command xml:space="preserve">get crops</command>
+        <result xml:space="preserve">It is not — may never be — harvest time.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8767"></child>
+        </children>
+    </item>
+    <item nodeId="node-8767">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Sector 4: Crops
+Your home is here among the crops. To the port and starboard, the station walls rise up to the hub above. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8768"></child>
+        </children>
+    </item>
+    <item nodeId="node-8768">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8769"></child>
+        </children>
+    </item>
+    <item nodeId="node-8769">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Antenna Control - room
+    antennas - backdrop
+    port airlock door - locked door
+    stars - backdrop
+    mirrors - backdrop
+    solar panels - backdrop
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+    lever - open container
+    calibration panel - machine
+        RF socket (part of calibration panel) - RF socket
+        display (part of calibration panel)
+        keypad (part of calibration panel)
+    yellow cable - cable
+        RF plug (part of yellow cable) - RF plug
+        RF plug (part of yellow cable) - RF plug
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8770"></child>
+        </children>
+    </item>
+    <item nodeId="node-8770">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8771"></child>
+        </children>
+    </item>
+    <item nodeId="node-8771">
+        <command xml:space="preserve">plug cable into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8772"></child>
+        </children>
+    </item>
+    <item nodeId="node-8772">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable is plugged into the calibration panel and an emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8773"></child>
+        </children>
+    </item>
+    <item nodeId="node-8773">
+        <command xml:space="preserve"> out</command>
+        <result xml:space="preserve">The yellow cable pulls out of the emergency communications unit.
+
+(first opening the port airlock door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8774"></child>
+        </children>
+    </item>
+    <item nodeId="node-8774">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8775"></child>
+        </children>
+    </item>
+    <item nodeId="node-8775">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181214 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type ABOUT for credits or HINT for assistance.
+
+Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8776"></child>
+        </children>
+    </item>
+    <item nodeId="node-8776">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+The homespun blanket which you use as your bed is arranged on the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8777"></child>
+        </children>
+    </item>
+    <item nodeId="node-8777">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. To the port and starboard, the station walls rise up to the hub above. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8778"></child>
+        </children>
+    </item>
+    <item nodeId="node-8778">
+        <command xml:space="preserve">starts</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8779"></child>
+        </children>
+    </item>
+    <item nodeId="node-8779">
+        <command xml:space="preserve">x stars</command>
+        <result xml:space="preserve">The sky is awash with stars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8501">
+        <command xml:space="preserve">gonear yellow cable</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+You can also see a yellow cable (plugged into a calibration panel) floating here.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8502"></child>
+            <child nodeId="node-8509"></child>
+        </children>
+    </item>
+    <item nodeId="node-8509">
+        <command xml:space="preserve">x cable</command>
+        <result xml:space="preserve">A two meter yellow RF cable. It is plugged into a calibration panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8510"></child>
+        </children>
+    </item>
+    <item nodeId="node-8510">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+You can also see a yellow cable (plugged into a calibration panel) floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8511"></child>
+        </children>
+    </item>
+    <item nodeId="node-8511">
+        <command xml:space="preserve">get cabl</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8512"></child>
+        </children>
+    </item>
+    <item nodeId="node-8512">
+        <command xml:space="preserve">get cable</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8513"></child>
+        </children>
+    </item>
+    <item nodeId="node-8513">
+        <command xml:space="preserve">unplug cable from panel</command>
+        <result xml:space="preserve">The yellow cable is permanently attached to the panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8514"></child>
+        </children>
+    </item>
+    <item nodeId="node-8514">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a yellow cable (plugged into a calibration panel)
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8515"></child>
+        </children>
+    </item>
+    <item nodeId="node-8515">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8516"></child>
+        </children>
+    </item>
+    <item nodeId="node-8516">
+        <command xml:space="preserve">drop cable</command>
+        <result xml:space="preserve">You drop the yellow cable and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8517"></child>
+        </children>
+    </item>
+    <item nodeId="node-8517">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+You can also see a yellow cable (plugged into a calibration panel) floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8518"></child>
+        </children>
+    </item>
+    <item nodeId="node-8518">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8519"></child>
+        </children>
+    </item>
+    <item nodeId="node-8519">
+        <command xml:space="preserve">plug cable into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8520"></child>
+        </children>
+    </item>
+    <item nodeId="node-8520">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+You can also see a yellow cable (plugged into a calibration panel and an emergency communications unit) floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8521"></child>
+        </children>
+    </item>
+    <item nodeId="node-8521">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Antenna Control
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8522"></child>
+        </children>
+    </item>
+    <item nodeId="node-8522">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">Antenna Control
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8523"></child>
+        </children>
+    </item>
+    <item nodeId="node-8523">
+        <command xml:space="preserve">plug cable into panel</command>
+        <result xml:space="preserve">The yellow cable is already plugged into the calibration panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8540"></child>
+        </children>
+    </item>
+    <item nodeId="node-8540">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+You can also see a yellow cable (plugged into a calibration panel) floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8502">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8503"></child>
+        </children>
+    </item>
+    <item nodeId="node-8503">
+        <command xml:space="preserve">purloin audio</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8504"></child>
+        </children>
+    </item>
+    <item nodeId="node-8504">
+        <command xml:space="preserve">plug audio into yellow cable</command>
+        <result xml:space="preserve">The audio unit has no plug.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8505"></child>
+        </children>
+    </item>
+    <item nodeId="node-8505">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8506"></child>
+        </children>
+    </item>
+    <item nodeId="node-8506">
+        <command xml:space="preserve">plug yellow cable into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8507"></child>
+        </children>
+    </item>
+    <item nodeId="node-8507">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8473">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. Through a surprisingly large window, you can see the station rotating around you, solar panels, and antennas, all backed by a spectacular field of stars.  A short lever extends from the floor, and a yellow cable waves from a small control panel.
+
+It is very cold and dark here in the near vacuum. An airlock door leads starboard.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8586"></child>
+            <child nodeId="node-8490"></child>
+            <child nodeId="node-8788"></child>
+            <child nodeId="node-8793"></child>
+            <child nodeId="node-8479"></child>
+            <child nodeId="node-8474"></child>
+            <child nodeId="node-8781"></child>
+        </children>
+    </item>
+    <item nodeId="node-8781">
+        <command xml:space="preserve">x stars</command>
+        <result xml:space="preserve">The stars seem brighter up here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8782"></child>
+        </children>
+    </item>
+    <item nodeId="node-8782">
+        <command xml:space="preserve">starboard</command>
+        <result xml:space="preserve">(first opening the port airlock door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8474">
+        <command xml:space="preserve">x panel</command>
+        <result xml:space="preserve">This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8475"></child>
+        </children>
+    </item>
+    <item nodeId="node-8475">
+        <command xml:space="preserve">x solar panel</command>
+        <result xml:space="preserve">The solar panels are the primary source of station power and support a small array of antennas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8476"></child>
+        </children>
+    </item>
+    <item nodeId="node-8476">
+        <command xml:space="preserve">drop panel</command>
+        <result xml:space="preserve">The calibration panel is already here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8477"></child>
+        </children>
+    </item>
+    <item nodeId="node-8477">
+        <command xml:space="preserve">x antenna calibration panel</command>
+        <result xml:space="preserve">I only understood you as far as wanting to examine the antennas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8479">
+        <command xml:space="preserve">x antenna calibration panel</command>
+        <result xml:space="preserve">This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8480"></child>
+        </children>
+    </item>
+    <item nodeId="node-8480">
+        <command xml:space="preserve">x keypad</command>
+        <result xml:space="preserve">The keypad has the digits from 0 through 9.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8481"></child>
+        </children>
+    </item>
+    <item nodeId="node-8481">
+        <command xml:space="preserve">x cable</command>
+        <result xml:space="preserve">A two meter yellow RF cable. It is not plugged into anything.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8482"></child>
+        </children>
+    </item>
+    <item nodeId="node-8482">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8483"></child>
+        </children>
+    </item>
+    <item nodeId="node-8483">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8484"></child>
+        </children>
+    </item>
+    <item nodeId="node-8484">
+        <command xml:space="preserve">plug comms into cable</command>
+        <result xml:space="preserve">The emergency communications unit has no plug.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8485"></child>
+        </children>
+    </item>
+    <item nodeId="node-8485">
+        <command xml:space="preserve">plug cable into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8486"></child>
+        </children>
+    </item>
+    <item nodeId="node-8486">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8487"></child>
+        </children>
+    </item>
+    <item nodeId="node-8487">
+        <command xml:space="preserve">drop comms</command>
+        <result xml:space="preserve">You drop the emergency communications unit and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8488"></child>
+        </children>
+    </item>
+    <item nodeId="node-8488">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+You can also see an emergency communications unit floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8793">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Antenna Control - room
+    antennas - backdrop
+    port airlock door - locked door
+    stars - backdrop
+    solar panels - backdrop
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+    window
+    station
+    lever - open container
+    calibration panel - machine
+        RF socket (part of calibration panel) - RF socket
+        display (part of calibration panel)
+        keypad (part of calibration panel)
+    yellow cable - cable
+        RF plug (part of yellow cable) - RF plug
+        RF plug (part of yellow cable) - RF plug
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8794"></child>
+        </children>
+    </item>
+    <item nodeId="node-8794">
+        <command xml:space="preserve">analyze stars</command>
+        <result xml:space="preserve">They are trillions of meters or more away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8795"></child>
+        </children>
+    </item>
+    <item nodeId="node-8795">
+        <command xml:space="preserve">touch stars</command>
+        <result xml:space="preserve">They are trillions of meters or more away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8796"></child>
+        </children>
+    </item>
+    <item nodeId="node-8796">
+        <command xml:space="preserve">taste stars</command>
+        <result xml:space="preserve">They are trillions of meters or more away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8797"></child>
+        </children>
+    </item>
+    <item nodeId="node-8797">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">Profound silence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8798"></child>
+        </children>
+    </item>
+    <item nodeId="node-8798">
+        <command xml:space="preserve">smell</command>
+        <result xml:space="preserve">Only familiar odors.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8788">
+        <command xml:space="preserve">remove jumpsuit</command>
+        <result xml:space="preserve">It is too cold here to even consider removing the green jumpsuit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8789"></child>
+        </children>
+    </item>
+    <item nodeId="node-8789">
+        <command xml:space="preserve">x station</command>
+        <result xml:space="preserve">Backed by a field of stars, you can see the wheel of the station rotating around you to the starboard — you didn't notice before but the airlock must be some sort of rotation coupling.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8790"></child>
+        </children>
+    </item>
+    <item nodeId="node-8790">
+        <command xml:space="preserve">touch station</command>
+        <result xml:space="preserve">The station is all around you.
+
+You feel nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8791"></child>
+        </children>
+    </item>
+    <item nodeId="node-8791">
+        <command xml:space="preserve">x stars</command>
+        <result xml:space="preserve">The stars seem brighter up here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8490">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8491"></child>
+            <child nodeId="node-8496"></child>
+            <child nodeId="node-8545"></child>
+        </children>
+    </item>
+    <item nodeId="node-8545">
+        <command xml:space="preserve">plug yellow</command>
+        <result xml:space="preserve">What do you want to plug the yellow cable into?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8546"></child>
+        </children>
+    </item>
+    <item nodeId="node-8546">
+        <command xml:space="preserve">comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8547"></child>
+        </children>
+    </item>
+    <item nodeId="node-8547">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable is plugged into a calibration panel and an emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8553"></child>
+        </children>
+    </item>
+    <item nodeId="node-8553">
+        <command xml:space="preserve">showme  panel</command>
+        <result xml:space="preserve">calibration panel - machine
+    RF socket (part of calibration panel) - RF socket
+    display (part of calibration panel)
+    keypad (part of calibration panel)
+location: in Antenna Control
+singular-named, improper-named; unlit, inedible, fixed in place, scenery; opaque, open, unopenable, unlocked
+list grouping key: none
+printed name: "calibration panel"
+printed plural name: "machines"
+indefinite article: none
+description: "This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable."
+initial appearance: none
+carrying capacity: 0
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8496">
+        <command xml:space="preserve">plug cable into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8497"></child>
+        </children>
+    </item>
+    <item nodeId="node-8497">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8491">
+        <command xml:space="preserve">drop comms</command>
+        <result xml:space="preserve">You drop the emergency communications unit and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8492"></child>
+        </children>
+    </item>
+    <item nodeId="node-8492">
+        <command xml:space="preserve">plug yellow into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8493"></child>
+        </children>
+    </item>
+    <item nodeId="node-8493">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+You can also see an emergency communications unit and a yellow cable (plugged into an emergency communications unit) floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8586">
+        <command xml:space="preserve">get yellow</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8587"></child>
+        </children>
+    </item>
+    <item nodeId="node-8587">
+        <command xml:space="preserve">drop yellow</command>
+        <result xml:space="preserve">You release the yellow cable and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8588"></child>
+        </children>
+    </item>
+    <item nodeId="node-8588">
+        <command xml:space="preserve">plug yellow into panel</command>
+        <result xml:space="preserve">The yellow cable is already plugged into the calibration panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8589"></child>
+        </children>
+    </item>
+    <item nodeId="node-8589">
+        <command xml:space="preserve">x display</command>
+        <result xml:space="preserve">Calibrate to Epsilon/Lime.
+
+[Now might be a good time to consult the Official Space Relay League Antenna Calibration Guide™, included in your game package.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8408">
+        <command xml:space="preserve">gonear stars</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8409"></child>
+        </children>
+    </item>
+    <item nodeId="node-8409">
+        <command xml:space="preserve">x stars</command>
+        <result xml:space="preserve">The sky is awash with stars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8410"></child>
+        </children>
+    </item>
+    <item nodeId="node-8410">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8411"></child>
+        </children>
+    </item>
+    <item nodeId="node-8411">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181213 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type ABOUT for credits or HINT for assistance.
+
+Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8412"></child>
+        </children>
+    </item>
+    <item nodeId="node-8412">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+The homespun blanket which you use as your bed is arranged on the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8413"></child>
+        </children>
+    </item>
+    <item nodeId="node-8413">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. To the port and starboard, the station walls rise up to the hub above. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8414"></child>
+        </children>
+    </item>
+    <item nodeId="node-8414">
+        <command xml:space="preserve">x stars</command>
+        <result xml:space="preserve">The sky is awash with stars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8422">
+        <command xml:space="preserve">gonear solar panels</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8423"></child>
+        </children>
+    </item>
+    <item nodeId="node-8423">
+        <command xml:space="preserve">x solar panels</command>
+        <result xml:space="preserve">The solar panels are the primary source of station power and support a small array of antennas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8430"></child>
+            <child nodeId="node-8424"></child>
+        </children>
+    </item>
+    <item nodeId="node-8424">
+        <command xml:space="preserve">x antennas</command>
+        <result xml:space="preserve">The solar panels are the primary source of station power and support a small array of antennas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8425"></child>
+        </children>
+    </item>
+    <item nodeId="node-8425">
+        <command xml:space="preserve">listobj</command>
+        <result xml:space="preserve">Founder's Testament
+RF plug (P)
+RF plug (P)
+RF socket (P)
+RF socket (P)
+USB plug (P)
+USB plug (P)
+almond socket (P)
+altar (F) (S)
+atmosphere pump (F) (S)
+atmosphere sensor
+audio unit
+barn (F) (S)
+beige socket (P)
+berths (F) (S)
+blanket
+brass plate (F) (S)
+bulkhead door (F)
+calinration panel
+canned vegetables (F) (S)
+chalkboard (F) (S)
+church (F) (S)
+clean eraser
+crate of machine parts (F) (S)
+crops (F) (S)
+desk (F) (S)
+display (P)
+doll
+emergency communications unit
+emergency mask
+fish (F) (S)
+floor hatch (F)
+floor hatch (F)
+floor hatch (F)
+graveyard (F) (S)
+gray cable
+green jumpsuit
+green valve (F)
+ground (F) (S)
+hoe
+home (F) (S)
+hub (F) (S)
+hydroponics machines (F) (S)
+instruction module
+instruction module
+junk repository
+keypad (P)
+ladder (F) (S)
+large bag of split peas (F) (S)
+laser beam (F) (S)
+learning machine (F) (S)
+lever (F)
+maintenance platform (F) (S)
+maintenance platform (F) (S)
+mirrors (F) (S)
+organ (F) (S)
+pair of gravity boots
+panel (F) (S)
+pile of clutter (F)
+plow (F) (S)
+pocket (P)
+pond (F) (S)
+port airlock door (F) (S)
+power module
+power module
+power module
+pressure regulation module
+pressure regulation module
+pylon (F) (S)
+pylon (F) (S)
+pylon (F) (S)
+pylon (F) (S)
+pylons (F) (S)
+red button (F) (S)
+red circuit breaker (F)
+scanner
+school house (F) (S)
+shelves (F) (S)
+solar panels (F) (S)
+space suit (F) (S)
+starboard airlock door (F) (S)
+stars (F) (S)
+station walls (F) (S)
+status display (F) (S)
+tan socket (P)
+the house (F) (S)
+trees (F) (S)
+trees (F) (S)
+unremarkable junk (F)
+vegetables (F) (S)
+yellow cable
+yourself
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8426"></child>
+        </children>
+    </item>
+    <item nodeId="node-8426">
+        <command xml:space="preserve">robj</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8427"></child>
+        </children>
+    </item>
+    <item nodeId="node-8427">
+        <command xml:space="preserve">robjects</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8430">
+        <command xml:space="preserve">x antenna</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8431"></child>
+        </children>
+    </item>
+    <item nodeId="node-8431">
+        <command xml:space="preserve">gonear barn</command>
+        <result xml:space="preserve">(Barn)
+Barn
+Not fancy: livestock on one side and feed on the other, but nothing remains of either. There is a plow near the entrance.
+
+You can see a hoe here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8432"></child>
+        </children>
+    </item>
+    <item nodeId="node-8432">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8433"></child>
+        </children>
+    </item>
+    <item nodeId="node-8433">
+        <command xml:space="preserve">x solar panels</command>
+        <result xml:space="preserve">The solar panels are the primary source of station power and support a small array of antennas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8434"></child>
+        </children>
+    </item>
+    <item nodeId="node-8434">
+        <command xml:space="preserve">x antennas</command>
+        <result xml:space="preserve">The solar panels are the primary source of station power and support a small array of antennas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8655">
+        <command xml:space="preserve">gonear pond</command>
+        <result xml:space="preserve">Sector 2: Aquaculture
+A deep pond with some fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8656"></child>
+        </children>
+    </item>
+    <item nodeId="node-8656">
+        <command xml:space="preserve">put scanner in pond</command>
+        <result xml:space="preserve">You aren't confident you would be able to retrieve the scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8657"></child>
+        </children>
+    </item>
+    <item nodeId="node-8657">
+        <command xml:space="preserve">put scanner into pond</command>
+        <result xml:space="preserve">You aren't confident you would be able to retrieve the scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8658"></child>
+        </children>
+    </item>
+    <item nodeId="node-8658">
+        <command xml:space="preserve">throw scanner at fish</command>
+        <result xml:space="preserve">Futile.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8659"></child>
+        </children>
+    </item>
+    <item nodeId="node-8659">
+        <command xml:space="preserve">give scanner to fish</command>
+        <result xml:space="preserve">You can only do that to something animate.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8735">
+        <command xml:space="preserve">gonear pigeons</command>
+        <result xml:space="preserve">Platform 5
+This plaform is home to a flock of pigeons. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8736"></child>
+        </children>
+    </item>
+    <item nodeId="node-8736">
+        <command xml:space="preserve">push pigeons</command>
+        <result xml:space="preserve">You annoy the pigeons.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8737"></child>
+        </children>
+    </item>
+    <item nodeId="node-8737">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The pigeons fly away.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8738"></child>
+        </children>
+    </item>
+    <item nodeId="node-8738">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Platform 5
+This plaform is white with pigeon droppings. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8739"></child>
+        </children>
+    </item>
+    <item nodeId="node-8739">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 3
+A platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8740"></child>
+        </children>
+    </item>
+    <item nodeId="node-8740">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 1
+A platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8741"></child>
+        </children>
+    </item>
+    <item nodeId="node-8741">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 5
+This plaform is home to a flock of pigeons. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8742"></child>
+        </children>
+    </item>
+    <item nodeId="node-8742">
+        <command xml:space="preserve">x pigeons</command>
+        <result xml:space="preserve">Descendents of the flock your grandparents brought here for food.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8743"></child>
+        </children>
+    </item>
+    <item nodeId="node-8743">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">Quiet cooing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8744"></child>
+        </children>
+    </item>
+    <item nodeId="node-8744">
+        <command xml:space="preserve">push pigeons</command>
+        <result xml:space="preserve">You annoy the pigeons.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8745"></child>
+        </children>
+    </item>
+    <item nodeId="node-8745">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">Annoyed cooing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8746"></child>
+        </children>
+    </item>
+    <item nodeId="node-8746">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Platform 5
+This plaform is home to a flock of pigeons. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8747"></child>
+        </children>
+    </item>
+    <item nodeId="node-8747">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8748"></child>
+        </children>
+    </item>
+    <item nodeId="node-8748">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181214 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type ABOUT for credits or HINT for assistance.
+
+Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8749"></child>
+        </children>
+    </item>
+    <item nodeId="node-8749">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+The homespun blanket which you use as your bed is arranged on the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8750"></child>
+        </children>
+    </item>
+    <item nodeId="node-8750">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">The exits are down to the cellar and outside to sector 4.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8751"></child>
+        </children>
+    </item>
+    <item nodeId="node-8751">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 4: Crops
+Your home is here among the crops. To the port and starboard, the station walls rise up to the hub above. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8752"></child>
+        </children>
+    </item>
+    <item nodeId="node-8752">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8753"></child>
+        </children>
+    </item>
+    <item nodeId="node-8753">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond with some fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8754"></child>
+        </children>
+    </item>
+    <item nodeId="node-8754">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8755"></child>
+        </children>
+    </item>
+    <item nodeId="node-8755">
+        <command xml:space="preserve">take crops</command>
+        <result xml:space="preserve">They're hardly portable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8756"></child>
+        </children>
+    </item>
+    <item nodeId="node-8756">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8757"></child>
+        </children>
+    </item>
+    <item nodeId="node-8757">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave: the pods are below Sector 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8758"></child>
+        </children>
+    </item>
+    <item nodeId="node-8758">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. To the port and starboard, the station walls rise up to the hub above. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8759"></child>
+        </children>
+    </item>
+    <item nodeId="node-8759">
+        <command xml:space="preserve">take crops</command>
+        <result xml:space="preserve">They're hardly portable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8415">
+        <command xml:space="preserve">gonear lever</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8436"></child>
+            <child nodeId="node-8446"></child>
+            <child nodeId="node-8448"></child>
+            <child nodeId="node-8416"></child>
+        </children>
+    </item>
+    <item nodeId="node-8416">
+        <command xml:space="preserve">x stars</command>
+        <result xml:space="preserve">The sky is awash with stars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8417"></child>
+        </children>
+    </item>
+    <item nodeId="node-8417">
+        <command xml:space="preserve">x station</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8418"></child>
+        </children>
+    </item>
+    <item nodeId="node-8418">
+        <command xml:space="preserve">x antenna</command>
+        <result xml:space="preserve">Which do you mean, the solar panels, the panel, or the display?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8419"></child>
+        </children>
+    </item>
+    <item nodeId="node-8419">
+        <command xml:space="preserve">x panel</command>
+        <result xml:space="preserve">Which do you mean, the solar panels or the panel?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8448">
+        <command xml:space="preserve">x disk</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8449"></child>
+        </children>
+    </item>
+    <item nodeId="node-8449">
+        <command xml:space="preserve">x dish</command>
+        <result xml:space="preserve">You can see the antennas clearly from here: small telemetry antennas and the main communications dish. The dish lists, aiming at nothing in particular.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8450"></child>
+        </children>
+    </item>
+    <item nodeId="node-8450">
+        <command xml:space="preserve">type 3</command>
+        <result xml:space="preserve">Calibrate to Delta/Plum.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8451"></child>
+        </children>
+    </item>
+    <item nodeId="node-8451">
+        <command xml:space="preserve">type eight</command>
+        <result xml:space="preserve">Calibrate to Gamma/Banana.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8452"></child>
+        </children>
+    </item>
+    <item nodeId="node-8452">
+        <command xml:space="preserve">press 5</command>
+        <result xml:space="preserve">Calibrate to Beta/Cherry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8453"></child>
+        </children>
+    </item>
+    <item nodeId="node-8453">
+        <command xml:space="preserve">enter 2</command>
+        <result xml:space="preserve">Calibration successful.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8454"></child>
+        </children>
+    </item>
+    <item nodeId="node-8454">
+        <command xml:space="preserve">x dish</command>
+        <result xml:space="preserve">You can see the antennas clearly from here: small telemetry antennas and the main communications dish. The dish appears to be tracking something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8455"></child>
+        </children>
+    </item>
+    <item nodeId="node-8455">
+        <command xml:space="preserve">x display</command>
+        <result xml:space="preserve">Antenna calibrated.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8465"></child>
+        </children>
+    </item>
+    <item nodeId="node-8465">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8466"></child>
+        </children>
+    </item>
+    <item nodeId="node-8466">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+The panel has no socket.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181213 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type ABOUT for credits or HINT for assistance.
+
+Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8467"></child>
+        </children>
+    </item>
+    <item nodeId="node-8467">
+        <command xml:space="preserve">gonear lever</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8468"></child>
+        </children>
+    </item>
+    <item nodeId="node-8468">
+        <command xml:space="preserve">x display</command>
+        <result xml:space="preserve">Calibrate to Epsilon/Lime.
+
+[Now might be a good time to consult your Official Space Relay League Antenna Calibration Guide.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8446">
+        <command xml:space="preserve">x dish</command>
+        <result xml:space="preserve">You can see the antennas clearly from here: small telemetry antennas and the main communications dish. The dish appears to be tracking something.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8436">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8437"></child>
+        </children>
+    </item>
+    <item nodeId="node-8437">
+        <command xml:space="preserve">x communications</command>
+        <result xml:space="preserve">(the emergency communications unit)
+A bulky but portable emergency communications unit from a transit pod. It can work independently if you provide audio and antenna connections.
+
+The emergency communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8438"></child>
+        </children>
+    </item>
+    <item nodeId="node-8438">
+        <command xml:space="preserve">x communications dish</command>
+        <result xml:space="preserve">You can see the antennas clearly from here: small telemetry antennas and the main communications dish.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8439"></child>
+        </children>
+    </item>
+    <item nodeId="node-8439">
+        <command xml:space="preserve">x comms</command>
+        <result xml:space="preserve">A bulky but portable emergency communications unit from a transit pod. It can work independently if you provide audio and antenna connections.
+
+The emergency communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-8325">
         <command xml:space="preserve">gonear ladder</command>
         <result xml:space="preserve">Platform 1
-A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+A platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-8326"></child>
+            <child nodeId="node-8730"></child>
             <child nodeId="node-8329"></child>
+            <child nodeId="node-8406"></child>
         </children>
+    </item>
+    <item nodeId="node-8406">
+        <command xml:space="preserve">x walls</command>
+        <result xml:space="preserve">The walls form the ends of the rotating cylinder that is the station, stretching from the ground to the hub. The top third is transparent, through which you can see solar panels, mirrors, and the stars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8407"></child>
+        </children>
+    </item>
+    <item nodeId="node-8407">
+        <command xml:space="preserve">x stars</command>
+        <result xml:space="preserve">The sky is awash with stars.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-8329">
         <command xml:space="preserve">u</command>
@@ -257,6 +2077,53 @@ You drop the pair of gravity boots and it floats nearby.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-8730">
+        <command xml:space="preserve">asw</command>
+        <result xml:space="preserve">
+Platform 5
+This plaform is home to a flock of pigeons. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8731"></child>
+        </children>
+    </item>
+    <item nodeId="node-8731">
+        <command xml:space="preserve">x pigeons</command>
+        <result xml:space="preserve">Descendents of the flock your grandparents brought here for food.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8732"></child>
+        </children>
+    </item>
+    <item nodeId="node-8732">
+        <command xml:space="preserve">smell</command>
+        <result xml:space="preserve">There are a lot of pigeons, so not great, but you've smelled worse.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8733"></child>
+        </children>
+    </item>
+    <item nodeId="node-8733">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">Quiet cooing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8734"></child>
+        </children>
+    </item>
+    <item nodeId="node-8734">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-8326">
         <command xml:space="preserve">actions</command>
         <result xml:space="preserve">Actions listing on.
@@ -275,6 +2142,703 @@ Inside the Hub
 You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and an airlock is to the port.
 
 [going up - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8799">
+        <command xml:space="preserve">gonear hatch</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+The homespun blanket which you use as your bed is arranged on the ground.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8800"></child>
+        </children>
+    </item>
+    <item nodeId="node-8800">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. Through a surprisingly large window, you can see the station rotating around you, solar panels, and antennas, all backed by a spectacular field of stars.  A short lever extends from the floor, and a yellow cable waves from a small control panel.
+
+It is very cold and dark here in the near vacuum. An airlock door leads starboard.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8801"></child>
+        </children>
+    </item>
+    <item nodeId="node-8801">
+        <command xml:space="preserve">x station</command>
+        <result xml:space="preserve">Backed by a field of stars, you can see the wheel of the station rotating around you to the starboard — you didn't notice before but the airlock must be some sort of rotation coupling.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8802"></child>
+        </children>
+    </item>
+    <item nodeId="node-8802">
+        <command xml:space="preserve">x stars</command>
+        <result xml:space="preserve">The stars seem brighter up here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8803"></child>
+        </children>
+    </item>
+    <item nodeId="node-8803">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Antenna Control - room
+    antennas - backdrop
+    port airlock door - locked door
+    stars - backdrop
+    solar panels - backdrop
+    yourself - person
+        scanner
+        green jumpsuit (worn)
+            pocket (part of green jumpsuit) - open container
+    window
+    station
+    lever - open container
+    calibration panel - machine
+        RF socket (part of calibration panel) - RF socket
+        display (part of calibration panel)
+        keypad (part of calibration panel)
+    yellow cable - cable
+        RF plug (part of yellow cable) - RF plug
+        RF plug (part of yellow cable) - RF plug
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8804"></child>
+        </children>
+    </item>
+    <item nodeId="node-8804">
+        <command xml:space="preserve">x solar</command>
+        <result xml:space="preserve">The solar panels are the primary source of station power and support a small array of antennas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8805"></child>
+        </children>
+    </item>
+    <item nodeId="node-8805">
+        <command xml:space="preserve">touch slar</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8806"></child>
+        </children>
+    </item>
+    <item nodeId="node-8806">
+        <command xml:space="preserve">touch solar</command>
+        <result xml:space="preserve">There is a window in the way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8807"></child>
+        </children>
+    </item>
+    <item nodeId="node-8807">
+        <command xml:space="preserve">touch antenna</command>
+        <result xml:space="preserve">There is a window in the way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8808"></child>
+        </children>
+    </item>
+    <item nodeId="node-8808">
+        <command xml:space="preserve">get antenna</command>
+        <result xml:space="preserve">There is a window in the way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8809"></child>
+        </children>
+    </item>
+    <item nodeId="node-8809">
+        <command xml:space="preserve">x antenna</command>
+        <result xml:space="preserve">You can see the antennas clearly from here: small telemetry antennas and the main communications dish. The dish lists, aiming at nothing in particular.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8810"></child>
+        </children>
+    </item>
+    <item nodeId="node-8810">
+        <command xml:space="preserve">x dish</command>
+        <result xml:space="preserve">You can see the antennas clearly from here: small telemetry antennas and the main communications dish. The dish lists, aiming at nothing in particular.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8660">
+        <command xml:space="preserve">gonear fish</command>
+        <result xml:space="preserve">Sector 2: Aquaculture
+A deep pond with some fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8661"></child>
+        </children>
+    </item>
+    <item nodeId="node-8661">
+        <command xml:space="preserve">throw scanner at fish</command>
+        <result xml:space="preserve">You lack the nerve when it comes to the crucial moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8662"></child>
+        </children>
+    </item>
+    <item nodeId="node-8662">
+        <command xml:space="preserve">give scanner to fish</command>
+        <result xml:space="preserve">The fish don't seem interested.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8663"></child>
+        </children>
+    </item>
+    <item nodeId="node-8663">
+        <command xml:space="preserve">show fe</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8664"></child>
+        </children>
+    </item>
+    <item nodeId="node-8664">
+        <command xml:space="preserve">drop fish</command>
+        <result xml:space="preserve">The fish aren't easy to catch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8554">
+        <command xml:space="preserve">gonear comms</command>
+        <result xml:space="preserve">Pod Bay
+There are four berths for transit pods. Unfortunately, all are empty.
+
+A secured door leads starboard.
+
+There is a pile of clutter. It looks like equipment removed to free up space in the transit pods.
+
+This is troubling. You counted. You were sure there would be one pod left. There are none.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8555"></child>
+        </children>
+    </item>
+    <item nodeId="node-8555">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8556"></child>
+        </children>
+    </item>
+    <item nodeId="node-8556">
+        <command xml:space="preserve">purloin comms</command>
+        <result xml:space="preserve">[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8557"></child>
+        </children>
+    </item>
+    <item nodeId="node-8557">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8558"></child>
+        </children>
+    </item>
+    <item nodeId="node-8558">
+        <command xml:space="preserve">plug yellow into comms</command>
+        <result xml:space="preserve">You plug the yellow cable into the emergency communications unit.
+
+No pods left ... you consider despair.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8559"></child>
+        </children>
+    </item>
+    <item nodeId="node-8559">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable is plugged into the calibration panel and an emergency communications unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8560"></child>
+        </children>
+    </item>
+    <item nodeId="node-8560">
+        <command xml:space="preserve">drop panel</command>
+        <result xml:space="preserve">The calibration panel is already here.
+
+So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8561"></child>
+        </children>
+    </item>
+    <item nodeId="node-8561">
+        <command xml:space="preserve">get cable</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8562"></child>
+        </children>
+    </item>
+    <item nodeId="node-8562">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">The yellow cable is permanently attached to the panel, so you must drop it before leaving.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8563"></child>
+        </children>
+    </item>
+    <item nodeId="node-8563">
+        <command xml:space="preserve">drop cable</command>
+        <result xml:space="preserve">You drop the yellow cable and it floats nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8564"></child>
+        </children>
+    </item>
+    <item nodeId="node-8564">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">The yellow cable pulls out of the emergency communications unit.
+
+(first opening the port airlock door)
+It seems to be locked.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8565"></child>
+        </children>
+    </item>
+    <item nodeId="node-8565">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A yellow cable waves from a small panel.
+
+A short lever extends from the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8566"></child>
+        </children>
+    </item>
+    <item nodeId="node-8566">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A yellow cable waves from a small panel.
+
+A short lever extends from the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8567"></child>
+        </children>
+    </item>
+    <item nodeId="node-8567">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A yellow cable waves from a small panel.
+
+A short lever extends from the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8582"></child>
+        </children>
+    </item>
+    <item nodeId="node-8582">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8583"></child>
+        </children>
+    </item>
+    <item nodeId="node-8583">
+        <command xml:space="preserve">get cable</command>
+        <result xml:space="preserve">[taking the yellow cable]
+Taken.
+[taking the yellow cable - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8584"></child>
+        </children>
+    </item>
+    <item nodeId="node-8584">
+        <command xml:space="preserve">drop cable</command>
+        <result xml:space="preserve">[dropping the yellow cable]
+You drop the yellow cable and it floats nearby.
+[dropping the yellow cable - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8420">
+        <command xml:space="preserve">gonear calibration panel</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8421"></child>
+            <child nodeId="node-8470"></child>
+        </children>
+    </item>
+    <item nodeId="node-8470">
+        <command xml:space="preserve">x panel</command>
+        <result xml:space="preserve">Which do you mean, the solar panels or the panel?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8471"></child>
+        </children>
+    </item>
+    <item nodeId="node-8471">
+        <command xml:space="preserve">x calibration panel</command>
+        <result xml:space="preserve">This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8472"></child>
+        </children>
+    </item>
+    <item nodeId="node-8472">
+        <command xml:space="preserve">x display</command>
+        <result xml:space="preserve">Calibrate to Epsilon/Lime.
+
+[Now might be a good time to consult the Official Space Relay League™ Antenna Calibration Guide™, included in your game package.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8421">
+        <command xml:space="preserve">x antenna</command>
+        <result xml:space="preserve">The solar panels are the primary source of station power and support a small array of antennas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8541">
+        <command xml:space="preserve">gonear cable</command>
+        <result xml:space="preserve">Which do you mean, the yellow cable or the gray cable?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8542"></child>
+        </children>
+    </item>
+    <item nodeId="node-8542">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+It is plugged into a calibration panel.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8665">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">(first getting off the blanket)
+(first opening the floor hatch)
+
+Cellar
+Your decompression shelter and storage space for increasingly empty shelves of canned vegetables and one more large bag of split peas.
+
+There is an open hatch in the ceiling.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8684"></child>
+            <child nodeId="node-8666"></child>
+            <child nodeId="node-8672"></child>
+            <child nodeId="node-8678"></child>
+        </children>
+    </item>
+    <item nodeId="node-8678">
+        <command xml:space="preserve">x okra</command>
+        <result xml:space="preserve">Mostly tomatoes, green beans, carrots, and okra. Without a new source of salt or acid, too much of your recent harvest has been left to spoil.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8679"></child>
+        </children>
+    </item>
+    <item nodeId="node-8679">
+        <command xml:space="preserve">get okra</command>
+        <result xml:space="preserve">You take a jar of okra.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8680"></child>
+        </children>
+    </item>
+    <item nodeId="node-8680">
+        <command xml:space="preserve">eat okra</command>
+        <result xml:space="preserve">(the jar of okra)
+You aren't hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8681"></child>
+        </children>
+    </item>
+    <item nodeId="node-8681">
+        <command xml:space="preserve">eat jar</command>
+        <result xml:space="preserve">(the jar of okra)
+You aren't hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8682"></child>
+        </children>
+    </item>
+    <item nodeId="node-8682">
+        <command xml:space="preserve">open jar</command>
+        <result xml:space="preserve">(the jar of okra)
+You aren't hungry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8672">
+        <command xml:space="preserve">take vegetables</command>
+        <result xml:space="preserve">You take a jar of okra.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8673"></child>
+        </children>
+    </item>
+    <item nodeId="node-8673">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">You aren't hungry, and you've already taken one jar.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8674"></child>
+        </children>
+    </item>
+    <item nodeId="node-8674">
+        <command xml:space="preserve">x jar</command>
+        <result xml:space="preserve">(the jar of okra)
+You see nothing special about the jar of okra.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8675"></child>
+        </children>
+    </item>
+    <item nodeId="node-8675">
+        <command xml:space="preserve">eat jar</command>
+        <result xml:space="preserve">(the jar of okra)
+That's plainly inedible.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8676"></child>
+        </children>
+    </item>
+    <item nodeId="node-8676">
+        <command xml:space="preserve">open jar</command>
+        <result xml:space="preserve">(the jar of okra)
+It isn't something you can open.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8666">
+        <command xml:space="preserve">take okra</command>
+        <result xml:space="preserve">You take a jar of okra.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8667"></child>
+        </children>
+    </item>
+    <item nodeId="node-8667">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a jar of okra
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8668"></child>
+        </children>
+    </item>
+    <item nodeId="node-8668">
+        <command xml:space="preserve">take vegetables</command>
+        <result xml:space="preserve">That's not where your attention belongs just now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8669"></child>
+        </children>
+    </item>
+    <item nodeId="node-8669">
+        <command xml:space="preserve">x vegetables</command>
+        <result xml:space="preserve">Mostly tomatoes, green beans, carrots, and okra. Without a new source of salt or acid, too much of your recent harvest has been left to spoil.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8670"></child>
+        </children>
+    </item>
+    <item nodeId="node-8670">
+        <command xml:space="preserve">take canned vegetables</command>
+        <result xml:space="preserve">That's not where your attention belongs just now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8684">
+        <command xml:space="preserve">get peas</command>
+        <result xml:space="preserve">You take a handful of split peas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8685"></child>
+        </children>
+    </item>
+    <item nodeId="node-8685">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">(the handful of split peas)
+You already have that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8686"></child>
+        </children>
+    </item>
+    <item nodeId="node-8686">
+        <command xml:space="preserve">get bag of peas</command>
+        <result xml:space="preserve">You aren't hungry, and you have already taken a handful.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8687"></child>
+        </children>
+    </item>
+    <item nodeId="node-8687">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a handful of split peas
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-8650">
+        <command xml:space="preserve">count me</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8651"></child>
+        </children>
+    </item>
+    <item nodeId="node-8651">
+        <command xml:space="preserve">gonear pond</command>
+        <result xml:space="preserve">Sector 2: Aquaculture
+A deep pond with some fish. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8652"></child>
+        </children>
+    </item>
+    <item nodeId="node-8652">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8653"></child>
+        </children>
+    </item>
+    <item nodeId="node-8653">
+        <command xml:space="preserve">put scanner in pond</command>
+        <result xml:space="preserve">That can't contain things.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8654"></child>
+        </children>
+    </item>
+    <item nodeId="node-8654">
+        <command xml:space="preserve">put me in pond</command>
+        <result xml:space="preserve">(first taking yourself)
+You are always self-possessed.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -686,7 +3250,242 @@ There is a red circuit breaker here.
 
 &gt;</commentary>
         <children><child nodeId="node-8127"></child>
+            <child nodeId="node-8383"></child>
         </children>
+    </item>
+    <item nodeId="node-8383">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">The exits are down to sector 3, spinward to platform 5, and antispinward to platform 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8384"></child>
+        </children>
+    </item>
+    <item nodeId="node-8384">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 5
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8385"></child>
+        </children>
+    </item>
+    <item nodeId="node-8385">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">The exits are down to sector 5, spinward to platform 1, and antispinward to platform 3.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8386"></child>
+        </children>
+    </item>
+    <item nodeId="node-8386">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Platform 1
+A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8387"></child>
+        </children>
+    </item>
+    <item nodeId="node-8387">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">Gravity fades as you climb.
+
+Inside the Hub
+You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and an airlock is to the port.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8388"></child>
+        </children>
+    </item>
+    <item nodeId="node-8388">
+        <command xml:space="preserve">drop boots</command>
+        <result xml:space="preserve">(first taking the pair of gravity boots off)
+You drop the pair of gravity boots and it float nearby.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8389"></child>
+        </children>
+    </item>
+    <item nodeId="node-8389">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You feel unstable on the ladder without the gravity boots.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8390"></child>
+        </children>
+    </item>
+    <item nodeId="node-8390">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and an airlock is to the port.
+
+You can see a pair of gravity boots floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8391"></child>
+        </children>
+    </item>
+    <item nodeId="node-8391">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">The airlock is colder still, too cold for you in only your jumpsuit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8392"></child>
+        </children>
+    </item>
+    <item nodeId="node-8392">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and an airlock is to the port.
+
+You can see a pair of gravity boots floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8393"></child>
+        </children>
+    </item>
+    <item nodeId="node-8393">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">You feel unstable on the ladder without the gravity boots.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8394"></child>
+        </children>
+    </item>
+    <item nodeId="node-8394">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Inside the Hub
+You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and an airlock is to the port.
+
+You can see a pair of gravity boots floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8395"></child>
+        </children>
+    </item>
+    <item nodeId="node-8395">
+        <command xml:space="preserve">wear mask</command>
+        <result xml:space="preserve">You're already wearing that!
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8396"></child>
+        </children>
+    </item>
+    <item nodeId="node-8396">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">The airlock is colder still, too cold for you in only your jumpsuit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8397"></child>
+        </children>
+    </item>
+    <item nodeId="node-8397">
+        <command xml:space="preserve">wear blanket</command>
+        <result xml:space="preserve">You put on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8398"></child>
+        </children>
+    </item>
+    <item nodeId="node-8398">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">(first opening the starboard airlock door)
+
+Airlock
+There are port and starboard doors and a red button.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8399"></child>
+        </children>
+    </item>
+    <item nodeId="node-8399">
+        <command xml:space="preserve">push button</command>
+        <result xml:space="preserve">The starboard door slams shut. You feel the air rush out of the airlock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8400"></child>
+        </children>
+    </item>
+    <item nodeId="node-8400">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">(first opening the port airlock door)
+You crawl through a narrow accessway.
+
+Antenna Control
+You float weightless at the port end of a cylinder. It is very cold and dark here in the near vacuum. A door leads starboard.
+
+A short lever extends from the floor.
+
+A yellow cable waves from a small panel.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8401"></child>
+        </children>
+    </item>
+    <item nodeId="node-8401">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">The only exit is starboard to the airlock.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8402"></child>
+        </children>
+    </item>
+    <item nodeId="node-8402">
+        <command xml:space="preserve">gonear church</command>
+        <result xml:space="preserve">(Church)
+Church
+Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ and a portable audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ to the audio unit.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8403"></child>
+        </children>
+    </item>
+    <item nodeId="node-8403">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-8404"></child>
+        </children>
+    </item>
+    <item nodeId="node-8404">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">The exits are up to platform 3, starboard to the house, port to the church, spinward to sector 4, and antispinward to sector 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-8127">
         <command xml:space="preserve">d</command>

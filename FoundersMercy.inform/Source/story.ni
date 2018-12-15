@@ -104,6 +104,9 @@ To say uc (t - a thing): [* is this really the best way to do this? ]
 	let a be "[t]";
 	say "[a in upper case]";
 
+To say -: say Unicode 8211.
+To say --: say Unicode 8212.
+
 Chapter 5 - Room Adjectives
 
 A room can be pressurized. A room is usually pressurized.
@@ -261,7 +264,7 @@ Directions were explained is a truth state that varies. Directions were explaine
 Before going a planetbound direction:
 	say	"You have heard of compass directions like [noun], but they don't make any sense here. Instead, you can go spinward, antispinward, port, and starboard. When you look spinward, port is left and starboard is right.[paragraph break]";
 	unless directions were explained is true:
-		say "[start note]You can use the abbreviations SW, ASW, P, and S. You can also go UP, DOWN, IN, and OUT where appropriate. Type EXITS if you get confused about geography.[no line break][stop note][paragraph break]";
+		say "[start note]You can use the abbreviations SW, ASW, P, and S. You can also go UP, DOWN, IN, or OUT where appropriate. Type EXITS if you get confused about geography.[no line break][stop note][paragraph break]";
 		now directions were explained is true;
 	stop the action.
 
@@ -272,11 +275,11 @@ Before climbing down, try going down instead.
 
 Chapter 8 - The Player
 
-The player is female. The carrying capacity of the player is 5. [ 3 is too little because of the hoe & blanket ]
+The player is female. The carrying capacity of the player is 5. [ If it is smaller than 4, we create busy work moving bulky items around. ]
 
 Instead of examining the player, say "As virtuous as ever."
 
-	The player is carrying the scanner. Understand "hey scanner" and "ok scanner" as the scanner.
+The player is carrying the scanner. Understand "hey scanner" and "ok scanner" as the scanner.
 
 The player is wearing a green jumpsuit. The jumpsuit has description "You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population." Understand "suit" and "jump suit" and "forest green" and "forest jumpsuit" and "forest suit" and "forest jump" as jumpsuit. Understand "forest" as the green jumpsuit when the location is not Sector 5 and the location is not Sector 3. [* otherwise "forest" alone will have priority over the scenery trees, which is unlikely to be what the player intends ]
 
@@ -367,7 +370,9 @@ Instead of listening to a room:
 		say "You hear only the familiar hum of the station."
 
 Instead of smelling a room:
-	if the player is wearing the emergency mask:
+	if the location is not pressurized:
+		say "There are no odors in a vacuum.";
+	otherwise if the player is wearing the emergency mask:
 		say "You can't smell anything with the mask on.";
 	otherwise:
 		say "Only familiar odors."
@@ -680,7 +685,7 @@ The hub is a backdrop in The Sectors and in The Platforms. It has description "[
 
 Instead of doing anything other than examining or scanning to the hub, say "You are too far away to do that." [todo]
 
-The solar panels are a backdrop in The Sectors and in The Platforms. They have description "The solar panels are the primary source of station power and support a small array of antennas." Understand "panel" and "antenna" and "antennas" and "array" and "small array" and "small array of" and "array of" as solar panels.
+The solar panels are a backdrop in The Sectors and in The Platforms and in Antenna Control. They have description "The solar panels are the primary source of station power and support a small array of antennas." Understand "solar panel" as solar panels. Understand "panel" and "antenna" and "antennas" and "array" and "small array" and "small array of" and "array of" as solar panels when the player is not in antenna control.
 
 Instead of doing anything other than examining or scanning to the solar panels, say "You are too far away to do that."
 
@@ -706,7 +711,7 @@ The station walls are a backdrop in The Sectors and in The Platforms. They have 
 
 Instead of doing anything other than examining to the station walls when the player is in The Platforms, say "You can't reach the walls from here."
 
-The stars are a backdrop in The Sectors and in The Platforms. They have description "The sky is awash with stars." Understand "sky" as the stars.
+The stars are a backdrop in The Sectors and in The Platforms and in Antenna Control. They have description "[if the location is antenna control]The stars seem brighter up here.[otherwise]The sky is awash with stars.[end if]". Understand "sky" as the stars.
 
 Instead of doing anything other than examining to the stars, say "They are trillions of meters or more away."
 
@@ -803,6 +808,8 @@ Chapter 1 - Sector 1
 Sector 1 is a room in The Sectors. "You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward." It has printed name "Sector 1: Crops". It has destination name "sector 1".
 
 Some crops are scenery in Sector 1. They have description "You are proud of the grain and legumes." Understand "grain" and "legumes" as some crops.
+
+Instead of taking some crops, say "It is not [--] may never be [--] harvest time."
 
 Instead of eating some crops, say "You aren't hungry."
 
@@ -967,7 +974,7 @@ To say comms-usb-status:
 		say "No audio connection";
 
 To say comms-rf-status:
-	if communications unit and antenna panel are connected:
+	if communications unit and calibration panel are connected:
 		if the antenna is calibrated:
 			say "RF connection and signal";
 		otherwise:
@@ -1008,9 +1015,11 @@ Instead of entering the pond:
 	otherwise:
 		say "You can't hold your breath long enough to make that worthwhile."
 
-Some fish are scenery in sector 2. They have description "There are still a few fish swimming in the pond, but they taste horrible."
+Some fish are animals and scenery in sector 2. They have description "There are still a few fish swimming in the pond, but they taste horrible."
 
 Instead of doing anything other than examining or scanning to the fish, say "The fish aren't easy to catch."
+
+Instead of inserting something into the pond: say "You aren't confident you would be able to retrieve [the noun]."
 
 The green valve is a circuit breaker. It is switched off. It is nowhere.
 
@@ -1153,7 +1162,7 @@ Definition: the communications unit is almost usable if
 
 Definition: the communications unit is nearly usable if
 	the communications unit is almost usable and
-	communications and antenna panel are connected and
+	communications and calibration panel are connected and
 	the antenna is calibrated;
 
 Every turn when the player encloses the communications unit and the communications unit is nearly usable and the communications unit is not usable:
@@ -1190,6 +1199,8 @@ Instead of searching S4B1, say "You would need to enter your home to do that."
 Some vegetables are scenery in Sector 4. They have description "Greens, carrots, and potatoes." Understand "crops" and "greens" and "carrots" and "potatoes" as some vegetables.
 
 Instead of eating some vegetables, say "You aren't hungry."
+
+Instead of taking some vegetables, say "It is not [--] may never be [--] harvest time."
 
 Section 1 - Home
 
@@ -1237,7 +1248,7 @@ Before searching the shelves, try examining the shelves instead.
 
 Some canned vegetables are scenery on shelves. "Mostly tomatoes, green beans, carrots, and okra. Without a new source of salt or acid, too much of your recent harvest has been left to spoil." Understand "tomatoes" and "green" and "beans" and "carrots" and "okra" and "mason" and "jar" and "jars" and "can" and "cans" as canned vegetables.
 
-Instead of eating or opening or taking or tasting or drinking the canned vegetables, say "You aren't hungry."
+Instead of eating or opening or tasting or drinking the canned vegetables, say "You aren't hungry."
 
 Instead of doing anything other than examining to the canned vegetables, say "That's not where your attention belongs just now."
 
@@ -1264,6 +1275,26 @@ This is the can't scan with your mask on rule:
 
 Before taking off the emergency mask when the location is not pressurized:
 	say "You wouldn't be able to breath if you did that." instead.
+
+A jar of okra is nowhere. "It's a jar of okra." [ todo - desc ]
+
+Instead of taking the canned vegetables:
+	if the jar of okra is nowhere:
+		say "You take a jar of okra.";
+		find and take the jar of okra;
+	otherwise:
+		say "You aren't hungry, and you've already taken one jar."
+
+Instead of eating or tasting or opening the jar of okra: say "You aren't hungry."
+
+A handful of split peas is nowhere. "It's a handful of split peas." [todo - desc]
+
+Instead of taking the bag of split peas:
+	if the handful of split peas is nowhere:
+		say "You take a handful of split peas.";
+		find and take the handful of split peas;
+	otherwise:
+		say "You aren't hungry, and you have already taken a handful."
 
 Chapter 5 - Sector 5
 
@@ -1430,8 +1461,7 @@ Instead of jumping in The Platforms, say "Pseudogravity is definitely weaker up 
 
 After dropping something (called s) in The Platforms:
 	say "You drop [the s] and it spirals off to the ground below.";
-	let r be a random room in the The Sectors;
-	now s is in r.
+	now s is in a random room in the The Sectors.
 
 The TMP is a backdrop in The Platforms. It has description "You are on a circular platform suspended about two thirds of the way up the pylon to the hub." Understand "maintenance" and "platform" as TMP. TMP is privately-named. It has printed name "maintenance platform".
 
@@ -1450,7 +1480,7 @@ Before entering the ground in the platforms, try going down instead.
 
 Section 1 - Platform 1
 
-Platform 1 is a room in The Platforms. "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub." [todo pylon] Sector 1 is down from Platform 1. Nothing is up from Sector 1. 
+Platform 1 is a room in The Platforms. "A platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub." [todo pylon] Sector 1 is down from Platform 1. Nothing is up from Sector 1. 
 
 Before going down from Platform 1, say "You slide down the pylon."
 
@@ -1469,7 +1499,7 @@ Instead of examining the ground in platform 1, say "The pylon descends to the cr
 
 Section 2 - Platform 3
 
-Platform 3 is a room in The Platforms. "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward[if the player is in platform 3 for the first time].[paragraph break]You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down[end if]." Sector 3 is down from Platform 3. Nothing is up from Sector 3. Platform 3 is spinward from Platform 1.
+Platform 3 is a room in The Platforms. "A platform about two thirds of the way towards the hub. You can continue spinward or antispinward[if the player is in platform 3 for the first time].[paragraph break]You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down[end if]." Sector 3 is down from Platform 3. Nothing is up from Sector 3. Platform 3 is spinward from Platform 1.
 
 Before going down from Platform 3, say "You [if the player is wearing the gravity boots]climb[else]slide[end if] down the pylon.";
 
@@ -1489,13 +1519,73 @@ Instead of examining the ground in platform 3, say "The pylon descends into the 
 
 Section 3 - Platform 5
 
-Platform 5 is a room in The Platforms. "A mesh platform about two thirds of the way towards the hub. You can continue spinward or antispinward." Sector 5 is down from Platform 5. Nothing is up from Sector 5. Platform 5 is spinward from Platform 3 and antispinward from Platform 1.
+Platform 5 is a room in The Platforms. "This plaform is [if the pigeons are in Platform 5]home to a flock of pigeons.[else]white with pigeon droppings.[end if] You can continue spinward or antispinward." Sector 5 is down from Platform 5. Nothing is up from Sector 5. Platform 5 is spinward from Platform 3 and antispinward from Platform 1.
 
 Before going down from Platform 5, say "You slide down the pylon."
 
 Understand "trees" or "forest" as the ground when the player is in platform 5.
 
 Instead of examining the ground in platform 5, say "The pylon descends into the forest below you."
+
+[ TODO: feed pigeons, feed __ to pigeons, count pigeons ]
+
+The pigeon droppings are plural-named scenery in Platform 5. They have description "The platform is white with pigeon droppings."
+
+Before doing anything other than examining to the pigeon droppings, say "You don't really want to touch the pigeon droppings." instead.
+
+A flock of pigeons is scenery and an animal in Platform 5. It has description "Descendents of the flock your grandparents brought here for food." Understand "pigeon" as pigeons. The pigeons can be annoyed.
+
+Every turn when the player is not in Platform 5 and the pigeons are not in Platform 5:
+	now the pigeons are in Platform 5.
+
+Instead of listening to the pigeons: say "[if pigeons are annoyed]Annoyed[else]Quiet[end if] cooing."
+Instead of listening to the location of the pigeons: try listening to the pigeons.
+
+Instead of smelling the pigeons, say "There are a lot of pigeons, but you've smelled worse."
+Instead of smelling the location of the pigeons: try smelling the pigeons.
+
+Before taking or eating or tasting or attacking the pigeons:
+	say "You could probably catch a pigeon and take it home to prepare, cook, and eat, but that would take too much time and you aren't hungry." instead.
+
+Before wearing or opening or closing or entering or getting off or taking off or climbing or waving or drinking or swinging the pigeons:
+	say "That doesn't even make sense." instead.
+	
+Before tying the pigeons to something: say "That doesn't even make sense." instead.
+
+To pigeons fly away:
+	now the pigeons are nowhere;
+	now the pigeons are not annoyed;
+
+Before going with the pigeons, try pushing the pigeons instead.
+
+Instead of pulling or pushing or turning or touching or rubbing or squeezing or waking the pigeons: 
+	if the pigeons are annoyed:
+		say "You further annoy the pigeons and they fly away.";
+		pigeons fly away;
+	otherwise:
+		say "You annoy the pigeons.";
+		now the pigeons are annoyed;
+
+Instead of giving the handful of split peas to the pigeons:
+	try throwing the handful of split peas at the pigeons.
+
+Instead of throwing the handful of split peas at the pigeons:
+	say "You scatter the split peas among the pigeons, causing a minor commotion as they peck at them.";
+	now the split peas are nowhere;
+	now the pigeons are not annoyed.
+
+Instead of throwing something at the pigeons:
+	if the pigeons are annoyed:
+		say "You throw [the noun] at the pigeons, but they scatter and fly away. [The noun] spirals to the ground below.";
+		pigeons fly away;
+	otherwise:
+		say "You throw [the noun] at the pigeons, but they scatter and you miss. [The noun] spirals to the ground below.";
+		now the pigeons are annoyed;
+	now noun is in a random room in the The Sectors.
+
+Instead of looking under the pigeons: say "The platform is white with pigeon droppings."
+
+Instead of searching the pigeons: say "You find only pigeons in the flock of pigeons."
 
 Chapter 8 - The Hub
 
@@ -1529,9 +1619,9 @@ Section 1 - Inside the Hub
 
 Inside the Hub has description "You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and an airlock is to the port." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub".
 
-[ todo -airlock door ]
+[ todo -descrption: airlock door ]
 
-[ todo - nver been here before]
+[ todo - never been here before]
 
 Before going down in Inside the Hub, try going outside instead.
 Before going up in Inside the Hub, try going outside instead.
@@ -1552,7 +1642,7 @@ Section 2 - The Airlock
 
 The Airlock is an unfamiliar frigid room in zero-g. "There are port and starboard doors and a red button." [todo description]
 
-[todo -description matches pressurization]
+[todo -description matches pressurization, need to deal with button, etc.]
 
 The starboard airlock door is a door. It is port of Inside the Hub and starboard of The Airlock. It is scenery.
 
@@ -1614,9 +1704,14 @@ After going port from The Airlock:
 
 Section 3 - Antenna Control
 
-[ this end is near the solar panels and antennas ]
+[ this end is near the solar panels and antennas - todo - window with scenery where you can see:
+  station, panel, antenna, mirrors, stars
+ ]
 
-Antenna Control is an unfamiliar frigid room in zero-g. "You float weightless at the port end of a cylinder. It is very cold and dark here[if antenna control is not pressurized] in the near vacuum[end if]. A door leads starboard." It has destination name "antenna control". Antenna Control is not pressurized. [todo -description matches pressurization]
+Antenna Control is an unfamiliar frigid room in zero-g. "[antenna-control-desc]". It has destination name "antenna control". Antenna Control is not pressurized.
+
+To say antenna-control-desc:
+	say "You float weightless at the port end of a cylinder. Through a surprisingly large window, you can see the station rotating around you, solar panels, and antennas, all backed by a spectacular field of stars. 	[if the hoe is in the lever]Your hoe extends the short lever in the floor[else]A short lever extends from the floor[end if], and a yellow cable [if the count of occupied plugs of the yellow cable is one]waves from a small control panel[else]is [inserter status of the yellow cable][end if].[paragraph break]It is very cold and dark here[if antenna control is not pressurized] in the near vacuum[end if]. An airlock door leads starboard.[run paragraph on]"
 
 Every turn when the player is in Antenna Control and Antenna Control is not scored:
 	increase the score by 2;
@@ -1628,9 +1723,25 @@ After going starboard from Antenna Control:
 
 Before exiting from Antenna Control, try going starboard instead.
 
+[todo - window, ex, look through, look into? ]
+
+The window is scenery in Antenna Control. It has description "WINDOW." [todo]
+
+Instead of searching the window, try examining the window.
+
+Instead of doing anything other than examining to the solar panels when the player is in Antenna Control, say "There is a window in the way."
+
+The antennas are a backdrop in Antenna Control. They have description "You can see the antennas clearly from here: small telemetry antennas and the main communications dish. [if the antenna is calibrated]The dish appears to be tracking something.[otherwise]The dish lists, aiming at nothing in particular.[end if]". Understand "antenna" and "antennas" and "array" and "small" and "array of" and "telemetry" and "communications" and "dish" as antennas.
+
+Instead of doing anything other than examining to the antennas: say "There is a window in the way."
+
+The station itself is scenery in Antenna Control. It has description "Backed by a field of stars, you can see the wheel of the station rotating around you to the starboard [--] you didn't notice before but the airlock must be some sort of rotation coupling." It has printed name "station".
+
+Before doing anything other than examining to the station: say "The station is all around you." instead.
+
 [ lever ]
 
-A lever is here. It is fixed in place and a container with carrying capacity 1. "[if the hoe is in the lever]Your hoe extends the short lever.[else]A short lever extends from the floor."
+A lever is here. It is scenery. It is a container with carrying capacity 1.
 
 Instead of examining the lever:
 	if the hoe is in the lever:
@@ -1648,6 +1759,7 @@ Instead of pushing the lever:
 		say "You push the hoe and the lever moves. After a moment, you feel air rush into the room.";
 		now the location is pressurized;
 		now the airlock is pressurized;
+		adjust the airlock doors;
 	otherwise:
 		say "You try, but is too hard to push the lever without more mechanical advantage."
 
@@ -1669,27 +1781,29 @@ The hoes only rule is listed before the can't insert if this exceeds carrying ca
 After inserting the hoe into the lever:
 	say "You slide the hoe into the hollow lever, forming a longer lever."
 	
-[ antenna ]
+[ antenna calibration ]
 
-The antenna calibration panel is scenery in Antenna Control.  It is a machine. It has printed name "panel". It has description "This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable." Incorporated by the antenna panel is an RF socket.
+The calibration panel is scenery in Antenna Control.  It is a machine. It has indefinite article "the". It has description "This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable." Incorporated by the calibration panel is an RF socket. Understand "antenna calibration" and "control" as the panel.
 
-A yellow cable is a cable in Antenna Control. "A yellow cable waves from a small panel." It is floating-exceptioned. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
+A yellow cable is a cable in Antenna Control. ["A yellow cable waves from a small panel." ] It is floating-exceptioned. It is scenery. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
 
-Instead of unplugging the yellow cable from the antenna panel:
+Instead of unplugging the yellow cable from the calibration panel:
 	say "The yellow cable is permanently attached to the panel.";
 	stop the action.
+
+After dropping the yellow cable in Antenna Control: say "You release the yellow cable and it floats nearby." [* needs ...in Antenna control so it is more specific than ...in zero-g ]
 
 A rule for reaching inside Antenna Control when the turn count is one: allow access. [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
 
 When play begins:
-	silently try plugging the yellow cable into the antenna panel.
+	silently try plugging the yellow cable into the calibration panel.
 
 Instead of an actor going to somewhere when the yellow cable is enclosed by the actor:
 	say "The yellow cable is permanently attached to the panel, so you must drop it before leaving."
 
 To decide if the antenna is calibrated: decide on whether or not the sequence position of the keypad is greater than the sequence length of the keypad.
 
-An antenna calibration display is part of the panel. It has description "[first custom style][entry (sequence position of the keypad) of the hints of the keypad][roman type]". It has printed name "display".
+A calibration display is part of the panel. It has description "[first custom style][entry (sequence position of the keypad) of the hints of the keypad][roman type]". It has printed name "display".
 
 A keypad is part of the panel. [ Adapted, poorly, from part of Computers by Emily Short. ]
 It has description "The keypad has the digits from 0 through 9."
@@ -1703,8 +1817,9 @@ It has a list of texts called the hints. The hints of the keypad are {
 	"Calibrate to Beta/Cherry.",
 	"Antenna calibrated."}.
 
-After examining the antenna display for the first time:
-	note "Now might be a good time to consult your Official Space Relay League Antenna Calibration Guide."
+After examining the calibration display for the first time:
+	unless the antenna is calibrated:
+		note "Now might be a good time to consult the Official Space Relay League Antenna Calibration Guide™, included in your game package."
 
 Typing it on is an action applying to one number and one thing.
 
@@ -1729,8 +1844,8 @@ Rule for supplying a missing second noun while typing the number understood on:
 		say "There's nothing here you can type on." instead.
 
 Check typing it on:
-	if the second noun is the antenna display, try typing the number understood on the keypad instead;
-	if the second noun is the antenna panel, try typing the number understood on the keypad instead;
+	if the second noun is the calibration display, try typing the number understood on the keypad instead;
+	if the second noun is the calibration panel, try typing the number understood on the keypad instead;
 	unless the second noun is the keypad, say "There is no keypad on [the second noun]." instead;
 	if the number understood is less than zero or the number understood is greater than nine:
 		say "The keypad only has the digits from 0 to 9.";

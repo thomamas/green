@@ -31,3 +31,5 @@ with Inform 7. Also, extensions by Thomas Insel are local.
 
 * https://oikofuge.com/coriolis-effect-rotating-space-habitat/
 * https://www.artificial-gravity.com/sw/SpinCalc/
+* http://www.vintagecomputing.com/index.php/archives/174/old-school-copy-protection-schemes
+
