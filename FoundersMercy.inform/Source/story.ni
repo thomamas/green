@@ -60,20 +60,7 @@ Chapter 2 - Scoring
 
 Use scoring. The maximum score is 10. An object can be scored. An object is usually not scored.
 
-[
-	1 - getting the boots out of the vault
-	1 - red breaker
-
-	1 - green valve in the pond
-
-	1 - fixing and closing the atmosphere pump
-
-	2 - visiting pod bay for the first time
-	2 - visiting antenna control for the first time
-
-	2 - getting the communications unit working (and calling for help)
-
-]
+[ See PuzzleChart.graffle for scoring summary ]
 
 Chapter 3 - Notes
 
@@ -219,7 +206,7 @@ Instead of examining a cable, say "[the description of the noun] [exam inserter 
 
 Instead of the scanner scanning a cable:
 	computerize "Cable is functional.";
-	rule succeeds;
+	rule succeeds.
 
 Understand "pull [a cable]" as unplugging.
 [ Instead of tying a cable to something, say "Tying the cable would damage it." ]
@@ -228,6 +215,14 @@ To decide if (s - a machine) and (t - a machine) are connected:
 	repeat with c running through cables:
 		if c is inserted into the s and c is inserted into the t, decide yes;
 	decide no.
+
+Instead of the scanner scanning a ps-socket:
+	computerize "Socket is functional.";
+	rule succeeds.
+
+Instead of the scanner scanning a ps-plug:
+	computerize "Plug is functional.";
+	rule succeeds.
 
 Section 4 - Machines
 
@@ -379,6 +374,17 @@ Instead of smelling a room:
 
 Section 3 - And Add Some Miscellaneous Actions
 
+[ feeding ]
+
+Feeding is an action applying to one thing.
+
+Understand "feed [someone]" as feeding.
+Understand "feed [something]" as feeding.
+
+Instead of feeding something, say "You can only do that to something animate."
+Instead of feeding the player, say "You aren't hungry."
+Instead of feeding someone: say "[The noun] doesn't seem hungry."
+
 [ for the pond ]
 
 Understand "swim" as swimming.
@@ -482,7 +488,7 @@ Repairing Comms is a scene. "This is troubling. You counted. You were sure there
 Repairing Comms begins when the player is in Pod Bay for the first time.
 Repairing Comms ends when The End begins.
 
-When Repairing Comms begins: increase the score by 2. [* for entering the pod bay ]
+When Repairing Comms begins: increase the score by 1. [* for entering the pod bay ]
 
 Every turn during Repairing Comms:
 	let t be the total minutes of time since Repairing Comms began;
@@ -496,7 +502,7 @@ Section 6 - The End
 The End is a scene. "The audio unit beeps and a synthesized voice says 'Comms ready.'[paragraph break]After a moment, it says 'Launching automatic routines.'"
 The End begins when the communications unit is usable for the first time.
 
-When The End begins: increase the score by 2. [* for calling for help ]
+When The End begins: increase the score by 1. [* for calling for help ]
 
 Every turn during The End:
 	if the total minutes of time since The End began is greater than zero and the communications unit is usable and the communications unit is visible:
@@ -542,7 +548,7 @@ After the player getting help for the first time:
 		"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
 		,
 		"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
-		note "You can type 'hint' any time for contextual assistance. If you prefer not to be tempted, you can type HINTS OFF to disable hints."
+		note "You can type HINT any time for contextual assistance. If you prefer not to be tempted, you can type HINTS OFF to disable hints."
 
 Carry out disabling help:
 	if help disabled is true, say "Hints are already disabled." instead;
@@ -633,6 +639,27 @@ Carry out getting help when Between Repairs is happening:
 
 Section 4 - Repairing Comms
 
+[
+	Less detail at this stage.
+	
+	TODO: consider making the progressive -- has each stage ver been true?
+]
+
+Carry out getting help when Repairing Comms is happening:
+	unless the communications unit is handled:
+		say "Find something you can use to communicate to the outside world.";
+	else unless the communications unit is almost usable:
+		say "You'll need to connect the communications unit to a working audio input/output.";
+	else unless the communications unit is nearly usable:
+		say "You'll need to connect the communications unit to a working antenna.";
+	else unless the communications unit is usable:
+		say "You can't hear in a vacuum.";
+	else:
+		say "Just wait."
+
+[
+
+
 Carry out getting help when Repairing Comms is happening:
 	unless communications unit is handled:
 		say "Find the emergency communications unit.";
@@ -641,16 +668,36 @@ Carry out getting help when Repairing Comms is happening:
 	else unless audio unit is functional:
 		say "Repair the audio unit.";
 	else:
-		say "Just wait."
+		say "Just wait."]
 
 [
-	TODO:
-		find comms & use it
-		connect to audio
-		audio needs to be functional
-		connect to antenna
-		antenna puzzle (tbd)
-		& work in air puzzle (tbd)
+
+	unless communications unit is handled ... "Find the emergency communications unit."
+	unless communications unit is almost usable ... "Connect the communications unit to a working audio source."
+	unless communications unit is nearly usable ... "Connect the communications unit to a working antenna."
+	unless communications unit is usable ... "You can't hear in a vacuum."
+	else ... "Just wait."
+
+]
+
+[
+
+Recall:
+
+Definition: the communications unit is almost usable if
+	the communications unit is functional and
+	the audio unit is functional and
+	audio and communications are connected.
+
+Definition: the communications unit is nearly usable if
+	the communications unit is almost usable and
+	communications and calibration panel are connected and
+	the antenna is calibrated;
+
+Definition: the communications unit is usable if
+	the communications unit is nearly usable and
+	the location of the communications unit is pressurized.
+
 ]
 
 
@@ -685,13 +732,17 @@ The hub is a backdrop in The Sectors and in The Platforms. It has description "[
 
 Instead of doing anything other than examining or scanning to the hub, say "You are too far away to do that." [todo]
 
-The solar panels are a backdrop in The Sectors and in The Platforms and in Antenna Control. They have description "The solar panels are the primary source of station power and support a small array of antennas." Understand "solar panel" as solar panels. Understand "panel" and "antenna" and "antennas" and "array" and "small array" and "small array of" and "array of" as solar panels when the player is not in antenna control.
+The solar panels are a backdrop in The Sectors and in The Platforms and in Antenna Control. They have description "The solar panels are the primary source of station power and support a small array of antennas." Understand "solar panel" as solar panels. Understand "panel" as solar panels when the player is not in antenna control.
 
 Instead of doing anything other than examining or scanning to the solar panels, say "You are too far away to do that."
 
 Instead of the scanner scanning the solar panels:
 	computerize "Machine is functional. Operating at [one of]73[or]72[or]71[then purely at random]% efficiency.";
 	rule succeeds.
+
+The bd-antennas are a backdrop in The Sectors and in The Platforms. They are privately-named. They have printed name "antennas". They have description "Various antennas for various purposes." Understand "antenna" and "antennas" and "array" and "small array" and "small array of" and "array of" as bd-antennas.
+
+Instead of doing anything other than examining or scanning to the bd-antennas, say "You are too far away to do that."
 
 The mirrors are a backdrop in The Sectors and in The Platforms. They have description "The mirrors reflect sunlight into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
 
@@ -1021,6 +1072,20 @@ Instead of doing anything other than examining or scanning to the fish, say "The
 
 Instead of inserting something into the pond: say "You aren't confident you would be able to retrieve [the noun]."
 
+Before throwing something at the fish, try inserting the noun into the pond instead.
+Before throwing something at the pond, try inserting the noun into the pond instead.
+Instead of giving something to the fish, try inserting the noun into the pond instead.
+
+Instead of inserting the handful of split peas into the pond:
+	say "You aren't sure if fish eat split peas, but you scatter the handful into the water, and they seem to react a little.";
+	now the split peas are nowhere.
+
+Instead of feeding the fish:
+	if the handful of split peas is visible:
+		try inserting the handful of split peas into the pond;
+	otherwise:
+		say "You have nothing to feed the fish."
+
 The green valve is a circuit breaker. It is switched off. It is nowhere.
 
 Chapter 3 - Sector 3
@@ -1276,11 +1341,11 @@ This is the can't scan with your mask on rule:
 Before taking off the emergency mask when the location is not pressurized:
 	say "You wouldn't be able to breath if you did that." instead.
 
-A jar of okra is nowhere. "It's a jar of okra." [ todo - desc ]
+A jar of pickled okra is nowhere. "It's a jar of pickled okra." [ todo - desc ]
 
 Instead of taking the canned vegetables:
 	if the jar of okra is nowhere:
-		say "You take a jar of okra.";
+		say "You take a jar of pickled okra.";
 		find and take the jar of okra;
 	otherwise:
 		say "You aren't hungry, and you've already taken one jar."
@@ -1460,8 +1525,12 @@ Chapter 7 - The Platforms
 Instead of jumping in The Platforms, say "Pseudogravity is definitely weaker up here."
 
 After dropping something (called s) in The Platforms:
-	say "You drop [the s] and it spirals off to the ground below.";
-	now s is in a random room in the The Sectors.
+	if s is the handful of split peas:
+		say "You drop [the s] and it scatters in a breeze.";
+		now s is nowhere;
+	otherwise:
+		say "You drop [the s] and it spirals off to the ground below.";
+		now s is in a random room in the The Sectors.
 
 The TMP is a backdrop in The Platforms. It has description "You are on a circular platform suspended about two thirds of the way up the pylon to the hub." Understand "maintenance" and "platform" as TMP. TMP is privately-named. It has printed name "maintenance platform".
 
@@ -1490,7 +1559,7 @@ Before entering the hub in platform 1, try going up instead.
 
 The ladder is a door. It is open and not openable and scenery. It is up from Platform 1 and outside from Inside the Hub. It has description "[if the location is Platform 1]A ladder leads up into the hub.[otherwise]The ladder moves with the station, rotating around you about four times every minute."
 
-Before going through the ladder when the player is not wearing the gravity boots: say "You feel unstable on the ladder without the gravity boots." instead. [todo]
+Before going through the ladder when the player is not wearing the gravity boots: say "You feel unstable on the ladder without the gravity boots." instead. [* prevent the player from abandoning the gravity boots in zero-g, lest they be unable to climb the pylon again. ]
 
 Understand "crops" as the ground when the player is in Platform 1.
 
@@ -1558,7 +1627,7 @@ To pigeons fly away:
 
 Before going with the pigeons, try pushing the pigeons instead.
 
-Instead of pulling or pushing or turning or touching or rubbing or squeezing or waking the pigeons: 
+Instead of pulling or pushing or turning or touching or rubbing or squeezing or waking or kissing the pigeons: 
 	if the pigeons are annoyed:
 		say "You further annoy the pigeons and they fly away.";
 		pigeons fly away;
@@ -1566,8 +1635,13 @@ Instead of pulling or pushing or turning or touching or rubbing or squeezing or 
 		say "You annoy the pigeons.";
 		now the pigeons are annoyed;
 
-Instead of giving the handful of split peas to the pigeons:
-	try throwing the handful of split peas at the pigeons.
+Instead of feeding the pigeons:
+	if the handful of split peas is visible:
+		try throwing the handful of split peas at the pigeons;
+	otherwise:
+		say "You have nothing to feed the pigeons."
+
+Instead of giving the handful of split peas to the pigeons, try throwing the handful of split peas at the pigeons.
 
 Instead of throwing the handful of split peas at the pigeons:
 	say "You scatter the split peas among the pigeons, causing a minor commotion as they peck at them.";
@@ -1583,9 +1657,9 @@ Instead of throwing something at the pigeons:
 		now the pigeons are annoyed;
 	now noun is in a random room in the The Sectors.
 
-Instead of looking under the pigeons: say "The platform is white with pigeon droppings."
+Instead of looking under the pigeons, say "The platform is white with pigeon droppings."
 
-Instead of searching the pigeons: say "You find only pigeons in the flock of pigeons."
+Instead of searching the pigeons, say "You find only pigeons in the flock of pigeons."
 
 Chapter 8 - The Hub
 
@@ -1596,24 +1670,6 @@ Instead of swimming in zero-g, say "You flail around in zero g."
 Before printing the locale description:
 	if the location is in zero-g, now the you-can-also-see rule response (F) is " floating here";
 	otherwise now the you-can-also-see rule response (F) is " here";
-
-[
-	This is arbitrary, and it might be friendlier to autotake, but it's only insurance against making the game unwinnable because if the player leaves the gravity boots in the platforms or above, she won't be able to return. This depends on (1) objects dropped in the platforms falling to the sectors, and (2) all rooms above the platforms being zero-g.
-
-	TODO: another way to accomplish this would be to keep the player from dropping the gravity boots in the platforms and to keep her from going down in the platforms without them. Think about this. Maybe, just "You would feel unstead without the boots." Also, in zero-g, have the boots keep the player on the ground, otherwise she will float!
-]
-
-A thing can be floating-exceptioned. Yourself is floating-exceptioned. [drop this if we abandon the code below]
-
-[Before going from a room in zero-g:
-	let L be the list of things in the location;
-	remove the list of things that are scenery from L;
-	remove the list of things that are fixed in place from L;
-	remove the list of things that are floating-exceptioned from L;
-	if the number of entries in L is positive:
-		let item be a random object in L;
-		say "You aren't comfortable leaving behind [the item] floating in zero gravity.";
-		stop the action.]
 
 Section 1 - Inside the Hub
 
@@ -1640,15 +1696,13 @@ Before going nowhere from Inside the Hub when the noun is inside, try going port
 
 Section 2 - The Airlock
 
-The Airlock is an unfamiliar frigid room in zero-g. "There are port and starboard doors and a red button." [todo description]
-
-[todo -description matches pressurization, need to deal with button, etc.]
+The Airlock is an unfamiliar frigid room in zero-g. "The airlock is also a cylinder, with [if port airlock door is open]an open[else]a closed[end if] door to the port, [if starboard airlock door is open]an open[else]a closed[end if] door to the starboard, and a red handle in the [one of]wall[or]ceiling[or]floor[purely at random]. It is very cold here[if airlock is not pressurized] and there is no air[end if]."
 
 The starboard airlock door is a door. It is port of Inside the Hub and starboard of The Airlock. It is scenery.
 
 The port airlock door is a door. It is port of The Airlock and starboard of Antenna Control. It is scenery. It is locked.
 
-A red button is scenery in the Airlock.
+A red handle is scenery in the Airlock. "The handle extends from the [one of]wall[or]ceiling[or]floor[purely at random] and is labeled 'Cycle.'"
 
 The airlock has a room called match. The match of the airlock is Inside the Hub.
 
@@ -1674,10 +1728,10 @@ To adjust the airlock doors:
 		now the port airlock door is locked;
 		now the port airlock door is closed;
 
-Before pushing the red button when the player is not wearing the emergency mask and the match of the airlock is Inside the Hub and Antenna Control is not pressurized:
-	say "You know from your safety training not to press the button without a backup oxygen source." instead.
+Before turning the red handle when the player is not wearing the emergency mask and the match of the airlock is Inside the Hub and Antenna Control is not pressurized:
+	say "You know from your safety training not to turn the handle without a backup oxygen source." instead.
 
-Instead of pushing the red button:
+Instead of turning the red handle:
 	if the match of the airlock is Inside the Hub:
 		now the match of the airlock is Antenna Control;
 	otherwise:
@@ -1686,27 +1740,30 @@ Instead of pushing the red button:
 	if the airlock is not pressurized and the match of the airlock is pressurized:
 		now the airlock is pressurized;
 		adjust the airlock doors;
-		say "You feel the airlock pressurize.";
+		say "You turn the handle an entire rotation, and after a moment, you feel the airlock pressurize.";
 	else if the airlock is pressurized and the match of the airlock is not pressurized:
 		now the airlock is not pressurized;
 		adjust the airlock doors;
-		say "You feel the air rush out of the airlock.";
+		say "You turn the handle an entire rotation, and after a moment, you feel the air rush out of the airlock.";
 	otherwise:
 		adjust the airlock doors;
-		say "Nothing obvious happens.";
+		say "You turn the handle an entire rotation, but nothing obvious happens.";
 
-Before exiting from The Airlock, try going starboard instead.
+Before exiting from The Airlock:
+	if the match of the airlock is Inside the Hub:
+		try going starboard instead;
+	otherwise:
+		try going port instead.
+
 Before going nowhere from The Airlock when the noun is inside, try going port instead.
 
 After going port from The Airlock:
 	say "You crawl through a narrow accessway."; [todo]
 	continue the action.
+	
+Instead of pushing or pulling the red handle: say "That doesn't work, but you could probably turn the handle."
 
 Section 3 - Antenna Control
-
-[ this end is near the solar panels and antennas - todo - window with scenery where you can see:
-  station, panel, antenna, mirrors, stars
- ]
 
 Antenna Control is an unfamiliar frigid room in zero-g. "[antenna-control-desc]". It has destination name "antenna control". Antenna Control is not pressurized.
 
@@ -1723,25 +1780,25 @@ After going starboard from Antenna Control:
 
 Before exiting from Antenna Control, try going starboard instead.
 
-[todo - window, ex, look through, look into? ]
+The window is scenery in Antenna Control. It has description "You might be the first person to look out through this window in a generation. While you've seen the stars through transparent walls of the station, the view from here is different and entirely more impressive."
 
-The window is scenery in Antenna Control. It has description "WINDOW." [todo]
+Understand "look out [the window]" as searching when the player is in antenna control.
 
 Instead of searching the window, try examining the window.
 
-Instead of doing anything other than examining to the solar panels when the player is in Antenna Control, say "There is a window in the way."
+Instead of doing anything other than examining or scanning to the solar panels when the player is in Antenna Control, say "There is a window in the way."
 
 The antennas are a backdrop in Antenna Control. They have description "You can see the antennas clearly from here: small telemetry antennas and the main communications dish. [if the antenna is calibrated]The dish appears to be tracking something.[otherwise]The dish lists, aiming at nothing in particular.[end if]". Understand "antenna" and "antennas" and "array" and "small" and "array of" and "telemetry" and "communications" and "dish" as antennas.
 
-Instead of doing anything other than examining to the antennas: say "There is a window in the way."
+Instead of doing anything other than examining or scanning to the antennas: say "There is a window in the way."
 
 The station itself is scenery in Antenna Control. It has description "Backed by a field of stars, you can see the wheel of the station rotating around you to the starboard [--] you didn't notice before but the airlock must be some sort of rotation coupling." It has printed name "station".
 
-Before doing anything other than examining to the station: say "The station is all around you." instead.
+Before doing anything other than examining to the station: say "The station is all around you, so you should try something more specific instead." instead.
 
 [ lever ]
 
-A lever is here. It is scenery. It is a container with carrying capacity 1.
+A lever is here. It is scenery. It is a container with carrying capacity 1. Understand "pipe" as the lever.
 
 Instead of examining the lever:
 	if the hoe is in the lever:
@@ -1779,13 +1836,16 @@ This is the hoes only rule:  [* simply using instead of would block default beha
 The hoes only rule is listed before the can't insert if this exceeds carrying capacity rule in the check inserting it into rulebook.
 
 After inserting the hoe into the lever:
-	say "You slide the hoe into the hollow lever, forming a longer lever."
+	say "You slide the hoe into the hollow lever, forming a longer lever.";
+	unless the lever is scored:
+		increase the score by 1;
+		now the lever is scored.
 	
 [ antenna calibration ]
 
 The calibration panel is scenery in Antenna Control.  It is a machine. It has indefinite article "the". It has description "This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable." Incorporated by the calibration panel is an RF socket. Understand "antenna calibration" and "control" as the panel.
 
-A yellow cable is a cable in Antenna Control. ["A yellow cable waves from a small panel." ] It is floating-exceptioned. It is scenery. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
+A yellow cable is a cable in Antenna Control. ["A yellow cable waves from a small panel." ] It is scenery. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
 
 Instead of unplugging the yellow cable from the calibration panel:
 	say "The yellow cable is permanently attached to the panel.";
@@ -1857,6 +1917,7 @@ Carry out typing it on:
 		if (sequence position of the keypad) is (sequence length of the keypad):
 			increase the sequence position of the keypad by one;
 			computerize2 "Calibration successful.";
+			increase the score by one;
 		otherwise:
 			increase the sequence position of the keypad by one;
 			computerize2 "[entry (sequence position of the keypad) of the hints of the keypad]";
@@ -1865,6 +1926,15 @@ Carry out typing it on:
 		now the sequence position of the keypad is one;
 		computerize2 "[entry (sequence position of the keypad) of the hints of the keypad]";
 
-[ todo - scan display, panel, keypad, etc. ]
+Instead of the scanner scanning the keypad:
+	computerize "Component is functional.";
+	rule succeeds.
+
+Instead of the scanner scanning the calibration display:
+	computerize "Component is functional.";
+	rule succeeds.
+
+Instead of the scanner scanning the calibration panel:
+	computerize "Machine is functional. Antenna is [unless the antenna is calibrated]not [end if]calibrated.";
 
 [ --- ]

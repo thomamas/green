@@ -61,7 +61,7 @@ asw
 u
 wear mask
 port
-push red button
+turn red handle
 port
 plug yellow into comms
 press 3

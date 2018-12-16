@@ -7,8 +7,18 @@
   <meta name="description" content="A page for the game [TITLE] by [AUTHOR]." />
   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
   <style>
-  div.links li:nth-last-child(3)::before { content: "🕹  " /* unicode &#x1F579; */ }
-  div.links li:nth-last-child(3) { padding-top: 1ex }
+  div.links li a { padding-top: 15px; display:inline-block; }
+  div.links li:nth-child(4)::before { content: "🕹  " /* unicode &#x1F579; */ }
+  div.links li:nth-child(1) a {
+    padding-left:27px;
+    background: url("gblorb.png") no-repeat scroll left;
+    background-position: 0px 9px;
+  }
+  div.links li:nth-child(2) a,div.links li:nth-child(3) a {
+    padding-left:27px;
+    background: url("PDF_24.png") no-repeat scroll left;
+    background-position: 0px 9px;
+  }
   </style>
 </head>
 <body>
@@ -23,7 +33,6 @@
 	<ul>
 	<li><div class="download">[DOWNLOAD]</div></li>
   [AUXILIARY]
-  <br>
   <li><a href="/IF/">My IF Projects</a>
 	</ul>
 </div>

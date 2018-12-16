@@ -1,6 +1,6 @@
 /* "Local" CSS file */
 
-@import url('https://fonts.googleapis.com/css?family=Orbitron|VT323|Charm');
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500|VT323|Charm');
 
 body {
 	font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
@@ -37,7 +37,7 @@ body {
 #gameport .Style_header {
   font-size: 17px;
   font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
+  font-weight: 450;
 }
 
 #gameport .Style_user1 {
@@ -97,7 +97,8 @@ a img { border-width: 0; border-style: none; }
 	text-align: left;
 }
 
-h1 { font: 1.75em "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+/*h1 { font: 1.75em "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }*/
+h1 { font: 500 1.75em "Orbitron", sans-serif; }
 h2 { font: 1.17em "Gill Sans", "Gill Sans MT", Calibri, sans-serif; line-height: .25; }
 
 /* The about formatting applies to blurb information. */
@@ -410,3 +411,5 @@ Styles for mobile browsers: change to a one-column layout.
 		width: auto;
 	}
 }
+
+div.interpretercredit { width: 18em; }

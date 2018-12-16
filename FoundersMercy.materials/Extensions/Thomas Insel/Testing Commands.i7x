@@ -46,6 +46,11 @@ Carry out listing the tree:
 	sort L in printed name order;
 	repeat with item running through L:
 		say "    [item][line break]";
+	say "[bold type](Backdrops)[roman type][line break]";
+	let L be the list of things that are backdrops;
+	sort L in printed name order;
+	repeat with item running through L:
+		say "    [item][line break]";
 
 Testing Commands ends here.
 
