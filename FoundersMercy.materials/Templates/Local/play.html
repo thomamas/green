@@ -1,82 +1,64 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>[AUTHOR] - [TITLE] — Play</title>
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no">
-  <meta name="author" content="[AUTHOR]">
-  <link rel="stylesheet" href="style.css">
-<style>
-  li.smalltitle { 
-    font-size: 17px;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 450;
-  }
-  div.links li a { padding-top: 15px; display:inline-block; }
-  div.links li:nth-child(2) a {
-    padding-left:27px;
-    background: url("PDF_24.png") no-repeat scroll left;
-    background-position: 0px 9px;
-  }
-  @keyframes myZoom { from { transform: translateX(-20em) } }
-  div#credits {display:none; padding-left:1em; animation:myZoom 0.3s}
-</style>
-  <script>
-function hideshow(id) {
-  var x = document.getElementById(id);
-  var y = document.getElementById(id + '-sp');
-  if (x.style.display === "none") {
-    x.style.display = "block";
-    y.innerHTML="&#9661;";
-  } else {
-    x.style.display = "none";
-    y.innerHTML="&#9655;";
-  }
-}
-  </script>
-  
-  [INTERPRETERHEAD]
-  
-</head>
-<body class="play">
-<div class="container">
-
-  <div class="coverimage"><span>[COVER]</span></div>
-  <div class="links">
-    <ul>
-      <li class="smalltitle"><a href="index.html">[TITLE]</a>
-      <li><a href="Map.pdf" target="_blank">Map &amp; Feelies</a></li>
-    </ul>
-  </div>
-
-  <div id="gameport">
-  [INTERPRETERBODY]
-  </div>
-
-</div>
-
-<div class="interpretercredit">
-<p>
-
-<span id="credits-sp" onclick="hideshow('credits')" style="cursor:pointer">&#9655;</span>&nbsp;<a onclick="hideshow('credits')" href="#">Design Credits...</a></span>
-
-<div id="credits" style="display:none">
-
-  <p>
-  <b>Cover art:</b><br>
-  adapted from <a target="_blank" href="https://archive.org/details/SpaceSettlementsADesignStudy1977">NASA SP-413</a>
-  </p>
-
-  <p>
-  <b>Web Fonts:</b><br>
-  <a target="_blank" href="https://fonts.google.com/specimen/Charm">Charm</a> by <a target="_blank" href="https://font.cadsondemak.com/foundry/">Cadson Demack</a>,<br>
-  <a target="_blank" href="https://www.theleagueofmoveabletype.com/orbitron">Orbitron</a> by <a target="_blank" href="https://matt.cc">Matt McInerney,</a> &amp;<br>
-  <a target="_blank" href="https://github.com/phoikoi/VT323">VT323</a> by Peter Hull
-</p>
-
-</div>
-
-<p><a target="_blank" href="[INTERPRETERURL]">[INTERPRETERVERSION]</a></p>
-</div>
-</body>
+  <head>
+    <title>[AUTHOR] - [TITLE] — Play</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="author" content="[AUTHOR]">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      div.links li:nth-child(2) a {
+        padding-left:27px;
+        background: url("PDF_24.png") no-repeat scroll left;
+        background-position: 0px 9px;
+      }
+      @keyframes myZoom { from { transform: translateX(-20em) } }
+      div#credits {display:none; padding-left:1em; animation:myZoom 0.3s}
+    </style>
+    <script>
+      function hideshow(id) {
+        var x = document.getElementById(id);
+        var y = document.getElementById(id + '-sp');
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.innerHTML="&#9661;";
+        } else {
+          x.style.display = "none";
+          y.innerHTML="&#9655;";
+        }
+      }
+    </script>
+    [INTERPRETERHEAD]
+  </head>
+  <body class="play">
+    <div class="container">
+      <div class="coverimage"><span>[COVER]</span></div>
+      <div class="links">
+        <ul>
+          <li class="smalltitle"><a href="index.html">[TITLE]</a>
+          <li><a href="Map.pdf" target="_blank">Map &amp; Feelies</a></li>
+        </ul>
+      </div>
+      <div id="gameport">[INTERPRETERBODY]</div>
+    </div>
+    <div class="interpretercredit">
+      <p>
+        <span id="credits-sp" onclick="hideshow('credits')" style="cursor:pointer">&#9655;</span>&nbsp;
+        <a onclick="hideshow('credits')" href="#">Web Design Credits...</a></span>
+      </p>
+      <div id="credits" style="display:none">
+        <p>
+          <b>Cover art:</b><br>
+          adapted from <a target="_blank" href="https://archive.org/details/SpaceSettlementsADesignStudy1977">NASA SP-413</a>
+        </p>
+        <p>
+          <b>Web Fonts:</b><br>
+          <a target="_blank" href="https://fonts.google.com/specimen/Charm">Charm</a> by <a target="_blank" href="https://font.cadsondemak.com/foundry/">Cadson Demack</a>,<br>
+          <a target="_blank" href="https://www.theleagueofmoveabletype.com/orbitron">Orbitron</a> by <a target="_blank" href="https://matt.cc">Matt McInerney,</a> &amp;<br>
+          <a target="_blank" href="https://github.com/phoikoi/VT323">VT323</a> by Peter Hull
+        </p>
+      </div>
+      <p><a target="_blank" href="[INTERPRETERURL]">[INTERPRETERVERSION]</a></p>
+    </div>
+  </body>
 </html>

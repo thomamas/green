@@ -37,7 +37,7 @@ body {
 #gameport .Style_header {
   font-size: 17px;
   font-family: 'Orbitron', sans-serif;
-  font-weight: 450;
+  font-weight: 500;
 }
 
 #gameport .Style_user1 {
@@ -110,6 +110,12 @@ h2 { font: 1.17em "Gill Sans", "Gill Sans MT", Calibri, sans-serif; line-height:
 	text-align: left;
 }
 
+.smalltitle {
+  font-size: 17px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 500;
+}
+
 /*
 .about p { margin-bottom: 0; }
 
@@ -120,7 +126,7 @@ h2 { font: 1.17em "Gill Sans", "Gill Sans MT", Calibri, sans-serif; line-height:
 
 .playinfo {
 	margin: 1em 0px 0px 15.4em;
-	width: 33em;
+  width: 37em;
 }
 
 .playinfo p {
@@ -143,6 +149,8 @@ h2 { font: 1.17em "Gill Sans", "Gill Sans MT", Calibri, sans-serif; line-height:
   padding: 0;
 }
 
+.links li a { padding-top: 15px; display:inline-block; }
+
 span.filetype { font-size: .8em; display: none; }
 
 /* 
@@ -153,14 +161,17 @@ Source formatting applies to the source text on generated pages.
 {
 	margin-top: 1.4em;
 	margin-left: 15.4em;
-	width: 33em;
+	width: 60em; /* was 33em */
 	line-height: 1.4;
 }
 
 .sourceintroduction
 {
+	padding-top: 2.4em;
 	margin-left: 15.4em;
-	width: 33em;
+	width: 60em;
+	line-height: 1;
+	text-align: left;
 }
 
 .sourceintroduction h1
@@ -168,10 +179,10 @@ Source formatting applies to the source text on generated pages.
 	padding-top: 2.8em;
 	/* font-size: 1em; */
 	line-height: 1;
-	text-align: right;
-	text-decoration: none;
-	font-weight: normal;
-	font-style: italic;
+	/* text-align: right; */
+	/* text-decoration: none; */
+	/* font-weight: normal; */
+	/* font-style: italic; */
 }
 
 .sourceintroduction h2
@@ -225,6 +236,8 @@ span.columnhead {
 	/* font-size: 1em; */
 }
 
+.source .heading { font: 1.17em "Gill Sans", "Gill Sans MT", Calibri, sans-serif; line-height: .25; }
+
 span.heading
 {
 	font-weight: bold;
@@ -271,7 +284,19 @@ Notes applies to footnotes on the source text.
 .notes
 {
 	margin-left: 16.8em;
-	width: 33em;
+	width: 58.6em;
+}
+
+.notes p:first-child {
+  border-top:1px solid black;
+  padding-top:1ex;
+  width:10em;
+  margin-left: -1.4em;
+}
+
+.notesheading {
+  display:none;
+  font-style: italic; 
 }
 
 .notes p
@@ -279,8 +304,6 @@ Notes applies to footnotes on the source text.
 	text-indent: -1.4em;
 	font-size: .75em;
 }
-
-.notesheading { font-style: italic; }
 
 p.indent0 
 {	margin-bottom: 0;  
@@ -373,6 +396,7 @@ Styles for play.html
 	bottom: 1em;
 	font-size: 80%;
 	position: fixed;
+  width: 18em;
 }
 
 #gameport
@@ -412,4 +436,3 @@ Styles for mobile browsers: change to a one-column layout.
 	}
 }
 
-div.interpretercredit { width: 18em; }

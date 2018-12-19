@@ -22,19 +22,6 @@ Carry out listing objects:
 Understand "rtree" as listing the tree.
 Listing the tree is an action out of world.
 
-To say rname (item - a thing):
-	say "[if item is fixed in place or item is scenery][italic type][end if][item][roman type]";
-	if item is undescribed, say "* ";
-
-To say rname (l - a list of things):
-	let first be true;
-	repeat with item running through l:
-		unless first is true, say ", ";
-		let first be false;
-		say "[if item is fixed in place or item is scenery][italic type][end if][item][roman type]";
-		if item is undescribed, say "*";
-	say " ";
-
 Carry out listing the tree:
 	let room list be the list of rooms;
 	sort room list in printed name order;
@@ -43,7 +30,8 @@ Carry out listing the tree:
 		repeat with item running through things in r:
 			if item is a door, next;
 			if item is a backdrop, next;
-			say "    [rname item]";
+			say "    [if item is fixed in place or item is scenery][italic type][end if][item][roman type]";
+			if item is undescribed, say "* ";
 			if item encloses a thing:
 				let L1 be the list of things which are enclosed by item;
 				let L2 be the list of things which are part of item;
@@ -51,8 +39,8 @@ Carry out listing the tree:
 				sort L1 in printed name order;
 				sort L2 in printed name order;
 				say " ";
-				unless L1 is empty, say "+ [rname L1] ";
-				unless L2 is empty, say "& [rname L2]";
+				unless L1 is empty, say "+ [L1] ";
+				unless L2 is empty, say "& [L2]";
 			say "[line break]";
 	say "[bold type](Nowhere)[roman type][line break]";
 	let L be the list of things that are nowhere;

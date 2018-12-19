@@ -1,9 +1,9 @@
  "Founder's Mercy" by Thomas Insel
 
 [
-	Copyright © 2018 Thomas Insel <tinsel@tinsel.org>
+	Copyright © 2019 Thomas Insel <tinsel@tinsel.org>
 	http://tinsel.org/IF/
-	
+
 	This work is licensed under a Creative Commons Attribution 4.0 International License.
 	https://creativecommons.org/licenses/by/4.0/	
 ]
@@ -25,7 +25,7 @@ But maybe it isn’t hopeless. There must still be other people in other worlds,
 Today is the day."
 
 When play begins:
-	say "[the story description][paragraph break]"
+	say "[the story description][paragraph break]".
 
 Release along with cover art ("A space station."),
 	an interpreter,
@@ -42,10 +42,9 @@ After printing the banner text rule:
 	say "Type ABOUT for credits or HINT for assistance.";
 	
 Carry out requesting the credits:
-	say	"[bold type]About Founder's Mercy[roman type][line break]"
-		,
-		"[italic type]Founder's Mercy[roman type] is my second released Inform project, conceived and implemented in the last months of 2018.[paragraph break]" [todo],
-		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister. Keypad code is inspired by Emily Short's Computers.[paragraph break]",
+	say	"[bold type]About Founder's Mercy[roman type][line break]",
+		"This is my second released Inform project, conceived and implemented in the last months of 2018.[paragraph break]",
+		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, Erik Temple for the Real-Time Delays extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister and keypad code is inspired by Emily Short's Computers.[paragraph break]",
 		"The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]",
 		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this story at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]",
 		"This work is Copyright © [the story creation year] Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type])."
@@ -58,9 +57,9 @@ This is the final credits rule: try requesting the credits.
 
 Chapter 2 - Scoring
 
-Use scoring. The maximum score is 10. An object can be scored. An object is usually not scored.
+Use scoring. The maximum score is 10. [* See PuzzleChart.graffle for scoring summary ]
 
-[ See PuzzleChart.graffle for scoring summary ]
+An object can be scored. An object is usually not scored.
 
 Chapter 3 - Notes
 
@@ -87,9 +86,9 @@ To decide what object is a random object in (L - a list of objects):
 	let r be a random number between 1 and the number of entries in L;
 	decide on entry r of L.
 
-To say uc (t - a thing): [* is this really the best way to do this? ]
+To say uc (t - a thing): [* Is this really the best way to do this? ]
 	let a be "[t]";
-	say "[a in upper case]";
+	say "[a in upper case]".
 
 To say -: say Unicode 8211.
 To say --: say Unicode 8212.
@@ -110,7 +109,7 @@ Section 1 - Text
 
 Include Glulx Text Effects by Emily Short.
 
-Table of User Styles (continued) [* used with computer styles above ]
+Table of User Styles (continued) [* Used with computer styles above ]
 style name	color	fixed width
 special-style-1	"#227722"	true
 special-style-2	"#2222cc"	true
@@ -119,23 +118,21 @@ alert-style	"#cc2222"	false
 Section 2 - Exit Lister
 
 Include version 1 of Simple Exit Lister by Thomas Insel.
-A room is usually familiar. [* since the player has already visited most of the station ]
+
+A room is usually familiar. [* Since the player has already visited most of the station ]
 
 Section 3 - Plugs and Sockets
 
-[
-	Fix or adapt a few things about Plugs and Sockets, but it is still a bit complicated and has some issues. Also consider:
+[ Fix or adapt a few things about Plugs and Sockets, but it is still a bit complicated and has some issues. Also consider:
 
 	Special language for picking up a cable that is connected to something not carried.
 	Blocking putting the cable in the pocket if it is connected to something not carried.
 	What to do if there were a portable closable container which could hold a cable.
-	Can we support unplug cable from all or unplug cable from socket?
-]
+	Can we support unplug cable from all or unplug cable from socket? ]
 
 Include version 4/170924 of Plugs and Sockets by Sean Turner
 
-[
-	B. Suppress the list of attachments for sockets because this is too ugly:
+[ A. Suppress the list of attachments for sockets because this is too ugly:
 		
 		You can see an organ (into which is plugged an USB cable), an audio unit (into which is plugged an USB cable), and an USB cable (plugged into an organ and an audio unit) here.
 
@@ -148,19 +145,19 @@ Include version 4/170924 of Plugs and Sockets by Sean Turner
 
 The list attached things when listing receiver or inserter rule response (A) is "".
 
-[ C. Make style fit for command explanation ]
+[ B. Make style fit for command explanation ]
 
 The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are] plugged into more than one thing.[paragraph break][start note]Try UNPLUG [uc noun] FROM SOMETHING.[stop note][line break]";
 
-[
-	D. There is a bug in the existing leavings whilst attached to fixed things rule: it doesn't apply if thing is in a container. We fix this by changing "if the holder of the connectee is not carried by the player" to "if the holder of the connectee is not carried by the player".
+[ C. Adjust the leaving room behavior in a few ways:
 
-	Another bug: the rule applies even if the travel is stopped, for example if the player goes in an invalid direction. We try to fix this by moving to an Instead rule instead of a Before rule. Note this is mostly only tested for the case where PS-leaving is PS-allowed.
+(1) There is a bug in the existing leavings whilst attached to fixed things rule: it doesn't apply if thing is in a container. We fix this by changing "if the holder of the connectee is not carried by the player" to "if the holder of the connectee is not carried by the player".
 
-	Additionally, we substitute our preferred language, and adjust so that we don't end up with "The organ pulls out from the cable." instead of "The cable pulls out from the organ."
+(2) Another bug: the rule applies even if the travel is stopped, for example if the player goes in an invalid direction. We try to fix this by moving to an Instead rule instead of a Before rule. Note this is mostly only tested for the case where PS-leaving is PS-allowed.
 
-	Finally, there is an outstanding issue with the world modeling here. If the player takes two heavy things connected by a cable, but not the cable, they will still pull out and leave the cable behind. Maybe we could fix this by forcing the player to take the cable when they take the other items?
-]
+(3) Additionally, we substitute our preferred language, and adjust so that we don't end up with "The organ pulls out from the cable." instead of "The cable pulls out from the organ."
+
+Finally, there is an outstanding issue with the world modeling here. If the player takes two heavy things connected by a cable, but not the cable, they will still pull out and leave the cable behind. Maybe we could fix this by forcing the player to take the cable when they take the other items? ]
 	
 When play begins, now PS-leaving is PS-allowed.
 
@@ -185,12 +182,12 @@ Instead of an actor going to somewhere (this is the new leaving room whilst atta
 
 [todo -- when taking a an item with a socket, if you already have another item with a socket, and the two are attached, take the cable[s] between them -- that is the holder of the connectees connecting them. ]
 
-[ E. Some action synonyms ]
+[ D. Some action synonyms ]
 
 Understand the command "disconnect" as "unplug".
 Understand "connect [something] to [something]" as plugging it into.
 
-[ F. Establish a few kinds for future use ]
+[ E. Establish a few kinds for future use ]
 
 A USB plug is a kind of PS-plug. It has PS-type "USB".
 A USB socket is a kind of PS-socket. It has PS-type "USB".
@@ -198,18 +195,17 @@ A USB socket is a kind of PS-socket. It has PS-type "USB".
 An RF plug is a kind of PS-plug. It has PS-type "RF".
 An RF socket is a kind of PS-socket. It has PS-type "RF".
 
-[ G. Cables ]
+[ F. Cables ]
 
 A cable is a kind of thing.
 
-Instead of examining a cable, say "[the description of the noun] [exam inserter status of the noun]."  [* assume cables have only plugs, no sockets ]
+Instead of examining a cable, say "[the description of the noun] [exam inserter status of the noun]."  [* Assume cables have only plugs, no sockets ]
 
 Instead of the scanner scanning a cable:
 	computerize "Cable is functional.";
 	rule succeeds.
 
 Understand "pull [a cable]" as unplugging.
-[ Instead of tying a cable to something, say "Tying the cable would damage it." ]
 
 To decide if (s - a machine) and (t - a machine) are connected:
 	repeat with c running through cables:
@@ -240,6 +236,12 @@ Section 5 - Testing - Not for Release
 Include Object Response Tests by Juhana Leinonen.
 Include Testing Commands by Thomas Insel.
 
+Section 6 - 
+
+Include Real-Time Delays by Erik Temple.
+
+To beat: if glulx timekeeping is supported, wait 1000 milliseconds before continuing;
+
 Chapter 7 - Directions
 
 The starboard is a direction. The starboard has opposite port. Understand "s" as starboard.
@@ -252,14 +254,14 @@ The antispinward is a direction. The antispinward has opposite spinward. Underst
 
 Does the player mean going a stellar direction: it is very likely.
 
-A direction can be stellar or planetbound. A direction is usually not stellar. Starboard, port, spinward, antispinward, up, down, the inside and the outside are stellar.
+A direction can be stellar or planetary. A direction is usually planetary. Starboard, port, spinward, antispinward, up, down, the inside and the outside are stellar.
 
 Directions were explained is a truth state that varies. Directions were explained is false.
 
-Before going a planetbound direction:
+Before going a planetary direction:
 	say	"You have heard of compass directions like [noun], but they don't make any sense here. Instead, you can go spinward, antispinward, port, and starboard. When you look spinward, port is left and starboard is right.[paragraph break]";
 	unless directions were explained is true:
-		say "[start note]You can use the abbreviations SW, ASW, P, and S. You can also go UP, DOWN, IN, or OUT where appropriate. Type EXITS if you get confused about geography.[no line break][stop note][paragraph break]";
+		note "You can use the abbreviations SW, ASW, P, and S. You can also go UP, DOWN, IN, or OUT where appropriate. Type EXITS if you get confused about geography.";
 		now directions were explained is true;
 	stop the action.
 
@@ -270,19 +272,19 @@ Before climbing down, try going down instead.
 
 Chapter 8 - The Player
 
-The player is female. The carrying capacity of the player is 5. [ If it is smaller than 4, we create busy work moving bulky items around. ]
+The player is female. The carrying capacity of the player is 5. [* If it were smaller than 4, there would be busy work shuffling bulky items. ]
 
 Instead of examining the player, say "As virtuous as ever."
 
 The player is carrying the scanner. Understand "hey scanner" and "ok scanner" as the scanner.
 
-The player is wearing a green jumpsuit. The jumpsuit has description "You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population." Understand "suit" and "jump suit" and "forest green" and "forest jumpsuit" and "forest suit" and "forest jump" as jumpsuit. Understand "forest" as the green jumpsuit when the location is not Sector 5 and the location is not Sector 3. [* otherwise "forest" alone will have priority over the scenery trees, which is unlikely to be what the player intends ]
+The player is wearing a green jumpsuit. The jumpsuit has description "You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population." Understand "suit" and "jump suit" and "forest green" and "forest jumpsuit" and "forest suit" and "forest jump" as jumpsuit. Understand "forest" as the green jumpsuit when the location is not Sector 5 and the location is not Sector 3. [* Otherwise "forest" alone will have priority over the scenery trees, which is unlikely to be what the player intends ]
 
 The pocket is part of the jumpsuit. It is a container.
 
 A thing can be bulky. A thing is usually not bulky.
 
-Before an actor taking: [* the pocket can't work as a player's holdall, which be directly carried, so let's try this instead ]
+Before an actor taking: [* The pocket can't work as a player's holdall, which be directly carried, so let's try this instead ]
 	if the number of things carried by the actor is at least the carrying capacity of the actor:
 		if the actor is wearing the green jumpsuit or the actor is holding the green jumpsuit:
 			let the transferred item be nothing;
@@ -303,8 +305,7 @@ After examining the jumpsuit:
 
 Before inserting something into the jumpsuit, try inserting the noun into the pocket instead.
 
-Before inserting something into the pocket:
-	if the noun is bulky, say "It's a large pocket, but not large enough to hold [a noun]." instead.
+Before inserting something bulky into the pocket, say "It's a large pocket, but not large enough to hold [a noun]." instead.
 
 After taking off the jumpsuit, say "Your nudity is pure and innocent, but still a little cold and uncomfortable."
 
@@ -320,11 +321,9 @@ Chapter 9 - Actions
 
 Section 1 - Remove Some Actions
 
-Understand the command "wake" as something new. [ too self-referential ]
-Understand the command "buy" as something new. [ no money in this story ]
-Understand the command "lock" as something new.
-Understand the command "unlock" as something new.
-Understand the command "sorry" as something new.
+Understand the command "wake" as something new. [* Too self-referential. ]
+Understand the command "buy" as something new. [* There is no money in this story. ]
+Understand the commands "lock" and "unlock" as something new. [* This at least explictly hints you never need a key for a locked door. ]
 
 [ the following is a lot of trouble just to get rid of consulting it about ]
 
@@ -340,11 +339,15 @@ Understand "read [something]" as examining.
 
 Understand the command "consult" as something new.
 
-[ Simplify communication -- note this means some bits of Machines.i7x will never be used ]
+[ Simplify communication. Note this means some bits of Machines.i7x will never be used ]
 
 Understand the commands "ask" and "tell" and "answer" and "say" as something new.
 
-Understand "ask [text]" or "tell [text]" or "answer [text]" or "say [text]" or "talk" or "talk [text]" as a mistake ("[start note]To communicate in this story, type CHARACTER, MESSAGE where CHARACTER is someone or something and MESSAGE is what you want to say.[no line break][stop note]").
+Understand the commands "yes" and "y" and "no" as something new.
+
+Understand the command "sorry" as something new.
+
+Understand "ask [text]" or "tell [text]" or "answer [text]" or "say [text]" or "talk" or "talk [text]" or "yes" or "no" or "sorry" as a mistake ("[start note]To communicate in this story, type CHARACTER, MESSAGE where CHARACTER is someone or something and MESSAGE is what you want to say.[no line break][stop note]").
 
 [ To be nice ]
 
@@ -352,7 +355,11 @@ Understand "use [text]" as a mistake ("Please try specific a more specific verb.
 
 Section 2 - Modify Some Default Responses
 
-Instead of attacking or cutting something, say "The Founder said that violence is never the answer.";
+Instead of thinking, say "You've been alone for a thousand days [--] plenty of time for thinking. Now is the time for action."
+
+Understand the command "kick" as "attack".
+
+Instead of attacking or cutting something, say "The Founder said that violence is rarely the answer."
 
 Instead of cutting or attacking yourself, say "Imperfect vessel that you are, that is not the answer."
 
@@ -399,7 +406,6 @@ Instead of swimming in, say "You can't swim in [the noun]."
 [ for the black board ]
 
 Understand "rub [something] with [something]" as rubbing it with.
-Understand the command "erase" as "rub".
 
 Rubbing it with is an action applying to one thing and one carried thing.
 
@@ -417,8 +423,7 @@ Carry out xyzzying: say "Once was enough."
 
 [ for atmosphere ]
 
-Understand "sing" as singing.
-Understand "pray" as singing.
+Understand "sing" or "pray" as singing.
 
 Singing is an action applying to nothing.
 
@@ -445,7 +450,7 @@ Beginning ends when Repairing Pod Bay begins.
 
 Section 2 - Ready to Repair
 
-[ this scene will be skipped if the player visits Pod Control before all sectors, so it is more of a motivator rather than core to the story play. ]
+[ This scene will be skipped if the player visits Pod Control before all sectors, so it is more of a motivator rather than core to the story play. ]
 
 Ready to Repair is a scene. "You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave: the pods are below Sector 1."
 Ready to Repair begins when every room in The Sectors is visited for the first time and Beginning has not ended.
@@ -457,7 +462,7 @@ Repairing Pod Bay is a scene.
 Repairing Pod Bay begins when Pod Control is visited.
 Repairing Pod Bay ends when Repairing Red Breaker has ended and Repairing Green Valve has ended and Repairing Atmosphere Pump has ended.
 
-[ these subscenes could begin/end at the same time if repairs have already happened, so shouldn't print anything ]
+[ These subscenes could begin/end at the same time if repairs have already happened, so shouldn't print anything. ]
 
 Repairing Red Breaker is a scene.
 Repairing Red Breaker begins when Repairing Pod Bay begins.
@@ -507,14 +512,14 @@ When The End begins: increase the score by 1. [* for calling for help ]
 Every turn during The End:
 	if the total minutes of time since The End began is greater than zero and the communications unit is usable and the communications unit is visible:
 		let ov be a random number between 2100 and 9998; [* I have no idea why I want to randomize this ]
-		say
-			"You hear a human speaking from the audio unit: 'RWSS [italic type]Founder's Mercy[roman type], this is OV-[ov], over...[paragraph break]"
-			,
-			"'There's really somebody there? We thought your station had been abandoned for kilodays...[paragraph break]"
-			,
-			"'Standby...[paragraph break]"
-			,
-			"'We can have a pod there in about a thousand minutes.'[no line break]";
+		say "You hear a human speaking from the audio unit: 'RWSS [italic type]Founder's Mercy[roman type], this is OV-[ov], over...[paragraph break]";
+		beat;
+		say "'There's really somebody there? We thought your station had been abandoned for kilodays...[paragraph break]";
+		beat;
+		say "'Standby...[paragraph break]";
+		beat;
+		say "'We can have a pod there in about a thousand minutes.'[no line break]";
+		beat;
 		end the story finally saying "You are not alone.".
 
 Book 3 - Hints
@@ -526,10 +531,8 @@ Help disabled is a truth state that varies. Help disabled is false.
 Understand "help" or "hint" or "hints" as getting help.
 Getting help is an action applying to nothing.
 
-[ Stolen from Damnatio Memoriae's instant actions so that help can take no time even though it can't be an action out of world lest "scanner, help" fail. ]
-
 The help takes no time rule is listed before the every turn stage rule in the turn sequence rules.
-This is the help takes no time rule: if getting help, rule succeeds.
+This is the help takes no time rule: if getting help, rule succeeds. [* If getting help were an action out of world then "scanner, help" would fail, so we use this trick from Damnatio Memoriae instead ]
 
 Understand "help off" or "hint off" or "hints off" or "disable help/hint/hints" as disabling help.
 Disabling help is an action out of world applying to nothing.
@@ -591,7 +594,7 @@ To say pump help:
 		if the atmosphere pump is open:
 			say "The status display has some clear directions.";
 		else:
-			say "Now this is strange."; [* this should not happen because the scene will have ended ]
+			say "Now this is strange."; [* This should never happen because the scene will have ended ]
 	else:
 		unless any machine has been scanned:
 			say "Now might be a good time to try out the scanner.";
@@ -612,7 +615,7 @@ To say red breaker help:
 		say "Just turn the red breaker on.";
 	else if the gravity boots are scored:
 		say "Figure out where to go to the hub.";
-	else if the laser is alarmed: [ i.e., you have tried but not yet succeeded to remove to boots ]
+	else if the laser is alarmed: [* Player has tried to remove the boots but not yet succeeded. ]
 		say eraser help;
 	else if the supply vault is visited:
 		say "You have seen what you need to reach the hub circuit breaker.";
@@ -639,11 +642,7 @@ Carry out getting help when Between Repairs is happening:
 
 Section 4 - Repairing Comms
 
-[
-	Less detail at this stage.
-	
-	TODO: consider making the progressive -- has each stage ver been true?
-]
+[ There is less detail in this stage, at least partly because the player should now be more experienced and because help isn't a walkthrough. ]
 
 Carry out getting help when Repairing Comms is happening:
 	unless the communications unit is handled:
@@ -656,50 +655,6 @@ Carry out getting help when Repairing Comms is happening:
 		say "You can't hear in a vacuum.";
 	else:
 		say "Just wait."
-
-[
-
-
-Carry out getting help when Repairing Comms is happening:
-	unless communications unit is handled:
-		say "Find the emergency communications unit.";
-	else unless audio and communications are connected:
-		say "Connect the communications unit to an audio source.";
-	else unless audio unit is functional:
-		say "Repair the audio unit.";
-	else:
-		say "Just wait."]
-
-[
-
-	unless communications unit is handled ... "Find the emergency communications unit."
-	unless communications unit is almost usable ... "Connect the communications unit to a working audio source."
-	unless communications unit is nearly usable ... "Connect the communications unit to a working antenna."
-	unless communications unit is usable ... "You can't hear in a vacuum."
-	else ... "Just wait."
-
-]
-
-[
-
-Recall:
-
-Definition: the communications unit is almost usable if
-	the communications unit is functional and
-	the audio unit is functional and
-	audio and communications are connected.
-
-Definition: the communications unit is nearly usable if
-	the communications unit is almost usable and
-	communications and calibration panel are connected and
-	the antenna is calibrated;
-
-Definition: the communications unit is usable if
-	the communications unit is nearly usable and
-	the location of the communications unit is pressurized.
-
-]
-
 
 Section 5 - The End
 
@@ -725,8 +680,6 @@ The Platforms is a region.
 Zero-G is a region.
 
 Section 2 - Backdrops
-
-[ todo -- add antenna here with solar ]
 
 The hub is a backdrop in The Sectors and in The Platforms. It has description "[if the player is in The Platforms]The station rotates around the hub, still a good way above you, which extends out to hold solar panels to the port and mirrors on the starboard side.[otherwise]The station rotates around the hub, which extends out to hold solar panels to the port and mirrors on the starboard side. On the inside, there is a maintenance platform about two thirds of the way up the pylons."
 
@@ -786,6 +739,9 @@ A circuit breaker is a kind of device. Circuit breakers are usually fixed in pla
 
 Instead of switching off a circuit breaker (called b) when b is switched on, say "[The b] seems to be locked on."
 
+Before closing a circuit breaker, try switching on the noun instead.
+Before opening a circuit breaker, try switching off the noun instead.
+
 Section 6 - Forests
 
 A forest is a kind of thing. It is usually scenery and privately-named and plural-named. It usually has printed name "trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, and they help with air processing."
@@ -798,15 +754,13 @@ Instead of climbing a forest:
 
 Section 7 - Hatches
 
-[
-	There are some serious issues with this implementation, including:
+[ There are some serious issues that keep this implementation from being broadly useful:
 
-	1. that it's not possible to have a hatch up and down from the same location and expect "ceiling" and "floor" to refer to the different things.
+	1. It's not possible to have a hatch up and down from the same location and expect "ceiling" and "floor" to refer to the different things.
 
-	2. if there are more than one floor hatch, the "let d be a random..." behavior means the description can be wrong.
+	2. If there are more than one floor hatch, the "let d be a random..." behavior means the description can be wrong.
 
-	Since we never have more than one of these in any location, these aren't a problem for this story.
-]
+Since we never have more than one of these in any location, these aren't a problem for this story. ]
 
 A floor hatch is a kind of door. "[floor-hatch-short]". It is usually privately-named. It usually has description "[The noun] [are] [if noun is open]open[else]closed[end if]." It usually has printed name "[if the player is in Underneath]ceiling hatch[otherwise]floor hatch[end if]". It usually has printed plural name "[if the player is in Underneath]ceiling hatches[otherwise]floor hatches[end if]"
 
@@ -835,24 +789,22 @@ A building is a kind of door. It is usually open. It is usually not openable. It
 
 Instead of searching a building, say "You would need to enter [the noun] to do that."
 
-[
-	I wanted to use
+[ I wanted to use
 
-		Understand "[building]" as entering.
+	Understand "[building]" as entering.
 
-	Although it is documented in §17.10. Commands consisting only of nouns, if there is any use of this form, if causes Asking something about to throw an error (but only in the form "person, topic" not in the form "ask person about topic":
+Although it is documented in §17.10. Commands consisting only of nouns, if there is any use of this form, if causes Asking something about to throw an error (but only in the form "person, topic" not in the form "ask person about topic":
 
-		*** Run-time problem P39: Attempt to say a snippet value which is currently invalid: words 0 to 3.
+	*** Run-time problem P39: Attempt to say a snippet value which is currently invalid: words 0 to 3.
 
-	This is documented in:
+This is documented in:
 
-		http://inform7.com/mantis/view.php?id=2028
-		http://inform7.com/mantis/view.php?id=1828
-		http://inform7.com/mantis/view.php?id=1765
-		https://www.intfiction.org/forum/viewtopic.php?p=124117#p124117
+	http://inform7.com/mantis/view.php?id=2028
+	http://inform7.com/mantis/view.php?id=1828
+	http://inform7.com/mantis/view.php?id=1765
+	https://www.intfiction.org/forum/viewtopic.php?p=124117#p124117
 		
-	So instead, I defined a new action with each building instance.
-]
+So instead, I defined a new action with each building instance. ]
 
 Chapter 1 - Sector 1
 
@@ -864,7 +816,7 @@ Instead of taking some crops, say "It is not [--] may never be [--] harvest time
 
 Instead of eating some crops, say "You aren't hungry."
 
-The graveyard is scenery in Sector 1. It has description "Fenced off but unmarked graves. You buried your parents here." Understand "small" and "graves" and "grave" and "fence" as the graveyard.
+The graveyard is scenery in Sector 1. It has description "Unmarked graves, but fenced off. You buried your parents here." Understand "small" and "graves" and "grave" and "fence" as the graveyard.
 
 There is a pylon in Sector 1.
 
@@ -882,6 +834,8 @@ Barn is a room. "Not fancy: livestock on one side and feed on the other, but not
 
 A plow is scenery in the barn. It is pushable between rooms. It has description "A steel walking plow." Understand "plough" as plow.
 
+Instead of examining the plow for the first time, say "Some of the old stories mentioned oxen, but you plowed with a team of goats until the animals began to die. Then with no meat and little grain to sell, the community couldn't make its debt payments and people started leaving."
+
 Before pushing or pulling or turning or taking the plow, say "The plow is too heavy to move around without purpose." instead.
 
 Before going with the plow, try pushing the plow instead.
@@ -892,15 +846,15 @@ Section 2 - Pod Control
 
 Pod Control is a room in Underneath. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall." It has destination name "pod control".
 
-A space suit is here. It is machinelike scenery. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: the seals are leaking and there are no spares left."
+A space suit is here. It is machinelike scenery. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: every seal is leaking and there are no spares left."
 
-Before doing anything other than examining or scanning to the space suit, say "All of the seals are shot, so the suit won't be useful." instead
+Before doing anything other than examining or scanning to the space suit, say "It is very bulky and useless." instead
 
 Instead of the scanner scanning the space suit:
 	computerize "Machine is failed.";
 	rule succeeds.
 
-A brass plate is here. It is scenery. It has description "[blockquote style]    RWSS Founder's Mercy ๛[line break]    Laid down 2138, Launched 2141.[line break]    'May His mercy shine upon us.'[roman type]". Understand "plaque" as plate.
+A brass plate is here. It is scenery. It has description "[blockquote style]    RWSS Founder's Mercy[line break]    Laid down 2138, Launched 2141.[line break]    'May His mercy shine upon us.'[roman type]". Understand "plaque" as plate.
 
 A status display is here. It is scenery and a machine. The status display can be examined.
 
@@ -940,7 +894,7 @@ Instead of the scanner scanning the atmosphere pump when the atmosphere pump is 
 	computerize "Machine is functional and operating.";
 	rule succeeds.
 
-Definition: the atmosphere pump is usable if the atmosphere pump is functional. [* can use was with a definition but not a to decide phrase]
+Definition: the atmosphere pump is usable if the atmosphere pump is functional. [* Inform allows "was" with a definition but not a "to decide" phrase ]
 
 Every turn when the atmosphere pump is visible:
 	if the atmosphere pump was not usable and the atmosphere pump is usable:
@@ -1134,13 +1088,15 @@ Instead of going nowhere in church when the noun is starboard, try going outside
 
 An altar is a fixed in place scenery supporter in church. It has description "Really just a table."
 
-The Founder's Testament is on the altar. It has description "The Founder's Testament tells how your people left Old Earth and first settled the station. You know the story by heart, and have already derived whatever comfort you can from this book." It has indefinite article "The". Understand "book" and "bible" as testament.
+The Founder's Testament is on the altar. It has description "You have already derived what comfort you can from the Founder's Testament." It has indefinite article "The". Understand "book" and "bible" as testament.
+
+Instead of examining the Founder's Testament for the first time, say "The Founder's Testament tells the story of your people's journey from Old Earth and how the lucky few settled in the L4 colonies, free from the corrupting temptations of society: drugs, sensation recordings, and social media. You know the story by heart, and have already derived what comfort you can from this book."
 
 [ organ ]
 
 The organ is scenery in Church. It is a machine. It has description "It's really just a keyboard in a fancy box with a socket to connect it to an audio unit." It has indefinite article "the". Understand "keyboard" as the organ. The organ can be played. Incorporated by the organ is a usb socket called the tan socket.
 
-Instead of the scanner scanning the organ: [ organ is always functional ]
+Instead of the scanner scanning the organ: [* The organ is always functional. ]
 	now the organ is scanned;
 	if audio and organ are connected and the audio unit is functional:
 		computerize "Machine functional. Output connected.";
@@ -1156,7 +1112,7 @@ Instead of playing the organ:
 	say "You never really learned how to play, but you pick out a few notes on the keyboard and the sound reverberates from the audio unit.";
 	now the organ is played;
 
-Instead of taking the organ, say "It is too heavy to move."
+Instead of taking the organ, say "It is too heavy."
 
 [ audio unit ]
 
@@ -1214,7 +1170,7 @@ After taking the audio unit:
 
 A gray cable is a cable in Church. "A gray cable connects the organ to the audio unit." Incorporated by it are two usb plugs. It has description "A one meter USB 7.2 cable with a Type-F plug at each end." Understand "grey" and "usb" as the gray cable.
 
-A rule for reaching inside Church when the turn count is one: allow access. [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
+A rule for reaching inside Church when the turn count is one: allow access. [* <a href="https://intfiction.org/forum/viewtopic.php?f=7&t=3636">https://intfiction.org/forum/viewtopic.php?f=7&t=3636</a> ]
 
 When play begins:
 	silently try plugging the gray cable into the tan socket;
@@ -1273,7 +1229,7 @@ Home is a room. "The room where you've slept your entire life. The crops are out
 
 Sector 4 is outside of home.
 
-The blanket is in Home. "The homespun blanket which you use as your bed is arranged on the ground." The blanket is a bulky portable wearable enterable supporter. It has indefinite article "your". It has description "Homespun wool." Understand "homespun" and "wool" as the blanket.
+The blanket is in Home. "A homespun blanket is arranged neatly on the ground. It is your bed." The blanket is a bulky portable wearable enterable supporter. It has indefinite article "your". It has description "Homespun wool." Understand "homespun" and "wool" and "bed"as the blanket.
 
 The player is on the blanket.
 
@@ -1395,6 +1351,10 @@ A chalkboard is fixed in place scenery in the school. Understand "chalk board" a
 
 An eraser is on the desk. The eraser can be clean or dusty. It is clean. The eraser can be attacked. Understand the clean property as describing the eraser. It has description "A [if the eraser is dusty]dusty[otherwise]clean[end if] eraser." It has printed name "[if the eraser is dusty]dusty[otherwise]clean[end if] eraser"
 
+Understand "clap [eraser]" as attacking when the eraser is visible.
+Understand "erase [chalkboard]" as rubbing when the chalkboard is visible.
+Understand "erase [chalkboard] with [something]" as rubbing it with when the chalkboard is visible.
+
 Instead of rubbing the chalkboard:
 	if the chalkboard is cleaned:
 		say "The chalkboard is already clean.";
@@ -1414,7 +1374,7 @@ Instead of rubbing the chalkboard with something (called the rubber):
 	if the actor is not carrying the rubber, carry out the implicitly taking activity with the rubber;
 	if the rubber is:
 		-- the eraser:
-			say "You carefully erase the chalkboard.";
+			say "You carefully clean the chalkboard and dirty the eraser.";
 			now the chalkboard is cleaned;
 			now the eraser is dusty;
 		-- otherwise:
@@ -1559,7 +1519,7 @@ Before entering the hub in platform 1, try going up instead.
 
 The ladder is a door. It is open and not openable and scenery. It is up from Platform 1 and outside from Inside the Hub. It has description "[if the location is Platform 1]A ladder leads up into the hub.[otherwise]The ladder moves with the station, rotating around you about four times every minute."
 
-Before going through the ladder when the player is not wearing the gravity boots: say "You feel unstable on the ladder without the gravity boots." instead. [* prevent the player from abandoning the gravity boots in zero-g, lest they be unable to climb the pylon again. ]
+Before going through the ladder when the player is not wearing the gravity boots: say "You feel unstable on the ladder without the gravity boots." instead. [* Prevent the player from abandoning the gravity boots in zero-g, lest they be unable to climb the pylon again. ]
 
 Understand "crops" as the ground when the player is in Platform 1.
 
@@ -1588,15 +1548,13 @@ Instead of examining the ground in platform 3, say "The pylon descends into the 
 
 Section 3 - Platform 5
 
-Platform 5 is a room in The Platforms. "This plaform is [if the pigeons are in Platform 5]home to a flock of pigeons.[else]white with pigeon droppings.[end if] You can continue spinward or antispinward." Sector 5 is down from Platform 5. Nothing is up from Sector 5. Platform 5 is spinward from Platform 3 and antispinward from Platform 1.
+Platform 5 is a room in The Platforms. "This plarform is [if the pigeons are in Platform 5]home to a flock of pigeons.[else]white with pigeon droppings.[end if] You can continue spinward or antispinward." Sector 5 is down from Platform 5. Nothing is up from Sector 5. Platform 5 is spinward from Platform 3 and antispinward from Platform 1.
 
 Before going down from Platform 5, say "You slide down the pylon."
 
 Understand "trees" or "forest" as the ground when the player is in platform 5.
 
 Instead of examining the ground in platform 5, say "The pylon descends into the forest below you."
-
-[ TODO: feed pigeons, feed __ to pigeons, count pigeons ]
 
 The pigeon droppings are plural-named scenery in Platform 5. They have description "The platform is white with pigeon droppings."
 
@@ -1613,8 +1571,8 @@ Instead of listening to the location of the pigeons: try listening to the pigeon
 Instead of smelling the pigeons, say "There are a lot of pigeons, but you've smelled worse."
 Instead of smelling the location of the pigeons: try smelling the pigeons.
 
-Before taking or eating or tasting or attacking the pigeons:
-	say "You could probably catch a pigeon and take it home to prepare, cook, and eat, but that would take too much time and you aren't hungry." instead.
+Before taking or eating or tasting or cutting or attacking the pigeons:
+	say "You could probably catch a pigeon and take it home to prepare, cook, and eat, but that would take a lot of time and you aren't hungry." instead.
 
 Before wearing or opening or closing or entering or getting off or taking off or climbing or waving or drinking or swinging the pigeons:
 	say "That doesn't even make sense." instead.
@@ -1673,11 +1631,7 @@ Before printing the locale description:
 
 Section 1 - Inside the Hub
 
-Inside the Hub has description "You float weightless in the middle of a cylinder. It is colder up here, and the light is all artifical but without an obvious source. A ladder rotates around you, leading up or down or maybe out, and an airlock is to the port." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub".
-
-[ todo -descrption: airlock door ]
-
-[ todo - never been here before]
+Inside the Hub has description "[unless visited]This is your first time in this part of the station or even out of artificial gravity. [end if]You float weightless in the middle of a cylinder. It is cold up here, and the light is all artificial and without an obvious source. A ladder rotates around you, leading up or down or maybe out, and the [if starboard airlock door is open]open [end if]airlock is to the port." It is in zero-g. It is unfamiliar. It has destination name "the center of the hub".
 
 Before going down in Inside the Hub, try going outside instead.
 Before going up in Inside the Hub, try going outside instead.
@@ -1686,11 +1640,11 @@ After going outside from Inside the Hub:
 	say "You [one of]make sure you are heading legs first and follow the ladder[or]struggle a little to arrange your orientation and follow the ladder[or]fight off a moment of vertigo and climb the ladder[at random].";
 	continue the action.
 
-Before going port from Inside the Hub: [todo -rephrase to airlock door]
+Before going port from Inside the Hub:
 	if the player is wearing the jumpsuit and the player is wearing the blanket, continue the action;
 	if the player is wearing the jumpsuit, say "The airlock is colder still, too cold for you in only your jumpsuit." instead;
 	if the player is wearing the blanket, say "The airlock is colder still, too cold for you wearing nothing under the blanket." instead;
-	say "The airlock is colder still, too cold for you to bear nude." instead. [todo]
+	say "The airlock is colder still, too cold for you to bear nude." instead.
 
 Before going nowhere from Inside the Hub when the noun is inside, try going port instead.
 
@@ -1760,7 +1714,7 @@ Before going nowhere from The Airlock when the noun is inside, try going port in
 After going port from The Airlock:
 	say "You crawl through a narrow accessway."; [todo]
 	continue the action.
-	
+
 Instead of pushing or pulling the red handle: say "That doesn't work, but you could probably turn the handle."
 
 Section 3 - Antenna Control
@@ -1828,7 +1782,7 @@ Instead of pulling the lever:
 	otherwise:
 		say "You try, but it is too hard to pull the lever without more mechanical advantage."
 
-This is the hoes only rule:  [* simply using instead of would block default behaviors like first taking... ]
+This is the hoes only rule:  [* Simply using instead of would block default behaviors like first taking... ]
 	if the second noun is the lever and the noun is not the hoe:
 		say "[Those] [don't] fit.";
 		stop the action.
@@ -1840,7 +1794,9 @@ After inserting the hoe into the lever:
 	unless the lever is scored:
 		increase the score by 1;
 		now the lever is scored.
-	
+
+Instead of tying the hoe to the lever, say "Yes, but how?" [* Mostly for attach. ]
+
 [ antenna calibration ]
 
 The calibration panel is scenery in Antenna Control.  It is a machine. It has indefinite article "the". It has description "This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable." Incorporated by the calibration panel is an RF socket. Understand "antenna calibration" and "control" as the panel.
@@ -1851,9 +1807,9 @@ Instead of unplugging the yellow cable from the calibration panel:
 	say "The yellow cable is permanently attached to the panel.";
 	stop the action.
 
-After dropping the yellow cable in Antenna Control: say "You release the yellow cable and it floats nearby." [* needs ...in Antenna control so it is more specific than ...in zero-g ]
+After dropping the yellow cable in Antenna Control: say "You release the yellow cable and it floats nearby." [* Needs ...in Antenna Control so it is more specific than ...in zero-g ]
 
-A rule for reaching inside Antenna Control when the turn count is one: allow access. [* https://intfiction.org/forum/viewtopic.php?f=7&t=3636 ]
+A rule for reaching inside Antenna Control when the turn count is one: allow access.
 
 When play begins:
 	silently try plugging the yellow cable into the calibration panel.
@@ -1865,7 +1821,7 @@ To decide if the antenna is calibrated: decide on whether or not the sequence po
 
 A calibration display is part of the panel. It has description "[first custom style][entry (sequence position of the keypad) of the hints of the keypad][roman type]". It has printed name "display".
 
-A keypad is part of the panel. [ Adapted, poorly, from part of Computers by Emily Short. ]
+A keypad is part of the panel. [* Adapted, loosely and poorly, from part of Computers by Emily Short. ]
 It has description "The keypad has the digits from 0 through 9."
 It has a list of numbers called the combo. The combo of the keypad is {3, 8, 5, 2}. [* We could randomize but that would be silly. ]
 It has a number called the sequence position. The sequence position of the keypad is 1.
@@ -1875,7 +1831,7 @@ It has a list of texts called the hints. The hints of the keypad are {
 	"Calibrate to Delta/Plum.",
 	"Calibrate to Gamma/Banana.",
 	"Calibrate to Beta/Cherry.",
-	"Antenna calibrated."}.
+	"Antenna calibrated."	}.
 
 After examining the calibration display for the first time:
 	unless the antenna is calibrated:
@@ -1935,6 +1891,4 @@ Instead of the scanner scanning the calibration display:
 	rule succeeds.
 
 Instead of the scanner scanning the calibration panel:
-	computerize "Machine is functional. Antenna is [unless the antenna is calibrated]not [end if]calibrated.";
-
-[ --- ]
+	computerize "Machine is functional. Antenna is [unless the antenna is calibrated]not [end if]calibrated."
