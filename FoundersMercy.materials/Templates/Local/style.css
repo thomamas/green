@@ -161,7 +161,7 @@ Source formatting applies to the source text on generated pages.
 {
 	margin-top: 1.4em;
 	margin-left: 15.4em;
-	width: 60em; /* was 33em */
+	width: 60em;
 	line-height: 1.4;
 }
 
@@ -233,6 +233,7 @@ span.i6code { color: #666; font-family: monospace; }
 
 span.columnhead { 
 	font-style: italic; 
+  font-weight: bold;
 	/* font-size: 1em; */
 }
 
@@ -243,15 +244,30 @@ span.heading
 	font-weight: bold;
 } 
 
+.source table {
+  padding-left: 2em; 
+  border-spacing: 0px;
+}
+
 .source td
 {
-	padding-top: .7em;
-	padding-bottom: .7em;
-	padding-right: 1.4em;
-	font-size: .75em;
+	padding-top: .4em;
+	padding-bottom: .4em;
+  padding-left: 1em;
+	padding-right: 2em; /* 1.4em */
+	font-size: .85em; /*.75*/
 	text-align: left;
 	vertical-align: top;
 } 
+
+.source td:last-child { padding-right: 1em; }
+
+.source tr:nth-child(even) {background-color: #f2f2f2;}
+
+h1 span.pagination {
+ font: 0.9em "Gill Sans", "Gill Sans MT", Calibri, sans-serif; 
+ color: #999;
+}
 
 /*
 We could alter the following in order to make the footnote links in the source

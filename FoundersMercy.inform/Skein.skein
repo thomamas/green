@@ -15,7 +15,7 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 181218 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 181219 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type ABOUT for credits or HINT for assistance.
 
 Home (on the blanket)
@@ -46,6 +46,9 @@ There is a secured hatch in the floor.
 &gt;</commentary>
         <children><child nodeId="node-4663"></child>
             <child nodeId="node-4651"></child>
+            <child nodeId="node-5825"></child>
+            <child nodeId="node-5182"></child>
+            <child nodeId="node-5176"></child>
             <child nodeId="node-4646"></child>
             <child nodeId="node-4636"></child>
             <child nodeId="node-4631"></child>
@@ -68,20 +71,26 @@ There is a secured hatch in the floor.
             <child nodeId="node-4415"></child>
             <child nodeId="node-4413"></child>
             <child nodeId="node-4379"></child>
+            <child nodeId="node-5212"></child>
             <child nodeId="node-4357"></child>
             <child nodeId="node-4354"></child>
             <child nodeId="node-4329"></child>
             <child nodeId="node-4324"></child>
             <child nodeId="node-4312"></child>
             <child nodeId="node-4300"></child>
+            <child nodeId="node-5685"></child>
             <child nodeId="node-4289"></child>
             <child nodeId="node-4282"></child>
             <child nodeId="node-4187"></child>
             <child nodeId="node-4164"></child>
             <child nodeId="node-5066"></child>
+            <child nodeId="node-5146"></child>
+            <child nodeId="node-5158"></child>
             <child nodeId="node-4817"></child>
+            <child nodeId="node-5183"></child>
             <child nodeId="node-4135"></child>
             <child nodeId="node-5076"></child>
+            <child nodeId="node-5142"></child>
             <child nodeId="node-4819"></child>
             <child nodeId="node-4129"></child>
             <child nodeId="node-5116"></child>
@@ -90,8 +99,14 @@ There is a secured hatch in the floor.
             <child nodeId="node-4103"></child>
             <child nodeId="node-5060"></child>
             <child nodeId="node-4824"></child>
+            <child nodeId="node-5241"></child>
             <child nodeId="node-4084"></child>
             <child nodeId="node-4080"></child>
+            <child nodeId="node-5683"></child>
+            <child nodeId="node-5159"></child>
+            <child nodeId="node-5151"></child>
+            <child nodeId="node-5163"></child>
+            <child nodeId="node-5133"></child>
             <child nodeId="node-5053"></child>
             <child nodeId="node-4076"></child>
             <child nodeId="node-4066"></child>
@@ -736,6 +751,290 @@ This work is Copyright © 2019 Thomas Insel but may be freely shared according t
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-5133">
+        <command xml:space="preserve">type nine</command>
+        <result xml:space="preserve">What do you want to type that into?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5134"></child>
+        </children>
+    </item>
+    <item nodeId="node-5134">
+        <command xml:space="preserve">x hatch</command>
+        <result xml:space="preserve">The floor hatch is closed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5135"></child>
+        </children>
+    </item>
+    <item nodeId="node-5135">
+        <command xml:space="preserve">gonear me</command>
+        <result xml:space="preserve">Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+A homespun blanket is arranged neatly on the ground. It is your bed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5136"></child>
+        </children>
+    </item>
+    <item nodeId="node-5136">
+        <command xml:space="preserve">type fre</command>
+        <result xml:space="preserve">I didn't understand that number.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5137"></child>
+        </children>
+    </item>
+    <item nodeId="node-5137">
+        <command xml:space="preserve">press</command>
+        <result xml:space="preserve">What do you want to press?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5138"></child>
+        </children>
+    </item>
+    <item nodeId="node-5138">
+        <command xml:space="preserve">press jjkjk</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5139"></child>
+        </children>
+    </item>
+    <item nodeId="node-5139">
+        <command xml:space="preserve">press 7</command>
+        <result xml:space="preserve">What do you want to press that into?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5140"></child>
+        </children>
+    </item>
+    <item nodeId="node-5140">
+        <command xml:space="preserve">blanket</command>
+        <result xml:space="preserve">There is no keypad on the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5141"></child>
+        </children>
+    </item>
+    <item nodeId="node-5141">
+        <command xml:space="preserve">enter 7</command>
+        <result xml:space="preserve">What do you want to enter that into?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5163">
+        <command xml:space="preserve">type jkjkl</command>
+        <result xml:space="preserve">There's nothing here you can type on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5164"></child>
+        </children>
+    </item>
+    <item nodeId="node-5164">
+        <command xml:space="preserve">type 7</command>
+        <result xml:space="preserve">There's nothing here you can type on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5165"></child>
+        </children>
+    </item>
+    <item nodeId="node-5165">
+        <command xml:space="preserve">type 15</command>
+        <result xml:space="preserve">There's nothing here you can type on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5166"></child>
+        </children>
+    </item>
+    <item nodeId="node-5166">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. Through a surprisingly large window, you can see the station rotating around you, solar panels, and antennas, all backed by a spectacular field of stars.  A short lever extends from the floor, and a yellow cable waves from a small control panel.
+
+It is very cold and dark here in the near vacuum. An airlock door leads starboard.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5167"></child>
+        </children>
+    </item>
+    <item nodeId="node-5167">
+        <command xml:space="preserve">type 3</command>
+        <result xml:space="preserve">Calibrate to Delta/Plum.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5168"></child>
+        </children>
+    </item>
+    <item nodeId="node-5168">
+        <command xml:space="preserve">type 8</command>
+        <result xml:space="preserve">Calibrate to Gamma/Banana.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5169"></child>
+        </children>
+    </item>
+    <item nodeId="node-5169">
+        <command xml:space="preserve">type 5</command>
+        <result xml:space="preserve">Calibrate to Beta/Cherry.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5170"></child>
+        </children>
+    </item>
+    <item nodeId="node-5170">
+        <command xml:space="preserve">press to</command>
+        <result xml:space="preserve">The keypad only has the digits from 0 to 9.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5171"></child>
+        </children>
+    </item>
+    <item nodeId="node-5171">
+        <command xml:space="preserve">press two</command>
+        <result xml:space="preserve">Calibration successful.
+
+[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5172"></child>
+        </children>
+    </item>
+    <item nodeId="node-5172">
+        <command xml:space="preserve">press deven</command>
+        <result xml:space="preserve">The keypad only has the digits from 0 to 9.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5173"></child>
+        </children>
+    </item>
+    <item nodeId="node-5173">
+        <command xml:space="preserve">press eleven</command>
+        <result xml:space="preserve">The keypad only has the digits from 0 to 9.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5174"></child>
+        </children>
+    </item>
+    <item nodeId="node-5174">
+        <command xml:space="preserve">press jkjkljkl</command>
+        <result xml:space="preserve">The keypad only has the digits from 0 to 9.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5175"></child>
+        </children>
+    </item>
+    <item nodeId="node-5175">
+        <command xml:space="preserve">press me</command>
+        <result xml:space="preserve">You might not like that.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5151">
+        <command xml:space="preserve">type jkjkk</command>
+        <result xml:space="preserve">I didn't understand that number.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5152"></child>
+        </children>
+    </item>
+    <item nodeId="node-5152">
+        <command xml:space="preserve">type jkjkj on hatch</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5153"></child>
+        </children>
+    </item>
+    <item nodeId="node-5153">
+        <command xml:space="preserve">type 7</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5159">
+        <command xml:space="preserve">type jkjk</command>
+        <result xml:space="preserve">There's nothing here you can type on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5160"></child>
+        </children>
+    </item>
+    <item nodeId="node-5160">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">Antenna Control
+You float weightless at the port end of a cylinder. Through a surprisingly large window, you can see the station rotating around you, solar panels, and antennas, all backed by a spectacular field of stars.  A short lever extends from the floor, and a yellow cable waves from a small control panel.
+
+It is very cold and dark here in the near vacuum. An airlock door leads starboard.
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5161"></child>
+        </children>
+    </item>
+    <item nodeId="node-5161">
+        <command xml:space="preserve">type jkjkjk</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5162"></child>
+        </children>
+    </item>
+    <item nodeId="node-5162">
+        <command xml:space="preserve">type 15</command>
+        <result xml:space="preserve">The keypad only has the digits from 0 to 9.
+
+Calibration rejected.
+Restarting sequence.
+Calibrate to Epsilon/Lime.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5683">
+        <command xml:space="preserve">trace</command>
+        <result xml:space="preserve">[Trace on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5684"></child>
+        </children>
+    </item>
+    <item nodeId="node-5684">
+        <command xml:space="preserve">gonear learning</command>
+        <result xml:space="preserve"></result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-4080">
         <command xml:space="preserve">touch hatch</command>
         <result xml:space="preserve">You feel nothing unexpected.
@@ -959,6 +1258,2371 @@ Your home is here among the crops. To the port and starboard, the station walls 
     <item nodeId="node-4102">
         <command xml:space="preserve">get crops</command>
         <result xml:space="preserve">It is not — may never be — harvest time.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5241">
+        <command xml:space="preserve">test learning</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] gonear learning
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;[2] out
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;[3] purloin instructional modules
+[Purloined.]
+[Purloined.]
+
+&gt;[4] scan instructional module
+Module is functional.
+
+&gt;[5] scan unscanned instructional module
+Module is faulty.
+
+&gt;[6] in
+
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;[7] put functional instructional module in learning machine
+You put the functional instruction module into the learning machine.
+
+A hologram flickers to life as the learning machine starts up.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] gonear learning
+[2] out
+[3] purloin instructional modules
+[4] scan instructional module
+[5] scan unscanned instructional module
+[6] in
+[7] put functional instructional module in learning machine
+</commentary>
+        <children><child nodeId="node-5328"></child>
+            <child nodeId="node-5835"></child>
+            <child nodeId="node-5721"></child>
+            <child nodeId="node-5811"></child>
+            <child nodeId="node-5257"></child>
+        </children>
+    </item>
+    <item nodeId="node-5257">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5258"></child>
+        </children>
+    </item>
+    <item nodeId="node-5258">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5609"></child>
+            <child nodeId="node-5259"></child>
+        </children>
+    </item>
+    <item nodeId="node-5259">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues. You've heard it many many times before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5576"></child>
+            <child nodeId="node-5260"></child>
+        </children>
+    </item>
+    <item nodeId="node-5260">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5261"></child>
+        </children>
+    </item>
+    <item nodeId="node-5261">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is covering the many dangers of idle hands.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5262"></child>
+        </children>
+    </item>
+    <item nodeId="node-5262">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5263"></child>
+        </children>
+    </item>
+    <item nodeId="node-5263">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is explaining a homework assignment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5376"></child>
+            <child nodeId="node-5264"></child>
+        </children>
+    </item>
+    <item nodeId="node-5264">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5265"></child>
+        </children>
+    </item>
+    <item nodeId="node-5265">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is introducing a lesson on crop rotation.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5266"></child>
+        </children>
+    </item>
+    <item nodeId="node-5266">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is explaining a four year cycle of alfalfa, corn, oats, and wheat.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5878"></child>
+            <child nodeId="node-5267"></child>
+        </children>
+    </item>
+    <item nodeId="node-5267">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 11.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5268"></child>
+        </children>
+    </item>
+    <item nodeId="node-5268">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 12.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5269"></child>
+        </children>
+    </item>
+    <item nodeId="node-5269">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 13.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5270"></child>
+        </children>
+    </item>
+    <item nodeId="node-5270">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 14.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5271"></child>
+        </children>
+    </item>
+    <item nodeId="node-5271">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 15.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5878">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5879"></child>
+        </children>
+    </item>
+    <item nodeId="node-5879">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5880"></child>
+        </children>
+    </item>
+    <item nodeId="node-5880">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve"></result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5881"></child>
+        </children>
+    </item>
+    <item nodeId="node-5881">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5882"></child>
+        </children>
+    </item>
+    <item nodeId="node-5882">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on crop rotation continues. You're very familiar with this material.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5883"></child>
+        </children>
+    </item>
+    <item nodeId="node-5883">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is explaining a three year cycle of roots, legumes, and greens.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5884"></child>
+        </children>
+    </item>
+    <item nodeId="node-5884">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is reviewing crop rotation.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5885"></child>
+        </children>
+    </item>
+    <item nodeId="node-5885">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5886"></child>
+        </children>
+    </item>
+    <item nodeId="node-5886">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5376">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5377"></child>
+        </children>
+    </item>
+    <item nodeId="node-5377">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5378"></child>
+        </children>
+    </item>
+    <item nodeId="node-5378">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5379"></child>
+        </children>
+    </item>
+    <item nodeId="node-5379">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5380"></child>
+        </children>
+    </item>
+    <item nodeId="node-5380">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5381"></child>
+        </children>
+    </item>
+    <item nodeId="node-5381">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5382"></child>
+        </children>
+    </item>
+    <item nodeId="node-5382">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5405"></child>
+        </children>
+    </item>
+    <item nodeId="node-5405">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5406"></child>
+        </children>
+    </item>
+    <item nodeId="node-5406">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+One.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5407"></child>
+        </children>
+    </item>
+    <item nodeId="node-5407">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5408"></child>
+        </children>
+    </item>
+    <item nodeId="node-5408">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5409"></child>
+        </children>
+    </item>
+    <item nodeId="node-5409">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+One.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5410"></child>
+        </children>
+    </item>
+    <item nodeId="node-5410">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5411"></child>
+        </children>
+    </item>
+    <item nodeId="node-5411">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5412"></child>
+        </children>
+    </item>
+    <item nodeId="node-5412">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+One.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5413"></child>
+        </children>
+    </item>
+    <item nodeId="node-5413">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5414"></child>
+        </children>
+    </item>
+    <item nodeId="node-5414">
+        <command xml:space="preserve">zz</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5576">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5577"></child>
+        </children>
+    </item>
+    <item nodeId="node-5577">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5578"></child>
+        </children>
+    </item>
+    <item nodeId="node-5578">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is explaining a homework assignment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5579"></child>
+        </children>
+    </item>
+    <item nodeId="node-5579">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5580"></child>
+        </children>
+    </item>
+    <item nodeId="node-5580">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5581"></child>
+        </children>
+    </item>
+    <item nodeId="node-5581">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5582"></child>
+        </children>
+    </item>
+    <item nodeId="node-5582">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5583"></child>
+        </children>
+    </item>
+    <item nodeId="node-5583">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+Lesson two part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5584"></child>
+        </children>
+    </item>
+    <item nodeId="node-5584">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5585"></child>
+        </children>
+    </item>
+    <item nodeId="node-5585">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5586"></child>
+        </children>
+    </item>
+    <item nodeId="node-5586">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5587"></child>
+        </children>
+    </item>
+    <item nodeId="node-5587">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5588"></child>
+        </children>
+    </item>
+    <item nodeId="node-5588">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5589"></child>
+        </children>
+    </item>
+    <item nodeId="node-5589">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5590"></child>
+        </children>
+    </item>
+    <item nodeId="node-5590">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is explaining a homework assignment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5591"></child>
+        </children>
+    </item>
+    <item nodeId="node-5591">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5592"></child>
+        </children>
+    </item>
+    <item nodeId="node-5592">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5593"></child>
+        </children>
+    </item>
+    <item nodeId="node-5593">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5594"></child>
+        </children>
+    </item>
+    <item nodeId="node-5594">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5595"></child>
+        </children>
+    </item>
+    <item nodeId="node-5595">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5596"></child>
+        </children>
+    </item>
+    <item nodeId="node-5596">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5597"></child>
+        </children>
+    </item>
+    <item nodeId="node-5597">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5598"></child>
+        </children>
+    </item>
+    <item nodeId="node-5598">
+        <command xml:space="preserve">listen to learning machine</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+The learning machine is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5609">
+        <command xml:space="preserve">listen to learning</command>
+        <result xml:space="preserve">The lesson on hard work continues. You've heard it many many times before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5610"></child>
+        </children>
+    </item>
+    <item nodeId="node-5610">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5611"></child>
+        </children>
+    </item>
+    <item nodeId="node-5611">
+        <command xml:space="preserve">listen to learning</command>
+        <result xml:space="preserve">The learning machine is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5612"></child>
+        </children>
+    </item>
+    <item nodeId="node-5612">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The learning machine is explaining a homework assignment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5613"></child>
+        </children>
+    </item>
+    <item nodeId="node-5613">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5614"></child>
+        </children>
+    </item>
+    <item nodeId="node-5614">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The learning machine is introducing a lesson on crop rotation.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5615"></child>
+        </children>
+    </item>
+    <item nodeId="node-5615">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The lesson on crop rotation continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5616"></child>
+        </children>
+    </item>
+    <item nodeId="node-5616">
+        <command xml:space="preserve">get power module</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5617"></child>
+        </children>
+    </item>
+    <item nodeId="node-5617">
+        <command xml:space="preserve">listen to learning</command>
+        <result xml:space="preserve">You hear nothing unexpected.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5637"></child>
+        </children>
+    </item>
+    <item nodeId="node-5637">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5638"></child>
+        </children>
+    </item>
+    <item nodeId="node-5638">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5639"></child>
+        </children>
+    </item>
+    <item nodeId="node-5639">
+        <command xml:space="preserve">put power module in learning machine</command>
+        <result xml:space="preserve">You put the unscanned power module into the learning machine.
+
+A hologram flickers to life as the learning machine starts up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5640"></child>
+        </children>
+    </item>
+    <item nodeId="node-5640">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5641"></child>
+        </children>
+    </item>
+    <item nodeId="node-5641">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5642"></child>
+        </children>
+    </item>
+    <item nodeId="node-5642">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues. You've heard it many many times before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5643"></child>
+        </children>
+    </item>
+    <item nodeId="node-5643">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5644"></child>
+        </children>
+    </item>
+    <item nodeId="node-5644">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5645"></child>
+        </children>
+    </item>
+    <item nodeId="node-5645">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is explaining a homework assignment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5646"></child>
+        </children>
+    </item>
+    <item nodeId="node-5646">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5647"></child>
+        </children>
+    </item>
+    <item nodeId="node-5647">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is introducing a lesson on crop rotation.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5648"></child>
+        </children>
+    </item>
+    <item nodeId="node-5648">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on crop rotation continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5649"></child>
+        </children>
+    </item>
+    <item nodeId="node-5649">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on crop rotation continues. You're very familiar with this material.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5650"></child>
+        </children>
+    </item>
+    <item nodeId="node-5650">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is reviewing crop rotation.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5651"></child>
+        </children>
+    </item>
+    <item nodeId="node-5651">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5652"></child>
+        </children>
+    </item>
+    <item nodeId="node-5652">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5653"></child>
+        </children>
+    </item>
+    <item nodeId="node-5653">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues. You've heard it many many times before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5654"></child>
+        </children>
+    </item>
+    <item nodeId="node-5654">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5655"></child>
+        </children>
+    </item>
+    <item nodeId="node-5655">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5656"></child>
+        </children>
+    </item>
+    <item nodeId="node-5656">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is explaining a homework assignment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5811">
+        <command xml:space="preserve">listen to hologram</command>
+        <result xml:space="preserve">The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5812"></child>
+        </children>
+    </item>
+    <item nodeId="node-5812">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5813"></child>
+        </children>
+    </item>
+    <item nodeId="node-5813">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues. You've heard it many many times before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5814"></child>
+        </children>
+    </item>
+    <item nodeId="node-5814">
+        <command xml:space="preserve">examine hologram</command>
+        <result xml:space="preserve">The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5815"></child>
+        </children>
+    </item>
+    <item nodeId="node-5815">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is covering the many dangers of idle hands.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5816"></child>
+        </children>
+    </item>
+    <item nodeId="node-5816">
+        <command xml:space="preserve">examine hologram</command>
+        <result xml:space="preserve">The hologram is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5817"></child>
+        </children>
+    </item>
+    <item nodeId="node-5817">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The hologram is explaining a homework assignment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5818"></child>
+        </children>
+    </item>
+    <item nodeId="node-5818">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5819"></child>
+        </children>
+    </item>
+    <item nodeId="node-5819">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The hologram is introducing a lesson on crop rotation.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5820"></child>
+        </children>
+    </item>
+    <item nodeId="node-5820">
+        <command xml:space="preserve">x crop</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5821"></child>
+        </children>
+    </item>
+    <item nodeId="node-5821">
+        <command xml:space="preserve">touch hologram</command>
+        <result xml:space="preserve">The hologram is intangible.
+
+The lesson on crop rotation continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5822"></child>
+        </children>
+    </item>
+    <item nodeId="node-5822">
+        <command xml:space="preserve">take hologram</command>
+        <result xml:space="preserve">The hologram is intangible.
+
+The lesson on crop rotation continues. You're very familiar with this material.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5823"></child>
+        </children>
+    </item>
+    <item nodeId="node-5823">
+        <command xml:space="preserve">analyze holoram</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5824"></child>
+        </children>
+    </item>
+    <item nodeId="node-5824">
+        <command xml:space="preserve">analyze hologram</command>
+        <result xml:space="preserve">The hologram is intangible.
+
+The hologram is reviewing crop rotation.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5721">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5732"></child>
+        </children>
+    </item>
+    <item nodeId="node-5732">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The hologram is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5733"></child>
+        </children>
+    </item>
+    <item nodeId="node-5733">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The lesson on hard work continues. You've heard it many many times before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5734"></child>
+        </children>
+    </item>
+    <item nodeId="node-5734">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5735"></child>
+        </children>
+    </item>
+    <item nodeId="node-5735">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181218 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type ABOUT for credits or HINT for assistance.
+
+Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5736"></child>
+        </children>
+    </item>
+    <item nodeId="node-5736">
+        <command xml:space="preserve">gonear learning</command>
+        <result xml:space="preserve">School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5737"></child>
+        </children>
+    </item>
+    <item nodeId="node-5737">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">You hear only the familiar hum of the station.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5738"></child>
+        </children>
+    </item>
+    <item nodeId="node-5738">
+        <command xml:space="preserve">test learning</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] gonear learning
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;[2] out
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;[3] purloin instructional modules
+[Purloined.]
+[Purloined.]
+
+&gt;[4] scan instructional module
+Module is functional.
+
+&gt;[5] scan unscanned instructional module
+Module is faulty.
+
+&gt;[6] in
+
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;[7] put functional instructional module in learning machine
+You put the functional instruction module into the learning machine.
+
+A hologram flickers to life as the learning machine starts up.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] gonear learning
+[2] out
+[3] purloin instructional modules
+[4] scan instructional module
+[5] scan unscanned instructional module
+[6] in
+[7] put functional instructional module in learning machine
+</commentary>
+        <children><child nodeId="node-5746"></child>
+        </children>
+    </item>
+    <item nodeId="node-5746">
+        <command xml:space="preserve">x hologram</command>
+        <result xml:space="preserve">The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5747"></child>
+        </children>
+    </item>
+    <item nodeId="node-5747">
+        <command xml:space="preserve">listen to hologram</command>
+        <result xml:space="preserve">That isn't available.
+
+The hologram is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5748"></child>
+        </children>
+    </item>
+    <item nodeId="node-5748">
+        <command xml:space="preserve">trace</command>
+        <result xml:space="preserve">[Trace on.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5749"></child>
+        </children>
+    </item>
+    <item nodeId="node-5749">
+        <command xml:space="preserve">listen to hologram</command>
+        <result xml:space="preserve">[Parsing for the verb 'listen' (2 lines)]
+[line 0 * -&gt; Listen]
+[line 1 * 'to' noun -&gt; Listen]
+[Line successfully parsed]
+That isn't available.
+
+The lesson on hard work continues. You've heard it many many times before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5750"></child>
+        </children>
+    </item>
+    <item nodeId="node-5750">
+        <command xml:space="preserve">gonear school</command>
+        <result xml:space="preserve">[Parsing for the verb 'gonear' (1 lines)]
+[line 0 * scope=Routine(390323) -&gt; Gonear]
+[Line successfully parsed]
+(School House)
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5751"></child>
+        </children>
+    </item>
+    <item nodeId="node-5751">
+        <command xml:space="preserve">get eraser</command>
+        <result xml:space="preserve">[Parsing for the verb 'get' (6 lines)]
+[line 0 * 'out' / 'off' / 'down' / 'up' -&gt; Exit]
+[line 1 * 'in' / 'on' -&gt; Enter]
+[line 2 * multi -&gt; Take]
+[Line successfully parsed]
+Taken.
+
+The hologram is covering the many dangers of idle hands.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5752"></child>
+        </children>
+    </item>
+    <item nodeId="node-5752">
+        <command xml:space="preserve">erase board</command>
+        <result xml:space="preserve">[Parsing for the verb 'erase' (2 lines)]
+[line 0 * Routine(322668) noun=Routine(505481) -&gt; Rub]
+[Line successfully parsed]
+(with the eraser)
+You carefully clean the chalkboard and dirty the eraser.
+
+The hologram is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5753"></child>
+        </children>
+    </item>
+    <item nodeId="node-5753">
+        <command xml:space="preserve">gonear crate</command>
+        <result xml:space="preserve">[Parsing for the verb 'gonear' (1 lines)]
+[line 0 * scope=Routine(390323) -&gt; Gonear]
+[Line successfully parsed]
+Supply Vault
+This room is dim, quiet, and stuffy. There is still one crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see a pair of gravity boots here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5754"></child>
+        </children>
+    </item>
+    <item nodeId="node-5754">
+        <command xml:space="preserve">hit erase</command>
+        <result xml:space="preserve">[Parsing for the verb 'hit' (1 lines)]
+[line 0 * noun -&gt; Attack]
+You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5755"></child>
+        </children>
+    </item>
+    <item nodeId="node-5755">
+        <command xml:space="preserve">hit eraser</command>
+        <result xml:space="preserve">[Parsing for the verb 'hit' (1 lines)]
+[line 0 * noun -&gt; Attack]
+[Line successfully parsed]
+You fill the vault with a cloud of dust which scatters the laser beam that you can now see scanning across the hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5756"></child>
+        </children>
+    </item>
+    <item nodeId="node-5756">
+        <command xml:space="preserve">listen to laser</command>
+        <result xml:space="preserve">[Parsing for the verb 'listen' (2 lines)]
+[line 0 * -&gt; Listen]
+[line 1 * 'to' noun -&gt; Listen]
+[Line successfully parsed]
+That isn't available.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5835">
+        <command xml:space="preserve">analyze hologram</command>
+        <result xml:space="preserve">examining the hologram:
+looking under the hologram:
+The hologram is intangible.
+
+searching the hologram:
+The hologram is intangible.
+
+listening to the hologram:
+smelling the hologram:
+The hologram is intangible.
+
+attacking the hologram:
+The hologram is intangible.
+
+buying the hologram:
+The hologram is intangible.
+
+climbing the hologram:
+The hologram is intangible.
+
+pulling the hologram:
+The hologram is intangible.
+
+pushing the hologram:
+The hologram is intangible.
+
+turning the hologram:
+The hologram is intangible.
+
+pushing the hologram to outside:
+The hologram is intangible.
+
+opening the hologram:
+The hologram is intangible.
+
+entering the hologram:
+The hologram is intangible.
+
+getting off the hologram:
+The hologram is intangible.
+
+closing the hologram:
+The hologram is intangible.
+
+taking the hologram:
+The hologram is intangible.
+
+switching on the hologram:
+The hologram is intangible.
+
+switching off the hologram:
+The hologram is intangible.
+
+wearing the hologram:
+The hologram is intangible.
+
+taking off the hologram:
+The hologram is intangible.
+
+touching the hologram:
+The hologram is intangible.
+
+rubbing the hologram:
+The hologram is intangible.
+
+waving the hologram:
+The hologram is intangible.
+
+squeezing the hologram:
+The hologram is intangible.
+
+burning the hologram:
+The hologram is intangible.
+
+cutting the hologram:
+The hologram is intangible.
+
+tying the hologram to the learning machine:
+The hologram is intangible.
+
+swinging the hologram:
+The hologram is intangible.
+
+tasting the hologram:
+The hologram is intangible.
+
+drinking the hologram:
+The hologram is intangible.
+
+eating the hologram:
+The hologram is intangible.
+
+dropping the hologram:
+The hologram is intangible.
+
+typing 7 on the hologram: 
+The hologram is intangible.
+
+typing mimolette on the hologram: 
+The hologram is intangible.
+
+feeding the hologram:
+The hologram is intangible.
+
+swimming in the hologram:
+The hologram is intangible.
+
+playing the hologram:
+The hologram is intangible.
+
+unplugging the hologram:
+The hologram is intangible.
+
+The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5854"></child>
+        </children>
+    </item>
+    <item nodeId="node-5854">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5855"></child>
+        </children>
+    </item>
+    <item nodeId="node-5855">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues. You've heard it many many times before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5856"></child>
+        </children>
+    </item>
+    <item nodeId="node-5856">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve"></result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5857"></child>
+        </children>
+    </item>
+    <item nodeId="node-5857">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5858"></child>
+        </children>
+    </item>
+    <item nodeId="node-5858">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is covering the many dangers of idle hands.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5859"></child>
+        </children>
+    </item>
+    <item nodeId="node-5859">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5328">
+        <command xml:space="preserve"> z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5329"></child>
+        </children>
+    </item>
+    <item nodeId="node-5329">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5330"></child>
+        </children>
+    </item>
+    <item nodeId="node-5330">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5331"></child>
+        </children>
+    </item>
+    <item nodeId="node-5331">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5332"></child>
+        </children>
+    </item>
+    <item nodeId="node-5332">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5428"></child>
+            <child nodeId="node-5333"></child>
+        </children>
+    </item>
+    <item nodeId="node-5333">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 3.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5348"></child>
+        </children>
+    </item>
+    <item nodeId="node-5348">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5349"></child>
+        </children>
+    </item>
+    <item nodeId="node-5349">
+        <command xml:space="preserve">get power module from learning</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5350"></child>
+        </children>
+    </item>
+    <item nodeId="node-5350">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5351"></child>
+        </children>
+    </item>
+    <item nodeId="node-5351">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5352"></child>
+        </children>
+    </item>
+    <item nodeId="node-5352">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5353"></child>
+        </children>
+    </item>
+    <item nodeId="node-5353">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5354"></child>
+        </children>
+    </item>
+    <item nodeId="node-5354">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5355"></child>
+        </children>
+    </item>
+    <item nodeId="node-5355">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5356"></child>
+        </children>
+    </item>
+    <item nodeId="node-5356">
+        <command xml:space="preserve">put power module into learning</command>
+        <result xml:space="preserve">You put the unscanned power module into the learning machine.
+
+A hologram flickers to life in the middle of the room as the learning machine starts up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5357"></child>
+        </children>
+    </item>
+    <item nodeId="node-5357">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 1.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5358"></child>
+        </children>
+    </item>
+    <item nodeId="node-5358">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 2.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5359"></child>
+        </children>
+    </item>
+    <item nodeId="node-5359">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Learning stage 3.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5360"></child>
+        </children>
+    </item>
+    <item nodeId="node-5360">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5428">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5429"></child>
+        </children>
+    </item>
+    <item nodeId="node-5429">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5430"></child>
+        </children>
+    </item>
+    <item nodeId="node-5430">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5431"></child>
+        </children>
+    </item>
+    <item nodeId="node-5431">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5432"></child>
+        </children>
+    </item>
+    <item nodeId="node-5432">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5433"></child>
+        </children>
+    </item>
+    <item nodeId="node-5433">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5434"></child>
+        </children>
+    </item>
+    <item nodeId="node-5434">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5435"></child>
+        </children>
+    </item>
+    <item nodeId="node-5435">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5436"></child>
+        </children>
+    </item>
+    <item nodeId="node-5436">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5437"></child>
+        </children>
+    </item>
+    <item nodeId="node-5437">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5438"></child>
+        </children>
+    </item>
+    <item nodeId="node-5438">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5439"></child>
+        </children>
+    </item>
+    <item nodeId="node-5439">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5440"></child>
+        </children>
+    </item>
+    <item nodeId="node-5440">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5441"></child>
+        </children>
+    </item>
+    <item nodeId="node-5441">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5442"></child>
+        </children>
+    </item>
+    <item nodeId="node-5442">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5443"></child>
+        </children>
+    </item>
+    <item nodeId="node-5443">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5444"></child>
+        </children>
+    </item>
+    <item nodeId="node-5444">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5445"></child>
+        </children>
+    </item>
+    <item nodeId="node-5445">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5446"></child>
+        </children>
+    </item>
+    <item nodeId="node-5446">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5447"></child>
+        </children>
+    </item>
+    <item nodeId="node-5447">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5448"></child>
+        </children>
+    </item>
+    <item nodeId="node-5448">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5449"></child>
+        </children>
+    </item>
+    <item nodeId="node-5449">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5450"></child>
+        </children>
+    </item>
+    <item nodeId="node-5450">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5451"></child>
+        </children>
+    </item>
+    <item nodeId="node-5451">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5452"></child>
+        </children>
+    </item>
+    <item nodeId="node-5452">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5453"></child>
+        </children>
+    </item>
+    <item nodeId="node-5453">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5454"></child>
+        </children>
+    </item>
+    <item nodeId="node-5454">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5455"></child>
+        </children>
+    </item>
+    <item nodeId="node-5455">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5456"></child>
+        </children>
+    </item>
+    <item nodeId="node-5456">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5457"></child>
+        </children>
+    </item>
+    <item nodeId="node-5457">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5544"></child>
+        </children>
+    </item>
+    <item nodeId="node-5544">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5545"></child>
+        </children>
+    </item>
+    <item nodeId="node-5545">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5546"></child>
+        </children>
+    </item>
+    <item nodeId="node-5546">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5547"></child>
+        </children>
+    </item>
+    <item nodeId="node-5547">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5548"></child>
+        </children>
+    </item>
+    <item nodeId="node-5548">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5549"></child>
+        </children>
+    </item>
+    <item nodeId="node-5549">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5550"></child>
+        </children>
+    </item>
+    <item nodeId="node-5550">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5551"></child>
+        </children>
+    </item>
+    <item nodeId="node-5551">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5552"></child>
+        </children>
+    </item>
+    <item nodeId="node-5552">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5553"></child>
+        </children>
+    </item>
+    <item nodeId="node-5553">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5554"></child>
+        </children>
+    </item>
+    <item nodeId="node-5554">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5555"></child>
+        </children>
+    </item>
+    <item nodeId="node-5555">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5556"></child>
+        </children>
+    </item>
+    <item nodeId="node-5556">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5557"></child>
+        </children>
+    </item>
+    <item nodeId="node-5557">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson two part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5558"></child>
+        </children>
+    </item>
+    <item nodeId="node-5558">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5559"></child>
+        </children>
+    </item>
+    <item nodeId="node-5559">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part one.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5560"></child>
+        </children>
+    </item>
+    <item nodeId="node-5560">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part two.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5561"></child>
+        </children>
+    </item>
+    <item nodeId="node-5561">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part three.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5562"></child>
+        </children>
+    </item>
+    <item nodeId="node-5562">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part four.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5563"></child>
+        </children>
+    </item>
+    <item nodeId="node-5563">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+Lesson one part five.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5564"></child>
+        </children>
+    </item>
+    <item nodeId="node-5564">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -1764,6 +4428,40 @@ You scatter the split peas among the pigeons, causing a minor commotion as they 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-5142">
+        <command xml:space="preserve">press 7</command>
+        <result xml:space="preserve">What do you want to press that on?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5143"></child>
+        </children>
+    </item>
+    <item nodeId="node-5143">
+        <command xml:space="preserve">enter 7</command>
+        <result xml:space="preserve">What do you want to enter that into?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5144"></child>
+        </children>
+    </item>
+    <item nodeId="node-5144">
+        <command xml:space="preserve">type 7</command>
+        <result xml:space="preserve">What do you want to type that on?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5145"></child>
+        </children>
+    </item>
+    <item nodeId="node-5145">
+        <command xml:space="preserve">key 8</command>
+        <result xml:space="preserve">What do you want to key that on?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-5076">
         <command xml:space="preserve">pit</command>
         <result xml:space="preserve">That's not a verb I recognize.
@@ -1888,6 +4586,46 @@ A homespun blanket is arranged neatly on the ground. It is your bed.
     <item nodeId="node-5122">
         <command xml:space="preserve">x blanket</command>
         <result xml:space="preserve">Homespun wool.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5123"></child>
+        </children>
+    </item>
+    <item nodeId="node-5123">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5124"></child>
+        </children>
+    </item>
+    <item nodeId="node-5124">
+        <command xml:space="preserve">gonear yellow</command>
+        <result xml:space="preserve">[(1) looking]
+Antenna Control
+You float weightless at the port end of a cylinder. Through a surprisingly large window, you can see the station rotating around you, solar panels, and antennas, all backed by a spectacular field of stars.  A short lever extends from the floor, and a yellow cable waves from a small control panel.
+
+It is very cold and dark here in the near vacuum. An airlock door leads starboard.
+
+[(1) looking - succeeded]
+
+[Your score has just gone up by two points.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5125"></child>
+        </children>
+    </item>
+    <item nodeId="node-5125">
+        <command xml:space="preserve">press nine</command>
+        <result xml:space="preserve">[typing 9 on the keypad]
+Calibration rejected.
+Restarting sequence.
+Calibrate to Epsilon/Lime.
+
+[typing 9 on the keypad - succeeded]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -2363,6 +5101,64 @@ A gray cable connects the organ to the audio unit.
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-5183">
+        <command xml:space="preserve">nounless</command>
+        <result xml:space="preserve">taking inventory:
+You are carrying:
+  a scanner
+  a green jumpsuit (being worn)
+
+jumping:
+You jump on the spot.
+
+thinking:
+You've been alone for a thousand days — plenty of time for thinking. Now is the time for action.
+
+waiting:
+Time passes.
+
+sleeping:
+You aren't feeling especially drowsy.
+
+waking up:
+The dreadful truth is, this is not a dream.
+
+waving hands:
+You wave.
+
+saying yes:
+That was a rhetorical question.
+
+saying no:
+That was a rhetorical question.
+
+nounless listening:
+You hear only the familiar hum of the station.
+
+nounless smelling:
+Only familiar odors.
+
+swimming:
+There's nothing to swim in.
+
+singing:
+You sing a hymn about virtue.
+
+xyzzying:
+You say that word out loud. Your mother would never have approved. Even with no one to listen, it feels a little wrong.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5184"></child>
+        </children>
+    </item>
+    <item nodeId="node-5184">
+        <command xml:space="preserve"> play</command>
+        <result xml:space="preserve">What do you want to play?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-4817">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">You have heard of compass directions like north, but they don't make any sense here. Instead, you can go spinward, antispinward, port, and starboard. When you look spinward, port is left and starboard is right.
@@ -2377,6 +5173,61 @@ A gray cable connects the organ to the audio unit.
     <item nodeId="node-4818">
         <command xml:space="preserve">n</command>
         <result xml:space="preserve">You have heard of compass directions like north, but they don't make any sense here. Instead, you can go spinward, antispinward, port, and starboard. When you look spinward, port is left and starboard is right.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5158">
+        <command xml:space="preserve">key jkjk</command>
+        <result xml:space="preserve">You must supply a second noun.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5146">
+        <command xml:space="preserve">key 7</command>
+        <result xml:space="preserve">What do you want to key that into?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5147"></child>
+        </children>
+    </item>
+    <item nodeId="node-5147">
+        <command xml:space="preserve">type 7 into hatch</command>
+        <result xml:space="preserve">There is no keypad on the floor hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5148"></child>
+        </children>
+    </item>
+    <item nodeId="node-5148">
+        <command xml:space="preserve">gonear plate</command>
+        <result xml:space="preserve">Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall.
+
+There is a secured hatch in the ceiling.
+
+Beside the secured port door, a status display shows an error message.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5149"></child>
+        </children>
+    </item>
+    <item nodeId="node-5149">
+        <command xml:space="preserve">key 7 into hatch</command>
+        <result xml:space="preserve">There is no keypad on the ceiling hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5150"></child>
+        </children>
+    </item>
+    <item nodeId="node-5150">
+        <command xml:space="preserve">key jkjkk into display</command>
+        <result xml:space="preserve">I didn't understand that number.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -2674,6 +5525,7 @@ It is very cold and dark here in the near vacuum. An airlock door leads starboar
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-4278"></child>
+            <child nodeId="node-5155"></child>
             <child nodeId="node-4274"></child>
             <child nodeId="node-4264"></child>
             <child nodeId="node-4260"></child>
@@ -2681,6 +5533,7 @@ It is very cold and dark here in the near vacuum. An airlock door leads starboar
             <child nodeId="node-4233"></child>
             <child nodeId="node-4218"></child>
             <child nodeId="node-4212"></child>
+            <child nodeId="node-5127"></child>
             <child nodeId="node-4202"></child>
             <child nodeId="node-4194"></child>
             <child nodeId="node-4190"></child>
@@ -2911,6 +5764,59 @@ A short lever extends from the floor.
 A yellow cable waves from a small panel.
 
 You can also see an emergency communications unit floating here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5127">
+        <command xml:space="preserve">type nine</command>
+        <result xml:space="preserve">(into the keypad)
+Calibration rejected.
+Restarting sequence.
+Calibrate to Epsilon/Lime.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5130"></child>
+        </children>
+    </item>
+    <item nodeId="node-5130">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5131"></child>
+        </children>
+    </item>
+    <item nodeId="node-5131">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181218 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type ABOUT for credits or HINT for assistance.
+
+Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5132"></child>
+        </children>
+    </item>
+    <item nodeId="node-5132">
+        <command xml:space="preserve">type nine</command>
+        <result xml:space="preserve">What do you want to type that into?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -3579,6 +6485,31 @@ You can also see an emergency communications unit and a yellow cable (plugged in
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-5155">
+        <command xml:space="preserve">key 7</command>
+        <result xml:space="preserve">Calibration rejected.
+Restarting sequence.
+Calibrate to Epsilon/Lime.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5156"></child>
+        </children>
+    </item>
+    <item nodeId="node-5156">
+        <command xml:space="preserve">key jkjk</command>
+        <result xml:space="preserve">I didn't understand that number.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5157"></child>
+        </children>
+    </item>
+    <item nodeId="node-5157">
+        <command xml:space="preserve">key jkjk into keypad</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-4278">
         <command xml:space="preserve">get yellow</command>
         <result xml:space="preserve">Taken.
@@ -3905,6 +6836,298 @@ There is a secured hatch in the ground.
     <item nodeId="node-4299">
         <command xml:space="preserve">x antennas</command>
         <result xml:space="preserve">The solar panels are the primary source of station power and support a small array of antennas.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5685">
+        <command xml:space="preserve">gonear school</command>
+        <result xml:space="preserve">(School House)
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5792"></child>
+            <child nodeId="node-5687"></child>
+        </children>
+    </item>
+    <item nodeId="node-5687">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5688"></child>
+        </children>
+    </item>
+    <item nodeId="node-5688">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5689"></child>
+        </children>
+    </item>
+    <item nodeId="node-5689">
+        <command xml:space="preserve">test learning</command>
+        <result xml:space="preserve">(Testing.)
+
+&gt;[1] gonear learning
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;[2] out
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;[3] purloin instructional modules
+[Purloined.]
+[Purloined.]
+
+&gt;[4] scan instructional module
+Module is functional.
+
+&gt;[5] scan unscanned instructional module
+Module is faulty.
+
+&gt;[6] in
+
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;[7] put functional instructional module in learning machine
+You put the functional instruction module into the learning machine.
+
+A hologram flickers to life as the learning machine starts up.
+
+&gt;</result>
+        <commentary xml:space="preserve">[1] gonear learning
+[2] out
+[3] purloin instructional modules
+[4] scan instructional module
+[5] scan unscanned instructional module
+[6] in
+[7] put functional instructional module in learning machine
+</commentary>
+        <children><child nodeId="node-5697"></child>
+        </children>
+    </item>
+    <item nodeId="node-5697">
+        <command xml:space="preserve">x hologram</command>
+        <result xml:space="preserve">The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5698"></child>
+        </children>
+    </item>
+    <item nodeId="node-5698">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The hologram is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5699"></child>
+        </children>
+    </item>
+    <item nodeId="node-5699">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues. You've heard it many many times before.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5700"></child>
+        </children>
+    </item>
+    <item nodeId="node-5700">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The lesson on hard work continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5701"></child>
+        </children>
+    </item>
+    <item nodeId="node-5701">
+        <command xml:space="preserve">x hologram</command>
+        <result xml:space="preserve">The hologram is covering the many dangers of idle hands.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5702"></child>
+        </children>
+    </item>
+    <item nodeId="node-5702">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The hologram is concluding the lesson on hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5703"></child>
+        </children>
+    </item>
+    <item nodeId="node-5703">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">The hologram is explaining a homework assignment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5704"></child>
+        </children>
+    </item>
+    <item nodeId="node-5704">
+        <command xml:space="preserve">touch hologram</command>
+        <result xml:space="preserve">The hologram is intangible.
+
+The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5705"></child>
+        </children>
+    </item>
+    <item nodeId="node-5705">
+        <command xml:space="preserve">listen to hologram</command>
+        <result xml:space="preserve">That isn't available.
+
+The hologram is introducing a lesson on crop rotation.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5706"></child>
+        </children>
+    </item>
+    <item nodeId="node-5706">
+        <command xml:space="preserve">x hologram</command>
+        <result xml:space="preserve">The lesson on crop rotation continues.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5707"></child>
+        </children>
+    </item>
+    <item nodeId="node-5707">
+        <command xml:space="preserve">touch it</command>
+        <result xml:space="preserve">The hologram is intangible.
+
+The lesson on crop rotation continues. You're very familiar with this material.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5708"></child>
+        </children>
+    </item>
+    <item nodeId="node-5708">
+        <command xml:space="preserve">listen to it</command>
+        <result xml:space="preserve">That isn't available.
+
+The hologram is reviewing crop rotation.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5709"></child>
+        </children>
+    </item>
+    <item nodeId="node-5709">
+        <command xml:space="preserve">turn hologram</command>
+        <result xml:space="preserve">The hologram is intangible.
+
+The hologram is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5710"></child>
+        </children>
+    </item>
+    <item nodeId="node-5710">
+        <command xml:space="preserve">listen</command>
+        <result xml:space="preserve">You hear only the familiar hum of the station.
+
+The hologram is introducing a lesson on the virtues of hard work.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5711"></child>
+        </children>
+    </item>
+    <item nodeId="node-5711">
+        <command xml:space="preserve">gonear hologram</command>
+        <result xml:space="preserve">
+*** Run-time problem P61: Attempt to move the player off-stage.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5712"></child>
+        </children>
+    </item>
+    <item nodeId="node-5712">
+        <command xml:space="preserve">undo</command>
+        <result xml:space="preserve">School House
+[Previous turn undone.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5792">
+        <command xml:space="preserve">get eraser</command>
+        <result xml:space="preserve">Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5793"></child>
+        </children>
+    </item>
+    <item nodeId="node-5793">
+        <command xml:space="preserve">erase board</command>
+        <result xml:space="preserve">(with the eraser)
+You carefully clean the chalkboard and dirty the eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5794"></child>
+        </children>
+    </item>
+    <item nodeId="node-5794">
+        <command xml:space="preserve">gonear crate</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still one crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see a pair of gravity boots here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5795"></child>
+        </children>
+    </item>
+    <item nodeId="node-5795">
+        <command xml:space="preserve">hit eraser</command>
+        <result xml:space="preserve">You fill the vault with a cloud of dust which scatters the laser beam that you can now see scanning across the hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5796"></child>
+        </children>
+    </item>
+    <item nodeId="node-5796">
+        <command xml:space="preserve">listen to laser</command>
+        <result xml:space="preserve">You can't hear light.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -4752,6 +7975,566 @@ The emergency communications unit has nothing plugged into it.
         <result xml:space="preserve">A bulky but portable emergency communications unit from a transit pod. It can work independently if you provide audio and antenna connections.
 
 The emergency communications unit has nothing plugged into it.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5212">
+        <command xml:space="preserve">gonear learning</command>
+        <result xml:space="preserve">School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5658"></child>
+            <child nodeId="node-5226"></child>
+            <child nodeId="node-5213"></child>
+        </children>
+    </item>
+    <item nodeId="node-5213">
+        <command xml:space="preserve">x machine</command>
+        <result xml:space="preserve">This last learning machine broke when you were maybe three thousand days old. It contains a power module and an instruction module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5214"></child>
+        </children>
+    </item>
+    <item nodeId="node-5214">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5215"></child>
+        </children>
+    </item>
+    <item nodeId="node-5215">
+        <command xml:space="preserve">purloin all instruction modules</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5216"></child>
+        </children>
+    </item>
+    <item nodeId="node-5216">
+        <command xml:space="preserve">scan instruction module</command>
+        <result xml:space="preserve">Module is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5217"></child>
+        </children>
+    </item>
+    <item nodeId="node-5217">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5218"></child>
+        </children>
+    </item>
+    <item nodeId="node-5218">
+        <command xml:space="preserve">put functional instruction module in learning</command>
+        <result xml:space="preserve">You put the functional instruction module into the learning machine.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5219"></child>
+        </children>
+    </item>
+    <item nodeId="node-5219">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5220"></child>
+        </children>
+    </item>
+    <item nodeId="node-5220">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5221"></child>
+        </children>
+    </item>
+    <item nodeId="node-5221">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5222"></child>
+        </children>
+    </item>
+    <item nodeId="node-5222">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5223"></child>
+        </children>
+    </item>
+    <item nodeId="node-5223">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5224"></child>
+        </children>
+    </item>
+    <item nodeId="node-5224">
+        <command xml:space="preserve">school</command>
+        <result xml:space="preserve">
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5226">
+        <command xml:space="preserve">ut</command>
+        <result xml:space="preserve">That's not a verb I recognize.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5227"></child>
+        </children>
+    </item>
+    <item nodeId="node-5227">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5228"></child>
+        </children>
+    </item>
+    <item nodeId="node-5228">
+        <command xml:space="preserve">purloin functional learning module</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5229"></child>
+        </children>
+    </item>
+    <item nodeId="node-5229">
+        <command xml:space="preserve">purloin all learning modules</command>
+        <result xml:space="preserve">I only understood you as far as wanting to purloin the learning machine.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5230"></child>
+        </children>
+    </item>
+    <item nodeId="node-5230">
+        <command xml:space="preserve">purloin instructional modues</command>
+        <result xml:space="preserve">There seems to be no such object anywhere in the model world.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5231"></child>
+        </children>
+    </item>
+    <item nodeId="node-5231">
+        <command xml:space="preserve">purloin instructional modules</command>
+        <result xml:space="preserve">[Purloined.]
+[Purloined.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5232"></child>
+        </children>
+    </item>
+    <item nodeId="node-5232">
+        <command xml:space="preserve">scan instructional</command>
+        <result xml:space="preserve">Module is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5233"></child>
+        </children>
+    </item>
+    <item nodeId="node-5233">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5234"></child>
+        </children>
+    </item>
+    <item nodeId="node-5234">
+        <command xml:space="preserve">put instructional in learning machine</command>
+        <result xml:space="preserve">Which do you mean, the functional instruction module or the unscanned instruction module?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5235"></child>
+        </children>
+    </item>
+    <item nodeId="node-5235">
+        <command xml:space="preserve">functional</command>
+        <result xml:space="preserve">You put the functional instruction module into the learning machine.
+
+FIRST.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5236"></child>
+        </children>
+    </item>
+    <item nodeId="node-5236">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5237"></child>
+        </children>
+    </item>
+    <item nodeId="node-5237">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5238"></child>
+        </children>
+    </item>
+    <item nodeId="node-5238">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5239"></child>
+        </children>
+    </item>
+    <item nodeId="node-5239">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5240"></child>
+        </children>
+    </item>
+    <item nodeId="node-5240">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+LEARNING.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5658">
+        <command xml:space="preserve">get all from learning</command>
+        <result xml:space="preserve">power module: Taken.
+instruction module: Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5659"></child>
+        </children>
+    </item>
+    <item nodeId="node-5659">
+        <command xml:space="preserve">gonear crate</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still one crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see a pair of gravity boots here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5660"></child>
+        </children>
+    </item>
+    <item nodeId="node-5660">
+        <command xml:space="preserve">search crate</command>
+        <result xml:space="preserve">You find an instruction module and a pressure regulation module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5661"></child>
+        </children>
+    </item>
+    <item nodeId="node-5661">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a pressure regulation module
+  two instruction modules
+  a power module
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5662"></child>
+        </children>
+    </item>
+    <item nodeId="node-5662">
+        <command xml:space="preserve">scan instruction</command>
+        <result xml:space="preserve">Module is functional.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5663"></child>
+        </children>
+    </item>
+    <item nodeId="node-5663">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5664"></child>
+        </children>
+    </item>
+    <item nodeId="node-5664">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181218 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type ABOUT for credits or HINT for assistance.
+
+Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5665"></child>
+        </children>
+    </item>
+    <item nodeId="node-5665">
+        <command xml:space="preserve">gonear crate</command>
+        <result xml:space="preserve">Supply Vault
+This room is dim, quiet, and stuffy. There is still one crate of machine parts left.
+
+There is a secured hatch in the ceiling.
+
+You can also see a pair of gravity boots here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5666"></child>
+        </children>
+    </item>
+    <item nodeId="node-5666">
+        <command xml:space="preserve">search crate</command>
+        <result xml:space="preserve">You find an instruction module and a pressure regulation module.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5667"></child>
+        </children>
+    </item>
+    <item nodeId="node-5667">
+        <command xml:space="preserve">gonear school</command>
+        <result xml:space="preserve">(School House)
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5668"></child>
+        </children>
+    </item>
+    <item nodeId="node-5668">
+        <command xml:space="preserve">get all from instruction</command>
+        <result xml:space="preserve">That can't contain things.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5669"></child>
+        </children>
+    </item>
+    <item nodeId="node-5669">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a pressure regulation module
+  an instruction module
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5670"></child>
+        </children>
+    </item>
+    <item nodeId="node-5670">
+        <command xml:space="preserve">get all from learing</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5671"></child>
+        </children>
+    </item>
+    <item nodeId="node-5671">
+        <command xml:space="preserve">get all from learning</command>
+        <result xml:space="preserve">power module: Taken.
+instruction module: Taken.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5672"></child>
+        </children>
+    </item>
+    <item nodeId="node-5672">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  two instruction modules
+  a power module
+  a pressure regulation module
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5673"></child>
+        </children>
+    </item>
+    <item nodeId="node-5673">
+        <command xml:space="preserve">scan instruction</command>
+        <result xml:space="preserve">Module is faulty.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5674"></child>
+        </children>
+    </item>
+    <item nodeId="node-5674">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn about your exile from Old Earth.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5675"></child>
+        </children>
+    </item>
+    <item nodeId="node-5675">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying:
+  a faulty instruction module
+  an unscanned power module
+  an unscanned pressure regulation module
+  an unscanned instruction module
+  a scanner
+  a green jumpsuit (being worn)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5676"></child>
+        </children>
+    </item>
+    <item nodeId="node-5676">
+        <command xml:space="preserve">put unsanned power in learning</command>
+        <result xml:space="preserve">You can't see any such thing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5677"></child>
+        </children>
+    </item>
+    <item nodeId="node-5677">
+        <command xml:space="preserve">put unscanned power in learning</command>
+        <result xml:space="preserve">You put the unscanned power module into the learning machine.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5678"></child>
+        </children>
+    </item>
+    <item nodeId="node-5678">
+        <command xml:space="preserve">put unscanned instruction in learning</command>
+        <result xml:space="preserve">You put the unscanned instruction module into the learning machine.
+
+A hologram flickers to life as the learning machine starts up.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5679"></child>
+        </children>
+    </item>
+    <item nodeId="node-5679">
+        <command xml:space="preserve">z</command>
+        <result xml:space="preserve">Time passes.
+
+The learning machine is beginning a new lesson.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5680"></child>
+        </children>
+    </item>
+    <item nodeId="node-5680">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">You sing a hymn praising the Founder.
+
+The learning machine is introducing a lesson on the virtues of hard work.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -7627,6 +11410,963 @@ You are always self-possessed.
     <item nodeId="node-4650">
         <command xml:space="preserve">clap jkjkj</command>
         <result xml:space="preserve">I didn't understand that sentence.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5176">
+        <command xml:space="preserve">analyze hatch</command>
+        <result xml:space="preserve">examining the floor hatch:
+The floor hatch is closed.
+
+looking under the floor hatch:
+You find nothing of interest.
+
+searching the floor hatch:
+The floor hatch is secured.
+
+listening to the floor hatch:
+You hear nothing unexpected.
+
+smelling the floor hatch:
+You smell nothing unexpected.
+
+attacking the floor hatch:
+The Founder said that violence is rarely the answer.
+
+buying the floor hatch:
+Nothing is on sale.
+
+climbing the floor hatch:
+Little is to be achieved by that.
+
+pulling the floor hatch:
+It is fixed in place.
+
+pushing the floor hatch:
+It is fixed in place.
+
+turning the floor hatch:
+It is fixed in place.
+
+pushing the floor hatch to down:
+The floor hatch cannot be pushed from place to place.
+
+opening the floor hatch:
+You open the floor hatch.
+
+entering the floor hatch:
+(first getting off the blanket)
+
+Cellar
+Your decompression shelter and storage space for increasingly empty shelves of canned vegetables and one more large bag of split peas.
+
+There is an open hatch in the ceiling.
+
+getting off the ceiling hatch:
+But you aren't on the ceiling hatch at the moment.
+
+closing the ceiling hatch:
+You close the ceiling hatch.
+
+taking the ceiling hatch:
+That's fixed in place.
+
+switching on the ceiling hatch:
+It isn't something you can switch.
+
+switching off the ceiling hatch:
+It isn't something you can switch.
+
+wearing the ceiling hatch:
+(first taking the ceiling hatch)
+That's fixed in place.
+
+taking off the ceiling hatch:
+You aren't wearing the ceiling hatch.
+
+touching the ceiling hatch:
+You feel nothing unexpected.
+
+rubbing the ceiling hatch:
+You rub the ceiling hatch.
+
+waving the ceiling hatch:
+But you aren't holding that.
+
+squeezing the ceiling hatch:
+You achieve nothing by this.
+
+burning the ceiling hatch:
+There is no open flame on the station.
+
+cutting the ceiling hatch:
+The Founder said that violence is rarely the answer.
+
+tying the ceiling hatch to yourself:
+You would achieve nothing by this.
+
+swinging the ceiling hatch:
+There's nothing sensible to swing here.
+
+tasting the ceiling hatch:
+You taste nothing unexpected.
+
+drinking the ceiling hatch:
+There's nothing suitable to drink here.
+
+eating the ceiling hatch:
+That's plainly inedible.
+
+dropping the ceiling hatch:
+The ceiling hatch is already here.
+
+typing 7 on the ceiling hatch: 
+There is no keypad on the ceiling hatch.
+
+typing mimolette on the ceiling hatch: 
+There is no keypad on the ceiling hatch.
+
+feeding the ceiling hatch:
+You can only do that to something animate.
+
+swimming in the ceiling hatch:
+You can't swim in the ceiling hatch.
+
+playing the ceiling hatch:
+That isn't something you can play.
+
+unplugging the ceiling hatch:
+The ceiling hatch is not plugged into anything.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5177"></child>
+            <child nodeId="node-5186"></child>
+        </children>
+    </item>
+    <item nodeId="node-5186">
+        <command xml:space="preserve">restart</command>
+        <result xml:space="preserve">Are you sure you want to restart? </result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5187"></child>
+        </children>
+    </item>
+    <item nodeId="node-5187">
+        <command xml:space="preserve">yes</command>
+        <result xml:space="preserve">
+
+
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days. Your parents were the last. No, your father was the last. He held on for nearly a hundred days longer. Now you are the last. Alone. Adrift.
+
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Release 1 / Serial number 181218 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Type ABOUT for credits or HINT for assistance.
+
+Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5188"></child>
+            <child nodeId="node-5194"></child>
+        </children>
+    </item>
+    <item nodeId="node-5194">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">The exits are down to the cellar and outside to sector 4.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5195"></child>
+        </children>
+    </item>
+    <item nodeId="node-5195">
+        <command xml:space="preserve">get up</command>
+        <result xml:space="preserve">You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+A homespun blanket is arranged neatly on the ground. It is your bed.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5196"></child>
+        </children>
+    </item>
+    <item nodeId="node-5196">
+        <command xml:space="preserve">rub hatch with blanket</command>
+        <result xml:space="preserve">(first taking the blanket)
+You rub the floor hatch.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5197"></child>
+        </children>
+    </item>
+    <item nodeId="node-5197">
+        <command xml:space="preserve">rub blanket with hatch</command>
+        <result xml:space="preserve">(first taking the floor hatch)
+That's fixed in place.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5198"></child>
+        </children>
+    </item>
+    <item nodeId="node-5198">
+        <command xml:space="preserve">nounless</command>
+        <result xml:space="preserve">taking inventory:
+You are carrying:
+  your blanket
+  a scanner
+  a green jumpsuit (being worn)
+
+jumping:
+You jump on the spot.
+
+thinking:
+You've been alone for a thousand days — plenty of time for thinking. Now is the time for action.
+
+waiting:
+Time passes.
+
+sleeping:
+You aren't feeling especially drowsy.
+
+waking up:
+The dreadful truth is, this is not a dream.
+
+waving hands:
+You wave.
+
+saying yes:
+That was a rhetorical question.
+
+saying no:
+That was a rhetorical question.
+
+nounless listening:
+You hear only the familiar hum of the station.
+
+nounless smelling:
+Only familiar odors.
+
+swimming:
+There's nothing to swim in.
+
+singing:
+You sing a hymn about your exile from Old Earth.
+
+xyzzying:
+You say that word out loud. Your mother would never have approved. Even with no one to listen, it feels a little wrong.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5199"></child>
+        </children>
+    </item>
+    <item nodeId="node-5199">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">taking inventory:
+You are carrying:
+  your blanket
+  a scanner
+  a green jumpsuit (being worn)
+
+jumping:
+You jump on the spot.
+
+thinking:
+You've been alone for a thousand days — plenty of time for thinking. Now is the time for action.
+
+waiting:
+Time passes.
+
+sleeping:
+You aren't feeling especially drowsy.
+
+waking up:
+The dreadful truth is, this is not a dream.
+
+waving hands:
+You wave.
+
+saying yes:
+That was a rhetorical question.
+
+saying no:
+That was a rhetorical question.
+
+nounless listening:
+You hear only the familiar hum of the station.
+
+nounless smelling:
+Only familiar odors.
+
+swimming:
+There's nothing to swim in.
+
+singing:
+You sing a hymn praising the Founder.
+
+xyzzying:
+Once was enough.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5200"></child>
+        </children>
+    </item>
+    <item nodeId="node-5200">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">taking inventory:
+You are carrying:
+  your blanket
+  a scanner
+  a green jumpsuit (being worn)
+
+jumping:
+You jump on the spot.
+
+thinking:
+You've been alone for a thousand days — plenty of time for thinking. Now is the time for action.
+
+waiting:
+Time passes.
+
+sleeping:
+You aren't feeling especially drowsy.
+
+waking up:
+The dreadful truth is, this is not a dream.
+
+waving hands:
+You wave.
+
+saying yes:
+That was a rhetorical question.
+
+saying no:
+That was a rhetorical question.
+
+nounless listening:
+You hear only the familiar hum of the station.
+
+nounless smelling:
+Only familiar odors.
+
+swimming:
+There's nothing to swim in.
+
+singing:
+You sing a hymn about hard work.
+
+xyzzying:
+Once was enough.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5201"></child>
+        </children>
+    </item>
+    <item nodeId="node-5201">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">taking inventory:
+You are carrying:
+  your blanket
+  a scanner
+  a green jumpsuit (being worn)
+
+jumping:
+You jump on the spot.
+
+thinking:
+You've been alone for a thousand days — plenty of time for thinking. Now is the time for action.
+
+waiting:
+Time passes.
+
+sleeping:
+You aren't feeling especially drowsy.
+
+waking up:
+The dreadful truth is, this is not a dream.
+
+waving hands:
+You wave.
+
+saying yes:
+That was a rhetorical question.
+
+saying no:
+That was a rhetorical question.
+
+nounless listening:
+You hear only the familiar hum of the station.
+
+nounless smelling:
+Only familiar odors.
+
+swimming:
+There's nothing to swim in.
+
+singing:
+You sing a hymn about penitence.
+
+xyzzying:
+Once was enough.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5202"></child>
+        </children>
+    </item>
+    <item nodeId="node-5202">
+        <command xml:space="preserve">g</command>
+        <result xml:space="preserve">taking inventory:
+You are carrying:
+  your blanket
+  a scanner
+  a green jumpsuit (being worn)
+
+jumping:
+You jump on the spot.
+
+thinking:
+You've been alone for a thousand days — plenty of time for thinking. Now is the time for action.
+
+waiting:
+Time passes.
+
+sleeping:
+You aren't feeling especially drowsy.
+
+waking up:
+The dreadful truth is, this is not a dream.
+
+waving hands:
+You wave.
+
+saying yes:
+That was a rhetorical question.
+
+saying no:
+That was a rhetorical question.
+
+nounless listening:
+You hear only the familiar hum of the station.
+
+nounless smelling:
+Only familiar odors.
+
+swimming:
+There's nothing to swim in.
+
+singing:
+You sing a hymn about your exile from Old Earth.
+
+xyzzying:
+Once was enough.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5188">
+        <command xml:space="preserve">rub blanket</command>
+        <result xml:space="preserve">You rub the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5189"></child>
+        </children>
+    </item>
+    <item nodeId="node-5189">
+        <command xml:space="preserve">rub blanket with scanner</command>
+        <result xml:space="preserve">You rub the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5190"></child>
+        </children>
+    </item>
+    <item nodeId="node-5190">
+        <command xml:space="preserve">rub scanner with blanket</command>
+        <result xml:space="preserve">(first taking the blanket)
+(first getting off the blanket)
+You rub the scanner.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5177">
+        <command xml:space="preserve">feed hatch</command>
+        <result xml:space="preserve">You can only do that to something animate.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5182">
+        <command xml:space="preserve">analyze blanket</command>
+        <result xml:space="preserve">examining the blanket:
+Homespun wool.
+
+looking under the blanket:
+You find nothing of interest.
+
+searching the blanket:
+There is nothing on the blanket.
+
+listening to the blanket:
+You hear nothing unexpected.
+
+smelling the blanket:
+You smell nothing unexpected.
+
+attacking the blanket:
+The Founder said that violence is rarely the answer.
+
+buying the blanket:
+Nothing is on sale.
+
+climbing the blanket:
+Little is to be achieved by that.
+
+pulling the blanket:
+Nothing obvious happens.
+
+pushing the blanket:
+Nothing obvious happens.
+
+turning the blanket:
+Nothing obvious happens.
+
+pushing the blanket to down:
+The blanket cannot be pushed from place to place.
+
+opening the blanket:
+It isn't something you can open.
+
+entering the blanket:
+But you're already on the blanket.
+
+getting off the blanket:
+You get off the blanket.
+
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+A homespun blanket is arranged neatly on the ground. It is your bed.
+
+closing the blanket:
+It isn't something you can close.
+
+taking the blanket:
+Taken.
+
+switching on the blanket:
+It isn't something you can switch.
+
+switching off the blanket:
+It isn't something you can switch.
+
+wearing the blanket:
+You put on the blanket.
+
+taking off the blanket:
+You take off the blanket.
+
+(no other people in the location; can't test throwing at.)
+
+
+(no other people in the location; can't test showing to.)
+
+
+(no other people in the location; can't test giving to.)
+
+
+touching the blanket:
+You feel nothing unexpected.
+
+rubbing the blanket:
+You rub the blanket.
+
+waving the blanket:
+You wave the blanket.
+
+squeezing the blanket:
+You achieve nothing by this.
+
+burning the blanket:
+There is no open flame on the station.
+
+cutting the blanket:
+The Founder said that violence is rarely the answer.
+
+tying the blanket to the floor hatch:
+You would achieve nothing by this.
+
+swinging the blanket:
+There's nothing sensible to swing here.
+
+tasting the blanket:
+You taste nothing unexpected.
+
+drinking the blanket:
+There's nothing suitable to drink here.
+
+eating the blanket:
+That's plainly inedible.
+
+dropping the blanket:
+You arrange the blanket on the ground.
+
+typing 7 on the blanket: 
+There is no keypad on the blanket.
+
+typing mimolette on the blanket: 
+There is no keypad on the blanket.
+
+feeding the blanket:
+You can only do that to something animate.
+
+swimming in the blanket:
+You can't swim in the blanket.
+
+playing the blanket:
+That isn't something you can play.
+
+rubbing the blanket with the green jumpsuit:
+You rub the blanket.
+
+rubbing the green jumpsuit with the blanket:
+(first taking the blanket)
+You rub the green jumpsuit.
+
+plugging the blanket into the scanner:
+The blanket has no plug.
+
+plugging the scanner into the blanket:
+The scanner has no plug.
+
+unplugging the blanket from the floor hatch:
+But it isn't there now.
+
+unplugging the floor hatch from the blanket:
+But it isn't there now.
+
+unplugging the blanket:
+The blanket is not plugged into anything.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5206"></child>
+        </children>
+    </item>
+    <item nodeId="node-5206">
+        <command xml:space="preserve">unplug the blanket from me</command>
+        <result xml:space="preserve">You aren't wearing the blanket.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5207"></child>
+        </children>
+    </item>
+    <item nodeId="node-5207">
+        <command xml:space="preserve">unplug the blanket from the floor hatch</command>
+        <result xml:space="preserve">But it isn't there now.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5208"></child>
+        </children>
+    </item>
+    <item nodeId="node-5208">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5209"></child>
+        </children>
+    </item>
+    <item nodeId="node-5209">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5210"></child>
+        </children>
+    </item>
+    <item nodeId="node-5210">
+        <command xml:space="preserve">unplug the blanket from the floor hatch</command>
+        <result xml:space="preserve">[unplugging the blanket from the floor hatch]
+[(1) removing the blanket from the floor hatch]
+But it isn't there now.
+[(1) removing the blanket from the floor hatch - failed the can't remove what's not inside rule]
+
+[unplugging the blanket from the floor hatch - failed the catch-invalid-unplugging-it-from rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-5825">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-5826"></child>
+        </children>
+    </item>
+    <item nodeId="node-5826">
+        <command xml:space="preserve">analyze me</command>
+        <result xml:space="preserve">[object-analyzing yourself]
+examining yourself:
+[(1) examining yourself]
+As virtuous as ever.
+[(1) examining yourself - failed]
+
+looking under yourself:
+[(1) looking under yourself]
+You find nothing of interest.
+
+[(1) looking under yourself - succeeded]
+
+searching yourself:
+[(1) searching yourself]
+You find nothing of interest.
+[(1) searching yourself - failed the can't search unless container or supporter rule]
+
+listening to yourself:
+[(1) listening to yourself]
+You hear nothing unexpected.
+[(1) listening to yourself - succeeded]
+
+smelling yourself:
+[(1) smelling yourself]
+You smell nothing unexpected.
+[(1) smelling yourself - succeeded]
+
+attacking yourself:
+[(1) attacking yourself]
+Imperfect vessel that you are, that is not the answer.
+[(1) attacking yourself - failed]
+
+buying yourself:
+[(1) buying yourself]
+Nothing is on sale.
+[(1) buying yourself - failed the block buying rule]
+
+climbing yourself:
+[(1) climbing yourself]
+Little is to be achieved by that.
+[(1) climbing yourself - failed the block climbing rule]
+
+pulling yourself:
+[(1) pulling yourself]
+You might not like that.
+[(1) pulling yourself - failed the can't pull people rule]
+
+pushing yourself:
+[(1) pushing yourself]
+You might not like that.
+[(1) pushing yourself - failed the can't push people rule]
+
+turning yourself:
+[(1) turning yourself]
+You might not like that.
+[(1) turning yourself - failed the can't turn people rule]
+
+pushing yourself to down:
+[(1) pushing yourself to down]
+You cannot be pushed from place to place.
+[(1) pushing yourself to down - failed the can't push unpushable things rule]
+
+opening yourself:
+[(1) opening yourself]
+You aren't something you can open.
+[(1) opening yourself - failed the can't open unless openable rule]
+
+entering yourself:
+[(1) entering yourself]
+You're not something you can enter.
+[(1) entering yourself - failed the can't enter what's not enterable rule]
+
+getting off yourself:
+[(1) getting off yourself]
+But you aren't on yourself at the moment.
+[(1) getting off yourself - failed the can't get off things rule]
+
+closing yourself:
+[(1) closing yourself]
+You aren't something you can close.
+[(1) closing yourself - failed the can't close unless openable rule]
+
+taking yourself:
+[(1) taking yourself]
+You are always self-possessed.
+[(1) taking yourself - failed the can't take yourself rule]
+
+switching on yourself:
+[(1) switching on yourself]
+You aren't something you can switch.
+[(1) switching on yourself - failed the can't switch on unless switchable rule]
+
+switching off yourself:
+[(1) switching off yourself]
+You aren't something you can switch.
+[(1) switching off yourself - failed the can't switch off unless switchable rule]
+
+wearing yourself:
+[(1) wearing yourself]
+(first taking yourself)
+[(2) taking yourself - silently]
+You are always self-possessed.
+[(2) taking yourself - silently - failed the can't take yourself rule]
+
+[(1) wearing yourself - failed the carrying requirements rule]
+
+taking off yourself:
+[(1) taking off yourself]
+You aren't wearing yourself.
+[(1) taking off yourself - failed the can't take off what's not worn rule]
+
+throwing the scanner at yourself:
+[(1) throwing the scanner at yourself]
+You lack the nerve when it comes to the crucial moment.
+[(1) throwing the scanner at yourself - failed the block throwing at rule]
+
+showing the scanner to yourself:
+[(1) showing the scanner to yourself]
+[(2) examining the scanner]
+The handheld voice-activated scanner you use when working on the station's machines.
+
+[You can ask the scanner for a list of commands by typing "scanner, help" and give it voice commands by typing phrases such as "scanner, scan SOMETHING" where SOMETHING is a visible object.]
+[(2) examining the scanner - succeeded]
+
+[(1) showing the scanner to yourself - succeeded]
+
+giving the scanner to yourself:
+[(1) giving the scanner to yourself]
+You can't give the scanner to yourself.
+[(1) giving the scanner to yourself - failed the can't give to yourself rule]
+
+waking yourself:
+[(1) waking yourself]
+That seems unnecessary.
+[(1) waking yourself - failed the block waking rule]
+
+kissing yourself:
+[(1) kissing yourself]
+You don't get much from that.
+[(1) kissing yourself - failed the kissing yourself rule]
+
+touching yourself:
+[(1) touching yourself]
+You achieve nothing by this.
+[(1) touching yourself - succeeded]
+
+rubbing yourself:
+[(1) rubbing yourself]
+You rub yourself.
+[(1) rubbing yourself - succeeded]
+
+waving yourself:
+[(1) waving yourself]
+But you aren't holding you.
+[(1) waving yourself - failed the can't wave what's not held rule]
+
+squeezing yourself:
+[(1) squeezing yourself]
+You might not like that.
+[(1) squeezing yourself - failed the innuendo about squeezing people rule]
+
+burning yourself:
+[(1) burning yourself]
+There is no open flame on the station.
+[(1) burning yourself - failed]
+
+cutting yourself:
+[(1) cutting yourself]
+Imperfect vessel that you are, that is not the answer.
+[(1) cutting yourself - failed]
+
+tying yourself to the blanket:
+[(1) tying yourself to the blanket]
+You would achieve nothing by this.
+[(1) tying yourself to the blanket - failed the block tying rule]
+
+swinging yourself:
+[(1) swinging yourself]
+There's nothing sensible to swing here.
+[(1) swinging yourself - failed the block swinging rule]
+
+tasting yourself:
+[(1) tasting yourself]
+You taste nothing unexpected.
+[(1) tasting yourself - succeeded]
+
+drinking yourself:
+[(1) drinking yourself]
+There's nothing suitable to drink here.
+[(1) drinking yourself - failed the block drinking rule]
+
+eating yourself:
+[(1) eating yourself]
+You're plainly inedible.
+[(1) eating yourself - failed the can't eat unless edible rule]
+
+dropping yourself:
+[(1) dropping yourself]
+You lack the dexterity.
+[(1) dropping yourself - failed the can't drop yourself rule]
+
+typing 7 on yourself: 
+[(1) typing 7 on yourself]
+There is no keypad on yourself.
+[(1) typing 7 on yourself - failed the Check typing it on]
+
+typing mimolette on yourself: 
+[(1) text typing "mimolette" on yourself]
+There is no keypad on yourself.
+[(1) text typing "mimolette" on yourself - failed the Check text typing it on]
+
+feeding yourself:
+[(1) feeding yourself]
+You aren't hungry.
+[(1) feeding yourself - failed]
+
+swimming in yourself:
+[(1) swimming in yourself]
+You can't swim in yourself.
+[(1) swimming in yourself - failed]
+
+playing yourself:
+[(1) playing yourself]
+I don't even know what that means.
+[(1) playing yourself - failed]
+
+unplugging yourself:
+[(1) unplugging yourself]
+You are not plugged into anything.
+[(1) unplugging yourself - failed the catch-invalid-unplugging-it rule]
+
+[object-analyzing yourself - succeeded]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

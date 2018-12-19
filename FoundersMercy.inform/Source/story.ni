@@ -29,6 +29,7 @@ When play begins:
 
 Release along with cover art ("A space station."),
 	an interpreter,
+	the source text,
 	the introductory booklet,
 	the library card,
 	a file of "Map & Feelies" called "Map.pdf",
@@ -140,8 +141,7 @@ Include version 4/170924 of Plugs and Sockets by Sean Turner
 
 		You can see an organ, an audio unit, and an USB cable (plugged into an organ and an audio unit) here.
 
-	Still not without issues: if you are holding the cable then it doesn't show up in the room at all, complicated connections wouldn't be clear, etc.
-]
+	Still not without issues: if you are holding the cable then it doesn't show up in the room at all, complicated connections wouldn't be clear, etc. ]
 
 The list attached things when listing receiver or inserter rule response (A) is "".
 
@@ -234,9 +234,85 @@ A pressure regulation module is a kind of module. Understand "regulator" as a pr
 Section 5 - Testing - Not for Release
 
 Include Object Response Tests by Juhana Leinonen.
+
+Table of analyzing actions (continued)
+topic	testing rule
+"typing (a number) on"	test typing on rule
+"typing (some text) on"	test text typing on rule
+"feeding"	test feeding rule
+"swimming in"	test swimming in rule
+"playing"	test playing rule
+["rubbing it with"	test rubbing it with rule
+"plugging it into"	test plugging it into rule
+"unplugging it from"	test unplugging it from rule]
+"unplugging"	test unplugging rule
+
+This is the test typing on rule:
+	say "[italic type]typing 7 on [the noun]: [roman type]";
+	try typing 7 on the noun.
+
+This is the test text typing on rule:
+	say "[italic type]typing mimolette on [the noun]: [roman type]";
+	try text typing "mimolette" on the noun.
+
+This is the test feeding rule:
+	announce tests for "feeding [the noun]";
+	try feeding the noun.
+
+This is the test swimming in rule:
+	announce tests for "swimming in [the noun]";
+	try swimming in the noun.
+
+This is the test playing rule:
+	announce tests for "playing [the noun]";
+	try playing the noun.
+
+[ This is the test rubbing it with rule:
+	let rubber be a random visible thing that is not the noun held by the test-actor;
+	announce tests for "rubbing [the noun] with [the rubber]";
+	try the test-actor rubbing the noun with the rubber;
+	announce tests for "rubbing [the rubber] with [the noun]";
+	try the test-actor rubbing the rubber with the noun.
+
+This is the test plugging it into rule:
+	let target be a random visible thing that is not the noun;
+	announce tests for "plugging [the noun] into [the target]";
+	try plugging the noun into the target;
+	announce tests for "plugging [the target] into [the noun]";
+	try plugging the target into the noun.
+
+This is the test unplugging it from rule:
+	let target be a random visible thing that is not the noun;
+	announce tests for "unplugging [the noun] from [the target]";
+	try unplugging the noun from the target;
+	announce tests for "unplugging [the target] from [the noun]";
+	try unplugging the target from the noun. ]
+
+This is the test unplugging rule:
+	announce tests for "unplugging [the noun]";
+	try unplugging the noun.
+
+Table of nounless analyzing actions (continued)
+topic	testing rule
+"swimming"	test swimming rule
+"singing"	test singing rule
+"xyzzying"	test xyzzying rule
+
+This is the test swimming rule:
+	announce tests for "swimming";
+	try the test-actor swimming.
+
+This is the test singing rule:
+	announce tests for "singing";
+	try the test-actor singing.
+
+This is the test xyzzying rule:
+	announce tests for "xyzzying";
+	try the test-actor xyzzying.
+
 Include Testing Commands by Thomas Insel.
 
-Section 6 - 
+Section 6 - Real-Time Delays
 
 Include Real-Time Delays by Erik Temple.
 
@@ -1341,9 +1417,56 @@ Sector 5 is outside of school house.
 
 The learning machine is an machine in the school. It is scenery. It has description "This last learning machine broke when you were maybe three thousand days old." It has carrying capacity 2.
 
+Instead of listening to the learning machine when the learning machine is functional, stop the action. [* So the only response is the lesson line printed by the every turn rule. ]
+
+Instead of listening to the school when the learning machine is functional, stop the action.
+
 The learning machine contains a functional power module and a faulty instruction module.
 
-To decide if (m - the learning machine) is functional: decide no. [* there are no functional instruction modules in the story world ]
+Definition: the learning machine is projecting if the learning machine is functional.
+
+To decide if (m - the learning machine) is functional:
+	decide on whether or not m encloses a functional power module and m encloses a functional instruction module.
+
+Test learning with "gonear learning / out / purloin instructional modules / scan instructional module / scan unscanned instructional module / in / put functional instructional module in learning machine"
+
+The learning counter is a number that varies.
+
+Table of Lessons [TODO]
+lesson text
+"The hologram is beginning a new lesson."
+"The hologram is introducing a lesson on the virtues of hard work."
+"The lesson on hard work continues. You've heard it many many times before." 
+"The lesson on hard work continues."
+"The hologram is covering the many dangers of idle hands."
+"The hologram is concluding the lesson on hard work."
+"The hologram is explaining a homework assignment."
+"The hologram is beginning a new lesson."
+"The hologram is introducing a lesson on crop rotation."
+"The hologram is explaining a four year cycle of alfalfa, corn, oats, and wheat."
+"The lesson on crop rotation continues. You're very familiar with this material."
+"The hologram is explaining a three year cycle of roots, legumes, and greens."
+"The hologram is reviewing crop rotation."
+
+Every turn when the learning machine is functional:
+	increase the learning counter by one;
+	if the learning counter is greater than the number of rows in Table of Lessons, now the learning counter is one.
+
+Every turn when the learning machine is visible and the learning machine is functional:
+	if the learning machine was not projecting and the learning machine is projecting:
+		say "A hologram flickers to life as the learning machine starts up.";
+		now the learning counter is zero;
+	otherwise:
+		say "[lesson text in row learning counter of Table of Lessons][line break]";
+
+After deciding the scope of the player when the location is the school and the learning machine is functional, place the hologram in scope. [* don't use "learning machine is visible" or you'll get a Glulxe stack overflow. ]
+
+A hologram is scenery. Understand "lesson" as the hologram.
+
+Before doing something other than examining or listening [or object-analyzing] when the current action involves the hologram, say "The hologram is intangible." instead.
+
+Instead of examining the hologram, stop the action.
+Before listening to the hologram, stop the action. [* because instead of is too late ]
 
 A desk is a fixed in place scenery supporter in the school. It has description "You wrote your lessons at this desk. Your people were practical, plain folk, so you learned practical things in school: reading, writing, arithmetic. More importantly, practical mechanics and farming."
 
@@ -1417,7 +1540,7 @@ The Supply Vault is a room. "This room is dim, quiet, and stuffy. There is still
 
 A crate of machine parts is scenery in the supply vault. It has description "These remaining parts never seem to fit anywhere useful, but Founder only knows what's in there."
 
-One faulty instruction module and one functional pressure regulation module are in the junk repository.
+One functional instruction module and one functional pressure regulation module are in the junk repository.
 
 Instead of searching the crate of machine parts when something is in the junk repository:
 	say "You find [list of things in the junk repository with indefinite articles].";
@@ -1438,6 +1561,8 @@ A pair of gravity boots is in the supply vault. The gravity boots are wearable. 
 A laser beam is scenery. It has description "The cloud of dust scatters the laser beam just enough that you can see it scan across the north passageway at seemingly random angles." Understand "dust" and "cloud" and "cloud of dust" as the laser beam. The laser beam can be dusty. The laser beam is not dusty. The laser can be alarmed. The laser is not alarmed.
 
 Before doing something other than examining when the current action involves the laser beam, say "The laser beam is intangible." instead.
+
+Before listening to the laser beam, say "You can't hear light." instead.
 
 To trip the laser alarm:
 	say "An alarm sounds, [if the vault hatch is open]the hatch slams shut, [end if]and a synthesized voice says 'Laser scan detects unauthorized materiel removal.'";
@@ -1837,23 +1962,47 @@ After examining the calibration display for the first time:
 	unless the antenna is calibrated:
 		note "Now might be a good time to consult the Official Space Relay League Antenna Calibration Guide™, included in your game package."
 
+Instead of the scanner scanning the keypad:
+	computerize "Component is functional.";
+	rule succeeds.
+
+Instead of the scanner scanning the calibration display:
+	computerize "Component is functional.";
+	rule succeeds.
+
+Instead of the scanner scanning the calibration panel:
+	computerize "Machine is functional. Antenna is [unless the antenna is calibrated]not [end if]calibrated."
+
 Typing it on is an action applying to one number and one thing.
+Text typing it on is an action applying to one topic and one thing.
 
-Understand "press [a number] into/on/in [the keypad]" as typing it on.
-Understand "enter [a number] into/on/in [the keypad]" as typing it on.
-Understand "type [a number] into/on/in [the keypad]" as typing it on.
+Understand "press [a number] on/into [the keypad]" as typing it on.
+Understand "enter [a number] into/on [the keypad]" as typing it on.
+Understand "type [a number] on/into [the keypad]" as typing it on.
+Understand "key [a number] into/on [the keypad]" as typing it on.
 
-Understand "press [a number] into/on/in [something]" as typing it on.
-Understand "enter [a number] into/on/in [something]" as typing it on.
-Understand "type [a number] into/on/in [something]" as typing it on.
+Understand "press [a number] on/into [something]" as typing it on.
+Understand "enter [text] into/on [something]" as text typing it on.
+Understand "type [text] on/into [something]" as text typing it on.
+Understand "key [text] into/on [something]" as text typing it on.
 
 Understand "press [a number]" as typing it on.
 Understand "enter [a number]" as typing it on.
 Understand "type [a number]" as typing it on.
+Understand "key [a number]" as typing it on.
 
-Understand the command "key" as "type".
+Understand "press [text]" as text typing it on.
+Understand "enter [text]" as text typing it on.
+Understand "type [text]" as text typing it on.
+Understand "key [text]" as text typing it on.
 
 Rule for supplying a missing second noun while typing the number understood on:
+	if the player can touch the keypad:
+		now the second noun is the keypad;
+	otherwise:
+		say "There's nothing here you can type on." instead.
+
+Rule for supplying a missing second noun while text typing the topic understood on:
 	if the player can touch the keypad:
 		now the second noun is the keypad;
 	otherwise:
@@ -1864,7 +2013,13 @@ Check typing it on:
 	if the second noun is the calibration panel, try typing the number understood on the keypad instead;
 	unless the second noun is the keypad, say "There is no keypad on [the second noun]." instead;
 	if the number understood is less than zero or the number understood is greater than nine:
-		say "The keypad only has the digits from 0 to 9.";
+		say "The keypad only has the digits from 0 to 9." instead.
+
+Check text typing it on:
+	if the second noun is the calibration display, try text typing the topic understood on the keypad instead;
+	if the second noun is the calibration panel, try text typing the topic understood on the keypad instead;
+	unless the second noun is the keypad, say "There is no keypad on [the second noun]." instead;
+	say "The keypad only has the digits from 0 to 9." instead.
 
 Carry out typing it on:
 	if (sequence position of the keypad) is greater than (sequence length of the keypad):
@@ -1882,13 +2037,3 @@ Carry out typing it on:
 		now the sequence position of the keypad is one;
 		computerize2 "[entry (sequence position of the keypad) of the hints of the keypad]";
 
-Instead of the scanner scanning the keypad:
-	computerize "Component is functional.";
-	rule succeeds.
-
-Instead of the scanner scanning the calibration display:
-	computerize "Component is functional.";
-	rule succeeds.
-
-Instead of the scanner scanning the calibration panel:
-	computerize "Machine is functional. Antenna is [unless the antenna is calibrated]not [end if]calibrated."
