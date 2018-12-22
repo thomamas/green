@@ -93,6 +93,12 @@ Instead of examining a machine:
 		say line break;
 	follow the list attached things when examining receiver or inserter rule. [* from Plugs and Sockets ]
 
+Instead of searching a machine (called m):
+	if the carrying capacity of m is zero:
+		say "You find nothing of interest.";
+	otherwise:
+		continue the action.
+
 Instead of the scanner scanning a machine (called m):
 	now m is scanned;
 	scanner-say "Machine is [if m is functional]functional[else]failed[end if].";

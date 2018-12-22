@@ -1,4 +1,4 @@
- "Founder's Mercy" by Thomas Insel
+"Founder's Mercy" by Thomas Insel
 
 [
 	Copyright © 2019 Thomas Insel <tinsel@tinsel.org>
@@ -29,7 +29,7 @@ When play begins:
 
 Release along with cover art ("A space station."),
 	an interpreter,
-	the source text,
+	[ the source text, ]
 	the introductory booklet,
 	the library card,
 	a file of "Map & Feelies" called "Map.pdf",
@@ -155,13 +155,29 @@ The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are]
 
 (2) Another bug: the rule applies even if the travel is stopped, for example if the player goes in an invalid direction. We try to fix this by moving to an Instead rule instead of a Before rule. Note this is mostly only tested for the case where PS-leaving is PS-allowed.
 
-(3) Additionally, we substitute our preferred language, and adjust so that we don't end up with "The organ pulls out from the cable." instead of "The cable pulls out from the organ."
+(3) Additionally, we substitute our preferred language, and adjust so that we don't end up with "The organ pulls out from the cable." instead of "The cable pulls out from the organ." 
 
-Finally, there is an outstanding issue with the world modeling here. If the player takes two heavy things connected by a cable, but not the cable, they will still pull out and leave the cable behind. Maybe we could fix this by forcing the player to take the cable when they take the other items? ]
+(4) And finally, when there is an uncarried cable which is connected only to one or more things the player is carrying, take the cable before leaving because it's not realistic that it pulls out. ]
 	
 When play begins, now PS-leaving is PS-allowed.
 
 The leaving room whilst attached to fixed things rule is not listed in the Before rulebook.
+
+Before going to somewhere (this is the take connected cables before leaving a room rule):
+	repeat with item running through cables enclosed by the location:
+		unless the player encloses item:
+			let playerct be zero;
+			let roomct be zero;
+			repeat with loop-item running through PS-plugs which are part of the item:
+				let the connectee be the attachment of the loop-item;
+				if the connectee is not nothing:
+					if the holder of the connectee is enclosed by the player:
+						increase playerct by one;
+					otherwise:
+						increase roomct by one;
+			if playerct is greater than zero and roomct is zero: [* player is carrying something and everything connected to the cable ]
+				say "(first taking [the item])[command clarification break]";
+				silently try taking the item.
 
 Instead of an actor going to somewhere (this is the new leaving room whilst attached to fixed things rule):
 	repeat with item running through the attached things enclosed by the player:
@@ -179,8 +195,6 @@ Instead of an actor going to somewhere (this is the new leaving room whilst atta
 					otherwise:
 						say "[The item] [pull] out of [the holder of connectee].";
 	continue the action.
-
-[todo -- when taking a an item with a socket, if you already have another item with a socket, and the two are attached, take the cable[s] between them -- that is the holder of the connectees connecting them. ]
 
 [ D. Some action synonyms ]
 
@@ -310,6 +324,15 @@ This is the test xyzzying rule:
 	announce tests for "xyzzying";
 	try the test-actor xyzzying.
 
+Understand "super analyze" as super-analyzing.
+Super-analyzing is an action applying to nothing.
+
+Carry out super-analyzing:
+	let room list be the list of rooms;
+	repeat with l running through room list:
+		move the player to l;
+		try all-encompassing analyzing.
+
 Include Testing Commands by Thomas Insel.
 
 Section 6 - Real-Time Delays
@@ -354,7 +377,7 @@ Instead of examining the player, say "As virtuous as ever."
 
 The player is carrying the scanner. Understand "hey scanner" and "ok scanner" as the scanner.
 
-The player is wearing a green jumpsuit. The jumpsuit has description "You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the population." Understand "suit" and "jump suit" and "forest green" and "forest jumpsuit" and "forest suit" and "forest jump" as jumpsuit. Understand "forest" as the green jumpsuit when the location is not Sector 5 and the location is not Sector 3. [* Otherwise "forest" alone will have priority over the scenery trees, which is unlikely to be what the player intends ]
+The player is wearing a green jumpsuit. The jumpsuit has description "You have worn modest jumpsuits like this since you were small. Originally, the colors had meanings: forest green for farmers, navy blue for technicians, and so on, but that distinction died even before the community." Understand "suit" and "jump suit" and "forest green" and "forest jumpsuit" and "forest suit" and "forest jump" as jumpsuit. Understand "forest" as the green jumpsuit when the location is not Sector 5 and the location is not Sector 3. [* Otherwise "forest" alone will have priority over the scenery trees, which is unlikely to be what the player intends ]
 
 The pocket is part of the jumpsuit. It is a container.
 
@@ -565,7 +588,8 @@ Every turn during Between Repairs:
 
 Section 5 - Repairing Comms
 
-Repairing Comms is a scene. "This is troubling. You counted. You were sure there would be one pod left. There are none."
+Repairing Comms is a scene. "You've been here before, of course, when other families were leaving. They always had a seat for you, but you stayed behind to care for your parents. And then there was nobody else left.[paragraph break]But this is troubling: you had counted, and you were sure there would be one pod left, but there are none."
+
 Repairing Comms begins when the player is in Pod Bay for the first time.
 Repairing Comms ends when The End begins.
 
@@ -573,10 +597,10 @@ When Repairing Comms begins: increase the score by 1. [* for entering the pod ba
 
 Every turn during Repairing Comms:
 	let t be the total minutes of time since Repairing Comms began;
-	if t is 3:
-		say "No pods left ... you consider despair.";
-	if t is 5:
-		say "So what if you can't escape in a pod. You will just need to bring a pod here. Time to get the communications module working."
+	if t is 2:
+		say "No pods left ... you breathe deeply and fight off a wave of despair.";
+	if t is 4:
+		say "You breathe deeply again. Of course there's another way. You will just need to find a way to communicate outside."
 
 Section 6 - The End
 
@@ -916,7 +940,7 @@ Before pushing or pulling or turning or taking the plow, say "The plow is too he
 
 Before going with the plow, try pushing the plow instead.
 
-A hoe is in the barn. It is bulky. It has description "A straight-handled draw hoe. You have worked the fields by hand for a long time, so it is well worn."
+A hoe is in the barn. It is bulky. It has description "A straight-handled draw hoe. You have been working the fields by hand now, so it is well worn."
 
 Section 2 - Pod Control
 
@@ -924,7 +948,7 @@ Pod Control is a room in Underneath. "This room serves as an airlock for the pod
 
 A space suit is here. It is machinelike scenery. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: every seal is leaking and there are no spares left."
 
-Before doing anything other than examining or scanning to the space suit, say "It is very bulky and useless." instead
+Before doing anything other than examining or scanning to the space suit, say "It is bulky and useless." instead
 
 Instead of the scanner scanning the space suit:
 	computerize "Machine is failed.";
@@ -938,7 +962,7 @@ Understand "message" and "error" as the status display when the pod bay is not r
 
 Instead of examining the status display:
 	now the status display is examined;
-	if the pod bay is ready:
+	if the pod bay is ready:		
 		say "The status display glows green.";
 	otherwise:
 		computerize2 "Pod bay locked down";
@@ -1005,7 +1029,7 @@ To say pod-bay-door-pb:
 
 Section 3 - Pod Bay
 
-There is a room called Pod Bay. "There are four berths for transit pods. Unfortunately, all are empty." It has destination name "the pod bay". Pod Bay is in Underneath. Pod Bay is not pressurized.
+There is a room called Pod Bay. "There are four berths for transit pods. Unfortunately, all are empty. There is also a pile of clutter. It looks like equipment removed to free up space in the transit pods." It has destination name "the pod bay". Pod Bay is in Underneath. Pod Bay is not pressurized.
 
 Instead of going nowhere from Pod Bay when the noun is outside, try going starboard.
 Instead of exiting in Pod Bay, try going starboard.
@@ -1016,7 +1040,7 @@ Instead of opening or closing the berths, say "The doors open and close automati
 Instead of unlocking the berths with something, try opening the berths.
 Instead of locking the berths with something, try closing the berths.
 
-A pile of clutter is here. It is a fixed in place container. "There is a pile of clutter. It looks like equipment removed to free up space in the transit pods." Understand "equipment" as the pile of clutter.
+A pile of clutter is here. It is a fixed in place scenery container. Understand "equipment" as the pile of clutter.
 
 Instead of pulling or pushing or turning or squeezing or swinging the pile:
 	say "That isn't practical."
@@ -1156,7 +1180,7 @@ Before house-going, try entering S3B2 instead.
 
 Section 1 - Church
 
-The Church is a room. "Before everyone left or died, you celebrated every sabbath here. The altar stands against one wall, and an organ[if the portable audio unit is undescribed] and a portable audio unit stand[else] stands[end if] against the other." It has destination name "the church".
+The Church is a room. "Before everyone left, you celebrated every sabbath here. The altar stands against one wall, and an organ[if the portable audio unit is undescribed] and a portable audio unit stand[else] stands[end if] against the other." It has destination name "the church".
 
 Sector 3 is outside of church.
 
@@ -1432,12 +1456,13 @@ Test learning with "gonear learning / out / purloin instructional modules / scan
 
 The learning counter is a number that varies.
 
-Table of Lessons [TODO]
+Table of Lessons
 lesson text
 "The hologram is beginning a new lesson."
 "The hologram is introducing a lesson on the virtues of hard work."
 "The lesson on hard work continues. You've heard it many many times before." 
 "The lesson on hard work continues."
+"The hologram is cautioning you to work diligently for the joy of the good it will do."
 "The hologram is covering the many dangers of idle hands."
 "The hologram is concluding the lesson on hard work."
 "The hologram is explaining a homework assignment."
@@ -1657,7 +1682,7 @@ Platform 3 is a room in The Platforms. "A platform about two thirds of the way t
 
 Before going down from Platform 3, say "You [if the player is wearing the gravity boots]climb[else]slide[end if] down the pylon.";
 
-A red circuit breaker is a circuit breaker in Platform 3. "There is a red circuit breaker here." The red circuit breaker is machinelike. [todo - better description]
+A red circuit breaker is a circuit breaker in Platform 3. "There is a red circuit breaker here." The red circuit breaker is machinelike. It has description "It is labelled '36-87.'" [todo - better description - FM36-87/A ]
 
 Instead of the scanner scanning the red circuit breaker:
 	computerize "Machine is functional. Breaker is [if the red circuit breaker is switched on]closed[otherwise]open[end if].";
@@ -1881,9 +1906,9 @@ A lever is here. It is scenery. It is a container with carrying capacity 1. Unde
 
 Instead of examining the lever:
 	if the hoe is in the lever:
-		say "The hoe extends from a short length of hollow steel pipe, forming a lever which [if the location is pressurized]is pushed against the wall[otherwise]is pulled out from the wall[end if].";
+		say "The hoe extends from a short length of hollow steel pipe, forming a lever which [if the location is pressurized]is pushed against the wall[otherwise]is angled out from the wall[end if].";
 	otherwise:
-		say "A short length of hollow steel pipe [if the location is pressurized]pushed against the wall[otherwise]pulled out from the wall[end if]."
+		say "A short length of hollow steel pipe [if the location is pressurized]pushed against the wall[otherwise]angled out from the wall[end if]."
 
 Before pushing the hoe when the hoe is in the lever, try pushing the lever instead.
 Before pulling the hoe when the hoe is in the lever, try pulling the lever instead.
@@ -1924,9 +1949,9 @@ Instead of tying the hoe to the lever, say "Yes, but how?" [* Mostly for attach.
 
 [ antenna calibration ]
 
-The calibration panel is scenery in Antenna Control.  It is a machine. It has indefinite article "the". It has description "This is clearly the antenna calibration panel. It has a display, a keypad, and a yellow RF cable." Incorporated by the calibration panel is an RF socket. Understand "antenna calibration" and "control" as the panel.
+The calibration panel is scenery in Antenna Control. It is a machine. It has indefinite article "the". It has description "This is clearly the antenna calibration panel, made up of a display, a keypad, and a yellow RF cable." Incorporated by the calibration panel is an RF socket. Understand "antenna calibration" and "control" as the panel.
 
-A yellow cable is a cable in Antenna Control. ["A yellow cable waves from a small panel." ] It is scenery. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
+A yellow cable is a cable in Antenna Control. ["A yellow cable waves from a small panel." ] It is undescribed. It has description "A two meter yellow RF cable." Understand "RF" as the yellow cable. Incorporated by it are two RF plugs.
 
 Instead of unplugging the yellow cable from the calibration panel:
 	say "The yellow cable is permanently attached to the panel.";
@@ -2036,4 +2061,3 @@ Carry out typing it on:
 		computerize2 "Calibration rejected.[line break]Restarting sequence.";
 		now the sequence position of the keypad is one;
 		computerize2 "[entry (sequence position of the keypad) of the hints of the keypad]";
-
