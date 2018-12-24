@@ -5,7 +5,7 @@
 	http://tinsel.org/IF/
 
 	This work is licensed under a Creative Commons Attribution 4.0 International License.
-	https://creativecommons.org/licenses/by/4.0/	
+	https://creativecommons.org/licenses/by/4.0/
 ]
 
 Book 1 - Setup
@@ -266,8 +266,8 @@ This is the test typing on rule:
 	try typing 7 on the noun.
 
 This is the test text typing on rule:
-	say "[italic type]typing mimolette on [the noun]: [roman type]";
-	try text typing "mimolette" on the noun.
+	say "[italic type]typing gruyère on [the noun]: [roman type]";
+	try text typing "gruyère" on the noun.
 
 This is the test feeding rule:
 	announce tests for "feeding [the noun]";
@@ -422,7 +422,7 @@ Section 1 - Remove Some Actions
 
 Understand the command "wake" as something new. [* Too self-referential. ]
 Understand the command "buy" as something new. [* There is no money in this story. ]
-Understand the commands "lock" and "unlock" as something new. [* This at least explictly hints you never need a key for a locked door. ]
+Understand the commands "lock" and "unlock" as something new. [* This at least explicitly hints you never need a key for a locked door. ]
 
 [ the following is a lot of trouble just to get rid of consulting it about ]
 
@@ -1108,17 +1108,18 @@ Instead of drinking or tasting the pond, say "It tastes murky."
 Instead of searching the pond, say "From above, you can make out a few fish in the murky water."
 
 Instead of entering the pond:
-	if the player is wearing the blanket:
+	if the green valve is switched on:
+		say "There is nothing more for you to do underwater.";
+	otherwise if the player is wearing the blanket:
 		say "Not while you're wearing the blanket. It would be soaked.";
-	otherwise if the player is wearing the mask:
-		if the green valve is switched on:
-			say "There is nothing more for you to do underwater.";
-		otherwise:		
-			say "You set your belongings aside. With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a valve and open it, then swim to the surface, climb out, and recover everything you were carrying.";
-			now the green valve is switched on;
-			increase the score by 1;
+	otherwise if the player is wearing the gravity boots:
+		say "You don't think you could swim whie you're wearing the gravity boots.";
+	otherwise unless the player is wearing the mask:
+		say "You can't hold your breath long enough to make that worthwhile.";
 	otherwise:
-		say "You can't hold your breath long enough to make that worthwhile."
+		say "You set your belongings aside. With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a valve and open it, then swim to the surface, climb out, and recover everything you were carrying.";
+		now the green valve is switched on;
+		increase the score by 1.
 
 Some fish are animals and scenery in sector 2. They have description "There are still a few fish swimming in the pond, but they taste horrible."
 
@@ -1408,14 +1409,16 @@ Instead of taking the canned vegetables:
 
 Instead of eating or tasting or opening the jar of okra: say "You aren't hungry."
 
-A handful of split peas is nowhere. "It's a handful of split peas." [todo - desc]
+A handful of split peas is nowhere. It has description "A handful of split peas wrapped in a scrap of old paper." Understand "scrap" and "of old" and "old" and "of paper" and "paper" as handful of split peas.
+
+Before opening the handful of split peas, say "They would just go everywhere." instead.
 
 Instead of taking the bag of split peas:
 	if the handful of split peas is nowhere:
-		say "You take a handful of split peas.";
+		say "You find a scrap of old paper and wrap up a handful of split peas.";
 		find and take the handful of split peas;
 	otherwise:
-		say "You aren't hungry, and you have already taken a handful."
+		say "You aren't hungry, and you have already taken some."
 
 Chapter 5 - Sector 5
 
@@ -1698,7 +1701,7 @@ Instead of examining the ground in platform 3, say "The pylon descends into the 
 
 Section 3 - Platform 5
 
-Platform 5 is a room in The Platforms. "This plarform is [if the pigeons are in Platform 5]home to a flock of pigeons.[else]white with pigeon droppings.[end if] You can continue spinward or antispinward." Sector 5 is down from Platform 5. Nothing is up from Sector 5. Platform 5 is spinward from Platform 3 and antispinward from Platform 1.
+Platform 5 is a room in The Platforms. "This platform is [if the pigeons are in Platform 5]home to a flock of pigeons.[else]white with pigeon droppings.[end if] You can continue spinward or antispinward." Sector 5 is down from Platform 5. Nothing is up from Sector 5. Platform 5 is spinward from Platform 3 and antispinward from Platform 1.
 
 Before going down from Platform 5, say "You slide down the pylon."
 
@@ -1710,7 +1713,7 @@ The pigeon droppings are plural-named scenery in Platform 5. They have descripti
 
 Before doing anything other than examining to the pigeon droppings, say "You don't really want to touch the pigeon droppings." instead.
 
-A flock of pigeons is scenery and an animal in Platform 5. It has description "Descendents of the flock your grandparents brought here for food." Understand "pigeon" as pigeons. The pigeons can be annoyed.
+A flock of pigeons is scenery and an animal in Platform 5. It has description "Descendants of the flock your grandparents brought here for food." Understand "pigeon" as pigeons. The pigeons can be annoyed.
 
 Every turn when the player is not in Platform 5 and the pigeons are not in Platform 5:
 	now the pigeons are in Platform 5.
