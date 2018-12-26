@@ -29,6 +29,11 @@ https://creativecommons.org/licenses/by/4.0/
 See <https://github.com/erkyrath/quixe/wiki/Quixe-Graphics-Support>
 for more on Step 3.
 
+TODO: use Applescript to automate PDF export from OmniGraffle & then try 
+`/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py`
+to merge pages into Map.pdf.
+
+
 ## Extensions
 
 See https://github.com/i7/extensions, but we have copied in any extension that doesn't ship
