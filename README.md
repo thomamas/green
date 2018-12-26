@@ -15,12 +15,19 @@ https://creativecommons.org/licenses/by/4.0/
 
 2. Build for release with Inform
 
-3. `aws s3 sync --acl=public-read Release/ s3://assets.tinsel.org/assets/IF/FM/`
+3. Add picture info:
+
+      python tools/blorbtool.py FoundersMercy.materials/Release/Founder\'s\ Mercy.gblorb giload FoundersMercy.materials/Release/interpreter interpreter
+
+4. `aws s3 sync --acl=public-read Release/ s3://assets.tinsel.org/assets/IF/FM/`
    (or `FM-beta1-release4` or similar)
 
-### Adding Picturs
+## Release Process Notes
 
-If relevant, read <https://github.com/erkyrath/quixe/wiki/Quixe-Graphics-Support>.
+`Makefile` automates 2-3 so far.
+
+See <https://github.com/erkyrath/quixe/wiki/Quixe-Graphics-Support>
+for more on Step 3.
 
 ## Extensions
 

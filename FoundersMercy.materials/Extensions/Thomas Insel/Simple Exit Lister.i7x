@@ -19,8 +19,11 @@ left	central	right
 " [left hand status line]"	""	"[right hand status line]"
 " Exits: [exit status line]"	""	""
 
+Status-line-blank is a truth state that varies. Status-line-blank is usually false.
+
 Rule for constructing the status line (this is the exit lister status line rule):
-	fill status bar with the Table of Exit Status;
+	unless status-line-blank is true:
+		fill status bar with the Table of Exit Status;
 	rule succeeds.
 
 To say exit status line:

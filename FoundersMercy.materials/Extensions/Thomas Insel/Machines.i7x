@@ -172,7 +172,7 @@ To explain the scanner:
 		now the scanner fail count is 0;
 		now the scanner is explained;
 		unless examining, say "[line break]";
-		scanner-note "You can ask the scanner for a list of commands by typing 'scanner, help' and give it voice commands by typing phrases such as 'scanner, scan SOMETHING' where SOMETHING is a visible object.";
+		scanner-note "You can ask the scanner for a list of commands by typing SCANNER, HELP and give it voice commands by typing phrases such as SCANNER, SCAN SOMETHING where SOMETHING is a visible object.";
 	otherwise:
 		increase the scanner fail count by 1;
 		if the scanner fail count is 3:
@@ -210,7 +210,7 @@ Carry out the scanner scanning the scanner:
 	rule succeeds.
 
 Carry out the scanner getting help:
-	scanner-say "Recognized commands are 'help' and 'scan'.";
+	scanner-say "Recognized commands are HELP and SCAN.";
 	now the scanner is not explained;
 	explain the scanner;
 	rule succeeds.
@@ -239,12 +239,10 @@ To say internal rule exception:
 		say "I didn't understand that instruction."
 
 [
-	Let's also change the message for vaguely going, because we don't have compass directions.
 
 	It is possible to put logic here like "if the person asked is the scanner and the player is holding the scanner", but then we would probably need to deal with other incomplete commands like "scanner, open" and let's just not open that door.
 ]
 
-The block vaguely going rule response (A) is "You'll have to say which direction to go in."
 
 Machines ends here.
 

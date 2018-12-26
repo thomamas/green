@@ -29,7 +29,7 @@ When play begins:
 
 Release along with cover art ("A space station."),
 	an interpreter,
-	[ the source text, ]
+	[the source text,]
 	the introductory booklet,
 	the library card,
 	a file of "Map & Feelies" called "Map.pdf",
@@ -41,14 +41,20 @@ Understand "about" or "credits" as requesting the credits.
 	
 After printing the banner text rule:
 	say "Type ABOUT for credits or HINT for assistance.";
-	
+
 Carry out requesting the credits:
 	say	"[bold type]About Founder's Mercy[roman type][line break]",
 		"This is my second released Inform project, conceived and implemented in the last months of 2018.[paragraph break]",
 		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, Erik Temple for the Real-Time Delays extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister and keypad code is inspired by Emily Short's Computers.[paragraph break]",
+		[]
 		"The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]",
+		[
+			TODO - Rick Guidice & others
+		]
 		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this story at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]",
 		"This work is Copyright © [the story creation year] Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type])."
+
+Chapter 2 - Final Questions
 
 Table of Final Question Options (continued) 
 final question wording	only if victorious	topic	final response rule	final response activity
@@ -56,13 +62,23 @@ final question wording	only if victorious	topic	final response rule	final respon
 
 This is the final credits rule: try requesting the credits.
 
-Chapter 2 - Scoring
+Rule for amusing a victorious player:
+	say "Have you tried...";
+	repeat through the Table of Amusing Actions:
+		say "   ...[no line break][subject entry][line break]";
+
+Table of Amusing Actions
+Subject
+"visiting the pigeons?"
+"fixing the learning machine?"
+
+Chapter 3 - Scoring
 
 Use scoring. The maximum score is 10. [* See PuzzleChart.graffle for scoring summary ]
 
 An object can be scored. An object is usually not scored.
 
-Chapter 3 - Notes
+Chapter 4 - Notes
 
 To say start note: say "[note style][bracket]".
 To say stop note: say "[close bracket][roman type]".
@@ -74,7 +90,7 @@ To computerize (x - some text): say "[start computer][x][stop computer][line bre
 To note (x - some text): say "[start note][x][stop note][line break]".
 To computerize2 (x - some text): say "[first custom style][x][roman type][line break]"
 
-Chapter 4 - Misc Phrases
+Chapter 5 - Misc Phrases
 
 To find and take (s - an object):
 	now s is in the holder of the player;
@@ -94,7 +110,7 @@ To say uc (t - a thing): [* Is this really the best way to do this? ]
 To say -: say Unicode 8211.
 To say --: say Unicode 8212.
 
-Chapter 5 - Room Adjectives
+Chapter 6 - Room Adjectives
 
 A room can be pressurized. A room is usually pressurized.
 
@@ -104,7 +120,7 @@ Instead of taking off something in a frigid room:
 	unless the noun is the jumpsuit or the noun is the blanket, continue the action;
 	say "It is too cold here to even consider removing [the noun]."
 
-Chapter 6 - Extensions
+Chapter 7 - Extensions
 
 Section 1 - Text
 
@@ -116,13 +132,13 @@ special-style-1	"#227722"	true
 special-style-2	"#2222cc"	true
 alert-style	"#cc2222"	false
 
-Section 2 - Exit Lister
+Section 3 - Exit Lister
 
 Include version 1 of Simple Exit Lister by Thomas Insel.
 
 A room is usually familiar. [* Since the player has already visited most of the station ]
 
-Section 3 - Plugs and Sockets
+Section 4 - Plugs and Sockets
 
 [ Fix or adapt a few things about Plugs and Sockets, but it is still a bit complicated and has some issues. Also consider:
 
@@ -139,11 +155,27 @@ Include version 4/170924 of Plugs and Sockets by Sean Turner
 
 	but this is better:
 
-		You can see an organ, an audio unit, and an USB cable (plugged into an organ and an audio unit) here.
+		You can see an organ, an audio unit, and an USB cable (plugged into the organ and the audio unit) here.
 
 	Still not without issues: if you are holding the cable then it doesn't show up in the room at all, complicated connections wouldn't be clear, etc. ]
 
 The list attached things when listing receiver or inserter rule response (A) is "".
+
+To say inserter status of the (item - a thing):
+	now connect listing is true;
+	let total be the count of occupied plugs of the item;
+	let count be 0;
+	repeat with loop-item running through the PS-plugs which are part of the item:
+		if the attachment of the loop-item is not nothing:
+			increase the count by 1;
+			if the count is 1:
+				say "plugged into ";
+			else if the count is total:
+				say " and ";
+			else:
+				say ", ";
+			say "[the holder of the attachment of the loop-item]"; [* changed from "a" to "the" ]
+	now connect listing is false.
 
 [ B. Make style fit for command explanation ]
 
@@ -234,7 +266,7 @@ Instead of the scanner scanning a ps-plug:
 	computerize "Plug is functional.";
 	rule succeeds.
 
-Section 4 - Machines
+Section 5 - Machines
 
 Include Machines by Thomas Insel.
 
@@ -245,7 +277,7 @@ A power module is a kind of module.
 An instruction module is a kind of module.
 A pressure regulation module is a kind of module. Understand "regulator" as a pressure regulation module.
 
-Section 5 - Testing - Not for Release
+Section 6 - Testing - Not for Release
 
 Include Object Response Tests by Juhana Leinonen.
 
@@ -335,13 +367,13 @@ Carry out super-analyzing:
 
 Include Testing Commands by Thomas Insel.
 
-Section 6 - Real-Time Delays
+Section 7 - Real-Time Delays
 
 Include Real-Time Delays by Erik Temple.
 
 To beat: if glulx timekeeping is supported, wait 1000 milliseconds before continuing;
 
-Chapter 7 - Directions
+Chapter 8 - Directions
 
 The starboard is a direction. The starboard has opposite port. Understand "s" as starboard.
 
@@ -369,9 +401,11 @@ Index map with spinward mapped as north. Index map with antispinward mapped as s
 Before climbing up, try going up instead.
 Before climbing down, try going down instead.
 
-Chapter 8 - The Player
+The block vaguely going rule response (A) is "You'll have to say which direction to go in." [* Let's change the message for vaguely going, because we don't have compass directions. ]
 
-The player is female. The carrying capacity of the player is 5. [* If it were smaller than 4, there would be busy work shuffling bulky items. ]
+Chapter 9 - The Player
+
+The player is female. The carrying capacity of the player is 6. [* If it were smaller than 4, there would be busy work shuffling bulky items. ]
 
 Instead of examining the player, say "As virtuous as ever."
 
@@ -383,7 +417,8 @@ The pocket is part of the jumpsuit. It is a container.
 
 A thing can be bulky. A thing is usually not bulky.
 
-Before an actor taking: [* The pocket can't work as a player's holdall, which be directly carried, so let's try this instead ]
+
+This is the use the jumpsuit pocket rule: [* The pocket can't work as a player's holdall, which be directly carried, so let's try this instead ]
 	if the number of things carried by the actor is at least the carrying capacity of the actor:
 		if the actor is wearing the green jumpsuit or the actor is holding the green jumpsuit:
 			let the transferred item be nothing;
@@ -395,6 +430,11 @@ Before an actor taking: [* The pocket can't work as a player's holdall, which be
 				silently try the actor trying inserting the transferred item into the pocket;
 				if the transferred item is not in the pocket:
 					stop the action.
+
+The use the jumpsuit pocket rule is listed before the use player's holdall to avoid exceeding carrying capacity rule in the check taking rulebook.
+
+The use the jumpsuit pocket rule is listed before the can't exceed carrying capacity when taking off rule in the check taking off rulebook.
+
 
 After examining the jumpsuit:
 	if the pocket contains something:
@@ -416,7 +456,7 @@ Instead of taking inventory:
 		say "[line break][Our] jumpsuit pocket contains:[line break]";
 		list the contents of the pocket, with newlines, indented, including contents, giving inventory information, with extra indentation.
 
-Chapter 9 - Actions
+Chapter 10 - Actions
 
 Section 1 - Remove Some Actions
 
@@ -621,6 +661,8 @@ Every turn during The End:
 		say "'We can have a pod there in about a thousand minutes.'[no line break]";
 		beat;
 		end the story finally saying "You are not alone.".
+
+Test win with "purloin all power / scan power / scan unscanned power / scan unscanned power / gonear organ / unplug gray from organ / get gray / get audio / gonear yellow / purloin hoe / purloin comms / put hoe in lever / push lever / plug gray into comms / plug yellow into comms / put functional power in audio / press 3 / press 8 / press 5 / press 2"
 
 Book 3 - Hints
 
@@ -1106,6 +1148,7 @@ Before swimming in the pond, try entering the pond instead.
 
 Instead of drinking or tasting the pond, say "It tastes murky."
 Instead of searching the pond, say "From above, you can make out a few fish in the murky water."
+Instead of touching the pond, say "It feels cold and wet."
 
 Instead of entering the pond:
 	if the green valve is switched on:
@@ -1461,20 +1504,22 @@ The learning counter is a number that varies.
 
 Table of Lessons
 lesson text
-"The hologram is beginning a new lesson."
-"The hologram is introducing a lesson on the virtues of hard work."
-"The lesson on hard work continues. You've heard it many many times before." 
-"The lesson on hard work continues."
-"The hologram is cautioning you to work diligently for the joy of the good it will do."
-"The hologram is covering the many dangers of idle hands."
-"The hologram is concluding the lesson on hard work."
-"The hologram is explaining a homework assignment."
-"The hologram is beginning a new lesson."
+"The hologram is introducing a history lesson."
+"The hologram is explaining how, near the end of the twenty-first century, the All Knowing revealed His Three Teachings and The Plan to the Founder."
+"The lesson covers the Three Teachings: the evil of modern society, the virtue of living apart, and the value of manual labor."
+"The hologram is explaining the All Knowing's Plan for the Chosen to found space colonies where they could farm in the old ways with pure soil and clean air."
+"The hologram is teaching how select groups of the Chosen were able to sign mortgages so the Founder's engineers could build stations for them."
+"The hologram is reviewing the history lesson, having omitted the last several decades."
 "The hologram is introducing a lesson on crop rotation."
 "The hologram is explaining a four year cycle of alfalfa, corn, oats, and wheat."
 "The lesson on crop rotation continues. You're very familiar with this material."
 "The hologram is explaining a three year cycle of roots, legumes, and greens."
-"The hologram is reviewing crop rotation."
+"The hologram is reviewing crop rotation and explaining a homework assignment."
+"The hologram is introducing a lesson on the virtues of hard work."
+"The lesson on hard work continues. You've heard it many many times before." 
+"The hologram is cautioning you to work diligently for the joy of the good it will do."
+"The hologram is covering the many dangers of idle hands."
+"The hologram is concluding the lesson on hard work."
 
 Every turn when the learning machine is functional:
 	increase the learning counter by one;
@@ -1875,7 +1920,9 @@ Section 3 - Antenna Control
 Antenna Control is an unfamiliar frigid room in zero-g. "[antenna-control-desc]". It has destination name "antenna control". Antenna Control is not pressurized.
 
 To say antenna-control-desc:
-	say "You float weightless at the port end of a cylinder. Through a surprisingly large window, you can see the station rotating around you, solar panels, and antennas, all backed by a spectacular field of stars. 	[if the hoe is in the lever]Your hoe extends the short lever in the floor[else]A short lever extends from the floor[end if], and a yellow cable [if the count of occupied plugs of the yellow cable is one]waves from a small control panel[else]is [inserter status of the yellow cable][end if].[paragraph break]It is very cold and dark here[if antenna control is not pressurized] in the near vacuum[end if]. An airlock door leads starboard.[run paragraph on]"
+	say "You float weightless at the port end of a cylinder. It is cold and dark here[if antenna control is not pressurized] in the near vacuum[end if], but that only serves to highlight the view through a surprisingly large window: you can see the station rotating around you, solar panels, and antennas, all backed by a spectacular field of stars. [if the hoe is in the lever]Your hoe extends the short lever in the floor[else]A short lever extends from the floor[end if], and a yellow cable [if the count of occupied plugs of the yellow cable is one]waves from a small control panel[else]is [inserter status of the yellow cable][end if]. An airlock door leads starboard.[run paragraph on]"
+
+[ todo -- cold and dark vs. window ]
 
 Every turn when the player is in Antenna Control and Antenna Control is not scored:
 	increase the score by 2;
