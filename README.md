@@ -22,7 +22,31 @@ tools:
 
 ## Release Instructions
 
-Edit `Makefile` and run `make Release` to build a complete release directory or `make Sync` to upload to AWS S3.
+Edit `Makefile` as necessary and...
+
+* `make release` -- build release
+* `make test` -- run tests
+* `make clean` -- remove build artifacts
+* `make cleaner` -- remove build artifacts and test interpreters
+* `make sync` -- upload to AWS S3
+
+All of this is really only necessary for automating a reasonable test suite.
+Otherwise shift-command-R works fine.
+
+## Extensions
+
+The following extensions, which are not bundled with Inform 7 build 6M62,
+are included from https://github.com/i7/extensions/
+
+    FoundersMercy.materials/Extensions/Erik Temple/Real-Time Delays.i7x
+    FoundersMercy.materials/Extensions/Juhana Leinonen/Object Response Tests.i7x
+    FoundersMercy.materials/Extensions/Sean Turner/Plugs and Sockets.i7x
+
+And these are local:
+
+    FoundersMercy.materials/Extensions/Thomas Insel/Machines.i7x
+    FoundersMercy.materials/Extensions/Thomas Insel/Simple Exit Lister.i7x
+    FoundersMercy.materials/Extensions/Thomas Insel/Testing Commands.i7x
 
 ## Independent Study
 

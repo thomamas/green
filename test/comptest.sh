@@ -2,12 +2,13 @@
 
 git_exe=../tools/interpreters/bin/cheap-git
 #gblorb=../FoundersMercy.materials/Release/Founder\'s\ Mercy.gblorb  # or should we use the Build directory? or release for testing? or ???
-gblorb=../FoundersMercy.inform/Build/output.gblorb
+#gblorb=../FoundersMercy.inform/Build/output.gblorb
+gblorb=../FoundersMercy.inform/Build/output.ulx
 
 touch testing.glkdata
 
 for script in scripts/*.in ; do
-  echo "* " ${script}
+  echo '*' ${script}
 
   target=`echo ${script} | sed s/\.in$/\.target/`
   out=`echo ${script} | sed s/\.in$/\.out/`

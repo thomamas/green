@@ -1,8 +1,3 @@
-** game: ../FoundersMercy.inform/Build/output.ulx 
-** interpreter: ../tools/interpreters/bin/git
-
-
-
 * fast-walkthrough
 
 > version
@@ -160,3 +155,92 @@ A Space Story by Thomas Insel
 > z
 
 OV-
+
+* learning machine
+
+>out
+>out
+>sw
+>sw
+>d
+(first opening the floor hatch)
+
+Supply Vault
+This room is dim, quiet, and stuffy. There is still one crate of machine parts left.
+
+There is an open hatch in the ceiling.
+
+You can also see a pair of gravity boots here.
+
+>search crate
+You find an instruction module and a pressure regulation module.
+
+>u
+>asw
+>in
+
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+>scan instructional module
+Module is functional.
+
+>get instructional module from learning machine
+Taken.
+
+>put functional module in learning machine
+You put the functional instruction module into the learning machine.
+
+A hologram flickers to life as the learning machine starts up.
+
+>z
+Time passes.
+
+The hologram is introducing a history lesson.
+
+>z
+Time passes.
+
+The hologram is explaining how, near the close of the twenty-first century, the All Knowing revealed His Three Teachings and The Plan to the Founder.
+
+>z
+Time passes.
+
+The lesson covers the Three Teachings: the evil of modern society, the virtue of living apart, and the value of manual labor.
+
+>z
+Time passes.
+
+The hologram is explaining the All Knowing's Plan for the Chosen to found space colonies where they could farm in the old ways with pure soil and clean air.
+
+>z
+Time passes.
+
+The hologram is teaching how select groups of the Chosen were able to sign mortgages so the Founder's engineers could build stations for them.
+
+>z
+Time passes.
+
+The hologram is reviewing the history lesson, having omitted the last several decades.
+
+>z
+Time passes.
+
+The hologram is introducing a lesson on crop rotation.
+
+>z
+Time passes.
+
+The hologram is explaining a four year cycle of alfalfa, corn, oats, and wheat.
+
+>z
+Time passes.
+
+The lesson on crop rotation continues. You're very familiar with this material.
+
+>z
+Time passes.
+
+The hologram is explaining a three year cycle of roots, legumes, and greens.

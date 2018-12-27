@@ -36,7 +36,7 @@ release: feelies $(DIR_PRO)/Build/output.ulx
 	mkdir -p $(DIR_MAT)/Release/interpreter
 	$(DIR_EXE)/cBlorb $(DIR_PRO)/Release.blurb $(DIR_PRO)/Build/output.gblorb
 	cp $(DIR_PRO)/Build/output.gblorb $(DIR_MAT)/Release/$(PROJECT).gblorb
-	# python tools/blorbtool.py $(DIR_MAT)/Release/$(PROJECT).gblorb giload $(DIR_MAT)/Release/interpreter interpreter # not currently necessary
+	# python tools/blorbtool.py $(DIR_MAT)/Release/$(PROJECT).gblorb giload $(DIR_MAT)/Release/interpreter interpreter
 
 feelies: $(DIR_MAT)/Map.pdf
 
@@ -60,9 +60,15 @@ tools/interpreters/bin/rem-git:
 	cd tools/interpreters && make bin/rem-git
 
 comptest: release tools/interpreters/bin/cheap-git
+	@echo
+	@echo --- Simple Test
+	@echo
 	cd test && ./comptest.sh
 
 regtest: release tools/interpreters/bin/rem-git
+	@echo
+	@echo --- RegTest
+	@echo
 	cd test && ./regtest.sh
 
 test: comptest regtest
