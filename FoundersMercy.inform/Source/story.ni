@@ -281,7 +281,9 @@ Section 6 - Testing part 1
 The File of Tests is called "testing".
 
 When play begins:
-	if the File of Tests exists, note "Seeding random-number generator to 1234 for automated testing.";
+	if the File of Tests exists:
+		note "Seeding random-number generator to 1234 for automated testing.";
+		seed the random-number generator with 1234.
 
 Section 7 - Testing - Not for Release
 

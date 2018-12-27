@@ -21,7 +21,10 @@ all: release
 
 clean:
 	rm -rf $(DIR_PRO)/Build $(DIR_MAT)/Release ./gameinfo.dbg ./art/Feelies/Build ./tools/makeFeelies.scpt
-	cd ./tools/interpreters && make clean
+	rm -f ./test/scripts/*.out
+
+cleaner: clean
+	cd tools/interpreters && make clean
 
 $(DIR_PRO)/Build/auto.inf: $(DIR_PRO)/Source/story.ni
 	$(DIR_EXE)/ni $(OPTS_NI) -internal $(DIR_INT) -project $(DIR_PRO) -format=ulx -release
@@ -31,8 +34,8 @@ $(DIR_PRO)/Build/output.ulx: $(DIR_PRO)/Build/auto.inf $(DIR_MAT)/Extensions/*/*
 
 release: feelies $(DIR_PRO)/Build/output.ulx
 	mkdir -p $(DIR_MAT)/Release/interpreter
-	$(DIR_EXE)/cBlorb $(DIR_PRO)/Release.blurb $(DIR_PRO)/Build/output.glblorb
-	cp $(DIR_PRO)/Build/output.glblorb $(DIR_MAT)/Release/$(PROJECT).gblorb
+	$(DIR_EXE)/cBlorb $(DIR_PRO)/Release.blurb $(DIR_PRO)/Build/output.gblorb
+	cp $(DIR_PRO)/Build/output.gblorb $(DIR_MAT)/Release/$(PROJECT).gblorb
 	# python tools/blorbtool.py $(DIR_MAT)/Release/$(PROJECT).gblorb giload $(DIR_MAT)/Release/interpreter interpreter # not currently necessary
 
 feelies: $(DIR_MAT)/Map.pdf
@@ -50,13 +53,16 @@ tools/makeFeelies.scpt: tools/makeFeelies.applescript
 sync: release
 	aws s3 sync --acl=public-read $(DIR_MAT)/Release/ $(S3_PATH)
 
-tools/interpreters/bin/git:
-	cd tools/interpreters && make bin/git
+tools/interpreters/bin/cheap-git:
+	cd tools/interpreters && make bin/cheap-git
 
-comptest: release tools/interpreters/bin/git
-	cd test && ./test.sh
+tools/interpreters/bin/rem-git:
+	cd tools/interpreters && make bin/rem-git
 
-regtest: release tools/interpreters/bin/git
+comptest: release tools/interpreters/bin/cheap-git
+	cd test && ./comptest.sh
+
+regtest: release tools/interpreters/bin/rem-git
 	cd test && ./regtest.sh
 
 test: comptest regtest
