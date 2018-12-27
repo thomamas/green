@@ -15,3 +15,5 @@ art/Feelies/Build/
 .DS_Store
 gameinfo.dbg
 tools/makeFeelies.scpt
+tools/interpreters/*/*
+tools/interpreters/*.tar.gz

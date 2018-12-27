@@ -43,14 +43,11 @@ After printing the banner text rule:
 	say "Type ABOUT for credits or HINT for assistance.";
 
 Carry out requesting the credits:
+	carry out the amusing a victorious player activity;
 	say	"[bold type]About Founder's Mercy[roman type][line break]",
 		"This is my second released Inform project, conceived and implemented in the last months of 2018.[paragraph break]",
 		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, Erik Temple for the Real-Time Delays extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister and keypad code is inspired by Emily Short's Computers.[paragraph break]",
-		[]
 		"The cover art is adapted from Figure 1.1 from NASA SP-413, [italic type]Space Settlements: A Design Study[roman type], edited by Richard D. Johnson and Charles Holbrow, and available from The Internet Archive at [fixed letter spacing]https://archive.org/details/SpaceSettlementsADesignStudy1977[roman type] .[paragraph break]",
-		[
-			TODO - Rick Guidice & others
-		]
 		"Please send your feedback, bug reports, and requests for help to [fixed letter spacing]tinsel@tinsel.org[roman type]. You can always find the current version of this story at [fixed letter spacing]http://tinsel.org/IF/[roman type] .[paragraph break]",
 		"This work is Copyright © [the story creation year] Thomas Insel but may be freely shared according to the terms of the Creative Commons Attribution 4.0 International license ([fixed letter spacing]https://creativecommons.org/licenses/by/4.0/[roman type])."
 
@@ -62,6 +59,7 @@ final question wording	only if victorious	topic	final response rule	final respon
 
 This is the final credits rule: try requesting the credits.
 
+[
 Rule for amusing a victorious player:
 	say "Have you tried...";
 	repeat through the Table of Amusing Actions:
@@ -71,6 +69,7 @@ Table of Amusing Actions
 Subject
 "visiting the pigeons?"
 "fixing the learning machine?"
+]
 
 Chapter 3 - Scoring
 
@@ -277,7 +276,14 @@ A power module is a kind of module.
 An instruction module is a kind of module.
 A pressure regulation module is a kind of module. Understand "regulator" as a pressure regulation module.
 
-Section 6 - Testing - Not for Release
+Section 6 - Testing part 1
+
+The File of Tests is called "testing".
+
+When play begins:
+	if the File of Tests exists, note "Seeding random-number generator to 1234 for automated testing.";
+
+Section 7 - Testing - Not for Release
 
 Include Object Response Tests by Juhana Leinonen.
 
@@ -367,7 +373,7 @@ Carry out super-analyzing:
 
 Include Testing Commands by Thomas Insel.
 
-Section 7 - Real-Time Delays
+Section 8 - Real-Time Delays
 
 Include Real-Time Delays by Erik Temple.
 
@@ -1505,7 +1511,7 @@ The learning counter is a number that varies.
 Table of Lessons
 lesson text
 "The hologram is introducing a history lesson."
-"The hologram is explaining how, near the end of the twenty-first century, the All Knowing revealed His Three Teachings and The Plan to the Founder."
+"The hologram is explaining how, near the close of the twenty-first century, the All Knowing revealed His Three Teachings and The Plan to the Founder."
 "The lesson covers the Three Teachings: the evil of modern society, the virtue of living apart, and the value of manual labor."
 "The hologram is explaining the All Knowing's Plan for the Chosen to found space colonies where they could farm in the old ways with pure soil and clean air."
 "The hologram is teaching how select groups of the Chosen were able to sign mortgages so the Founder's engineers could build stations for them."

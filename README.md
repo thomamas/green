@@ -9,35 +9,20 @@ http://tinsel.org/IF/
 This work is licensed under a Creative Commons Attribution 4.0 International License.
 https://creativecommons.org/licenses/by/4.0/	
 
+## Tools
+
+You should be able to build Founder's Mercy on any supported Inform 7 platform, but the
+release and testing automation is designed for macOS (tested with 10.13) and the following 
+tools:
+
+* Inform 7 build 6M62 -- http://inform7.com/download/
+* OmniGraffle -- https://www.omnigroup.com/omnigraffle/
+* AWS Command Line Interface -- https://aws.amazon.com/cli/
+* Command line developer tools -- `xcode-select --install`
+
 ## Release Instructions
 
-1. Assemble `Map.pdf` as documented in [`Feelies/WORKFLOW.txt`](./Feelies/WORKFLOW.txt).
-
-2. Build for release with Inform
-
-3. Add picture info:
-
-      python tools/blorbtool.py FoundersMercy.materials/Release/Founder\'s\ Mercy.gblorb giload FoundersMercy.materials/Release/interpreter interpreter
-
-4. `aws s3 sync --acl=public-read Release/ s3://assets.tinsel.org/assets/IF/FM/`
-   (or `FM-beta1-release4` or similar)
-
-## Release Process Notes
-
-`Makefile` automates 2-3 so far.
-
-See <https://github.com/erkyrath/quixe/wiki/Quixe-Graphics-Support>
-for more on Step 3.
-
-TODO: use Applescript to automate PDF export from OmniGraffle & then try 
-`/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/join.py`
-to merge pages into Map.pdf.
-
-
-## Extensions
-
-See https://github.com/i7/extensions, but we have copied in any extension that doesn't ship
-with Inform 7. Also, extensions by Thomas Insel are local.
+Edit `Makefile` and run `make Release` to build a complete release directory or `make Sync` to upload to AWS S3.
 
 ## Independent Study
 
@@ -45,3 +30,10 @@ with Inform 7. Also, extensions by Thomas Insel are local.
 * https://www.artificial-gravity.com/sw/SpinCalc/
 * http://www.vintagecomputing.com/index.php/archives/174/old-school-copy-protection-schemes
 
+* See https://github.com/i7/extensions, but we have copied in any extension that doesn't ship with Inform 7. Also, extensions by Thomas Insel are local.
+* See <https://github.com/erkyrath/quixe/wiki/Quixe-Graphics-Support> for more on adding images to Quixe.
+
+* http://forums.omnigroup.com/showthread.php?t=146
+* http://omnigraffletips.blogspot.com/2013/05/using-applescript-to-reposition-objects.html
+* https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html
+* https://discussions.apple.com/thread/3088443 -- preview to combine PDFs

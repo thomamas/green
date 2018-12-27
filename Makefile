@@ -6,6 +6,9 @@ DIR_PRO=./FoundersMercy.inform
 DIR_MAT=./FoundersMercy.materials
 PROJECT="Founder's Mercy"
 
+# S3_PATH=s3://assets.tinsel.org/assets/IF/FM/
+S3_PATH=s3://assets.tinsel.org/assets/IF/FM-v1-beta6/
+
 # Release
 OPTS_NI=-release
 OPTS_I6=-kE2~S~DwG
@@ -14,10 +17,11 @@ OPTS_I6=-kE2~S~DwG
 # OPTS_NI=-rng
 # OPTS_I6=-kE2SDwG
 
-all: Release
+all: release
 
 clean:
 	rm -rf $(DIR_PRO)/Build $(DIR_MAT)/Release ./gameinfo.dbg ./art/Feelies/Build ./tools/makeFeelies.scpt
+	cd ./tools/interpreters && make clean
 
 $(DIR_PRO)/Build/auto.inf: $(DIR_PRO)/Source/story.ni
 	$(DIR_EXE)/ni $(OPTS_NI) -internal $(DIR_INT) -project $(DIR_PRO) -format=ulx -release
@@ -25,13 +29,13 @@ $(DIR_PRO)/Build/auto.inf: $(DIR_PRO)/Source/story.ni
 $(DIR_PRO)/Build/output.ulx: $(DIR_PRO)/Build/auto.inf $(DIR_MAT)/Extensions/*/*
 	$(DIR_EXE)/inform6 $(OPTS_I6) +include_path=$(DIR_I6L),.,..,../Source $(DIR_PRO)/Build/auto.inf $(DIR_PRO)/Build/output.ulx
 
-Release: Feelies $(DIR_PRO)/Build/output.ulx
+release: feelies $(DIR_PRO)/Build/output.ulx
 	mkdir -p $(DIR_MAT)/Release/interpreter
 	$(DIR_EXE)/cBlorb $(DIR_PRO)/Release.blurb $(DIR_PRO)/Build/output.glblorb
 	cp $(DIR_PRO)/Build/output.glblorb $(DIR_MAT)/Release/$(PROJECT).gblorb
-	#python tools/blorbtool.py $(DIR_MAT)/Release/$(PROJECT).gblorb giload $(DIR_MAT)/Release/interpreter interpreter
+	# python tools/blorbtool.py $(DIR_MAT)/Release/$(PROJECT).gblorb giload $(DIR_MAT)/Release/interpreter interpreter # not currently necessary
 
-Feelies: $(DIR_MAT)/Map.pdf
+feelies: $(DIR_MAT)/Map.pdf
 
 $(DIR_MAT)/Map.pdf: art/Feelies/Build/all.pdf
 	cp art/Feelies/Build/all.pdf $(DIR_MAT)/Map.pdf
@@ -42,3 +46,17 @@ art/Feelies/Build/all.pdf: tools/makeFeelies.scpt art/Feelies/Feelies.graffle
 
 tools/makeFeelies.scpt: tools/makeFeelies.applescript
 	osacompile -o tools/makeFeelies.scpt tools/makeFeelies.applescript
+
+sync: release
+	aws s3 sync --acl=public-read $(DIR_MAT)/Release/ $(S3_PATH)
+
+tools/interpreters/bin/git:
+	cd tools/interpreters && make bin/git
+
+comptest: release tools/interpreters/bin/git
+	cd test && ./test.sh
+
+regtest: release tools/interpreters/bin/git
+	cd test && ./regtest.sh
+
+test: comptest regtest
