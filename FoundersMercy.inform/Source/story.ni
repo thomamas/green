@@ -244,7 +244,7 @@ An RF socket is a kind of PS-socket. It has PS-type "RF".
 
 A cable is a kind of thing.
 
-Instead of examining a cable, say "[the description of the noun] [exam inserter status of the noun]."  [* Assume cables have only plugs, no sockets ]
+Instead of examining a cable, say "[the description of the noun] [exam inserter status of the noun]." [* Assume cables have only plugs, no sockets ]
 
 Instead of the scanner scanning a cable:
 	computerize "Cable is functional.";
@@ -669,8 +669,6 @@ Every turn during The End:
 		say "'We can have a pod there in about a thousand minutes.'[no line break]";
 		beat;
 		end the story finally saying "You are not alone.".
-
-Test win with "purloin all power / scan power / scan unscanned power / scan unscanned power / gonear organ / unplug gray from organ / get gray / get audio / gonear yellow / purloin hoe / purloin comms / put hoe in lever / push lever / plug gray into comms / plug yellow into comms / put functional power in audio / press 3 / press 8 / press 5 / press 2"
 
 Book 3 - Hints
 
@@ -1506,8 +1504,6 @@ Definition: the learning machine is projecting if the learning machine is functi
 To decide if (m - the learning machine) is functional:
 	decide on whether or not m encloses a functional power module and m encloses a functional instruction module.
 
-Test learning with "gonear learning / out / purloin instructional modules / scan instructional module / scan unscanned instructional module / in / put functional instructional module in learning machine"
-
 The learning counter is a number that varies.
 
 Table of Lessons
@@ -1990,7 +1986,7 @@ Instead of pulling the lever:
 	otherwise:
 		say "You try, but it is too hard to pull the lever without more mechanical advantage."
 
-This is the hoes only rule:  [* Simply using instead of would block default behaviors like first taking... ]
+This is the hoes only rule: [* Simply using instead of would block default behaviors like first taking... ]
 	if the second noun is the lever and the noun is not the hoe:
 		say "[Those] [don't] fit.";
 		stop the action.
