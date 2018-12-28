@@ -34,11 +34,11 @@ Release along with cover art ("A space station."),
 	the library card,
 	a file of "Map & Feelies" called "Map.pdf",
 	and a "Local" website.
-	
+
 Requesting the credits is an action out of world and applying to nothing.
 
 Understand "about" or "credits" as requesting the credits.
-	
+
 After printing the banner text rule:
 	say "Type ABOUT for credits or HINT for assistance.";
 
@@ -53,7 +53,7 @@ Carry out requesting the credits:
 
 Chapter 2 - Final Questions
 
-Table of Final Question Options (continued) 
+Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule	final response activity
 "read the CREDITS"	false	"credits"	final credits rule	--
 
@@ -149,7 +149,7 @@ Section 4 - Plugs and Sockets
 Include version 4/170924 of Plugs and Sockets by Sean Turner
 
 [ A. Suppress the list of attachments for sockets because this is too ugly:
-		
+
 		You can see an organ (into which is plugged an USB cable), an audio unit (into which is plugged an USB cable), and an USB cable (plugged into an organ and an audio unit) here.
 
 	but this is better:
@@ -186,10 +186,10 @@ The ensure-item-only-plugged-into-1-thing rule response (B) is "[The noun] [are]
 
 (2) Another bug: the rule applies even if the travel is stopped, for example if the player goes in an invalid direction. We try to fix this by moving to an Instead rule instead of a Before rule. Note this is mostly only tested for the case where PS-leaving is PS-allowed.
 
-(3) Additionally, we substitute our preferred language, and adjust so that we don't end up with "The organ pulls out from the cable." instead of "The cable pulls out from the organ." 
+(3) Additionally, we substitute our preferred language, and adjust so that we don't end up with "The organ pulls out from the cable." instead of "The cable pulls out from the organ."
 
 (4) And finally, when there is an uncarried cable which is connected only to one or more things the player is carrying, take the cable before leaving because it's not realistic that it pulls out. ]
-	
+
 When play begins, now PS-leaving is PS-allowed.
 
 The leaving room whilst attached to fixed things rule is not listed in the Before rulebook.
@@ -214,7 +214,7 @@ Instead of an actor going to somewhere (this is the new leaving room whilst atta
 	repeat with item running through the attached things enclosed by the player:
 		repeat with loop-item running through the PS-connectors which are part of the item:
 			let the connectee be the attachment of the loop-item;
-			if the connectee is not nothing:				
+			if the connectee is not nothing:
 				if the holder of the connectee is not enclosed by the player:
 					if PS-leaving is PS-denied:
 						say "It is impractical to leave with [the item] attached to [the holder of the connectee].";
@@ -511,7 +511,7 @@ Instead of attacking or cutting something, say "The Founder said that violence i
 Instead of cutting or attacking yourself, say "Imperfect vessel that you are, that is not the answer."
 
 Instead of burning something, say "There is no open flame on the station."
-	
+
 Instead of listening to a room:
 	if the location is not pressurized:
 		say "Profound silence.";
@@ -575,9 +575,9 @@ Understand "sing" or "pray" as singing.
 Singing is an action applying to nothing.
 
 Carry out singing: say "You sing a hymn [one of]about hard work[or]about virtue[or]about penitence[or]praising the Founder[or]about your exile from Old Earth[at random].";
-	
+
 [ for the organ ]
-	
+
 Understand "play [something]" as Playing.
 
 Playing is an action applying to one thing.
@@ -953,7 +953,7 @@ This is documented in:
 	http://inform7.com/mantis/view.php?id=1828
 	http://inform7.com/mantis/view.php?id=1765
 	https://www.intfiction.org/forum/viewtopic.php?p=124117#p124117
-		
+
 So instead, I defined a new action with each building instance. ]
 
 Chapter 1 - Sector 1
@@ -1012,7 +1012,7 @@ Understand "message" and "error" as the status display when the pod bay is not r
 
 Instead of examining the status display:
 	now the status display is examined;
-	if the pod bay is ready:		
+	if the pod bay is ready:
 		say "The status display glows green.";
 	otherwise:
 		computerize2 "Pod bay locked down";
@@ -1037,7 +1037,7 @@ The atmosphere pump contains a faulty power module and a faulty pressure regulat
 To decide if (m - the atmosphere pump) is functional:
 	unless m encloses a functional power module, decide no;
 	unless m encloses a functional pressure regulation module, decide no;
-	decide yes.	
+	decide yes.
 
 Instead of the scanner scanning the atmosphere pump when the atmosphere pump is functional:
 	now the atmosphere pump is scanned;
@@ -1073,7 +1073,7 @@ Understand "starboard" as the bulkhead door when the player is in Pod Bay.
 
 To say pod-bay-door-pc:
 	say "Beside the [if bulkhead door is open]open[otherwise]secured[end if] port door, a status display [if pod bay is ready]glows green[otherwise]shows an error message[end if]"
-	
+
 To say pod-bay-door-pb:
 	say "[if bulkhead door is open]An open[otherwise]A secured[end if] door leads starboard"
 
@@ -1206,7 +1206,7 @@ A pylon called S3P1 is here. It is improper-named. It has description "Made of s
 
 Before going up in Sector 3, try climbing S3P1 instead.
 
-Instead of climbing S3P1:	
+Instead of climbing S3P1:
 	 if the player is wearing the gravity boots:
 		say "Wearing the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.";
 		now the player is in Platform 3;
@@ -1272,7 +1272,7 @@ An audio unit is an undescribed machine in Church. It is not fixed in place. It 
 
 The audio unit contains a faulty power module.
 
-To decide if (m - the audio unit) is functional:	
+To decide if (m - the audio unit) is functional:
 	unless m encloses a functional power module, decide no;
 	decide yes.
 
@@ -1524,7 +1524,7 @@ lesson text
 "The hologram is explaining a three year cycle of roots, legumes, and greens."
 "The hologram is reviewing crop rotation and explaining a homework assignment."
 "The hologram is introducing a lesson on the virtues of hard work."
-"The lesson on hard work continues. You've heard it many many times before." 
+"The lesson on hard work continues. You've heard it many many times before."
 "The hologram is cautioning you to work diligently for the joy of the good it will do."
 "The hologram is covering the many dangers of idle hands."
 "The hologram is concluding the lesson on hard work."
@@ -1590,7 +1590,7 @@ Instead of attacking the eraser:
 		say "Nothing happens.";
 	otherwise:
 		now eraser is attacked;
-		say "You fill the area with a cloud of dust, which quickly clears."		
+		say "You fill the area with a cloud of dust, which quickly clears."
 
 [ todo "clean/rub eraser" ]
 
@@ -1715,7 +1715,7 @@ Before entering the ground in the platforms, try going down instead.
 
 Section 1 - Platform 1
 
-Platform 1 is a room in The Platforms. "A platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub." [todo pylon] Sector 1 is down from Platform 1. Nothing is up from Sector 1. 
+Platform 1 is a room in The Platforms. "A platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub." [todo pylon] Sector 1 is down from Platform 1. Nothing is up from Sector 1.
 
 Before going down from Platform 1, say "You slide down the pylon."
 
@@ -1782,7 +1782,7 @@ Before taking or eating or tasting or cutting or attacking the pigeons:
 
 Before wearing or opening or closing or entering or getting off or taking off or climbing or waving or drinking or swinging the pigeons:
 	say "That doesn't even make sense." instead.
-	
+
 Before tying the pigeons to something: say "That doesn't even make sense." instead.
 
 To pigeons fly away:
@@ -1791,7 +1791,7 @@ To pigeons fly away:
 
 Before going with the pigeons, try pushing the pigeons instead.
 
-Instead of pulling or pushing or turning or touching or rubbing or squeezing or waking or kissing the pigeons: 
+Instead of pulling or pushing or turning or touching or rubbing or squeezing or waking or kissing the pigeons:
 	if the pigeons are annoyed:
 		say "You further annoy the pigeons and they fly away.";
 		pigeons fly away;
@@ -1994,7 +1994,7 @@ This is the hoes only rule:  [* Simply using instead of would block default beha
 	if the second noun is the lever and the noun is not the hoe:
 		say "[Those] [don't] fit.";
 		stop the action.
-		
+
 The hoes only rule is listed before the can't insert if this exceeds carrying capacity rule in the check inserting it into rulebook.
 
 After inserting the hoe into the lever:
