@@ -9,7 +9,7 @@
     <style>
       div.links li:nth-child(2) a {
         padding-left:27px;
-        background: url("PDF_24.png") no-repeat scroll left;
+        background: url("pdf.png") no-repeat scroll left;
         background-position: 0px 9px;
       }
       @keyframes myZoom { from { transform: translateX(-20em) } }
@@ -21,10 +21,10 @@
         var y = document.getElementById(id + '-sp');
         if (x.style.display === "none") {
           x.style.display = "block";
-          y.innerHTML="&#9661;";
+          y.innerHTML="&#x2a09;";
         } else {
           x.style.display = "none";
-          y.innerHTML="&#9655;";
+          y.innerHTML="&#xff0b;";
         }
       }
     </script>
@@ -43,7 +43,7 @@
     </div>
     <div class="interpretercredit">
       <p>
-        <span id="credits-sp" onclick="hideshow('credits')" style="cursor:pointer">&#9655;</span>&nbsp;
+        <span id="credits-sp" onclick="hideshow('credits')" style="cursor:pointer">&#xff0b;</span>&nbsp;
         <a onclick="hideshow('credits')" href="#">Web Design Credits...</a></span>
       </p>
       <div id="credits" style="display:none">

@@ -7,8 +7,17 @@
     <meta name="description" content="A page for the game [TITLE] by [AUTHOR]." />
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
     <style>
-      div.links li:nth-last-child(1)::before { content: "⤊  " /* unicde &#10506; */ }
-      div.links li:nth-last-child(2)::before { content: "🕹  " /* unicode &#x1F579; */ }
+      div.links li:nth-last-child(1) a {
+        padding-left:29px;
+        background: url("up2.png") no-repeat scroll left;
+        background-position: 0px 9px;
+      }
+      div.links li:nth-last-child(2)::before {
+        font-size:24px;
+        line-height: 0;
+        content: "🕹" /* unicode &#x1F579; */ ;
+        padding-right:2px;
+      }
       div.links li:nth-last-child(2) a { font-weight: bold; }
       div.links li:nth-child(1) a {
         padding-left:27px;
@@ -17,7 +26,7 @@
       }
       div.links li:nth-child(2) a,div.links li:nth-child(3) a {
         padding-left:27px;
-        background: url("PDF_24.png") no-repeat scroll left;
+        background: url("pdf.png") no-repeat scroll left;
         background-position: 0px 9px;
       }
     </style>

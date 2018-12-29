@@ -1,2 +1,3 @@
-PDF_24.png
+pdf.png
 gblorb.png
+up2.png
