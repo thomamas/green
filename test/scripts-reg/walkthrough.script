@@ -1,0 +1,445 @@
+* direct-walkthrough
+
+You awake. You are lonely, so lonely. It was a thousand days ago today. All alone these thousand days.
+Your parents were the last.
+No, your father was the last. He held on for nearly a hundred days longer.
+Now you are the last. Alone. Adrift.
+But maybe it isn't hopeless. There must still be other people in other worlds, and you think you know how to get there.
+Today is the day.
+
+Founder's Mercy
+A Space Story by Thomas Insel
+Type ABOUT for credits or HINT for assistance.
+
+Home (on the blanket)
+The room where you've slept your entire life. The crops are outside.
+
+There is a secured hatch in the floor.
+
+>version
+
+A Space Story by Thomas Insel
+
+>d
+(first getting off the blanket)
+(first opening the floor hatch)
+
+Cellar
+Your decompression shelter and storage space for increasingly empty shelves of canned vegetables and one more large bag of split peas.
+
+There is an open hatch in the ceiling.
+
+>get mask
+Taken.
+
+>u
+Home
+The room where you've slept your entire life. The crops are outside.
+
+There is an open hatch in the floor.
+
+A homespun blanket is arranged neatly on the ground. It is your bed.
+
+>get blanket
+Taken.
+
+>out
+
+Sector 4: Crops
+Your home is here among the crops. To the port and starboard, the station walls rise up to the hub above. You can walk spinward or antispinward.
+
+>sw
+You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+>in
+
+School House
+A broken learning machine remains in a corner, but mostly the older farmers took turns leading the class. There is a desk, and a chalkboard hangs on one wall.
+
+On the desk is a clean eraser.
+
+>get eraser
+Taken.
+
+>erase board
+(with the eraser)
+You carefully clean the chalkboard and dirty the eraser.
+
+>get power from machine
+Taken.
+
+>out
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+>sw
+You walk a little ways to the next sector.
+
+Sector 6: Hydroponics
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+>d
+(first opening the floor hatch)
+
+Supply Vault
+This room is dim, quiet, and stuffy. There is still one crate of machine parts left.
+
+There is an open hatch in the ceiling.
+
+You can also see a pair of gravity boots here.
+
+>search crate
+You find an instruction module and a pressure regulation module.
+(putting the scanner into your pocket to make room)
+
+>get boots
+(putting the emergency mask into your pocket to make room)
+Taken.
+
+>hit eraser
+You fill the vault with a cloud of dust which scatters the laser beam that you can now see scanning across the hatch.
+
+>u
+You maneuver around the laser beam and pull yourself up through the ceiling hatch.
+
+Sector 6: Hydroponics
+Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward.
+
+There is an open hatch in the ground.
+
+[Your score has just gone up by one point.]
+
+>wear boots
+You put on the pair of gravity boots.
+
+>wear mask
+(first taking the emergency mask)
+You put on the emergency mask.
+
+>asw
+You walk a little ways to the next sector.
+
+Sector 5: Forest
+The school house is nestled among the trees. A pylon stretches up from the same grove to the hub of the station. You can walk spinward or antispinward.
+
+>asw
+You walk a little ways to the next sector.
+
+Sector 4: Crops
+Your home is here among the crops. To the port and starboard, the station walls rise up to the hub above. You can walk spinward or antispinward.
+
+>asw
+You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+>up
+Wearing the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.
+
+Platform 3
+A platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+You feel much lighter here, and you are very aware of how the station rotates, but everything is okay as long as you don't look down.
+
+There is a red circuit breaker here.
+
+>turn breaker on
+You reach out and switch the circuit breaker on.
+
+[Your score has just gone up by one point.]
+
+>d
+You climb down the pylon.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+>asw
+You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond with some fish. You can walk spinward or antispinward.
+
+>remove boots
+You take off the pair of gravity boots.
+
+>enter pond
+You set your belongings aside. With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a valve and open it, then swim to the surface, climb out, and recover everything you were carrying.
+
+[Your score has just gone up by one point.]
+
+>remove mask
+(putting the dusty eraser into your pocket to make room)
+You take off the emergency mask.
+
+>wear boots
+You put on the pair of gravity boots.
+
+>wear blanket
+You put on the blanket.
+
+>asw
+You walk a little ways to the next sector.
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave: the pods are below Sector 1.
+
+>in
+
+Barn
+Not fancy: livestock on one side and feed on the other, but nothing remains of either. There is a plow near the entrance.
+
+You can see a hoe here.
+
+>get hoe
+Taken.
+
+>out
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is a secured hatch in the ground.
+
+>d
+(first opening the floor hatch)
+
+Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall.
+
+There is an open hatch in the ceiling.
+
+Beside the secured port door, a status display shows an error message.
+
+>get all from pump
+power module: Taken.
+pressure regulation module: (putting the power module into your pocket to make room)
+Taken.
+
+>scan regulator
+Module is faulty.
+
+>scan unscanned regulator
+Module is functional.
+
+>put functional regulator in pump
+You put the functional pressure regulation module into the atmosphere pump.
+
+>scan power module
+Module is faulty.
+
+>scan unscanned power module
+Module is functional.
+
+>put functional power module in pump
+(first taking the functional power module)
+You put the functional power module into the atmosphere pump.
+
+The atmosphere pump begins to hum.
+
+It is time to say goodbye to the station. You are ready to leave in a pod.
+
+[Your score has just gone up by one point.]
+
+>close ceiling hatch
+You close the ceiling hatch.
+
+>port
+(first opening the bulkhead door)
+
+Pod Bay
+There are four berths for transit pods. Unfortunately, all are empty. There is also a pile of clutter. It looks like equipment removed to free up space in the transit pods.
+
+An open door leads starboard.
+
+You've been here before, of course, when other families were leaving. They always had a seat for you, but you stayed behind to care for your parents. And then there was nobody else left.
+
+But this is troubling: you had counted, and you were sure there would be one pod left, but there are none.
+
+[Your score has just gone up by one point.]
+
+>get communications unit
+Taken.
+
+>starboard
+
+Pod Control
+This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall.
+
+Beside the open port door, a status display glows green.
+
+There is a secured hatch in the ceiling.
+
+No pods left ... you breathe deeply and fight off a wave of despair.
+
+>get functional power module
+(putting the unscanned instruction module into your pocket to make room)
+Taken.
+
+>close door
+You close the bulkhead door.
+
+You breathe deeply again. Of course there's another way. You will just need to find a way to communicate outside.
+
+>u
+(first opening the ceiling hatch)
+
+Sector 1: Crops
+You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+There is an open hatch in the ground.
+
+>sw
+You walk a little ways to the next sector.
+
+Sector 2: Aquaculture
+A deep pond with some fish. You can walk spinward or antispinward.
+
+>sw
+You walk a little ways to the next sector.
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+>go church
+
+Church
+Before everyone left, you celebrated every sabbath here. The altar stands against one wall, and an organ and a portable audio unit stand against the other.
+
+On the altar is The Founder's Testament.
+
+A gray cable connects the organ to the audio unit.
+
+>unplug cable from organ
+You unplug the gray cable from the organ.
+
+>plug cable into comms unit
+You plug the gray cable into the emergency communications unit.
+
+>get power module from audio
+(putting the emergency mask into your pocket to make room)
+Taken.
+
+>put functional power into audio
+You put the functional power module into the audio unit.
+
+The audio unit beeps and a synthesized voice says "Comms unit connected."
+
+>get cable and audio
+gray cable: Taken.
+audio unit: (putting the faulty power module into your pocket to make room)
+Taken.
+
+>out
+
+Sector 3: Forest
+Trees, a house, and a church. A red pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward.
+
+>u
+Wearing the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.
+
+Platform 3
+A platform about two thirds of the way towards the hub. You can continue spinward or antispinward.
+
+There is a red circuit breaker here.
+
+>asw
+
+Platform 1
+A platform about two thirds of the way towards the hub. You can continue spinward or antispinward, or go up a ladder into the hub.
+
+>u
+Gravity fades as you climb.
+
+Inside the Hub
+This is your first time in this part of the station or even out of artificial gravity. You float weightless in the middle of a cylinder. It is cold up here, and the light is all artificial and without an obvious source. A ladder rotates around you, leading up or down or maybe out, and the airlock is to the port.
+
+>wear mask
+(first taking the emergency mask)
+(putting the faulty pressure regulation module into your pocket to make room)
+You put on the emergency mask.
+
+>port
+(first opening the starboard airlock door)
+
+Airlock
+The airlock is also a cylinder, with a closed door to the port, an open door to the starboard, 
+/and a red handle in the (wall|ceiling|floor)
+It is very cold here.
+
+>turn red handle
+The starboard door slams shut. You turn the handle an entire rotation, and after a moment, you feel the air rush out of the airlock.
+
+>port
+(first opening the port airlock door)
+You crawl through a narrow accessway.
+
+Antenna Control
+You float weightless at the port end of a cylinder. It is cold and dark here in the near vacuum, but that only serves to highlight the view through a surprisingly large window: you can see the station rotating around you, solar panels, and antennas, all backed by a spectacular field of stars. A short lever extends from the floor, and a yellow cable waves from a small control panel. An airlock door leads starboard.
+
+[Your score has just gone up by two points.]
+
+>plug yellow into comms
+You plug the yellow cable into the emergency communications unit.
+
+>press 3
+Calibrate to Delta/Plum.
+
+>press 8
+Calibrate to Gamma/Banana.
+
+>press 5
+Calibrate to Beta/Cherry.
+
+>press 2
+Calibration successful.
+
+The audio unit vibrates, but in the vacuum, you can't hear what it is saying.
+
+[Your score has just gone up by one point.]
+
+>put hoe in lever
+You slide the hoe into the hollow lever, forming a longer lever.
+
+The audio unit vibrates, but in the vacuum, you can't hear what it is saying.
+
+[Your score has just gone up by one point.]
+
+>push lever
+You push the hoe and the lever moves. After a moment, you feel air rush into the room.
+
+The audio unit beeps and a synthesized voice says "Comms ready."
+
+After a moment, it says "Launching automatic routines."
+
+[Your score has just gone up by one point.]
+
+>z
+Time passes.
+
+You hear a human speaking from the audio unit: "RWSS Founder's Mercy, this is 
+/OV-\d\d\d\d
+
+>{timer}
+There's really somebody there? We thought your station had been abandoned for kilodays...
+
+>{timer}
+Standby...
+
+>{timer}
+We can have a pod there in about a thousand minutes."
+*** You are not alone. ***
+
+>{timer}
+In that game you scored 10 out of a possible 10, in 74 turns.

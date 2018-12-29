@@ -3,7 +3,10 @@ CURL = curl -L
 all:  bin/rem-git bin/cheap-git
 
 clean:
-	$(RM) -r *.gz */
+	$(RM) -rf */
+
+cleaner: clean
+	rm -f *.gz
 
 cheapglk.tar.gz:
 	$(CURL) -o cheapglk.tar.gz https://github.com/erkyrath/cheapglk/archive/cheapglk-1.0.6.tar.gz

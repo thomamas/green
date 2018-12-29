@@ -1,0 +1,23 @@
+* scanner
+
+>scanner, help
+Recognized commands are HELP and SCAN.
+You can ask the scanner for a list of commands by typing SCANNER, HELP and give it voice commands by typing phrases such as SCANNER, SCAN SOMETHING where SOMETHING is a visible object.
+
+>scanner, scan me
+No modular technology detected.
+
+>scanner, scan scanner
+Machine is functional.
+
+>scanner, go north
+Syntax error: command not in vocabulary.
+
+>scanner, perambulate
+Syntax error: command not in vocabulary.
+
+>scanner, scan cheddar
+Search error: cannot find cheddar.
+
+>scanner, scan the cheddar
+Search error: cannot find the cheddar.

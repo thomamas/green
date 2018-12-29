@@ -1,20 +1,9 @@
-* fast-walkthrough
-
-> version
-
-A Space Story by Thomas Insel
-
-> * walkthrough
-
-> d
-
-> get mask
-
-> u
-
-> get blanket
+* get-boots
 
 > out
+
+> out
+# this will be a harmless extra "out" when included from fast-walkthrough
 
 > sw
 
@@ -23,6 +12,7 @@ A Space Story by Thomas Insel
 > get eraser
 
 > erase board
+You carefully clean the chalkboard and dirty the eraser.
 
 > get power from machine
 
@@ -36,125 +26,47 @@ A Space Story by Thomas Insel
 
 > get boots
 
+> u
+
+An alarm sounds
+The hatch seems to be locked
+
 > hit eraser
 
+cloud of dust
+
 > u
 
-> wear boots
+You maneuver around the laser beam
+gone up by one point
 
-> wear mask
+* pigeons
 
-> asw
-
-> asw
-
-> asw
-
-> up
-
-> turn breaker on
-
+> get up
 > d
-
-> asw
-
-> remove boots
-
-> enter pond
-
-> remove mask
-
+> get peas
+> u
+>{include} get-boots
+> sw
+> sw
+> sw
 > wear boots
-
-> wear blanket
-
-> asw
-
-> in
-
-> get hoe
-
-> out
-
-> d
-
-> get all from pump
-
-> scan regulator
-
-> scan unscanned regulator
-
-> put functional regulator in pump
-
-> scan power module
-
-> scan unscanned power module
-
-> put functional power module in pump
-
-> close ceiling hatch
-
-> port
-
-> get communications unit
-
-> starboard
-
-> get functional power module
-
-> close door
-
 > u
-
 > sw
+flock of pigeons
 
-> sw
+>touch pigeons
+You annoy the pigeons.
 
-> go church
+>g
+You further annoy the pigeons and they fly away.
 
-> unplug cable from organ
+>asw
+>sw
+flock of pigeons
 
-> plug cable into comms unit
-
-> get power module from audio
-
-> put functional power into audio
-
-> get cable and audio
-
-> out
-
-> u
-
-> asw
-
-> u
-
-> wear mask
-
-> port
-
-> turn red handle
-
-> port
-
-> plug yellow into comms
-
-> press 3
-
-> press 8
-
-> press 5
-
-> press 2
-
-> put hoe in lever
-
-> push lever
-
-> z
-
-OV-
+>feed pigeons
+You scatter the split peas among the pigeons, causing a minor commotion as they peck at them.
 
 * learning machine
 
@@ -244,3 +156,9 @@ The lesson on crop rotation continues. You're very familiar with this material.
 Time passes.
 
 The hologram is explaining a three year cycle of roots, legumes, and greens.
+
+* singing
+
+> sing
+You sing a hymn
+/(about hard work|about virtue|about penitence|praising the Founder|about your exile)
