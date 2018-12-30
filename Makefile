@@ -23,8 +23,8 @@ all: release
 
 clean:
 	rm -rf $(DIR_PRO)/Build $(DIR_MAT)/Release
-	rm -f ./gameinfo.dbg ./test/comp-scripts/*.out
 	cd ./art/Feelies && make clean
+	cd ./test && make clean
 
 cleaner: clean
 	rm -f $(FEELIES_ARTIFACTS)
@@ -40,7 +40,7 @@ $(DIR_PRO)/Build/output.ulx: $(DIR_PRO)/Build/auto.inf $(DIR_MAT)/Extensions/*/*
 	@echo
 	@echo --- Inform 6
 	@echo
-	$(DIR_EXE)/inform6 $(OPTS_I6) +include_path=$(DIR_I6L),.,..,../Source $(DIR_PRO)/Build/auto.inf $(DIR_PRO)/Build/output.ulx
+	cd $(DIR_PRO)/Build/ && $(DIR_EXE)/inform6 $(OPTS_I6) ../../$(DIR_PRO)/Build/auto.inf ../../$(DIR_PRO)/Build/output.ulx
 
 release: feelies $(DIR_PRO)/Build/output.ulx
 	@echo

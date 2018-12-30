@@ -1,5 +1,8 @@
 all: test
 
+clean:
+	rm -f ./comp-scripts/*.out
+
 tools/interpreters/bin/cheap-git:
 	@echo
 	@echo --- CheapGlk Git Interpreter
