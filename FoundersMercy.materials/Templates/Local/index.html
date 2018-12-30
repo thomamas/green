@@ -8,26 +8,24 @@
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
     <style>
       div.links li:nth-last-child(1) a {
-        padding-left:29px;
-        background: url("up2.png") no-repeat scroll left;
-        background-position: 0px 9px;
+        padding-right:29px;
+        background: url("up2.png") no-repeat scroll right;
+        background-position: right 9px;
       }
-      div.links li:nth-last-child(2)::before {
+      div.links li:nth-last-child(3)::after {
         font-size:24px;
         line-height: 0;
-        content: "🕹" /* unicode &#x1F579; */ ;
-        padding-right:2px;
+        content: "🕹"; /* unicode &#x1F579; */ 
       }
-      div.links li:nth-last-child(2) a { font-weight: bold; }
-      div.links li:nth-child(1) a {
-        padding-left:27px;
-        background: url("gblorb.png") no-repeat scroll left;
-        background-position: 0px 9px;
+      div.links li:nth-last-child(2) a {
+        padding-right:27px;
+        background: url("gblorb.png") no-repeat scroll right;
+        background-position: right 9px;
       }
-      div.links li:nth-child(2) a,div.links li:nth-child(3) a {
-        padding-left:27px;
-        background: url("pdf.png") no-repeat scroll left;
-        background-position: 0px 9px;
+      div.links li:nth-child(1) a,div.links li:nth-child(2) a {
+        padding-right:27px;
+        background: url("pdf.png") no-repeat scroll right;
+        background-position: right 9px;
       }
     </style>
   </head>
@@ -41,12 +39,13 @@
       </div>
       <div class="links">
         <ul>
-          <li><div class="download">[DOWNLOAD]</div></li>
           [AUXILIARY]
+          <li><div class="download">[DOWNLOAD]</div></li>
           <li><a href="/IF/">My IF Projects</a>
         </ul>
       </div>
       <div class="about">[BLURB]</div>
+      <div class=playbutton><a href="play.html">Play Now</a></div>
       <div class="playinfo">
         <p>
           [TITLE] was created with <a href="http://inform7.com/">Inform</a> and has IFID [IFID]. 
