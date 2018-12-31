@@ -1649,6 +1649,9 @@ The Supply Vault is a room. "This room is dim, quiet, and stuffy. There is still
 
 A crate of machine parts is here. It is a scenery container.
 
+The parser nothing error internal rule response (F) is "[if the noun is the crate of machine parts]You find nothing useful in the crate.[else][The noun] [are] empty."
+
+[
 The parser nothing error internal rule response (F) is "[empty exception noun]"
 
 To say empty exception (t - a thing):
@@ -1656,6 +1659,7 @@ To say empty exception (t - a thing):
 		say "You find nothing useful in the crate.[run paragraph on]";
 	otherwise:
 		say  "[The t] [are] empty.[run paragraph on]"
+]
 
 Instead of examining the crate, say "These remaining parts never seem to fit anywhere useful, but Founder only knows what's in there."
 
