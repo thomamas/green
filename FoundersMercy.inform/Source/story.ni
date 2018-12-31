@@ -1651,16 +1651,6 @@ A crate of machine parts is here. It is a scenery container.
 
 The parser nothing error internal rule response (F) is "[if the noun is the crate of machine parts]You find nothing useful in the crate.[else][The noun] [are] empty."
 
-[
-The parser nothing error internal rule response (F) is "[empty exception noun]"
-
-To say empty exception (t - a thing):
-	if t is the crate of machine parts:
-		say "You find nothing useful in the crate.[run paragraph on]";
-	otherwise:
-		say  "[The t] [are] empty.[run paragraph on]"
-]
-
 Instead of examining the crate, say "These remaining parts never seem to fit anywhere useful, but Founder only knows what's in there."
 
 Instead of searching the crate of machine parts when something is in the crate:
