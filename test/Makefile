@@ -1,7 +1,7 @@
 all: test
 
 clean:
-	rm -f ./comp-scripts/*.out
+	rm -f ./comp-scripts/*.out ./*.out
 
 tools/interpreters/bin/cheap-git:
 	@echo
@@ -28,3 +28,9 @@ regtest: ../tools/interpreters/bin/rem-git
 	./regtest.sh
 
 test: comptest regtest
+
+scantest: ../tools/interpreters/bin/cheap-git
+	@echo
+	@echo --- Super Scan Test
+	@echo
+	./scantest.sh

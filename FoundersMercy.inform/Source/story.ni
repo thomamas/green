@@ -300,6 +300,7 @@ topic	testing rule
 "plugging it into"	test plugging it into rule
 "unplugging it from"	test unplugging it from rule]
 "unplugging"	test unplugging rule
+"scanning"	test scanning rule
 
 This is the test typing on rule:
 	say "[italic type]typing 7 on [the noun]: [roman type]";
@@ -320,6 +321,10 @@ This is the test swimming in rule:
 This is the test playing rule:
 	announce tests for "playing [the noun]";
 	try playing the noun.
+
+This is the test scanning rule:
+	announce tests for "scanning [the noun]";
+	try the scanner scanning the noun.
 
 [ This is the test rubbing it with rule:
 	let rubber be a random visible thing that is not the noun held by the test-actor;
@@ -364,13 +369,28 @@ This is the test xyzzying rule:
 	announce tests for "xyzzying";
 	try the test-actor xyzzying.
 
+An object can be test scanned.
+
+Understand "super scan" as super-scanning.
+Super-scanning is an action applying to nothing.
+
+Carry out super-scanning:
+	let room list be the list of rooms;
+	repeat with l running through the room list:
+		move the player to l, without printing a room description;
+		repeat with x running through things enclosed by l:
+			if the test-actor can see x and x is not test scanned:
+				now the noun is x;
+				now x is test scanned;
+				follow the test scanning rule.
+
 Understand "super analyze" as super-analyzing.
 Super-analyzing is an action applying to nothing.
 
 Carry out super-analyzing:
 	let room list be the list of rooms;
 	repeat with l running through room list:
-		move the player to l;
+		move the player to l, without printing a room description;
 		try all-encompassing analyzing.
 
 Include Testing Commands by Thomas Insel.

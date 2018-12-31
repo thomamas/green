@@ -18,4 +18,5 @@ tools/makeFeelies.scpt
 tools/interpreters/*/*
 tools/interpreters/*.tar.gz
 test/scripts-*/*.out
+test/*.out
 art/Feelies/tools/makeFeelies.scpt

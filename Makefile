@@ -11,13 +11,11 @@ FEELIES_ARTIFACTS=FoundersMercy.materials/Map.pdf
 # S3_PATH=s3://assets.tinsel.org/assets/IF/FM/
 S3_PATH=s3://assets.tinsel.org/assets/IF/FM-v1-beta6/
 
-# Release
 OPTS_NI=-release
 OPTS_I6=-kE2~S~DwG
 
-# Dev
-# OPTS_NI=-rng
-# OPTS_I6=-kE2SDwG
+OPTS_NI_TEST=-rng
+OPTS_I6_TEST=-kE2SDwG
 
 all: release
 
@@ -30,17 +28,26 @@ cleaner: clean
 	rm -f $(FEELIES_ARTIFACTS)
 	cd tools/interpreters && make cleaner
 
-$(DIR_PRO)/Build/auto.inf: $(DIR_PRO)/Source/story.ni
+# One pass so we don't leave a non-release auto.inf lying around
+$(DIR_PRO)/Build/testing.ulx: $(DIR_PRO)/Source/story.ni $(DIR_MAT)/Extensions/*/*
+	@echo
+	@echo --- Testing: Inform 6 \& 7
+	@echo
+	$(DIR_EXE)/ni $(OPTS_NI_TEST) -internal $(DIR_INT) -project $(DIR_PRO) -format=ulx
+	cd $(DIR_PRO)/Build/ && $(DIR_EXE)/inform6 $(OPTS_I6_TEST) auto.inf testing.ulx
+	rm $(DIR_PRO)/Build/auto.inf
+
+$(DIR_PRO)/Build/auto.inf: $(DIR_PRO)/Source/story.ni $(DIR_MAT)/Extensions/*/*
 	@echo
 	@echo --- Inform 7
 	@echo
-	$(DIR_EXE)/ni $(OPTS_NI) -internal $(DIR_INT) -project $(DIR_PRO) -format=ulx -release
+	$(DIR_EXE)/ni $(OPTS_NI) -internal $(DIR_INT) -project $(DIR_PRO) -format=ulx
 
-$(DIR_PRO)/Build/output.ulx: $(DIR_PRO)/Build/auto.inf $(DIR_MAT)/Extensions/*/*
+$(DIR_PRO)/Build/output.ulx: $(DIR_PRO)/Build/auto.inf
 	@echo
 	@echo --- Inform 6
 	@echo
-	cd $(DIR_PRO)/Build/ && $(DIR_EXE)/inform6 $(OPTS_I6) ../../$(DIR_PRO)/Build/auto.inf ../../$(DIR_PRO)/Build/output.ulx
+	cd $(DIR_PRO)/Build/ && $(DIR_EXE)/inform6 $(OPTS_I6) auto.inf output.ulx
 
 release: feelies $(DIR_PRO)/Build/output.ulx
 	@echo
@@ -64,3 +71,6 @@ sync: release
 
 test: .phony $(DIR_PRO)/Build/output.ulx
 	cd test && make
+
+scantest: .phony $(DIR_PRO)/Build/testing.ulx
+	cd test && make scantest
