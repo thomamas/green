@@ -29,7 +29,6 @@ When play begins:
 
 Release along with cover art ("A space station."),
 	an interpreter,
-	[the source text,]
 	the introductory booklet,
 	the library card,
 	a file of "Map & Feelies" called "Map.pdf",
@@ -278,8 +277,10 @@ A pressure regulation module is a kind of module. Understand "regulator" as a pr
 
 An object can be a plant.
 
-Instead of the scanner scanning something (called x) when x is a person or x is an animal or x is a plant:
-	scanner-say "License error: consider upgrading to a 3000-series model to scan lifeforms.";
+Definition: an object is living if it is a person or it is an animal or it is a plant.
+
+Instead of the scanner scanning something (called x) when x is living:
+	scanner-say "License error: upgrade to a 3000-series model to scan organic lifeforms.";
 	rule succeeds.
 
 Section 6 - Testing part 1

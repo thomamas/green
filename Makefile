@@ -20,7 +20,7 @@ OPTS_I6_TEST=-kE2SDwG
 all: release
 
 clean:
-	rm -rf $(DIR_PRO)/Build $(DIR_MAT)/Release
+	rm -rf $(DIR_PRO)/Build $(DIR_MAT)/Release $(DIR_PRO)/Index
 	cd ./art/Feelies && make clean
 	cd ./test && make clean
 
