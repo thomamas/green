@@ -77,6 +77,11 @@ After printing the name of a machine:
 To decide if (m - a machine) is functional: decide yes.
 
 Before inserting something into a machine:
+	if the player is not carrying the noun:
+		say "(first taking [the noun])[command clarification break]";
+		silently try taking the noun;
+		unless the player encloses the noun, stop the action;
+	if the carrying capacity of the second noun is zero, say "[The second noun] [can't] contain things." instead;
 	if the noun is not a module, say "[The second noun] can only contain modules." instead;
 
 Instead of examining a machine:
