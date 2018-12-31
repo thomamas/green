@@ -134,7 +134,7 @@ scanning the berths:
 Machine is functional.
 
 scanning the pile of clutter:
-No modular technology detected.
+Technology detected. Suggest more specific scan.
 
 scanning the atmosphere sensor:
 Machine functional. No breathable atmosphere.
@@ -263,10 +263,16 @@ scanning the hydroponics machines:
 Machine failed.
 
 scanning the crate of machine parts:
-No modular technology detected.
+Technology detected. Suggest more specific scan.
 
 scanning the pair of gravity boots:
 No modular technology detected.
+
+scanning the unscanned instruction module:
+Module is functional.
+
+scanning the unscanned pressure regulation module:
+Module is functional.
 
 scanning the ground:
 No modular technology detected.
