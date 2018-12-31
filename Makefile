@@ -1,6 +1,15 @@
-DIR_INSTALL_BASE=/Applications/Inform.app
-DIR_EXE=$(DIR_INSTALL_BASE)/Contents/MacOS
-DIR_INT=$(DIR_INSTALL_BASE)/Contents/Resources/Internal
+UNAME_S := $(shell uname -s)
+
+ifeq ($(UNAME_S),Linux)
+  DIR_INSTALL_BASE=/usr/local/share/inform7
+  DIR_EXE=$(DIR_INSTALL_BASE)/Compilers
+  DIR_INT=$(DIR_INSTALL_BASE)/Internal
+else ifeq ($(UNAME_S),Darwin)
+  DIR_INSTALL_BASE=/Applications/Inform.app
+  DIR_EXE=$(DIR_INSTALL_BASE)/Contents/MacOS
+  DIR_INT=$(DIR_INSTALL_BASE)/Contents/Resources/Internal
+endif
+
 DIR_PRO=./FoundersMercy.inform
 DIR_MAT=./FoundersMercy.materials
 PROJECT="Founder's Mercy"

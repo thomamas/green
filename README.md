@@ -20,6 +20,12 @@ tools:
 * AWS Command Line Interface -- https://aws.amazon.com/cli/
 * Command line developer tools -- `xcode-select --install`
 
+### Ubuntu Linux
+
+* `apt-get install git make gcc python`
+* Get `I7_6M62_Linux_all.tar.gz`, expand, and follow isntall instructions
+* OmniGraffle build won't work, of course, but `make test` should be fine.
+
 ## Release Instructions
 
 Edit `Makefile` as necessary and...
