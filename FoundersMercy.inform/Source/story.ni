@@ -1138,7 +1138,7 @@ Instead of taking the pile of clutter: [* Because I'm not sure there is a way to
 		try silently taking the item;
 		if the player encloses the item, say "Taken.";
 
-An atmosphere sensor is in the pile. It has description "A small box with a large lamp that is slowly flashing [if the location is pressurized]amber[otherwise]red[end if]." Understand "small" and "box" and "large" and "lamp" as the atmosphere sensor.
+An atmosphere sensor is in the pile. It is machinelike. It has description "A small box with a large lamp that is slowly flashing [if the location is pressurized]amber[otherwise]red[end if]." Understand "small" and "box" and "large" and "lamp" as the atmosphere sensor.
 
 Instead of the scanner scanning the atmosphere sensor:
 	now the atmosphere sensor is scanned;
@@ -1172,7 +1172,7 @@ Instead of the scanner scanning the communications unit:
 	computerize "Machine functional. [comms-usb-status]. [comms-rf-status].";
 	rule succeeds.
 
-Some unremarkable junk is in the pile. It is fixed in place. It is not plural-named. It has indefinite article "some". Instead of doing something to the unremarkable junk, say "It really is unremarkable."
+Some unremarkable junk is in the pile. It is fixed in place. It is not plural-named. It has indefinite article "some". Instead of doing something other than scanning to the unremarkable junk, say "It really is unremarkable."
 
 Chapter 2 - Sector 2
 
@@ -1647,21 +1647,31 @@ The Supply Vault is a room. "This room is dim, quiet, and stuffy. There is still
 
 [ crate ]
 
-A crate of machine parts is scenery in the supply vault. It has description "These remaining parts never seem to fit anywhere useful, but Founder only knows what's in there."
+A crate of machine parts is here. It is a scenery container.
 
-One functional instruction module and one functional pressure regulation module are in the junk repository.
+The parser nothing error internal rule response (F) is "[empty exception noun]"
 
-Instead of searching the crate of machine parts when something is in the junk repository:
-	say "You find [list of things in the junk repository with indefinite articles].";
-	repeat with item running through things in the junk repository:
+To say empty exception (t - a thing):
+	if t is the crate of machine parts:
+		say "You find nothing useful in the crate.[run paragraph on]";
+	otherwise:
+		say  "[The t] [are] empty.[run paragraph on]"
+
+Instead of examining the crate, say "These remaining parts never seem to fit anywhere useful, but Founder only knows what's in there."
+
+Instead of searching the crate of machine parts when something is in the crate:
+	say "You find [list of things in the crate with indefinite articles].";
+	repeat with item running through things in the crate:
 		find and take item;
 
-Instead of searching the crate of machine parts, say "Miscellaneous parts, none useful."
+After inserting something into the crate of machine parts:
+	say "You add [the noun] to the machine parts in the crate."
+
+Instead of searching the crate of machine parts when the crate does not contain something, say "Miscellaneous parts, none useful."
+
 Instead of looking under the crate of machine parts, say "The crate rests firmly on the ground."
 
-Instead of inserting something (called s) into the crate of machine parts:
-	now s is in the junk repository;
-	say "You add [the s] to the machine parts in the crate."
+One functional instruction module and one functional pressure regulation module are in the crate of machine parts.
 
 [ laser & boots ]
 

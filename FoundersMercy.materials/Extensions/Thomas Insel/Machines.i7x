@@ -202,7 +202,10 @@ Instead of the scanner closing something:
 	rule succeeds.
 
 Carry out the scanner scanning something:
-	scanner-say "No modular technology detected.";
+	if the noun is a container and (the noun encloses a machine or the noun encloses something that is machinelike or the noun encloses a module):
+		scanner-say "Technology detected. Suggest more specific scan.";
+	otherwise:
+		scanner-say "No modular technology detected.";
 	rule succeeds.
 
 Carry out the scanner scanning the scanner:
