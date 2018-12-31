@@ -276,6 +276,11 @@ A power module is a kind of module.
 An instruction module is a kind of module.
 A pressure regulation module is a kind of module. Understand "regulator" as a pressure regulation module.
 
+An object can be a plant.
+
+Instead of the scanner scanning something (called x) when x is a person or x is an animal or x is a plant:
+	scanner-say "License error: consider upgrading to a 3000-series model to scan lifeforms."
+
 Section 6 - Testing part 1
 
 The File of Tests is called "testing".
@@ -912,7 +917,7 @@ Before opening a circuit breaker, try switching off the noun instead.
 
 Section 6 - Forests
 
-A forest is a kind of thing. It is usually scenery and privately-named and plural-named. It usually has printed name "trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, and they help with air processing."
+A forest is a kind of thing. It is usually scenery and privately-named and plural-named and a plant. It usually has printed name "trees". Understand "tree" and "trees" and "forest" and "grove" as a forest. A forest usually has description "The community grew trees for tradition, and they help with air processing."
 
 Instead of climbing a forest:
 	if the player is wearing the gravity boots:
@@ -978,7 +983,7 @@ Chapter 1 - Sector 1
 
 Sector 1 is a room in The Sectors. "You still maintain the crops here. There is a small graveyard and the barn remains from when this was the livestock sector. A pylon stretches up from the ground to the hub of the station. You can walk spinward or antispinward." It has printed name "Sector 1: Crops". It has destination name "sector 1".
 
-Some crops are scenery in Sector 1. They have description "You are proud of the grain and legumes." Understand "grain" and "legumes" as some crops.
+Some crops are scenery in Sector 1. They have description "You are proud of the grain and legumes." They are a plant. Understand "grain" and "legumes" as some crops.
 
 Instead of taking some crops, say "It is not [--] may never be [--] harvest time."
 
@@ -1387,7 +1392,7 @@ Before home-going, try entering S4B1 instead.
 
 Instead of searching S4B1, say "You would need to enter your home to do that."
 
-Some vegetables are scenery in Sector 4. They have description "Greens, carrots, and potatoes." Understand "crops" and "greens" and "carrots" and "potatoes" as some vegetables.
+Some vegetables are scenery in Sector 4. They have description "Greens, carrots, and potatoes." They are plant. Understand "crops" and "greens" and "carrots" and "potatoes" as some vegetables.
 
 Instead of eating some vegetables, say "You aren't hungry."
 
