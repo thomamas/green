@@ -1,0 +1,23 @@
+* getall
+
+>get all from pocket
+The pocket is empty.
+
+>get all from me
+You seem to belong to yourself.
+
+>get all from hatch
+That can't contain things.
+
+>out
+>out
+>sw
+>sw
+>d
+
+>get all from crate
+instruction module: Taken.
+pressure regulation module: Taken.
+
+>get all from crate
+You find nothing useful in the crate.
