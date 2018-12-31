@@ -3,13 +3,13 @@ all: test
 clean:
 	rm -f ./comp-scripts/*.out
 
-tools/interpreters/bin/cheap-git:
+../tools/interpreters/bin/cheap-git:
 	@echo
 	@echo --- CheapGlk Git Interpreter
 	@echo
 	cd ../tools/interpreters && make bin/cheap-git
 
-tools/interpreters/bin/rem-git:
+../tools/interpreters/bin/rem-git:
 	@echo
 	@echo --- RemGlk Git Interpreter
 	@echo
