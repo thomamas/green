@@ -69,8 +69,5 @@ sync: release
 
 .phony:
 
-test: .phony $(DIR_PRO)/Build/output.ulx
+test: .phony $(DIR_PRO)/Build/output.ulx $(DIR_PRO)/Build/testing.ulx
 	cd test && make
-
-scantest: .phony $(DIR_PRO)/Build/testing.ulx
-	cd test && make scantest
