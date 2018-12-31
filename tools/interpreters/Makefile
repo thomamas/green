@@ -1,5 +1,7 @@
 CURL = curl -L
 
+LINKLIBS = -lm
+
 all:  bin/rem-git bin/cheap-git
 
 clean:
@@ -39,7 +41,7 @@ rem-git/Makefile: git.tar.gz
 	touch rem-git/Makefile
 
 rem-git/git: rem-git/Makefile remglk/libremglk.a
-	$(MAKE) GLK=remglk -C rem-git
+	$(MAKE) GLK=remglk LINKLIBS=$(LINKLIBS) -C rem-git
 
 bin/rem-git: rem-git/git
 	mkdir -p bin/ && cd bin/ && ln -sf ../rem-git/git rem-git
@@ -50,7 +52,7 @@ cheap-git/Makefile: git.tar.gz
 	touch cheap-git/Makefile
 
 cheap-git/git: cheap-git/Makefile cheapglk/libcheapglk.a
-	$(MAKE) -C cheap-git
+	$(MAKE) LINKLIBS=$(LINKLIBS) -C cheap-git 
 
 bin/cheap-git: cheap-git/git
 	mkdir -p bin/ && cd bin/ && ln -sf ../cheap-git/git cheap-git
