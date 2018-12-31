@@ -1,7 +1,6 @@
 DIR_INSTALL_BASE=/Applications/Inform.app
 DIR_EXE=$(DIR_INSTALL_BASE)/Contents/MacOS
 DIR_INT=$(DIR_INSTALL_BASE)/Contents/Resources/Internal
-DIR_I6L=$(DIR_INSTALL_BASE)/Contents/Resources/Library/6.11
 DIR_PRO=./FoundersMercy.inform
 DIR_MAT=./FoundersMercy.materials
 PROJECT="Founder's Mercy"
