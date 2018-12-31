@@ -19,8 +19,20 @@ The room where you've slept your entire life. The crops are outside.
 
 There is a secured hatch in the floor.
 
->scanning the pocket:
+>scanning the antennas:
+Antennas are not calibrated.
+
+scanning the port airlock door:
 No modular technology detected.
+
+scanning the stars:
+No modular technology detected.
+
+scanning the solar panels:
+Machine is functional. Operating at 73% efficiency.
+
+scanning yourself:
+License error: consider upgrading to a 3000-series model to scan lifeforms.
 
 scanning the window:
 No modular technology detected.
@@ -37,16 +49,13 @@ Machine is functional. Antenna is not calibrated.
 scanning the yellow cable:
 Cable is functional.
 
-scanning yourself:
-License error: consider upgrading to a 3000-series model to scan lifeforms.
+scanning the pocket:
+No modular technology detected.
 
 scanning the scanner:
 Machine is functional.
 
 scanning the green jumpsuit:
-No modular technology detected.
-
-scanning the port airlock door:
 No modular technology detected.
 
 scanning the RF socket:
@@ -64,6 +73,24 @@ Component is functional.
 scanning the keypad:
 Component is functional.
 
+scanning the station walls:
+No modular technology detected.
+
+scanning the maintenance platform:
+No modular technology detected.
+
+scanning the mirrors:
+No modular technology detected.
+
+scanning the antennas:
+Antennas are not calibrated.
+
+scanning the hub:
+No modular technology detected.
+
+scanning the floor hatch:
+No modular technology detected.
+
 scanning the crops:
 License error: consider upgrading to a 3000-series model to scan lifeforms.
 
@@ -76,7 +103,7 @@ No modular technology detected.
 scanning the barn:
 No modular technology detected.
 
-scanning the floor hatch:
+scanning the bulkhead door:
 No modular technology detected.
 
 scanning the space suit:
@@ -89,16 +116,13 @@ scanning the status display:
 Machine is functional.
 
 scanning the atmosphere pump:
-Machine is failed.
+Machine is failed. Check modules.
 
 scanning the power module:
 Module is faulty.
 
 scanning the unscanned pressure regulation module:
 Module is faulty.
-
-scanning the bulkhead door:
-No modular technology detected.
 
 scanning the plow:
 No modular technology detected.
@@ -127,6 +151,9 @@ Socket is functional.
 scanning the RF socket:
 Socket is functional.
 
+scanning the pylons:
+No modular technology detected.
+
 scanning the pond:
 No modular technology detected.
 
@@ -148,20 +175,20 @@ No modular technology detected.
 scanning the altar:
 No modular technology detected.
 
-scanning the Founder's Testament:
-No modular technology detected.
-
 scanning the organ:
 Machine functional. No output available.
 
 scanning the audio unit:
-Machine failed.
-
-scanning the unscanned power module:
-Module is faulty.
+Machine failed. Check module.
 
 scanning the gray cable:
 Cable is functional.
+
+scanning the Founder's Testament:
+No modular technology detected.
+
+scanning the unscanned power module:
+Module is faulty.
 
 scanning the tan socket:
 Socket is functional.
@@ -184,13 +211,16 @@ No modular technology detected.
 scanning the vegetables:
 License error: consider upgrading to a 3000-series model to scan lifeforms.
 
-scanning the blanket:
-No modular technology detected.
-
 scanning the floor hatch:
 No modular technology detected.
 
+scanning the blanket:
+No modular technology detected.
+
 scanning the shelves:
+No modular technology detected.
+
+scanning the large bag of split peas:
 No modular technology detected.
 
 scanning the canned vegetables:
@@ -198,9 +228,6 @@ No modular technology detected.
 
 scanning the emergency mask:
 Machine is functional.
-
-scanning the large bag of split peas:
-No modular technology detected.
 
 scanning the school house:
 No modular technology detected.
@@ -212,7 +239,13 @@ scanning the trees:
 License error: consider upgrading to a 3000-series model to scan lifeforms.
 
 scanning the learning machine:
-Machine is failed.
+Machine is failed. Check modules.
+
+scanning the desk:
+No modular technology detected.
+
+scanning the chalkboard:
+No modular technology detected.
 
 scanning the unscanned power module:
 Module is functional.
@@ -220,25 +253,28 @@ Module is functional.
 scanning the unscanned instruction module:
 Module is faulty.
 
-scanning the desk:
-No modular technology detected.
-
 scanning the clean eraser:
 No modular technology detected.
 
-scanning the chalkboard:
+scanning the floor hatch:
 No modular technology detected.
 
 scanning the hydroponics machines:
 Machine failed.
 
-scanning the floor hatch:
-No modular technology detected.
-
 scanning the crate of machine parts:
 No modular technology detected.
 
 scanning the pair of gravity boots:
+No modular technology detected.
+
+scanning the ground:
+No modular technology detected.
+
+scanning the pylon:
+No modular technology detected.
+
+scanning the maintenance platform:
 No modular technology detected.
 
 scanning the ladder:

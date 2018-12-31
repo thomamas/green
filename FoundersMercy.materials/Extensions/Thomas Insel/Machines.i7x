@@ -101,7 +101,7 @@ Instead of searching a machine (called m):
 
 Instead of the scanner scanning a machine (called m):
 	now m is scanned;
-	scanner-say "Machine is [if m is functional]functional[else]failed[end if].";
+	scanner-say "Machine is [if m is functional]functional[else]failed. Check modules[end if].";
 	rule succeeds.
 
 After printing the name of a machine (called m), if m is closed, omit contents in listing.

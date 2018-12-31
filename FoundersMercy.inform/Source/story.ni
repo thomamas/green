@@ -384,7 +384,10 @@ Carry out super-scanning:
 	let room list be the list of rooms;
 	repeat with l running through the room list:
 		move the player to l, without printing a room description;
-		repeat with x running through things enclosed by l:
+		let t be the list of things in l;
+		let s be the list of things enclosed by l;
+		add s to t;
+		repeat with x running through t:
 			if the test-actor can see x and x is not test scanned:
 				now the noun is x;
 				now x is test scanned;
@@ -871,6 +874,9 @@ The bd-antennas are a backdrop in The Sectors and in The Platforms. They are pri
 
 Instead of doing anything other than examining or scanning to the bd-antennas, say "You are too far away to do that."
 
+Instead of the scanner scanning the bd-antennas:
+	computerize "Antennas are [unless the antenna is calibrated]not [end if]calibrated."
+
 The mirrors are a backdrop in The Sectors and in The Platforms. They have description "The mirrors reflect sunlight into the station." Understand "mirror" and "sun" and "light" and "sunlight" as mirrors.
 
 Instead of doing anything other than examining or scanning to the mirrors, say "You are too far away to do that."
@@ -1303,7 +1309,7 @@ To decide if (m - the audio unit) is functional:
 Instead of the scanner scanning the audio unit:
 	now the audio unit is scanned;
 	unless the audio unit is functional:
-		computerize "Machine failed.";
+		computerize "Machine failed. Check module.";
 	else if audio and organ are connected:
 		computerize "Machine functional. Input connected.";
 	else if audio and communications are connected:
@@ -1975,6 +1981,9 @@ Instead of doing anything other than examining or scanning to the solar panels w
 The antennas are a backdrop in Antenna Control. They have description "You can see the antennas clearly from here: small telemetry antennas and the main communications dish. [if the antenna is calibrated]The dish appears to be tracking something.[otherwise]The dish lists, aiming at nothing in particular.[end if]". Understand "antenna" and "antennas" and "array" and "small" and "array of" and "telemetry" and "communications" and "dish" as antennas.
 
 Instead of doing anything other than examining or scanning to the antennas: say "There is a window in the way."
+
+Instead of the scanner scanning the antennas:
+	computerize "Antennas are [unless the antenna is calibrated]not [end if]calibrated."
 
 The station itself is scenery in Antenna Control. It has description "Backed by a field of stars, you can see the wheel of the station rotating around you to the starboard [--] you didn't notice before but the airlock must be some sort of rotation coupling." It has printed name "station".
 
