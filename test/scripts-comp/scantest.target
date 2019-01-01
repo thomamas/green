@@ -13,7 +13,7 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 181231 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190101 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type ABOUT for credits or HINT for assistance.
 
 Home (on the blanket)
@@ -169,7 +169,7 @@ scanning the trees:
 License error: upgrade to a 3000-series model to scan organic lifeforms.
 
 scanning the church:
-No modular technology detected.
+Technology detected. Suggest more specific scan.
 
 scanning the the house:
 No modular technology detected.
@@ -220,7 +220,7 @@ scanning the blanket:
 No modular technology detected.
 
 scanning the shelves:
-No modular technology detected.
+Technology detected. Suggest more specific scan.
 
 scanning the large bag of split peas:
 No modular technology detected.
@@ -232,7 +232,7 @@ scanning the emergency mask:
 Machine is functional.
 
 scanning the school house:
-No modular technology detected.
+Technology detected. Suggest more specific scan.
 
 scanning the pylon:
 No modular technology detected.

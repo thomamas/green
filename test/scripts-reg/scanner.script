@@ -7,8 +7,11 @@ You can ask the scanner for a list of commands by typing SCANNER, HELP and give 
 >scanner, scan me
 License error: upgrade to a 3000-series model to scan organic lifeforms.
 
->scanner, scan blanket
+>scanner, scan jumpsuit
 No modular technology detected.
+
+>scanner, scan blanket
+Technology detected. Suggest more specific scan.
 
 >scanner, scan scanner
 Machine is functional.
