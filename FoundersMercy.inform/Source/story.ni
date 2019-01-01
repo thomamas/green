@@ -125,10 +125,11 @@ Section 1 - Text
 Include Glulx Text Effects by Emily Short.
 
 Table of User Styles (continued) [* Used with computer styles above ]
-style name	color	fixed width
-special-style-1	"#227722"	true
-special-style-2	"#2222cc"	true
-alert-style	"#cc2222"	false
+style name	color	fixed width	font weight
+special-style-1	"#227722"	true	--
+special-style-2	"#2222cc"	true	--
+alert-style	"#cc2222"	false	--
+blockquote-style	"#000000"	false	regular-weight
 
 Section 3 - Exit Lister
 
