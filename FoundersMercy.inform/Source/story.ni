@@ -970,6 +970,10 @@ A building is a kind of door. It is usually open. It is usually not openable. It
 
 Instead of searching a building, say "You would need to enter [the noun] to do that."
 
+Instead of the scanner scanning a building when the other side of the noun encloses something that is scan interesting:
+	computerize "Technology detected. Suggest more specific scan.";
+	rule succeeds.
+
 [ I wanted to use
 
 	Understand "[building]" as entering.

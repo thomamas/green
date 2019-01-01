@@ -202,12 +202,10 @@ Persuasion rule for asking the scanner to try doing something: [ any other inter
 	if the scanner is at hand, scanner syntax error;	
 	persuasion fails.
 
-Instead of the scanner closing something:
-	scanner-say "Command error: closing is a manual process.";
-	rule succeeds.
+Definition: something is scan interesting if it is a machine or it is machinelike or it is a module.
 
 Carry out the scanner scanning something:
-	if the noun is a container and (the noun encloses a machine or the noun encloses something that is machinelike or the noun encloses a module):
+	if the noun encloses something that is scan interesting:
 		scanner-say "Technology detected. Suggest more specific scan.";
 	otherwise:
 		scanner-say "No modular technology detected.";
