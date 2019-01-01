@@ -499,7 +499,6 @@ Chapter 10 - Actions
 
 Section 1 - Remove Some Actions
 
-Understand the command "wake" as something new. [* Too self-referential. ]
 Understand the command "buy" as something new. [* There is no money in this story. ]
 Understand the commands "lock" and "unlock" as something new. [* This at least explicitly hints you never need a key for a locked door. ]
 
@@ -543,6 +542,15 @@ Instead of cutting or attacking yourself, say "Imperfect vessel that you are, th
 
 Instead of burning something, say "There is no open flame on the station."
 
+Instead of waking up:
+	say "But you aren't asleep."
+
+Instead of sleeping:
+	if Recently Awakened is happening:
+		say "But you just woke up.";
+	otherwise:
+		say "You aren't tired.";
+
 Instead of listening to a room:
 	if the location is not pressurized:
 		say "Profound silence.";
@@ -558,6 +566,28 @@ Instead of smelling a room:
 		say "Only familiar odors."
 
 Section 3 - And Add Some Miscellaneous Actions
+
+[ lying ]
+
+Understand "lie down" as lying down.
+Lying down is an action applying to nothing.
+Report lying down: say "You lie down for moment but stand up again."
+Instead of lying down in zero-g: say "That doesn't really work without gravity."
+Instead of lying on something in zero-g: say "That doesn't really work without gravity."
+
+Understand "on/in/inside" or "on top of" as "[within]". [* see example 310 ]
+Understand "lie [within] [something]" as lying on.
+Understand "lie down [within] [something]" as lying on.
+
+Lying on is an action applying to one thing.
+
+Check lying on:
+	unless the noun is a supporter: [* standard rules catch non-enterable, but we want to block lying on a door to enter it ]
+		say "[regarding the noun][They're] not something [we] [can] lie down on." instead;
+
+Carry out lying on: try entering the noun.
+
+Before lying on down, try lying down instead.
 
 [ feeding ]
 
@@ -615,7 +645,7 @@ Playing is an action applying to one thing.
 
 Carry out playing: say "[regarding the noun][Those] [aren't] something you can play."
 
-Instead of playing the player: say "I don't even know what that means."
+Instead of playing the player: say "What does that even mean?"
 
 Book 2 - Scenes
 
@@ -701,6 +731,12 @@ Every turn during The End:
 		beat;
 		end the story finally saying "You are not alone.".
 
+Section 7 - Utility Scenes
+
+Recently Awakened is a scene.
+Recently Awakened begins when play begins.
+Recently Awakened ends when Repairing Pod Bay ends.
+
 Book 3 - Hints
 
 Section 0 - Setup
@@ -727,7 +763,7 @@ After the player getting help for the first time:
 	say
 		"By the way, it should be impossible to put this story into an unwinnable state, so feel free to explore and experiment.[paragraph break]"
 		,
-		"If you are having trouble getting started, I suggest reading [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
+		"If you are having trouble getting started, check out [italic type]A Beginner's Guide to Interactive Fiction[roman type] by Stephen Granade and Emily Short, available at:[paragraph break]"
 		,
 		"[fixed letter spacing]  https://brasslantern.org/players/howto/beginnersguide.html[roman type][paragraph break]";
 		note "You can type HINT any time for contextual assistance. If you prefer not to be tempted, you can type HINTS OFF to disable hints."
@@ -744,7 +780,10 @@ Carry out disabling help:
 Section 1 - Beginning
 
 Carry out getting help when Beginning is happening:
-	say "You can start by looking around and leaving your initial location."
+	if Sector 4 is visited:
+		say "You need to look around some more.";
+	otherwise:
+		say "You should start by leaving your initial location and looking around."
 
 Section 2 - Ready to Repair
 
@@ -760,7 +799,7 @@ To decide what number is the open pod repair count:
 
 Carry out getting help when Repairing Pod Bay is happening:
 	if the status display is not examined:
-		say "You need to repair some things. Check out the status display in Pod Control.";
+		say "You need to make some repairs. Check out the status display in Pod Control.";
 	otherwise:
 		let c be the open pod repair count;
 		if c is greater than one, say "You need to make [c in words] repairs, so you get [c in words] hints:[paragraph break]";
@@ -769,25 +808,19 @@ Carry out getting help when Repairing Pod Bay is happening:
 		if Repairing Atmosphere Pump is happening, say "[if c > 1]  • [end if][pump help]";
 
 To say pump help:
-	if the atmosphere pump is functional:
-		if the atmosphere pump is open:
-			say "The status display has some clear directions.";
-		else:
-			say "Now this is strange."; [* This should never happen because the scene will have ended ]
+	unless any machine has been scanned or any module has been scanned:
+		say "Now might be a good time to try out the scanner.";
+	else unless any module has been scanned:
+		say "You can also scan modules.";
+	else unless there is a functional handled power module and there is a functional handled pressure regulation module:
+		say "You need to find some more modules.";
+	else unless the player encloses a functional scanned power module and the player encloses a functional scanned pressure regulation module:
+		say "You still need to scan some modules.";
 	else:
-		unless any machine has been scanned:
-			say "Now might be a good time to try out the scanner.";
-		else unless any module has been scanned:
-			say "You can also scan modules.";
-		else unless there is a functional handled power module and there is a functional handled pressure regulation module:
-			say "You need to find some more modules.";
-		else unless the player encloses a functional scanned power module and the player encloses a functional scanned pressure regulation module:
-			say "You still need to scan some modules.";
-		else:
-			say "Put the right functional modules into the pump."
+		say "Put the right modules into the pump."
 
 To say green valve help:
-	say "The valve is in an awkward spot.";
+	say "The display has the general location of the valve, but it is in an awkward spot."
 
 To say red breaker help:
 	if Platform 3 is visited:
@@ -1865,7 +1898,7 @@ Instead of searching the pigeons, say "You find only pigeons in the flock of pig
 
 Chapter 8 - The Hub
 
-After dropping something in zero-g, say "You drop [the noun] and [they] float[s] nearby."
+After dropping something in zero-g, say "You let go of [the noun] and [they] float[s] nearby."
 Instead of jumping in zero-g, say "That's meaningless without gravity."
 Instead of swimming in zero-g, say "You flail around in zero g."
 
