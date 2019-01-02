@@ -1,0 +1,72 @@
+*sleep
+
+>sleep
+But you just woke up.
+
+>d
+>get mask
+>u
+>get blanket
+>out
+>sw
+>in
+>get eraser
+>erase board
+>get power from machine
+>out
+>sw
+>d
+>search crate
+>get boots
+>hit eraser
+>u
+>wear boots
+>wear mask
+>asw
+>asw
+>asw
+>up
+>turn breaker on
+>d
+>asw
+>remove boots
+>enter pond
+>remove mask
+>wear boots
+>wear blanket
+>asw
+>in
+>get hoe
+>out
+>d
+>get all from pump
+>scan regulator
+>scan unscanned regulator
+>put functional regulator in pump
+>scan power module
+>scan unscanned power module
+>put functional power module in pump
+>close ceiling hatch
+>port
+>get communications unit
+>starboard
+
+>sleep
+Not standing up.
+
+>drop blanket
+You arrange the blanket on the ground.
+
+>lie on blanket
+You get onto the blanket.
+
+>sleep
+Would you like to RESTART, RESTORE a saved game, QUIT, UNDO the last command, or WAKE up and try again?
+
+> wake
+Ok, you wake after a night of poor sleep.
+
+Pod Control 
+
+>sleep
+But you just woke up.

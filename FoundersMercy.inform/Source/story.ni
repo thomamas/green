@@ -42,7 +42,6 @@ After printing the banner text rule:
 	say "Type ABOUT for credits or HINT for assistance.";
 
 Carry out requesting the credits:
-	carry out the amusing a victorious player activity;
 	say	"[bold type]About Founder's Mercy[roman type][line break]",
 		"This is my second released Inform project, conceived and implemented in the last months of 2018.[paragraph break]",
 		"Thanks to Graham Nelson, Andrew Plotkin, Emily Short, and everyone else who contributed to the Inform and Glulx ecosystem. Thanks also Juhana Leinonen for the Object Response Tests extension, Erik Temple for the Real-Time Delays extension, and Sean Turner for the Plugs and Sockets extension. Exit listing code is inspired by Eric Eve's Exit Lister and keypad code is inspired by Emily Short's Computers.[paragraph break]",
@@ -54,7 +53,7 @@ Chapter 2 - Final Questions
 
 Table of Final Question Options (continued)
 final question wording	only if victorious	topic	final response rule	final response activity
-"read the CREDITS"	false	"credits"	final credits rule	--
+"read the CREDITS"	true	"credits"	final credits rule	--
 
 This is the final credits rule: try requesting the credits.
 
@@ -68,6 +67,7 @@ Table of Amusing Actions
 Subject
 "visiting the pigeons?"
 "fixing the learning machine?"
+"sleeping when you're tired?"
 ]
 
 Chapter 3 - Scoring
@@ -497,7 +497,79 @@ Instead of taking inventory:
 
 Chapter 10 - Actions
 
-Section 1 - Remove Some Actions
+Section 1 - Lie/Sleep/Wake
+
+Understand "lie down" as lying down.
+Lying down is an action applying to nothing.
+Instead of lying down in zero-g: say "That doesn't really work without gravity."
+Instead of lying on something in zero-g: try lying down.
+
+Report lying down:
+	if Recently Awakened is happening or slept once is true:
+		say "You lie down for a moment, but you get restless and stand again.";
+	otherwise:
+		say "You lie down for a moment, but the it is too uncomfortable to sleep."
+
+Understand "on/in/inside" or "on top of" as "[within]". [* see example 310 ]
+Understand "lie [within] [something]" as lying on.
+Understand "lie down [within] [something]" as lying on.
+
+Lying on is an action applying to one thing.
+
+Check lying on:
+	unless the noun is a supporter: [* standard rules catch non-enterable, but we want to block lying on a door to enter it ]
+		say "[regarding the noun][They're] not something [we] [can] lie down on." instead;
+
+Carry out lying on: try entering the noun.
+
+Before lying on down, try lying down instead.
+
+Slept once is a truth state that varies. Slept once is false.
+
+Instead of waking up: say "But you aren't asleep."
+
+To add the wake row: [* these are ugly because there is no Inform 7 syntax to set a table entry to a topic from a string after compile time, so we define a dummy table to hold the value we want and then look it up to use it. ]
+	choose row 1 in Table of Extra Final Questions;
+	let a be the final question wording entry;
+	let b be the topic entry;
+	let c be the final response rule entry;
+	;
+	choose a blank row in Table of Final Question Options;
+	now the final question wording entry is a;
+	now the only if victorious entry is false;
+	now the topic entry is b;
+	now the final response rule entry is c;
+
+To remove the wake row:
+	let a be final question wording in row 1 of the Table of Extra Final Questions;
+	choose the row with a final question wording of a in Table of Final Question Options; [* because we can't choose by a topic ]
+	blank out the whole row.
+
+Instead of sleeping:
+	if Recently Awakened is happening or slept once is true:
+		say "But you just woke up.";
+	otherwise unless the player is on the blanket:
+		say "Not standing up.";
+	otherwise:
+		add the wake row;
+		end the story saying "You stay"; [todo]
+
+This is the rewake rule:
+	say "Ok, you wake after a night of poor sleep."; [todo]
+	resume the story;
+	remove the wake row;
+	now slept once is true;
+	try looking.
+
+Table of Final Question Options (continued) [* add a blank row ]
+final question wording
+--
+
+Table of Extra Final Questions
+final question wording	topic	final response rule
+"WAKE up and try again"	"wake" or "wake up" or "awaken"	rewake rule
+
+Section 2 - Remove Some Actions
 
 Understand the command "buy" as something new. [* There is no money in this story. ]
 Understand the commands "lock" and "unlock" as something new. [* This at least explicitly hints you never need a key for a locked door. ]
@@ -530,7 +602,7 @@ Understand "ask [text]" or "tell [text]" or "answer [text]" or "say [text]" or "
 
 Understand "use [text]" as a mistake ("Please try specific a more specific verb.").
 
-Section 2 - Modify Some Default Responses
+Section 3 - Modify Some Default Responses
 
 Instead of thinking, say "You've been alone for a thousand days [--] plenty of time for thinking. Now is the time for action."
 
@@ -541,15 +613,6 @@ Instead of attacking or cutting something, say "The Founder said that violence i
 Instead of cutting or attacking yourself, say "Imperfect vessel that you are, that is not the answer."
 
 Instead of burning something, say "There is no open flame on the station."
-
-Instead of waking up:
-	say "But you aren't asleep."
-
-Instead of sleeping:
-	if Recently Awakened is happening:
-		say "But you just woke up.";
-	otherwise:
-		say "You aren't tired.";
 
 Instead of listening to a room:
 	if the location is not pressurized:
@@ -565,29 +628,9 @@ Instead of smelling a room:
 	otherwise:
 		say "Only familiar odors."
 
-Section 3 - And Add Some Miscellaneous Actions
+Before putting something on down: try dropping the noun instead.
 
-[ lying ]
-
-Understand "lie down" as lying down.
-Lying down is an action applying to nothing.
-Report lying down: say "You lie down for moment but stand up again."
-Instead of lying down in zero-g: say "That doesn't really work without gravity."
-Instead of lying on something in zero-g: say "That doesn't really work without gravity."
-
-Understand "on/in/inside" or "on top of" as "[within]". [* see example 310 ]
-Understand "lie [within] [something]" as lying on.
-Understand "lie down [within] [something]" as lying on.
-
-Lying on is an action applying to one thing.
-
-Check lying on:
-	unless the noun is a supporter: [* standard rules catch non-enterable, but we want to block lying on a door to enter it ]
-		say "[regarding the noun][They're] not something [we] [can] lie down on." instead;
-
-Carry out lying on: try entering the noun.
-
-Before lying on down, try lying down instead.
+Section 4 - And Add Some Miscellaneous Actions
 
 [ feeding ]
 
@@ -704,12 +747,16 @@ Repairing Comms ends when The End begins.
 
 When Repairing Comms begins: increase the score by 1. [* for entering the pod bay ]
 
+Divisibility relates a number (called A) to a number (called B) when the remainder after dividing A by B is zero. The verb to divide (he divides, they divide, he divided, it is divisible) implies the reversed divisibility relation.
+
 Every turn during Repairing Comms:
 	let t be the total minutes of time since Repairing Comms began;
 	if t is 2:
 		say "No pods left ... you breathe deeply and fight off a wave of despair.";
 	if t is 4:
-		say "You breathe deeply again. Of course there's another way. You will just need to find a way to communicate outside."
+		say "You breathe deeply again. Of course there's another way. You will just need to find a way to communicate outside.";
+	if t is divisible by 12:
+		say "You are feeling tired." [todo]
 
 Section 6 - The End
 
