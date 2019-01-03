@@ -1728,12 +1728,12 @@ Chapter 6 - Sector 6
 
 Sector 6 is spinward from Sector 5 and antispinward from Sector 1. It is in The Even Sectors. "Your people preferred to grow things the old fashioned way, but in truth the majority of your fruit and vegetables came from this sector when the machines still worked. You can walk spinward or antispinward." It has printed name "Sector 6: Hydroponics". It has destination name "sector 6".
 
-Some hydroponics machines are scenery in Sector 6. It is machinelike. It has description "You were thoroughly trained in hydroponics maintenance, but fixing these machines is beyond you." Understand "machine" and "machinery" as hydroponics machines.
+Some hydroponics machines are scenery in Sector 6. It is machinelike. It has description "You were thoroughly trained in hydroponics maintenance, but fixing these machines is beyond you. The last neighbors left after they broke for the last time, then it was just you and your father." Understand "machine" and "machinery" as hydroponics machines.
 
 Instead of doing anything other than examining or scanning to the hydroponics machines, say "The hydroponics machines are just so much junk."
 
 Instead of the scanner scanning the hydroponics machines:
-	computerize "Machine failed.";
+	computerize "Scan error: consult with a trained hydroponics technician.";
 	rule succeeds.
 
 Every turn when the player is in Sector 6:
