@@ -474,6 +474,7 @@ The use the jumpsuit pocket rule is listed before the use player's holdall to av
 
 The use the jumpsuit pocket rule is listed before the can't exceed carrying capacity when taking off rule in the check taking off rulebook.
 
+Instead of searching the jumpsuit when the player is wearing the jumpsuit: say "Nothing more or less than you would expect."
 
 After examining the jumpsuit:
 	if the pocket contains something:
