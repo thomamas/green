@@ -529,7 +529,7 @@ Slept once is a truth state that varies. Slept once is false.
 Instead of waking up: say "But you aren't asleep."
 
 To add the wake row: [* these are ugly because there is no Inform 7 syntax to set a table entry to a topic from a string after compile time, so we define a dummy table to hold the value we want and then look it up to use it. ]
-	choose row 1 in Table of Extra Final Questions;
+	choose row with final response rule of rewake rule in Table of Extra Final Questions;
 	let a be the final question wording entry;
 	let b be the topic entry;
 	let c be the final response rule entry;
@@ -539,24 +539,28 @@ To add the wake row: [* these are ugly because there is no Inform 7 syntax to se
 	now the only if victorious entry is false;
 	now the topic entry is b;
 	now the final response rule entry is c;
+	;
+	now the only if victorious corresponding to final response rule of immediately undo rule in Table of Final Question Options is true; [* also hide "undo" since "wake" is close enough ]
 
 To remove the wake row:
-	let a be final question wording in row 1 of the Table of Extra Final Questions;
-	choose the row with a final question wording of a in Table of Final Question Options; [* because we can't choose by a topic ]
-	blank out the whole row.
+	choose the row with final response rule of rewake rule in Table of Final Question Options;
+	blank out the whole row;
+	now the only if victorious corresponding to final response rule of immediately undo rule in Table of Final Question Options is false; [* restore undo ]
 
 Instead of sleeping:
 	if Recently Awakened is happening or slept once is true:
 		say "But you just woke up.";
 	otherwise unless the player is on the blanket:
-		say "Not standing up.";
+		say "Not while you're standing up.";
 	otherwise:
 		add the wake row;
-		end the story saying "You stay"; [todo]
+		say "You are exhausted, mentally and physically, and sleep comes easily. Tomorrow, you will start early and catch up on your missed chores. Maybe this is how you are meant to live. Maybe things are better this way.[no line break]";
+		end the story saying "You stayed behind";
 
 This is the rewake rule:
-	say "Ok, you wake after a night of poor sleep."; [todo]
+	say "You sleep, but restlessly and only for a few hours. Then, you wake up, sweaty and chasing faint memories of unsettling dreams about your parents.";
 	resume the story;
+	follow the turn sequence rules; [* otherwise the whole sleep/wake cycle takes no time ]
 	remove the wake row;
 	now slept once is true;
 	try looking.
@@ -567,7 +571,7 @@ final question wording
 
 Table of Extra Final Questions
 final question wording	topic	final response rule
-"WAKE up and try again"	"wake" or "wake up" or "awaken"	rewake rule
+"WAKE up and continue your story"	"wake" or "wake up" or "awaken"	rewake rule
 
 Section 2 - Remove Some Actions
 
@@ -749,14 +753,22 @@ When Repairing Comms begins: increase the score by 1. [* for entering the pod ba
 
 Divisibility relates a number (called A) to a number (called B) when the remainder after dividing A by B is zero. The verb to divide (he divides, they divide, he divided, it is divisible) implies the reversed divisibility relation.
 
+RC wait count is a number that varies. RC wait count is zero.
+
+Before waiting during Repairing Comms, increase RC wait count by one.
+
+To say tired-one: say "You have been all over the station, even [if red pylon climb count is 1]up and down the pylon[otherwise]up and down the pylon [red pylon climb count in words] time[s][end if], and now you are so tired. Maybe too tired to go on. Maybe you aren't meant to leave after all."
+
+To say tired-two: say "You are tired." [todo]
+
+To say tired-three: say "You are weary." [todo]
+
 Every turn during Repairing Comms:
 	let t be the total minutes of time since Repairing Comms began;
 	if t is 2:
-		say "No pods left ... you breathe deeply and fight off a wave of despair.";
-	if t is 4:
-		say "You breathe deeply again. Of course there's another way. You will just need to find a way to communicate outside.";
-	if t is divisible by 12:
-		say "You are feeling tired." [todo]
+		say "No pods left ... you breathe deeply and fight off a wave of despair. But of course there's another way. You will just need to find a way to communicate outside.";
+	if (t - RC wait count) is divisible by 12:
+		say "[one of][tired-one][or][tired-two][or][tired-three][in random order]";
 
 Section 6 - The End
 
@@ -1322,11 +1334,14 @@ A pylon called S3P1 is here. It is improper-named. It has description "Made of s
 
 Before going up in Sector 3, try climbing S3P1 instead.
 
+Red pylon climb count is a number that varies. Red pylon climb count is zero.
+
 Instead of climbing S3P1:
 	 if the player is wearing the gravity boots:
 		say "Wearing the boots, you are able to climb up the pylon. As you get closer to the hub, gravity decreases, and the climb becomes easier.";
 		now the player is in Platform 3;
 		change the up exit of Sector 3 to Platform 3;
+		increase red pylon climb count by one;
 	otherwise:
 		say "The red pylon is designated for climbing, but your feet slip when you try to go up."
 

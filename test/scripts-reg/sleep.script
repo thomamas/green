@@ -52,7 +52,7 @@ But you just woke up.
 >starboard
 
 >sleep
-Not standing up.
+Not while you're standing up.
 
 >drop blanket
 You arrange the blanket on the ground.
@@ -61,11 +61,15 @@ You arrange the blanket on the ground.
 You get onto the blanket.
 
 >sleep
-Would you like to RESTART, RESTORE a saved game, QUIT, UNDO the last command, or WAKE up and try again?
+You are exhausted, mentally and physically, and sleep comes easily.
+Tomorrow, you will start early and catch up on your missed chores.
+Maybe this is how you are meant to live. Maybe things are better this way.
+You stayed behind
+Would you like to RESTART, RESTORE a saved game, QUIT, or WAKE up and continue your story?
 
 > wake
-Ok, you wake after a night of poor sleep.
-
+You sleep, but restlessly and only for a few hours.
+Then, you wake up, sweaty and chasing faint memories of unsettling dreams about your parents.
 Pod Control 
 
 >sleep

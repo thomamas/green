@@ -13,7 +13,7 @@ Today is the day.
 
 Founder's Mercy
 A Space Story by Thomas Insel
-Release 1 / Serial number 190101 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 190102 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 Type ABOUT for credits or HINT for assistance.
 
 Home (on the blanket)
@@ -226,7 +226,7 @@ You've been here before, of course, when other families were leaving. They alway
 
 But this is troubling: you had counted, and you were sure there would be one pod left, but there are none.
 
-You are feeling tired.
+You are tired.
 
 [Your score has just gone up by one point.]
 
@@ -240,14 +240,12 @@ Beside the open port door, a status display glows green.
 
 There is a secured hatch in the ceiling.
 
-No pods left ... you breathe deeply and fight off a wave of despair.
+No pods left ... you breathe deeply and fight off a wave of despair. But of course there's another way. You will just need to find a way to communicate outside.
 
 >(putting the unscanned instruction module into your pocket to make room)
 Taken.
 
 >You close the bulkhead door.
-
-You breathe deeply again. Of course there's another way. You will just need to find a way to communicate outside.
 
 >(first opening the ceiling hatch)
 
@@ -285,7 +283,7 @@ Taken.
 
 The audio unit beeps and a synthesized voice says "Comms unit connected."
 
-You are feeling tired.
+You are weary.
 
 >gray cable: Taken.
 audio unit: (putting the faulty power module into your pocket to make room)
@@ -336,7 +334,7 @@ You float weightless at the port end of a cylinder. It is cold and dark here in 
 
 >Calibrate to Gamma/Banana.
 
-You are feeling tired.
+You have been all over the station, even up and down the pylon two times, and now you are so tired. Maybe too tired to go on. Maybe you aren't meant to leave after all.
 
 >Calibrate to Beta/Cherry.
 
@@ -362,7 +360,7 @@ After a moment, it says "Launching automatic routines."
 
 >Time passes.
 
-You hear a human speaking from the audio unit: "RWSS Founder's Mercy, this is OV-6909, over...
+You hear a human speaking from the audio unit: "RWSS Founder's Mercy, this is OV-9973, over...
 
 "There's really somebody there? We thought your station had been abandoned for kilodays...
 
