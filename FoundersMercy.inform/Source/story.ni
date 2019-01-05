@@ -1299,7 +1299,8 @@ Instead of entering the pond:
 	otherwise:
 		say "You set your belongings aside. With the air from the emergency mask, you breathe comfortably as you step into the pond. At the bottom, you find a valve and open it, then swim to the surface, climb out, and recover everything you were carrying.";
 		now the green valve is switched on;
-		increase the score by 1.
+		increase the score by 1;
+		discharge the mask.
 
 Some fish are animals and scenery in sector 2. They have description "There are still a few fish swimming in the pond, but they taste horrible."
 
@@ -1566,6 +1567,18 @@ Instead of doing anything other than examining to the bag of split peas, say "Th
 [ mask ]
 
 An emergency mask is on shelves. It is undescribed, wearable, and machinelike. It has description "You wore this mask when there were regular decompression drills."
+
+The mask can be fully charged or partially charged. It is fully charged.
+
+Instead of the scanner scanning the mask:
+	computerize "Machine functional. Reservoir [if the mask is partially charged]partially [end if]charged.";
+	rule succeeds.
+
+At the time when the mask recharges: now the mask is fully charged.
+
+To discharge the mask:
+	now the mask is partially charged;
+	the mask recharges in five turns from now.
 
 Instead of singing when the player is wearing the emergency mask, say "You can't sing while wearing the mask.";
 
@@ -1965,6 +1978,8 @@ After dropping something in zero-g, say "You let go of [the noun] and [they] flo
 Instead of jumping in zero-g, say "That's meaningless without gravity."
 Instead of swimming in zero-g, say "You flail around in zero g."
 
+Every turn when the player is in zero-g: discharge the mask.
+
 Before printing the locale description:
 	if the location is in zero-g, now the you-can-also-see rule response (F) is " floating here";
 	otherwise now the you-can-also-see rule response (F) is " here";
@@ -1998,8 +2013,9 @@ The port airlock door is a door. It is port of The Airlock and starboard of Ante
 
 A red handle is machinelike scenery in the Airlock. "The handle extends from the [one of]wall[or]ceiling[or]floor[purely at random] and is labeled 'Cycle.'"
 
-Instead of scanning the red handle:
-	computerize "Machine is functional. Airlock is [if the airlock is pressurized]pressurized[else]depressurized[end if]."
+Instead of the scanner scanning the red handle:
+	computerize "Machine is functional. Airlock is [if the airlock is pressurized]pressurized[else]depressurized[end if].";
+	rule succeeds.
 
 The airlock has a room called match. The match of the airlock is Inside the Hub.
 
