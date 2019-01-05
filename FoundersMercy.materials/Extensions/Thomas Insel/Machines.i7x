@@ -128,6 +128,10 @@ Include Inanimate Listeners by Emily Short.
 
 The scanner is a machinelike addressable thing. It has description "The handheld voice-activated scanner you use when working on the station's machines."
 
+Instead of the scanner scanning the scanner:
+	scanner-say "Running self-diagnostic ... your scanner is functioning within specifications.";
+	rule succeeds.
+
 [ scanner availability ]
 
 Scanner precheck is a rulebook.
@@ -157,6 +161,8 @@ Instead of answering the scanner that something:
 	unless the scanner is at hand, stop the action;
 	if the topic understood matches the regular expression "^help\s":
 		try the scanner getting help instead;
+	else if the topic understood matches the regular expression "^scan\s+yourself":
+		try the scanner scanning the scanner;
 	else if the topic understood matches the regular expression "^(scan)\s+(.*)":
 		scanner-say "Search error: cannot find [text matching subexpression 2].";
 		explain the scanner;
