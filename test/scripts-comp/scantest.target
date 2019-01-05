@@ -55,7 +55,7 @@ scanning the pocket:
 No modular technology detected.
 
 scanning the scanner:
-Machine is functional.
+Running self-diagnostic ... your scanner is functioning within specifications.
 
 scanning the green jumpsuit:
 No modular technology detected.
@@ -108,8 +108,8 @@ No modular technology detected.
 scanning the bulkhead door:
 No modular technology detected.
 
-scanning the space suit:
-Machine is failed.
+scanning the pressure suit:
+Scan error: consult with a trained pressure suit technician.
 
 scanning the brass plate:
 No modular technology detected.
@@ -229,7 +229,7 @@ scanning the canned vegetables:
 No modular technology detected.
 
 scanning the emergency mask:
-Machine is functional.
+Machine functional. Reservoir charged.
 
 scanning the school house:
 Technology detected. Suggest more specific scan.
@@ -301,7 +301,7 @@ scanning the flock of pigeons:
 License error: upgrade to a 3000-series model to scan organic lifeforms.
 
 scanning the red handle:
-No modular technology detected.
+Machine is functional. Airlock is pressurized.
 
 You have walked the entire ring. Everything is as expected, much is not working. Now, it's time to leave: the pods are below Sector 1.
 
