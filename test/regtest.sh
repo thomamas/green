@@ -11,7 +11,7 @@ if [ $# -eq 0 ] ; then
 
 else
 
-  for script in $* ; do
+  for script in "$@" ; do
     echo "**" $script
     python ../tools/regtest.py -v ${script} --game "${GAME}" --rem --terp ../tools/interpreters/bin/rem-git
   done
