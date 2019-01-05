@@ -1123,14 +1123,14 @@ A hoe is in the barn. It is bulky. It has description "A straight-handled draw h
 
 Section 2 - Pod Control
 
-Pod Control is a room in Underneath. "This room serves as an airlock for the pod bay, and holds an old space suit and various machinery such as the atmosphere pump. There is a brass plate on the wall." It has destination name "pod control".
+Pod Control is a room in Underneath. "This room serves as an airlock for the pod bay, and holds an old pressure suit and various machinery such as the atmosphere pump. There is a brass plate on the wall." It has destination name "pod control".
 
-A space suit is here. It is machinelike scenery. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: every seal is leaking and there are no spares left."
+A pressure suit is here. It is machinelike scenery. It has description "For EVA or extra protection in a pod. Unfortunately, it failed its last periodic inspection: every seal is leaking and there are no spares left." Understand "space" as the pressure suit.
 
-Before doing anything other than examining or scanning to the space suit, say "It is bulky and useless." instead
+Before doing anything other than examining or scanning to the pressure suit, say "It is bulky and useless." instead.
 
-Instead of the scanner scanning the space suit:
-	computerize "Machine is failed.";
+Instead of the scanner scanning the pressure suit:
+	computerize "Scan error: consult with a trained pressure suit technician.";
 	rule succeeds.
 
 A brass plate is here. It is scenery. It has description "[blockquote style]    RWSS Founder's Mercy[line break]    Laid down 2138, Launched 2141.[line break]    'May His mercy shine upon us.'[roman type]". Understand "plaque" as plate.
@@ -1996,7 +1996,10 @@ The starboard airlock door is a door. It is port of Inside the Hub and starboard
 
 The port airlock door is a door. It is port of The Airlock and starboard of Antenna Control. It is scenery. It is locked.
 
-A red handle is scenery in the Airlock. "The handle extends from the [one of]wall[or]ceiling[or]floor[purely at random] and is labeled 'Cycle.'"
+A red handle is machinelike scenery in the Airlock. "The handle extends from the [one of]wall[or]ceiling[or]floor[purely at random] and is labeled 'Cycle.'"
+
+Instead of scanning the red handle:
+	computerize "Machine is functional. Airlock is [if the airlock is pressurized]pressurized[else]depressurized[end if]."
 
 The airlock has a room called match. The match of the airlock is Inside the Hub.
 
