@@ -500,30 +500,26 @@ Chapter 10 - Actions
 
 Section 1 - Lie/Sleep/Wake
 
-Understand "lie down" as lying down.
+Understand "lie down" or "sit down" as lying down.
 Lying down is an action applying to nothing.
 Instead of lying down in zero-g: say "That doesn't really work without gravity."
-Instead of lying on something in zero-g: try lying down.
+Instead of entering the blanket in zero-g: try lying down.
 
 Report lying down:
-	if Recently Awakened is happening or slept once is true:
-		say "You lie down for a moment, but you get restless and stand again.";
+	let v be "lie";
+	if the player's command includes "sit", let v be "sit";
+	if the player is on something (called s):
+		say "But [we]['re] on [the s].";
+	otherwise if the player is in something (called s):
+		say "But [we]['re] in [the s].";
+	otherwise if Recently Awakened is happening or slept once is true:
+		say "You [v] down for a moment, but you get restless and stand again.";
 	otherwise:
-		say "You lie down for a moment, but the it is too uncomfortable to sleep."
+		say "You [v] down for a moment, but the it is too uncomfortable to sleep."
 
 Understand "on/in/inside" or "on top of" as "[within]". [* see example 310 ]
-Understand "lie [within] [something]" as lying on.
-Understand "lie down [within] [something]" as lying on.
-
-Lying on is an action applying to one thing.
-
-Check lying on:
-	unless the noun is a supporter: [* standard rules catch non-enterable, but we want to block lying on a door to enter it ]
-		say "[regarding the noun][They're] not something [we] [can] lie down on." instead;
-
-Carry out lying on: try entering the noun.
-
-Before lying on down, try lying down instead.
+Understand "lie [within] [something]" as entering.
+Understand "lie down [within] [something]" as entering.
 
 Slept once is a truth state that varies. Slept once is false.
 
