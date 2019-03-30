@@ -756,7 +756,7 @@ Before waiting during Repairing Comms, increase RC wait count by one.
 
 To say tired-one: say "You have been all over the station, even [if red pylon climb count is 1]up and down the pylon[otherwise]up and down the pylon [red pylon climb count in words] time[s][end if], and now you are so tired. Maybe too tired to go on. Maybe you aren't meant to leave after all."
 
-To say tired-two: say "You are tired." [todo]
+To say tired-two: say "Your day has been exhausting. You almost want to sleep more than you want to leave. Maybe this plan has been a mistake." [todo]
 
 To say tired-three: say "You are weary." [todo]
 
@@ -1115,7 +1115,7 @@ Before pushing or pulling or turning or taking the plow, say "The plow is too he
 
 Before going with the plow, try pushing the plow instead.
 
-A hoe is in the barn. It is bulky. It has description "A straight-handled draw hoe. You have been working the fields by hand now, so it is well worn."
+A hoe is in the barn. It is bulky. It has description "A straight-handled draw hoe. It is well worn from the time you have spent working the fields by hand."
 
 Section 2 - Pod Control
 
